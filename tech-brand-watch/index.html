@@ -248,6 +248,17 @@ a:hover{color:var(--green)}
 .top-table-wrap{overflow:auto}.top-table{width:100%;border-collapse:collapse;min-width:780px}.top-table th,.top-table td{border-bottom:1px solid #e8ebe7;padding:11px 9px;text-align:left;font-size:12px}.top-table th{font-size:10px;color:#737a74;text-transform:uppercase;letter-spacing:.04em}.top-table tr.ours td{background:#eef9ef}.top-table a{font-weight:750}
 .signal-story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.signal-story{padding:18px;border-radius:18px;background:#f7f8f6;border:1px solid var(--line)}.signal-story.ours{background:var(--green-pale);border-color:#d7ead8}.signal-story>b{color:var(--green-dark);font-size:12px}.signal-story h3{font-size:17px;margin:7px 0}.signal-story p{font-size:12px;color:#626a63;margin:0}
 .recommendations{margin-top:32px}.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rec-card{border-radius:20px;padding:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-soft)}.rec-card span{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}.rec-card h3{font-size:17px;line-height:1.2;margin:8px 0}.rec-card p{font-size:12px;color:#626a63;margin:0}.rec-card.high{border-top:4px solid var(--green)}.rec-card.high span{color:var(--green-dark)}.rec-card.test{border-top:4px solid #8daf90}.rec-card.test span{color:#5f7961}.rec-card.caution2{border-top:4px solid #c6a14d}.rec-card.caution2 span{color:#80651f}
+.unusual-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.unusual-card{border:1px solid var(--line);background:#f8f8f6;border-radius:18px;padding:16px}
+.unusual-card.ours{background:var(--green-pale);border-color:#d5ead6}
+.unusual-card.future{border-style:dashed;background:#fbfaf5}
+.unusual-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.unusual-top b{font-size:14px}
+.unusual-top span{font-size:9px;text-transform:uppercase;letter-spacing:.05em;font-weight:900;background:#edf0ed;border-radius:999px;padding:5px 7px;white-space:nowrap}
+.unusual-card.future .unusual-top span{background:#f3ead2;color:#7b621f}
+.unusual-card.ours .unusual-top span{background:#dff2e0;color:var(--green-dark)}
+.unusual-card p{font-size:12px;color:#5d665f;margin:8px 0 0}
+.unusual-card small{display:block;font-size:10px;color:#81795e;margin-top:8px;line-height:1.4}
 .company-cloud{display:flex;flex-wrap:wrap;gap:7px}.company-cloud span{border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;background:#f0f2ef}.company-cloud .new{background:var(--green-soft);color:var(--green-dark)}
 .fold-toggle{margin-left:auto;border:1px solid #d8ddd8;background:#fff;color:var(--green-dark);font:800 12px/1 inherit;border-radius:999px;padding:9px 12px;cursor:pointer;white-space:nowrap}.fold-toggle:hover{border-color:var(--green)}.fold-body[hidden]{display:none}.section.is-folded{padding-top:38px;padding-bottom:38px}.section.is-folded .section-head{margin-bottom:0}.section.is-folded .fold-body{margin-top:28px}
 
@@ -403,7 +414,7 @@ summary{cursor:pointer;color:var(--green-dark);font-weight:800;font-size:13px}
   .section{padding:52px 0}
 }
 @media(max-width:620px){
-  .content-quick,.format-grid,.platform-grid,.rec-grid{grid-template-columns:1fr}
+  .content-quick,.format-grid,.platform-grid,.rec-grid,.unusual-grid{grid-template-columns:1fr}
   .topic-row{grid-template-columns:1fr;gap:6px}.topic-row span{width:max-content}
   .market-signals-head{align-items:flex-start;flex-direction:column}
   .signal-grid{grid-template-columns:1fr}
@@ -591,6 +602,30 @@ summary{cursor:pointer;color:var(--green-dark);font-weight:800;font-size:13px}
         <div class="signal-story"><b>YADRO · ≈11K</b><h3>Контент просит участвовать</h3><p>Квиз не просто читают — в нём нужно отвечать. Комментарии здесь нельзя сравнивать с обычной статьёй, но сама механика участия полезна как идея.</p></div>
         <div class="signal-story ours"><b>2ГИС · ≈9.2K</b><h3>У нас уже есть своя территория</h3><p>Полевой QA + геопозиция + реальная городская среда — хороший пример темы, которую 2ГИС может занимать естественно, не копируя рынок.</p></div>
       </div>
+    </div>
+  </details>
+
+  <details class="research-fold">
+    <summary><span><b>7. Нестандартные форматы: что ещё нашли</b><small>Кейсы, которые выходят за рамки обычной статьи или митапа</small></span><i>+</i></summary>
+    <div class="fold-content">
+      <div class="unusual-grid">
+        <div class="unusual-card future"><div class="unusual-top"><b>Контур · ТехноКвест</b><span>Запланирован</span></div><p>Городской командный квест для IT-аудитории: 15 загадок, маршрут по Казани, подсказки и дополнительные задания. По текущему first-party анонсу — 26 сентября.</p><small>Пока держим в watchlist и не даём балл до подтверждения, что событие прошло.</small><a class="mini-link" href="https://ru.linkedin.com/posts/skbkontur_%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C-%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5-%D1%83%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9-%D0%BA%D0%B2%D0%B5%D1%81%D1%82-activity-7505566249284722689-xXM0" target="_blank">Источник</a></div>
+
+        <div class="unusual-card"><div class="unusual-top"><b>Контур · Скролл Толк</b><span>Прошло</span></div><p>6 выступлений по 10 минут, слайды меняются автоматически каждые 20 секунд. Вместо стандартных докладов — карьерные повороты, ошибки и личные истории.</p><a class="mini-link" href="https://ict2go.ru/events/71658/" target="_blank">Источник</a></div>
+
+        <div class="unusual-card ours"><div class="unusual-top"><b>2ГИС · Pause/Break</b><span>Прошло</span></div><p>Физический интерактивный арт-объект для программистов в городе. Контакт с tech-брендом происходит не через рекламу или митап, а через городской опыт.</p><a class="mini-link" href="https://habr.com/ru/companies/2gis/news/1081414/" target="_blank">Источник</a></div>
+
+        <div class="unusual-card"><div class="unusual-top"><b>Avito · AVITO.TECHNO</b><span>Прошло</span></div><p>Ночной рейв для IT-аудитории с DJ-сетами людей из tech-компаний — без классической конференционной программы.</p><a class="mini-link" href="https://habr.com/ru/companies/avito/news/1054976/" target="_blank">Источник</a></div>
+
+        <div class="unusual-card"><div class="unusual-top"><b>Ozon Tech · E-CODE</b><span>Прошло</span></div><p>Большая конференция, дополненная роботами: они играли в шахматы, готовили мороженое и коктейли, танцевали и выдавали призы.</p><a class="mini-link" href="https://ru.linkedin.com/posts/ozon-tech_ecode-ecode2026-activity-7505590627384975360-1pfp" target="_blank">Источник</a></div>
+
+        <div class="unusual-card future"><div class="unusual-top"><b>MTS Tech · True Tech Champ</b><span>Q3 → Q4</span></div><p>Алгоритмы + программирование робособаки и манипуляторов. Отбор идёт в Q3, а финал превращён в шоу с live-coding и физической робототехникой.</p><a class="mini-link" href="https://truetechchamp.ru/robots" target="_blank">Источник</a></div>
+
+        <div class="unusual-card"><div class="unusual-top"><b>YADRO · Habr superquiz</b><span>Прошло</span></div><p>Юбилей инженерного блога превратили в интерактивный квиз, где читатели отвечают и взаимодействуют, а не просто читают.</p><a class="mini-link" href="https://habr.com/ru/companies/yadro/articles/1061802/" target="_blank">Источник</a></div>
+
+        <div class="unusual-card"><div class="unusual-top"><b>Magnit Tech · TECH NIGHT</b><span>Прошло</span></div><p>Ночная AI/ML-конференция с докладами, DJ-set, afterparty и отдельной научно-популярной лекцией.</p><a class="mini-link" href="https://bezpredela.magnit.tech/" target="_blank">Источник</a></div>
+      </div>
+      <div class="plain-callout"><strong>Сигнал для 2ГИС:</strong> необычные форматы уже появляются у нескольких компаний, но механики очень разные. Это не один «тренд», а подтверждение, что tech brand всё чаще выходит за пределы обычной схемы «статья + митап».</div>
     </div>
   </details>
 
