@@ -290,6 +290,68 @@
         "action": "Do not choose a meetup topic only because many competitors use it.",
         "why": "Java/JVM, Go and AI are visible across the market. A crowded topic needs a specific 2GIS angle to be worth adding."
       }
+    ],
+    "telegram_public_snapshot": {
+      "snapshot_date": "2026-09-21",
+      "caveat": "Public analytics snapshots change over time. Use one source/API for a full comparable channel table.",
+      "channels": [
+        {
+          "company": "Avito",
+          "channel": "@AvitoTech",
+          "subscribers_approx": 25600,
+          "views_per_post_approx": 4100,
+          "er_percent_approx": 15.9,
+          "source": "https://telemetr.me/content/%40avitotech"
+        },
+        {
+          "company": "Ozon Tech",
+          "channel": "@ozon_tech",
+          "subscribers_approx": 29700,
+          "views_per_post_approx": 5600,
+          "er_percent_approx": 18.7,
+          "source": "https://telemetr.me/content/ozon_tech"
+        },
+        {
+          "company": "2GIS",
+          "channel": "@rnd2GIS",
+          "subscribers_approx": 4000,
+          "views_per_post_approx": null,
+          "note": "Channel is active; comparable average reach was not exposed in the same public snapshot, so no estimate is inserted.",
+          "source": "https://telemetr.io/en/channels/1772225971-rnd2gis"
+        }
+      ],
+      "full_data_option": "TGStat posts/stat can return views, forwards, reactions, comments, reposts/mentions and view dynamics; API token is required."
+    },
+    "large_project_public_metrics": [
+      {
+        "company": "Ozon Tech",
+        "project": "E-CODE 2026",
+        "metrics": {
+          "offline_participants": "4000+",
+          "talk_stream_views": "343000+",
+          "talks": 59
+        },
+        "source": "https://t.me/s/ozon_tech"
+      },
+      {
+        "company": "Kaspersky",
+        "project": "Kaspersky{CTF} 2026",
+        "metrics": {
+          "teams": 1657,
+          "countries": 98
+        },
+        "source": "https://www.kaspersky.com/about/press-releases/mastering-the-flags-meet-the-five-winners-of-kasperskyctf"
+      },
+      {
+        "company": "Positive Technologies",
+        "project": "Positive Hack Camp 2026",
+        "metrics": {
+          "applications": "800+",
+          "accepted_participants": 81,
+          "countries": 20
+        },
+        "source": "https://habr.com/ru/companies/pt/articles/1072666/"
+      }
     ]
   },
   "new_competitors_q3_examples": [
