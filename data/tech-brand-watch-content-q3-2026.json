@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-21",
+  "status": "provisional-until-q3-close",
+  "cohort_size": 25,
+  "cohort": [
+    "2GIS",
+    "Yandex",
+    "VK",
+    "Avito",
+    "Ozon Tech",
+    "T-Bank",
+    "MTS Tech",
+    "Alfa-Bank",
+    "SberTech",
+    "X5 Tech",
+    "Kontur",
+    "Kaspersky",
+    "Positive Technologies",
+    "YADRO",
+    "RWB",
+    "Lamoda Tech",
+    "Magnit Tech",
+    "Selectel",
+    "Domclick",
+    "Kuper",
+    "ecom.tech",
+    "Tochka Bank",
+    "Cloud.ru",
+    "hh.ru",
+    "Dodo Engineering"
+  ],
+  "scope_note": "The content layer is expanded to 25 companies. The existing 8-dimension diversity matrix remains a fully audited 14-company core until the same 8-dimension audit is completed for the 11 additions. This avoids comparing deeply audited companies with lightly audited additions.",
+  "content_watch": {
+    "purpose": "Show what competitors publish, where they publish it, what topics recur, and what public content gets attention.",
+    "format_signals": [
+      {
+        "format": "podcast",
+        "confirmed_minimum": 7,
+        "companies": [
+          "Avito",
+          "Ozon Tech",
+          "YADRO",
+          "Selectel",
+          "Magnit Tech",
+          "Lamoda Tech",
+          "ecom.tech"
+        ],
+        "interpretation": "Podcasting is no longer an isolated experiment in the cohort; several companies run named or recurring series.",
+        "sources": [
+          "https://engineer.yadro.com/podcasts/",
+          "https://selectel.mave.digital/",
+          "https://habr.com/ru/companies/ozontech/posts/",
+          "https://habr.com/ru/companies/ecom_tech/profile/"
+        ]
+      },
+      {
+        "format": "video-distribution",
+        "interpretation": "Video is commonly distributed through YouTube and VK Video; some competitors also republish to RuTube and Dzen.",
+        "examples": [
+          "AvitoTech",
+          "Ozon Tech",
+          "Lamoda Tech",
+          "Magnit Tech"
+        ],
+        "sources": [
+          "https://rutube.ru/channel/30462632/",
+          "https://habr.com/ru/companies/ozontech/posts/"
+        ]
+      },
+      {
+        "format": "interactive-content",
+        "interpretation": "Quizzes, polls and challenges appear as low-friction participation mechanics, not only passive reading.",
+        "examples": [
+          "YADRO Habr superquiz",
+          "Selectel IT crossword",
+          "Dodo Engineering polls"
+        ],
+        "sources": [
+          "https://habr.com/ru/companies/yadro/articles/1061802/"
+        ]
+      }
+    ],
+    "topic_signals": [
+      {
+        "topic": "AI / ML / LLM",
+        "signal": "crowded",
+        "note": "Appears repeatedly across current Q3 technical articles, events and podcasts."
+      },
+      {
+        "topic": "Backend / architecture / infrastructure",
+        "signal": "common",
+        "note": "A stable core of engineering content across many companies."
+      },
+      {
+        "topic": "QA / testing",
+        "signal": "common",
+        "note": "Visible in articles, podcasts and event programs; 2GIS already has strong own proof here."
+      },
+      {
+        "topic": "Java / JVM / Go",
+        "signal": "common-in-events",
+        "note": "Frequently used for specialist meetups and conference tracks."
+      },
+      {
+        "topic": "Geo / navigation / location engineering",
+        "signal": "whitespace",
+        "note": "Much less visible among the 25-company sample and directly linked to 2GIS expertise."
+      },
+      {
+        "topic": "C++ / graphics / map performance",
+        "signal": "whitespace",
+        "note": "Less saturated than AI/ML and generic backend themes in the current sample."
+      }
+    ],
+    "platform_gap_2gis": {
+      "confirmed_owned": [
+        "Habr",
+        "Telegram (rnd2GIS)",
+        "VK",
+        "YouTube"
+      ],
+      "gap_candidates": [
+        {
+          "platform": "RuTube",
+          "status": "regular owned 2GIS tech presence not found in this audit",
+          "competitor_examples": [
+            "AvitoTech",
+            "Lamoda Tech",
+            "Magnit Tech"
+          ],
+          "note": "Useful mainly as low-cost cross-posting if video is already produced; competitor presence alone is not proof of demand."
+        },
+        {
+          "platform": "Audio podcast platforms",
+          "status": "regular 2GIS tech podcast series not found",
+          "competitor_examples": [
+            "YADRO",
+            "Selectel",
+            "Lamoda Tech",
+            "Magnit Tech"
+          ],
+          "note": "More strategically relevant than opening a platform by itself: the gap is a recurring audio/video series, not merely an account."
+        },
+        {
+          "platform": "Dzen",
+          "status": "regular 2GIS tech distribution not found in this audit",
+          "competitor_examples": [
+            "AvitoTech",
+            "Lamoda Tech"
+          ],
+          "note": "Consider only as republishing/distribution, not as a separate content strategy until performance is tested."
+        }
+      ],
+      "source_2gis": "https://habr.com/ru/companies/2gis/profile/"
+    },
+    "top_habr_q3_snapshot": [
+      {
+        "company": "Domclick",
+        "title": "Один разработчик, 14 агентов, восемь месяцев",
+        "topic": "AI / engineering workflow",
+        "format": "article / personal engineering experience",
+        "views_approx": 88000,
+        "url": "https://habr.com/ru/companies/domclick/articles/1067048/"
+      },
+      {
+        "company": "YADRO",
+        "title": "Блогу YADRO на Хабре 10 лет — суперквиз",
+        "topic": "engineering history / interactive",
+        "format": "quiz",
+        "views_approx": 11000,
+        "url": "https://habr.com/ru/companies/yadro/articles/1061802/"
+      },
+      {
+        "company": "Cloud.ru",
+        "title": "Управляем VMware Cloud Director через MCP-сервер",
+        "topic": "AI agents / cloud / infrastructure",
+        "format": "tutorial",
+        "views_approx": 10000,
+        "url": "https://habr.com/ru/companies/cloud_ru/articles/1083774/"
+      },
+      {
+        "company": "Positive Technologies",
+        "title": "Как они провели этим летом",
+        "topic": "cybersecurity education",
+        "format": "program story",
+        "views_approx": 9500,
+        "url": "https://habr.com/ru/companies/pt/articles/1072666/"
+      },
+      {
+        "company": "Magnit Tech",
+        "title": "Инженерная эволюция OSA",
+        "topic": "Data / ML infrastructure",
+        "format": "engineering case",
+        "views_approx": 9200,
+        "url": "https://habr.com/ru/companies/magnit/articles/1056372/"
+      },
+      {
+        "company": "2GIS",
+        "title": "Полевые проезды в QA",
+        "topic": "QA / geolocation / navigation",
+        "format": "engineering case",
+        "views_approx": 9200,
+        "url": "https://habr.com/ru/companies/2gis/articles/1056942/"
+      },
+      {
+        "company": "hh.ru",
+        "title": "Redis — история одного падения",
+        "topic": "Java / DevOps / infrastructure",
+        "format": "incident case",
+        "views_approx": 9000,
+        "url": "https://habr.com/ru/companies/hh/articles/1074194/"
+      },
+      {
+        "company": "RWB",
+        "title": "Как разделить фронтенд на модули",
+        "topic": "Frontend / architecture",
+        "format": "engineering case",
+        "views_approx": 8900,
+        "url": "https://habr.com/ru/companies/rwb/articles/1079970/"
+      },
+      {
+        "company": "Tochka Bank",
+        "title": "Стратегия «Голубого океана»: как системный аналитик влияет на продукт",
+        "topic": "systems analysis / product",
+        "format": "expert article",
+        "views_approx": 8300,
+        "url": "https://habr.com/ru/companies/tochka/articles/"
+      },
+      {
+        "company": "ecom.tech",
+        "title": "AI-ревьюер кода",
+        "topic": "AI / code quality",
+        "format": "engineering case",
+        "views_approx": 7600,
+        "url": "https://habr.com/ru/companies/ecom_tech/articles/1073750/"
+      }
+    ],
+    "performance_notes": [
+      {
+        "signal": "Domclick AI case is a clear outlier",
+        "evidence": "~88K Habr views, far above most audited Q3 engineering articles in this sample.",
+        "implication": "AI alone is not the conclusion; the material combines a concrete experiment, strong first-person framing and an unusual scale claim."
+      },
+      {
+        "signal": "Interactive mechanics can create discussion",
+        "evidence": "YADRO superquiz reached ~11K views and was designed to collect answers in comments.",
+        "implication": "Use comments carefully as a metric because the mechanic itself asks people to comment."
+      },
+      {
+        "signal": "2GIS already has a competitive Habr proof point",
+        "evidence": "The QA/geolocation field-testing case reached ~9.2K Habr views in the current snapshot.",
+        "implication": "Geo/navigation + practical QA is a credible own territory, not a topic 2GIS needs to copy from competitors."
+      }
+    ],
+    "recommendations_2gis": [
+      {
+        "priority": "high",
+        "confidence": "high",
+        "action": "Keep Habr as a core engineering channel and build from topics where 2GIS has distinctive proof.",
+        "why": "2GIS already has a ~9.2K-view Q3 QA/geolocation case, while Habr is one of the easiest platforms for cross-company public comparison."
+      },
+      {
+        "priority": "test",
+        "confidence": "medium",
+        "action": "Pilot a recurring video/audio tech series for 3 episodes rather than launching an endless podcast immediately.",
+        "why": "At least seven companies in the 25-company cohort have a confirmed podcast format, while a regular 2GIS tech podcast series was not found."
+      },
+      {
+        "priority": "test",
+        "confidence": "medium",
+        "action": "Republish video to RuTube and, where relevant, audio platforms if the content is already produced.",
+        "why": "Competitors already use these channels; incremental distribution can be tested without creating a separate content machine."
+      },
+      {
+        "priority": "high",
+        "confidence": "medium",
+        "action": "Prefer 2GIS-own topic territory: geo, navigation, location engineering, map performance, C++/graphics and practical QA.",
+        "why": "AI/ML and generic backend topics are crowded. Geo/navigation appears much less saturated in the current sample and is directly tied to 2GIS expertise."
+      },
+      {
+        "priority": "test",
+        "confidence": "medium",
+        "action": "Try one low-cost interactive format: quiz, poll or challenge linked to a real engineering topic.",
+        "why": "YADRO and other companies show that participation mechanics can turn technical content into an interaction, but more comparable performance data is still needed."
+      },
+      {
+        "priority": "avoid-copying",
+        "confidence": "medium",
+        "action": "Do not choose a meetup topic only because many competitors use it.",
+        "why": "Java/JVM, Go and AI are visible across the market. A crowded topic needs a specific 2GIS angle to be worth adding."
+      }
+    ]
+  },
+  "new_competitors_q3_examples": [
+    {
+      "company": "RWB",
+      "signal": "Q3 engineering content + owned tech events",
+      "example": "Frontend modular architecture; Data Meetup participation",
+      "source": "https://habr.com/ru/companies/rwb/articles/"
+    },
+    {
+      "company": "Lamoda Tech",
+      "signal": "Q3 engineering content + meetups + OSS",
+      "example": "Data Science meetup materials; active Lamoda open-source ecosystem",
+      "source": "https://habr.com/ru/companies/lamoda/articles/"
+    },
+    {
+      "company": "Magnit Tech",
+      "signal": "Q3 engineering content + tech event + podcast",
+      "example": "OSA engineering case; MAGNIT TECH NIGHT; «По ту сторону» podcast",
+      "source": "https://habr.com/ru/companies/magnit/articles/"
+    },
+    {
+      "company": "Selectel",
+      "signal": "Q3 technical media + education + OSS + interactive content",
+      "example": "Engineering articles; study platform; licensed Q3 OSS; IT crossword",
+      "source": "https://habr.com/ru/companies/selectel/articles/"
+    },
+    {
+      "company": "Domclick",
+      "signal": "Q3 technical media",
+      "example": "88K-view AI/Tiny Teams case",
+      "source": "https://habr.com/ru/companies/domclick/articles/"
+    },
+    {
+      "company": "Kuper",
+      "signal": "Q3 tech-channel activity",
+      "example": "Tech Telegram / video distribution / engineering stories",
+      "source": "https://habr.com/ru/companies/kuper/profile/"
+    },
+    {
+      "company": "ecom.tech",
+      "signal": "Q3 technical media + multi-platform tech presence",
+      "example": "AI code-review case; Habr profile links Telegram, VK, YouTube, GitHub, podcast and ODS",
+      "source": "https://habr.com/ru/companies/ecom_tech/profile/"
+    },
+    {
+      "company": "Tochka Bank",
+      "signal": "Q3 technical media",
+      "example": "Systems-analysis and engineering content on Habr",
+      "source": "https://habr.com/ru/companies/tochka/articles/"
+    },
+    {
+      "company": "Cloud.ru",
+      "signal": "Q3 technical media + events",
+      "example": "MCP/cloud tutorial; Tech Lab AI&ML",
+      "source": "https://habr.com/ru/companies/cloud_ru/articles/"
+    },
+    {
+      "company": "hh.ru",
+      "signal": "Q3 technical media + education + OSS",
+      "example": "Redis incident case; programmer school; active licensed GitHub repositories",
+      "source": "https://habr.com/ru/companies/hh/profile/"
+    },
+    {
+      "company": "Dodo Engineering",
+      "signal": "Q3 technical media + community/event signals",
+      "example": "Design-system case and active engineering Telegram",
+      "source": "https://habr.com/ru/companies/dododev/articles/"
+    }
+  ],
+  "methodology": {
+    "performance_rule": "Public metrics are snapshots. Views grow over time, so article age and platform must be considered. We do not add metrics across platforms as if they were unique reach.",
+    "comparison_rule": "Use same-platform comparisons wherever possible. A higher view count does not prove that a format or topic caused the result.",
+    "absence_rule": "Not found means not found in the public audit, not proof that the company does not use the format internally.",
+    "telegram_note": "Public Telegram metrics can be collected from public posts and analytics services where accessible; full historical TGStat data may require API access."
+  }
+}
