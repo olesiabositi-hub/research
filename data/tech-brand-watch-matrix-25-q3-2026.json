@@ -1,0 +1,447 @@
+{
+  "schema_version": "1.0",
+  "observation_period": {
+    "start": "2026-07-01",
+    "end": "2026-09-30"
+  },
+  "as_of": "2026-09-21",
+  "status": "provisional-25-company-audit",
+  "methodology_note": "All 25 companies use the same 8 dimensions and one-activity-one-primary-dimension rule. The 11 companies added on Sep 21 received a conservative Q3 public-source pass; all 25 will be rechecked after Sep 30 before the quarter is frozen.",
+  "dimensions": [
+    "Tech Media",
+    "Events",
+    "Community",
+    "Engineer Creators",
+    "Education",
+    "Research",
+    "Open Source",
+    "Creative Projects"
+  ],
+  "matrix": [
+    {
+      "company_id": "yandex",
+      "name": "Яндекс",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Community",
+        "Education",
+        "Research",
+        "Open Source"
+      ],
+      "score": 6
+    },
+    {
+      "company_id": "avito",
+      "name": "Avito",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Engineer Creators",
+        "Education",
+        "Open Source",
+        "Creative Projects"
+      ],
+      "score": 6
+    },
+    {
+      "company_id": "kaspersky",
+      "name": "Kaspersky",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Education",
+        "Research",
+        "Open Source",
+        "Creative Projects"
+      ],
+      "score": 6
+    },
+    {
+      "company_id": "positive-technologies",
+      "name": "Positive Technologies",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Community",
+        "Engineer Creators",
+        "Education",
+        "Research"
+      ],
+      "score": 6
+    },
+    {
+      "company_id": "t-bank",
+      "name": "Т-Банк",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Engineer Creators",
+        "Education",
+        "Open Source"
+      ],
+      "score": 5
+    },
+    {
+      "company_id": "mts-tech",
+      "name": "MTS Tech",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Community",
+        "Education",
+        "Creative Projects"
+      ],
+      "score": 5
+    },
+    {
+      "company_id": "ozon-tech",
+      "name": "Ozon Tech",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Education",
+        "Open Source",
+        "Creative Projects"
+      ],
+      "score": 5
+    },
+    {
+      "company_id": "yadro",
+      "name": "YADRO",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Engineer Creators",
+        "Education",
+        "Creative Projects"
+      ],
+      "score": 5
+    },
+    {
+      "company_id": "2gis",
+      "name": "2ГИС",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Open Source",
+        "Creative Projects"
+      ],
+      "score": 4
+    },
+    {
+      "company_id": "kontur",
+      "name": "Контур",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Research",
+        "Open Source"
+      ],
+      "score": 4
+    },
+    {
+      "company_id": "vk",
+      "name": "VK",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Education",
+        "Open Source"
+      ],
+      "score": 4
+    },
+    {
+      "company_id": "selectel",
+      "name": "Selectel",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Education",
+        "Open Source"
+      ],
+      "score": 4
+    },
+    {
+      "company_id": "cloud-ru",
+      "name": "Cloud.ru",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Education",
+        "Open Source"
+      ],
+      "score": 4
+    },
+    {
+      "company_id": "alfa-bank",
+      "name": "Альфа-Банк",
+      "active": [
+        "Tech Media",
+        "Education",
+        "Research"
+      ],
+      "score": 3
+    },
+    {
+      "company_id": "sbertech",
+      "name": "SberTech",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Open Source"
+      ],
+      "score": 3
+    },
+    {
+      "company_id": "lamoda-tech",
+      "name": "Lamoda Tech",
+      "active": [
+        "Tech Media",
+        "Events",
+        "Open Source"
+      ],
+      "score": 3
+    },
+    {
+      "company_id": "magnit-tech",
+      "name": "Magnit Tech",
+      "active": [
+        "Tech Media",
+        "Education",
+        "Creative Projects"
+      ],
+      "score": 3
+    },
+    {
+      "company_id": "hh",
+      "name": "hh.ru",
+      "active": [
+        "Tech Media",
+        "Education",
+        "Open Source"
+      ],
+      "score": 3
+    },
+    {
+      "company_id": "x5-tech",
+      "name": "X5 Tech",
+      "active": [
+        "Tech Media",
+        "Education"
+      ],
+      "score": 2
+    },
+    {
+      "company_id": "rwb",
+      "name": "RWB",
+      "active": [
+        "Tech Media",
+        "Events"
+      ],
+      "score": 2
+    },
+    {
+      "company_id": "ecom-tech",
+      "name": "ecom.tech",
+      "active": [
+        "Tech Media",
+        "Education"
+      ],
+      "score": 2
+    },
+    {
+      "company_id": "tochka",
+      "name": "Точка Банк",
+      "active": [
+        "Tech Media",
+        "Open Source"
+      ],
+      "score": 2
+    },
+    {
+      "company_id": "dodo-engineering",
+      "name": "Dodo Engineering",
+      "active": [
+        "Tech Media",
+        "Events"
+      ],
+      "score": 2
+    },
+    {
+      "company_id": "domclick",
+      "name": "Домклик",
+      "active": [
+        "Tech Media"
+      ],
+      "score": 1
+    },
+    {
+      "company_id": "kuper",
+      "name": "Купер",
+      "active": [
+        "Tech Media"
+      ],
+      "score": 1
+    }
+  ],
+  "dimension_coverage": {
+    "Tech Media": 25,
+    "Events": 17,
+    "Community": 3,
+    "Engineer Creators": 4,
+    "Education": 16,
+    "Research": 5,
+    "Open Source": 14,
+    "Creative Projects": 7
+  },
+  "totals": {
+    "score_sum": 91,
+    "mean_score": 3.64,
+    "max_score": 6,
+    "companies": 25
+  },
+  "added_company_evidence": [
+    {
+      "company": "RWB",
+      "dimensions": [
+        "Tech Media",
+        "Events"
+      ],
+      "sources": [
+        "https://habr.com/ru/companies/rwb/articles/1079970/",
+        "https://meetup.rwb.ru/events"
+      ],
+      "note": "Q3 engineering article and owned external tech-event program."
+    },
+    {
+      "company": "Lamoda Tech",
+      "dimensions": [
+        "Tech Media",
+        "Events",
+        "Open Source"
+      ],
+      "sources": [
+        "https://habr.com/ru/companies/lamoda/articles/",
+        "https://habr.com/ru/companies/lamoda/news/1071100/",
+        "https://github.com/lamoda/gonkey"
+      ],
+      "note": "Q3 engineering content, Aug 27 meetup, MIT-licensed Gonkey with Q3 activity."
+    },
+    {
+      "company": "Magnit Tech",
+      "dimensions": [
+        "Tech Media",
+        "Education",
+        "Creative Projects"
+      ],
+      "sources": [
+        "https://habr.com/ru/companies/magnit/articles/",
+        "https://www.magnit.com/ru/media/press-releases/magnit-podgotovit-bolee-240-budushchikh-it-spetsialistov-v-shesti-rossiyskikh-vuzakh/",
+        "https://bezpredela.magnit.tech/"
+      ],
+      "note": "Q3 engineering content; university programs; TECH NIGHT is assigned to Creative Projects rather than Events to avoid double counting."
+    },
+    {
+      "company": "Selectel",
+      "dimensions": [
+        "Tech Media",
+        "Events",
+        "Education",
+        "Open Source"
+      ],
+      "sources": [
+        "https://selectel.ru/blog/",
+        "https://selectel.ru/blog/events/",
+        "https://selectel.ru/blog/courses/",
+        "https://github.com/selectel/terraform-provider-selectel"
+      ],
+      "note": "Current expert content, Q3 webinars/events, public courses, MPL-2.0 provider with Q3 releases."
+    },
+    {
+      "company": "Домклик",
+      "dimensions": [
+        "Tech Media"
+      ],
+      "sources": [
+        "https://habr.com/ru/companies/domclick/articles/"
+      ],
+      "note": "Strong Q3 technical content; no additional Q3 dimension is added without separate evidence."
+    },
+    {
+      "company": "Купер",
+      "dimensions": [
+        "Tech Media"
+      ],
+      "sources": [
+        "https://tg.me/tech_kuper"
+      ],
+      "note": "Active Q3 tech channel with engineering/data content; no additional dimension added without separate evidence."
+    },
+    {
+      "company": "ecom.tech",
+      "dimensions": [
+        "Tech Media",
+        "Education"
+      ],
+      "sources": [
+        "https://habr.com/ru/companies/ecom_tech/articles/",
+        "https://habr.com/ru/companies/ecom_tech/articles/1071682/"
+      ],
+      "note": "Q3 engineering content and BACamp external school. Older 2025 research is not counted in Q3."
+    },
+    {
+      "company": "Точка Банк",
+      "dimensions": [
+        "Tech Media",
+        "Open Source"
+      ],
+      "sources": [
+        "https://habr.com/ru/companies/tochka/articles/",
+        "https://github.com/tochka-public"
+      ],
+      "note": "Q3 engineering articles and multiple MIT-licensed repositories updated in Q3."
+    },
+    {
+      "company": "Cloud.ru",
+      "dimensions": [
+        "Tech Media",
+        "Events",
+        "Education",
+        "Open Source"
+      ],
+      "sources": [
+        "https://habr.com/ru/companies/cloud_ru/posts/",
+        "https://habr.com/ru/companies/cloud_ru/posts/1079962/",
+        "https://github.com/cloud-ru-tech"
+      ],
+      "note": "Q3 technical media, Tech Lab/webinars, free secure-cloud-development course, licensed Q3 OSS."
+    },
+    {
+      "company": "hh.ru",
+      "dimensions": [
+        "Tech Media",
+        "Education",
+        "Open Source"
+      ],
+      "sources": [
+        "https://habr.com/ru/companies/hh/articles/",
+        "https://habr.com/ru/companies/hh/articles/1064004/",
+        "https://github.com/hhru"
+      ],
+      "note": "Q3 engineering content, current programmer/analyst schools, licensed public repositories with Q3 activity."
+    },
+    {
+      "company": "Dodo Engineering",
+      "dimensions": [
+        "Tech Media",
+        "Events"
+      ],
+      "sources": [
+        "https://habr.com/ru/companies/dododev/articles/",
+        "https://telemetr.me/content/dododev"
+      ],
+      "note": "Q3 engineering content and Sep 17 Casearium with Dodo Engineering. Fork activity on GitHub is not used for an OSS point."
+    }
+  ]
+}
