@@ -352,6 +352,99 @@
         },
         "source": "https://habr.com/ru/companies/pt/articles/1072666/"
       }
+    ],
+    "unusual_formats_watch": [
+      {
+        "company": "Kontur",
+        "project": "ТехноКвест",
+        "status": "scheduled / verify after event",
+        "date": "2026-09-26",
+        "mechanic": "Городской пеший квест для IT-аудитории: команды 4–6 человек, 15 загадок, маршрут по Казани, подсказки и дополнительные задания.",
+        "why_unusual": "Employer-brand event built around a city game rather than talks or technical competition.",
+        "scoring_note": "Do not add a Creative Projects point until the event is confirmed as held. Current first-party LinkedIn promo says Sep 26; older event mirrors list Sep 19, so final date needs post-event verification.",
+        "sources": [
+          "https://ru.linkedin.com/posts/skbkontur_%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C-%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5-%D1%83%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9-%D0%BA%D0%B2%D0%B5%D1%81%D1%82-activity-7505566249284722689-xXM0",
+          "https://networkly.app/event/tekhnokvest-26-09-2026_6811"
+        ]
+      },
+      {
+        "company": "Kontur",
+        "project": "Скролл Толк",
+        "status": "held",
+        "date": "2026-09-09",
+        "mechanic": "6 коротких выступлений по 10 минут с автоматической сменой слайдов каждые 20 секунд; темы — карьерные повороты, ошибки и личные истории.",
+        "why_unusual": "A rigid rapid-talk mechanic replaces the standard long technical talk and shifts the content toward human engineering stories.",
+        "sources": [
+          "https://ict2go.ru/events/71658/"
+        ]
+      },
+      {
+        "company": "2GIS",
+        "project": "Pause/Break",
+        "status": "held",
+        "date": "2026-09-11",
+        "mechanic": "Physical interactive art object for programmers in the city.",
+        "why_unusual": "Employer-brand contact happens through a public urban object rather than a media post or meetup.",
+        "sources": [
+          "https://habr.com/ru/companies/2gis/news/1081414/"
+        ]
+      },
+      {
+        "company": "Avito",
+        "project": "AVITO.TECHNO",
+        "status": "held",
+        "date": "2026-07-17",
+        "mechanic": "Night rave for the IT audience with DJs from tech companies and no classic conference program.",
+        "why_unusual": "Culture and music become the main interaction mechanic with the engineering audience.",
+        "sources": [
+          "https://habr.com/ru/companies/avito/news/1054976/"
+        ]
+      },
+      {
+        "company": "Ozon Tech",
+        "project": "E-CODE 2026",
+        "status": "held",
+        "date": "2026-09-12/13",
+        "mechanic": "Large tech event with 59 talks plus robots playing chess, making ice cream and cocktails, dancing and delivering prizes.",
+        "why_unusual": "Technical conference expanded into a high-production interactive experience.",
+        "sources": [
+          "https://ru.linkedin.com/posts/ozon-tech_ecode-ecode2026-activity-7505590627384975360-1pfp"
+        ]
+      },
+      {
+        "company": "MTS Tech",
+        "project": "True Tech Champ 2026",
+        "status": "Q3 qualification active; final in Q4",
+        "date": "2026-07-08 onward",
+        "mechanic": "Algorithm competition plus a robotics track where teams program a robot dog and manipulators; final is staged as a live show.",
+        "why_unusual": "Engineering competition becomes spectator entertainment and a physical robotics experience.",
+        "sources": [
+          "https://truetechchamp.ru/robots",
+          "https://truetechchamp.ru/algorithms"
+        ]
+      },
+      {
+        "company": "YADRO",
+        "project": "10-year Habr superquiz",
+        "status": "held",
+        "date": "2026-07-24",
+        "mechanic": "Interactive quiz built from the engineering history of the company blog, with answers encouraged in comments.",
+        "why_unusual": "Turns a corporate anniversary into participatory technical content.",
+        "sources": [
+          "https://habr.com/ru/companies/yadro/articles/1061802/"
+        ]
+      },
+      {
+        "company": "Magnit Tech",
+        "project": "MAGNIT TECH NIGHT 2026",
+        "status": "held",
+        "date": "2026-09-18",
+        "mechanic": "Night AI/ML conference with talks, afterparty, DJ set, informal activities and a popular-science lecture.",
+        "why_unusual": "Combines expert content with nightlife and science-pop culture rather than a standard daytime conference.",
+        "sources": [
+          "https://bezpredela.magnit.tech/"
+        ]
+      }
     ]
   },
   "new_competitors_q3_examples": [
