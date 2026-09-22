@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "snapshot_date": "2026-09-21",
+  "snapshot_date": "2026-09-22",
   "status": "provisional-until-q3-close",
   "cohort_size": 25,
   "cohort": [
@@ -35,23 +35,23 @@
     "purpose": "Show what competitors publish, where they publish it, what topics recur, and what public content gets attention.",
     "format_signals": [
       {
-        "format": "podcast",
-        "confirmed_minimum": 7,
+        "format": "owned-recurring-podcast",
+        "confirmed_minimum": 6,
         "companies": [
           "Avito",
           "Ozon Tech",
           "YADRO",
           "Selectel",
           "Magnit Tech",
-          "Lamoda Tech",
-          "ecom.tech"
+          "Kontur"
         ],
-        "interpretation": "Podcasting is no longer an isolated experiment in the cohort; several companies run named or recurring series.",
+        "interpretation": "Confirmed owned or branded recurring podcast series. Guest appearances in third-party podcasts are excluded.",
         "sources": [
           "https://engineer.yadro.com/podcasts/",
           "https://selectel.mave.digital/",
-          "https://habr.com/ru/companies/ozontech/posts/",
-          "https://habr.com/ru/companies/ecom_tech/profile/"
+          "https://t.me/s/ozon_tech?q=%23ozontech_podcast",
+          "https://t.me/s/magnittech/724",
+          "https://rutube.ru/channel/16934147/"
         ]
       },
       {
@@ -826,7 +826,290 @@
           "https://bezpredela.magnit.tech/"
         ]
       }
-    ]
+    ],
+    "platform_distribution_audit": {
+      "snapshot_date": "2026-09-22",
+      "rule": "Count only channels/platforms that were directly confirmed in this audit. '≥' means a minimum confirmed count, not proof that the remaining companies are absent.",
+      "rows": [
+        {
+          "platform": "Habr",
+          "confirmed": "24/25 separate or directly attributable company blogs",
+          "companies_note": "All cohort companies except SberTech have a separate comparable company blog in the current audit. SberTech materials appear inside the broader Sber blog, so they are not counted as a separate channel.",
+          "use": "Articles / engineering cases / news",
+          "metric": "Public article views, comments, rating"
+        },
+        {
+          "platform": "Telegram",
+          "confirmed": "24/25 relevant tech/company-tech channels identified; 22/25 have a public average-views metric",
+          "companies_note": "No clearly dedicated tech channel was identified for Tochka in this pass. 2GIS and hh.ru channels are identified but comparable public average views are not exposed in the same source.",
+          "use": "Daily distribution / community / event and content promotion",
+          "metric": "Subscribers, average views per post, ER"
+        },
+        {
+          "platform": "Owned recurring podcast",
+          "confirmed": "≥6/25",
+          "companies_note": "Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Kontur",
+          "use": "Long-form expert / engineering conversation",
+          "metric": "Episode views/listens where public; often fragmented across platforms"
+        },
+        {
+          "platform": "YouTube",
+          "confirmed": "≥7/25",
+          "companies_note": "2GIS, Ozon Tech, YADRO, Selectel, Kontur, RWB, Kuper",
+          "use": "Video podcasts, talks, conference recordings, interviews",
+          "metric": "Views / comments / likes"
+        },
+        {
+          "platform": "VK Video",
+          "confirmed": "≥6/25",
+          "companies_note": "2GIS, Avito, Ozon Tech, Selectel, Kontur, Kuper",
+          "use": "Video distribution and reposting",
+          "metric": "Views / reactions / comments"
+        },
+        {
+          "platform": "RuTube",
+          "confirmed": "≥5/25",
+          "companies_note": "Avito, YADRO, Selectel, Magnit Tech, Kontur",
+          "use": "Secondary video distribution",
+          "metric": "Views"
+        },
+        {
+          "platform": "Dzen",
+          "confirmed": "≥1/25 in this verification pass",
+          "companies_note": "AvitoTech",
+          "use": "Secondary distribution",
+          "metric": "Views / reactions when public"
+        },
+        {
+          "platform": "Audio platforms",
+          "confirmed": "Used by several of the ≥6 recurring podcast brands",
+          "companies_note": "Examples: YADRO, Selectel, Ozon Tech, Kontur; platforms include Mave, Apple Podcasts, Yandex Music, Spotify/Castbox depending on show.",
+          "use": "Podcast distribution",
+          "metric": "Public listening data is often unavailable"
+        }
+      ]
+    },
+    "habr_cadence_audit": {
+      "period": "2026-07-01 to 2026-09-22",
+      "weeks": 12,
+      "scope": "All articles in the company Habr blog, regardless of topic. This measures publishing cadence only, not content quality or employer-brand purity.",
+      "status": "9 blogs fully recounted in this pass; remaining blogs should not be assigned a cadence number until the same page-by-page count is completed.",
+      "rows": [
+        {
+          "company": "Яндекс",
+          "q3_articles_to_date": 41,
+          "approx_per_week": 3.42
+        },
+        {
+          "company": "VK Tech",
+          "q3_articles_to_date": 35,
+          "approx_per_week": 2.92
+        },
+        {
+          "company": "Т-Банк",
+          "q3_articles_to_date": 29,
+          "approx_per_week": 2.42
+        },
+        {
+          "company": "Avito",
+          "q3_articles_to_date": 25,
+          "approx_per_week": 2.08
+        },
+        {
+          "company": "Ozon Tech",
+          "q3_articles_to_date": 9,
+          "approx_per_week": 0.75
+        },
+        {
+          "company": "X5 Tech",
+          "q3_articles_to_date": 6,
+          "approx_per_week": 0.5
+        },
+        {
+          "company": "2GIS",
+          "q3_articles_to_date": 4,
+          "approx_per_week": 0.33
+        },
+        {
+          "company": "Dodo Engineering",
+          "q3_articles_to_date": 1,
+          "approx_per_week": 0.08
+        },
+        {
+          "company": "Kuper",
+          "q3_articles_to_date": 0,
+          "approx_per_week": 0
+        }
+      ],
+      "caveat": "High-volume company blogs differ in editorial scope. Frequency should not be interpreted as quality or performance."
+    },
+    "habr_q3_standouts": {
+      "snapshot_date": "2026-09-22",
+      "label": "Verified Q3 Habr standouts",
+      "caveat": "Sorted by current public views. This is a verified standout set, not a claim of exhaustive top-10 across every article from all 25 companies. Views continue to grow and article age differs.",
+      "rows": [
+        {
+          "company": "Домклик",
+          "title": "Один разработчик, 14 агентов, восемь месяцев",
+          "views": 88000,
+          "topic": "AI / engineering workflow",
+          "url": "https://habr.com/ru/companies/domclick/articles/1067048/"
+        },
+        {
+          "company": "Яндекс",
+          "title": "Как за вами (не) следит Яндекс",
+          "views": 74000,
+          "topic": "Mobile / security / response",
+          "url": "https://habr.com/ru/companies/yandex/articles/1067964/"
+        },
+        {
+          "company": "Т-Банк",
+          "title": "Java Digest #38",
+          "views": 60000,
+          "topic": "Java / digest",
+          "url": "https://habr.com/ru/companies/tbank/articles/"
+        },
+        {
+          "company": "Яндекс",
+          "title": "Тысяча конфликтов и одна LLM",
+          "views": 32000,
+          "topic": "LLM / Chromium / engineering automation",
+          "url": "https://habr.com/ru/companies/yandex/articles/"
+        },
+        {
+          "company": "MTS",
+          "title": "Рынок IT-вакансий сломался и ничего не понятно?",
+          "views": 28000,
+          "topic": "IT labour market / analytics",
+          "url": "https://habr.com/ru/companies/ru_mts/articles/"
+        },
+        {
+          "company": "Avito",
+          "title": "От «когда-нибудь» к работающему прототипу: как LLM дала идее шанс",
+          "views": 18000,
+          "topic": "LLM / prototyping",
+          "url": "https://habr.com/ru/companies/avito/articles/1078084/"
+        },
+        {
+          "company": "VK Tech",
+          "title": "ClickHouse: сценарии, сильные стороны, лучшие практики работы в 2026 году",
+          "views": 17000,
+          "topic": "Data / ClickHouse",
+          "url": "https://habr.com/ru/companies/vktech/articles/1061284/"
+        },
+        {
+          "company": "Selectel",
+          "title": "Пять мини-ПК июля 2026 года",
+          "views": 15000,
+          "topic": "Hardware / editorial tech",
+          "url": "https://habr.com/ru/companies/selectel/articles/"
+        },
+        {
+          "company": "Ozon Tech",
+          "title": "От полной выгрузки к S3 и PostgreSQL",
+          "views": 14000,
+          "topic": "Go / highload / data delivery",
+          "url": "https://habr.com/ru/companies/ozontech/articles/"
+        },
+        {
+          "company": "X5 Tech",
+          "title": "Почему фронтенд съедает больше времени, чем бэкенд",
+          "views": 12000,
+          "topic": "Frontend / AI development",
+          "url": "https://habr.com/ru/companies/X5Tech/articles/"
+        },
+        {
+          "company": "Kaspersky",
+          "title": "Diablo II, римские стратегии и Prince of Persia: что фронтенду стоит перенять у геймдева",
+          "views": 12000,
+          "topic": "Frontend / gamedev",
+          "url": "https://habr.com/ru/companies/kaspersky/articles/"
+        },
+        {
+          "company": "2GIS",
+          "title": "Полевые проезды в QA: как мы ищем аномалии геопозиции в городе",
+          "views": 9200,
+          "topic": "QA / geolocation",
+          "url": "https://habr.com/ru/companies/2gis/articles/1056942/"
+        }
+      ]
+    },
+    "telegram_outperformers": {
+      "snapshot_date": "2026-09-22",
+      "rule": "Examples of public Telegram posts whose observed views are materially above the channel-level public average collected in the Telegram benchmark. Ratios are approximate.",
+      "rows": [
+        {
+          "company": "X5 Tech",
+          "post": "Карьерный пост: подготовка к техническому собеседованию",
+          "post_views": 5510,
+          "channel_avg_views": 1576,
+          "ratio_to_avg": 3.5,
+          "source": "https://t.me/s/x5_tech?before=2564"
+        },
+        {
+          "company": "Positive Technologies",
+          "post": "ПМЭФ-2026 / пространство и хакерское мышление",
+          "post_views": 9070,
+          "channel_avg_views": 3292,
+          "ratio_to_avg": 2.75,
+          "source": "https://t.me/s/Positive_Technologies?before=4251"
+        },
+        {
+          "company": "Ozon Tech",
+          "post": "Пункт выдачи новостей / развлекательный пост вокруг шоу",
+          "post_views": 13800,
+          "channel_avg_views": 5580,
+          "ratio_to_avg": 2.47,
+          "source": "https://t.me/s/ozon_tech/1317"
+        },
+        {
+          "company": "Avito",
+          "post": "Новогодний интерактив / предсказания для IT-аудитории",
+          "post_views": 7300,
+          "channel_avg_views": 4076,
+          "ratio_to_avg": 1.79,
+          "source": "https://t.me/s/avitotech/3117"
+        },
+        {
+          "company": "Ozon Tech",
+          "post": "Подкаст с техническим директором",
+          "post_views": 8080,
+          "channel_avg_views": 5580,
+          "ratio_to_avg": 1.45,
+          "source": "https://t.me/s/ozon_tech/1619"
+        }
+      ],
+      "caveat": "These are verified examples, not an exhaustive top-post ranking for all 22 channels."
+    },
+    "format_audit": {
+      "snapshot_date": "2026-09-22",
+      "rows": [
+        {
+          "format": "Habr articles / engineering cases",
+          "confirmed": "24/25 separate comparable blogs",
+          "who": "All except a separate SberTech blog; SberTech appears under broader Sber"
+        },
+        {
+          "format": "Owned recurring podcasts",
+          "confirmed": "≥6/25",
+          "who": "Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Kontur"
+        },
+        {
+          "format": "Unusual / non-standard projects",
+          "confirmed": "7/25 scored in Q3 matrix",
+          "who": "2GIS, Avito, Kaspersky, MTS Tech, Ozon Tech, YADRO, Magnit Tech"
+        },
+        {
+          "format": "Audience-participation mechanics",
+          "confirmed": "Examples confirmed, full cohort count not yet audited",
+          "who": "YADRO Habr superquiz; X5 Telegram polls; Ozon Tech interactive/news-show mechanics"
+        }
+      ]
+    },
+    "topic_signals_status": {
+      "status": "not quantified for publication",
+      "reason": "A full coded content census across all selected channels is not yet complete. Vague labels such as 'common' or 'crowded' are intentionally not used in the public report until a denominator exists."
+    }
   },
   "new_competitors_q3_examples": [
     {
