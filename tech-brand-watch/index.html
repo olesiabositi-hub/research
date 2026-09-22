@@ -272,6 +272,17 @@ a:hover{color:var(--green)}
 .telegram-missing h4{margin:0 0 10px;font-size:14px}
 .market-table a{color:inherit;text-decoration:underline;text-decoration-color:#b8c1b9;text-underline-offset:3px}
 .market-table a:hover{color:var(--green-dark)}
+/* Quantified content audit */
+.content-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.content-kpi{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow-soft)}
+.content-kpi b{display:block;font-size:25px;letter-spacing:-.04em;color:var(--green-dark);margin-bottom:4px}
+.content-kpi span{display:block;font-size:11px;line-height:1.4;color:var(--muted)}
+.table-intro{display:flex;justify-content:space-between;gap:18px;align-items:end;margin:2px 0 12px}
+.table-intro b{font-size:16px}.table-intro span{font-size:11px;color:var(--muted);text-align:right}
+.sub-intro{margin-top:24px;padding-top:18px;border-top:1px solid #e6eae6}
+.market-table small{color:var(--muted);font-size:10px}
+@media(max-width:900px){.content-kpis{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.content-kpis{grid-template-columns:1fr}.table-intro{display:block}.table-intro span{display:block;text-align:left;margin-top:3px}}
 /* Report architecture */
 .executive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
 .exec-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow-soft)}
@@ -560,102 +571,117 @@ summary{cursor:pointer;color:var(--green-dark);font-weight:800;font-size:13px}
 </div></section>
 <section class="section" id="content"><div class="wrap">
   <div class="section-head"><div>
-    <h2>Контент: что публикуют, где и в каком формате</h2>
-    <p>Этот раздел нужен перед планированием конкретной активности: статьи, подкаста, видео, митапа или новой площадки.</p>
-  </div></div>
+    <h2>Контент: где публикуют, как часто и что получает просмотры</h2>
+    <p>Здесь только измеримые вещи: сколько компаний использует площадку, кто именно, сколько публикаций выходит и какие материалы получили заметно больше просмотров.</p>
+  </div><div class="note"><strong>Правило:</strong> если полного аудита нет, пишем «≥ минимум подтверждено», а не «многие» или «некоторые».</div></div>
+
+  <div class="content-kpis">
+    <div class="content-kpi"><b>24/25</b><span>отдельный или напрямую относимый блог на Habr</span></div>
+    <div class="content-kpi"><b>24/25</b><span>релевантный tech / company-tech канал в Telegram</span></div>
+    <div class="content-kpi"><b>22/25</b><span>Telegram-канала с публичным средним просмотром поста</span></div>
+    <div class="content-kpi"><b>≥6/25</b><span>брендов с собственной регулярной podcast-серией</span></div>
+  </div>
 
   <div class="simple-tabs" role="tablist">
-    <button class="simple-tab active" data-tab="formats">Форматы</button>
-    <button class="simple-tab" data-tab="topics">Темы</button>
-    <button class="simple-tab" data-tab="platforms">Площадки</button>
-    <button class="simple-tab" data-tab="unusual">Необычные механики</button>
+    <button class="simple-tab active" data-tab="platforms">Площадки</button>
+    <button class="simple-tab" data-tab="cadence">Как часто</button>
+    <button class="simple-tab" data-tab="hits">Что залетело</button>
+    <button class="simple-tab" data-tab="formats">Форматы</button>
   </div>
 
-  <div class="tab-panel active" data-panel="formats">
+  <div class="tab-panel active" data-panel="platforms">
+    <div class="table-intro"><b>Где публикуют</b><span>Срез по 25 компаниям · 22 сентября 2026</span></div>
     <table class="market-table">
-      <thead><tr><th>Формат</th><th>Что видно по рынку</th><th>Что это значит</th></tr></thead>
+      <thead><tr><th>Площадка</th><th>Подтверждено</th><th>Кто именно</th><th>Что можно сравнивать</th></tr></thead>
       <tbody>
-        <tr><td>Статьи / engineering cases</td><td>Есть практически у всех</td><td>База. Важнее тема и качество кейса, чем сам факт статьи.</td></tr>
-        <tr><td>Подкасты</td><td><b>Минимум 7 из 25</b></td><td>Уже не единичный формат, но performance пока плохо сопоставим.</td></tr>
-        <tr><td>Видео</td><td>Используется несколькими крупными tech-брендами</td><td>Имеет смысл оценивать вместе с дистрибуцией, а не как отдельный «обязательный» канал.</td></tr>
-        <tr><td>Контент с участием аудитории</td><td>Квизы, опросы, задания встречаются редко</td><td>Подходит для теста, но данных пока мало для вывода «работает лучше».</td></tr>
-        <tr><td>Нестандартные проекты</td><td><b>7 из 25</b></td><td>Уже заметный паттерн, но механики очень разные.</td></tr>
+        <tr><td><b>Habr</b></td><td><b>24/25</b></td><td>Отдельный сопоставимый блог найден у всех, кроме SberTech. Материалы SberTech выходят внутри более широкого блога Сбера, поэтому отдельно его не считаем.</td><td>Просмотры статьи, комментарии, рейтинг, частоту публикаций</td></tr>
+        <tr><td><b>Telegram</b></td><td><b>24/25</b><br><small>22 с метрикой avg views</small></td><td>Релевантный tech/company-tech канал найден у всех, кроме Точки. Для Dev2GIS и hh.ru публичный средний просмотр в сопоставимом источнике пока не получен.</td><td>Подписчики, средний просмотр поста, ER, отдельные посты</td></tr>
+        <tr><td><b>YouTube</b></td><td><b>≥7/25</b></td><td>2ГИС, Ozon Tech, YADRO, Selectel, Контур, RWB, Купер</td><td>Просмотры видео, комментарии, серии</td></tr>
+        <tr><td><b>VK Video</b></td><td><b>≥6/25</b></td><td>2ГИС, Avito, Ozon Tech, Selectel, Контур, Купер</td><td>Просмотры видео, реакции, комментарии</td></tr>
+        <tr><td><b>RuTube</b></td><td><b>≥5/25</b></td><td>Avito, YADRO, Selectel, Magnit Tech, Контур</td><td>Просмотры видео; чаще используется как дополнительная дистрибуция</td></tr>
+        <tr><td><b>Dzen</b></td><td><b>≥1/25</b></td><td>AvitoTech подтверждён в текущем проходе</td><td>Пока данных недостаточно для market-level сравнения</td></tr>
+        <tr><td><b>Аудиоплатформы</b></td><td><b>≥6 брендов с собственными podcast-сериями</b></td><td>Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур. Используют Mave, Apple Podcasts, Яндекс Музыку, Spotify/Castbox и другие площадки в зависимости от шоу.</td><td>Публичные прослушивания часто недоступны, поэтому между брендами не сравниваем</td></tr>
       </tbody>
     </table>
+    <p class="table-note"><strong>≥</strong> означает «минимум подтверждено в текущем аудите». Это не означает, что остальные компании площадку точно не используют.</p>
   </div>
 
-  <div class="tab-panel" data-panel="topics">
+  <div class="tab-panel" data-panel="cadence">
+    <div class="table-intro"><b>Habr: сколько статей вышло в Q3 к 22 сентября</b><span>01.07–22.09 = 12 недель</span></div>
+    <table class="market-table rank-table">
+      <thead><tr><th>#</th><th>Компания</th><th>Статей Q3</th><th>≈ в неделю</th><th>К частоте 2ГИС</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Яндекс</td><td><b>41</b></td><td>3.42</td><td>10.3×</td></tr>
+        <tr><td>2</td><td>VK Tech</td><td><b>35</b></td><td>2.92</td><td>8.8×</td></tr>
+        <tr><td>3</td><td>Т-Банк</td><td><b>29</b></td><td>2.42</td><td>7.3×</td></tr>
+        <tr><td>4</td><td>Avito</td><td><b>25</b></td><td>2.08</td><td>6.3×</td></tr>
+        <tr><td>5</td><td>Ozon Tech</td><td><b>9</b></td><td>0.75</td><td>2.3×</td></tr>
+        <tr><td>6</td><td>X5 Tech</td><td><b>6</b></td><td>0.50</td><td>1.5×</td></tr>
+        <tr class="gap-row"><td>7</td><td><b>2ГИС</b></td><td><b>4</b></td><td>0.33</td><td>1.0×</td></tr>
+        <tr><td>8</td><td>Dodo Engineering</td><td><b>1</b></td><td>0.08</td><td>0.25×</td></tr>
+        <tr><td>9</td><td>Купер</td><td><b>0</b></td><td>0</td><td>0×</td></tr>
+      </tbody>
+    </table>
+    <p class="table-note">Это <strong>9 блогов, пересчитанных постранично</strong> за текущий Q3. Считаем все статьи company blog независимо от темы — это показатель частоты, не качества. Остальным компаниям цифру пока не приписываем, пока не проведён такой же полный подсчёт.</p>
+    <div class="chart-note"><strong>Что видно:</strong> 2ГИС публикует на Habr примерно раз в три недели. У Яндекса, VK Tech, Т-Банка и Avito частота выше в 6–10 раз. Это не означает, что нужно повторять их объём: следующий вопрос — даёт ли большая частота больше просмотров на материал.</div>
+  </div>
+
+  <div class="tab-panel" data-panel="hits">
+    <div class="table-intro"><b>Habr: заметные Q3-материалы с подтверждёнными просмотрами</b><span>от большего к меньшему · снимок 22 сентября</span></div>
+    <table class="market-table rank-table">
+      <thead><tr><th>#</th><th>Компания</th><th>Материал</th><th>Тема</th><th>Просмотры</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Домклик</td><td><a href="https://habr.com/ru/companies/domclick/articles/1067048/" target="_blank" rel="noopener">Один разработчик, 14 агентов, восемь месяцев ↗</a></td><td>AI / engineering workflow</td><td><b>≈88K</b></td></tr>
+        <tr><td>2</td><td>Яндекс</td><td><a href="https://habr.com/ru/companies/yandex/articles/1067964/" target="_blank" rel="noopener">Как за вами (не) следит Яндекс ↗</a></td><td>Mobile / security</td><td><b>≈74K</b></td></tr>
+        <tr><td>3</td><td>Т-Банк</td><td><a href="https://habr.com/ru/companies/tbank/articles/1067830/" target="_blank" rel="noopener">Java Digest #38 ↗</a></td><td>Java / digest</td><td><b>≈60K</b></td></tr>
+        <tr><td>4</td><td>Яндекс</td><td><a href="https://habr.com/ru/companies/yandex/articles/" target="_blank" rel="noopener">Тысяча конфликтов и одна LLM ↗</a></td><td>LLM / Chromium</td><td><b>≈32K</b></td></tr>
+        <tr><td>5</td><td>MTS</td><td><a href="https://habr.com/ru/hubs/career/articles/rated25/" target="_blank" rel="noopener">Рынок IT-вакансий сломался и ничего не понятно? ↗</a></td><td>IT labour market</td><td><b>≈28K</b></td></tr>
+        <tr><td>6</td><td>Avito</td><td><a href="https://habr.com/ru/companies/avito/articles/1078084/" target="_blank" rel="noopener">От «когда-нибудь» к работающему прототипу ↗</a></td><td>LLM / prototyping</td><td><b>≈18K</b></td></tr>
+        <tr><td>7</td><td>VK Tech</td><td><a href="https://habr.com/ru/companies/vktech/articles/1061284/" target="_blank" rel="noopener">ClickHouse: сценарии и лучшие практики ↗</a></td><td>Data / ClickHouse</td><td><b>≈17K</b></td></tr>
+        <tr><td>8</td><td>Selectel</td><td><a href="https://habr.com/ru/companies/selectel/articles/page3/" target="_blank" rel="noopener">Пять мини-ПК июля 2026 года ↗</a></td><td>Hardware / editorial tech</td><td><b>≈15K</b></td></tr>
+        <tr><td>9</td><td>Ozon Tech</td><td><a href="https://habr.com/ru/companies/ozontech/articles/" target="_blank" rel="noopener">От полной выгрузки к S3 и PostgreSQL ↗</a></td><td>Go / highload</td><td><b>≈14K</b></td></tr>
+        <tr><td>10</td><td>X5 Tech</td><td><a href="https://habr.com/ru/companies/X5Tech/articles/" target="_blank" rel="noopener">Почему фронтенд съедает больше времени, чем бэкенд ↗</a></td><td>Frontend / AI development</td><td><b>≈12K</b></td></tr>
+        <tr><td>11</td><td>Kaspersky</td><td><a href="https://habr.com/ru/companies/kaspersky/articles/" target="_blank" rel="noopener">Что фронтенду стоит перенять у геймдева ↗</a></td><td>Frontend / gamedev</td><td><b>≈12K</b></td></tr>
+        <tr class="gap-row"><td>12</td><td><b>2ГИС</b></td><td><a href="https://habr.com/ru/companies/2gis/articles/1056942/" target="_blank" rel="noopener">Полевые проезды в QA ↗</a></td><td>QA / geolocation</td><td><b>≈9.2K</b></td></tr>
+      </tbody>
+    </table>
+    <p class="table-note">Это <strong>проверенный набор заметных материалов</strong>, а не заявление об абсолютном Top-12 всех публикаций 25 компаний: полный content census ещё собирается. Просмотры растут со временем, а возраст статей различается.</p>
+
+    <div class="table-intro sub-intro"><b>Telegram: примеры постов, которые заметно выше среднего своего канала</b><span>сравниваем пост со своим channel baseline</span></div>
+    <table class="market-table rank-table">
+      <thead><tr><th>#</th><th>Компания</th><th>Пост / механика</th><th>Просмотры</th><th>Среднее канала</th><th>× к среднему</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>X5 Tech</td><td><a href="https://t.me/s/x5_tech?before=2564" target="_blank" rel="noopener">Подготовка к техническому собеседованию ↗</a></td><td><b>5.51K</b></td><td>1.58K</td><td><b>3.5×</b></td></tr>
+        <tr><td>2</td><td>Positive Technologies</td><td><a href="https://t.me/s/Positive_Technologies?before=4251" target="_blank" rel="noopener">ПМЭФ-2026 / пространство бренда ↗</a></td><td><b>9.07K</b></td><td>3.29K</td><td><b>2.75×</b></td></tr>
+        <tr><td>3</td><td>Ozon Tech</td><td><a href="https://t.me/s/ozon_tech/1317" target="_blank" rel="noopener">Пункт выдачи новостей / развлекательная механика ↗</a></td><td><b>13.8K</b></td><td>5.58K</td><td><b>2.47×</b></td></tr>
+        <tr><td>4</td><td>Avito</td><td><a href="https://t.me/s/avitotech/3117" target="_blank" rel="noopener">Новогодний интерактив / предсказания ↗</a></td><td><b>7.3K</b></td><td>4.08K</td><td><b>1.79×</b></td></tr>
+        <tr><td>5</td><td>Ozon Tech</td><td><a href="https://t.me/s/ozon_tech/1619" target="_blank" rel="noopener">Подкаст с техническим директором ↗</a></td><td><b>8.08K</b></td><td>5.58K</td><td><b>1.45×</b></td></tr>
+      </tbody>
+    </table>
+    <p class="table-note">Telegram-таблица — примеры подтверждённых постов выше собственного среднего канала, а не исчерпывающий рейтинг всех публикаций 22 каналов.</p>
+  </div>
+
+  <div class="tab-panel" data-panel="formats">
+    <div class="table-intro"><b>Какие форматы подтверждены в выборке</b><span>без гостевых появлений, выданных за собственный формат</span></div>
     <table class="market-table">
-      <thead><tr><th>Тема</th><th>Что видно в Q3</th><th>Как читать</th></tr></thead>
+      <thead><tr><th>Формат</th><th>Подтверждено</th><th>Компании</th><th>Как читать</th></tr></thead>
       <tbody>
-        <tr><td>AI / ML / LLM</td><td>Повторяется очень часто</td><td>Просто «ещё материал про AI» вряд ли будет заметен без сильного конкретного кейса.</td></tr>
-        <tr><td>Backend / architecture / infrastructure</td><td>Часто</td><td>Базовое поле инженерного контента.</td></tr>
-        <tr><td>QA / testing</td><td>Часто</td><td>Есть статьи, подкасты и события; тема сама по себе уже не редкая.</td></tr>
-        <tr><td>Java / JVM / Go</td><td>Часто встречается в событиях</td><td>При выборе темы митапа нужен конкретный угол, а не только название технологии.</td></tr>
-        <tr><td>Узкие инженерные темы</td><td>Встречаются реже</td><td>Меньше конкуренции за внимание, но аудитория уже — важна реальная экспертиза.</td></tr>
+        <tr><td><b>Статьи / engineering cases на Habr</b></td><td><b>24/25</b></td><td>Отдельный блог у всех, кроме отдельного SberTech-блога</td><td>Практически стандарт рынка; различаются частота, тема и результат.</td></tr>
+        <tr><td><b>Собственная регулярная podcast-серия</b></td><td><b>≥6/25</b></td><td>Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур</td><td>Считаем только собственные/брендированные серии. Гостевой выпуск в чужом подкасте не засчитываем.</td></tr>
+        <tr><td><b>Нестандартный tech-brand проект</b></td><td><b>7/25</b></td><td>2ГИС, Avito, Kaspersky, MTS Tech, Ozon Tech, YADRO, Magnit Tech</td><td>Рейв, арт-объект, show/robotics, интерактивные механики и другие проекты вне обычной статьи/митапа.</td></tr>
+        <tr><td><b>Кросс-постинг видео в RuTube</b></td><td><b>≥5/25</b></td><td>Avito, YADRO, Selectel, Magnit Tech, Контур</td><td>Сам факт присутствия не означает высокий охват: у некоторых каналов просмотры отдельных видео — десятки или сотни.</td></tr>
       </tbody>
     </table>
-    <p class="table-note">Здесь пока не показываем «точное число публикаций по каждой технологии»: полный единый content-census по всем каналам ещё не завершён. Лучше честный качественный сигнал, чем псевдоточная цифра.</p>
-  </div>
-
-  <div class="tab-panel" data-panel="platforms">
-    <table class="market-table">
-      <thead><tr><th>Площадка</th><th>2ГИС</th><th>Что видно у конкурентов</th><th>Практический вывод</th></tr></thead>
-      <tbody>
-        <tr><td>Habr</td><td>Есть</td><td>Один из основных каналов инженерного контента</td><td>Оставлять core-площадкой: здесь есть сравнимые публичные просмотры.</td></tr>
-        <tr><td>Telegram</td><td>Есть</td><td>Активно используют многие tech-бренды</td><td>Сравнивать не подписчиков, а средний просмотр поста и ER.</td></tr>
-        <tr><td>YouTube / VK Video</td><td>Есть</td><td>Используют для интервью, подкастов, записей и серий</td><td>Смотреть как дистрибуцию готового видео-контента.</td></tr>
-        <tr><td>RuTube</td><td>Регулярного tech-присутствия не нашли</td><td>Есть у части конкурентов</td><td>Только дешёвый тест кросс-постинга, не отдельная редакция.</td></tr>
-        <tr><td>Аудиоплатформы</td><td>Регулярной tech-серии не нашли</td><td>Есть у YADRO, Selectel и других</td><td>Имеет смысл только вместе с тестом подкаста.</td></tr>
-        <tr><td>Dzen</td><td>Регулярного tech-присутствия не нашли</td><td>Использует часть конкурентов</td><td>Низкий приоритет без данных о результате.</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="tab-panel" data-panel="unusual">
-    <table class="market-table unusual-table">
-      <thead><tr><th>Компания</th><th>Механика</th><th>Что необычного</th><th>Статус</th></tr></thead>
-      <tbody>
-        <tr><td>2ГИС</td><td>Pause/Break</td><td>Городской интерактивный арт-объект для программистов</td><td>Прошло</td></tr>
-        <tr><td>Avito</td><td>AVITO.TECHNO</td><td>Ночной tech-rave вместо обычной конференционной программы</td><td>Прошло</td></tr>
-        <tr><td>Ozon Tech</td><td>E-CODE</td><td>Роботы, интерактив и high-production experience вокруг tech-конференции</td><td>Прошло</td></tr>
-        <tr><td>Magnit Tech</td><td>TECH NIGHT</td><td>Ночная AI/ML-конференция + DJ / afterparty / science talk</td><td>Прошло</td></tr>
-        <tr><td>MTS Tech</td><td>True Tech Champ</td><td>Live coding + робототехника + show-механика</td><td>Идёт</td></tr>
-        <tr><td>Контур</td><td>ТехноКвест</td><td>Городской командный квест вместо стандартного event-формата</td><td>Запланировано</td></tr>
-        <tr><td>YADRO</td><td>Habr superquiz</td><td>Юбилей блога превращён в квиз с участием аудитории</td><td>Прошло</td></tr>
-      </tbody>
-    </table>
+    <div class="chart-note"><strong>Темы намеренно убраны из этого блока.</strong> Пока полный корпус публикаций по всем 25 компаниям не размечен одинаково, формулировки вроде «AI встречается часто» дают видимость точности без знаменателя. Вернём темы, когда сможем показать: сколько публикаций, у скольких компаний и какой результат.</div>
   </div>
 </div></section>
 <section class="section white" id="performance"><div class="wrap">
   <div class="section-head"><div>
-    <h2>Что получило больше внимания</h2>
-    <p>Метрики не смешиваем. Habr сравниваем с Habr, Telegram — с Telegram, события — с событиями.</p>
+    <h2>Результаты: Telegram и крупные проекты</h2>
+    <p>Habr теперь разобран в разделе «Контент». Здесь оставляем полную Telegram-таблицу и несопоставимые между собой метрики крупных проектов.</p>
   </div></div>
 
   <details class="research-fold" open>
-    <summary><span><b>Habr · просмотры материалов</b><small>от большего к меньшему</small></span><i>+</i></summary>
-    <div class="fold-content">
-      <table class="market-table rank-table">
-        <thead><tr><th>#</th><th>Компания</th><th>Материал</th><th>Тема</th><th>Просмотры</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td>Домклик</td><td>Один разработчик, 14 агентов…</td><td>AI / engineering workflow</td><td><b>≈88K</b></td></tr>
-          <tr><td>2</td><td>YADRO</td><td>Суперквиз к 10-летию блога</td><td>Interactive / engineering history</td><td><b>≈11K</b></td></tr>
-          <tr><td>3</td><td>Cloud.ru</td><td>VMware Cloud Director через MCP</td><td>Cloud / AI agents</td><td><b>≈10K</b></td></tr>
-          <tr><td>4</td><td>Positive Technologies</td><td>Как они провели этим летом</td><td>Cybersecurity / education</td><td><b>≈9.5K</b></td></tr>
-          <tr class="gap-row"><td>5</td><td>2ГИС</td><td>Полевые проезды в QA</td><td>QA / geolocation</td><td><b>≈9.2K</b></td></tr>
-          <tr><td>6</td><td>Magnit Tech</td><td>Инженерная эволюция OSA</td><td>Data / ML infrastructure</td><td><b>≈9.2K</b></td></tr>
-          <tr><td>7</td><td>hh.ru</td><td>Redis — история одного падения</td><td>Java / DevOps</td><td><b>≈9K</b></td></tr>
-          <tr><td>8</td><td>RWB</td><td>Как разделить фронтенд на модули</td><td>Frontend / architecture</td><td><b>≈8.9K</b></td></tr>
-          <tr><td>9</td><td>Точка</td><td>Как искать проблемы производительности в Python</td><td>Python / performance</td><td><b>≈7.9K</b></td></tr>
-          <tr><td>10</td><td>ecom.tech</td><td>AI-ревьюер кода</td><td>AI / code quality</td><td><b>≈7.6K</b></td></tr>
-        </tbody>
-      </table>
-      <p class="table-note">Снимок публичных просмотров на 21 сентября. Возраст материалов разный, поэтому это ориентир, а не доказательство причин успеха.</p>
-    </div>
-  </details>
-
-  <details class="research-fold">
     <summary><span><b>Telegram · средние просмотры поста</b><small>22 канала с публичной метрикой · от большего к меньшему</small></span><i>+</i></summary>
     <div class="fold-content">
       <p class="table-note" style="margin:0 0 14px"><strong>Как читать:</strong> это среднее число просмотров поста в выбранном tech / engineering-канале компании по последнему доступному публичному снимку. Это не уникальный охват. Даты обновления источников отличаются, поэтому таблица показывает ориентир рынка, а не строгий рейтинг на одну секунду.</p>
