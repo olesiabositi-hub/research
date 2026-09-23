@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d1710">
+  <title>Как машина научилась понимать город — 2ГИС</title>
+  <meta name="description" content="Научпоп-проект 2ГИС о развитии инженерных идей и людях, которые превращали их в работающие технологии.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="map-noise" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="index.html"><img class="brand-logo" src="assets/2gis-logo.svg" alt="2ГИС"><span class="brand-sub">архив идей</span></a>
+  <button class="menu-btn" aria-label="Открыть меню">☰</button>
+  <nav class="mainnav" aria-label="Навигация"><a class="active" href="index.html">Главы</a><a href="stories.html">Истории</a><a href="archive.html">Архив</a><a href="about.html">О проекте</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-map" aria-hidden="true">
+      <svg viewBox="0 0 1600 950" preserveAspectRatio="xMidYMid slice">
+        <g>
+          <path class="map-street major" d="M-100 160 C180 80 260 320 500 250 S880 70 1110 210 S1370 410 1730 230"/>
+          <path class="map-street" d="M-80 380 C210 260 330 580 650 460 S1020 260 1320 470 S1510 620 1740 560"/>
+          <path class="map-street major" d="M80 900 C170 710 400 720 520 590 S680 270 890 320 S1200 660 1540 760"/>
+          <path class="map-street" d="M210 -50 C300 180 130 380 300 540 S570 730 510 1040"/>
+          <path class="map-street" d="M650 -80 C700 170 510 330 730 520 S990 650 950 1030"/>
+          <path class="map-street major" d="M1160 -100 C1090 160 1330 280 1180 490 S1010 760 1260 1040"/>
+          <path class="map-street" d="M1450 -30 C1330 190 1500 390 1370 560 S1250 740 1480 1000"/>
+          <path class="map-street" d="M0 650 Q350 500 600 690 T1160 720 T1650 650"/>
+          <path class="map-street" d="M80 40 Q440 210 790 80 T1510 120"/>
+          <path class="map-route" d="M160 740 C330 600 420 650 560 510 S790 300 930 390 S1120 520 1390 300"/>
+          <circle class="map-node" cx="160" cy="740" r="7"/><circle class="map-node" cx="560" cy="510" r="7" style="animation-delay:.5s"/><circle class="map-node" cx="930" cy="390" r="7" style="animation-delay:1s"/><circle class="map-node" cx="1390" cy="300" r="7" style="animation-delay:1.5s"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <p class="hero-kicker">Научпоп-проект 2ГИС · 1938—2056</p>
+        <h1><span>Как машина</span><span>научилась</span><span class="accent">понимать город</span></h1>
+        <p class="hero-deck">История инженерных идей и людей, которые передают их дальше: от первых электронных карт и ЭВМ до навигации, геоданных и ИИ.</p>
+      </div>
+      <aside class="hero-side">
+        <div class="hero-years">118 лет<small>в одной линии инженерных идей</small></div>
+        <div class="hero-index"><div><b>6</b>глав</div><div><b>12+</b>историй</div><div><b>люди</b>на первом плане</div><div><b>без</b>сравнения эпох</div></div>
+      </aside>
+    </div>
+    <div class="scroll-cue">листать маршрут</div>
+  </section>
+
+  <section class="manifesto">
+    <div class="wrap">
+      <div class="manifesto-grid reveal">
+        <div class="eyebrow">О проекте</div>
+        <p class="manifesto-copy">Идеи не появляются из ниоткуда. <span class="soft">Они переходят от человека к человеку, меняются вместе с городом и получают новую жизнь в руках следующего поколения инженеров.</span></p>
+      </div>
+      <div class="principles reveal-stagger">
+        <article class="principle"><i>01</i><h3>Не сравниваем</h3><p>Здесь нет «раньше / сейчас» и нет попытки определить, какая эпоха была лучше.</p></article>
+        <article class="principle"><i>02</i><h3>Следим за идеей</h3><p>Нас интересует путь инженерного вопроса — как он живёт, меняется и становится частью новых технологий.</p></article>
+        <article class="principle"><i>03</i><h3>Говорим о людях</h3><p>Статья начинается с автора. Продолжение — с людей 2ГИС, которые работают с этой темой сегодня.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="route-section">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="eyebrow" style="color:#7ee338">Маршрут музея</div><div><h2>Шесть глав.<br>Одна длинная эстафета.</h2><p>Каждая глава — не «этап прогресса», а новый поворот одной истории: как люди учились описывать город, находить путь, ориентироваться и работать с городскими данными.</p></div></div>
+      <div class="chapter-list">
+        <a class="chapter-row reveal" href="stories.html?chapter=1">
+          <div class="chapter-no">Глава первая</div>
+          <div class="chapter-copy"><div><h3>Машина учится видеть город</h3><p>Радиоволны, электронная карта, ранние представления об автоматическом движении и желание связать изображение местности с реальным пространством.</p></div><div class="chapter-meta"><div>период<b>1938—1959</b></div><div>историй<b>4</b></div></div></div>
+          <div class="chapter-art"><img src="assets/chapter-1.svg" alt="Электронная карта и радар"><div class="chapter-year">1938</div></div>
+        </a>
+        <a class="chapter-row reveal" href="stories.html?chapter=2">
+          <div class="chapter-no">Глава вторая</div>
+          <div class="chapter-copy"><div><h3>Машина учится считать город</h3><p>Транспортная сеть становится задачей для вычислительной машины: точки, расстояния и поиск маршрута складываются в математическую модель.</p></div><div class="chapter-meta"><div>период<b>1960—1979</b></div><div>ключевая история<b>1972</b></div></div></div>
+          <div class="chapter-art"><img src="assets/chapter-2.svg" alt="Вычисление маршрута"><div class="chapter-year">1972</div></div>
+        </a>
+        <a class="chapter-row reveal" href="stories.html?chapter=3">
+          <div class="chapter-no">Глава третья</div>
+          <div class="chapter-copy"><div><h3>Машина учится ориентироваться</h3><p>Планирование пути, определение положения и движение по маршруту начинают работать как части одной навигационной системы.</p></div><div class="chapter-meta"><div>период<b>1980—1999</b></div><div>темы<b>навигация · карты</b></div></div></div>
+          <div class="chapter-art"><img src="assets/chapter-3.svg" alt="Навигационная система"><div class="chapter-year">1980</div></div>
+        </a>
+        <a class="chapter-row reveal" href="stories.html?chapter=4">
+          <div class="chapter-no">Глава четвёртая</div>
+          <div class="chapter-copy"><div><h3>Город становится цифровым</h3><p>Карты, организации, транспорт и события превращаются в постоянно обновляемые наборы данных — и начинают жить на экранах миллионов людей.</p></div><div class="chapter-meta"><div>период<b>2000—2019</b></div><div>в работе<b>архив 2ГИС</b></div></div></div>
+          <div class="chapter-art"><img src="assets/chapter-4.svg" alt="Городские данные"><div class="chapter-year">2000</div></div>
+        </a>
+        <a class="chapter-row reveal" href="stories.html?chapter=5">
+          <div class="chapter-no">Глава пятая</div>
+          <div class="chapter-copy"><div><h3>Машина учится понимать город</h3><p>Поиск работает со смыслом, маршрут — с человеческим сценарием, карта — с аналитическими вопросами. В историю входят ML и ИИ.</p></div><div class="chapter-meta"><div>период<b>2020—2026</b></div><div>авторы<b>люди 2ГИС</b></div></div></div>
+          <div class="chapter-art"><img src="assets/chapter-5.svg" alt="ИИ и город"><div class="chapter-year">2026</div></div>
+        </a>
+        <a class="chapter-row reveal" href="story.html?id=2056-next-chapter">
+          <div class="chapter-no">Глава шестая</div>
+          <div class="chapter-copy"><div><h3>Следующая глава ещё не написана</h3><p>В 1956-м инженер Георгий Бабат писал статьи от лица 2056 года. Теперь мы задаём тот же вопрос разработчикам 2ГИС: что станет привычным через 30 лет?</p></div><div class="chapter-meta"><div>горизонт<b>2027—2056</b></div><div>авторы<b>следующее поколение</b></div></div></div>
+          <div class="chapter-art"><img src="assets/chapter-6.svg" alt="Карта будущего"><div class="chapter-year">2056</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="relay-feature">
+    <div class="wrap">
+      <div class="relay-head reveal"><h2>Эстафета идеи</h2><p>Не сопоставление технологий. Две точки на одном маршруте и люди по обе стороны времени.</p></div>
+      <a class="relay-card reveal" href="story.html?id=1972-evm-moscow">
+        <article class="relay-person"><div><small>«Наука и жизнь» · №7</small><div class="year">1972</div><h3>О. Налбандян</h3><p>Пишет о том, как вычислительная машина получает транспортную карту Москвы и ищет маршрут по городу.</p></div><small>«ЭВМ шагает по Москве»</small></article>
+        <div class="relay-center"><div class="relay-dot"></div></div>
+        <article class="relay-person modern"><div><small>2ГИС · Хабр</small><div class="year">2026</div><h3>Константин Чирихин</h3><p>Рассказывает о работе с дорожным графом, алгоритмами и маршрутом как инженерной задачей, которая продолжает развиваться.</p></div><small>«Лёгкие маршруты»</small></article>
+      </a>
+    </div>
+  </section>
+
+  <section class="people-section">
+    <div class="wrap">
+      <div class="people-head reveal"><h2>В центре — люди</h2><p>Не безымянная «технология», а конкретные авторы, инженеры, исследователи и разработчики, благодаря которым идея продолжает путь.</p></div>
+      <div class="people-strip reveal-stagger">
+        <a class="person-tile" href="story.html?id=1938-autosphere"><div class="person-placeholder">ЮД</div><img src="https://www.designspb.ru/upload/medialibrary/a43/dolmatovskiy_1.jpg" alt="Юрий Долматовский" onerror="this.style.display='none'"><div class="person-copy"><b>Юрий Долматовский</b><span>1938 · автомобиль будущего</span></div></a>
+        <a class="person-tile" href="story.html?id=1956-engineers-dreams"><div class="person-placeholder">ГБ</div><img src="https://archivsf.narod.ru/1911/georgiy_babat/georgiy_babat_.jpg" alt="Георгий Бабат" onerror="this.style.display='none'"><div class="person-copy"><b>Георгий Бабат</b><span>1956 · взгляд из 2056 года</span></div></a>
+        <a class="person-tile" href="story.html?id=1980-robot-navigator"><div class="person-placeholder">ВТ</div><img src="https://upload.wikimedia.org/wikipedia/ru/thumb/d/db/Tarasenko_VP.jpg/248px-Tarasenko_VP.jpg" alt="Владимир Тарасенко" onerror="this.style.display='none'"><div class="person-copy"><b>Владимир Тарасенко</b><span>1980 · робот-штурман</span></div></a>
+        <a class="person-tile" href="story.html?id=1972-evm-moscow"><div class="person-placeholder">КЧ</div><div class="person-copy"><b>Константин Чирихин</b><span>2026 · маршрутизация 2ГИС</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="future-cta">
+    <div class="wrap future-inner reveal">
+      <p>Глава шестая · открытый финал</p>
+      <h2>Что мы передадим дальше?</h2>
+      <a class="round-link" href="story.html?id=2056-next-chapter"><i>→</i> Открыть 2056</a>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-top"><div class="footer-title">Город меняется.<br>Идеи продолжают путь.</div><div class="footer-links"><a href="stories.html">Все истории ↗</a><a href="archive.html">Архив источников ↗</a><a href="about.html">О проекте ↗</a><a href="story.html?id=2056-next-chapter">2056 ↗</a></div></div><div class="footer-bottom"><span>Научпоп-проект 2ГИС</span><span>2ГИС · 2026</span></div></div></footer>
+<script src="site.js"></script>
+</body></html>
