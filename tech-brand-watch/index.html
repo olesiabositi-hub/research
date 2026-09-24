@@ -1,903 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Tech Brand Watch / Q3 2026 — Beyond Vacancies</title>
-<meta name="description" content="Tech Brand Watch Q3 2026: 25 российских tech-компаний, форматы и темы контента, площадки, публичные метрики и отдельный аудит инженерного бренда.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tech Brand Watch / Q3 2026: что делают tech-бренды</title>
+<meta name="description" content="Единый кейс для команды продвижения бренда 2ГИС: активность 25 российских tech-компаний в Q3 2026 — контент, события, образование, площадки и результаты.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#f3f3f1;
-  --surface:#ffffff;
-  --surface2:#f8f8f6;
-  --ink:#141414;
-  --muted:#6f736f;
-  --line:#e2e4e1;
-  --green:#19AA1E;
-  --green-dark:#128d17;
-  --green-soft:#eaf8ea;
-  --green-pale:#f2fbf2;
-  --shadow:0 14px 38px rgba(0,0,0,.06);
-  --shadow-soft:0 8px 24px rgba(0,0,0,.04);
-  --radius:26px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.5
-}
-a{color:var(--green-dark);text-decoration:none}
-a:hover{color:var(--green)}
-.wrap{max-width:1180px;margin:auto;padding:0 24px}
-
-/* top */
-.topbar{
-  position:sticky;top:0;z-index:40;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(0,0,0,.06)
-}
-.nav{height:68px;display:flex;align-items:center;gap:24px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:850;white-space:nowrap;letter-spacing:-.02em}
-.mark{
-  width:34px;height:34px;border-radius:10px;
-  background:var(--green);
-  display:grid;place-items:center;color:#fff;font-size:18px;
-  box-shadow:0 6px 16px rgba(25,170,30,.22)
-}
-.links{display:flex;gap:18px;margin-left:auto;font-size:14px}
-.links a{color:#343734}
-.links a:hover{color:var(--green-dark)}
-.preview-pill{
-  font-size:11px;padding:7px 11px;border-radius:999px;
-  background:#111;color:#fff;font-weight:800;letter-spacing:.02em
-}
-
-/* hero */
-.hero{
-  position:relative;overflow:hidden;
-  background:
-    radial-gradient(circle at 86% 14%, rgba(25,170,30,.20), transparent 23%),
-    radial-gradient(circle at 74% 52%, rgba(25,170,30,.09), transparent 30%),
-    linear-gradient(180deg,#f7f7f5 0%,#efefec 100%);
-  color:var(--ink);
-  padding:84px 0 76px
-}
-.hero:after{
-  content:"";position:absolute;right:-4%;top:-18%;width:58%;height:140%;
-  opacity:.55;pointer-events:none;
-  background:
-    linear-gradient(35deg,transparent 46%,rgba(25,170,30,.10) 47%,rgba(25,170,30,.10) 49%,transparent 50%),
-    linear-gradient(125deg,transparent 46%,rgba(20,20,20,.045) 47%,rgba(20,20,20,.045) 49%,transparent 50%);
-  background-size:130px 130px;
-  transform:rotate(3deg)
-}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
-.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.11em;color:var(--green-dark);font-weight:900}
-.hero h1{
-  font-size:clamp(42px,6vw,76px);line-height:.98;
-  margin:14px 0 20px;letter-spacing:-.055em
-}
-.hero h1 em{font-style:normal;color:var(--green)}
-.hero p{max-width:680px;font-size:19px;color:#4c514d}
-.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.hero-meta span{
-  border:1px solid #dfe4df;background:rgba(255,255,255,.82);
-  padding:10px 13px;border-radius:999px;font-size:13px;
-  box-shadow:0 3px 12px rgba(0,0,0,.025)
-}
-.hero-art{
-  display:grid;grid-template-columns:1fr 1fr;gap:14px;
-  transform:rotate(-1deg)
-}
-.tile{
-  min-height:132px;padding:20px;border-radius:28px;
-  background:rgba(255,255,255,.92);border:1px solid #e5e7e4;
-  display:flex;flex-direction:column;justify-content:space-between;font-weight:850;
-  box-shadow:var(--shadow-soft);position:relative;overflow:hidden
-}
-.tile:after{
-  content:"";position:absolute;right:-24px;bottom:-28px;width:110px;height:110px;
-  border:18px solid rgba(25,170,30,.10);border-radius:50%
-}
-.tile:nth-child(2),.tile:nth-child(3){
-  background:var(--green);border-color:var(--green);color:#fff
-}
-.tile:nth-child(2):after,.tile:nth-child(3):after{border-color:rgba(255,255,255,.18)}
-.tile small{font-size:11px;color:#7b817d;letter-spacing:.08em}
-.tile:nth-child(2) small,.tile:nth-child(3) small{color:rgba(255,255,255,.78)}
-.tile b{font-size:20px;line-height:1.15;max-width:170px}
-
-/* sections */
-.section{position:relative;padding:70px 0}
-.section.white{background:#fff}
-.section:not(.white){background:var(--bg)}
-.section-head{display:flex;justify-content:space-between;gap:30px;align-items:flex-end;margin-bottom:30px}
-.section-head h2{font-size:36px;letter-spacing:-.04em;margin:0;line-height:1.05}
-.section-head p{color:var(--muted);max-width:690px;margin:10px 0 0}
-.note{
-  background:var(--green-pale);border:1px solid #d5eed6;
-  padding:15px 18px;border-radius:18px;color:#315e34;font-size:13px;
-  max-width:360px
-}
-
-/* KPI */
-.score-explain{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:42px}.score-explain-card{background:var(--green-pale);border:1px solid #d7ecd8;border-radius:22px;padding:20px}.score-explain-card strong,.score-explain-card span{display:block}.score-explain-card strong{font-size:15px;line-height:1.25;margin-bottom:8px}.score-explain-card span{font-size:13px;color:#536055}.compact-head{margin-top:8px}.compact-head h2{font-size:28px}.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.category-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow-soft)}.category-card b,.category-card span{display:block}.category-card b{font-size:14px;margin-bottom:6px}.category-card span{font-size:12px;color:var(--muted)}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.kpi{
-  background:var(--surface);border:1px solid var(--line);
-  border-radius:24px;padding:24px;box-shadow:var(--shadow-soft)
-}
-.kpi .num{font-size:38px;font-weight:900;letter-spacing:-.05em;color:var(--green)}
-.kpi h3{font-size:15px;margin:4px 0 8px}
-.kpi p{color:var(--muted);font-size:13px;margin:0}
-
-/* panels / tables */
-.two-col{display:grid;grid-template-columns:1.5fr .8fr;gap:22px}
-.panel{
-  background:#fff;border:1px solid var(--line);
-  border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-soft)
-}
-.table-scroll{overflow:auto;-webkit-overflow-scrolling:touch}
-.matrix{width:100%;border-collapse:collapse;min-width:840px}
-.matrix th,.matrix td{padding:12px 9px;border-bottom:1px solid #eceeeb;text-align:center;font-size:12px}
-.matrix th{color:#626762;font-weight:800}
-.matrix th:first-child,.matrix td:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}
-.matrix tr.is-2gis td{background:#eff9ef}
-.matrix tr.is-2gis td:first-child{background:#e2f5e3}
-.dot{display:inline-grid;width:24px;height:24px;border-radius:50%;place-items:center;font-weight:850}
-.dot.on{background:var(--green);color:#fff}
-.dot.off{background:#eef0ed;color:#a1a6a1}
-.you{font-size:10px;background:#111;color:#fff;border-radius:999px;padding:3px 6px;margin-left:6px}
-.new-pill{font-size:9px;background:#e8f7e9;color:var(--green-dark);border-radius:999px;padding:3px 6px;margin-left:6px;font-weight:900}
-
-/* score */
-.score-row{display:grid;grid-template-columns:120px 1fr 42px;gap:10px;align-items:center;padding:8px 0}
-.score-row.focus{font-weight:850}
-.bar,.track{background:#edf0ed;border-radius:999px;overflow:hidden}
-.bar{height:10px}
-.bar span,.fill{display:block;height:100%;background:var(--green);border-radius:999px}
-.score-name,.score-value{font-size:13px}
-
-/* 2GIS lens */
-.lens{
-  background:
-    radial-gradient(circle at 92% 12%,rgba(25,170,30,.14),transparent 30%),
-    linear-gradient(135deg,#f1faf1,#fff);
-  border:1px solid #d9edd9
-}
-.lens-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
-.bigscore{font-size:66px;font-weight:950;letter-spacing:-.065em;color:var(--green)}
-.compare{font-size:15px;color:#4d564f}
-.lens-list{display:grid;gap:10px}
-.lens-item{
-  background:#fff;border:1px solid #dfe9df;border-radius:18px;padding:17px;
-  box-shadow:0 6px 18px rgba(0,0,0,.03)
-}
-.lens-item strong{display:block;margin-bottom:5px}
-.good{color:var(--green-dark)}
-.gap{color:#7b5b12}
-.caution{color:#5b6570}
-
-/* 2GIS meaning + market signals */
-.meaning-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px}
-.meaning-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow-soft)}
-.meaning-label{display:inline-block;font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);margin-bottom:10px}
-.meaning-card h3{font-size:18px;line-height:1.25;margin:0 0 10px;letter-spacing:-.02em}
-.meaning-card p{font-size:13px;color:#5b635c;margin:0;line-height:1.55}
-.market-signals{background:#fff;border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:var(--shadow-soft)}
-.market-signals-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:16px}
-.market-signals-head h3{font-size:22px;margin:0 0 4px;letter-spacing:-.03em}
-.market-signals-head p{font-size:13px;color:var(--muted);margin:0}
-.market-signals-head>span{font-size:11px;color:#777f79;white-space:nowrap}
-.signal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.signal-card{border-radius:18px;padding:15px;border:1px solid #e5e8e4;background:#f7f8f6}
-.signal-card b,.signal-card strong,.signal-card span{display:block}
-.signal-card b{font-size:24px;letter-spacing:-.04em;margin-bottom:6px}
-.signal-card strong{font-size:12px;line-height:1.25}
-.signal-card span{font-size:10px;margin-top:7px;font-weight:800}
-.signal-card.standard{background:#eff9ef;border-color:#d8edd9}
-.signal-card.standard b,.signal-card.standard span{color:var(--green-dark)}
-.signal-card.common{background:#f5f8f4}
-.signal-card.common b{color:#4f6d52}
-.signal-card.common span{color:#657767}
-.signal-card.rare{background:#f8f8f6}
-.signal-card.rare b{color:#535b55}
-.signal-card.rare span{color:#777f79}
-.signal-rule{font-size:11px;color:#69716b;margin:14px 2px 0;line-height:1.5}
-
-/* Content Watch */
-.content-quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
-.quick-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:19px;box-shadow:var(--shadow-soft)}
-.quick-card.accent{background:var(--green);border-color:var(--green);color:#fff}
-.quick-card span{font-size:10px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:var(--green-dark)}
-.quick-card.accent span{color:rgba(255,255,255,.75)}
-.quick-card b{display:block;font-size:17px;line-height:1.2;margin:8px 0}
-.quick-card p{font-size:12px;color:#606861;margin:0}
-.quick-card.accent p{color:rgba(255,255,255,.82)}
-.research-fold{margin:12px 0 0;border:1px solid var(--line);border-radius:22px;background:#fff;overflow:hidden;padding:0;box-shadow:var(--shadow-soft)}
-.research-fold>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;color:var(--ink);cursor:pointer}
-.research-fold>summary::-webkit-details-marker{display:none}
-.research-fold>summary span{display:flex;flex-direction:column;gap:3px}
-.research-fold>summary b{font-size:16px}
-.research-fold>summary small{font-size:12px;font-weight:500;color:var(--muted)}
-.research-fold>summary i{font-style:normal;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--green-soft);color:var(--green-dark);font-size:20px;transition:.2s}
-.research-fold[open]>summary i{transform:rotate(45deg)}
-.fold-content{padding:0 20px 20px}
-.format-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.format-card{background:#f7f8f6;border:1px solid #e6e9e5;border-radius:18px;padding:16px}
-.format-card.hot{background:var(--green-pale);border-color:#d2e9d3}
-.format-card b{font-size:13px}
-.format-card p{font-size:12px;color:#626a63;margin:7px 0 0}
-.source-line{font-size:11px;color:#737b74;margin:12px 2px 0;line-height:1.5}
-.mini-link{display:inline-block;margin-top:9px;font-size:11px;font-weight:850;color:var(--green-dark)}.mini-subhead{margin-top:24px;margin-bottom:14px!important}.mini-subhead h2{font-size:20px!important}
-.topic-grid{display:grid;gap:8px}
-.topic-row{display:grid;grid-template-columns:240px 105px 1fr;gap:12px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:13px 15px}
-.topic-row strong{font-size:13px}.topic-row span{font-size:10px;font-weight:900;border-radius:999px;padding:5px 8px;text-align:center}.topic-row p{font-size:12px;color:#616961;margin:0}
-.topic-row.crowded span{background:#f2e7e3;color:#895342}.topic-row.common span{background:#f2f1e9;color:#71672c}.topic-row.space span{background:var(--green-soft);color:var(--green-dark)}
-.platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.platform-card{border-radius:18px;padding:16px;border:1px solid var(--line);background:#f8f8f6}
-.platform-card span{display:block;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
-.platform-card b{font-size:17px}.platform-card p{font-size:12px;color:#626a63;margin:6px 0 0}
-.platform-card.yes{background:var(--green-pale);border-color:#d6ead7}.platform-card.yes span{color:var(--green-dark)}
-.platform-card.gap2 span{color:#86641c}
-.plain-callout{margin-top:12px;padding:14px 16px;border-radius:16px;background:#f0f2ef;font-size:12px;color:#525b54}
-.top-table-wrap{overflow:auto}.top-table{width:100%;border-collapse:collapse;min-width:780px}.top-table th,.top-table td{border-bottom:1px solid #e8ebe7;padding:11px 9px;text-align:left;font-size:12px}.top-table th{font-size:10px;color:#737a74;text-transform:uppercase;letter-spacing:.04em}.top-table tr.ours td{background:#eef9ef}.top-table a{font-weight:750}
-.signal-story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.signal-story{padding:18px;border-radius:18px;background:#f7f8f6;border:1px solid var(--line)}.signal-story.ours{background:var(--green-pale);border-color:#d7ead8}.signal-story>b{color:var(--green-dark);font-size:12px}.signal-story h3{font-size:17px;margin:7px 0}.signal-story p{font-size:12px;color:#626a63;margin:0}
-.recommendations{margin-top:32px}.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rec-card{border-radius:20px;padding:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-soft)}.rec-card span{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}.rec-card h3{font-size:17px;line-height:1.2;margin:8px 0}.rec-card p{font-size:12px;color:#626a63;margin:0}.rec-card.high{border-top:4px solid var(--green)}.rec-card.high span{color:var(--green-dark)}.rec-card.test{border-top:4px solid #8daf90}.rec-card.test span{color:#5f7961}.rec-card.caution2{border-top:4px solid #c6a14d}.rec-card.caution2 span{color:#80651f}
-.unusual-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.unusual-card{border:1px solid var(--line);background:#f8f8f6;border-radius:18px;padding:16px}
-.unusual-card.ours{background:var(--green-pale);border-color:#d5ead6}
-.unusual-card.future{border-style:dashed;background:#fbfaf5}
-.unusual-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-.unusual-top b{font-size:14px}
-.unusual-top span{font-size:9px;text-transform:uppercase;letter-spacing:.05em;font-weight:900;background:#edf0ed;border-radius:999px;padding:5px 7px;white-space:nowrap}
-.unusual-card.future .unusual-top span{background:#f3ead2;color:#7b621f}
-.unusual-card.ours .unusual-top span{background:#dff2e0;color:var(--green-dark)}
-.unusual-card p{font-size:12px;color:#5d665f;margin:8px 0 0}
-.unusual-card small{display:block;font-size:10px;color:#81795e;margin-top:8px;line-height:1.4}
-.company-cloud{display:flex;flex-wrap:wrap;gap:7px}.company-cloud span{border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;background:#f0f2ef}.company-cloud .new{background:var(--green-soft);color:var(--green-dark)}
-.fold-toggle{margin-left:auto;border:1px solid #d8ddd8;background:#fff;color:var(--green-dark);font:800 12px/1 inherit;border-radius:999px;padding:9px 12px;cursor:pointer;white-space:nowrap}.fold-toggle:hover{border-color:var(--green)}.fold-body[hidden]{display:none}.section.is-folded{padding-top:38px;padding-bottom:38px}.section.is-folded .section-head{margin-bottom:0}.section.is-folded .fold-body{margin-top:28px}
-
-/* Telegram benchmark */
-.mini-fold{margin-top:12px;border-top:1px solid #e6eae6;padding-top:10px}
-.mini-fold summary{cursor:pointer;font-size:12px;font-weight:850;color:var(--green-dark);list-style:none}
-.mini-fold summary::-webkit-details-marker{display:none}
-.mini-fold-body{margin-top:10px}
-.telegram-missing{margin-top:18px;padding-top:16px;border-top:1px solid #e6eae6}
-.telegram-missing h4{margin:0 0 10px;font-size:14px}
-.market-table a{color:inherit;text-decoration:underline;text-decoration-color:#b8c1b9;text-underline-offset:3px}
-.market-table a:hover{color:var(--green-dark)}
-/* Quantified content audit */
-.content-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
-.content-kpi{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow-soft)}
-.content-kpi b{display:block;font-size:25px;letter-spacing:-.04em;color:var(--green-dark);margin-bottom:4px}
-.content-kpi span{display:block;font-size:11px;line-height:1.4;color:var(--muted)}
-.table-intro{display:flex;justify-content:space-between;gap:18px;align-items:end;margin:2px 0 12px}
-.table-intro b{font-size:16px}.table-intro span{font-size:11px;color:var(--muted);text-align:right}
-.sub-intro{margin-top:24px;padding-top:18px;border-top:1px solid #e6eae6}
-.market-table small{color:var(--muted);font-size:10px}
-@media(max-width:900px){.content-kpis{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.content-kpis{grid-template-columns:1fr}.table-intro{display:block}.table-intro span{display:block;text-align:left;margin-top:3px}}
-/* Report architecture */
-.executive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
-.exec-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow-soft)}
-.exec-card.important{background:var(--green-pale);border-color:#cfe7d0}
-.exec-card>span{display:inline-grid;width:28px;height:28px;border-radius:50%;place-items:center;background:#edf1ed;color:var(--green-dark);font-size:11px;font-weight:900}
-.exec-card h3{font-size:17px;line-height:1.25;margin:10px 0 7px}
-.exec-card p{font-size:13px;color:#606861;margin:0}
-.market-table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:5px 16px;box-shadow:var(--shadow-soft)}
-.market-table{width:100%;border-collapse:collapse;min-width:720px}
-.market-table th,.market-table td{padding:13px 11px;border-bottom:1px solid #e9ece8;text-align:left;font-size:12px;vertical-align:top}
-.market-table th{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#757c76}
-.market-table tr:last-child td{border-bottom:0}
-.market-table .gap-row td,.gap-row td{background:#eff9ef}
-.table-note{font-size:11px;color:#707872;line-height:1.5;margin:12px 0 0}
-.decision-list{display:grid;gap:10px}
-.decision{display:grid;grid-template-columns:42px 1fr auto;gap:16px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow-soft)}
-.decision.high{border-left:5px solid var(--green)}
-.decision-rank{font-size:12px;font-weight:900;color:var(--green-dark)}
-.decision h3{font-size:17px;margin:0 0 6px}.decision p{font-size:13px;color:#5f6761;margin:0}
-.decision>span{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;background:#eef2ee;border-radius:999px;padding:6px 8px;white-space:nowrap}
-.simple-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.simple-tab{border:1px solid #d8ddd8;background:#fff;border-radius:999px;padding:10px 14px;font:800 12px/1 inherit;cursor:pointer;color:#3d443e}
-.simple-tab.active{background:#111;color:#fff;border-color:#111}
-.tab-panel{display:none;background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:var(--shadow-soft)}
-.tab-panel.active{display:block}
-.rank-table td:last-child,.rank-table th:last-child{text-align:right}
-.matrix-fold{margin-top:16px}
-.matrix-fold .two-col{margin-top:0}
-@media(max-width:900px){.executive-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.executive-grid{grid-template-columns:1fr}.decision{grid-template-columns:32px 1fr}.decision>span{grid-column:2;width:max-content}.simple-tabs{overflow:auto;flex-wrap:nowrap;padding-bottom:4px}.simple-tab{white-space:nowrap}}
-/* trends */
-.trends{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.trend-card{
-  background:#fff;border:1px solid var(--line);
-  border-radius:22px;padding:21px;box-shadow:var(--shadow-soft)
-}
-.trend-top{display:flex;justify-content:space-between;align-items:center}
-.trend-count{font-size:27px;font-weight:900;color:var(--green)}
-.badge{font-size:11px;background:var(--green-soft);color:var(--green-dark);border-radius:999px;padding:5px 8px;font-weight:800}
-.trend-card h3{font-size:19px;margin:14px 0 8px}
-.trend-card p{font-size:14px;color:#59605a}
-.trend-companies{display:flex;gap:5px;flex-wrap:wrap}
-.trend-companies span{font-size:10px;background:#f1f3f0;border-radius:999px;padding:4px 7px}
-details{margin-top:14px;border-top:1px solid #edf0ec;padding-top:12px}
-summary{cursor:pointer;color:var(--green-dark);font-weight:800;font-size:13px}
-.muted{color:var(--muted)!important}
-
-/* filters */
-.filters{display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:10px;margin-bottom:20px}
-.filters input,.filters select{
-  width:100%;border:1px solid #d8ddd8;background:#fff;
-  border-radius:16px;padding:13px 14px;font:inherit;color:#18201a;
-  outline:none;transition:.2s ease
-}
-.filters input:focus,.filters select:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(25,170,30,.10)}
-
-/* activities */
-.activity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.activity-card{
-  background:#fff;border:1px solid var(--line);
-  border-radius:22px;padding:19px;display:flex;flex-direction:column;
-  min-height:310px;box-shadow:var(--shadow-soft);
-  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease
-}
-.activity-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#cfe6d0}
-.activity-head{display:flex;gap:8px;justify-content:space-between;align-items:flex-start}
-.dim-pill{font-size:11px;font-weight:850;border-radius:999px;padding:6px 8px;background:var(--green-soft);color:var(--green-dark)}
-.activity-date{font-size:11px;color:#818781}
-.activity-card h3{font-size:18px;line-height:1.2;margin:14px 0 4px}
-.company-line{font-size:12px;color:var(--green-dark);font-weight:900;margin-bottom:10px}
-.activity-card>p{font-size:13px;color:#5b635c;margin:0}
-.activity-conclusion{margin-top:auto;background:#f5f8f4;border-radius:15px;padding:12px;font-size:12px;color:#374139}
-.activity-foot{margin-top:12px;font-size:12px;font-weight:750}
-.hidden{display:none!important}
-
-/* global cases */
-.global-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.global-card{
-  background:#fff;border:1px solid var(--line);
-  border-radius:24px;overflow:hidden;box-shadow:var(--shadow-soft)
-}
-.global-shot{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#eef1ee;border-bottom:1px solid var(--line)}
-.global-body{padding:19px}
-.global-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.global-brand{font-size:12px;font-weight:900;color:var(--green-dark)}
-.global-year{font-size:10px;font-weight:850;color:#444;background:#eff1ef;border-radius:999px;padding:5px 8px}
-.global-card h3{font-size:19px;line-height:1.2;margin:10px 0 9px}
-.global-card p{font-size:13px;color:#59615a;margin:0}
-.global-source{display:inline-block;margin-top:14px;font-size:12px;font-weight:850}
-.small-note{font-size:12px;color:#59665f;margin-top:12px;padding-top:12px;border-top:1px solid #e9eeeb}
-
-/* charts */
-.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.chart-card{
-  background:#fff;border:1px solid var(--line);
-  border-radius:24px;padding:21px;box-shadow:var(--shadow-soft)
-}
-.chart-card h3{margin:0 0 5px;font-size:18px}
-.chart-card>p{margin:0 0 18px;color:var(--muted);font-size:12px}
-.hbars{display:grid;gap:8px}
-.hbar{display:grid;grid-template-columns:130px 1fr 36px;gap:10px;align-items:center;font-size:12px}
-.hbar .track{height:11px}
-.hbar .fill{height:100%;background:var(--green)}
-.hbar.focus{font-weight:850}
-.hbar.focus .fill{background:#111}
-.dim-bars .hbar{grid-template-columns:150px 1fr 42px}
-.trend-bars .hbar{grid-template-columns:210px 1fr 42px}
-.compare-bars{display:grid;gap:14px}
-.compare-line{display:grid;grid-template-columns:170px 1fr 90px;gap:12px;align-items:center}
-.compare-line .track{height:16px}
-.compare-line .fill{height:100%;background:#9bdb9e}
-.compare-line.ours .fill{background:var(--green)}
-.compare-line b{font-size:12px}
-.chart-note{margin-top:14px;padding:12px;border-radius:15px;background:var(--green-pale);color:#4d5e4f;font-size:11px}
-
-/* method */
-.method{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.method-card{
-  background:#fff;border:1px solid var(--line);
-  border-radius:20px;padding:18px;box-shadow:var(--shadow-soft)
-}
-.method-card .step{font-size:11px;font-weight:900;color:var(--green-dark);letter-spacing:.04em}
-.method-card h3{font-size:15px;margin:8px 0}
-.method-card p{font-size:12px;color:#5c655d}
-
-/* watch */
-.watch{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.watch-row{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px}
-.watch-row strong,.watch-row span{display:block}
-.watch-row span{color:#68706a;font-size:12px;margin-top:4px}
-
-/* footer */
-.footer{
-  padding:38px 0 56px;
-  background:#111;color:#aeb3ae;font-size:12px;
-  border-top:5px solid var(--green)
-}
-.research-disclaimer{
-  border:1px solid #2c322d;
-  background:#161916;
-  border-radius:20px;
-  padding:20px 22px;
-  margin-bottom:20px;
-  max-width:960px
-}
-.research-disclaimer strong{display:block;color:#fff;font-size:14px;margin-bottom:8px}
-.research-disclaimer p{margin:7px 0;color:#b9c0ba;line-height:1.55}
-.research-disclaimer b{color:#fff}
-.footer-meta{color:#858c86}
-.mobile-bar{display:none}
-
-/* subtle map-style accents on select sections */
-#lens:before,#global:before{
-  content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;
-  background:
-    linear-gradient(38deg,transparent 47%,rgba(25,170,30,.08) 48%,rgba(25,170,30,.08) 49%,transparent 50%),
-    linear-gradient(128deg,transparent 47%,rgba(0,0,0,.035) 48%,rgba(0,0,0,.035) 49%,transparent 50%);
-  background-size:160px 160px;
-  mask-image:linear-gradient(to bottom,transparent,black 20%,black 80%,transparent)
-}
-#lens .wrap,#global .wrap{position:relative;z-index:2}
-
-@media(max-width:900px){
-  .content-quick,.format-grid{grid-template-columns:1fr 1fr}
-  .platform-grid,.rec-grid{grid-template-columns:1fr 1fr}
-  .signal-story-grid{grid-template-columns:1fr}
-  .meaning-grid{grid-template-columns:1fr}
-  .signal-grid{grid-template-columns:1fr 1fr}
-  .score-explain,.category-grid{grid-template-columns:1fr 1fr}
-  .links{display:none}
-  .hero{padding:56px 0}
-  .hero-grid,.two-col,.lens-grid{grid-template-columns:1fr}
-  .hero-art{max-width:540px}
-  .kpis{grid-template-columns:1fr 1fr}
-  .trends{grid-template-columns:1fr 1fr}
-  .activity-grid{grid-template-columns:1fr 1fr}
-  .global-grid{grid-template-columns:1fr 1fr}
-  .method{grid-template-columns:1fr 1fr}
-  .chart-grid{grid-template-columns:1fr}
-  .section{padding:52px 0}
-}
-@media(max-width:620px){
-  .content-quick,.format-grid,.platform-grid,.rec-grid,.unusual-grid{grid-template-columns:1fr}
-  .topic-row{grid-template-columns:1fr;gap:6px}.topic-row span{width:max-content}
-  .market-signals-head{align-items:flex-start;flex-direction:column}
-  .signal-grid{grid-template-columns:1fr}
-  .score-explain,.category-grid{grid-template-columns:1fr}
-  .wrap{padding:0 16px}
-  .nav{height:58px}
-  .brand{font-size:14px}
-  .mark{width:30px;height:30px}
-  .preview-pill{margin-left:auto;font-size:10px}
-  .hero{padding:42px 0 48px}
-  .hero:after{width:100%;right:-48%;opacity:.38}
-  .hero h1{font-size:44px}
-  .hero p{font-size:16px}
-  .hero-art{grid-template-columns:1fr 1fr;gap:9px}
-  .tile{min-height:98px;border-radius:20px;padding:14px}
-  .tile b{font-size:15px}
-  .section-head{align-items:flex-start;flex-direction:column}
-  .section-head h2{font-size:29px}
-  .kpis,.trends,.activity-grid,.global-grid,.watch,.method{grid-template-columns:1fr}
-  .kpi{padding:18px}
-  .two-col{display:block}
-  .two-col>.panel+.panel{margin-top:14px}
-  .lens-grid{display:block}
-  .lens-grid>div+div{margin-top:16px}
-  .filters{grid-template-columns:1fr}
-  .activity-card{min-height:auto}
-  .method-card p{font-size:13px}
-  .hbar{grid-template-columns:105px 1fr 32px}
-  .dim-bars .hbar{grid-template-columns:120px 1fr 36px}
-  .trend-bars .hbar{grid-template-columns:145px 1fr 36px}
-  .compare-line{grid-template-columns:120px 1fr 55px}
-  .chart-card{padding:16px}
-  .mobile-bar{
-    display:flex;position:fixed;bottom:0;left:0;right:0;height:60px;
-    background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
-    border-top:1px solid var(--line);z-index:50;
-    justify-content:space-around;align-items:center
-  }
-  .mobile-bar a{font-size:10px;color:#434a44;text-align:center}
-  .mobile-bar b{display:block;font-size:18px;color:var(--green)}
-  .footer{padding-bottom:86px}
-}
+:root{--bg:#f2f5f4;--sf:#fff;--ink:#10201c;--mute:#5a6b66;--line:#d8e0dd;--acc:#0b8f38;--hl:#e3f5e8;--bar:#9fb3ad;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1614;--sf:#152220;--ink:#e8f0ed;--mute:#9bb0aa;--line:#263633;--acc:#3fd06d;--hl:#173a26;--bar:#4c625c}}
+:root[data-theme="dark"]{--bg:#0e1614;--sf:#152220;--ink:#e8f0ed;--mute:#9bb0aa;--line:#263633;--acc:#3fd06d;--hl:#173a26;--bar:#4c625c}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .w{display:flex;gap:6px;align-items:center;height:52px;overflow-x:auto}
+nav b{margin-right:auto;white-space:nowrap}
+nav a{text-decoration:none;padding:6px 12px;border-radius:99px;font-size:14px;color:var(--mute);white-space:nowrap}
+nav a:hover,nav a:focus-visible{background:var(--hl);color:var(--ink);outline:none}
+.hero{padding:56px 0 40px}
+.hero .w{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.badge{display:inline-block;border:1px solid var(--acc);color:var(--acc);border-radius:99px;padding:2px 12px;font-size:13px;margin-bottom:16px}
+h1{font-size:clamp(38px,6.4vw,72px);line-height:1.02;font-weight:900;letter-spacing:-.03em;margin:0 0 20px}
+.lead{color:var(--mute);max-width:52ch;margin:0 0 24px}
+.stats{display:flex;flex-wrap:wrap;gap:8px 28px}
+.stats div{font-size:13px;color:var(--mute)}
+.stats b{display:block;font-size:26px;color:var(--ink);line-height:1.1}
+#mx{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;max-width:340px;justify-self:end;width:100%}
+#mx i{aspect-ratio:1;border-radius:3px;background:var(--line)}
+#mx i.on{background:var(--bar)}
+#mx i.me{background:var(--line)}
+#mx i.me.on{background:var(--acc)}
+.cap{grid-column:1/-1;font-size:12px;color:var(--mute);margin-top:8px}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;line-height:1.12;margin:0 0 8px}
+.sub{color:var(--mute);margin:0 0 28px;max-width:62ch}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.c{background:var(--sf);border:1px solid var(--line);border-radius:10px;padding:18px}
+.c .n{font-size:34px;font-weight:900;color:var(--acc);line-height:1}
+.c h3{margin:8px 0 4px;font-size:17px}
+.c p{margin:0;color:var(--mute);font-size:14px}
+.note{background:var(--hl);border-radius:10px;padding:14px 18px;margin:20px 0;font-size:14px}
+.tw{overflow-x:auto;background:var(--sf);border:1px solid var(--line);border-radius:10px;margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+td.wrap{white-space:normal;min-width:220px}
+th{font-weight:500;color:var(--mute);font-size:13px}
+th.s{cursor:pointer}th.s:hover{color:var(--ink)}
+tr:last-child td{border-bottom:0}
+tr.me td{background:var(--hl);font-weight:700}
+td.num,th.num{text-align:right}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+button,select{font:inherit;color:var(--ink);background:var(--sf);border:1px solid var(--line);border-radius:99px;padding:7px 16px;cursor:pointer}
+button[aria-selected="true"],button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,select:focus-visible,th.s:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.pane[hidden]{display:none}
+.bar{display:grid;grid-template-columns:130px 1fr 60px;gap:12px;align-items:center;margin:7px 0;font-size:14px}
+.bar span{display:block;height:20px;border-radius:4px;background:var(--bar)}
+.bar.me span{background:var(--acc)}
+.bar.me{font-weight:700}
+.bar em{font-style:normal;text-align:right;color:var(--mute)}
+.pl{margin:0;padding:0;list-style:none}
+.pl li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.pl li.me{background:var(--hl);padding-left:10px;padding-right:10px;border-radius:6px}
+.pl small{color:var(--mute)}
+.pl b{grid-row:1/3;grid-column:2;align-self:center}
+.ft{font-size:13px;color:var(--mute)}
+.sc{display:inline-block;min-width:36px;text-align:center;font-weight:700}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--bar)}
+.dot.o{background:transparent;border:1px solid var(--line)}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.case{background:var(--sf);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+.case small{color:var(--mute)}
+.case h3{margin:2px 0 4px;font-size:16px}
+.case.me{border-color:var(--acc)}
+footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+@media (max-width:760px){.hero .w{grid-template-columns:1fr}#mx{justify-self:start;max-width:260px}.bar{grid-template-columns:100px 1fr 44px}}
 </style>
 </head>
-<body><a href="../" style="position:fixed;left:16px;bottom:16px;z-index:9999;background:rgba(17,17,17,.88);color:#fff;text-decoration:none;padding:9px 12px;border-radius:999px;font:600 12px/1.2 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.16)">← All research</a>
-<header class="topbar"><div class="wrap nav"><div class="brand"><span class="mark">▥</span>Tech Brand Watch</div><nav class="links"><a href="#snapshot">Главное</a><a href="#content">Контент</a><a href="#performance">Результаты</a><a href="#matrix">Карта рынка</a><a href="#activities">Данные</a></nav><span class="preview-pill">PREVIEW · не финал</span></div></header>
+<body>
+<nav><div class="w"><a href="../" style="margin-left:-12px">← Все исследования</a><b style="margin-left:8px">Tech Brand Watch</b><a href="#position">Где мы</a><a href="#roles">По ролям</a><a href="#trends">Тренды</a><a href="#snapshot">Рынок</a><a href="#content">Контент</a><a href="#matrix">Карта</a><a href="#data">Кейсы</a></div></nav>
 
-<section class="hero"><div class="wrap hero-grid"><div>
-  <div class="eyebrow">Tech Brand Watch · Q3 2026</div>
-  <h1>Что делают tech-бренды<br><em>и как выглядит рынок</em></h1>
-  <p>25 российских tech-брендов и tech-направлений. Смотрим не вакансии, а публичную инженерную активность: контент, события, образование, open source, нестандартные проекты, площадки и результаты.</p>
-  <div class="hero-meta"><span>25 tech-брендов</span><span>8 направлений</span><span>98 подтверждённых кейсов</span><span>обновлено 22 сентября</span></div>
-</div><div class="hero-art">
-  <div class="tile"><small>MARKET</small><b>Что уже стало нормой</b></div>
-  <div class="tile"><small>BENCHMARK</small><b>Как выглядит 2ГИС Tech на фоне рынка</b></div>
-  <div class="tile"><small>CONTENT</small><b>Что публикуют и где</b></div>
-  <div class="tile"><small>RESULT</small><b>Что получает внимание</b></div>
-</div></div></section>
-<section class="section" id="snapshot"><div class="wrap">
-  <div class="section-head"><div>
-    <h2>Главное за 30 секунд</h2>
-    <p>Сначала — только то, что действительно меняет планирование. Без длинной методологии и без «рейтинга работодателей».</p>
-  </div><div class="note"><strong>Объект сравнения — tech-бренд.</strong><br>«2ГИС Tech» здесь означает внешние инженерные и tech-коммуникации 2ГИС, а не компанию 2ГИС целиком. Q3 ещё не закрыт; после 30 сентября набор будет перепроверен.</div></div>
-
-  <div class="executive-grid">
-    <div class="exec-card"><span>1</span><h3>Tech-контент уже не отличает</h3><p><b>25 из 25</b> компаний публикуют технический контент. Сам факт статьи или поста — уже базовое ожидание рынка.</p></div>
-    <div class="exec-card"><span>2</span><h3>События — тоже массовый формат</h3><p><b>17 из 25</b> компаний проводят внешние tech-события. Обычный митап сам по себе не является заметным отличием.</p></div>
-    <div class="exec-card important"><span>3</span><h3>Образование есть у 16 из 25</h3><p><b>16 из 25</b> tech-брендов имеют внешние образовательные форматы. У 2ГИС Tech в текущем Q3-срезе такое направление не подтверждено.</p></div>
-    <div class="exec-card"><span>4</span><h3>Open Source уже довольно распространён</h3><p><b>14 из 25</b> компаний имеют активный публичный код. Просто наличие GitHub-репозитория уже слабый повод для отдельной коммуникации.</p></div>
-    <div class="exec-card"><span>5</span><h3>Нестандартные проекты становятся заметнее</h3><p><b>7 из 25</b> компаний используют форматы вне обычной схемы «статья + митап»: рейв, арт-объект, night-format, show, robotics и другие механики.</p></div>
-    <div class="exec-card"><span>6</span><h3>Сообщества и регулярные эксперты — пока не норма</h3><p>Постоянные сообщества есть у <b>3 из 25</b>, регулярные инженерные эксперты — у <b>4 из 25</b>. Это не обязательная гигиена рынка.</p></div>
-  </div>
-
-  <div class="market-table-wrap">
-    <table class="market-table">
-      <thead><tr><th>Направление</th><th>Есть у tech-брендов</th><th>2ГИС Tech</th><th>Как читать</th></tr></thead>
-      <tbody>
-        <tr><td>Технический контент</td><td><b>25/25</b></td><td>Да</td><td>База рынка</td></tr>
-        <tr><td>События</td><td><b>17/25</b></td><td>Да</td><td>Очень распространено</td></tr>
-        <tr class="gap-row"><td>Образование</td><td><b>16/25</b></td><td><b>Не подтверждено</b></td><td>Факт текущего среза; без оценки необходимости запуска</td></tr>
-        <tr><td>Open Source</td><td><b>14/25</b></td><td>Да</td><td>Распространено, само по себе уже не отличает</td></tr>
-        <tr><td>Нестандартные форматы</td><td><b>7/25</b></td><td>Да</td><td>Не массово, но уже заметный паттерн</td></tr>
-        <tr><td>Исследования</td><td><b>5/25</b></td><td>Не подтверждено</td><td>Редко встречается</td></tr>
-        <tr><td>Инженеры как регулярные эксперты</td><td><b>4/25</b></td><td>Не подтверждено</td><td>Редко встречается</td></tr>
-        <tr><td>Постоянное профессиональное сообщество</td><td><b>3/25</b></td><td>Не подтверждено</td><td>Очень редко встречается</td></tr>
-      </tbody>
-    </table>
-  </div>
-</div></section>
-<section class="section" id="content"><div class="wrap">
-  <div class="section-head"><div>
-    <h2>Контент в цифрах</h2>
-    <p>Четыре вопроса: где публикуют, сколько выходит, что получает больше просмотров и какие форматы реально подтверждены у конкурентов.</p>
-  </div><div class="note"><strong>Правило:</strong> только числа, названия компаний и источники. Если аудит неполный — показываем «≥» и прямо пишем, сколько компаний уже проверено.</div></div>
-
-  <div class="content-kpis"><div class="content-kpi"><b>150</b><span>Habr-статей в Q3 у 9 полностью пересчитанных блогов</span></div>
-    <div class="content-kpi"><b>24/25</b><span>отдельный или напрямую относимый блог на Habr</span></div>
-    <div class="content-kpi"><b>24/25</b><span>релевантный tech / company-tech канал в Telegram</span></div>
-    <div class="content-kpi"><b>22/25</b><span>Telegram-канала с публичным средним просмотром поста</span></div>
-    <div class="content-kpi"><b>≥6/25</b><span>брендов с собственной регулярной podcast-серией</span></div>
-  </div>
-
-  <div class="simple-tabs" role="tablist">
-    <button class="simple-tab active" data-tab="platforms">Площадки</button>
-    <button class="simple-tab" data-tab="cadence">Как часто</button>
-    <button class="simple-tab" data-tab="hits">ТОП публикаций</button>
-    <button class="simple-tab" data-tab="formats">Форматы</button>
-  </div>
-
-  <div class="tab-panel active" data-panel="platforms">
-    <div class="table-intro"><b>Где публикуют</b><span>Срез по 25 компаниям · 22 сентября 2026</span></div>
-    <table class="market-table">
-      <thead><tr><th>Площадка</th><th>Подтверждено</th><th>Кто именно</th><th>Что можно сравнивать</th></tr></thead>
-      <tbody>
-        <tr><td><b>Habr</b></td><td><b>24/25</b></td><td>Отдельный сопоставимый блог найден у всех, кроме SberTech. Материалы SberTech выходят внутри более широкого блога Сбера, поэтому отдельно его не считаем.</td><td>Просмотры статьи, комментарии, рейтинг, частоту публикаций</td></tr>
-        <tr><td><b>Telegram</b></td><td><b>24/25</b><br><small>22 с метрикой avg views</small></td><td>Релевантный tech/company-tech канал найден у всех, кроме Точки. Для Dev2GIS и hh.ru публичный средний просмотр в сопоставимом источнике пока не получен.</td><td>Подписчики, средний просмотр поста, ER, отдельные посты</td></tr>
-        <tr><td><b>YouTube</b></td><td><b>≥7/25</b></td><td>2ГИС Tech, Ozon Tech, YADRO, Selectel, Контур, RWB, Купер</td><td>Просмотры видео, комментарии, серии</td></tr>
-        <tr><td><b>VK Video</b></td><td><b>≥6/25</b></td><td>2ГИС Tech, Avito, Ozon Tech, Selectel, Контур, Купер</td><td>Просмотры видео, реакции, комментарии</td></tr>
-        <tr><td><b>RuTube</b></td><td><b>≥5/25</b></td><td>Avito, YADRO, Selectel, Magnit Tech, Контур</td><td>Просмотры видео; чаще используется как дополнительная дистрибуция</td></tr>
-        <tr><td><b>Dzen</b></td><td><b>≥1/25</b></td><td>AvitoTech подтверждён в текущем проходе</td><td>Пока данных недостаточно для market-level сравнения</td></tr>
-        <tr><td><b>Аудиоплатформы</b></td><td><b>≥6 брендов с собственными podcast-сериями</b></td><td>Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур. Используют Mave, Apple Podcasts, Яндекс Музыку, Spotify/Castbox и другие площадки в зависимости от шоу.</td><td>Публичные прослушивания часто недоступны, поэтому между брендами не сравниваем</td></tr>
-      </tbody>
-    </table>
-    <p class="table-note"><strong>≥</strong> означает «минимум подтверждено в текущем аудите». Это не означает, что остальные компании площадку точно не используют.</p>
-  </div>
-
-  <div class="tab-panel" data-panel="cadence">
-    <div class="table-intro"><b>Habr: сколько статей вышло в Q3 к 22 сентября</b><span>01.07–22.09 = 12 недель</span></div>
-    <table class="market-table rank-table">
-      <thead><tr><th>#</th><th>Компания</th><th>Статей Q3</th><th>≈ в неделю</th><th>К частоте 2ГИС Tech</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>Яндекс</td><td><b>41</b></td><td>3.42</td><td>10.3×</td></tr>
-        <tr><td>2</td><td>VK Tech</td><td><b>35</b></td><td>2.92</td><td>8.8×</td></tr>
-        <tr><td>3</td><td>Т-Банк</td><td><b>29</b></td><td>2.42</td><td>7.3×</td></tr>
-        <tr><td>4</td><td>Avito</td><td><b>25</b></td><td>2.08</td><td>6.3×</td></tr>
-        <tr><td>5</td><td>Ozon Tech</td><td><b>9</b></td><td>0.75</td><td>2.3×</td></tr>
-        <tr><td>6</td><td>X5 Tech</td><td><b>6</b></td><td>0.50</td><td>1.5×</td></tr>
-        <tr class="gap-row"><td>7</td><td><b>2ГИС Tech</b></td><td><b>4</b></td><td>0.33</td><td>1.0×</td></tr>
-        <tr><td>8</td><td>Dodo Engineering</td><td><b>1</b></td><td>0.08</td><td>0.25×</td></tr>
-        <tr><td>9</td><td>Купер</td><td><b>0</b></td><td>0</td><td>0×</td></tr>
-      </tbody>
-    </table>
-    <p class="table-note">Это <strong>9 блогов, пересчитанных постранично</strong> за текущий Q3. Считаем все статьи company blog независимо от темы — это показатель частоты, не качества. Остальным компаниям цифру пока не приписываем, пока не проведён такой же полный подсчёт.</p>
-    <div class="chart-note"><strong>Что видно:</strong> 2ГИС Tech публикует на Habr примерно раз в три недели. У Яндекса, VK Tech, Т-Банка и Avito частота выше в 6–10 раз. Это не означает, что нужно повторять их объём: следующий вопрос — даёт ли большая частота больше просмотров на материал.</div>
-  </div>
-
-  <div class="tab-panel" data-panel="hits">
-    <div class="table-intro"><b>Habr: ТОП проверенных Q3-материалов</b><span>от большего к меньшему · снимок 22 сентября</span></div>
-    <table class="market-table rank-table">
-      <thead><tr><th>#</th><th>Компания</th><th>Материал</th><th>Тема</th><th>Просмотры</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>Домклик</td><td><a href="https://habr.com/ru/companies/domclick/articles/1067048/" target="_blank" rel="noopener">Один разработчик, 14 агентов, восемь месяцев ↗</a></td><td>AI / engineering workflow</td><td><b>≈88K</b></td></tr>
-        <tr><td>2</td><td>Яндекс</td><td><a href="https://habr.com/ru/companies/yandex/articles/1067964/" target="_blank" rel="noopener">Как за вами (не) следит Яндекс ↗</a></td><td>Mobile / security</td><td><b>≈74K</b></td></tr>
-        <tr><td>3</td><td>Т-Банк</td><td><a href="https://habr.com/ru/companies/tbank/articles/1067830/" target="_blank" rel="noopener">Java Digest #38 ↗</a></td><td>Java / digest</td><td><b>≈60K</b></td></tr>
-        <tr><td>4</td><td>Яндекс</td><td><a href="https://habr.com/ru/companies/yandex/articles/" target="_blank" rel="noopener">Тысяча конфликтов и одна LLM ↗</a></td><td>LLM / Chromium</td><td><b>≈32K</b></td></tr>
-        <tr><td>5</td><td>MTS</td><td><a href="https://habr.com/ru/hubs/career/articles/rated25/" target="_blank" rel="noopener">Рынок IT-вакансий сломался и ничего не понятно? ↗</a></td><td>IT labour market</td><td><b>≈28K</b></td></tr>
-        <tr><td>6</td><td>Avito</td><td><a href="https://habr.com/ru/companies/avito/articles/1078084/" target="_blank" rel="noopener">От «когда-нибудь» к работающему прототипу ↗</a></td><td>LLM / prototyping</td><td><b>≈18K</b></td></tr>
-        <tr><td>7</td><td>VK Tech</td><td><a href="https://habr.com/ru/companies/vktech/articles/1061284/" target="_blank" rel="noopener">ClickHouse: сценарии и лучшие практики ↗</a></td><td>Data / ClickHouse</td><td><b>≈17K</b></td></tr>
-        <tr><td>8</td><td>Selectel</td><td><a href="https://habr.com/ru/companies/selectel/articles/page3/" target="_blank" rel="noopener">Пять мини-ПК июля 2026 года ↗</a></td><td>Hardware / editorial tech</td><td><b>≈15K</b></td></tr>
-        <tr><td>9</td><td>Ozon Tech</td><td><a href="https://habr.com/ru/companies/ozontech/articles/" target="_blank" rel="noopener">От полной выгрузки к S3 и PostgreSQL ↗</a></td><td>Go / highload</td><td><b>≈14K</b></td></tr>
-        <tr><td>10</td><td>X5 Tech</td><td><a href="https://habr.com/ru/companies/X5Tech/articles/" target="_blank" rel="noopener">Почему фронтенд съедает больше времени, чем бэкенд ↗</a></td><td>Frontend / AI development</td><td><b>≈12K</b></td></tr>
-        <tr><td>11</td><td>Kaspersky</td><td><a href="https://habr.com/ru/companies/kaspersky/articles/" target="_blank" rel="noopener">Что фронтенду стоит перенять у геймдева ↗</a></td><td>Frontend / gamedev</td><td><b>≈12K</b></td></tr>
-        <tr class="gap-row"><td>12</td><td><b>2ГИС Tech</b></td><td><a href="https://habr.com/ru/companies/2gis/articles/1056942/" target="_blank" rel="noopener">Полевые проезды в QA ↗</a></td><td>QA / geolocation</td><td><b>≈9.2K</b></td></tr>
-      </tbody>
-    </table>
-    <p class="table-note">Это <strong>проверенный набор заметных материалов</strong>, а не заявление об абсолютном Top-12 всех публикаций 25 компаний: полный content census ещё собирается. Просмотры растут со временем, а возраст статей различается.</p>
-
-    <div class="table-intro sub-intro"><b>Telegram: посты выше среднего своего канала</b><span>показываем просмотры и во сколько раз пост выше среднего</span></div>
-    <table class="market-table rank-table">
-      <thead><tr><th>#</th><th>Компания</th><th>Пост / механика</th><th>Просмотры</th><th>Среднее канала</th><th>× к среднему</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>X5 Tech</td><td><a href="https://t.me/s/x5_tech?before=2564" target="_blank" rel="noopener">Подготовка к техническому собеседованию ↗</a></td><td><b>5.51K</b></td><td>1.58K</td><td><b>3.5×</b></td></tr>
-        <tr><td>2</td><td>Positive Technologies</td><td><a href="https://t.me/s/Positive_Technologies?before=4251" target="_blank" rel="noopener">ПМЭФ-2026 / пространство бренда ↗</a></td><td><b>9.07K</b></td><td>3.29K</td><td><b>2.75×</b></td></tr>
-        <tr><td>3</td><td>Ozon Tech</td><td><a href="https://t.me/s/ozon_tech/1317" target="_blank" rel="noopener">Пункт выдачи новостей / развлекательная механика ↗</a></td><td><b>13.8K</b></td><td>5.58K</td><td><b>2.47×</b></td></tr>
-        <tr><td>4</td><td>Avito</td><td><a href="https://t.me/s/avitotech/3117" target="_blank" rel="noopener">Новогодний интерактив / предсказания ↗</a></td><td><b>7.3K</b></td><td>4.08K</td><td><b>1.79×</b></td></tr>
-        <tr><td>5</td><td>Ozon Tech</td><td><a href="https://t.me/s/ozon_tech/1619" target="_blank" rel="noopener">Подкаст с техническим директором ↗</a></td><td><b>8.08K</b></td><td>5.58K</td><td><b>1.45×</b></td></tr>
-      </tbody>
-    </table>
-    <p class="table-note">Telegram-таблица — примеры подтверждённых постов выше собственного среднего канала, а не исчерпывающий рейтинг всех публикаций 22 каналов.</p>
-  </div>
-
-  <div class="tab-panel" data-panel="formats">
-    <div class="table-intro"><b>Какие форматы подтверждены в выборке</b><span>без гостевых появлений, выданных за собственный формат</span></div>
-    <table class="market-table">
-      <thead><tr><th>Формат</th><th>Подтверждено</th><th>Компании</th><th>Как читать</th></tr></thead>
-      <tbody>
-        <tr><td><b>Статьи / engineering cases на Habr</b></td><td><b>24/25</b></td><td>Отдельный блог у всех, кроме отдельного SberTech-блога</td><td>Практически стандарт рынка; различаются частота, тема и результат.</td></tr>
-        <tr><td><b>Собственная регулярная podcast-серия</b></td><td><b>≥6/25</b></td><td>Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур</td><td>Считаем только собственные/брендированные серии. Гостевой выпуск в чужом подкасте не засчитываем.</td></tr>
-        <tr><td><b>Нестандартный tech-brand проект</b></td><td><b>7/25</b></td><td>2ГИС Tech, Avito, Kaspersky, MTS Tech, Ozon Tech, YADRO, Magnit Tech</td><td>Рейв, арт-объект, show/robotics, интерактивные механики и другие проекты вне обычной статьи/митапа.</td></tr>
-        <tr><td><b>Кросс-постинг видео в RuTube</b></td><td><b>≥5/25</b></td><td>Avito, YADRO, Selectel, Magnit Tech, Контур</td><td>Сам факт присутствия не означает высокий охват: у некоторых каналов просмотры отдельных видео — десятки или сотни.</td></tr>
-      </tbody>
-    </table>
-    <div class="chart-note"><strong>Темы намеренно убраны из этого блока.</strong> Пока полный корпус публикаций по всем 25 компаниям не размечен одинаково, формулировки вроде «AI встречается часто» дают видимость точности без знаменателя. Вернём темы, когда сможем показать: сколько публикаций, у скольких компаний и какой результат.</div>
-  </div>
-</div></section>
-<section class="section white" id="performance"><div class="wrap">
-  <div class="section-head"><div>
-    <h2>Результаты: Telegram и крупные проекты</h2>
-    <p>Habr теперь разобран в разделе «Контент». Здесь оставляем полную Telegram-таблицу и несопоставимые между собой метрики крупных проектов.</p>
-  </div></div>
-
-  <details class="research-fold" open>
-    <summary><span><b>Telegram · средние просмотры поста</b><small>22 канала с публичной метрикой · от большего к меньшему</small></span><i>+</i></summary>
-    <div class="fold-content">
-      <p class="table-note" style="margin:0 0 14px"><strong>Как читать:</strong> это среднее число просмотров поста в выбранном tech / engineering-канале компании по последнему доступному публичному снимку. Это не уникальный охват. Даты обновления источников отличаются, поэтому таблица показывает ориентир рынка, а не строгий рейтинг на одну секунду.</p>
-      <table class="market-table rank-table">
-        <thead><tr><th>#</th><th>Компания</th><th>Канал</th><th>Подписчики</th><th>Ср. просмотры / пост</th><th>ER</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td>Ozon Tech</td><td><a href="https://telemetr.me/content/ozon_tech" target="_blank" rel="noopener">Ozon Tech ↗</a></td><td>29.7K</td><td><b>5.58K</b></td><td>18.74%</td></tr>
-          <tr><td>2</td><td>Avito</td><td><a href="https://telemetr.me/content/%40avitotech" target="_blank" rel="noopener">AvitoTech ↗</a></td><td>25.6K</td><td><b>4.08K</b></td><td>15.85%</td></tr>
-          <tr><td>3</td><td>Positive Technologies</td><td><a href="https://telemetr.me/content/Positive_Technologies" target="_blank" rel="noopener">Positive Technologies ↗</a></td><td>29.0K</td><td><b>3.29K</b></td><td>11.36%</td></tr>
-          <tr><td>4</td><td>Т-Банк</td><td><a href="https://telemetr.me/content/itstinkoff" target="_blank" rel="noopener">Код Желтый ↗</a></td><td>32.7K</td><td><b>2.82K</b></td><td>8.61%</td></tr>
-          <tr><td>5</td><td>Яндекс</td><td><a href="https://telemetr.me/content/yandex4developers" target="_blank" rel="noopener">Yandex for Developers ↗</a></td><td>28.5K</td><td><b>2.81K</b></td><td>9.84%</td></tr>
-          <tr><td>6</td><td>Kaspersky</td><td><a href="https://telemetr.me/content/kasperskylab_ru" target="_blank" rel="noopener">Kaspersky ↗</a></td><td>29.2K</td><td><b>2.57K</b></td><td>8.36%</td></tr>
-          <tr><td>7</td><td>Selectel</td><td><a href="https://telemetr.me/content/%40selectel" target="_blank" rel="noopener">Selectel ↗</a></td><td>64.4K</td><td><b>2.53K</b></td><td>3.00%</td></tr>
-          <tr><td>8</td><td>RWB</td><td><a href="https://telemetr.me/content/wb_tech" target="_blank" rel="noopener">WB Tech ↗</a></td><td>15.6K</td><td><b>2.24K</b></td><td>14.22%</td></tr>
-          <tr><td>9</td><td>Купер</td><td><a href="https://tg.me/tech_kuper" target="_blank" rel="noopener">Купер.тех ↗</a></td><td>8.1K</td><td><b>2.10K</b></td><td>25.7%</td></tr>
-          <tr><td>10</td><td>Magnit Tech</td><td><a href="https://list.tg/channel/magnittech" target="_blank" rel="noopener">MAGNIT TECH career ↗</a></td><td>4.3K</td><td><b>1.70K</b></td><td>40.3%</td></tr>
-        </tbody>
-      </table>
-
-      <details class="mini-fold">
-        <summary>Показать ещё 12 каналов</summary>
-        <div class="mini-fold-body">
-          <table class="market-table rank-table">
-            <thead><tr><th>#</th><th>Компания</th><th>Канал</th><th>Подписчики</th><th>Ср. просмотры / пост</th><th>ER</th></tr></thead>
-            <tbody>
-              <tr><td>11</td><td>Lamoda Tech</td><td><a href="https://telemetr.me/content/latech" target="_blank" rel="noopener">Lamoda Tech ↗</a></td><td>11.0K</td><td><b>1.67K</b></td><td>15.25%</td></tr>
-              <tr><td>12</td><td>YADRO</td><td><a href="https://telemetr.me/content/ultimate_engineer" target="_blank" rel="noopener">Истовый инженер ↗</a></td><td>11.9K</td><td><b>1.62K</b></td><td>10.85%</td></tr>
-              <tr><td>13</td><td>Cloud.ru</td><td><a href="https://telemetr.me/catalog/saas/cloud" target="_blank" rel="noopener">Cloud.ru ↗</a></td><td>10.2K</td><td><b>1.58K</b></td><td>—</td></tr>
-              <tr><td>14</td><td>X5 Tech</td><td><a href="https://telemetr.me/content/x5_tech" target="_blank" rel="noopener">X5 Tech ↗</a></td><td>10.8K</td><td><b>1.58K</b></td><td>14.34%</td></tr>
-              <tr><td>15</td><td>ecom.tech</td><td><a href="https://telemetr.me/content/ecomtech_channel" target="_blank" rel="noopener">ecom.tech ↗</a></td><td>7.5K</td><td><b>1.42K</b></td><td>18.84%</td></tr>
-              <tr><td>16</td><td>MTS Tech</td><td><a href="https://telemetr.me/content/truetechcommunity" target="_blank" rel="noopener">МТС True Tech ↗</a></td><td>11.5K</td><td><b>1.36K</b></td><td>10.46%</td></tr>
-              <tr><td>17</td><td>Контур</td><td><a href="https://telemetr.me/content/KonturTech" target="_blank" rel="noopener">Технологии в Контуре ↗</a></td><td>6.7K</td><td><b>1.19K</b></td><td>17.68%</td></tr>
-              <tr><td>18</td><td>Домклик</td><td><a href="https://telemetr.me/content/devdomclick" target="_blank" rel="noopener">DevКлик ↗</a></td><td>0.95K</td><td><b>1.11K</b></td><td>116.84%*</td></tr>
-              <tr><td>19</td><td>Альфа-Банк</td><td><a href="https://telemetr.me/content/aaanalytics" target="_blank" rel="noopener">Alfa Advanced Analytics ↗</a></td><td>5.7K</td><td><b>0.96K</b></td><td>16.88%</td></tr>
-              <tr><td>20</td><td>Dodo Engineering</td><td><a href="https://telemetr.me/content/dododev" target="_blank" rel="noopener">Dodo Engineering ↗</a></td><td>3.9K</td><td><b>0.88K</b></td><td>22.75%</td></tr>
-              <tr><td>21</td><td>SberTech</td><td><a href="https://t.me/s/platformvnews" target="_blank" rel="noopener">Код СберТеха ↗</a></td><td>1.81K</td><td><b>≈0.37K</b>**</td><td>—</td></tr>
-              <tr><td>22</td><td>VK</td><td><a href="https://telemetr.me/content/vk_digital_tech" target="_blank" rel="noopener">VK Tech ↗</a></td><td>2.32K</td><td><b>0.31K</b></td><td>13.42%</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </details>
-
-      <div class="telegram-missing">
-        <h4>Где сопоставимой цифры пока нет</h4>
-        <table class="market-table">
-          <thead><tr><th>Компания</th><th>Канал</th><th>Что удалось подтвердить</th></tr></thead>
-          <tbody>
-            <tr class="gap-row"><td>2ГИС Tech</td><td><a href="https://telemetr.io/en/channels/1772225971-rnd2gis" target="_blank" rel="noopener">Dev2GIS · @rnd2GIS ↗</a></td><td>≈3.9K подписчиков; публичный средний просмотр поста в доступном снимке не показан</td></tr>
-            <tr><td>hh.ru</td><td><a href="https://t.me/hh_tech_news" target="_blank" rel="noopener">Охэхэнные новости ↗</a></td><td>≈2.75K подписчиков; надёжного текущего среднего просмотра в открытых источниках не нашли</td></tr>
-            <tr><td>Точка Банк</td><td>—</td><td>Отдельный tech-канал для корректного сравнения в текущем аудите не найден; общий бизнес-канал намеренно не подставляем</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="table-note"><strong>Источники:</strong> в основном Telemetr; для Купера — TG.ME, Magnit Tech — list.tg, SberTech — среднее по 9 недавним публично видимым постам. *У маленького DevКлик просмотры выше числа подписчиков: Telegram учитывает просмотры извне и через репосты. **SberTech поэтому не полностью сопоставим с агрегаторным средним.</p>
-      <div class="chart-note"><strong>Что видно:</strong> размер аудитории сам по себе плохо объясняет просмотры. Например, Selectel имеет крупнейшую базу подписчиков в этой таблице, но по среднему просмотру поста находится ниже Ozon Tech и Avito. Для оценки канала полезнее смотреть одновременно на подписчиков, средний просмотр и ER.</div>
-    </div>
-  </details>
-
-  <details class="research-fold">
-    <summary><span><b>Большие проекты · свои метрики</b><small>участники, команды, заявки — не смешиваем с просмотрами</small></span><i>+</i></summary>
-    <div class="fold-content">
-      <table class="market-table rank-table">
-        <thead><tr><th>Компания</th><th>Проект</th><th>Главная публичная метрика</th><th>Дополнительно</th></tr></thead>
-        <tbody>
-          <tr><td>Ozon Tech</td><td>E-CODE 2026</td><td><b>343K+ просмотров трансляций</b></td><td>4K+ офлайн</td></tr>
-          <tr><td>Kaspersky</td><td>Kaspersky{CTF}</td><td><b>1 657 команд</b></td><td>98 стран</td></tr>
-          <tr><td>Positive Technologies</td><td>Positive Hack Camp</td><td><b>800+ заявок</b></td><td>81 участник · 20 стран</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </details>
-</div></section>
-<section class="section" id="matrix"><div class="wrap">
-  <div class="section-head"><div>
-    <h2>Карта рынка</h2>
-    <p>Сначала — восемь цифр. Полная матрица 25 × 8 открывается только если нужна детальная проверка.</p>
-  </div></div>
-  <div class="signal-grid">
-    <div class="signal-card standard"><b>25/25</b><strong>Технический контент</strong><span>База</span></div>
-    <div class="signal-card standard"><b>17/25</b><strong>События</strong><span>Очень распространено</span></div>
-    <div class="signal-card standard"><b>16/25</b><strong>Образование</strong><span>Очень распространено</span></div>
-    <div class="signal-card common"><b>14/25</b><strong>Open Source</strong><span>Распространено</span></div>
-    <div class="signal-card rare"><b>7/25</b><strong>Нестандартные форматы</strong><span>Заметный паттерн</span></div>
-    <div class="signal-card rare"><b>5/25</b><strong>Исследования</strong><span>Редко</span></div>
-    <div class="signal-card rare"><b>4/25</b><strong>Инженеры как эксперты</strong><span>Редко</span></div>
-    <div class="signal-card rare"><b>3/25</b><strong>Сообщество</strong><span>Очень редко</span></div>
-  </div>
-  <details class="research-fold matrix-fold">
-    <summary><span><b>Открыть полную матрицу 25 × 8</b><small>все компании и все направления</small></span><i>+</i></summary>
-    <div class="fold-content">
-<div class="two-col">
-    <div class="panel table-scroll"><table class="matrix"><thead><tr><th>Компания</th><th>Технический контент</th><th>События</th><th>Профессиональное сообщество</th><th>Инженеры как эксперты</th><th>Образование</th><th>Исследования</th><th>Открытый код</th><th>Нестандартные форматы</th><th>Итого</th></tr></thead><tbody><tr class=""><td><strong>Яндекс</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot on">✓</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>6/8</strong></td></tr><tr class=""><td><strong>Avito</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot on">✓</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>6/8</strong></td></tr><tr class=""><td><strong>Kaspersky</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>6/8</strong></td></tr><tr class=""><td><strong>Positive Technologies</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot on">✓</span></td><td title="Инженеры как эксперты"><span class="dot on">✓</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>6/8</strong></td></tr><tr class=""><td><strong>Т-Банк</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot on">✓</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>5/8</strong></td></tr><tr class=""><td><strong>MTS Tech</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot on">✓</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>5/8</strong></td></tr><tr class=""><td><strong>Ozon Tech</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>5/8</strong></td></tr><tr class=""><td><strong>YADRO</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot on">✓</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>5/8</strong></td></tr><tr class="is-2gis"><td><strong>2ГИС Tech</strong><span class="you">мы</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>4/8</strong></td></tr><tr class=""><td><strong>Контур</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>4/8</strong></td></tr><tr class=""><td><strong>Cloud.ru</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>4/8</strong></td></tr><tr class=""><td><strong>Selectel</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>4/8</strong></td></tr><tr class=""><td><strong>VK</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>4/8</strong></td></tr><tr class=""><td><strong>Альфа-Банк</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>3/8</strong></td></tr><tr class=""><td><strong>hh.ru</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>3/8</strong></td></tr><tr class=""><td><strong>Lamoda Tech</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>3/8</strong></td></tr><tr class=""><td><strong>Magnit Tech</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>3/8</strong></td></tr><tr class=""><td><strong>SberTech</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>3/8</strong></td></tr><tr class=""><td><strong>Точка Банк</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>2/8</strong></td></tr><tr class=""><td><strong>Dodo Engineering</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>2/8</strong></td></tr><tr class=""><td><strong>ecom.tech</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>2/8</strong></td></tr><tr class=""><td><strong>RWB</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>2/8</strong></td></tr><tr class=""><td><strong>X5 Tech</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>2/8</strong></td></tr><tr class=""><td><strong>Домклик</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>1/8</strong></td></tr><tr class=""><td><strong>Купер</strong><span class="new-pill">NEW</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>1/8</strong></td></tr></tbody></table></div>
-    <div class="panel"><h3 style="margin-top:0">Итого направлений, 0–8</h3><p class="muted" style="font-size:13px">Среднее по 25 компаниям — <strong>3,64/8</strong>. Новые 11 проверены консервативно: если публичного доказательства не хватило, балл не ставили.</p><div class="score-row "><div class="score-name">Яндекс</div><div class="bar"><span style="width:75%"></span></div><div class="score-value">6/8</div></div><div class="score-row "><div class="score-name">Avito</div><div class="bar"><span style="width:75%"></span></div><div class="score-value">6/8</div></div><div class="score-row "><div class="score-name">Kaspersky</div><div class="bar"><span style="width:75%"></span></div><div class="score-value">6/8</div></div><div class="score-row "><div class="score-name">Positive Technologies</div><div class="bar"><span style="width:75%"></span></div><div class="score-value">6/8</div></div><div class="score-row "><div class="score-name">Т-Банк</div><div class="bar"><span style="width:62.5%"></span></div><div class="score-value">5/8</div></div><div class="score-row "><div class="score-name">MTS Tech</div><div class="bar"><span style="width:62.5%"></span></div><div class="score-value">5/8</div></div><div class="score-row "><div class="score-name">Ozon Tech</div><div class="bar"><span style="width:62.5%"></span></div><div class="score-value">5/8</div></div><div class="score-row "><div class="score-name">YADRO</div><div class="bar"><span style="width:62.5%"></span></div><div class="score-value">5/8</div></div><div class="score-row focus"><div class="score-name">2ГИС Tech</div><div class="bar"><span style="width:50%"></span></div><div class="score-value">4/8</div></div><div class="score-row "><div class="score-name">Контур</div><div class="bar"><span style="width:50%"></span></div><div class="score-value">4/8</div></div><div class="score-row "><div class="score-name">Cloud.ru</div><div class="bar"><span style="width:50%"></span></div><div class="score-value">4/8</div></div><div class="score-row "><div class="score-name">Selectel</div><div class="bar"><span style="width:50%"></span></div><div class="score-value">4/8</div></div><div class="score-row "><div class="score-name">VK</div><div class="bar"><span style="width:50%"></span></div><div class="score-value">4/8</div></div><div class="score-row "><div class="score-name">Альфа-Банк</div><div class="bar"><span style="width:37.5%"></span></div><div class="score-value">3/8</div></div><div class="score-row "><div class="score-name">hh.ru</div><div class="bar"><span style="width:37.5%"></span></div><div class="score-value">3/8</div></div><div class="score-row "><div class="score-name">Lamoda Tech</div><div class="bar"><span style="width:37.5%"></span></div><div class="score-value">3/8</div></div><div class="score-row "><div class="score-name">Magnit Tech</div><div class="bar"><span style="width:37.5%"></span></div><div class="score-value">3/8</div></div><div class="score-row "><div class="score-name">SberTech</div><div class="bar"><span style="width:37.5%"></span></div><div class="score-value">3/8</div></div><div class="score-row "><div class="score-name">Точка Банк</div><div class="bar"><span style="width:25%"></span></div><div class="score-value">2/8</div></div><div class="score-row "><div class="score-name">Dodo Engineering</div><div class="bar"><span style="width:25%"></span></div><div class="score-value">2/8</div></div><div class="score-row "><div class="score-name">ecom.tech</div><div class="bar"><span style="width:25%"></span></div><div class="score-value">2/8</div></div><div class="score-row "><div class="score-name">RWB</div><div class="bar"><span style="width:25%"></span></div><div class="score-value">2/8</div></div><div class="score-row "><div class="score-name">X5 Tech</div><div class="bar"><span style="width:25%"></span></div><div class="score-value">2/8</div></div><div class="score-row "><div class="score-name">Домклик</div><div class="bar"><span style="width:12.5%"></span></div><div class="score-value">1/8</div></div><div class="score-row "><div class="score-name">Купер</div><div class="bar"><span style="width:12.5%"></span></div><div class="score-value">1/8</div></div></div>
-  </div>
-
+<header class="hero"><div class="w">
+<div>
+<span class="badge">Срез на 22 сентября · после 30 сентября перепроверим</span>
+<h1>Что делают tech-бренды и как выглядит рынок</h1>
+<p class="lead">Единый кейс для команды продвижения бренда 2ГИС: что делают 25 крупнейших tech-компаний России за Q3 2026, где находится 2ГИС Tech и что взять в работу редактору, ивент-менеджеру и HR-маркетологу.</p>
+<div class="stats"><div><b>25</b>tech-брендов</div><div><b>8</b>направлений</div><div><b>98</b>подтверждённых кейсов</div><div><b>22 сентября</b>обновлено</div></div>
 </div>
-  </details>
-</div></section>
-<section class="section" id="activities"><div class="wrap"><div class="section-head"><div><h2>Данные и источники</h2><p>98 подтверждённых кейсов, на которых строится исследование. Этот блок нужен для проверки и детализации, а не для первого чтения отчёта.</p></div><div id="count" class="note">98 активностей</div></div><div class="filters"><input id="search" type="search" placeholder="Поиск по компании или активности…"><select id="company"><option value="">Все компании</option>
-<option value="2gis">2ГИС Tech</option><option value="yandex">Яндекс</option><option value="vk">VK</option><option value="avito">Avito</option><option value="ozon-tech">Ozon Tech</option><option value="t-bank">Т-Банк</option><option value="mts-tech">MTS Tech</option><option value="alfa-bank">Альфа-Банк</option><option value="sbertech">SberTech</option><option value="x5-tech">X5 Tech</option><option value="kontur">Контур</option><option value="kaspersky">Kaspersky</option><option value="positive-technologies">Positive Technologies</option><option value="yadro">YADRO</option>
-<option value="rwb">RWB</option><option value="lamoda-tech">Lamoda Tech</option><option value="magnit-tech">Magnit Tech</option><option value="selectel">Selectel</option><option value="domclick">Домклик</option><option value="kuper">Купер</option><option value="ecom-tech">ecom.tech</option><option value="tochka">Точка Банк</option><option value="cloud-ru">Cloud.ru</option><option value="hh">hh.ru</option><option value="dodo-engineering">Dodo Engineering</option></select><select id="dimension"><option value="">Все направления</option><option value="Tech Media">Технический контент</option><option value="Events">События</option><option value="Community">Профессиональное сообщество</option><option value="Engineer Creators">Инженеры как эксперты</option><option value="Education">Образование</option><option value="Research">Исследования</option><option value="Open Source">Открытый код</option><option value="Creative Projects">Нестандартные форматы</option></select></div><div id="activityGrid" class="activity-grid"><article class="activity-card" data-company="2gis" data-dim="Tech Media" data-search="2гис полевые проезды в qa: как мы ищем аномалии геопозиции в городе инженерный кейс 2гис о полевом тестировании геопозиции и навигации."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-07-29</span></div><h3>Полевые проезды в QA: как мы ищем аномалии геопозиции в городе</h3><div class="company-line">2ГИС Tech</div><p>Инженерный кейс 2ГИС Tech о полевом тестировании геопозиции и навигации.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/2gis/articles/1056942/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="2gis" data-dim="Tech Media" data-search="2гис помогите, flaky инженерный кейс команды ugc о системной работе с flaky-тестами."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-26</span></div><h3>Помогите, FLAKY</h3><div class="company-line">2ГИС Tech</div><p>Инженерный кейс команды UGC о системной работе с flaky-тестами.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/2gis/articles/1074116/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="2gis" data-dim="Events" data-search="2гис go go hopping meetup офлайн go-митап 2гис в нижнем новгороде: три технических доклада, бархоппинг и разбор инженерных факапов."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-07-16</span></div><h3>Go Go Hopping Meetup</h3><div class="company-line">2ГИС Tech</div><p>Офлайн Go-митап 2ГИС Tech в Нижнем Новгороде: три технических доклада, бархоппинг и разбор инженерных факапов.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/2gis/news/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yandex" data-dim="Events" data-search="яндекс back to back 2026 backend-конференция яндекса для инженеров, прошедшая одновременно в москве, белграде и ереване с онлайн-трансляциями."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-08-01</span></div><h3>Back to Back 2026</h3><div class="company-line">Яндекс</div><p>Backend-конференция Яндекса для инженеров, прошедшая одновременно в Москве, Белграде и Ереване с онлайн-трансляциями.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/yandex/news/1053936/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yandex" data-dim="Events" data-search="яндекс deep tech night конференция для разработчиков и инженеров о влиянии ai на разработку, инфраструктуру и инженерные процессы."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-09-05</span></div><h3>Deep Tech Night</h3><div class="company-line">Яндекс</div><p>Конференция для разработчиков и инженеров о влиянии AI на разработку, инфраструктуру и инженерные процессы.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://habr.com/ru/news/1069978/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yandex" data-dim="Research" data-search="яндекс yandex research at icml 2026 яндекс публично представил набор ai/ml-исследований для icml 2026, включая ускорение gnn, асинхронное обучение llm и graphpfn."><div class="activity-head"><span class="dim-pill">Исследования</span><span class="activity-date">2026-07-10</span></div><h3>Yandex research at ICML 2026</h3><div class="company-line">Яндекс</div><p>Яндекс публично представил набор AI/ML-исследований для ICML 2026, включая ускорение GNN, асинхронное обучение LLM и GraphPFN.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания показывает экспертность через собственные данные, метод и выводы.</div><div class="activity-foot"><a href="https://www.yandex.com/company/news/2026-07-10" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yandex" data-dim="Open Source" data-search="яндекс alice ai search pretrain open-source release яндекс открыл базовую языковую модель, лежащую в основе быстрых ai-ответов поиска, под лицензией apache 2.0."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">2026-09-11</span></div><h3>Alice AI Search Pretrain open-source release</h3><div class="company-line">Яндекс</div><p>Яндекс открыл базовую языковую модель, лежащую в основе быстрых AI-ответов Поиска, под лицензией Apache 2.0.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Инженерную работу можно проверить напрямую через публичный лицензированный код.</div><div class="activity-foot"><a href="https://yandex.ru/company/news/11-09-2026-01" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="vk" data-dim="Events" data-search="vk cloud sessions от vk tech технический митап про облака, платформы и инфраструктуру с реальными инженерными кейсами vk tech."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-08-27</span></div><h3>Cloud Sessions от VK Tech</h3><div class="company-line">VK</div><p>Технический митап про облака, платформы и инфраструктуру с реальными инженерными кейсами VK Tech.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/vktech/posts/1070226/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="vk" data-dim="Events" data-search="vk data meetup первый data meetup vk tech с инженерными кейсами vk tech, авито и rwb."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-08-18</span></div><h3>Data Meetup</h3><div class="company-line">VK</div><p>Первый Data Meetup VK Tech с инженерными кейсами VK Tech, Авито и RWB.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/vktech/posts/1068816/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="avito" data-dim="Creative Projects" data-search="avito avito.techno ночной рейв для it-аудитории без докладов и питчей, с dj-сетами представителей avitotech, ozon и t-bank и приглашёнными артистами."><div class="activity-head"><span class="dim-pill">Нестандартные форматы</span><span class="activity-date">2026-07-17</span></div><h3>AVITO.TECHNO</h3><div class="company-line">Avito</div><p>Ночной рейв для IT-аудитории без докладов и питчей, с DJ-сетами представителей AvitoTech, Ozon и T-Bank и приглашёнными артистами.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Нестандартная механика помогает бренду запоминаться не только через статьи и стандартные митапы.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/avito/news/1054976/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="ozon-tech" data-dim="Events" data-search="ozon tech e-code 2026 ежегодная двухдневная it-конференция ozon tech с восемью техническими и научными треками и интерактивными форматами."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-09-12</span></div><h3>E-CODE 2026</h3><div class="company-line">Ozon Tech</div><p>Ежегодная двухдневная IT-конференция Ozon Tech с восемью техническими и научными треками и интерактивными форматами.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/ozontech/news/1065444/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="ozon-tech" data-dim="Education" data-search="ozon tech e-cup 2026 students студенческое ml-соревнование ozon tech на реальных индустриальных задачах с тремя треками, обратной связью инженеров и питч-сессией финалистов."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-08-07</span></div><h3>E-CUP 2026 Students</h3><div class="company-line">Ozon Tech</div><p>Студенческое ML-соревнование Ozon Tech на реальных индустриальных задачах с тремя треками, обратной связью инженеров и питч-сессией финалистов.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://e-cup-ozon.ru/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="t-bank" data-dim="Events" data-search="т-банк jvm day 2026 инженерная конференция т-банка о jvm-технологиях с тремя залами, техническими докладами и аллеей инженерных продуктов."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-08-29</span></div><h3>JVM Day 2026</h3><div class="company-line">Т-Банк</div><p>Инженерная конференция Т-Банка о JVM-технологиях с тремя залами, техническими докладами и аллеей инженерных продуктов.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://meetup.tbank.ru/conference/jvm-day/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="t-bank" data-dim="Open Source" data-search="т-банк perseus framework т-банк публично представил и документирует open-source framework perseus для обучения моделей персонализации на гетерогенных последовательностях событий."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">2026-09-11</span></div><h3>Perseus framework</h3><div class="company-line">Т-Банк</div><p>Т-Банк публично представил и документирует open-source framework Perseus для обучения моделей персонализации на гетерогенных последовательностях событий.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Инженерную работу можно проверить напрямую через публичный лицензированный код.</div><div class="activity-foot"><a href="https://github.com/perseus2026/perseus" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="mts-tech" data-dim="Events" data-search="mts tech mws meetup #5 офлайн-встреча java-разработчиков в регулярной серии mws meetup."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-07-10</span></div><h3>MWS Meetup #5</h3><div class="company-line">MTS Tech</div><p>Офлайн-встреча Java-разработчиков в регулярной серии MWS Meetup.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://tech.mts.ru/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="mts-tech" data-dim="Events" data-search="mts tech mws meetup #6 онлайн-встреча golang-разработчиков в регулярной серии mws meetup."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-08-11</span></div><h3>MWS Meetup #6</h3><div class="company-line">MTS Tech</div><p>Онлайн-встреча Golang-разработчиков в регулярной серии MWS Meetup.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://tech.mts.ru/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="mts-tech" data-dim="Events" data-search="mts tech mws meetup #7 встреча data-специалистов в регулярной серии mws meetup."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-08-18</span></div><h3>MWS Meetup #7</h3><div class="company-line">MTS Tech</div><p>Встреча data-специалистов в регулярной серии MWS Meetup.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://tech.mts.ru/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="mts-tech" data-dim="Events" data-search="mts tech mws meetup #8 встреча инженеров devops и sre в регулярной серии mws meetup."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-08-27</span></div><h3>MWS Meetup #8</h3><div class="company-line">MTS Tech</div><p>Встреча инженеров DevOps и SRE в регулярной серии MWS Meetup.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://tech.mts.ru/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="mts-tech" data-dim="Events" data-search="mts tech mws meetup #9 встреча it-руководителей в регулярной серии mws meetup."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-08-28</span></div><h3>MWS Meetup #9</h3><div class="company-line">MTS Tech</div><p>Встреча IT-руководителей в регулярной серии MWS Meetup.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://tech.mts.ru/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="alfa-bank" data-dim="Tech Media" data-search="альфа-банк ии в иб: где он реально работает, а где — просто модный ярлык экспертный материал alfa digital о практическом применении ai/ml/llm в информационной безопасности и границах текущих подходов."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-07-23</span></div><h3>ИИ в ИБ: где он реально работает, а где — просто модный ярлык</h3><div class="company-line">Альфа-Банк</div><p>Экспертный материал Alfa Digital о практическом применении AI/ML/LLM в информационной безопасности и границах текущих подходов.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/alfa/articles/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="sbertech" data-dim="Tech Media" data-search="sbertech как мы сделали веб-аналог jaspersoft studio разработчики platform v one report подробно описали архитектуру собственного браузерного редактора отчётов и инженерные компромиссы решения."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-07</span></div><h3>Как мы сделали веб-аналог Jaspersoft Studio</h3><div class="company-line">SberTech</div><p>Разработчики Platform V One Report подробно описали архитектуру собственного браузерного редактора отчётов и инженерные компромиссы решения.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://platformv.sbertech.ru/blog/kak-my-sdelali-veb-analog-jaspersoft-studio-i-zachem-voobshhe-eto-ponadobilos" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="x5-tech" data-dim="Education" data-search="x5 tech летние школы x5 tech бесплатные асинхронные образовательные программы по kotlin multiplatform и a/b-тестированию с практикой, вебинарами и сертификатом."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-06-25</span></div><h3>Летние школы X5 Tech</h3><div class="company-line">X5 Tech</div><p>Бесплатные асинхронные образовательные программы по Kotlin Multiplatform и A/B-тестированию с практикой, вебинарами и сертификатом.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://summer.generationx5.tech/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="x5-tech" data-dim="Tech Media" data-search="x5 tech от 0 до 10 миллионов ии-проверок в месяц инженерный кейс x5 tech о продуктивизации computer-vision сервиса в пятёрочке до 10 млн проверок фотографий в месяц."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-07-02</span></div><h3>От 0 до 10 миллионов ИИ-проверок в месяц</h3><div class="company-line">X5 Tech</div><p>Инженерный кейс X5 Tech о продуктивизации computer-vision сервиса в Пятёрочке до 10 млн проверок фотографий в месяц.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/x5tech/articles/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kontur" data-dim="Events" data-search="контур kub | kontur ux base 2026 седьмая ежегодная конференция ux-исследователей контура."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-07-03</span></div><h3>KUB | Kontur UX Base 2026</h3><div class="company-line">Контур</div><p>Седьмая ежегодная конференция UX-исследователей Контура.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/skbkontur/articles/1064456/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kaspersky" data-dim="Events" data-search="kaspersky let&#39;s goconf 2026 конференция kaspersky для go-комьюнити с двумя треками и десятью техническими докладами."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-09-11</span></div><h3>Let&#39;s GoConf 2026</h3><div class="company-line">Kaspersky</div><p>Конференция Kaspersky для Go-комьюнити с двумя треками и десятью техническими докладами.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://careers.kaspersky.ru/event/letsgoconf-2026H2" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kaspersky" data-dim="Research" data-search="kaspersky github actions workflow security review kaspersky great провела масштабный анализ github actions workflows в популярных open-source репозиториях и выявила более 250 тыс. потенциальных security issues."><div class="activity-head"><span class="dim-pill">Исследования</span><span class="activity-date">2026-07-07</span></div><h3>GitHub Actions workflow security review</h3><div class="company-line">Kaspersky</div><p>Kaspersky GReAT провела масштабный анализ GitHub Actions workflows в популярных open-source репозиториях и выявила более 250 тыс. потенциальных security issues.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания показывает экспертность через собственные данные, метод и выводы.</div><div class="activity-foot"><a href="https://me-en.kaspersky.com/about/press-releases/kaspersky-uncovers-over-250000-potential-security-issues-in-github-actions-workflows" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kaspersky" data-dim="Creative Projects" data-search="kaspersky kaspersky{ctf} 2026 24-часовой глобальный jeopardy-style ctf для академических и корпоративных команд по пяти регионам с задачами, приближенными к реальным киберинцидентам."><div class="activity-head"><span class="dim-pill">Нестандартные форматы</span><span class="activity-date">2026-08-29</span></div><h3>Kaspersky{CTF} 2026</h3><div class="company-line">Kaspersky</div><p>24-часовой глобальный jeopardy-style CTF для академических и корпоративных команд по пяти регионам с задачами, приближенными к реальным киберинцидентам.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Нестандартная механика помогает бренду запоминаться не только через статьи и стандартные митапы.</div><div class="activity-foot"><a href="https://lp.kaspersky.com/ctf/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="positive-technologies" data-dim="Education" data-search="positive technologies positive hack camp 2026 двухнедельная международная практическая программа по кибербезопасности для early-career специалистов."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-07-25</span></div><h3>Positive Hack Camp 2026</h3><div class="company-line">Positive Technologies</div><p>Двухнедельная международная практическая программа по кибербезопасности для early-career специалистов.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://positechglobal.com/en/about/news/positive-hack-camp-2026-two-weeks-of-intensive-practice-for-young-security-researchers-from-20-countries/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="positive-technologies" data-dim="Research" data-search="positive technologies cloudatlas: новая волна кибератак pt esc threat intelligence опубликовал техническое исследование новой кампании cloudatlas против целей в россии и ираке."><div class="activity-head"><span class="dim-pill">Исследования</span><span class="activity-date">2026-07-13</span></div><h3>CloudAtlas: новая волна кибератак</h3><div class="company-line">Positive Technologies</div><p>PT ESC Threat Intelligence опубликовал техническое исследование новой кампании CloudAtlas против целей в России и Ираке.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания показывает экспертность через собственные данные, метод и выводы.</div><div class="activity-foot"><a href="https://ptsecurity.com/research/pt-esc-threat-intelligence/cloudatlas-a-new-wave-of-cyberattacks-on-russia-and-iraq-using-chains-of-legitimate-web-resources/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yadro" data-dim="Events" data-search="yadro yadro × postgres pro встреча go-сообщества совместная встреча go-разработчиков о системном и embedded-программировании с инженерами yadro, postgres pro и vk."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-07-23</span></div><h3>YADRO × Postgres Pro встреча Go-сообщества</h3><div class="company-line">YADRO</div><p>Совместная встреча Go-разработчиков о системном и embedded-программировании с инженерами YADRO, Postgres Pro и VK.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://meetups.yadro.com/go-msk-0726/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yadro" data-dim="Engineer Creators" data-search="yadro битовые маски — выпуск 29 выпуск регулярного подкаста yadro об аппаратной разработке и системном программировании с ведущим инженером по модульной верификации богданом колбовым."><div class="activity-head"><span class="dim-pill">Инженеры как эксперты</span><span class="activity-date">2026-07-13</span></div><h3>Битовые маски — выпуск 29</h3><div class="company-line">YADRO</div><p>Выпуск регулярного подкаста YADRO об аппаратной разработке и системном программировании с ведущим инженером по модульной верификации Богданом Колбовым.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Конкретные инженеры регулярно становятся публичными носителями экспертизы компании.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/yadro/posts/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yadro" data-dim="Creative Projects" data-search="yadro 10 лет блогу yadro — инженерный суперквиз интерактивный десятивопросный квиз по мотивам инженерных публикаций yadro на habr с поиском ответов внутри архива блога и розыгрышем приза."><div class="activity-head"><span class="dim-pill">Нестандартные форматы</span><span class="activity-date">2026-07-24</span></div><h3>10 лет блогу YADRO — инженерный суперквиз</h3><div class="company-line">YADRO</div><p>Интерактивный десятивопросный квиз по мотивам инженерных публикаций YADRO на Habr с поиском ответов внутри архива блога и розыгрышем приза.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Нестандартная механика помогает бренду запоминаться не только через статьи и стандартные митапы.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/yadro/articles/1061802/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="mts-tech" data-dim="Community" data-search="mts tech true tech community — active q3 infrastructure подтверждённая активность q3 2026, найденная на дополнительном исследовательском проходе."><div class="activity-head"><span class="dim-pill">Профессиональное сообщество</span><span class="activity-date">Q3 2026</span></div><h3>True Tech Community — active Q3 infrastructure</h3><div class="company-line">MTS Tech</div><p>Подтверждённая активность Q3 2026, найденная на дополнительном исследовательском проходе.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Есть постоянная среда участия, которая живёт между отдельными событиями.</div><div class="activity-foot"><a href="https://t.me/truetechcommunity" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="avito" data-dim="Engineer Creators" data-search="avito avitalk — q3 2026 episodes подтверждённая активность q3 2026, найденная на дополнительном исследовательском проходе."><div class="activity-head"><span class="dim-pill">Инженеры как эксперты</span><span class="activity-date">Q3 2026</span></div><h3>AviTalk — Q3 2026 episodes</h3><div class="company-line">Avito</div><p>Подтверждённая активность Q3 2026, найденная на дополнительном исследовательском проходе.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Конкретные инженеры регулярно становятся публичными носителями экспертизы компании.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/avito/posts/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="ozon-tech" data-dim="Creative Projects" data-search="ozon tech робозон 2026 подтверждённая активность q3 2026, найденная на дополнительном исследовательском проходе."><div class="activity-head"><span class="dim-pill">Нестандартные форматы</span><span class="activity-date">Q3 2026</span></div><h3>Робозон 2026</h3><div class="company-line">Ozon Tech</div><p>Подтверждённая активность Q3 2026, найденная на дополнительном исследовательском проходе.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Нестандартная механика помогает бренду запоминаться не только через статьи и стандартные митапы.</div><div class="activity-foot"><a href="https://ozon-robozon.ru/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="2gis" data-dim="Open Source" data-search="2гис riverboat подтверждённая активность q3 2026, найденная на дополнительном исследовательском проходе."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>deck2gisLayer</h3><div class="company-line">2ГИС Tech</div><p>Подтверждённая активность Q3 2026, найденная на дополнительном исследовательском проходе.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Инженерную работу можно проверить напрямую через публичный лицензированный код.</div><div class="activity-foot"><a href="https://github.com/2gis/riverboat" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="vk" data-dim="Open Source" data-search="vk kphp подтверждённая активность q3 2026, найденная на дополнительном исследовательском проходе."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>KPHP</h3><div class="company-line">VK</div><p>Подтверждённая активность Q3 2026, найденная на дополнительном исследовательском проходе.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Инженерную работу можно проверить напрямую через публичный лицензированный код.</div><div class="activity-foot"><a href="https://github.com/VKCOM/kphp" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="avito" data-dim="Open Source" data-search="avito avito-android подтверждённая активность q3 2026, найденная на дополнительном исследовательском проходе."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>avito-android</h3><div class="company-line">Avito</div><p>Подтверждённая активность Q3 2026, найденная на дополнительном исследовательском проходе.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Инженерную работу можно проверить напрямую через публичный лицензированный код.</div><div class="activity-foot"><a href="https://github.com/avito-tech/avito-android" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="ozon-tech" data-dim="Open Source" data-search="ozon tech testo подтверждённая активность q3 2026, найденная на дополнительном исследовательском проходе."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>Testo</h3><div class="company-line">Ozon Tech</div><p>Подтверждённая активность Q3 2026, найденная на дополнительном исследовательском проходе.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Инженерную работу можно проверить напрямую через публичный лицензированный код.</div><div class="activity-foot"><a href="https://github.com/ozontech/testo" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kontur" data-dim="Open Source" data-search="контур db-viewer подтверждённая активность q3 2026, найденная на дополнительном исследовательском проходе."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>db-viewer</h3><div class="company-line">Контур</div><p>Подтверждённая активность Q3 2026, найденная на дополнительном исследовательском проходе.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Инженерную работу можно проверить напрямую через публичный лицензированный код.</div><div class="activity-foot"><a href="https://github.com/skbkontur/db-viewer" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="positive-technologies" data-dim="Engineer Creators" data-search="positive technologies в тренде vm — july/august 2026 подтверждённая активность q3 2026, найденная на дополнительном исследовательском проходе."><div class="activity-head"><span class="dim-pill">Инженеры как эксперты</span><span class="activity-date">Q3 2026</span></div><h3>В тренде VM — July/August 2026</h3><div class="company-line">Positive Technologies</div><p>Подтверждённая активность Q3 2026, найденная на дополнительном исследовательском проходе.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Конкретные инженеры регулярно становятся публичными носителями экспертизы компании.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/pt/articles/top/page37/?mobile=no" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="2gis" data-dim="Creative Projects" data-search="2гис pause/break — интерактивный арт-объект ко дню программиста подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Нестандартные форматы</span><span class="activity-date">2026-09-11</span></div><h3>Pause/Break — интерактивный арт-объект ко Дню программиста</h3><div class="company-line">2ГИС Tech</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Нестандартная механика помогает бренду запоминаться не только через статьи и стандартные митапы.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/2gis/news/1081414/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yandex" data-dim="Tech Media" data-search="яндекс как мы вынесли алгоритм ценообразования из кода яндекс такси подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-05</span></div><h3>Как мы вынесли алгоритм ценообразования из кода Яндекс Такси</h3><div class="company-line">Яндекс</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/yandex/articles/1065984/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yandex" data-dim="Education" data-search="яндекс летние школы яндекса 2026 подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-07-01/2026-08-20</span></div><h3>Летние школы Яндекса 2026</h3><div class="company-line">Яндекс</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://yandex.ru/yaintern/schools/summer" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yandex" data-dim="Community" data-search="яндекс young&amp;&amp;yandex community infrastructure подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Профессиональное сообщество</span><span class="activity-date">Q3 2026</span></div><h3>Young&amp;&amp;Yandex community infrastructure</h3><div class="company-line">Яндекс</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Есть постоянная среда участия, которая живёт между отдельными событиями.</div><div class="activity-foot"><a href="https://yandex.ru/yaintern/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="vk" data-dim="Tech Media" data-search="vk многоуровневая память для корпоративных ai-агентов в vk ai space подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-27</span></div><h3>Многоуровневая память для корпоративных AI-агентов в VK AI Space</h3><div class="company-line">VK</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/vktech/articles/1074798/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="vk" data-dim="Education" data-search="vk vk education — учебный сезон 2026 подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-08-24</span></div><h3>VK Education — учебный сезон 2026</h3><div class="company-line">VK</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/vk/news/1073622/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="avito" data-dim="Tech Media" data-search="avito от rest к mcp: как llm меняют принципы проектирования api — часть 2 подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-07-08</span></div><h3>От REST к MCP: как LLM меняют принципы проектирования API — часть 2</h3><div class="company-line">Avito</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/avito/articles/1056030/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="avito" data-dim="Events" data-search="avito ai hardcore set подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-07-11</span></div><h3>AI Hardcore Set</h3><div class="company-line">Avito</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/avito/news/1070660/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="avito" data-dim="Education" data-search="avito академия авито — data analytics / data science engineering подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-09-01</span></div><h3>Академия Авито — Data Analytics / Data Science Engineering</h3><div class="company-line">Avito</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://t.me/s/avitotech/3357" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="ozon-tech" data-dim="Tech Media" data-search="ozon tech масштабирование от 100 до 100 000+ автотестов подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-26</span></div><h3>Масштабирование от 100 до 100 000+ автотестов</h3><div class="company-line">Ozon Tech</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/ozontech/articles/1072880/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="t-bank" data-dim="Tech Media" data-search="т-банк как мы победили oomkill и сэкономили треть ресурсов: настройка jvm в kubernetes подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-28</span></div><h3>Как мы победили OOMKill и сэкономили треть ресурсов: настройка JVM в Kubernetes</h3><div class="company-line">Т-Банк</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/tbank/articles/1075668/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="t-bank" data-dim="Education" data-search="т-банк летние интенсивы и t-academy 2026 подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-07-13/2026-09-01</span></div><h3>Летние интенсивы и T-Academy 2026</h3><div class="company-line">Т-Банк</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://education.tbank.ru/academy/intensive/product-analytics/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="t-bank" data-dim="Engineer Creators" data-search="т-банк scala digest / java digest — recurring engineer-led series подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Инженеры как эксперты</span><span class="activity-date">2026-07/2026-09</span></div><h3>Scala Digest / Java Digest — recurring engineer-led series</h3><div class="company-line">Т-Банк</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Конкретные инженеры регулярно становятся публичными носителями экспертизы компании.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/tbank/articles/1054792/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="mts-tech" data-dim="Tech Media" data-search="mts tech агентская разработка и documentation driven development подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-12</span></div><h3>Агентская разработка и Documentation Driven Development</h3><div class="company-line">MTS Tech</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/ru_mts/articles/1067434/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="mts-tech" data-dim="Education" data-search="mts tech hse summer school — web applications go + javascript with mts подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-06-29/2026-07-10</span></div><h3>HSE Summer School — Web Applications GO + JavaScript with MTS</h3><div class="company-line">MTS Tech</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://cs.hse.ru/se/mts26" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="mts-tech" data-dim="Creative Projects" data-search="mts tech mts true tech champ 2026 подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Нестандартные форматы</span><span class="activity-date">2026-07-08/2026-09-30</span></div><h3>MTS True Tech Champ 2026</h3><div class="company-line">MTS Tech</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Нестандартная механика помогает бренду запоминаться не только через статьи и стандартные митапы.</div><div class="activity-foot"><a href="https://truetechchamp.ru/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="alfa-bank" data-dim="Research" data-search="альфа-банк alfa research center — ux-исследование личного кабинета ранхигс подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Исследования</span><span class="activity-date">2026-07</span></div><h3>Alfa Research Center — UX-исследование личного кабинета РАНХиГС</h3><div class="company-line">Альфа-Банк</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания показывает экспертность через собственные данные, метод и выводы.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/alfa/articles/1057050/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="alfa-bank" data-dim="Education" data-search="альфа-банк летний оффер — образовательные курсы подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">Q3 2026</span></div><h3>Летний оффер — образовательные курсы</h3><div class="company-line">Альфа-Банк</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://digital.alfabank.ru/alfa/summeroffer" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="sbertech" data-dim="Open Source" data-search="sbertech platform v ui kit ce подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">2026-07-07</span></div><h3>Platform V UI Kit CE</h3><div class="company-line">SberTech</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Инженерную работу можно проверить напрямую через публичный лицензированный код.</div><div class="activity-foot"><a href="https://gitverse.ru/sbertech/ui-kit-ce" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="sbertech" data-dim="Events" data-search="sbertech как автоматизировать ml-разработку с помощью платформы sber data science подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-09-17</span></div><h3>Как автоматизировать ML-разработку с помощью платформы Sber Data Science</h3><div class="company-line">SberTech</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://platformv.sbertech.ru/events" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kontur" data-dim="Tech Media" data-search="контур проблема n+1 запроса: виноват не orm, а ваш код подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-27</span></div><h3>Проблема N+1 запроса: виноват не ORM, а ваш код</h3><div class="company-line">Контур</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/skbkontur/articles/1070504/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kontur" data-dim="Research" data-search="контур исследование продакт-менеджеров 2026 с devcrowd подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Исследования</span><span class="activity-date">2026-07-03/2026-08-28</span></div><h3>Исследование продакт-менеджеров 2026 с DevCrowd</h3><div class="company-line">Контур</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания показывает экспертность через собственные данные, метод и выводы.</div><div class="activity-foot"><a href="https://devcrowd.ru/pm26/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kaspersky" data-dim="Tech Media" data-search="kaspersky эра инженерной зрелости: стек js-разработки в 2026 году глазами сообщества подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-28</span></div><h3>Эра инженерной зрелости: стек JS-разработки в 2026 году глазами сообщества</h3><div class="company-line">Kaspersky</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/kaspersky/articles/1074966/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kaspersky" data-dim="Education" data-search="kaspersky университетские программы по конструктивной информационной безопасности подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-09-15</span></div><h3>Университетские программы по конструктивной информационной безопасности</h3><div class="company-line">Kaspersky</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://www.kaspersky.ru/about/press-releases/v-2026-godu-rossijskie-vuzy-vypustili-pervyh-razrabotchikov-s-podgotovkoj-v-oblasti-konstruktivnoj-informacionnoj-bezopasnosti" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kaspersky" data-dim="Open Source" data-search="kaspersky kasperskylab q3 open-source activity подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>KasperskyLab Q3 open-source activity</h3><div class="company-line">Kaspersky</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Инженерную работу можно проверить напрямую через публичный лицензированный код.</div><div class="activity-foot"><a href="https://github.com/KasperskyLab/hrtng" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="positive-technologies" data-dim="Tech Media" data-search="positive technologies проект emmc-emu подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-06</span></div><h3>Проект eMMC-emu</h3><div class="company-line">Positive Technologies</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/pt/articles/1066616/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="positive-technologies" data-dim="Events" data-search="positive technologies netcase day 2026 подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-09-10</span></div><h3>NetCase Day 2026</h3><div class="company-line">Positive Technologies</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания создаёт живой контакт с профессиональной аудиторией через собственное техническое событие.</div><div class="activity-foot"><a href="https://ptsecurity.com/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="positive-technologies" data-dim="Community" data-search="positive technologies security expert community подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Профессиональное сообщество</span><span class="activity-date">Q3 2026</span></div><h3>Security Expert Community</h3><div class="company-line">Positive Technologies</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Есть постоянная среда участия, которая живёт между отдельными событиями.</div><div class="activity-foot"><a href="https://ptsecurity.com/about/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yadro" data-dim="Tech Media" data-search="yadro когда chisel уже недостаточно: свой фреймворк аппаратного тестирования на verilator подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-26</span></div><h3>Когда Chisel уже недостаточно: свой фреймворк аппаратного тестирования на Verilator</h3><div class="company-line">YADRO</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания регулярно показывает реальные инженерные задачи и подходы — это уже базовое ожидание рынка.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/yadro/articles/1074380/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="yadro" data-dim="Education" data-search="yadro практикум по цифровой схемотехнике для летней школы университета дубна подтверждённая активность q3 2026, добавленная после полного повторного аудита всех компаний."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-07-14/2026-07-25</span></div><h3>Практикум по цифровой схемотехнике для Летней школы Университета Дубна</h3><div class="company-line">YADRO</div><p>Подтверждённая активность Q3 2026, добавленная после полного повторного аудита всех компаний.</p><div class="activity-conclusion"><strong>Что это показывает</strong><br>Компания даёт аудитории возможность учиться на её экспертизе и практических задачах.</div><div class="activity-foot"><a href="https://yadro.com/ru/press/yadro-provedet-praktikum-po-tsifrovoy-skhemotekhnike-dlya-uchastnikov-letney-shkoly-universiteta-dubna/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="rwb" data-dim="Tech Media" data-search="rwb как разделить фронтенд на модули инженерный кейс rwb о модульной архитектуре frontend."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-09-14</span></div><h3>Как разделить фронтенд на модули</h3><div class="company-line">RWB</div><p>Инженерный кейс RWB о модульной архитектуре frontend.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/rwb/articles/1079970/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="rwb" data-dim="Events" data-search="rwb rwb tech meetups собственная программа внешних технических митапов по security, infrastructure, ai/ml, mobile и другим направлениям."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">Q3 2026</span></div><h3>RWB Tech Meetups</h3><div class="company-line">RWB</div><p>Собственная программа внешних технических митапов по Security, Infrastructure, AI/ML, mobile и другим направлениям.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://meetup.rwb.ru/events" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="lamoda-tech" data-dim="Tech Media" data-search="lamoda tech llm-разметка в spark-пайплайне публичный инженерный кейс lamoda tech о production data engineering и llm."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-27</span></div><h3>LLM-разметка в Spark-пайплайне</h3><div class="company-line">Lamoda Tech</div><p>Публичный инженерный кейс Lamoda Tech о production Data Engineering и LLM.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/lamoda/articles/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="lamoda-tech" data-dim="Events" data-search="lamoda tech ux-рисерч и точка? очный профессиональный митап lamoda tech с внешними экспертами и открытой дискуссией."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-08-27</span></div><h3>UX-рисерч и точка?</h3><div class="company-line">Lamoda Tech</div><p>Очный профессиональный митап Lamoda Tech с внешними экспертами и открытой дискуссией.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/lamoda/news/1071100/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="lamoda-tech" data-dim="Open Source" data-search="lamoda tech gonkey mit-licensed инструмент автоматизации тестирования с активностью в q3."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>Gonkey</h3><div class="company-line">Lamoda Tech</div><p>MIT-licensed инструмент автоматизации тестирования с активностью в Q3.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://github.com/lamoda/gonkey" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="magnit-tech" data-dim="Tech Media" data-search="magnit tech инженерная эволюция osa большой engineering case: эволюция data/ml-платформы от legacy до spark + kubernetes."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-07-09</span></div><h3>Инженерная эволюция OSA</h3><div class="company-line">Magnit Tech</div><p>Большой engineering case: эволюция data/ML-платформы от legacy до Spark + Kubernetes.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/magnit/articles/1056372/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="magnit-tech" data-dim="Education" data-search="magnit tech ит-программы в шести вузах более 240 учащихся проходят специальные it-программы по пяти направлениям."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-08-31</span></div><h3>ИТ-программы в шести вузах</h3><div class="company-line">Magnit Tech</div><p>Более 240 учащихся проходят специальные IT-программы по пяти направлениям.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://www.magnit.com/ru/media/press-releases/magnit-podgotovit-bolee-240-budushchikh-it-spetsialistov-v-shesti-rossiyskikh-vuzakh/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="magnit-tech" data-dim="Creative Projects" data-search="magnit tech magnit tech night ночная ai/ml-конференция с докладами, afterparty, dj-сетом и научпоп-лекцией."><div class="activity-head"><span class="dim-pill">Нестандартные форматы</span><span class="activity-date">2026-09-18</span></div><h3>MAGNIT TECH NIGHT</h3><div class="company-line">Magnit Tech</div><p>Ночная AI/ML-конференция с докладами, afterparty, DJ-сетом и научпоп-лекцией.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://bezpredela.magnit.tech/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="selectel" data-dim="Tech Media" data-search="selectel академия selectel: инженерный контент регулярные q3-материалы по kubernetes, llm, linux, инфраструктуре и безопасности."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">Q3 2026</span></div><h3>Академия Selectel: инженерный контент</h3><div class="company-line">Selectel</div><p>Регулярные Q3-материалы по Kubernetes, LLM, Linux, инфраструктуре и безопасности.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://selectel.ru/blog/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="selectel" data-dim="Events" data-search="selectel вебинары и митапы selectel внешняя программа технических вебинаров, митапов и конференций."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">Q3 2026</span></div><h3>Вебинары и митапы Selectel</h3><div class="company-line">Selectel</div><p>Внешняя программа технических вебинаров, митапов и конференций.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://selectel.ru/blog/events/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="selectel" data-dim="Education" data-search="selectel курсы академии selectel открытые курсы по linux, postgresql, secure development, podman и другим инженерным темам."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">Q3 2026</span></div><h3>Курсы Академии Selectel</h3><div class="company-line">Selectel</div><p>Открытые курсы по Linux, PostgreSQL, secure development, Podman и другим инженерным темам.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://selectel.ru/blog/courses/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="selectel" data-dim="Open Source" data-search="selectel terraform provider selectel mpl-2.0 provider с несколькими q3-релизами, включая v8.3.1."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>Terraform Provider Selectel</h3><div class="company-line">Selectel</div><p>MPL-2.0 provider с несколькими Q3-релизами, включая v8.3.1.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://github.com/selectel/terraform-provider-selectel" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="domclick" data-dim="Tech Media" data-search="домклик один разработчик, 14 агентов, восемь месяцев личный инженерный эксперимент с ai-пайплайном; один из самых просматриваемых q3-кейсов выборки."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08-18</span></div><h3>Один разработчик, 14 агентов, восемь месяцев</h3><div class="company-line">Домклик</div><p>Личный инженерный эксперимент с AI-пайплайном; один из самых просматриваемых Q3-кейсов выборки.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/domclick/articles/1067048/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="kuper" data-dim="Tech Media" data-search="купер как тратить меньше времени на работу с данными публичный tech-пост от продуктового аналитика купера про datagrip, jupyter, polars и self-service."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-09-15</span></div><h3>Как тратить меньше времени на работу с данными</h3><div class="company-line">Купер</div><p>Публичный tech-пост от продуктового аналитика Купера про DataGrip, Jupyter, Polars и self-service.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://tg.me/tech_kuper" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="ecom-tech" data-dim="Tech Media" data-search="ecom.tech ai-ревьюер кода инженерный кейс о встраивании ai code review в ci/cd gitlab."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08</span></div><h3>AI-ревьюер кода</h3><div class="company-line">ecom.tech</div><p>Инженерный кейс о встраивании AI code review в CI/CD GitLab.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/ecom_tech/articles/1073750/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="ecom-tech" data-dim="Education" data-search="ecom.tech bacamp открытая школа бизнес-анализа: 14 лекций, 14 семинаров, наставники и итоговые проекты."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-08-20</span></div><h3>BACamp</h3><div class="company-line">ecom.tech</div><p>Открытая школа бизнес-анализа: 14 лекций, 14 семинаров, наставники и итоговые проекты.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/ecom_tech/articles/1071682/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="tochka" data-dim="Tech Media" data-search="точка банк как искать проблемы производительности в python практический инженерный разбор диагностики production performance."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-07-23</span></div><h3>Как искать проблемы производительности в Python</h3><div class="company-line">Точка Банк</div><p>Практический инженерный разбор диагностики production performance.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/tochka/articles/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="tochka" data-dim="Open Source" data-search="точка банк tochka public github несколько mit-licensed проектов с q3-обновлениями, включая xmltodict_rs и tochka.jsonrpc."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>Tochka Public GitHub</h3><div class="company-line">Точка Банк</div><p>Несколько MIT-licensed проектов с Q3-обновлениями, включая xmltodict_rs и Tochka.JsonRpc.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://github.com/tochka-public" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="cloud-ru" data-dim="Tech Media" data-search="cloud.ru mcp и облачная инфраструктура публичные технические материалы по mcp, ai и облачной инфраструктуре."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">Q3 2026</span></div><h3>MCP и облачная инфраструктура</h3><div class="company-line">Cloud.ru</div><p>Публичные технические материалы по MCP, AI и облачной инфраструктуре.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/cloud_ru/articles/1083774/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="cloud-ru" data-dim="Events" data-search="cloud.ru cloud.ru tech lab: ai&ml внешний технический митап об ai-агентах, rag, ragas и mcp."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-07-24</span></div><h3>Cloud.ru Tech Lab: AI&ML</h3><div class="company-line">Cloud.ru</div><p>Внешний технический митап об AI-агентах, RAG, Ragas и MCP.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/users/Editor_cloud_ru/posts/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="cloud-ru" data-dim="Education" data-search="cloud.ru основы безопасной разработки в облаке бесплатный внешний курс cloud.ru по secure cloud development."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-09-08</span></div><h3>Основы безопасной разработки в облаке</h3><div class="company-line">Cloud.ru</div><p>Бесплатный внешний курс Cloud.ru по secure cloud development.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/cloud_ru/posts/1079962/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="cloud-ru" data-dim="Open Source" data-search="cloud.ru cloud.ru open source apache-2.0 и mit проекты с q3-активностью: guardrails-llm-filter, cloudhood, mcp integrations."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>Cloud.ru open source</h3><div class="company-line">Cloud.ru</div><p>Apache-2.0 и MIT проекты с Q3-активностью: guardrails-llm-filter, cloudhood, MCP integrations.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://github.com/cloud-ru-tech" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="hh" data-dim="Tech Media" data-search="hh.ru redis — история одного падения инженерный incident-case hh.ru о production-инфраструктуре."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">2026-08</span></div><h3>Redis — история одного падения</h3><div class="company-line">hh.ru</div><p>Инженерный incident-case hh.ru о production-инфраструктуре.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/hh/articles/1074194/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="hh" data-dim="Education" data-search="hh.ru школа программистов + школа аналитиков 17-й запуск школы программистов и первый набор школы аналитиков с проектами и code review."><div class="activity-head"><span class="dim-pill">Образование</span><span class="activity-date">2026-07-30</span></div><h3>Школа программистов + Школа аналитиков</h3><div class="company-line">hh.ru</div><p>17-й запуск школы программистов и первый набор школы аналитиков с проектами и code review.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/hh/articles/1064004/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="hh" data-dim="Open Source" data-search="hh.ru headhunter github mit/apache-licensed публичные проекты с обновлениями в августе 2026."><div class="activity-head"><span class="dim-pill">Открытый код</span><span class="activity-date">Q3 2026</span></div><h3>HeadHunter GitHub</h3><div class="company-line">hh.ru</div><p>MIT/Apache-licensed публичные проекты с обновлениями в августе 2026.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://github.com/hhru" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="dodo-engineering" data-dim="Tech Media" data-search="dodo engineering engineering-контент dodo публичные инженерные материалы и кейсы команды dodo engineering."><div class="activity-head"><span class="dim-pill">Технический контент</span><span class="activity-date">Q3 2026</span></div><h3>Engineering-контент Dodo</h3><div class="company-line">Dodo Engineering</div><p>Публичные инженерные материалы и кейсы команды Dodo Engineering.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://habr.com/ru/companies/dododev/articles/" target="_blank" rel="noopener">Источник ↗</a></div></article><article class="activity-card" data-company="dodo-engineering" data-dim="Events" data-search="dodo engineering кейсариум с dodo engineering закрытая клубная встреча south hub вокруг реальных product/tech-кейсов dodo."><div class="activity-head"><span class="dim-pill">События</span><span class="activity-date">2026-09-17</span></div><h3>Кейсариум с Dodo Engineering</h3><div class="company-line">Dodo Engineering</div><p>Закрытая клубная встреча South HUB вокруг реальных product/tech-кейсов Dodo.</p><div class="activity-conclusion"><strong>Почему засчитано</strong><br>Подтверждает направление в Q3 2026 по публичному источнику.</div><div class="activity-foot"><a href="https://telemetr.me/content/dododev" target="_blank" rel="noopener">Источник ↗</a></div></article></div></div></section>
-<section class="section white" id="global"><div class="wrap">
-  <div class="section-head"><div>
-    <h2>Приложение: 3 мировых кейса</h2>
-    <p>Один классический пример и два кейса 2026 года. Они не участвуют в баллах — это просто примеры необычных механик найма и employer brand за пределами основной выборки.</p>
-  </div></div>
+<div id="mx" role="img" aria-label="Матрица 25 компаний на 8 направлений; строка 2ГИС Tech выделена зелёным"></div>
+</div></header>
 
-  <div class="global-grid">
-    <article class="global-card">
-      <a href="https://www.turing.com/kb/foobar-google-secret-hiring-technique" target="_blank" rel="noopener">
-        <img class="global-shot" loading="lazy" src="https://images.prismic.io/turing/659805ea531ac2845a2724d5_Bunny_hopping_after_you_complete_level_1_e7da301440.webp?auto=format%2Ccompress" alt="Google Foo.bar coding challenge interface">
-      </a>
-      <div class="global-body">
-        <div class="global-top"><div class="global-brand">Google · Foo.bar</div><span class="global-year">classic</span></div>
-        <h3>Скрытый найм прямо в поиске</h3>
-        <p>Google показывал некоторым разработчикам скрытое приглашение прямо в Search. После клика открывался терминал с задачами по алгоритмам. На определённом этапе кандидат мог оставить контакты для рекрутера.</p>
-        <a class="global-source" href="https://thehustle.co/the-secret-google-interview-that-landed-me-a-job" target="_blank" rel="noopener">Посмотреть кейс ↗</a>
-      </div>
-    </article>
+<section id="position"><div class="w">
+<h2>Где 2ГИС Tech на рынке</h2>
+<p class="sub">Ответ на две минуты: где мы относительно 25 tech-брендов.</p>
+<div class="g">
+<div class="c"><div class="n">4/8</div><h3>Выше среднего, но не в лидерах</h3><p>Среднее по рынку 3,64. У лидеров (Яндекс, Avito, Kaspersky, Positive Technologies) 6 из 8.</p></div>
+<div class="c"><div class="n">4</div><h3>Направления без подтверждения</h3><p>Образование, исследования, инженеры-эксперты, сообщество. Образование самое массовое: 16 из 25.</p></div>
+<div class="c"><div class="n">0,33</div><h3>Статьи на Habr в неделю</h3><p>4 статьи за 12 недель. У Яндекса, VK Tech, Т-Банка и Avito 2,1–3,4 в неделю.</p></div>
+<div class="c"><div class="n">≈3,9K</div><h3>Подписчиков в Dev2GIS</h3><p>Средний просмотр поста в открытых данных не найден. Медиана по 22 каналам рынка ≈1,6K.</p></div>
+</div></div></section>
 
-    <article class="global-card">
-      <a href="https://www.beyondstreetmedia.com/insights/palantir-multi-city-frequency-strategy-case-teardown/" target="_blank" rel="noopener">
-        <img class="global-shot" loading="lazy" src="https://www.beyondstreetmedia.com/_astro/palantir-san-diego-01.CPMc_g0p_2heJ3z.webp" alt="Palantir recruitment posters in San Diego">
-      </a>
-      <div class="global-body">
-        <div class="global-top"><div class="global-brand">Palantir · Street Recruitment</div><span class="global-year">2026</span></div>
-        <h3>Рекрутинг вышел на улицу</h3>
-        <p>Palantir разместил чёрно-белые recruiting-постеры в San Diego и Honolulu. Сообщение было очень простым: “Every Generation Faces Its Test. This Is Yours.” Постеры вели на страницу найма и повторялись в районах, где концентрируется техническая аудитория.</p>
-        <a class="global-source" href="https://www.beyondstreetmedia.com/insights/palantir-multi-city-frequency-strategy-case-teardown/" target="_blank" rel="noopener">Посмотреть кейс ↗</a>
-      </div>
-    </article>
-
-    <article class="global-card">
-      <a href="https://www.ibm.com/careers/blog/we-didnt-need-a-new-talent-value-proposition-we-needed-to-tell-the-truth" target="_blank" rel="noopener">
-        <img class="global-shot" loading="lazy" src="https://assets.ibm.com/is/image/ibm/showcase-2?dpr=off" alt="IBM careers campaign with real engineers">
-      </a>
-      <div class="global-body">
-        <div class="global-top"><div class="global-brand">IBM · Like an IBMer</div><span class="global-year">2026</span></div>
-        <h3>Показывать работу, а не обещания</h3>
-        <p>IBM построил новую employer campaign вокруг реальной работы сотрудников. В креативах — настоящие IBMers, а истории начинаются с конкретного результата: что инженер создал, улучшил или решил.</p>
-        <a class="global-source" href="https://www.ibm.com/careers/blog/we-didnt-need-a-new-talent-value-proposition-we-needed-to-tell-the-truth" target="_blank" rel="noopener">Посмотреть кейс ↗</a>
-      </div>
-    </article>
-  </div>
-</div></section>
-<section class="section" id="method"><div class="wrap">
-  <div class="section-head"><div><h2>Методология и ограничения</h2><p>Нужна только тем, кто хочет проверить, как именно считались баллы и почему некоторые кейсы не засчитаны.</p></div></div>
-  <div class="method">
-    <div class="method-card"><div class="step">01 · Кого смотрим</div><h3>25 tech-компаний</h3><p>Компании, которые конкурируют за разработчиков, QA, Data, DevOps, Product и другие tech-аудитории. 11 компаний добавлены 21 сентября и сразу проверены по тем же восьми направлениям.</p></div>
-    <div class="method-card"><div class="step">02 · Что ищем</div><h3>Публичные действия</h3><p>Контент, события, сообщества, регулярных экспертов, образование, исследования, открытый код и нестандартные форматы.</p></div>
-    <div class="method-card"><div class="step">03 · Что не считаем</div><h3>Не всё, где есть логотип</h3><p>Обычные вакансии, простое спонсорство, продуктовый PR и старый GitHub без активности Q3 балл не дают.</p></div>
-    <div class="method-card"><div class="step">04 · Как проверяем</div><h3>Каждая точка — с источником</h3><p>Используем сайты компаний, Habr, Telegram, GitHub, страницы событий и другие публичные источники. Если доказательства слабые — ставим «–».</p></div>
-    <div class="method-card"><div class="step">05 · Как появляется итог</div><h3>Направление = максимум 1 балл</h3><p>Есть подтверждённая активность — 1. Нет — 0. Количество кейсов внутри одного направления итог не увеличивает.</p></div>
-    <div class="method-card"><div class="step">06 · Без двойного счёта</div><h3>Один кейс — одно главное направление</h3><p>Например, MAGNIT TECH NIGHT считаем нестандартным форматом, а не одновременно событием и Creative Project.</p></div>
-    <div class="method-card"><div class="step">07 · Метрики отдельно</div><h3>Не складываем всё в «охват»</h3><p>Просмотры статьи, команды CTF, участники события и GitHub stars — разные показатели. Сравниваем только то, что действительно сопоставимо.</p></div>
-    <div class="method-card"><div class="step">08 · Главное ограничение</div><h3>Видим только публичную часть</h3><p>«Не нашли» не значит «компания этого не делает». Срез — на 21 сентября. После 30 сентября все 25 компаний будут перепроверены ещё раз.</p></div>
-  </div>
+<section id="roles"><div class="w">
+<h2>Что взять в работу</h2>
+<p class="sub">Выберите роль. В каждой карточке сначала факты из данных, потом гипотеза: её нужно проверить, а не считать готовым решением.</p>
+<div class="tabs" id="rt"></div><div class="g" id="rp"></div>
 </div></section>
 
+<section id="trends"><div class="w">
+<h2>Тренды квартала</h2>
+<div class="g" id="tr"></div>
+<div class="note"><b>Что найти не удалось:</b> просмотры видео на YouTube, VK Video и RuTube по компаниям, прослушивания подкастов и полный список выступлений сотрудников на внешних конференциях. Открытые источники не дали сопоставимых цифр, поэтому про видео и подкасты мы знаем только, есть ли формат. В это обновление добавлены цифры E-CODE, состав Back to Back и календарь ближайших событий.</div>
+</div></section>
 
+<section id="snapshot"><div class="w">
+<h2>Рынок: что стало нормой</h2>
+<p class="sub">Только то, что меняет планирование. Без длинной методологии и без «рейтинга работодателей».</p>
+<div class="g" id="six"></div>
+<div class="note"><b>Объект сравнения — tech-бренд.</b> «2ГИС Tech» здесь означает внешние инженерные и tech-коммуникации 2ГИС, а не компанию целиком. Q3 ещё не закрыт: после 30 сентября набор будет перепроверен.</div>
+<div class="tw"><table><thead><tr><th>Направление</th><th class="num">У tech-брендов</th><th>2ГИС Tech</th></tr></thead><tbody id="snap"></tbody></table></div>
+</div></section>
 
+<section id="content"><div class="w">
+<h2>Контент в цифрах</h2>
+<p class="sub">Где публикуют, как часто, что получает больше просмотров и какие форматы подтверждены. Если аудит неполный, показываем «≥».</p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="pane" data-p="0"><div class="tw"><table><thead><tr><th>Площадка</th><th>Подтверждено</th><th>Кто именно</th></tr></thead><tbody>
+<tr><td><b>Habr</b></td><td>24/25</td><td class="wrap">Отдельный блог у всех, кроме SberTech (материалы выходят в общем блоге Сбера)</td></tr>
+<tr><td><b>Telegram</b></td><td>24/25</td><td class="wrap">22 с публичным средним просмотром; нет у Точки, а для Dev2GIS и hh.ru метрики нет</td></tr>
+<tr><td><b>YouTube</b></td><td>≥7/25</td><td class="wrap">2ГИС Tech, Ozon Tech, YADRO, Selectel, Контур, RWB, Купер</td></tr>
+<tr><td><b>VK Video</b></td><td>≥6/25</td><td class="wrap">2ГИС Tech, Avito, Ozon Tech, Selectel, Контур, Купер</td></tr>
+<tr><td><b>RuTube</b></td><td>≥5/25</td><td class="wrap">Avito, YADRO, Selectel, Magnit Tech, Контур</td></tr>
+<tr><td><b>Dzen</b></td><td>≥1/25</td><td class="wrap">AvitoTech; данных для сравнения мало</td></tr>
+<tr><td><b>Подкасты</b></td><td>≥6/25</td><td class="wrap">Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур</td></tr>
+</tbody></table></div><p class="ft">≥ значит «минимум подтверждено», а не «остальные точно не используют».</p></div>
+<div class="pane" data-p="1" hidden><p class="sub">Статей на Habr за 01.07–22.09 (12 недель), 9 блогов, пересчитанных постранично. Считаем все статьи блога, это частота, а не качество.</p><div id="habr"></div>
+<div class="note">2ГИС Tech публикует примерно раз в три недели. У Яндекса, VK Tech, Т-Банка и Avito частота выше в 6–10 раз. Это не повод копировать объём: сначала стоит проверить, даёт ли частота больше просмотров на материал.</div></div>
+<div class="pane" data-p="2" hidden><p class="sub">Проверенные заметные материалы Q3 по просмотрам, снимок 22 сентября. Это не полный Top-12: content census ещё собирается, а возраст статей разный.</p><ol class="pl" id="top"></ol></div>
+<div class="pane" data-p="3" hidden><div class="tw"><table><thead><tr><th>Формат</th><th>Подтверждено</th><th>Компании</th></tr></thead><tbody>
+<tr><td><b>Статьи на Habr</b></td><td>24/25</td><td class="wrap">Практически стандарт; различаются частота, тема и результат</td></tr>
+<tr><td><b>Своя podcast-серия</b></td><td>≥6/25</td><td class="wrap">Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур. Гостевые выпуски не считаем</td></tr>
+<tr><td><b>Нестандартный проект</b></td><td>7/25</td><td class="wrap">2ГИС Tech, Avito, Kaspersky, MTS Tech, Ozon Tech, YADRO, Magnit Tech</td></tr>
+<tr><td><b>Видео в RuTube</b></td><td>≥5/25</td><td class="wrap">Avito, YADRO, Selectel, Magnit Tech, Контур. Просмотры часто десятки–сотни</td></tr>
+</tbody></table></div><p class="ft">Темы убраны намеренно: пока нет единой разметки корпуса, «AI встречается часто» выглядит точнее, чем есть.</p></div>
+</div></section>
 
+<section id="performance"><div class="w">
+<h2>Результаты: Telegram и крупные проекты</h2>
+<p class="sub">Средний просмотр поста по последнему публичному снимку, в основном Telemetr. Это не уникальный охват, а даты источников различаются, так что это ориентир, а не строгий рейтинг.</p>
+<div class="tw"><table><thead><tr><th>#</th><th>Компания</th><th class="num">Подписчики</th><th class="num">Ср. просмотры</th><th class="num">ER</th></tr></thead><tbody id="tg"></tbody></table></div>
+<button id="more" aria-expanded="false">Показать ещё 12 каналов</button>
+<div class="note" style="margin-top:20px">Размер аудитории плохо объясняет просмотры: у Selectel больше всех подписчиков (64.4K), но по среднему просмотру он седьмой. Смотрите на подписчиков, просмотры и ER вместе. У 2ГИС Tech (Dev2GIS, ≈3.9K подписчиков), hh.ru и Точки сопоставимой цифры нет.</div>
+<h3>Большие проекты (у каждого своя метрика, не смешиваем)</h3>
+<div class="g">
+<div class="c"><div class="n">343K+</div><h3>Ozon Tech · E-CODE 2026</h3><p>просмотров трансляций; 16K регистраций, ≈4K офлайн, 50+ спикеров</p></div>
+<div class="c"><div class="n">1 657</div><h3>Kaspersky · Kaspersky{CTF}</h3><p>команд из 98 стран</p></div>
+<div class="c"><div class="n">800+</div><h3>Positive Technologies · Hack Camp</h3><p>заявок, 81 участник из 20 стран</p></div>
+</div>
+</div></section>
 
+<section id="matrix"><div class="w">
+<h2>Карта рынка</h2>
+<p class="sub">Направление даёт максимум 1 балл, количество кейсов внутри него итог не увеличивает. Среднее по 25 компаниям — <b id="avg"></b> из 8. Нажмите на заголовок, чтобы сортировать.</p>
+<div class="tw"><table id="mt"></table></div>
+</div></section>
 
+<section id="data"><div class="w">
+<h2>Кейсы и источники</h2>
+<p class="sub">Выборка из 98 подтверждённых активностей. Полный список — в исходном отчёте.</p>
+<div class="fl"><select id="fc" aria-label="Компания"></select><select id="fd" aria-label="Направление"></select></div>
+<div id="cases"></div>
+</div></section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class="footer"><div class="wrap">
-  <div class="research-disclaimer">
-    <strong>Об исследовании</strong>
-    <p><b>Tech Brand Watch</b> — личное независимое исследование Олеси Боциевой. Оно не является официальным исследованием 2ГИС, рейтингом работодателей или оценкой качества компаний как места работы.</p>
-    <p>Материал основан на публично доступных источниках и отражает только те внешние активности, которые удалось найти и подтвердить на момент сбора данных. Отсутствие активности в исследовании не означает, что компания её не ведёт. Данные, ссылки и выводы могут уточняться по мере появления новой информации.</p>
-    <p>Исследование не оценивает зарплаты, условия труда, внутреннюю культуру, eNPS, candidate experience, качество менеджмента или эффективность найма. Баллы показывают только разнообразие подтверждённых публичных tech-brand форматов в рамках выбранной методологии.</p>
-  </div>
-  <div class="footer-meta">Tech Brand Watch / Q3 2026 · Beyond Vacancies · Автор: Олеся Боциева · Предварительный срез по 22 сентября · Публично проверяемые источники.</div>
+<footer><div class="w">
+<p><b>Методология.</b> Считаем публичные действия: контент, события, сообщества, регулярных экспертов, образование, исследования, открытый код, нестандартные форматы. Обычные вакансии, простое спонсорство, продуктовый PR и старый GitHub без активности в Q3 балл не дают. Если доказательства слабые, ставим «–». «Не нашли» не значит «не делает».</p>
+<p>Tech Brand Watch — личное независимое исследование Олеси Боциевой. Это не официальное исследование 2ГИС и не рейтинг работодателей; оно не оценивает зарплаты, культуру, eNPS или эффективность найма. Срез на 22 сентября 2026, после 30 сентября все 25 компаний будут перепроверены.</p>
 </div></footer>
-<nav class="mobile-bar"><a href="#snapshot"><b>▥</b>Главное</a><a href="#content"><b>◎</b>Контент</a><a href="#performance"><b>↗</b>Результаты</a><a href="#matrix"><b>◫</b>Рынок</a></nav>
+
 <script>
-(function(){
-  const defaults={activities:false,global:false,method:false};
-  Object.entries(defaults).forEach(([id,open])=>{
-    const section=document.getElementById(id);
-    if(!section) return;
-    const wrap=section.querySelector(':scope > .wrap');
-    const head=wrap && wrap.querySelector(':scope > .section-head');
-    if(!wrap||!head||head.querySelector('.fold-toggle')) return;
-    const body=document.createElement('div');
-    body.className='fold-body';
-    let node=head.nextSibling;
-    while(node){ const next=node.nextSibling; body.appendChild(node); node=next; }
-    wrap.appendChild(body);
-    const btn=document.createElement('button');
-    btn.type='button'; btn.className='fold-toggle';
-    const setState=(isOpen)=>{
-      body.hidden=!isOpen;
-      btn.textContent=isOpen?'Свернуть':'Развернуть';
-      btn.setAttribute('aria-expanded',String(isOpen));
-      section.classList.toggle('is-folded',!isOpen);
-    };
-    setState(open);
-    btn.addEventListener('click',()=>setState(body.hidden));
-    head.appendChild(btn);
-  });
-})();
+const D=["Технический контент","События","Сообщество","Инженеры-эксперты","Образование","Исследования","Open Source","Нестандартные форматы"];
+const M=[["Яндекс","11101110"],["Avito","11011011"],["Kaspersky","11001111"],["Positive Technologies","11111100"],["Т-Банк","11011010"],["MTS Tech","11101001"],["Ozon Tech","11001011"],["YADRO","11011001"],["2ГИС Tech","11000011"],["Контур","11000110"],["Cloud.ru","11001010"],["Selectel","11001010"],["VK","11001010"],["Альфа-Банк","10001100"],["hh.ru","10001010"],["Lamoda Tech","11000010"],["Magnit Tech","10001001"],["SberTech","11000010"],["Точка Банк","10000010"],["Dodo Engineering","11000000"],["ecom.tech","10001000"],["RWB","11000000"],["X5 Tech","10001000"],["Домклик","10000000"],["Купер","10000000"]].map(([n,f])=>({n,f:[...f].map(Number),t:[...f].reduce((a,b)=>a+ +b,0)}));
+const ME="2ГИС Tech",$=s=>document.querySelector(s),h=(s,html)=>{$(s).innerHTML=html};
+const cnt=i=>M.filter(m=>m.f[i]).length;
+// hero matrix
+h("#mx",M.map(m=>m.f.map(v=>`<i class="${v?"on":""} ${m.n==ME?"me":""}"></i>`).join("")).join("")+`<div class="cap">Каждая строка — компания, каждый столбец — направление. Зелёная строка — 2ГИС Tech.</div>`);
+// six findings
+const six=[[25,"Tech-контент уже не отличает","Сам факт статьи или поста — базовое ожидание рынка."],[17,"События — массовый формат","Обычный митап сам по себе не выделяет бренд."],[16,"Образование есть у 16 из 25","У 2ГИС Tech в текущем срезе не подтверждено."],[14,"Open Source распространён","Наличие GitHub-репозитория — уже слабый повод для коммуникации."],[7,"Нестандартные проекты заметнее","Рейв, арт-объект, night-format, show, robotics вместо «статья + митап»."],[3,"Сообщества пока не норма","Постоянные сообщества у 3 из 25, регулярные инженеры-эксперты у 4 из 25."]];
+h("#six",six.map(s=>`<div class="c"><div class="n">${s[0]}<span style="font-size:16px;color:var(--mute)">/25</span></div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join(""));
+const me=M.find(m=>m.n==ME);
+h("#snap",D.map((d,i)=>[d,cnt(i),me.f[i]]).sort((a,b)=>b[1]-a[1]).map(r=>`<tr><td>${r[0]}</td><td class="num"><b>${r[1]}/25</b></td><td>${r[2]?"Да":"<span style='color:var(--mute)'>Не подтверждено</span>"}</td></tr>`).join(""));
+// tabs
+["Площадки","Частота на Habr","ТОП статей","Форматы"].forEach((t,i)=>{const b=document.createElement("button");b.textContent=t;b.setAttribute("role","tab");b.setAttribute("aria-selected",i==0);b.onclick=()=>{document.querySelectorAll("#tabs button").forEach((x,j)=>x.setAttribute("aria-selected",j==i));document.querySelectorAll(".pane").forEach(p=>p.hidden=+p.dataset.p!=i)};$("#tabs").append(b)});
+const H=[["Яндекс",41],["VK Tech",35],["Т-Банк",29],["Avito",25],["Ozon Tech",9],["X5 Tech",6],["2ГИС Tech",4],["Dodo Engineering",1],["Купер",0]];
+h("#habr",H.map(r=>`<div class="bar ${r[0]==ME?"me":""}"><div>${r[0]}</div><span style="width:${Math.max(r[1]/41*100,.8)}%"></span><em>${r[1]}</em></div>`).join(""));
+const T=[["Домклик","Один разработчик, 14 агентов, восемь месяцев","AI / workflow","≈88K"],["Яндекс","Как за вами (не) следит Яндекс","Mobile / security","≈74K"],["Т-Банк","Java Digest #38","Java / digest","≈60K"],["Яндекс","Тысяча конфликтов и одна LLM","LLM / Chromium","≈32K"],["MTS","Рынок IT-вакансий сломался и ничего не понятно?","Рынок труда","≈28K"],["Avito","От «когда-нибудь» к работающему прототипу","LLM / прототипы","≈18K"],["VK Tech","ClickHouse: сценарии и лучшие практики","Data","≈17K"],["Selectel","Пять мини-ПК июля 2026 года","Hardware","≈15K"],["Ozon Tech","От полной выгрузки к S3 и PostgreSQL","Go / highload","≈14K"],["X5 Tech","Почему фронтенд съедает больше времени, чем бэкенд","Frontend / AI","≈12K"],["Kaspersky","Что фронтенду стоит перенять у геймдева","Frontend / gamedev","≈12K"],["2ГИС Tech","Полевые проезды в QA","QA / геолокация","≈9.2K"]];
+h("#top",T.map(r=>`<li class="${r[0]==ME?"me":""}"><span>${r[1]}<br><small>${r[0]} · ${r[2]}</small></span><b>${r[3]}</b></li>`).join(""));
+// telegram
+const G=[["Ozon Tech","29.7K","5.58K","18.74%"],["Avito","25.6K","4.08K","15.85%"],["Positive Technologies","29.0K","3.29K","11.36%"],["Т-Банк","32.7K","2.82K","8.61%"],["Яндекс","28.5K","2.81K","9.84%"],["Kaspersky","29.2K","2.57K","8.36%"],["Selectel","64.4K","2.53K","3.00%"],["RWB","15.6K","2.24K","14.22%"],["Купер","8.1K","2.10K","25.7%"],["Magnit Tech","4.3K","1.70K","40.3%"],["Lamoda Tech","11.0K","1.67K","15.25%"],["YADRO","11.9K","1.62K","10.85%"],["Cloud.ru","10.2K","1.58K","—"],["X5 Tech","10.8K","1.58K","14.34%"],["ecom.tech","7.5K","1.42K","18.84%"],["MTS Tech","11.5K","1.36K","10.46%"],["Контур","6.7K","1.19K","17.68%"],["Домклик","0.95K","1.11K","116.84%*"],["Альфа-Банк","5.7K","0.96K","16.88%"],["Dodo Engineering","3.9K","0.88K","22.75%"],["SberTech","1.81K","≈0.37K**","—"],["VK","2.32K","0.31K","13.42%"]];
+let all=false;const rt=()=>h("#tg",G.slice(0,all?22:10).map((r,i)=>`<tr><td>${i+1}</td><td><b>${r[0]}</b></td><td class="num">${r[1]}</td><td class="num"><b>${r[2]}</b></td><td class="num">${r[3]}</td></tr>`).join(""));rt();
+$("#more").onclick=e=>{all=!all;rt();e.target.textContent=all?"Свернуть":"Показать ещё 12 каналов";e.target.setAttribute("aria-expanded",all)};
+// matrix
+$("#avg").textContent=(M.reduce((a,m)=>a+m.t,0)/M.length).toFixed(2).replace(".",",");
+let sk=-1,sd=-1;const rm=()=>{const rows=[...M].sort((a,b)=>sk<0?sd*(a.t-b.t)||0:sd*(a.f[sk]-b.f[sk])||b.t-a.t);
+h("#mt",`<thead><tr><th class="s" tabindex="0" data-k="-1">Компания</th>${D.map((d,i)=>`<th class="s" tabindex="0" data-k="${i}">${d}</th>`).join("")}<th class="s num" tabindex="0" data-k="-1">Итого</th></tr></thead><tbody>${rows.map(m=>`<tr class="${m.n==ME?"me":""}"><td>${m.n}</td>${m.f.map(v=>`<td><span class="dot ${v?"":"o"}" title="${v?"Есть":"Нет"}"></span></td>`).join("")}<td class="num"><span class="sc">${m.t}/8</span></td></tr>`).join("")}</tbody>`);
+document.querySelectorAll("#mt th.s").forEach(t=>{const f=()=>{const k=+t.dataset.k;if(k==sk)sd=-sd;else{sk=k;sd=-1}rm()};t.onclick=f;t.onkeydown=e=>{if(e.key=="Enter")f()}})};sd=-1;rm();
+// cases
+const C=[["2ГИС Tech","Технический контент","2026-07-29","Полевые проезды в QA: как мы ищем аномалии геопозиции","https://habr.com/ru/companies/2gis/articles/1056942/"],["2ГИС Tech","Технический контент","2026-08-26","Помогите, FLAKY","https://habr.com/ru/companies/2gis/articles/1074116/"],["2ГИС Tech","События","2026-07-16","Go Go Hopping Meetup","https://habr.com/ru/companies/2gis/news/"],["2ГИС Tech","Нестандартные форматы","2026-09-11","Pause/Break — интерактивный арт-объект ко Дню программиста","https://habr.com/ru/companies/2gis/news/1081414/"],["2ГИС Tech","Open Source","Q3 2026","deck2gisLayer","https://github.com/2gis/riverboat"],["Яндекс","Open Source","2026-09-11","Alice AI Search Pretrain open-source release","https://yandex.ru/company/news/11-09-2026-01"],["Avito","Нестандартные форматы","2026-07-17","AVITO.TECHNO — ночной рейв для IT-аудитории","https://habr.com/ru/companies/avito/news/1054976/"],["Ozon Tech","События","2026-09-12","E-CODE 2026","https://habr.com/ru/companies/ozontech/news/1065444/"],["Ozon Tech","Образование","2026-08-07","E-CUP 2026 Students","https://e-cup-ozon.ru/"],["Kaspersky","Нестандартные форматы","2026-08-29","Kaspersky{CTF} 2026","https://lp.kaspersky.com/ctf/"],["Kaspersky","Исследования","2026-07-07","GitHub Actions workflow security review","https://me-en.kaspersky.com/about/press-releases/kaspersky-uncovers-over-250000-potential-security-issues-in-github-actions-workflows"],["Positive Technologies","Образование","2026-07-25","Positive Hack Camp 2026","https://positechglobal.com/en/about/news/positive-hack-camp-2026-two-weeks-of-intensive-practice-for-young-security-researchers-from-20-countries/"],["Т-Банк","События","2026-08-29","JVM Day 2026","https://meetup.tbank.ru/conference/jvm-day/"],["Magnit Tech","Нестандартные форматы","2026-09-18","MAGNIT TECH NIGHT","https://bezpredela.magnit.tech/"],["YADRO","Нестандартные форматы","2026-07-24","10 лет блогу YADRO — инженерный суперквиз","https://habr.com/ru/companies/yadro/articles/1061802/"],["Контур","Исследования","2026-07-03","Исследование продакт-менеджеров 2026 с DevCrowd","https://devcrowd.ru/pm26/"]];
+const opt=(a,l)=>`<option value="">${l}</option>`+a.map(x=>`<option>${x}</option>`).join("");
+h("#fc",opt([...new Set(C.map(c=>c[0]))],"Все компании"));h("#fd",opt(D,"Все направления"));
+const rc=()=>{const a=$("#fc").value,b=$("#fd").value;const r=C.filter(c=>(!a||c[0]==a)&&(!b||c[1]==b));h("#cases",r.length?r.map(c=>`<div class="case ${c[0]==ME?"me":""}"><small>${c[1]} · ${c[2]} · ${c[0]}</small><h3>${c[3]}</h3><a href="${c[4]}" target="_blank" rel="noopener">Источник ↗</a></div>`).join(""):"<p class='sub'>Ничего не найдено. Сбросьте один из фильтров.</p>")};
+$("#fc").onchange=$("#fd").onchange=rc;rc();
+// roles
+const R={"Редактор":[["Habr: мы в хвосте по частоте","24/25 брендов ведут блог. У 2ГИС Tech 4 статьи за 12 недель, у лидеров 2,1–3,4 в неделю.","Проверить, растут ли просмотры на материал при частоте раз в 1–2 недели."],["Что читают","В топ-3 проверенных статей: AI-эксперимент Домклика (≈88K), материал Яндекса про приватность (≈74K) и регулярный Java Digest Т-Банка (≈60K). Наша «Полевые проезды в QA» — ≈9,2K.","Проверить у нас личные истории про AI и регулярные серии."],["Telegram","Посты выше среднего у конкурентов: подготовка к собеседованию (X5, 3,5×), подкаст с техдиром (Ozon Tech, 1,45×), развлекательные механики. У Dev2GIS ≈3,9K подписчиков, среднего просмотра нет в открытых данных.","Замерить средний просмотр Dev2GIS и сравнить с медианой рынка ≈1,6K."],["Видео и подкасты","Свой подкаст у ≥6 из 25 (Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур), у нас не подтверждён. YouTube и VK Video у нас есть. Просмотры видео и прослушивания по открытым данным сравнить не удалось.","Ozon Tech держит доклады, подкасты и интервью на одном канале: так можно начать без отдельной студии."]],
+"Ивент-менеджер":[["Митап уже не выделяет","События проводят 17/25. У нас есть Go Go Hopping Meetup и арт-объект Pause/Break ко Дню программиста.","Отличать бренд будут формат и масштаб, а не сам факт митапа."],["Масштаб лидеров","E-CODE (Ozon Tech, 12–13 сентября): 16K регистраций, ≈4K офлайн, 50+ спикеров, 8 треков, 343K просмотров трансляций. Kaspersky{CTF}: 1 657 команд. Positive Hack Camp: 800+ заявок.","Трансляция даёт основной охват: просмотров в ≈85 раз больше, чем гостей офлайн (это не уникальные зрители)."],["Запоминающиеся форматы","Ночные: AVITO.TECHNO (рейв), MAGNIT TECH NIGHT, Deep Tech Night (Яндекс). Соревнования: Робозон, E-CUP, CTF, True Tech Champ.","Pause/Break стоит в этом ряду; можно превратить его в регулярную серию."],["Совместные события","На Back to Back (Яндекс, три города) выступал докладчик Positive Technologies. Data Meetup VK Tech прошёл с кейсами Авито и RWB, YADRO собрал встречу с Postgres Pro и VK.","Партнёрский митап даёт чужую аудиторию и спикеров без большого бюджета."],["Что впереди","HighLoad++ 30 ноября — 1 декабря в Москве (2500+ участников, 140+ спикеров, потоки идут онлайн). Есть Saint HighLoad++ в Петербурге и Конференция разработчиков свободных программ 2 октября.","Проверить, есть ли у команды доклады или стенд на HighLoad++."]],
+"HR-маркетолог":[["Образование — главный пробел","16/25: летние школы (Яндекс, X5, Т-Банк, YADRO), курсы (Selectel, Cloud.ru), школы hh.ru, Академия Авито, студенческий E-CUP у Ozon Tech. У 2ГИС Tech не подтверждено.","Начать с малого: практикум в вузе или открытый курс по нашему стеку."],["Сообщество","Постоянное сообщество у 3/25: Young&&Yandex, True Tech Community (MTS Tech), Security Expert Community (Positive Technologies).","Ниша свободна, но нужны ресурсы на модерацию."],["Инженеры как эксперты","4/25: AviTalk (Avito), «Битовые маски» (YADRO, 29 выпусков), Java/Scala Digest (Т-Банк), «В тренде VM» (Positive Technologies).","Серия с постоянными лицами показывает людей за логотипом."],["Исследования","5/25: Яндекс (ICML), Kaspersky (GitHub Actions), Positive Technologies (CloudAtlas), Контур (DevCrowd), Альфа-Банк.","Проверить формат исследования на данных, которые есть только у 2ГИС."],["Наши сильные стороны","Open Source (14/25) и нестандартные форматы (7/25) у нас подтверждены.","Показывать их в найме как отличие."]]};
+const RN=Object.keys(R),dr=t=>h("#rp",R[t].map(r=>`<div class="c"><h3>${r[0]}</h3><p>${r[1]}</p><p style="margin-top:8px;color:var(--ink)"><b style="color:var(--acc)">Гипотеза:</b> ${r[2]}</p></div>`).join(""));
+RN.forEach((t,i)=>{const b=document.createElement("button");b.textContent=t;b.setAttribute("aria-selected",i==0);b.onclick=()=>{document.querySelectorAll("#rt button").forEach(x=>x.setAttribute("aria-selected",x==b));dr(t)};$("#rt").append(b)});dr(RN[0]);
+const TR=[["Ночные и нестандартные форматы","AVITO.TECHNO, MAGNIT TECH NIGHT, Deep Tech Night, квиз YADRO, арт-объект 2ГИС Tech: события без привычных докладов."],["Соревнования как контент","Робозон и E-CUP (Ozon Tech), Kaspersky{CTF}, True Tech Champ: у каждого есть измеримый охват."],["Компании выступают друг у друга","Back to Back, Data Meetup VK, встреча YADRO × Postgres Pro, AVITO.TECHNO."],["AI — главная тема заметных статей","4 из 12 материалов топа Habr про AI/LLM, включая лидера (≈88K)."],["Трансляция умножает охват","E-CODE: ≈4K гостей офлайн и 343K просмотров онлайн."],["Тренд не равен динамике","Данные только за Q3, сравнить с Q2 нельзя. После 30 сентября срез будет перепроверен."]];
+h("#tr",TR.map(t=>`<div class="c"><h3>${t[0]}</h3><p>${t[1]}</p></div>`).join(""));
 </script>
-<script>
-(function(){
-  const tabs=[...document.querySelectorAll('.simple-tab')];
-  const panels=[...document.querySelectorAll('.tab-panel')];
-  tabs.forEach(btn=>btn.addEventListener('click',()=>{
-    tabs.forEach(x=>x.classList.toggle('active',x===btn));
-    panels.forEach(p=>p.classList.toggle('active',p.dataset.panel===btn.dataset.tab));
-  }));
-})();
-</script>
-<script>
-const cards=[...document.querySelectorAll('.activity-card')];
-const q=document.getElementById('search'), c=document.getElementById('company'), d=document.getElementById('dimension'), count=document.getElementById('count');
-function filter(){let n=0;const term=q.value.trim().toLowerCase();for(const card of cards){const ok=(!term||card.dataset.search.includes(term))&&(!c.value||card.dataset.company===c.value)&&(!d.value||card.dataset.dim===d.value);card.classList.toggle('hidden',!ok);if(ok)n++;}count.textContent=n+' активностей';}
-[q,c,d].forEach(el=>el.addEventListener('input',filter));
-</script>
-</body></html>
+</body>
+</html>
