@@ -22,19 +22,13 @@ nav b{margin-right:auto;white-space:nowrap}
 nav a{text-decoration:none;padding:6px 12px;border-radius:99px;font-size:14px;color:var(--mute);white-space:nowrap}
 nav a:hover,nav a:focus-visible{background:var(--hl);color:var(--ink);outline:none}
 .hero{padding:56px 0 40px}
-.hero .w{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.hero .w{display:block;max-width:900px}
 .badge{display:inline-block;border:1px solid var(--acc);color:var(--acc);border-radius:99px;padding:2px 12px;font-size:13px;margin-bottom:16px}
 h1{font-size:clamp(38px,6.4vw,72px);line-height:1.02;font-weight:900;letter-spacing:-.03em;margin:0 0 20px}
 .lead{color:var(--mute);max-width:52ch;margin:0 0 24px}
 .stats{display:flex;flex-wrap:wrap;gap:8px 28px}
 .stats div{font-size:13px;color:var(--mute)}
 .stats b{display:block;font-size:26px;color:var(--ink);line-height:1.1}
-#mx{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;max-width:340px;justify-self:end;width:100%}
-#mx i{aspect-ratio:1;border-radius:3px;background:var(--line)}
-#mx i.on{background:var(--bar)}
-#mx i.me{background:var(--line)}
-#mx i.me.on{background:var(--acc)}
-.cap{grid-column:1/-1;font-size:12px;color:var(--mute);margin-top:8px}
 section{padding:48px 0;border-top:1px solid var(--line)}
 h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;line-height:1.12;margin:0 0 8px}
 .sub{color:var(--mute);margin:0 0 28px;max-width:62ch}
@@ -78,7 +72,7 @@ button:focus-visible,select:focus-visible,th.s:focus-visible{outline:2px solid v
 .case h3{margin:2px 0 4px;font-size:16px}
 .case.me{border-color:var(--acc)}
 footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
-@media (max-width:760px){.hero .w{grid-template-columns:1fr}#mx{justify-self:start;max-width:260px}.bar{grid-template-columns:100px 1fr 44px}}
+@media (max-width:760px){.bar{grid-template-columns:100px 1fr 44px}}
 </style>
 </head>
 <body>
@@ -91,7 +85,6 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 <p class="lead">Единый кейс для команды продвижения бренда 2ГИС: что делают 25 крупнейших tech-компаний России за Q3 2026, где находится 2ГИС Tech и что взять в работу редактору, ивент-менеджеру и HR-маркетологу.</p>
 <div class="stats"><div><b>25</b>tech-брендов</div><div><b>8</b>направлений</div><div><b>98</b>подтверждённых кейсов</div><div><b>22 сентября</b>обновлено</div></div>
 </div>
-<div id="mx" role="img" aria-label="Матрица 25 компаний на 8 направлений; строка 2ГИС Tech выделена зелёным"></div>
 </div></header>
 
 <section id="position"><div class="w">
@@ -185,8 +178,6 @@ const D=["Технический контент","События","Сообще�
 const M=[["Яндекс","11101110"],["Avito","11011011"],["Kaspersky","11001111"],["Positive Technologies","11111100"],["Т-Банк","11011010"],["MTS Tech","11101001"],["Ozon Tech","11001011"],["YADRO","11011001"],["2ГИС Tech","11000011"],["Контур","11000110"],["Cloud.ru","11001010"],["Selectel","11001010"],["VK","11001010"],["Альфа-Банк","10001100"],["hh.ru","10001010"],["Lamoda Tech","11000010"],["Magnit Tech","10001001"],["SberTech","11000010"],["Точка Банк","10000010"],["Dodo Engineering","11000000"],["ecom.tech","10001000"],["RWB","11000000"],["X5 Tech","10001000"],["Домклик","10000000"],["Купер","10000000"]].map(([n,f])=>({n,f:[...f].map(Number),t:[...f].reduce((a,b)=>a+ +b,0)}));
 const ME="2ГИС Tech",$=s=>document.querySelector(s),h=(s,html)=>{$(s).innerHTML=html};
 const cnt=i=>M.filter(m=>m.f[i]).length;
-// hero matrix
-h("#mx",M.map(m=>m.f.map(v=>`<i class="${v?"on":""} ${m.n==ME?"me":""}"></i>`).join("")).join("")+`<div class="cap">Каждая строка — компания, каждый столбец — направление. Зелёная строка — 2ГИС Tech.</div>`);
 // six findings
 const six=[[25,"Tech-контент уже не отличает","Сам факт статьи или поста — базовое ожидание рынка."],[17,"События — массовый формат","Обычный митап сам по себе не выделяет бренд."],[16,"Образование есть у 16 из 25","У 2ГИС Tech в текущем срезе не подтверждено."],[14,"Open Source распространён","Наличие GitHub-репозитория — уже слабый повод для коммуникации."],[7,"Нестандартные проекты заметнее","Рейв, арт-объект, night-format, show, robotics вместо «статья + митап»."],[3,"Сообщества пока не норма","Постоянные сообщества у 3 из 25, регулярные инженеры-эксперты у 4 из 25."]];
 h("#six",six.map(s=>`<div class="c"><div class="n">${s[0]}<span style="font-size:16px;color:var(--mute)">/25</span></div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join(""));
