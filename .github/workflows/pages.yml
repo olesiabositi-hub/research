@@ -23,6 +23,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Cache EVM archive photos
+        run: |
+          mkdir -p 2gis-tech-museum/assets
+          curl -fsSL --retry 3 --retry-delay 2 --max-time 40 -A "Mozilla/5.0" \
+            "https://habrastorage.org/getpro/habr/upload_files/549/a3b/946/549a3b946bec2522bcf64610c5c68c24.jpg" \
+            -o 2gis-tech-museum/assets/evm-1972-1.jpg
+          curl -fsSL --retry 3 --retry-delay 2 --max-time 40 -A "Mozilla/5.0" \
+            "https://habrastorage.org/r/w1560/getpro/habr/upload_files/238/010/9f6/2380109f64f7859572e7fa5922e03546.jpg" \
+            -o 2gis-tech-museum/assets/evm-1972-2.jpg
+          test -s 2gis-tech-museum/assets/evm-1972-1.jpg
+          test -s 2gis-tech-museum/assets/evm-1972-2.jpg
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
