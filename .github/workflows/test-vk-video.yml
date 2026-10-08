@@ -1,0 +1,41 @@
+name: Test VK Video data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Collect VK Video Q3 metrics
+        env:
+          VK_ACCESS_TOKEN: ${{ secrets.VK_ACCESS_TOKEN }}
+        run: node tech-brand-watch/scripts/update-vk-video.mjs
+
+      - name: Validate VK JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('tech-brand-watch/data/vk-video.json','utf8')); console.log('VK JSON OK')"
+
+      - name: Commit test data
+        run: |
+          if [ -z "$(git status --porcelain -- tech-brand-watch/data/vk-video.json)" ]; then
+            echo "No VK data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tech-brand-watch/data/vk-video.json
+          git commit -m "Test VK Video Q3 metrics"
+          git pull --rebase origin main
+          git push
