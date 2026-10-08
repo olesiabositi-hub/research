@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VK authorization · Tech Brand Watch</title>
+<style>
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:64px auto;padding:0 20px;line-height:1.55;background:#f4f6f5;color:#15221e}
+.card{background:#fff;border:1px solid #d8e0dd;border-radius:14px;padding:24px}
+button{font:inherit;border:0;border-radius:999px;padding:11px 18px;background:#1677ff;color:#fff;cursor:pointer}
+small{color:#667570}.err{color:#a22}
+</style>
+<script src="https://unpkg.com/@vkid/sdk@2.6.1/dist-sdk/umd/index.js"></script>
+</head>
+<body>
+<div class="card">
+<h1>Подключить VK Video</h1>
+<p>Авторизация нужна только для чтения публичных video-метрик через VK API.</p>
+<button id="login">Продолжить через VK ID</button>
+<p id="status"><small>Токен не сохраняется на этой странице и не отправляется в репозиторий.</small></p>
+</div>
+<script>
+const APP_ID=54811614;
+const REDIRECT="https://olesiabositi-hub.github.io/research/tech-brand-watch/vk-callback.html";
+
+function randomString(len=64){
+  const alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~";
+  const bytes=new Uint8Array(len);
+  crypto.getRandomValues(bytes);
+  return Array.from(bytes,b=>alphabet[b%alphabet.length]).join("");
+}
+
+document.getElementById("login").onclick=()=>{
+  try{
+    const verifier=randomString(72);
+    const state=randomString(32);
+    sessionStorage.setItem("vk_code_verifier",verifier);
+    sessionStorage.setItem("vk_state",state);
+    VKID.Config.init({
+      app:APP_ID,
+      redirectUrl:REDIRECT,
+      state,
+      codeVerifier:verifier,
+      scope:"video",
+      mode:VKID.ConfigAuthMode.Redirect
+    });
+    VKID.Auth.login();
+  }catch(e){
+    document.getElementById("status").innerHTML='<span class="err">'+String(e)+'</span>';
+  }
+};
+</script>
+</body>
+</html>
