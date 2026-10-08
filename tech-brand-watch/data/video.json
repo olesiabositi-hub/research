@@ -6,16 +6,16 @@
     "to": "2026-09-30T23:59:59Z",
     "label": "Q3 2026"
   },
-  "updated_at": "2026-10-08T11:07:46.014Z",
+  "updated_at": "2026-10-08T11:08:33.392Z",
   "source_label": "YouTube Data API v3",
   "note": "Публичные данные YouTube. Число роликов относится к публикациям за Q3 2026; просмотры и подписчики — снимок на дату updated_at. В сбор включены только явно привязанные/проверенные каналы; остальные бренды помечены not_configured и не подменяются автоматическим поиском.",
   "summary": {
     "brands_total": 25,
-    "channels_matched": 7,
-    "channels_with_q3_video": 5,
+    "channels_matched": 9,
+    "channels_with_q3_video": 7,
     "not_configured": 16,
     "needs_review": 0,
-    "not_found": 2,
+    "not_found": 0,
     "errors": 0
   },
   "rows": [
@@ -27,11 +27,806 @@
     },
     {
       "brand": "Avito",
-      "status": "not_found",
+      "status": "ok",
       "query": "AvitoTech",
-      "channel_id": null,
-      "match_score": 0,
-      "match_method": "username_not_found"
+      "channel_id": "UCO2w0cpl1wxygHjQH6eEfEg",
+      "channel_title": "AvitoTech",
+      "channel_url": "https://www.youtube.com/channel/UCO2w0cpl1wxygHjQH6eEfEg",
+      "match_score": 1,
+      "match_method": "configured",
+      "match_candidates": null,
+      "subscribers": 34400,
+      "subscribers_hidden": false,
+      "channel_total_videos": 1290,
+      "q3_videos": 86,
+      "q3_views_total": 382177,
+      "q3_views_average": 4443.918604651163,
+      "q3_views_median": 2620,
+      "top_video": {
+        "id": "MKNg7gwnUX0",
+        "title": "System Design на собеседовании: ошибки, которые тебя топят",
+        "published_at": "2026-07-03T12:00:20Z",
+        "views": 60784,
+        "likes": 1604,
+        "comments": 278,
+        "url": "https://www.youtube.com/watch?v=MKNg7gwnUX0"
+      },
+      "videos": [
+        {
+          "id": "UP46wnb5oJo",
+          "title": "Как обойти Security Gate? #avitotech",
+          "published_at": "2026-09-30T12:17:04Z",
+          "views": 2018,
+          "likes": 37,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=UP46wnb5oJo"
+        },
+        {
+          "id": "RBChn_YTcWs",
+          "title": "ИИ заменит аналитика?",
+          "published_at": "2026-09-30T09:00:33Z",
+          "views": 8649,
+          "likes": 84,
+          "comments": 10,
+          "url": "https://www.youtube.com/watch?v=RBChn_YTcWs"
+        },
+        {
+          "id": "DhnfKiIhOwE",
+          "title": "Растим инженеров для себя #avitotech #подкаст #backend #work  #productivity",
+          "published_at": "2026-09-29T08:00:23Z",
+          "views": 7917,
+          "likes": 48,
+          "comments": 9,
+          "url": "https://www.youtube.com/watch?v=DhnfKiIhOwE"
+        },
+        {
+          "id": "ulOiTqBfvCg",
+          "title": "Как из одной ссылки собрать полный взлом сервера",
+          "published_at": "2026-09-28T13:00:06Z",
+          "views": 1456,
+          "likes": 17,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=ulOiTqBfvCg"
+        },
+        {
+          "id": "uuZ4CAHG9PI",
+          "title": "6 столпов Digital Immune System",
+          "published_at": "2026-09-28T12:00:36Z",
+          "views": 1677,
+          "likes": 27,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=uuZ4CAHG9PI"
+        },
+        {
+          "id": "L4cTdXmJPVs",
+          "title": "Найм в QA: правда ли тестирование — легкий путь в IT?",
+          "published_at": "2026-09-28T09:32:36Z",
+          "views": 1147,
+          "likes": 10,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=L4cTdXmJPVs"
+        },
+        {
+          "id": "29Kv6mNlp5I",
+          "title": "Что из OWASP можно уже использовать в работе #avitotech",
+          "published_at": "2026-09-27T11:15:34Z",
+          "views": 2928,
+          "likes": 50,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=29Kv6mNlp5I"
+        },
+        {
+          "id": "WfaeI-zsKpI",
+          "title": "Avito.Tech.Conf 2026",
+          "published_at": "2026-09-26T16:33:51Z",
+          "views": 7168,
+          "likes": 76,
+          "comments": 6,
+          "url": "https://www.youtube.com/watch?v=WfaeI-zsKpI"
+        },
+        {
+          "id": "4fKw0syPQwU",
+          "title": "Какие задачи решает Digital Immune System",
+          "published_at": "2026-09-24T12:00:25Z",
+          "views": 1427,
+          "likes": 9,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=4fKw0syPQwU"
+        },
+        {
+          "id": "bI2FguuF94k",
+          "title": "Инциденты и пользователи. О чем не стоит говорить?",
+          "published_at": "2026-09-24T12:00:23Z",
+          "views": 1271,
+          "likes": 8,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=bI2FguuF94k"
+        },
+        {
+          "id": "rT3ua0w_CCw",
+          "title": "Digital Immune System: мониторинга, SRE и автотестов уже недостаточно | В SREду на кухне | AvitoTech",
+          "published_at": "2026-09-23T12:00:08Z",
+          "views": 1935,
+          "likes": 12,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=rT3ua0w_CCw"
+        },
+        {
+          "id": "6P6YiEq_1YI",
+          "title": "Растём через покараску кнопок #avitotech #подкаст #backend #work  #productivity",
+          "published_at": "2026-09-22T08:00:08Z",
+          "views": 4554,
+          "likes": 33,
+          "comments": 6,
+          "url": "https://www.youtube.com/watch?v=6P6YiEq_1YI"
+        },
+        {
+          "id": "Nhze6_8GYQ8",
+          "title": "Методологии в продуктах и их применение",
+          "published_at": "2026-09-21T12:00:17Z",
+          "views": 2065,
+          "likes": 16,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Nhze6_8GYQ8"
+        },
+        {
+          "id": "gvxNxwLDeSU",
+          "title": "Что нужно для создания MCP? #avitotech",
+          "published_at": "2026-09-20T07:00:02Z",
+          "views": 2348,
+          "likes": 61,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=gvxNxwLDeSU"
+        },
+        {
+          "id": "efkDYRBqo7w",
+          "title": "Супермагия в метриках",
+          "published_at": "2026-09-19T12:43:33Z",
+          "views": 5629,
+          "likes": 27,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=efkDYRBqo7w"
+        },
+        {
+          "id": "UX3aHHDptj8",
+          "title": "Прочитать шум и захватить сервер: два хакерских трюка с HoneyBadger CTF",
+          "published_at": "2026-09-18T12:15:06Z",
+          "views": 2035,
+          "likes": 16,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=UX3aHHDptj8"
+        },
+        {
+          "id": "0GL9XHEbICM",
+          "title": "Маленький, но продуктовый инженер #avitotech #подкаст #backend #work  #productivity",
+          "published_at": "2026-09-17T13:47:48Z",
+          "views": 7197,
+          "likes": 49,
+          "comments": 15,
+          "url": "https://www.youtube.com/watch?v=0GL9XHEbICM"
+        },
+        {
+          "id": "PVfDiVrlzQ0",
+          "title": "Как начать использовать SDD? #avitotech",
+          "published_at": "2026-09-16T12:45:01Z",
+          "views": 3406,
+          "likes": 49,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=PVfDiVrlzQ0"
+        },
+        {
+          "id": "O8PZbjIolEU",
+          "title": "Контроль качества в AI-эпоху",
+          "published_at": "2026-09-16T06:49:11Z",
+          "views": 1666,
+          "likes": 7,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=O8PZbjIolEU"
+        },
+        {
+          "id": "8IcZfZjvJQQ",
+          "title": "Зачем инженеру продуктовое мышление? | Подкаст «Бэкенд расправил плечи»",
+          "published_at": "2026-09-15T07:00:23Z",
+          "views": 5511,
+          "likes": 58,
+          "comments": 12,
+          "url": "https://www.youtube.com/watch?v=8IcZfZjvJQQ"
+        },
+        {
+          "id": "AMHFAMYZzIk",
+          "title": "Процессы в QA: убрать нельзя пофиксить",
+          "published_at": "2026-09-14T09:56:22Z",
+          "views": 1381,
+          "likes": 12,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=AMHFAMYZzIk"
+        },
+        {
+          "id": "sxHSVhYnh3c",
+          "title": "Пирамида тестирования усложняется #avitotech",
+          "published_at": "2026-09-13T13:30:35Z",
+          "views": 4254,
+          "likes": 51,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=sxHSVhYnh3c"
+        },
+        {
+          "id": "3pV9TsqBxtw",
+          "title": "2006 год, утро субботы | Lo-fi ambient · Russian trip to childhood",
+          "published_at": "2026-09-12T13:12:21Z",
+          "views": 4871,
+          "likes": 46,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=3pV9TsqBxtw"
+        },
+        {
+          "id": "_VPy8PszUUk",
+          "title": "Самый быстрый инженер ВООБЩЕ не ускоряет разработку #avitotech",
+          "published_at": "2026-09-12T12:00:26Z",
+          "views": 2312,
+          "likes": 69,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=_VPy8PszUUk"
+        },
+        {
+          "id": "9eDliEPcTcg",
+          "title": "AI-инструменты: скорость выросла, а пользы 0 #avitotech",
+          "published_at": "2026-09-11T12:00:29Z",
+          "views": 5567,
+          "likes": 43,
+          "comments": 5,
+          "url": "https://www.youtube.com/watch?v=9eDliEPcTcg"
+        },
+        {
+          "id": "TTYEBWDrQoY",
+          "title": "Стартап внутри Авито: как продукт и бизнес запускали новое направление с нуля",
+          "published_at": "2026-09-11T11:00:18Z",
+          "views": 2550,
+          "likes": 28,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=TTYEBWDrQoY"
+        },
+        {
+          "id": "rAtTMhUqscU",
+          "title": "Довольна CPO",
+          "published_at": "2026-09-10T12:00:15Z",
+          "views": 1389,
+          "likes": 4,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=rAtTMhUqscU"
+        },
+        {
+          "id": "7JG7eA8g2Cg",
+          "title": "Как заниматься волонтёрством на своей работе? #avitotech",
+          "published_at": "2026-09-07T11:15:24Z",
+          "views": 1061,
+          "likes": 7,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=7JG7eA8g2Cg"
+        },
+        {
+          "id": "eH3DZ4KwJLM",
+          "title": "FinOps команды не любят?",
+          "published_at": "2026-09-05T12:00:38Z",
+          "views": 1997,
+          "likes": 10,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=eH3DZ4KwJLM"
+        },
+        {
+          "id": "dhA5nvw9Zyk",
+          "title": "Что я делегировала AI как тестировщик #avitotech",
+          "published_at": "2026-09-04T12:00:33Z",
+          "views": 2570,
+          "likes": 21,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=dhA5nvw9Zyk"
+        },
+        {
+          "id": "tfdWJcOp30E",
+          "title": "От аварии до аварии: Incident, Problem и Risk Management | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-09-02T12:00:09Z",
+          "views": 2718,
+          "likes": 16,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=tfdWJcOp30E"
+        },
+        {
+          "id": "WCK37MAkKwA",
+          "title": "Error budget в FinOps",
+          "published_at": "2026-09-01T12:00:22Z",
+          "views": 2154,
+          "likes": 15,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=WCK37MAkKwA"
+        },
+        {
+          "id": "koywlFsrKCk",
+          "title": "QA нужен только в бигтехе? #avitotech",
+          "published_at": "2026-08-31T12:30:34Z",
+          "views": 3448,
+          "likes": 27,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=koywlFsrKCk"
+        },
+        {
+          "id": "ekHHGYJcF64",
+          "title": "Что произошло, когда мы раздали доступ к AI-агентам 100 разработчикам? #avitotech",
+          "published_at": "2026-08-29T12:00:29Z",
+          "views": 3060,
+          "likes": 64,
+          "comments": 5,
+          "url": "https://www.youtube.com/watch?v=ekHHGYJcF64"
+        },
+        {
+          "id": "SCFcvKiZFgs",
+          "title": "Релизить или нет? #avitotech",
+          "published_at": "2026-08-28T13:00:20Z",
+          "views": 5846,
+          "likes": 54,
+          "comments": 10,
+          "url": "https://www.youtube.com/watch?v=SCFcvKiZFgs"
+        },
+        {
+          "id": "VA6mxWu3ePo",
+          "title": "Доволен CEO",
+          "published_at": "2026-08-27T11:30:26Z",
+          "views": 1785,
+          "likes": 3,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=VA6mxWu3ePo"
+        },
+        {
+          "id": "8w8dihUsaYo",
+          "title": "Как Авито развивает свой центр качества? #avitotech",
+          "published_at": "2026-08-25T11:30:30Z",
+          "views": 2777,
+          "likes": 27,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=8w8dihUsaYo"
+        },
+        {
+          "id": "1aasxXdd9a4",
+          "title": "Дженерики в Go 1.27 #avitotech",
+          "published_at": "2026-08-24T16:55:58Z",
+          "views": 6220,
+          "likes": 53,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=1aasxXdd9a4"
+        },
+        {
+          "id": "ivu9QpVvORE",
+          "title": "Что такое Showback в FinOps",
+          "published_at": "2026-08-23T12:00:25Z",
+          "views": 1417,
+          "likes": 8,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=ivu9QpVvORE"
+        },
+        {
+          "id": "_eZ_syKX2OI",
+          "title": "ML в бигтехе  #avitotech",
+          "published_at": "2026-08-20T16:13:53Z",
+          "views": 2588,
+          "likes": 48,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=_eZ_syKX2OI"
+        },
+        {
+          "id": "mOQQVSnF2cM",
+          "title": "Изучаем новинки Go 1.27 | avito.code",
+          "published_at": "2026-08-20T10:00:38Z",
+          "views": 9552,
+          "likes": 295,
+          "comments": 28,
+          "url": "https://www.youtube.com/watch?v=mOQQVSnF2cM"
+        },
+        {
+          "id": "Y_7rKS_dRwY",
+          "title": "QA-эксперт Avito о том, почему вход в IT через тестирование больше не работает",
+          "published_at": "2026-08-19T09:02:07Z",
+          "views": 1420,
+          "likes": 32,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=Y_7rKS_dRwY"
+        },
+        {
+          "id": "pSoQx5TpWEA",
+          "title": "Что такое FinOps?",
+          "published_at": "2026-08-17T12:00:10Z",
+          "views": 1509,
+          "likes": 7,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=pSoQx5TpWEA"
+        },
+        {
+          "id": "PjGgHQlrrGY",
+          "title": "Разработчики кодят только ⅕ времени #avitotech",
+          "published_at": "2026-08-16T10:00:05Z",
+          "views": 8240,
+          "likes": 70,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=PjGgHQlrrGY"
+        },
+        {
+          "id": "y4Vf9Y1iU5o",
+          "title": "Выпрямляем руки агентов: как сделать MCP удобными и действительно полезными — Павел Агалецкий",
+          "published_at": "2026-08-15T10:00:04Z",
+          "views": 1936,
+          "likes": 59,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=y4Vf9Y1iU5o"
+        },
+        {
+          "id": "eaQdmQ4nN_U",
+          "title": "Слишком долго увольнял, надо было раньше #avitotech #подкаст #тимлид #work  #productivity",
+          "published_at": "2026-08-14T08:00:29Z",
+          "views": 7555,
+          "likes": 33,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=eaQdmQ4nN_U"
+        },
+        {
+          "id": "cZDS71EtOJE",
+          "title": "Доволен CTO",
+          "published_at": "2026-08-13T16:00:10Z",
+          "views": 752,
+          "likes": 7,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=cZDS71EtOJE"
+        },
+        {
+          "id": "4hp6LhMLg_Y",
+          "title": "Как снизить стоимость Gb за счет FinOps?",
+          "published_at": "2026-08-13T12:00:39Z",
+          "views": 4315,
+          "likes": 22,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=4hp6LhMLg_Y"
+        },
+        {
+          "id": "dqmGI58UUR8",
+          "title": "FinOps в SRE: сколько стоит надёжность? | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-08-12T12:34:45Z",
+          "views": 651,
+          "likes": 17,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=dqmGI58UUR8"
+        },
+        {
+          "id": "CmLN9c3VJ4U",
+          "title": "Сколько стоит оффбординг #avitotech #подкаст #тимлид #work  #productivity",
+          "published_at": "2026-08-08T08:00:18Z",
+          "views": 21314,
+          "likes": 109,
+          "comments": 17,
+          "url": "https://www.youtube.com/watch?v=CmLN9c3VJ4U"
+        },
+        {
+          "id": "1d9BF2UZ7sg",
+          "title": "Геймификация и Kubernetes",
+          "published_at": "2026-08-07T12:00:36Z",
+          "views": 5833,
+          "likes": 65,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=1d9BF2UZ7sg"
+        },
+        {
+          "id": "MEXSidmbtFs",
+          "title": "Хороший тон или ТК РФ #avitotech #подкаст #тимлид #work  #productivity",
+          "published_at": "2026-08-05T21:00:13Z",
+          "views": 4014,
+          "likes": 16,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=MEXSidmbtFs"
+        },
+        {
+          "id": "YQPUWTlwD10",
+          "title": "Атаки на GenAI-агентов: OWASP на практике — Николай Шуляев",
+          "published_at": "2026-08-04T09:00:12Z",
+          "views": 663,
+          "likes": 22,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=YQPUWTlwD10"
+        },
+        {
+          "id": "tZnmWuFMguE",
+          "title": "Прототип сразу в продакшн #avitotech",
+          "published_at": "2026-08-03T16:16:47Z",
+          "views": 1451,
+          "likes": 10,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=tZnmWuFMguE"
+        },
+        {
+          "id": "1LjSyrz0CAk",
+          "title": "Эмоциональные полгода перед уходом #avitotech #подкаст #тимлид #work  #productivity",
+          "published_at": "2026-08-02T08:00:03Z",
+          "views": 4116,
+          "likes": 25,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=1LjSyrz0CAk"
+        },
+        {
+          "id": "eI5R7s-W9sE",
+          "title": "3000 серверов — это предел Kubernetes",
+          "published_at": "2026-08-01T12:00:33Z",
+          "views": 6793,
+          "likes": 60,
+          "comments": 6,
+          "url": "https://www.youtube.com/watch?v=eI5R7s-W9sE"
+        },
+        {
+          "id": "91dkdKofGjw",
+          "title": "Платформенный QA - проверяй самое важное #avitotech",
+          "published_at": "2026-07-31T13:29:54Z",
+          "views": 2578,
+          "likes": 52,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=91dkdKofGjw"
+        },
+        {
+          "id": "z3HuoQ7L3-g",
+          "title": "Как быть, когда ты остаёшься #avitotech #подкаст #тимлид #work  #productivity",
+          "published_at": "2026-07-30T08:00:02Z",
+          "views": 5184,
+          "likes": 23,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=z3HuoQ7L3-g"
+        },
+        {
+          "id": "iL4mF-PJRAY",
+          "title": "Разработка и тестирование MCP для внутренних агентных систем аналитики — Алексей Пахомов",
+          "published_at": "2026-07-29T09:00:19Z",
+          "views": 1070,
+          "likes": 26,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=iL4mF-PJRAY"
+        },
+        {
+          "id": "cGu2SnTQeMg",
+          "title": "Что происходит, когда компания растет #avitotech",
+          "published_at": "2026-07-28T09:30:11Z",
+          "views": 8598,
+          "likes": 42,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=cGu2SnTQeMg"
+        },
+        {
+          "id": "cVC_-NZq5CM",
+          "title": "В детстве я думал, что буду разрабатывать игры #avitotech",
+          "published_at": "2026-07-27T09:45:26Z",
+          "views": 1995,
+          "likes": 9,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=cVC_-NZq5CM"
+        },
+        {
+          "id": "FotvS6AapaI",
+          "title": "Главная It-вечеринка – АвитоТехно",
+          "published_at": "2026-07-26T08:00:03Z",
+          "views": 1059,
+          "likes": 10,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=FotvS6AapaI"
+        },
+        {
+          "id": "yNaJ3aeLqc8",
+          "title": "Kubernetes —  стандарт рынка?",
+          "published_at": "2026-07-25T12:00:20Z",
+          "views": 6580,
+          "likes": 36,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=yNaJ3aeLqc8"
+        },
+        {
+          "id": "2qLJdHJxBHU",
+          "title": "Продакт должен разбираться в AI #avitotech",
+          "published_at": "2026-07-24T09:00:26Z",
+          "views": 3137,
+          "likes": 19,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=2qLJdHJxBHU"
+        },
+        {
+          "id": "VPkhUectpxc",
+          "title": "Угадай товар с Авито по фото #avitotech",
+          "published_at": "2026-07-23T10:49:54Z",
+          "views": 2652,
+          "likes": 25,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=VPkhUectpxc"
+        },
+        {
+          "id": "BhZ2ilR38_s",
+          "title": "Kubernetes 2035: кто будет управлять инфраструктурой? | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-07-22T12:00:36Z",
+          "views": 1409,
+          "likes": 44,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=BhZ2ilR38_s"
+        },
+        {
+          "id": "DORRQIUhe1I",
+          "title": "Крупный релиз оказался катастрофой",
+          "published_at": "2026-07-21T12:00:00Z",
+          "views": 1798,
+          "likes": 16,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=DORRQIUhe1I"
+        },
+        {
+          "id": "EBPGiG9ddKQ",
+          "title": "Spec-Driven Development: теория, инструменты, практика — Александр Шаповалов",
+          "published_at": "2026-07-21T09:00:17Z",
+          "views": 23809,
+          "likes": 494,
+          "comments": 43,
+          "url": "https://www.youtube.com/watch?v=EBPGiG9ddKQ"
+        },
+        {
+          "id": "0Gv4XsWtqws",
+          "title": "Не нужно гнаться за новыми нейросетями #avitotech",
+          "published_at": "2026-07-20T14:15:30Z",
+          "views": 3169,
+          "likes": 27,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=0Gv4XsWtqws"
+        },
+        {
+          "id": "UCJb9e58mMs",
+          "title": "AI уже меняет опыт пользователя",
+          "published_at": "2026-07-20T08:40:42Z",
+          "views": 2932,
+          "likes": 18,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=UCJb9e58mMs"
+        },
+        {
+          "id": "p6IxC0kJE44",
+          "title": "Ты не влияешь на осуществление мечт #avitotech",
+          "published_at": "2026-07-18T09:00:09Z",
+          "views": 1778,
+          "likes": 15,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=p6IxC0kJE44"
+        },
+        {
+          "id": "By6GmOxm1gk",
+          "title": "Как в Авито решают вопросы с деградацией",
+          "published_at": "2026-07-16T12:00:19Z",
+          "views": 4978,
+          "likes": 40,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=By6GmOxm1gk"
+        },
+        {
+          "id": "s3MEDuXtEa8",
+          "title": "Когда сотрудник уходит: чек-лист для тех, кто остаётся | Подкаст «Свободный слот»",
+          "published_at": "2026-07-16T09:00:26Z",
+          "views": 1804,
+          "likes": 54,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=s3MEDuXtEa8"
+        },
+        {
+          "id": "vezEx9rJG6o",
+          "title": "Ушёл из Яндекса в Авито. СТО Авито Товары про свою миссию в айти.",
+          "published_at": "2026-07-15T13:15:07Z",
+          "views": 1060,
+          "likes": 21,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=vezEx9rJG6o"
+        },
+        {
+          "id": "_KF3_cFLivU",
+          "title": "Work-life balance может быть разным #avitotech",
+          "published_at": "2026-07-13T15:22:57Z",
+          "views": 2763,
+          "likes": 33,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=_KF3_cFLivU"
+        },
+        {
+          "id": "Yb252wHy-Nk",
+          "title": "Деплой — это не релиз!?",
+          "published_at": "2026-07-10T12:00:24Z",
+          "views": 3111,
+          "likes": 20,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Yb252wHy-Nk"
+        },
+        {
+          "id": "139y1Bll57g",
+          "title": "System Design валит кандидатов на собеседованиях  #avitotech",
+          "published_at": "2026-07-09T12:02:06Z",
+          "views": 4404,
+          "likes": 48,
+          "comments": 6,
+          "url": "https://www.youtube.com/watch?v=139y1Bll57g"
+        },
+        {
+          "id": "kgSxP6LSIm0",
+          "title": "Медоеду не пофиг на 300 000 руб. CTF от Авито. #avitotech #ctf",
+          "published_at": "2026-07-09T08:00:20Z",
+          "views": 3251,
+          "likes": 53,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=kgSxP6LSIm0"
+        },
+        {
+          "id": "i6MeavIJTwk",
+          "title": "Из логотипа в линейку предметов для дома | Avito Design Team",
+          "published_at": "2026-07-08T15:00:10Z",
+          "views": 793,
+          "likes": 13,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=i6MeavIJTwk"
+        },
+        {
+          "id": "AveQ0wvWK4w",
+          "title": "Как развивалась виртуализация в Авито? #avitotech",
+          "published_at": "2026-07-08T13:44:45Z",
+          "views": 1972,
+          "likes": 61,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=AveQ0wvWK4w"
+        },
+        {
+          "id": "4bmMjQCEdEw",
+          "title": "Prod vs stage. Почему прод повторить невозможно?",
+          "published_at": "2026-07-07T12:00:29Z",
+          "views": 6645,
+          "likes": 63,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=4bmMjQCEdEw"
+        },
+        {
+          "id": "K6ebRiNn7-Y",
+          "title": "Google ошибок не прощает",
+          "published_at": "2026-07-05T12:00:34Z",
+          "views": 4692,
+          "likes": 24,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=K6ebRiNn7-Y"
+        },
+        {
+          "id": "MKNg7gwnUX0",
+          "title": "System Design на собеседовании: ошибки, которые тебя топят",
+          "published_at": "2026-07-03T12:00:20Z",
+          "views": 60784,
+          "likes": 1604,
+          "comments": 278,
+          "url": "https://www.youtube.com/watch?v=MKNg7gwnUX0"
+        },
+        {
+          "id": "xwt5ajad4Co",
+          "title": "Учимся отвечать на вопросы",
+          "published_at": "2026-07-03T08:00:22Z",
+          "views": 2586,
+          "likes": 26,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=xwt5ajad4Co"
+        },
+        {
+          "id": "Y51N_H2fZS0",
+          "title": "Мы узнали, о чем думают топы в IT прямо сейчас | Подкаст «Свободный слот»",
+          "published_at": "2026-07-02T15:55:15Z",
+          "views": 1895,
+          "likes": 41,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Y51N_H2fZS0"
+        },
+        {
+          "id": "R23FjSp8Z-A",
+          "title": "Что такое релизы? И причем тут Feature Flags, Canary и Rollback? | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-07-01T12:00:06Z",
+          "views": 1608,
+          "likes": 39,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=R23FjSp8Z-A"
+        }
+      ]
     },
     {
       "brand": "Kaspersky",
@@ -81,46 +876,964 @@
       "brand": "YADRO",
       "status": "ok",
       "query": "YADRO",
-      "channel_id": "UCw-5Is3U1EO8A8deam9TKig",
-      "channel_title": "YADRO",
-      "channel_url": "https://www.youtube.com/channel/UCw-5Is3U1EO8A8deam9TKig",
+      "channel_id": "UCBOcFryFyHupLKHHxMSXXvQ",
+      "channel_title": "Истовый Инженер",
+      "channel_url": "https://www.youtube.com/channel/UCBOcFryFyHupLKHHxMSXXvQ",
       "match_score": 1,
-      "match_method": "configured",
+      "match_method": "handle",
       "match_candidates": null,
-      "subscribers": 124,
+      "subscribers": 16500,
       "subscribers_hidden": false,
-      "channel_total_videos": 18,
-      "q3_videos": 2,
-      "q3_views_total": 163,
-      "q3_views_average": 81.5,
-      "q3_views_median": 81.5,
+      "channel_total_videos": 573,
+      "q3_videos": 104,
+      "q3_views_total": 157147,
+      "q3_views_average": 1511.0288461538462,
+      "q3_views_median": 1193,
       "top_video": {
-        "id": "CY6ZuggPtlU",
-        "title": "Feeling lonely? (Deathwish) is officially out 🪦 #emotrap #emohiphop #sadtrap #trapchileno",
-        "published_at": "2026-09-08T01:23:45Z",
-        "views": 82,
-        "likes": 2,
-        "comments": 2,
-        "url": "https://www.youtube.com/watch?v=CY6ZuggPtlU"
+        "id": "APVFepbSKs8",
+        "title": "Лекция Сергея Жмылёва и Дениса Довженко о языке C и системном программировании",
+        "published_at": "2026-09-26T08:00:06Z",
+        "views": 16605,
+        "likes": null,
+        "comments": 32,
+        "url": "https://www.youtube.com/watch?v=APVFepbSKs8"
       },
       "videos": [
         {
-          "id": "CY6ZuggPtlU",
-          "title": "Feeling lonely? (Deathwish) is officially out 🪦 #emotrap #emohiphop #sadtrap #trapchileno",
-          "published_at": "2026-09-08T01:23:45Z",
-          "views": 82,
-          "likes": 2,
-          "comments": 2,
-          "url": "https://www.youtube.com/watch?v=CY6ZuggPtlU"
+          "id": "k8gDkdmUuOk",
+          "title": "Какие были предпосылки для изобретения радио?",
+          "published_at": "2026-09-30T15:44:37Z",
+          "views": 95,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=k8gDkdmUuOk"
         },
         {
-          "id": "u9iuSlhg1ww",
-          "title": "YADRO - Feeling Lonely? (Deathwish) Official Video",
-          "published_at": "2026-09-04T17:00:06Z",
-          "views": 81,
-          "likes": 7,
+          "id": "qZnObL-dXt0",
+          "title": "От мусоровоза до процессора: как предыдущий опыт помогает решать новые инженерные задачи",
+          "published_at": "2026-09-30T08:00:10Z",
+          "views": 3851,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=qZnObL-dXt0"
+        },
+        {
+          "id": "du7KYfXVly4",
+          "title": "Бесплатные токены: отработка ТЗ на локальной модели",
+          "published_at": "2026-09-29T05:30:25Z",
+          "views": 1463,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=du7KYfXVly4"
+        },
+        {
+          "id": "aAAsUUzJOHo",
+          "title": "Что такое краевой искусственный интеллект",
+          "published_at": "2026-09-28T05:45:22Z",
+          "views": 1744,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=aAAsUUzJOHo"
+        },
+        {
+          "id": "cC3TGOg0CLQ",
+          "title": "Умножьте 18 на 28: конвейеризация на пальцах",
+          "published_at": "2026-09-27T09:15:05Z",
+          "views": 387,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=cC3TGOg0CLQ"
+        },
+        {
+          "id": "_a_eY5zUYVs",
+          "title": "Когда нужна ПЛИС, а когда хватит микроконтроллера",
+          "published_at": "2026-09-26T08:45:01Z",
+          "views": 1831,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=_a_eY5zUYVs"
+        },
+        {
+          "id": "APVFepbSKs8",
+          "title": "Лекция Сергея Жмылёва и Дениса Довженко о языке C и системном программировании",
+          "published_at": "2026-09-26T08:00:06Z",
+          "views": 16605,
+          "likes": null,
+          "comments": 32,
+          "url": "https://www.youtube.com/watch?v=APVFepbSKs8"
+        },
+        {
+          "id": "RKD62N6YyHQ",
+          "title": "Нейросеть-триггер прямо в ПЛИС",
+          "published_at": "2026-09-25T06:45:09Z",
+          "views": 843,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=RKD62N6YyHQ"
+        },
+        {
+          "id": "9ox72-BZ0Sg",
+          "title": "Будущее связи: от интернета вещей к интернету ощущений",
+          "published_at": "2026-09-24T15:56:04Z",
+          "views": 1242,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=9ox72-BZ0Sg"
+        },
+        {
+          "id": "GeF94KG47Hw",
+          "title": "Почему ваши навыки обнулятся через 7 лет?",
+          "published_at": "2026-09-23T16:01:27Z",
+          "views": 389,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=GeF94KG47Hw"
+        },
+        {
+          "id": "Fcb4c7vn2qo",
+          "title": "Как СМС случайно захватили мир?",
+          "published_at": "2026-09-22T15:47:16Z",
+          "views": 1528,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=Fcb4c7vn2qo"
+        },
+        {
+          "id": "dVPh8iF1h14",
+          "title": "Антенна — символ нашей цивилизации",
+          "published_at": "2026-09-21T15:45:19Z",
+          "views": 657,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=dVPh8iF1h14"
+        },
+        {
+          "id": "PMool366exw",
+          "title": "Промышленная асинхронность: опыт внедрения C++20 корутин в сервисы KvadraOS — Илья Клементьев, YADRO",
+          "published_at": "2026-09-21T07:17:07Z",
+          "views": 1047,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=PMool366exw"
+        },
+        {
+          "id": "SoI631dRc-k",
+          "title": "Корутины в продакшене: как перевести движущийся поезд на асфальт — Алексей Макареня, Kaspersky Lab",
+          "published_at": "2026-09-21T07:11:09Z",
+          "views": 1438,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=SoI631dRc-k"
+        },
+        {
+          "id": "5qaREONmj1o",
+          "title": "Почему тёмная тема реально продлевает жизнь аккумулятора?",
+          "published_at": "2026-09-20T07:15:02Z",
+          "views": 2017,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=5qaREONmj1o"
+        },
+        {
+          "id": "OPXrhqh78f4",
+          "title": "Как батарейка смартфона создала формат коротких видео?",
+          "published_at": "2026-09-19T07:05:19Z",
+          "views": 850,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=OPXrhqh78f4"
+        },
+        {
+          "id": "VJbt7RCDDqY",
+          "title": "Лекция Алексея Ганицева: как мобильная связь изменила нашу жизнь — от GSM до 6G",
+          "published_at": "2026-09-18T13:06:07Z",
+          "views": 2775,
+          "likes": null,
+          "comments": 5,
+          "url": "https://www.youtube.com/watch?v=VJbt7RCDDqY"
+        },
+        {
+          "id": "1nSxSC59MIM",
+          "title": "Почему автоскалирование убьёт вашу БД",
+          "published_at": "2026-09-18T06:15:18Z",
+          "views": 1019,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=1nSxSC59MIM"
+        },
+        {
+          "id": "0B0sgxGT7Ck",
+          "title": "Почему push-модель в Postgres — это ловушка?",
+          "published_at": "2026-09-17T15:30:35Z",
+          "views": 909,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=0B0sgxGT7Ck"
+        },
+        {
+          "id": "m2Z663jnaOY",
+          "title": "Как избежать split-brain в задачах на Postgres",
+          "published_at": "2026-09-16T07:15:03Z",
+          "views": 432,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=m2Z663jnaOY"
+        },
+        {
+          "id": "GLdSbcJvETc",
+          "title": "Почему нельзя делать мгновенный ретрай при ошибках",
+          "published_at": "2026-09-15T06:45:06Z",
+          "views": 660,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=GLdSbcJvETc"
+        },
+        {
+          "id": "xnPu-qOzMBo",
+          "title": "Как ускорить работу с очередями в Postgres в 4 раза",
+          "published_at": "2026-09-14T07:30:22Z",
+          "views": 1532,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=xnPu-qOzMBo"
+        },
+        {
+          "id": "5CJvVFO7PiA",
+          "title": "Как 3D-печать создала целую индустрию?",
+          "published_at": "2026-09-13T07:10:25Z",
+          "views": 1143,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=5CJvVFO7PiA"
+        },
+        {
+          "id": "GhMGTxrAD4I",
+          "title": "Можно ли управлять протезом так же естественно, как собственной рукой?",
+          "published_at": "2026-09-12T07:06:10Z",
+          "views": 1093,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=GhMGTxrAD4I"
+        },
+        {
+          "id": "SIY5EMDCV8Q",
+          "title": "Может ли протез оказаться быстрее человеческой руки?",
+          "published_at": "2026-09-11T15:30:02Z",
+          "views": 1492,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=SIY5EMDCV8Q"
+        },
+        {
+          "id": "joi_n7F-_jg",
+          "title": "Запуск нейросетей на ПЛИС. Краевой ИИ. Академическая деятельность.",
+          "published_at": "2026-09-11T14:30:06Z",
+          "views": 6673,
+          "likes": null,
+          "comments": 18,
+          "url": "https://www.youtube.com/watch?v=joi_n7F-_jg"
+        },
+        {
+          "id": "vEKI8fD-_Ck",
+          "title": "YADRO ✕ C++ Russia встреча С++ сообщества 2026 | Москва | 10.09.2026 |",
+          "published_at": "2026-09-11T07:01:36Z",
+          "views": 2520,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=vEKI8fD-_Ck"
+        },
+        {
+          "id": "c_1__ZiD7zw",
+          "title": "Почему ИИ никогда не заменит инженера?",
+          "published_at": "2026-09-10T15:57:30Z",
+          "views": 2500,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=c_1__ZiD7zw"
+        },
+        {
+          "id": "_t80rWSVVuk",
+          "title": "Как нейросети оживляют протезы",
+          "published_at": "2026-09-09T16:07:04Z",
+          "views": 579,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=_t80rWSVVuk"
+        },
+        {
+          "id": "ZfM-ZPpZr6Y",
+          "title": "Как спроектировать будущее на 200 лет вперёд?",
+          "published_at": "2026-09-08T15:49:38Z",
+          "views": 2403,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=ZfM-ZPpZr6Y"
+        },
+        {
+          "id": "56iAXmXQ5VQ",
+          "title": "Протезы с Wi-Fi и оплатой: как люди становятся киборгами",
+          "published_at": "2026-09-07T15:47:39Z",
+          "views": 1184,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=56iAXmXQ5VQ"
+        },
+        {
+          "id": "EI2tvK4sQHo",
+          "title": "Почему робототехника? Выбор профессии и суровая реальность вуза",
+          "published_at": "2026-09-06T07:30:34Z",
+          "views": 1172,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=EI2tvK4sQHo"
+        },
+        {
+          "id": "ltiPlpvDpwE",
+          "title": "Как создать протез, который чувствует каждый палец?",
+          "published_at": "2026-09-05T07:04:14Z",
+          "views": 1452,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=ltiPlpvDpwE"
+        },
+        {
+          "id": "WTS0489EBac",
+          "title": "Почему стыд за первый продукт — это хорошо?",
+          "published_at": "2026-09-04T15:11:27Z",
+          "views": 1152,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=WTS0489EBac"
+        },
+        {
+          "id": "QqyY7iILMVs",
+          "title": "Как AI помогает в работе над QEMU",
+          "published_at": "2026-09-03T05:45:13Z",
+          "views": 1356,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=QqyY7iILMVs"
+        },
+        {
+          "id": "sT-IKzjE1DI",
+          "title": "Реверс-дебаг: как вернуться в прошлое во время отладки",
+          "published_at": "2026-09-02T05:30:19Z",
+          "views": 1691,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=sT-IKzjE1DI"
+        },
+        {
+          "id": "I_Vg7Kog5TE",
+          "title": "Разгоняем: кто из инженеров нужен, чтобы разработать чип?",
+          "published_at": "2026-09-01T14:00:06Z",
+          "views": 3110,
+          "likes": null,
+          "comments": 9,
+          "url": "https://www.youtube.com/watch?v=I_Vg7Kog5TE"
+        },
+        {
+          "id": "WpmtYJvBhTg",
+          "title": "Почему ошибку проще искать в QEMU, чем на ПЛИС",
+          "published_at": "2026-09-01T05:15:01Z",
+          "views": 1414,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=WpmtYJvBhTg"
+        },
+        {
+          "id": "B1_rWyG0auw",
+          "title": "Проблемы с многопоточностью в QEMU",
+          "published_at": "2026-08-31T05:45:26Z",
+          "views": 333,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=B1_rWyG0auw"
+        },
+        {
+          "id": "bowkEk83LX8",
+          "title": "Почему в QEMU не поймать баги с кешами",
+          "published_at": "2026-08-30T07:45:04Z",
+          "views": 1334,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=bowkEk83LX8"
+        },
+        {
+          "id": "iuoGjnfVJG8",
+          "title": "Как инженеры-конструкторы проектируют СХД",
+          "published_at": "2026-08-29T09:26:51Z",
+          "views": 1702,
+          "likes": null,
+          "comments": 6,
+          "url": "https://www.youtube.com/watch?v=iuoGjnfVJG8"
+        },
+        {
+          "id": "TF-jDd06rVQ",
+          "title": "Что такое банан-газ",
+          "published_at": "2026-08-29T07:45:28Z",
+          "views": 1678,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=TF-jDd06rVQ"
+        },
+        {
+          "id": "beYys2CI25U",
+          "title": "Лекция «АЭС глазами инженера: жизненный цикл атомной станции»",
+          "published_at": "2026-08-28T16:02:40Z",
+          "views": 0,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=beYys2CI25U"
+        },
+        {
+          "id": "pGAUJW0SYGc",
+          "title": "Функциональные симуляторы: использование, точность, скорость.Симулятор QEMU.TCG engine",
+          "published_at": "2026-08-28T14:30:16Z",
+          "views": 6242,
+          "likes": null,
+          "comments": 7,
+          "url": "https://www.youtube.com/watch?v=pGAUJW0SYGc"
+        },
+        {
+          "id": "xc4quP9P8x8",
+          "title": "Скрытые баги в старом коде",
+          "published_at": "2026-08-28T08:45:32Z",
+          "views": 1816,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=xc4quP9P8x8"
+        },
+        {
+          "id": "PWOkzIucX3s",
+          "title": "Кодогенерация: как ускорить разработку",
+          "published_at": "2026-08-27T07:15:11Z",
+          "views": 1202,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=PWOkzIucX3s"
+        },
+        {
+          "id": "-L4bybGZZkk",
+          "title": "Почему мы перешли с Python на Go: ускорение в 13 раз",
+          "published_at": "2026-08-26T06:45:11Z",
+          "views": 1674,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=-L4bybGZZkk"
+        },
+        {
+          "id": "EQqIXmED5v8",
+          "title": "Когда система не справляется с нагрузкой",
+          "published_at": "2026-08-25T08:00:22Z",
+          "views": 1118,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=EQqIXmED5v8"
+        },
+        {
+          "id": "lZ4ZDjbVCZI",
+          "title": "Почему система «упала» под нагрузкой?",
+          "published_at": "2026-08-24T08:15:11Z",
+          "views": 205,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=lZ4ZDjbVCZI"
+        },
+        {
+          "id": "tjm4lD812iY",
+          "title": "Результаты эксперимента на свиньях: сердце бьётся!",
+          "published_at": "2026-08-23T07:09:26Z",
+          "views": 994,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=tjm4lD812iY"
+        },
+        {
+          "id": "jXeUJ767tj0",
+          "title": "От бионических протезов до межзвёздных полётов: путь инженера-робототехника.",
+          "published_at": "2026-08-22T08:00:06Z",
+          "views": 1636,
+          "likes": null,
+          "comments": 6,
+          "url": "https://www.youtube.com/watch?v=jXeUJ767tj0"
+        },
+        {
+          "id": "M3VF-Rnkmd4",
+          "title": "Главная опасность искусственного сердца",
+          "published_at": "2026-08-22T07:03:37Z",
+          "views": 952,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=M3VF-Rnkmd4"
+        },
+        {
+          "id": "AtYWH1NAn1M",
+          "title": "Что такое аритмия простыми словами?",
+          "published_at": "2026-08-21T15:47:53Z",
+          "views": 905,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=AtYWH1NAn1M"
+        },
+        {
+          "id": "4ztignfOl3E",
+          "title": "Почему кардиологи боятся за пациентов с искусственным сердцем?",
+          "published_at": "2026-08-20T17:13:24Z",
+          "views": 871,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=4ztignfOl3E"
+        },
+        {
+          "id": "_8c4AbT4v1o",
+          "title": "Почему нельзя просто подсадить стволовые клетки?",
+          "published_at": "2026-08-19T17:49:55Z",
+          "views": 574,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=_8c4AbT4v1o"
+        },
+        {
+          "id": "kccSm3X937Q",
+          "title": "Трудный путь к первой пересадке сердца",
+          "published_at": "2026-08-18T15:28:07Z",
+          "views": 471,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=kccSm3X937Q"
+        },
+        {
+          "id": "Z5hXSKFbkzE",
+          "title": "От огромных аппаратов до устройства размером с рисовое зёрнышко",
+          "published_at": "2026-08-17T16:21:59Z",
+          "views": 981,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Z5hXSKFbkzE"
+        },
+        {
+          "id": "oDOEjxMfeig",
+          "title": "Как создавали первое искусственное сердце?",
+          "published_at": "2026-08-16T07:06:12Z",
+          "views": 1475,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=oDOEjxMfeig"
+        },
+        {
+          "id": "-oJaH77XTaA",
+          "title": "Сердце как инженерная задача: искусственное сердце vs тканевая инженерия. Лекция Валерии Цвелой",
+          "published_at": "2026-08-15T07:30:04Z",
+          "views": 485,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=-oJaH77XTaA"
+        },
+        {
+          "id": "Fte279Joar8",
+          "title": "Существует ли искусственное сердце на самом деле?",
+          "published_at": "2026-08-15T07:09:27Z",
+          "views": 1321,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Fte279Joar8"
+        },
+        {
+          "id": "K3mJSFq0FyI",
+          "title": "Как жить с искусственным сердцем?",
+          "published_at": "2026-08-14T15:30:34Z",
+          "views": 1060,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=K3mJSFq0FyI"
+        },
+        {
+          "id": "sJMZHbobjjk",
+          "title": "Кто такой инженер-верификатор и почему без него не обойтись?",
+          "published_at": "2026-08-07T16:23:41Z",
+          "views": 1685,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=sJMZHbobjjk"
+        },
+        {
+          "id": "3WHyazI6ho8",
+          "title": "Проблемы с обновлениями upstream-версий",
+          "published_at": "2026-08-05T06:45:32Z",
+          "views": 1074,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=3WHyazI6ho8"
+        },
+        {
+          "id": "AbfTY9-zHs4",
+          "title": "Сходство AOSP и Linux",
+          "published_at": "2026-08-04T16:15:39Z",
+          "views": 679,
+          "likes": null,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=AbfTY9-zHs4"
+        },
+        {
+          "id": "gRr-GgcglPY",
+          "title": "Зачем нужен HDMI CEC",
+          "published_at": "2026-08-03T05:45:06Z",
+          "views": 1803,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=gRr-GgcglPY"
+        },
+        {
+          "id": "EYX4-AjnQJg",
+          "title": "Проблемы с исходниками китайских вендоров",
+          "published_at": "2026-08-02T08:15:05Z",
+          "views": 1728,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=EYX4-AjnQJg"
+        },
+        {
+          "id": "bMcNUyXno1w",
+          "title": "Что определяет выбор программы для сбора прошивок в реальной работе",
+          "published_at": "2026-08-01T08:00:25Z",
+          "views": 1243,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=bMcNUyXno1w"
+        },
+        {
+          "id": "VRpGiKzVEyA",
+          "title": "Как работает control plane в СХД",
+          "published_at": "2026-07-31T18:29:57Z",
+          "views": 1408,
+          "likes": null,
           "comments": 4,
-          "url": "https://www.youtube.com/watch?v=u9iuSlhg1ww"
+          "url": "https://www.youtube.com/watch?v=VRpGiKzVEyA"
+        },
+        {
+          "id": "DgNQ2DwiXSU",
+          "title": "AOSP / Разработка прошивок / Russian Linux Kernel Community",
+          "published_at": "2026-07-31T14:00:06Z",
+          "views": 2534,
+          "likes": null,
+          "comments": 7,
+          "url": "https://www.youtube.com/watch?v=DgNQ2DwiXSU"
+        },
+        {
+          "id": "FINXdB6aQQE",
+          "title": "Почему верификаторы — редкие и ценные специалисты в IT?",
+          "published_at": "2026-07-30T16:23:39Z",
+          "views": 2592,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=FINXdB6aQQE"
+        },
+        {
+          "id": "hqNIjgzHRyg",
+          "title": "YADRO х Postgres Pro встреча Go-сообщества 2026 | Москва | 23.07.2026 |",
+          "published_at": "2026-07-30T14:06:14Z",
+          "views": 522,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=hqNIjgzHRyg"
+        },
+        {
+          "id": "fx1PXHW19Rk",
+          "title": "От Python к Go: не бойтесь переписывать готовые решения - Иван Локк, YADRO",
+          "published_at": "2026-07-30T14:00:09Z",
+          "views": 326,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=fx1PXHW19Rk"
+        },
+        {
+          "id": "2QCYevEYSsY",
+          "title": "Построение пулов и очередей задач на базе Postgres - Владислад Сидорин, Postgres Professional",
+          "published_at": "2026-07-30T13:59:15Z",
+          "views": 323,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=2QCYevEYSsY"
+        },
+        {
+          "id": "ikXUF4fqj_g",
+          "title": "Почему верификатор — это не просто тестировщик?",
+          "published_at": "2026-07-29T15:58:38Z",
+          "views": 1172,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=ikXUF4fqj_g"
+        },
+        {
+          "id": "jiZDngWWmlE",
+          "title": "Совет, который спасет ваш карьерный шанс",
+          "published_at": "2026-07-28T17:00:09Z",
+          "views": 1400,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=jiZDngWWmlE"
+        },
+        {
+          "id": "Q1-xl0drAGU",
+          "title": "После двух лет работы я не чувствовал себя сильным инженером",
+          "published_at": "2026-07-27T10:00:16Z",
+          "views": 1848,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Q1-xl0drAGU"
+        },
+        {
+          "id": "R-tPiS8Buis",
+          "title": "Нужно ли работать строго по той специальности, которая написана в дипломе?",
+          "published_at": "2026-07-26T16:00:25Z",
+          "views": 897,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=R-tPiS8Buis"
+        },
+        {
+          "id": "SiA5yotDvyc",
+          "title": "Где получить образование верификатора?",
+          "published_at": "2026-07-25T09:00:30Z",
+          "views": 1817,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=SiA5yotDvyc"
+        },
+        {
+          "id": "jJqqKaffgeI",
+          "title": "Самое ценное в работе верификатора",
+          "published_at": "2026-07-24T17:00:28Z",
+          "views": 1110,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=jJqqKaffgeI"
+        },
+        {
+          "id": "wXNdBDwYGnU",
+          "title": "Как попасть в профессию, которой почти не учат в вузах, — история инженера-верификатора",
+          "published_at": "2026-07-24T14:00:06Z",
+          "views": 1206,
+          "likes": null,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=wXNdBDwYGnU"
+        },
+        {
+          "id": "ps3pHLk0UaI",
+          "title": "С чего началась физика ускорителей?",
+          "published_at": "2026-07-23T14:01:01Z",
+          "views": 3495,
+          "likes": null,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=ps3pHLk0UaI"
+        },
+        {
+          "id": "f7eeRL4soMA",
+          "title": "Откуда берутся электроны?",
+          "published_at": "2026-07-22T14:02:26Z",
+          "views": 1309,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=f7eeRL4soMA"
+        },
+        {
+          "id": "arj9IEMuY5U",
+          "title": "Можно ли просканировать мумию?",
+          "published_at": "2026-07-21T14:01:29Z",
+          "views": 945,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=arj9IEMuY5U"
+        },
+        {
+          "id": "DpfAP2xRYCU",
+          "title": "Чёрные дыры, ЦЕРН и мифы об ускорителях",
+          "published_at": "2026-07-20T14:09:21Z",
+          "views": 1598,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=DpfAP2xRYCU"
+        },
+        {
+          "id": "XvFXShmw7VI",
+          "title": "Почему пучок частиц не разваливается?",
+          "published_at": "2026-07-19T07:12:05Z",
+          "views": 619,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=XvFXShmw7VI"
+        },
+        {
+          "id": "WWoXEZfH4zA",
+          "title": "Точность в 50 микрон — это вообще реально?",
+          "published_at": "2026-07-18T07:04:37Z",
+          "views": 743,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=WWoXEZfH4zA"
+        },
+        {
+          "id": "YqszU6NbwBo",
+          "title": "Зачем нам ЦЕРН, если есть СКИФ?",
+          "published_at": "2026-07-17T16:45:01Z",
+          "views": 1556,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=YqszU6NbwBo"
+        },
+        {
+          "id": "jQt9gSgXnOU",
+          "title": "СКИФ в Новосибирске: что это и зачем нужен новый синхротрон. Лекция Дарьи Дороховой.",
+          "published_at": "2026-07-17T14:22:01Z",
+          "views": 1166,
+          "likes": null,
+          "comments": 16,
+          "url": "https://www.youtube.com/watch?v=jQt9gSgXnOU"
+        },
+        {
+          "id": "2hBjjoTxnn8",
+          "title": "Мини-конференция плисоводов: FPGA vs ASIC, RISC-V, новые фреймворки и разработки",
+          "published_at": "2026-07-16T16:13:52Z",
+          "views": 0,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=2hBjjoTxnn8"
+        },
+        {
+          "id": "OXUiKVpdFlE",
+          "title": "Почему страшно менять карьеру?",
+          "published_at": "2026-07-16T14:03:35Z",
+          "views": 847,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=OXUiKVpdFlE"
+        },
+        {
+          "id": "tQv1a9xb5PY",
+          "title": "Как инженер создал первый армянский спутник",
+          "published_at": "2026-07-15T14:06:09Z",
+          "views": 1934,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=tQv1a9xb5PY"
+        },
+        {
+          "id": "WzDu0BTej8U",
+          "title": "Как чип в мозге создаёт изображение?",
+          "published_at": "2026-07-14T14:02:36Z",
+          "views": 1741,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=WzDu0BTej8U"
+        },
+        {
+          "id": "E8NMj88BZP0",
+          "title": "Видит ли человек пиксели через имплант в мозге?",
+          "published_at": "2026-07-13T14:03:38Z",
+          "views": 153,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=E8NMj88BZP0"
+        },
+        {
+          "id": "ZVPQ6qSMupk",
+          "title": "Правильная помощь ИИ в open source-разработке",
+          "published_at": "2026-07-11T09:45:26Z",
+          "views": 621,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=ZVPQ6qSMupk"
+        },
+        {
+          "id": "aSl6L69IuCE",
+          "title": "Правильная помощь ИИ в open source-разработке",
+          "published_at": "2026-07-10T09:30:11Z",
+          "views": 449,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=aSl6L69IuCE"
+        },
+        {
+          "id": "5VKNMx_oHlk",
+          "title": "Радикальные подходы в open source",
+          "published_at": "2026-07-09T15:45:22Z",
+          "views": 2688,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=5VKNMx_oHlk"
+        },
+        {
+          "id": "vBDSmiKfNWc",
+          "title": "Подход not invented here в автоматизации",
+          "published_at": "2026-07-08T05:15:08Z",
+          "views": 1277,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=vBDSmiKfNWc"
+        },
+        {
+          "id": "FdtTy-29x4c",
+          "title": "Верификаторы «меж трех огней»",
+          "published_at": "2026-07-07T16:15:14Z",
+          "views": 806,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=FdtTy-29x4c"
+        },
+        {
+          "id": "iexrHWZUomY",
+          "title": "Типичные проблемы, выявляемые при верификации кеша",
+          "published_at": "2026-07-06T15:45:52Z",
+          "views": 1116,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=iexrHWZUomY"
+        },
+        {
+          "id": "jzck9QeTmBc",
+          "title": "Почему врачи и инженеры говорят на разных языках",
+          "published_at": "2026-07-05T07:06:36Z",
+          "views": 1589,
+          "likes": null,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=jzck9QeTmBc"
+        },
+        {
+          "id": "IVqsDpDqnpg",
+          "title": "Технология, которая отключает тремор",
+          "published_at": "2026-07-04T07:02:37Z",
+          "views": 946,
+          "likes": null,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=IVqsDpDqnpg"
+        },
+        {
+          "id": "cLNZwAW7T_4",
+          "title": "Когерентность. Автоматизация. Искусственный интеллект для RTL и верификации.",
+          "published_at": "2026-07-03T15:15:06Z",
+          "views": 1282,
+          "likes": null,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=cLNZwAW7T_4"
+        },
+        {
+          "id": "qvsmO0eAop8",
+          "title": "Почему мы видим по-разному",
+          "published_at": "2026-07-03T14:02:12Z",
+          "views": 738,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=qvsmO0eAop8"
+        },
+        {
+          "id": "msxRe2f_1Pc",
+          "title": "Почему идея “помочь людям” не спасает стартап",
+          "published_at": "2026-07-01T15:57:22Z",
+          "views": 885,
+          "likes": null,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=msxRe2f_1Pc"
         }
       ]
     },
@@ -888,11 +2601,635 @@
     },
     {
       "brand": "Selectel",
-      "status": "not_found",
+      "status": "ok",
       "query": "Selectel",
-      "channel_id": null,
-      "match_score": 0,
-      "match_method": "username_not_found"
+      "channel_id": "UCVU0Ml1l_Y90wmy5EjWTSng",
+      "channel_title": "Selectel",
+      "channel_url": "https://www.youtube.com/channel/UCVU0Ml1l_Y90wmy5EjWTSng",
+      "match_score": 1,
+      "match_method": "configured",
+      "match_candidates": null,
+      "subscribers": 10200,
+      "subscribers_hidden": false,
+      "channel_total_videos": 852,
+      "q3_videos": 67,
+      "q3_views_total": 670640,
+      "q3_views_average": 10009.55223880597,
+      "q3_views_median": 1556,
+      "top_video": {
+        "id": "W0-ObyrU1Rk",
+        "title": "Открываем регистрацию на Selectel ТехноДень!",
+        "published_at": "2026-08-17T13:34:03Z",
+        "views": 75534,
+        "likes": 44,
+        "comments": 0,
+        "url": "https://www.youtube.com/watch?v=W0-ObyrU1Rk"
+      },
+      "videos": [
+        {
+          "id": "Cyia1cGLJ4A",
+          "title": "Selectel ТехноДень — зал «Кинетика»",
+          "published_at": "2026-09-30T17:36:58Z",
+          "views": 71,
+          "likes": 0,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Cyia1cGLJ4A"
+        },
+        {
+          "id": "BHSh8mVq76I",
+          "title": "Selectel ТехноДень — зал «Физика»",
+          "published_at": "2026-09-30T17:29:07Z",
+          "views": 108,
+          "likes": 0,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=BHSh8mVq76I"
+        },
+        {
+          "id": "3qYq24Nbtb0",
+          "title": "Selectel ТехноДень — зал «Атом»",
+          "published_at": "2026-09-30T17:21:52Z",
+          "views": 78,
+          "likes": 0,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=3qYq24Nbtb0"
+        },
+        {
+          "id": "ZKhYdF8ZnSM",
+          "title": "Selectel ТехноДень — главный зал «Молекула»",
+          "published_at": "2026-09-30T17:10:45Z",
+          "views": 554,
+          "likes": 9,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=ZKhYdF8ZnSM"
+        },
+        {
+          "id": "Yx3BL1nXuZ0",
+          "title": "У кого в дата-центре самый острый нюх? 👃",
+          "published_at": "2026-09-30T13:23:05Z",
+          "views": 110,
+          "likes": 6,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Yx3BL1nXuZ0"
+        },
+        {
+          "id": "upblgqVHEjQ",
+          "title": "Серверный SSD — лишние расходы или вложение в надежность? 🤔",
+          "published_at": "2026-09-28T09:37:58Z",
+          "views": 14264,
+          "likes": 170,
+          "comments": 16,
+          "url": "https://www.youtube.com/watch?v=upblgqVHEjQ"
+        },
+        {
+          "id": "UVCC_urcEh4",
+          "title": "Зеленый Selectel 2026",
+          "published_at": "2026-09-25T13:53:16Z",
+          "views": 314,
+          "likes": 7,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=UVCC_urcEh4"
+        },
+        {
+          "id": "OX6D_9HliK0",
+          "title": "Аукцион выделенных серверов: скидки до 80%",
+          "published_at": "2026-09-25T10:20:15Z",
+          "views": 34291,
+          "likes": 0,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=OX6D_9HliK0"
+        },
+        {
+          "id": "eGZ3kHoE6-k",
+          "title": "Скидки до 80% на выделенные серверы",
+          "published_at": "2026-09-25T10:16:51Z",
+          "views": 27876,
+          "likes": 3,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=eGZ3kHoE6-k"
+        },
+        {
+          "id": "Sxw01fvA114",
+          "title": "Кто отвечает за утечку, если ее устроил ИИ-агент?",
+          "published_at": "2026-09-24T13:59:48Z",
+          "views": 672,
+          "likes": 9,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Sxw01fvA114"
+        },
+        {
+          "id": "OaCyUUtHYJo",
+          "title": "Тихая серверная — повод для беспокойства 👀",
+          "published_at": "2026-09-23T11:33:04Z",
+          "views": 1705,
+          "likes": 36,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=OaCyUUtHYJo"
+        },
+        {
+          "id": "eh2ssT_OhKU",
+          "title": "Всего 4% ложных данных на входе — и модель ошибается в 10 раз чаще ⚠️",
+          "published_at": "2026-09-22T14:11:53Z",
+          "views": 656,
+          "likes": 11,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=eh2ssT_OhKU"
+        },
+        {
+          "id": "NX32oWXo7vw",
+          "title": "Архитектура данных в эпоху ИИ: как избежать дорогих ошибок | Подкаст Selectel «Сегодня на ретро»",
+          "published_at": "2026-09-22T13:51:14Z",
+          "views": 31231,
+          "likes": 21,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=NX32oWXo7vw"
+        },
+        {
+          "id": "BUdSFDwB464",
+          "title": "Самый бесполезный бэкап — тот, который зашифровали вместе с продом.",
+          "published_at": "2026-09-21T10:52:40Z",
+          "views": 411,
+          "likes": 8,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=BUdSFDwB464"
+        },
+        {
+          "id": "NvOvGxEzZf4",
+          "title": "Кажется, что DNS, OSI и HTTPS — база? Тогда вот три вопроса на разогрев 🤓",
+          "published_at": "2026-09-18T12:59:42Z",
+          "views": 1403,
+          "likes": 26,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=NvOvGxEzZf4"
+        },
+        {
+          "id": "xM68U9vTxqk",
+          "title": "А вы бы попались на удочку? 🎣",
+          "published_at": "2026-09-16T09:37:03Z",
+          "views": 1556,
+          "likes": 16,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=xM68U9vTxqk"
+        },
+        {
+          "id": "ygCBrz7KNOY",
+          "title": "Чем больше инструкций у ИИ-агента, тем лучше он работает? Не всегда.",
+          "published_at": "2026-09-15T12:16:53Z",
+          "views": 18123,
+          "likes": 145,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=ygCBrz7KNOY"
+        },
+        {
+          "id": "snan3mhk_B8",
+          "title": "Зачем ИИ-компании скупают книги и срезают с них корешки? 📚",
+          "published_at": "2026-09-14T13:51:18Z",
+          "views": 37141,
+          "likes": 166,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=snan3mhk_B8"
+        },
+        {
+          "id": "OCWnqGUTomo",
+          "title": "Кто не успел — тот доплатил 💸",
+          "published_at": "2026-09-11T09:49:42Z",
+          "views": 1001,
+          "likes": 7,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=OCWnqGUTomo"
+        },
+        {
+          "id": "jymRTmCNBy0",
+          "title": "Фабрика ИИ-агентов Kolmogorov.ai на инфраструктуре Selectel",
+          "published_at": "2026-09-10T22:40:30Z",
+          "views": 656,
+          "likes": 7,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=jymRTmCNBy0"
+        },
+        {
+          "id": "79wbyIxlNhg",
+          "title": "Уверены, что хорошо знаете базовые термины машинного обучения?",
+          "published_at": "2026-09-10T10:37:35Z",
+          "views": 1066,
+          "likes": 13,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=79wbyIxlNhg"
+        },
+        {
+          "id": "gHTiGMb6Kh8",
+          "title": "Как вентиляция целого офиса...",
+          "published_at": "2026-09-09T09:05:27Z",
+          "views": 44888,
+          "likes": 185,
+          "comments": 8,
+          "url": "https://www.youtube.com/watch?v=gHTiGMb6Kh8"
+        },
+        {
+          "id": "gLaI6LpXE0I",
+          "title": "60 миллиардов токенов в месяц. Это не рекорд, а обычный рабочий расход",
+          "published_at": "2026-09-08T15:01:14Z",
+          "views": 20512,
+          "likes": 122,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=gLaI6LpXE0I"
+        },
+        {
+          "id": "nRISjsYTFWg",
+          "title": "Уважительная причина для опоздания: выбирал(-а) сервер на аукционе Selectel 🤩",
+          "published_at": "2026-09-07T13:44:03Z",
+          "views": 1082,
+          "likes": 13,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=nRISjsYTFWg"
+        },
+        {
+          "id": "-752ZoasCNo",
+          "title": "Пока вы читаете этот пост, ваш смартфон может помогать атаке на чужой сервер.",
+          "published_at": "2026-09-04T11:12:59Z",
+          "views": 1303,
+          "likes": 13,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=-752ZoasCNo"
+        },
+        {
+          "id": "R21UGxa_7tk",
+          "title": "✉️ У вас есть непрочитанное сообщение (1)",
+          "published_at": "2026-09-03T14:03:18Z",
+          "views": 7161,
+          "likes": 89,
+          "comments": 5,
+          "url": "https://www.youtube.com/watch?v=R21UGxa_7tk"
+        },
+        {
+          "id": "ICLGtt_jqG0",
+          "title": "Открытые LLM или локальные ИИ-модели — как бизнесу внедрить нейросети?",
+          "published_at": "2026-09-03T10:07:28Z",
+          "views": 23336,
+          "likes": 147,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=ICLGtt_jqG0"
+        },
+        {
+          "id": "Sn60RMm4-T4",
+          "title": "Объем памяти или количество ядер — на что смотреть при выборе ускорителя 👀",
+          "published_at": "2026-09-01T13:16:14Z",
+          "views": 52849,
+          "likes": 252,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Sn60RMm4-T4"
+        },
+        {
+          "id": "Mt1IQe7R9HI",
+          "title": "Смотрите на ретро-железо и испытываете чувство ностальгии? Этот ролик для вас 👇",
+          "published_at": "2026-08-31T13:46:13Z",
+          "views": 2321,
+          "likes": 37,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=Mt1IQe7R9HI"
+        },
+        {
+          "id": "UKiCF2RxwEg",
+          "title": "🎤 Сходим вместе?",
+          "published_at": "2026-08-28T10:35:07Z",
+          "views": 46639,
+          "likes": 328,
+          "comments": 8,
+          "url": "https://www.youtube.com/watch?v=UKiCF2RxwEg"
+        },
+        {
+          "id": "2Itx2NbwH30",
+          "title": "Какую роль все-таки занимает LLM? 🤖",
+          "published_at": "2026-08-27T12:13:01Z",
+          "views": 3701,
+          "likes": 25,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=2Itx2NbwH30"
+        },
+        {
+          "id": "uBDd4jnn4z4",
+          "title": "Почему сайт опять долго загружается?",
+          "published_at": "2026-08-26T11:41:55Z",
+          "views": 29814,
+          "likes": 185,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=uBDd4jnn4z4"
+        },
+        {
+          "id": "Rd8Jp0v-CPc",
+          "title": "В этот миф вы могли поверить 👇",
+          "published_at": "2026-08-24T14:21:18Z",
+          "views": 2066,
+          "likes": 31,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=Rd8Jp0v-CPc"
+        },
+        {
+          "id": "BJI1uMvzLqY",
+          "title": "ИИ-агент уже читает содержание письма, которое пользователь еще не открывал 👀",
+          "published_at": "2026-08-21T11:30:44Z",
+          "views": 2107,
+          "likes": 24,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=BJI1uMvzLqY"
+        },
+        {
+          "id": "oKDW7NoMwHY",
+          "title": "Мы нашли подходящий сервер для экспериментов 🤩",
+          "published_at": "2026-08-21T11:14:35Z",
+          "views": 30429,
+          "likes": 181,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=oKDW7NoMwHY"
+        },
+        {
+          "id": "J1-j6aq4FJY",
+          "title": "Кибербезопасность в эпоху ИИ: как меняются DDoS и другие атаки | Подкаст Selectel «Сегодня на ретро»",
+          "published_at": "2026-08-20T08:28:05Z",
+          "views": 52074,
+          "likes": 19,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=J1-j6aq4FJY"
+        },
+        {
+          "id": "Jjep-XTY-kA",
+          "title": "Тот самый вопрос в три часа ночи: куда дует сервер?",
+          "published_at": "2026-08-19T12:45:11Z",
+          "views": 2157,
+          "likes": 51,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=Jjep-XTY-kA"
+        },
+        {
+          "id": "E5VZdkojFvM",
+          "title": "В заказе — 9 лишних порций чая 😱",
+          "published_at": "2026-08-18T12:37:15Z",
+          "views": 1430,
+          "likes": 20,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=E5VZdkojFvM"
+        },
+        {
+          "id": "W0-ObyrU1Rk",
+          "title": "Открываем регистрацию на Selectel ТехноДень!",
+          "published_at": "2026-08-17T13:34:03Z",
+          "views": 75534,
+          "likes": 44,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=W0-ObyrU1Rk"
+        },
+        {
+          "id": "caxxc242WmQ",
+          "title": "Ваши домены в Selectel за рубль",
+          "published_at": "2026-08-14T09:00:09Z",
+          "views": 1488,
+          "likes": 12,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=caxxc242WmQ"
+        },
+        {
+          "id": "I3NukBcROcw",
+          "title": "Есть ли ARM в дата-центрах?",
+          "published_at": "2026-08-12T14:29:49Z",
+          "views": 4157,
+          "likes": 45,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=I3NukBcROcw"
+        },
+        {
+          "id": "MxkSkXgCmWk",
+          "title": "Топ-3 нейросети для генерации видео ⚡️",
+          "published_at": "2026-08-10T12:40:44Z",
+          "views": 1301,
+          "likes": 26,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=MxkSkXgCmWk"
+        },
+        {
+          "id": "4PMuhOBkImI",
+          "title": "Серверы заказывали? Мы доставили.",
+          "published_at": "2026-08-07T14:25:57Z",
+          "views": 2456,
+          "likes": 28,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=4PMuhOBkImI"
+        },
+        {
+          "id": "u-VEiZBt5TU",
+          "title": "Мощные видеокарты — далеко не все, что нужно для работы ИИ 🤯",
+          "published_at": "2026-08-06T14:34:04Z",
+          "views": 2653,
+          "likes": 54,
+          "comments": 4,
+          "url": "https://www.youtube.com/watch?v=u-VEiZBt5TU"
+        },
+        {
+          "id": "EThc9QSWW68",
+          "title": "Нейросети можно запускать только на дорогом сервере с несколькими новейшими видеокартами. Или нет?",
+          "published_at": "2026-08-04T13:41:41Z",
+          "views": 2687,
+          "likes": 50,
+          "comments": 5,
+          "url": "https://www.youtube.com/watch?v=EThc9QSWW68"
+        },
+        {
+          "id": "wHCMdd5P56g",
+          "title": "Ваш смартфон мощнее суперкомпьютера…30-летней давности",
+          "published_at": "2026-08-03T14:34:14Z",
+          "views": 1818,
+          "likes": 37,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=wHCMdd5P56g"
+        },
+        {
+          "id": "MGISe_p6fho",
+          "title": "🆎 Буквы разные читать в названии ML-моделей",
+          "published_at": "2026-07-31T10:59:40Z",
+          "views": 1423,
+          "likes": 36,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=MGISe_p6fho"
+        },
+        {
+          "id": "85wDU5xI6b0",
+          "title": "Как настроить аварийное восстановление с возможностью георезерва",
+          "published_at": "2026-07-30T22:34:41Z",
+          "views": 175,
+          "likes": 6,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=85wDU5xI6b0"
+        },
+        {
+          "id": "P7NLCK5M--E",
+          "title": "Вот где хранятся ваши картинки 👇",
+          "published_at": "2026-07-30T15:13:18Z",
+          "views": 1419,
+          "likes": 25,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=P7NLCK5M--E"
+        },
+        {
+          "id": "WZZXcbuiXzw",
+          "title": "Об этих лайфхаках для работы с серверами все молчат",
+          "published_at": "2026-07-29T13:57:22Z",
+          "views": 2542,
+          "likes": 83,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=WZZXcbuiXzw"
+        },
+        {
+          "id": "bAbOHP7uKOo",
+          "title": "Кино не будет…",
+          "published_at": "2026-07-28T08:01:55Z",
+          "views": 2012,
+          "likes": 41,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=bAbOHP7uKOo"
+        },
+        {
+          "id": "BmOMb811jpg",
+          "title": "Устали писать заметки со встреч? ✍️",
+          "published_at": "2026-07-24T09:00:26Z",
+          "views": 1080,
+          "likes": 15,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=BmOMb811jpg"
+        },
+        {
+          "id": "ziTKwq6iPzY",
+          "title": "Как запускать и масштабировать ИИ в собственном контуре",
+          "published_at": "2026-07-23T22:43:30Z",
+          "views": 267,
+          "likes": 6,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=ziTKwq6iPzY"
+        },
+        {
+          "id": "n7p5HNkbthM",
+          "title": "Нейросеть опять отвечает дольше секунды 👿",
+          "published_at": "2026-07-23T12:13:49Z",
+          "views": 1700,
+          "likes": 26,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=n7p5HNkbthM"
+        },
+        {
+          "id": "XIIBkCre6N0",
+          "title": "Как обеспечить безопасность IT-инфраструктуры: инструменты и стратегия защиты от DDoS",
+          "published_at": "2026-07-21T22:34:42Z",
+          "views": 144,
+          "likes": 5,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=XIIBkCre6N0"
+        },
+        {
+          "id": "GoN6YZ9kfmI",
+          "title": "Не каждая ИИ-модель подойдет вашему бизнесу ❗",
+          "published_at": "2026-07-21T13:08:15Z",
+          "views": 1686,
+          "likes": 45,
+          "comments": 2,
+          "url": "https://www.youtube.com/watch?v=GoN6YZ9kfmI"
+        },
+        {
+          "id": "D2OOzwbq3uU",
+          "title": "Что общего у интернета и клубники? 🍓",
+          "published_at": "2026-07-17T08:50:24Z",
+          "views": 669,
+          "likes": 13,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=D2OOzwbq3uU"
+        },
+        {
+          "id": "BUwagqiC0nY",
+          "title": "OpenSearch Dashboards: обзор возможностей сервиса и пример использования",
+          "published_at": "2026-07-17T01:17:55Z",
+          "views": 165,
+          "likes": 4,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=BUwagqiC0nY"
+        },
+        {
+          "id": "nEtNB7QsSIQ",
+          "title": "Защита от технических ошибок — резервирование 💯",
+          "published_at": "2026-07-16T12:34:48Z",
+          "views": 366,
+          "likes": 16,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=nEtNB7QsSIQ"
+        },
+        {
+          "id": "nbFVkxk5a_o",
+          "title": "Сервер по цене квартиры 😱",
+          "published_at": "2026-07-15T12:06:12Z",
+          "views": 34812,
+          "likes": 188,
+          "comments": 11,
+          "url": "https://www.youtube.com/watch?v=nbFVkxk5a_o"
+        },
+        {
+          "id": "uWguXUu2cMc",
+          "title": "Использование S3 и Postgres Pro на практике",
+          "published_at": "2026-07-14T22:55:20Z",
+          "views": 152,
+          "likes": 5,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=uWguXUu2cMc"
+        },
+        {
+          "id": "-qWZtJllZ-M",
+          "title": "Рабочий метод, чтобы превзойти учителя 👇",
+          "published_at": "2026-07-14T12:57:04Z",
+          "views": 403,
+          "likes": 13,
+          "comments": 3,
+          "url": "https://www.youtube.com/watch?v=-qWZtJllZ-M"
+        },
+        {
+          "id": "JPPEVwRy44I",
+          "title": "Ваше лето выглядит так: 🌊🌴☀️",
+          "published_at": "2026-07-10T10:51:53Z",
+          "views": 29899,
+          "likes": 129,
+          "comments": 1,
+          "url": "https://www.youtube.com/watch?v=JPPEVwRy44I"
+        },
+        {
+          "id": "Qm-nqoBf9d0",
+          "title": "Решили показать свои скелеты в шкафу 🗄️",
+          "published_at": "2026-07-09T10:55:54Z",
+          "views": 961,
+          "likes": 28,
+          "comments": 7,
+          "url": "https://www.youtube.com/watch?v=Qm-nqoBf9d0"
+        },
+        {
+          "id": "9ot3Yiyw5q4",
+          "title": "Кто сильнее — Go или Rust? 🏆",
+          "published_at": "2026-07-07T12:07:26Z",
+          "views": 965,
+          "likes": 23,
+          "comments": 11,
+          "url": "https://www.youtube.com/watch?v=9ot3Yiyw5q4"
+        },
+        {
+          "id": "g88dPThrl5g",
+          "title": "Насколько хорошо вы разбираетесь в железе? 🤔",
+          "published_at": "2026-07-03T11:59:23Z",
+          "views": 322,
+          "likes": 8,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=g88dPThrl5g"
+        },
+        {
+          "id": "sUdmZB6UA2E",
+          "title": "До сих пор продолжаете верить в мифы про безопасность нейросетей? 😱",
+          "published_at": "2026-07-01T13:43:32Z",
+          "views": 228,
+          "likes": 13,
+          "comments": 0,
+          "url": "https://www.youtube.com/watch?v=sUdmZB6UA2E"
+        }
+      ]
     },
     {
       "brand": "VK",
