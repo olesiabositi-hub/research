@@ -94,7 +94,7 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 <div class="c"><div class="n">4/8</div><h3>2ГИС Tech: четыре направления</h3><p>Среднее по выборке — 3,76 из 8. Яндекс, Avito, Kaspersky и Positive Technologies имеют по 6 из 8.</p></div>
 <div class="c"><div class="n">4</div><h3>Направления без подтверждения</h3><p>Сообщество, инженеры-эксперты, образование и исследования. При этом образование есть у 16/25 брендов, исследования — у 6/25.</p></div>
 <div class="c"><div class="n" id="habr-position-rate">—</div><h3>Статьи на Habr в неделю</h3><p id="habr-position-copy">Загрузка Habr-данных…</p></div>
-<div class="c"><div class="n">≈4,0K</div><h3>Подписчиков Dev2GIS</h3><p>Последний доступный публичный Q3-снимок: ≈1,43K просмотра на пост и ER ≈36%. Дата этого снимка отличается от текущего Telemetr-среза конкурентов, поэтому ниже он помечен отдельно.</p></div>
+<div class="c"><div class="n" id="tg-position-subs">—</div><h3>Публичный @dev2gis</h3><p id="tg-position-copy">Загрузка Telegram-данных…</p></div>
 </div></div></section>
 
 <section id="roles"><div class="w">
@@ -106,7 +106,7 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 <section id="trends"><div class="w">
 <h2>Тренды квартала</h2>
 <div class="g" id="tr"></div>
-<div class="note"><b>Финальная проверка Q3:</b> сопоставимых публичных данных по просмотрам видео и прослушиваниям подкастов у всех 25 брендов по-прежнему нет, поэтому для этих форматов фиксируем наличие, а не «рейтинг». Telegram-метрики ниже обновлены на 1 октября там, где доступен текущий публичный снимок.</div>
+<div class="note"><b>Финальная проверка Q3:</b> Habr, YouTube и часть Telegram теперь читаются из отдельных data-слоёв. Telegram собирается бесплатно с публичных страниц t.me; для video/podcast-платформ без сопоставимой публичной аналитики по-прежнему не подменяем данные оценками.</div>
 </div></section>
 
 <section id="snapshot"><div class="w">
@@ -123,7 +123,7 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 <div class="tabs" role="tablist" id="tabs"></div>
 <div class="pane" data-p="0"><div class="tw"><table><thead><tr><th>Площадка</th><th>Подтверждено</th><th>Кто именно</th></tr></thead><tbody>
 <tr><td><b>Habr</b></td><td>24/25</td><td class="wrap">Отдельный блог у всех, кроме SberTech (материалы выходят в общем блоге Сбера)</td></tr>
-<tr><td><b>Telegram</b></td><td>24/25</td><td class="wrap">22 с публичным средним просмотром; нет у Точки, а для Dev2GIS и hh.ru метрики нет</td></tr>
+<tr><td><b>Telegram</b></td><td>24/25</td><td class="wrap">Performance-метрики сейчас автоматически собираются по 9 проверенным публичным каналам через t.me; ecom.tech переехал за invite-link и не подменяется старым публичным каналом</td></tr>
 <tr><td><b>YouTube</b></td><td>≥7/25</td><td class="wrap">2ГИС Tech, Ozon Tech, YADRO, Selectel, Контур, RWB, Купер</td></tr>
 <tr><td><b>VK Video</b></td><td>≥6/25</td><td class="wrap">2ГИС Tech, Avito, Ozon Tech, Selectel, Контур, Купер</td></tr>
 <tr><td><b>RuTube</b></td><td>≥5/25</td><td class="wrap">Avito, YADRO, Selectel, Magnit Tech, Контур</td></tr>
@@ -160,7 +160,7 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 <div class="pane perf-pane" data-perf-pane="telegram">
 <p class="ft" id="perf-telegram-meta">Загрузка данных…</p>
 <div class="tw"><table>
-<thead><tr><th>#</th><th>Компания</th><th class="num">Подписчики</th><th class="num">Ср. просмотры</th><th class="num">ER</th><th>Снимок</th></tr></thead>
+<thead><tr><th>#</th><th>Компания</th><th class="num">Подписчики</th><th class="num">Посты Q3</th><th class="num">Медиана просмотров</th><th class="num">Среднее</th><th class="num">ER</th><th class="num">Реакции / пост</th><th>Топ-пост</th></tr></thead>
 <tbody id="perf-telegram-body"></tbody>
 </table></div>
 <div class="note" id="perf-telegram-note">Загрузка данных…</div>
@@ -199,7 +199,7 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 
 <footer><div class="w">
 <p><b>Методология.</b> Период: 01.07–30.09.2026, финальная перепроверка — 01.10.2026. Каждое из 8 направлений даёт компании максимум 1 балл, независимо от числа кейсов внутри. В событиях считаем собственные или совместно организованные branded tech-форматы; одно выступление сотрудника на внешней конференции само по себе балл не даёт. Обычные вакансии, простое спонсорство, продуктовый PR и старый GitHub без активности в Q3 балл не дают. Если доказательства слабые, ставим «–». «Не нашли» не означает «не делает».</p>
-<p>Динамические метрики — просмотры статей, подписчики и Telegram reach — зафиксированы как публичный снимок на момент проверки и со временем меняются. Tech Brand Watch — личное независимое исследование Олеси Боциевой. Это не официальное исследование 2ГИС и не рейтинг работодателей; оно не оценивает зарплаты, культуру, eNPS или эффективность найма.</p>
+<p>Динамические метрики — просмотры статей и видео, подписчики и Telegram views — зафиксированы как публичный снимок на момент автоматического сбора и со временем меняются. Tech Brand Watch — личное независимое исследование Олеси Боциевой. Это не официальное исследование 2ГИС и не рейтинг работодателей; оно не оценивает зарплаты, культуру, eNPS или эффективность найма.</p>
 </div></footer>
 
 <script>
@@ -283,15 +283,31 @@ const loadHabr=async()=>{
 const loadPerformance=async()=>{
   try{
     const tg=await loadJSON("telegram");
-    h("#perf-telegram-meta",`${tg.period?.label||"Q3 2026"} · ${tg.source_label||"публичные данные"}`);
-    h("#perf-telegram-body",(tg.rows||[]).map((r,i)=>{
-      const a=r.approximate?"≈":"";
-      return `<tr class="${r.is_2gis?"me":""}"><td>${i+1}</td><td><b>${r.brand}</b></td><td class="num">${a}${fmtK(r.subscribers)}</td><td class="num"><b>${a}${fmtK(r.avg_views)}</b></td><td class="num">${a}${fmtPct(r.er)}</td><td>${r.snapshot||"—"}</td></tr>`;
-    }).join(""));
-    h("#perf-telegram-note",tg.note||"");
+    const updated=tg.updated_at?new Date(tg.updated_at).toLocaleDateString("ru-RU"):"—";
+    const rows=(tg.rows||[]).filter(r=>r.status==="ok").sort((a,b)=>(b.median_views||-1)-(a.median_views||-1));
+    h("#perf-telegram-meta",`${tg.period?.label||"Q3 2026"} · ${tg.source_label||"публичные данные"} · снимок: ${updated}`);
+    h("#perf-telegram-body",rows.map((r,i)=>`<tr class="${r.brand.startsWith("2ГИС")?"me":""}">
+      <td>${i+1}</td>
+      <td><b>${r.brand}</b><br><small>@${r.handle}${r.channel_title?" · "+r.channel_title:""}</small></td>
+      <td class="num">${fmtK(r.subscribers)}</td>
+      <td class="num">${fmtInt(r.q3_posts)}</td>
+      <td class="num"><b>${r.median_views==null?"—":fmtK(r.median_views)}</b></td>
+      <td class="num">${r.avg_views==null?"—":fmtK(r.avg_views)}</td>
+      <td class="num">${fmtPct(r.er)}</td>
+      <td class="num">${r.avg_reactions==null?"—":Number(r.avg_reactions).toFixed(1).replace(".",",")}</td>
+      <td class="wrap">${r.top_post?`<a href="${r.top_post.url}" target="_blank" rel="noopener">Открыть ↗</a><br><small>${fmtK(r.top_post.views)} просмотров</small>`:"—"}</td>
+    </tr>`).join(""));
+    const disabled=(tg.rows||[]).filter(r=>r.status==="disabled");
+    const s=tg.summary||{};
+    h("#perf-telegram-note",`${tg.note||""} Сейчас собрано ${s.collected||rows.length} публичных каналов и ${fmtInt(s.q3_posts_total||0)} постов Q3. ${s.channels_with_reactions?"Реакции доступны для "+s.channels_with_reactions+" каналов.":"Telegram не отдал реакции в стабильном HTML-формате, поэтому вместо ложных нулей показываем «—»."} ${disabled.length?disabled.map(r=>r.brand+": "+(r.status_note||"источник недоступен")).join(" "):""}`);
+    const meTg=rows.find(r=>r.brand.startsWith("2ГИС"));
+    if(meTg){
+      h("#tg-position-subs",fmtK(meTg.subscribers));
+      h("#tg-position-copy",`@${meTg.handle} сейчас называется «${meTg.channel_title||meTg.expected_title||"канал"}». За Q3 найдено ${meTg.q3_posts} постов; медиана просмотров — ${fmtK(meTg.median_views)}. ${meTg.scope_note||""}`);
+    }
   }catch(e){
     h("#perf-telegram-meta","Данные временно недоступны");
-    h("#perf-telegram-body",`<tr><td colspan="6" class="wrap">Не удалось загрузить Telegram-данные.</td></tr>`);
+    h("#perf-telegram-body",`<tr><td colspan="9" class="wrap">Не удалось загрузить Telegram-данные.</td></tr>`);
     h("#perf-telegram-note","Статический слой данных сохранён в репозитории; попробуйте обновить страницу.");
   }
   try{
@@ -339,7 +355,7 @@ h("#fc",opt([...new Set(C.map(c=>c[0]))],"Все компании"));h("#fd",opt
 const rc=()=>{const a=$("#fc").value,b=$("#fd").value;const r=C.filter(c=>(!a||c[0]==a)&&(!b||c[1]==b));h("#cases",r.length?r.map(c=>`<div class="case ${c[0]==ME?"me":""}"><small>${c[1]} · ${c[2]} · ${c[0]}</small><h3>${c[3]}</h3><a href="${c[4]}" target="_blank" rel="noopener">Источник ↗</a></div>`).join(""):"<p class='sub'>Ничего не найдено. Сбросьте один из фильтров.</p>")};
 $("#fc").onchange=$("#fd").onchange=rc;rc();
 // roles
-const R={"Редактор":[["Habr: мы в хвосте по частоте","У 2ГИС Tech 4 статьи за Q3. Частота, медиана/среднее просмотров и лидеры теперь считаются автоматически в разделе «Контент в цифрах».","Проверить, растут ли просмотры на материал при более регулярной частоте публикаций."],["Что читают","Top Habr теперь пересчитывается автоматически по публичным просмотрам статей Q3. Для 2ГИС Tech лучший материал квартала — «Полевые проезды в QA».","Сравнивать не только тему, но и формат, возраст публикации и медиану просмотров блога."],["Telegram","В финальном 1 октября снимке 9 перепроверенных каналов конкурентов медиана среднего просмотра — ≈1,43K. Последний доступный Q3-снимок Dev2GIS: ≈3,96K подписчиков и ≈1,43K просмотра на пост.","Зафиксировать единый ежеквартальный источник и дату замера Telegram, чтобы сравнение не смешивало разные снимки."],["Видео и подкасты","Свой подкаст у ≥6 из 25 (Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур), у нас не подтверждён. YouTube и VK Video у нас есть. Просмотры видео и прослушивания по открытым данным сравнить не удалось.","Ozon Tech держит доклады, подкасты и интервью на одном канале: так можно начать без отдельной студии."],["Образование — главный пробел","16/25: летние школы (Яндекс, X5, Т-Банк, YADRO), курсы (Selectel, Cloud.ru), школы hh.ru, Академия Авито, студенческий E-CUP у Ozon Tech. У 2ГИС Tech не подтверждено.","Начать с малого: практикум в вузе или открытый курс по нашему стеку."],["Сообщество","Постоянное сообщество у 3/25: Young&&Yandex, True Tech Community (MTS Tech), Security Expert Community (Positive Technologies).","Ниша свободна, но нужны ресурсы на модерацию."],["Инженеры как эксперты","4/25: AviTalk (Avito), «Битовые маски» (YADRO, 29 выпусков), Java/Scala Digest (Т-Банк), «В тренде VM» (Positive Technologies).","Серия с постоянными лицами показывает людей за логотипом."],["Исследования","6/25: Яндекс (ICML), Kaspersky (GitHub Actions), Positive Technologies (CloudAtlas), Контур (DevCrowd), Альфа-Банк и VK (VK WorkSpace × Hi-Tech Mail).","Проверить формат исследования на данных, которые есть только у 2ГИС."],["Наши сильные стороны","Open Source (14/25) и нестандартные форматы (8/25) у нас подтверждены.","Показывать их в найме как отличие."]],
+const R={"Редактор":[["Habr: мы в хвосте по частоте","У 2ГИС Tech 4 статьи за Q3. Частота, медиана/среднее просмотров и лидеры теперь считаются автоматически в разделе «Контент в цифрах».","Проверить, растут ли просмотры на материал при более регулярной частоте публикаций."],["Что читают","Top Habr теперь пересчитывается автоматически по публичным просмотрам статей Q3. Для 2ГИС Tech лучший материал квартала — «Полевые проезды в QA».","Сравнивать не только тему, но и формат, возраст публикации и медиану просмотров блога."],["Telegram","Performance Q3 теперь считает посты, медиану и средние просмотры напрямую по публичным страницам Telegram для проверенных каналов. Это один и тот же метод для всех доступных источников.","Использовать медиану просмотров как более устойчивую метрику и расширять список только после проверки точного публичного канала."],["Видео и подкасты","Свой подкаст у ≥6 из 25 (Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур), у нас не подтверждён. YouTube и VK Video у нас есть. Просмотры видео и прослушивания по открытым данным сравнить не удалось.","Ozon Tech держит доклады, подкасты и интервью на одном канале: так можно начать без отдельной студии."],["Образование — главный пробел","16/25: летние школы (Яндекс, X5, Т-Банк, YADRO), курсы (Selectel, Cloud.ru), школы hh.ru, Академия Авито, студенческий E-CUP у Ozon Tech. У 2ГИС Tech не подтверждено.","Начать с малого: практикум в вузе или открытый курс по нашему стеку."],["Сообщество","Постоянное сообщество у 3/25: Young&&Yandex, True Tech Community (MTS Tech), Security Expert Community (Positive Technologies).","Ниша свободна, но нужны ресурсы на модерацию."],["Инженеры как эксперты","4/25: AviTalk (Avito), «Битовые маски» (YADRO, 29 выпусков), Java/Scala Digest (Т-Банк), «В тренде VM» (Positive Technologies).","Серия с постоянными лицами показывает людей за логотипом."],["Исследования","6/25: Яндекс (ICML), Kaspersky (GitHub Actions), Positive Technologies (CloudAtlas), Контур (DevCrowd), Альфа-Банк и VK (VK WorkSpace × Hi-Tech Mail).","Проверить формат исследования на данных, которые есть только у 2ГИС."],["Наши сильные стороны","Open Source (14/25) и нестандартные форматы (8/25) у нас подтверждены.","Показывать их в найме как отличие."]],
 "Ивент-менеджер":[["Митап уже не выделяет","События проводят 18/25. У нас есть Go Go Hopping Meetup и арт-объект Pause/Break ко Дню программиста.","Отличать бренд будут формат и масштаб, а не сам факт митапа."],["Масштаб лидеров","E-CODE (Ozon Tech): 4 000+ гостей офлайн, 59 выступлений и 343K+ просмотров трансляций. Kaspersky{CTF}: 1 657 команд из 98 стран. Positive Hack Camp: 800+ заявок, 81 участник из 20 стран.","Трансляция даёт основной охват: просмотров в ≈85 раз больше, чем гостей офлайн (это не уникальные зрители)."],["Запоминающиеся форматы","Ночные и гибридные форматы: AVITO.TECHNO, MAGNIT TECH NIGHT, Deep Tech Night (Яндекс), АЛЬФА ВААА{АИ}ЙЙЙБ МИТАП. Соревнования: Робозон, E-CUP, CTF, True Tech Champ.","Pause/Break стоит в этом ряду; можно превратить его в регулярную серию."],["Совместные события","На Back to Back (Яндекс, три города) выступал докладчик Positive Technologies. Data Meetup VK Tech прошёл с кейсами Авито и RWB, YADRO собрал встречу с Postgres Pro и VK.","Партнёрский митап даёт чужую аудиторию и спикеров без большого бюджета."],["Финиш квартала","26 сентября прошёл Avito.Tech.Conf, а 30 сентября — АЛЬФА ВААА{АИ}ЙЙЙБ МИТАП с финалом AI-хакатона, техно-шоу и live music. Даже последняя неделя Q3 добавила новые заметные форматы.","При планировании Q4 сравнивать не только количество событий, но и формат, дистрибуцию и повторяемость серии."]]};
 const RN=Object.keys(R),dr=t=>h("#rp",R[t].map(r=>`<div class="c"><h3>${r[0]}</h3><p>${r[1]}</p><p style="margin-top:8px;color:var(--ink)"><b style="color:var(--acc)">Гипотеза:</b> ${r[2]}</p></div>`).join(""));
 RN.forEach((t,i)=>{const b=document.createElement("button");b.textContent=t;b.setAttribute("aria-selected",i==0);b.onclick=()=>{document.querySelectorAll("#rt button").forEach(x=>x.setAttribute("aria-selected",x==b));dr(t)};$("#rt").append(b)});dr(RN[0]);
