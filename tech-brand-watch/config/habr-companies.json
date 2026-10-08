@@ -10,108 +10,134 @@
   "brands": [
     {
       "brand": "Яндекс",
-      "slug": "yandex"
+      "slug": "yandex",
+      "frequency_compare": true
     },
     {
       "brand": "Avito",
-      "slug": "avito"
+      "slug": "avito",
+      "frequency_compare": true
     },
     {
       "brand": "Kaspersky",
-      "slug": "kaspersky"
+      "slug": "kaspersky",
+      "frequency_compare": false
     },
     {
       "brand": "Positive Technologies",
-      "slug": "pt"
+      "slug": "pt",
+      "frequency_compare": false
     },
     {
       "brand": "Т-Банк",
-      "slug": "tbank"
+      "slug": "tbank",
+      "frequency_compare": true
     },
     {
       "brand": "MTS Tech",
       "slug": "ru_mts",
-      "display_source": "МТС"
+      "display_source": "МТС",
+      "frequency_compare": false,
+      "shared_blog": true
     },
     {
       "brand": "Ozon Tech",
-      "slug": "ozontech"
+      "slug": "ozontech",
+      "frequency_compare": true
     },
     {
       "brand": "YADRO",
-      "slug": "yadro"
+      "slug": "yadro",
+      "frequency_compare": false
     },
     {
       "brand": "2ГИС Tech",
       "slug": "2gis",
-      "display_source": "2ГИС"
+      "display_source": "2ГИС",
+      "frequency_compare": true
     },
     {
       "brand": "Контур",
-      "slug": "skbkontur"
+      "slug": "skbkontur",
+      "frequency_compare": false
     },
     {
       "brand": "Cloud.ru",
-      "slug": "cloud_ru"
+      "slug": "cloud_ru",
+      "frequency_compare": false
     },
     {
       "brand": "Selectel",
-      "slug": "selectel"
+      "slug": "selectel",
+      "frequency_compare": false
     },
     {
       "brand": "VK",
       "slug": "vktech",
-      "display_source": "VK Tech"
+      "display_source": "VK Tech",
+      "frequency_compare": true
     },
     {
       "brand": "Альфа-Банк",
-      "slug": "alfa"
+      "slug": "alfa",
+      "frequency_compare": false
     },
     {
       "brand": "hh.ru",
-      "slug": "hh"
+      "slug": "hh",
+      "frequency_compare": false
     },
     {
       "brand": "Lamoda Tech",
-      "slug": "lamoda"
+      "slug": "lamoda",
+      "frequency_compare": false
     },
     {
       "brand": "Magnit Tech",
-      "slug": "magnit"
+      "slug": "magnit",
+      "frequency_compare": false
     },
     {
       "brand": "SberTech",
       "slug": "sberbank",
       "display_source": "Сбер",
-      "shared_blog": true
+      "shared_blog": true,
+      "frequency_compare": false
     },
     {
       "brand": "Точка Банк",
-      "slug": "tochka"
+      "slug": "tochka",
+      "frequency_compare": false
     },
     {
       "brand": "Dodo Engineering",
-      "slug": "dododev"
+      "slug": "dododev",
+      "frequency_compare": true
     },
     {
       "brand": "ecom.tech",
-      "slug": "ecom_tech"
+      "slug": "ecom_tech",
+      "frequency_compare": false
     },
     {
       "brand": "RWB",
-      "slug": "rwb"
+      "slug": "rwb",
+      "frequency_compare": false
     },
     {
       "brand": "X5 Tech",
-      "slug": "x5tech"
+      "slug": "x5tech",
+      "frequency_compare": true
     },
     {
       "brand": "Домклик",
-      "slug": "domclick"
+      "slug": "domclick",
+      "frequency_compare": false
     },
     {
       "brand": "Купер",
-      "slug": "kuper"
+      "slug": "kuper",
+      "frequency_compare": true
     }
   ]
 }
