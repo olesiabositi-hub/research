@@ -54,7 +54,8 @@
       "brand": "2ГИС Tech",
       "query": "2ГИС",
       "username": "2GISvideo",
-      "enabled": true
+      "enabled": true,
+      "scope_note": "Источник — основной YouTube-канал «2ГИС», а не отдельный канал 2ГИС Tech. Метрики показывают общий канал и не должны интерпретироваться как чистый employer-brand performance."
     },
     {
       "brand": "Контур",
