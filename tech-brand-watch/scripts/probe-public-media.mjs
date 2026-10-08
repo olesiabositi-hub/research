@@ -27,7 +27,7 @@ const probes=[
 
 for(const p of probes){
   try{
-    const r=await fetch(p.url,{redirect:"follow",headers:{
+    const r=await fetch(p.url,{redirect:"follow",signal:AbortSignal.timeout(12000),headers:{
       "user-agent":"Mozilla/5.0 (compatible; TechBrandWatch/1.0)",
       "accept":"text/html,application/json;q=0.9,*/*;q=0.8",
       "referer":"https://rutube.ru/"
