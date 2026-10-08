@@ -76,7 +76,7 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 </style>
 </head>
 <body>
-<nav><div class="w"><a href="../" style="margin-left:-12px">← Все исследования</a><b style="margin-left:8px">Tech Brand Watch</b><a href="#position">Где мы</a><a href="#roles">По ролям</a><a href="#trends">Тренды</a><a href="#snapshot">Рынок</a><a href="#content">Контент</a><a href="#matrix">Карта</a><a href="#data">Кейсы</a></div></nav>
+<nav><div class="w"><a href="../" style="margin-left:-12px">← Все исследования</a><b style="margin-left:8px">Tech Brand Watch</b><a href="#position">Где мы</a><a href="#roles">По ролям</a><a href="#trends">Тренды</a><a href="#snapshot">Рынок</a><a href="#content">Контент</a><a href="#performance">Performance</a><a href="#matrix">Карта</a><a href="#data">Кейсы</a></div></nav>
 
 <header class="hero"><div class="w">
 <div>
@@ -142,10 +142,32 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 </div></section>
 
 <section id="performance"><div class="w">
-<h2>Telegram: финальный публичный снимок</h2>
-<p class="sub">Текущие метрики на 1 октября для каналов, где Telemetr отдаёт сопоставимый публичный снимок. Dev2GIS добавлен отдельно по последнему доступному Q3-снимку и отмечен звёздочкой.</p>
-<div class="tw"><table><thead><tr><th>#</th><th>Компания</th><th class="num">Подписчики</th><th class="num">Ср. просмотры</th><th class="num">ER</th><th>Снимок</th></tr></thead><tbody id="tg"></tbody></table></div>
-<div class="note">В текущей перепроверенной выборке конкурентов медиана среднего просмотра — ≈1,43K. Последний доступный Q3-снимок Dev2GIS тоже ≈1,43K, но он получен в другую дату, поэтому это ориентир, а не место в рейтинге.</div>
+<h2>Performance Q3</h2>
+<p class="sub">Сопоставимые публичные метрики каналов. Telegram уже собран в едином формате; для Video и Podcasts пока не подменяем отсутствующие данные приблизительными оценками.</p>
+
+<div class="tabs" id="perf-tabs" role="tablist">
+<button role="tab" data-perf="telegram" aria-selected="true">Telegram</button>
+<button role="tab" data-perf="video" aria-selected="false">Video</button>
+<button role="tab" data-perf="podcasts" aria-selected="false">Podcasts</button>
+</div>
+
+<div class="pane perf-pane" data-perf-pane="telegram">
+<p class="ft" id="perf-telegram-meta">Загрузка данных…</p>
+<div class="tw"><table>
+<thead><tr><th>#</th><th>Компания</th><th class="num">Подписчики</th><th class="num">Ср. просмотры</th><th class="num">ER</th><th>Снимок</th></tr></thead>
+<tbody id="perf-telegram-body"></tbody>
+</table></div>
+<div class="note" id="perf-telegram-note">Загрузка данных…</div>
+</div>
+
+<div class="pane perf-pane" data-perf-pane="video" hidden>
+<div id="perf-video-content"><div class="c"><h3>Загрузка данных…</h3></div></div>
+</div>
+
+<div class="pane perf-pane" data-perf-pane="podcasts" hidden>
+<div id="perf-podcasts-content"><div class="c"><h3>Загрузка данных…</h3></div></div>
+</div>
+
 <h3>Большие проекты Q3 — метрики не смешиваем</h3>
 <div class="g">
 <div class="c"><div class="n">343K+</div><h3>Ozon Tech · E-CODE 2026</h3><p>просмотров трансляций; 4 000+ гостей офлайн; 59 выступлений</p></div>
@@ -188,20 +210,53 @@ const H=[["Яндекс",42],["VK Tech",37],["Т-Банк",32],["Avito",27],["Oz
 h("#habr",H.map(r=>`<div class="bar ${r[0]==ME?"me":""}"><div>${r[0]}</div><span style="width:${Math.max(r[1]/41*100,.8)}%"></span><em>${r[1]}</em></div>`).join(""));
 const T=[["Домклик","Один разработчик, 14 агентов, восемь месяцев","AI / workflow","≈88K"],["Яндекс","Как за вами (не) следит Яндекс","Mobile / security","≈74K"],["Т-Банк","Java Digest #38","Java / digest","≈60K"],["Яндекс","Тысяча конфликтов и одна LLM","LLM / Chromium","≈32K"],["MTS","Рынок IT-вакансий сломался и ничего не понятно?","Рынок труда","≈29K"],["Avito","От «когда-нибудь» к работающему прототипу","LLM / прототипы","≈19K"],["VK Tech","ClickHouse: сценарии и лучшие практики","Data","≈17K"],["Selectel","Пять мини-ПК июля 2026 года","Hardware","≈15K"],["Ozon Tech","От полной выгрузки к S3 и PostgreSQL","Go / highload","≈14K"],["Kaspersky","Что фронтенду стоит перенять у геймдева","Frontend / gamedev","≈13K"],["X5 Tech","Почему фронтенд съедает больше времени, чем бэкенд","Frontend / AI","≈12K"],["2ГИС Tech","Полевые проезды в QA","QA / геолокация","≈9.3K"]];
 h("#top",T.map(r=>`<li class="${r[0]==ME?"me":""}"><span>${r[1]}<br><small>${r[0]} · ${r[2]}</small></span><b>${r[3]}</b></li>`).join(""));
-// telegram
-const G=[
-["Ozon Tech","29.84K","4.20K","14.07%","1 окт"],
-["Avito","25.71K","3.37K","13.10%","1 окт"],
-["Яндекс","28.53K","2.71K","9.48%","1 окт"],
-["RWB","15.27K","1.96K","12.83%","1 окт"],
-["Lamoda Tech","11.00K","1.43K","13.00%","1 окт"],
-["2ГИС Tech · Dev2GIS","≈3.96K","≈1.43K","≈36.2%","Q3*"],
-["ecom.tech","7.61K","1.39K","18.21%","1 окт"],
-["X5 Tech","10.77K","1.36K","12.62%","1 окт"],
-["Контур","6.71K","1.26K","18.78%","1 окт"],
-["Dodo Engineering","3.88K","0.98K","25.28%","1 окт"]
-];
-h("#tg",G.map((r,i)=>`<tr class="${r[0].startsWith("2ГИС")?"me":""}"><td>${i+1}</td><td><b>${r[0]}</b></td><td class="num">${r[1]}</td><td class="num"><b>${r[2]}</b></td><td class="num">${r[3]}</td><td>${r[4]}</td></tr>`).join(""));
+// performance data layer
+const perfTabs=[...document.querySelectorAll("#perf-tabs button")];
+const perfPanes=[...document.querySelectorAll("[data-perf-pane]")];
+perfTabs.forEach(b=>b.onclick=()=>{
+  const key=b.dataset.perf;
+  perfTabs.forEach(x=>x.setAttribute("aria-selected",x===b));
+  perfPanes.forEach(p=>p.hidden=p.dataset.perfPane!==key);
+});
+
+const fmtK=n=>n==null?"—":n>=1000?(n/1000).toFixed(2).replace(".",",")+"K":String(n);
+const fmtPct=n=>n==null?"—":Number(n).toFixed(2).replace(".",",")+"%";
+const loadJSON=async name=>{
+  const r=await fetch("./data/"+name+".json",{cache:"no-store"});
+  if(!r.ok)throw new Error(name+" "+r.status);
+  return r.json();
+};
+const renderEmptyPerformance=(selector,data,label)=>{
+  h(selector,`<div class="c"><h3>${label}</h3><p>${data.note||"Сопоставимые публичные метрики пока не подключены."}</p></div>`);
+};
+const loadPerformance=async()=>{
+  try{
+    const tg=await loadJSON("telegram");
+    h("#perf-telegram-meta",`${tg.period?.label||"Q3 2026"} · ${tg.source_label||"публичные данные"}`);
+    h("#perf-telegram-body",(tg.rows||[]).map((r,i)=>{
+      const a=r.approximate?"≈":"";
+      return `<tr class="${r.is_2gis?"me":""}"><td>${i+1}</td><td><b>${r.brand}</b></td><td class="num">${a}${fmtK(r.subscribers)}</td><td class="num"><b>${a}${fmtK(r.avg_views)}</b></td><td class="num">${a}${fmtPct(r.er)}</td><td>${r.snapshot||"—"}</td></tr>`;
+    }).join(""));
+    h("#perf-telegram-note",tg.note||"");
+  }catch(e){
+    h("#perf-telegram-meta","Данные временно недоступны");
+    h("#perf-telegram-body",`<tr><td colspan="6" class="wrap">Не удалось загрузить Telegram-данные.</td></tr>`);
+    h("#perf-telegram-note","Статический слой данных сохранён в репозитории; попробуйте обновить страницу.");
+  }
+  try{
+    const video=await loadJSON("video");
+    renderEmptyPerformance("#perf-video-content",video,"Video");
+  }catch(e){
+    renderEmptyPerformance("#perf-video-content",{note:"Не удалось загрузить video.json."},"Video");
+  }
+  try{
+    const podcasts=await loadJSON("podcasts");
+    renderEmptyPerformance("#perf-podcasts-content",podcasts,"Podcasts");
+  }catch(e){
+    renderEmptyPerformance("#perf-podcasts-content",{note:"Не удалось загрузить podcasts.json."},"Podcasts");
+  }
+};
+loadPerformance();
 // matrix
 $("#avg").textContent=(M.reduce((a,m)=>a+m.t,0)/M.length).toFixed(2).replace(".",",");
 let sk=-1,sd=-1;const rm=()=>{const rows=[...M].sort((a,b)=>sk<0?sd*(a.t-b.t)||0:sd*(a.f[sk]-b.f[sk])||b.t-a.t);
