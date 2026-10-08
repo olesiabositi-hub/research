@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "period": {
+    "from": "2026-07-01T00:00:00Z",
+    "to": "2026-09-30T23:59:59Z",
+    "label": "Q3 2026"
+  },
+  "source": "RUTUBE public JSON endpoints",
+  "sources": [
+    {
+      "brand": "Avito",
+      "type": "channel",
+      "id": "30462632",
+      "title": "AvitoTech",
+      "url": "https://rutube.ru/channel/30462632/"
+    },
+    {
+      "brand": "YADRO",
+      "type": "channel",
+      "id": "28815868",
+      "title": "Истовый Инженер",
+      "url": "https://rutube.ru/channel/28815868/"
+    },
+    {
+      "brand": "Selectel",
+      "type": "channel",
+      "id": "23466013",
+      "title": "Selectel",
+      "url": "https://rutube.ru/channel/23466013/"
+    },
+    {
+      "brand": "Magnit Tech",
+      "type": "playlist",
+      "id": "1247429",
+      "title": "MAGNIT TECH",
+      "url": "https://rutube.ru/plst/1247429/",
+      "scope_note": "Используется tech-плейлист внутри общего канала «Магнит», а не весь корпоративный канал."
+    },
+    {
+      "brand": "Контур",
+      "type": "channel",
+      "id": "16934147",
+      "title": "Технологии в Контуре",
+      "url": "https://rutube.ru/channel/16934147/"
+    }
+  ]
+}
