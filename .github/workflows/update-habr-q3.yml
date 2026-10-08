@@ -2,12 +2,6 @@ name: Update Habr Q3 data
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "tech-brand-watch/config/habr-companies.json"
-      - "tech-brand-watch/scripts/update-habr.mjs"
-      - ".github/workflows/update-habr-q3.yml"
 
 permissions:
   contents: write
