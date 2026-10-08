@@ -2,12 +2,6 @@ name: Update YouTube Q3 data
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "tech-brand-watch/config/youtube-channels.json"
-      - "tech-brand-watch/scripts/update-youtube.mjs"
-      - ".github/workflows/update-youtube-q3.yml"
 
 permissions:
   contents: write
