@@ -1,0 +1,42 @@
+name: Update YouTube Q3 data
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tech-brand-watch/config/youtube-channels.json"
+      - "tech-brand-watch/scripts/update-youtube.mjs"
+      - ".github/workflows/update-youtube-q3.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Collect YouTube Q3 metrics
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node tech-brand-watch/scripts/update-youtube.mjs
+
+      - name: Commit refreshed video data
+        run: |
+          if git diff --quiet -- tech-brand-watch/data/video.json; then
+            echo "No video data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tech-brand-watch/data/video.json
+          git commit -m "Update YouTube Q3 metrics"
+          git push
