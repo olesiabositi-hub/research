@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "period": {
+    "from": 1782864000,
+    "to": 1790812799,
+    "label": "Q3 2026"
+  },
+  "source": "VK API video.get",
+  "sources": [
+    {
+      "brand": "Avito",
+      "screen_name": "avitotech",
+      "expected_title": "AvitoTech",
+      "enabled": true
+    },
+    {
+      "brand": "YADRO",
+      "owner_id": 226636130,
+      "expected_title": "Истовый инженер",
+      "enabled": true
+    },
+    {
+      "brand": "Selectel",
+      "owner_id": 11462611,
+      "expected_title": "Selectel",
+      "enabled": true
+    }
+  ]
+}
