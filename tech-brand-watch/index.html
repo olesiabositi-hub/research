@@ -149,7 +149,7 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 
 <section id="performance"><div class="w">
 <h2>Performance Q3</h2>
-<p class="sub">Активность фиксируется строго за Q3: количество постов и видео — только 01.07–30.09. Просмотры и подписчики — последний публичный снимок и поэтому могут меняться после окончания квартала.</p>
+<p class="sub">Активность фиксируется строго за Q3: количество постов и видео — только 01.07–30.09. Просмотры и подписчики — последний публичный снимок и поэтому могут меняться после окончания квартала. Автоматически обновляются Telegram, YouTube, Habr и RUTUBE.</p>
 <div class="note"><b>Активность Q3 ≠ текущий снимок.</b> В таблицах не смешиваем эти понятия: период публикаций закрыт 30 сентября, а публичные счётчики Habr / YouTube / Telegram обновляются еженедельно.</div>
 
 <div class="tabs" id="perf-tabs" role="tablist">
@@ -168,9 +168,17 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 </div>
 
 <div class="pane perf-pane" data-perf-pane="video" hidden>
+<h3>YouTube</h3>
 <p class="ft" id="perf-video-meta">Загрузка данных…</p>
 <div id="perf-video-content"><div class="c"><h3>Загрузка данных…</h3></div></div>
 <div class="note" id="perf-video-note">Загрузка данных…</div>
+
+<h3 style="margin-top:28px">RUTUBE</h3>
+<p class="ft" id="perf-rutube-meta">Загрузка данных…</p>
+<div id="perf-rutube-content"><div class="c"><h3>Загрузка данных…</h3></div></div>
+<div class="note" id="perf-rutube-note">Загрузка данных…</div>
+
+<div class="note"><b>VK Video:</b> цифры не добавлены. Официальный API возвращает просмотры только с access token, а публичная web-страница нестабильно доступна из GitHub Actions. Пока не считаем это надёжным бесплатным источником.</div>
 </div>
 
 <div class="pane perf-pane" data-perf-pane="podcasts" hidden>
@@ -331,6 +339,39 @@ const loadPerformance=async()=>{
     h("#perf-video-note","Проверьте JSON-слой данных.");
   }
   try{
+    const rutube=await loadJSON("rutube");
+    const rows=(rutube.rows||[]).filter(r=>r.status==="ok").sort((a,b)=>(b.q3_views_median||-1)-(a.q3_views_median||-1));
+    const updated=rutube.updated_at?new Date(rutube.updated_at).toLocaleDateString("ru-RU"):"—";
+    h("#perf-rutube-meta",`${rutube.period?.label||"Q3 2026"} · RUTUBE public data · снимок просмотров: ${updated}`);
+    if(rows.length){
+      h("#perf-rutube-content",`<div class="tw"><table><thead><tr>
+        <th>Компания</th>
+        <th class="num">Видео Q3</th>
+        <th class="num">Медиана просмотров</th>
+        <th class="num">Среднее</th>
+        <th class="num">Все просмотры Q3</th>
+        <th>Топ-видео</th>
+      </tr></thead><tbody>${rows.map(r=>`<tr class="${r.brand===ME?"me":""}">
+        <td><b>${r.brand}</b><br><small>${r.source_title||""}</small>${r.scope_note?`<br><small>${r.scope_note}</small>`:""}</td>
+        <td class="num">${fmtInt(r.q3_videos)}</td>
+        <td class="num"><b>${r.q3_views_median==null?"—":fmtK(r.q3_views_median)}</b></td>
+        <td class="num">${r.q3_views_average==null?"—":fmtK(r.q3_views_average)}</td>
+        <td class="num">${fmtK(r.q3_views_total)}</td>
+        <td class="wrap">${r.top_video?`<a href="${r.top_video.url}" target="_blank" rel="noopener">${r.top_video.title} ↗</a><br><small>${fmtK(r.top_video.views)} просмотров</small>`:"—"}</td>
+      </tr>`).join("")}</tbody></table></div>`);
+      const s=rutube.summary||{};
+      h("#perf-rutube-note",`${rutube.note||""} Проверено ${s.collected||rows.length} источников; всего найдено ${fmtInt(s.q3_videos_total||0)} видео Q3.`);
+    }else{
+      renderEmptyPerformance("#perf-rutube-content",rutube,"RUTUBE");
+      h("#perf-rutube-note",rutube.note||"");
+    }
+  }catch(e){
+    h("#perf-rutube-meta","RUTUBE-данные временно недоступны");
+    renderEmptyPerformance("#perf-rutube-content",{note:"Не удалось загрузить rutube.json."},"RUTUBE");
+    h("#perf-rutube-note","Публичный слой RUTUBE временно недоступен.");
+  }
+
+  try{
     const podcasts=await loadJSON("podcasts");
     renderEmptyPerformance("#perf-podcasts-content",podcasts,"Podcasts");
   }catch(e){
@@ -356,7 +397,7 @@ h("#fc",opt([...new Set(C.map(c=>c[0]))],"Все компании"));h("#fd",opt
 const rc=()=>{const a=$("#fc").value,b=$("#fd").value;const r=C.filter(c=>(!a||c[0]==a)&&(!b||c[1]==b));h("#cases",r.length?r.map(c=>`<div class="case ${c[0]==ME?"me":""}"><small>${c[1]} · ${c[2]} · ${c[0]}</small><h3>${c[3]}</h3><a href="${c[4]}" target="_blank" rel="noopener">Источник ↗</a></div>`).join(""):"<p class='sub'>Ничего не найдено. Сбросьте один из фильтров.</p>")};
 $("#fc").onchange=$("#fd").onchange=rc;rc();
 // roles
-const R={"Редактор":[["Habr: мы в хвосте по частоте","У 2ГИС Tech 4 статьи за Q3. Частота, медиана/среднее просмотров и лидеры теперь считаются автоматически в разделе «Контент в цифрах».","Проверить, растут ли просмотры на материал при более регулярной частоте публикаций."],["Что читают","Top Habr теперь пересчитывается автоматически по публичным просмотрам статей Q3. Для 2ГИС Tech лучший материал квартала — «Полевые проезды в QA».","Сравнивать не только тему, но и формат, возраст публикации и медиану просмотров блога."],["Telegram","Performance Q3 теперь считает посты, медиану и средние просмотры напрямую по публичным страницам Telegram для проверенных каналов. Это один и тот же метод для всех доступных источников.","Использовать медиану просмотров как более устойчивую метрику и расширять список только после проверки точного публичного канала."],["Видео и подкасты","YouTube-performance теперь сравнивается в Performance Q3 по проверенным каналам: количество видео за квартал, медиана/среднее просмотров, суммарные просмотры и top video. Для VK Video, RuTube и подкастов сопоставимых публичных performance-метрик пока нет.","Сначала сравнивать YouTube по единой методике, а остальные платформы держать как presence/activity, пока не появится надёжный источник."],["Образование — главный пробел","16/25: летние школы (Яндекс, X5, Т-Банк, YADRO), курсы (Selectel, Cloud.ru), школы hh.ru, Академия Авито, студенческий E-CUP у Ozon Tech. У 2ГИС Tech не подтверждено.","Начать с малого: практикум в вузе или открытый курс по нашему стеку."],["Сообщество","Постоянное сообщество у 3/25: Young&&Yandex, True Tech Community (MTS Tech), Security Expert Community (Positive Technologies).","Ниша свободна, но нужны ресурсы на модерацию."],["Инженеры как эксперты","4/25: AviTalk (Avito), «Битовые маски» (YADRO, 29 выпусков), Java/Scala Digest (Т-Банк), «В тренде VM» (Positive Technologies).","Серия с постоянными лицами показывает людей за логотипом."],["Исследования","6/25: Яндекс (ICML), Kaspersky (GitHub Actions), Positive Technologies (CloudAtlas), Контур (DevCrowd), Альфа-Банк и VK (VK WorkSpace × Hi-Tech Mail).","Проверить формат исследования на данных, которые есть только у 2ГИС."],["Наши сильные стороны","Open Source (14/25) и нестандартные форматы (8/25) у нас подтверждены.","Показывать их в найме как отличие."]],
+const R={"Редактор":[["Habr: мы в хвосте по частоте","У 2ГИС Tech 4 статьи за Q3. Частота, медиана/среднее просмотров и лидеры теперь считаются автоматически в разделе «Контент в цифрах».","Проверить, растут ли просмотры на материал при более регулярной частоте публикаций."],["Что читают","Top Habr теперь пересчитывается автоматически по публичным просмотрам статей Q3. Для 2ГИС Tech лучший материал квартала — «Полевые проезды в QA».","Сравнивать не только тему, но и формат, возраст публикации и медиану просмотров блога."],["Telegram","Performance Q3 теперь считает посты, медиану и средние просмотры напрямую по публичным страницам Telegram для проверенных каналов. Это один и тот же метод для всех доступных источников.","Использовать медиану просмотров как более устойчивую метрику и расширять список только после проверки точного публичного канала."],["Видео и подкасты","YouTube и RUTUBE теперь сравниваются в Performance Q3 по проверенным источникам: количество видео за квартал, медиана/среднее просмотров, суммарные просмотры и top video. VK Video без токена не даёт стабильного источника, а podcast plays публично несопоставимы.","Для решений опираться на YouTube и RUTUBE; VK Video и подкасты держать как presence/activity, пока не появится сопоставимый источник."],["Образование — главный пробел","16/25: летние школы (Яндекс, X5, Т-Банк, YADRO), курсы (Selectel, Cloud.ru), школы hh.ru, Академия Авито, студенческий E-CUP у Ozon Tech. У 2ГИС Tech не подтверждено.","Начать с малого: практикум в вузе или открытый курс по нашему стеку."],["Сообщество","Постоянное сообщество у 3/25: Young&&Yandex, True Tech Community (MTS Tech), Security Expert Community (Positive Technologies).","Ниша свободна, но нужны ресурсы на модерацию."],["Инженеры как эксперты","4/25: AviTalk (Avito), «Битовые маски» (YADRO, 29 выпусков), Java/Scala Digest (Т-Банк), «В тренде VM» (Positive Technologies).","Серия с постоянными лицами показывает людей за логотипом."],["Исследования","6/25: Яндекс (ICML), Kaspersky (GitHub Actions), Positive Technologies (CloudAtlas), Контур (DevCrowd), Альфа-Банк и VK (VK WorkSpace × Hi-Tech Mail).","Проверить формат исследования на данных, которые есть только у 2ГИС."],["Наши сильные стороны","Open Source (14/25) и нестандартные форматы (8/25) у нас подтверждены.","Показывать их в найме как отличие."]],
 "Ивент-менеджер":[["Митап уже не выделяет","События проводят 18/25. У нас есть Go Go Hopping Meetup и арт-объект Pause/Break ко Дню программиста.","Отличать бренд будут формат и масштаб, а не сам факт митапа."],["Масштаб лидеров","E-CODE (Ozon Tech): 4 000+ гостей офлайн, 59 выступлений и 343K+ просмотров трансляций. Kaspersky{CTF}: 1 657 команд из 98 стран. Positive Hack Camp: 800+ заявок, 81 участник из 20 стран.","Трансляция даёт основной охват: просмотров в ≈85 раз больше, чем гостей офлайн (это не уникальные зрители)."],["Запоминающиеся форматы","Ночные и гибридные форматы: AVITO.TECHNO, MAGNIT TECH NIGHT, Deep Tech Night (Яндекс), АЛЬФА ВААА{АИ}ЙЙЙБ МИТАП. Соревнования: Робозон, E-CUP, CTF, True Tech Champ.","Pause/Break стоит в этом ряду; можно превратить его в регулярную серию."],["Совместные события","На Back to Back (Яндекс, три города) выступал докладчик Positive Technologies. Data Meetup VK Tech прошёл с кейсами Авито и RWB, YADRO собрал встречу с Postgres Pro и VK.","Партнёрский митап даёт чужую аудиторию и спикеров без большого бюджета."],["Финиш квартала","26 сентября прошёл Avito.Tech.Conf, а 30 сентября — АЛЬФА ВААА{АИ}ЙЙЙБ МИТАП с финалом AI-хакатона, техно-шоу и live music. Даже последняя неделя Q3 добавила новые заметные форматы.","При планировании Q4 сравнивать не только количество событий, но и формат, дистрибуцию и повторяемость серии."]]};
 const RN=Object.keys(R),dr=t=>h("#rp",R[t].map(r=>`<div class="c"><h3>${r[0]}</h3><p>${r[1]}</p><p style="margin-top:8px;color:var(--ink)"><b style="color:var(--acc)">Гипотеза:</b> ${r[2]}</p></div>`).join(""));
 RN.forEach((t,i)=>{const b=document.createElement("button");b.textContent=t;b.setAttribute("aria-selected",i==0);b.onclick=()=>{document.querySelectorAll("#rt button").forEach(x=>x.setAttribute("aria-selected",x==b));dr(t)};$("#rt").append(b)});dr(RN[0]);
