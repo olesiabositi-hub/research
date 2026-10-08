@@ -10,43 +10,61 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:
 button{font:inherit;border:0;border-radius:999px;padding:11px 18px;background:#1677ff;color:#fff;cursor:pointer}
 small{color:#667570}.err{color:#a22}
 </style>
-<script src="https://unpkg.com/@vkid/sdk@2.6.1/dist-sdk/umd/index.js"></script>
 </head>
 <body>
 <div class="card">
 <h1>Подключить VK Video</h1>
 <p>Авторизация нужна только для чтения публичных video-метрик через VK API.</p>
 <button id="login">Продолжить через VK ID</button>
-<p id="status"><small>Токен не сохраняется на этой странице и не отправляется в репозиторий.</small></p>
+<p id="status"><small>Используется OAuth 2.1 + PKCE. Токен здесь не сохраняется.</small></p>
 </div>
 <script>
 const APP_ID=54811614;
 const REDIRECT="https://olesiabositi-hub.github.io/research/tech-brand-watch/vk-callback.html";
+const SDK_VERSION="2.6.1";
 
-function randomString(len=64){
+function randomString(len=72){
   const alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~";
   const bytes=new Uint8Array(len);
   crypto.getRandomValues(bytes);
   return Array.from(bytes,b=>alphabet[b%alphabet.length]).join("");
 }
+function base64url(bytes){
+  let s="";
+  bytes.forEach(b=>s+=String.fromCharCode(b));
+  return btoa(s).replace(/=+$/,"").replace(/\+/g,"-").replace(/\//g,"_");
+}
+async function challenge(verifier){
+  const digest=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(verifier));
+  return base64url(new Uint8Array(digest));
+}
 
-document.getElementById("login").onclick=()=>{
+document.getElementById("login").onclick=async()=>{
+  const status=document.getElementById("status");
   try{
-    const verifier=randomString(72);
+    const verifier=randomString();
     const state=randomString(32);
+    const codeChallenge=await challenge(verifier);
+
     sessionStorage.setItem("vk_code_verifier",verifier);
     sessionStorage.setItem("vk_state",state);
-    VKIDSDK.Config.init({
-      app:APP_ID,
-      redirectUrl:REDIRECT,
-      state,
-      codeVerifier:verifier,
+
+    const p=new URLSearchParams({
+      response_type:"code",
+      code_challenge:codeChallenge,
+      code_challenge_method:"s256",
+      client_id:String(APP_ID),
       scope:"video",
-      mode:VKIDSDK.ConfigAuthMode.Redirect
+      state,
+      prompt:"",
+      v:SDK_VERSION,
+      sdk_type:"vkid",
+      app_id:String(APP_ID),
+      redirect_uri:REDIRECT
     });
-    VKIDSDK.Auth.login();
+    location.assign("https://id.vk.ru/authorize?"+p.toString());
   }catch(e){
-    document.getElementById("status").innerHTML='<span class="err">'+String(e)+'</span>';
+    status.innerHTML='<span class="err">'+String(e.message||e)+'</span>';
   }
 };
 </script>
