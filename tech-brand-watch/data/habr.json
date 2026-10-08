@@ -7,7 +7,7 @@
     "label": "Q3 2026",
     "days": 92
   },
-  "updated_at": "2026-10-08T11:18:27.545Z",
+  "updated_at": "2026-10-08T11:20:15.988Z",
   "source_label": "Habr public company article pages",
   "note": "Публичные метрики Habr. Количество статей относится к публикациям 01.07–30.09.2026. Просмотры — снимок на дату updated_at и могут расти после окончания квартала. Для SberTech используется общий блог Сбера и это отмечено shared_blog=true.",
   "summary": {
@@ -15,7 +15,8 @@
     "brands_ok": 25,
     "errors": 0,
     "total_q3_articles": 773,
-    "top_articles_count": 12
+    "top_articles_count": 12,
+    "frequency_compare_brands": 9
   },
   "rows": [
     {
@@ -23,6 +24,7 @@
       "slug": "yandex",
       "display_source": "Яндекс",
       "shared_blog": false,
+      "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 3,
       "q3_articles": 44,
@@ -354,6 +356,7 @@
       "slug": "avito",
       "display_source": "Avito",
       "shared_blog": false,
+      "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 2,
       "q3_articles": 29,
@@ -580,6 +583,7 @@
       "slug": "kaspersky",
       "display_source": "Kaspersky",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 2,
       "q3_articles": 20,
@@ -743,6 +747,7 @@
       "slug": "pt",
       "display_source": "Positive Technologies",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 3,
       "q3_articles": 50,
@@ -1116,6 +1121,7 @@
       "slug": "tbank",
       "display_source": "Т-Банк",
       "shared_blog": false,
+      "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 2,
       "q3_articles": 33,
@@ -1369,7 +1375,8 @@
       "brand": "MTS Tech",
       "slug": "ru_mts",
       "display_source": "МТС",
-      "shared_blog": false,
+      "shared_blog": true,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 10,
       "q3_articles": 168,
@@ -2569,6 +2576,7 @@
       "slug": "ozontech",
       "display_source": "Ozon Tech",
       "shared_blog": false,
+      "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 12,
@@ -2676,6 +2684,7 @@
       "slug": "yadro",
       "display_source": "YADRO",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 3,
       "q3_articles": 42,
@@ -2993,6 +3002,7 @@
       "slug": "2gis",
       "display_source": "2ГИС",
       "shared_blog": false,
+      "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 4,
@@ -3044,6 +3054,7 @@
       "slug": "skbkontur",
       "display_source": "Контур",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 2,
       "q3_articles": 19,
@@ -3200,6 +3211,7 @@
       "slug": "cloud_ru",
       "display_source": "Cloud.ru",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 3,
       "q3_articles": 47,
@@ -3552,6 +3564,7 @@
       "slug": "selectel",
       "display_source": "Selectel",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 7,
       "q3_articles": 127,
@@ -4464,6 +4477,7 @@
       "slug": "vktech",
       "display_source": "VK Tech",
       "shared_blog": false,
+      "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 3,
       "q3_articles": 41,
@@ -4774,6 +4788,7 @@
       "slug": "alfa",
       "display_source": "Альфа-Банк",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 2,
       "q3_articles": 26,
@@ -4979,6 +4994,7 @@
       "slug": "hh",
       "display_source": "hh.ru",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 7,
@@ -5051,6 +5067,7 @@
       "slug": "lamoda",
       "display_source": "Lamoda Tech",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 2,
@@ -5088,6 +5105,7 @@
       "slug": "magnit",
       "display_source": "Magnit Tech",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 10,
@@ -5181,6 +5199,7 @@
       "slug": "sberbank",
       "display_source": "Сбер",
       "shared_blog": true,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 3,
       "q3_articles": 46,
@@ -5526,6 +5545,7 @@
       "slug": "tochka",
       "display_source": "Точка Банк",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 7,
@@ -5598,6 +5618,7 @@
       "slug": "dododev",
       "display_source": "Dodo Engineering",
       "shared_blog": false,
+      "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 1,
@@ -5628,6 +5649,7 @@
       "slug": "ecom_tech",
       "display_source": "ecom.tech",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 3,
@@ -5672,6 +5694,7 @@
       "slug": "rwb",
       "display_source": "RWB",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 10,
@@ -5765,6 +5788,7 @@
       "slug": "x5tech",
       "display_source": "X5 Tech",
       "shared_blog": false,
+      "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 7,
@@ -5837,6 +5861,7 @@
       "slug": "domclick",
       "display_source": "Домклик",
       "shared_blog": false,
+      "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 18,
@@ -5986,6 +6011,7 @@
       "slug": "kuper",
       "display_source": "Купер",
       "shared_blog": false,
+      "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 1,
       "q3_articles": 0,
@@ -6006,16 +6032,8 @@
       "views": 104000,
       "views_label": "104K",
       "brand": "Positive Technologies",
-      "display_source": "Positive Technologies"
-    },
-    {
-      "title": "Темная сторона эпохи перемен: как Геральт из Ривии сломал канон сказок",
-      "url": "https://habr.com/ru/companies/ru_mts/articles/1083754/",
-      "published_at": "2026-09-20T09:12:52.000Z",
-      "views": 102000,
-      "views_label": "102K",
-      "brand": "MTS Tech",
-      "display_source": "МТС"
+      "display_source": "Positive Technologies",
+      "shared_blog": false
     },
     {
       "title": "Как ИИ-агент атаковал инфраструктуру Hugging Face: что стало известно после Black Hat",
@@ -6024,16 +6042,8 @@
       "views": 102000,
       "views_label": "102K",
       "brand": "Selectel",
-      "display_source": "Selectel"
-    },
-    {
-      "title": "Человечество, ослепленное чуждой силой. Что сверх-ИИ грядущий нам готовит?",
-      "url": "https://habr.com/ru/companies/ru_mts/articles/1083898/",
-      "published_at": "2026-09-21T07:10:19.000Z",
-      "views": 99000,
-      "views_label": "99K",
-      "brand": "MTS Tech",
-      "display_source": "МТС"
+      "display_source": "Selectel",
+      "shared_blog": false
     },
     {
       "title": "Как методичка из 1990-х объясняет устройство современных нейросетей",
@@ -6042,7 +6052,8 @@
       "views": 97000,
       "views_label": "97K",
       "brand": "Selectel",
-      "display_source": "Selectel"
+      "display_source": "Selectel",
+      "shared_blog": false
     },
     {
       "title": "Не трогая веса модели: как мы построили исследовательского агента Алисы AI и в разы сократили потребление GPU",
@@ -6051,7 +6062,8 @@
       "views": 95000,
       "views_label": "95K",
       "brand": "Яндекс",
-      "display_source": "Яндекс"
+      "display_source": "Яндекс",
+      "shared_blog": false
     },
     {
       "title": "ZCode, GLM-5.2 и ИИ-роутер: делаем браузерные игры по 7 рублей",
@@ -6060,7 +6072,8 @@
       "views": 94000,
       "views_label": "94K",
       "brand": "Selectel",
-      "display_source": "Selectel"
+      "display_source": "Selectel",
+      "shared_blog": false
     },
     {
       "title": "Вне карьерного шаблона: почему я вернулась из руководства в системный аналитиз",
@@ -6069,7 +6082,8 @@
       "views": 93000,
       "views_label": "93K",
       "brand": "Positive Technologies",
-      "display_source": "Positive Technologies"
+      "display_source": "Positive Technologies",
+      "shared_blog": false
     },
     {
       "title": "Как защитить веб‑приложения с помощью Coraza (ModSecurity)",
@@ -6078,7 +6092,8 @@
       "views": 93000,
       "views_label": "93K",
       "brand": "Selectel",
-      "display_source": "Selectel"
+      "display_source": "Selectel",
+      "shared_blog": false
     },
     {
       "title": "Я DevOps-инженер. Моя работа — чтобы вы обо мне не вспоминали",
@@ -6087,7 +6102,8 @@
       "views": 92000,
       "views_label": "92K",
       "brand": "Cloud.ru",
-      "display_source": "Cloud.ru"
+      "display_source": "Cloud.ru",
+      "shared_blog": false
     },
     {
       "title": "Как Omit {T, K} растворил типы, или что такое дистрибутивность типов в TypeScript",
@@ -6096,7 +6112,8 @@
       "views": 90000,
       "views_label": "90K",
       "brand": "Яндекс",
-      "display_source": "Яндекс"
+      "display_source": "Яндекс",
+      "shared_blog": false
     },
     {
       "title": "Как запустить Gemma на сервере: сравниваем Ollama и llama.cpp",
@@ -6105,7 +6122,28 @@
       "views": 90000,
       "views_label": "90K",
       "brand": "Selectel",
-      "display_source": "Selectel"
+      "display_source": "Selectel",
+      "shared_blog": false
+    },
+    {
+      "title": "Один разработчик, 14 агентов, восемь месяцев: личный опыт Tiny Teams и что из этого вышло",
+      "url": "https://habr.com/ru/companies/domclick/articles/1067048/",
+      "published_at": "2026-08-18T08:00:17.000Z",
+      "views": 88000,
+      "views_label": "88K",
+      "brand": "Домклик",
+      "display_source": "Домклик",
+      "shared_blog": false
+    },
+    {
+      "title": "Почему для разбора инцидентов мы выбрали RAG, а не файнтюнинг",
+      "url": "https://habr.com/ru/companies/selectel/articles/1077574/",
+      "published_at": "2026-09-23T08:00:24.000Z",
+      "views": 87000,
+      "views_label": "87K",
+      "brand": "Selectel",
+      "display_source": "Selectel",
+      "shared_blog": false
     }
   ]
 }
