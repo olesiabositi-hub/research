@@ -36,15 +36,15 @@ document.getElementById("login").onclick=()=>{
     const state=randomString(32);
     sessionStorage.setItem("vk_code_verifier",verifier);
     sessionStorage.setItem("vk_state",state);
-    VKID.Config.init({
+    VKIDSDK.Config.init({
       app:APP_ID,
       redirectUrl:REDIRECT,
       state,
       codeVerifier:verifier,
       scope:"video",
-      mode:VKID.ConfigAuthMode.Redirect
+      mode:VKIDSDK.ConfigAuthMode.Redirect
     });
-    VKID.Auth.login();
+    VKIDSDK.Auth.login();
   }catch(e){
     document.getElementById("status").innerHTML='<span class="err">'+String(e)+'</span>';
   }
