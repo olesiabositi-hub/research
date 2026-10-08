@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "period": {
+    "from": "2026-07-01T00:00:00Z",
+    "to": "2026-09-30T23:59:59Z",
+    "label": "Q3 2026"
+  },
+  "source": "Telegram public web preview (t.me/s)",
+  "note": "Only explicitly verified public handles are scraped. Channels that moved behind an invite link are not substituted with stale public shells.",
+  "channels": [
+    {
+      "brand": "Ozon Tech",
+      "handle": "ozon_tech",
+      "expected_title": "Ozon Tech",
+      "enabled": true
+    },
+    {
+      "brand": "Avito",
+      "handle": "avitotech",
+      "expected_title": "AvitoTech",
+      "enabled": true
+    },
+    {
+      "brand": "Яндекс",
+      "handle": "Yandex4Developers",
+      "expected_title": "Yandex for Developers",
+      "enabled": true
+    },
+    {
+      "brand": "RWB",
+      "handle": "tech_rwb",
+      "expected_title": "RWB Тех",
+      "enabled": true
+    },
+    {
+      "brand": "Lamoda Tech",
+      "handle": "latech",
+      "expected_title": "Lamoda Tech",
+      "enabled": true
+    },
+    {
+      "brand": "2ГИС Tech · @dev2gis",
+      "handle": "dev2gis",
+      "expected_title": "2ГИС Платформа",
+      "enabled": true,
+      "scope_note": "Публичный @dev2gis сейчас называется «2ГИС Платформа»; метрики показываем отдельно и не трактуем как чистый employer-brand канал."
+    },
+    {
+      "brand": "ecom.tech",
+      "handle": "ecom_tech_channel",
+      "expected_title": "ecom.tech",
+      "enabled": false,
+      "status_note": "Публичный канал переехал за invite-link; старый @ecom_tech_channel больше не является сопоставимым источником."
+    },
+    {
+      "brand": "X5 Tech",
+      "handle": "x5_tech",
+      "expected_title": "X5 Tech",
+      "enabled": true
+    },
+    {
+      "brand": "Контур",
+      "handle": "konturtech",
+      "expected_title": "Технологии в Контуре",
+      "enabled": true
+    },
+    {
+      "brand": "Dodo Engineering",
+      "handle": "dododev",
+      "expected_title": "Dodo Engineering",
+      "enabled": true
+    }
+  ]
+}
