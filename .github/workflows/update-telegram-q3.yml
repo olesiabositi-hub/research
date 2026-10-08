@@ -1,0 +1,40 @@
+name: Update Telegram Q3 data
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tech-brand-watch/config/telegram-channels.json"
+      - "tech-brand-watch/scripts/update-telegram.mjs"
+      - ".github/workflows/update-telegram-q3.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Collect Telegram Q3 metrics
+        run: node tech-brand-watch/scripts/update-telegram.mjs
+
+      - name: Commit refreshed Telegram data
+        run: |
+          if [ -z "$(git status --porcelain -- tech-brand-watch/data/telegram.json)" ]; then
+            echo "No Telegram data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tech-brand-watch/data/telegram.json
+          git commit -m "Update Telegram Q3 metrics"
+          git push
