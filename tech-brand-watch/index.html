@@ -143,7 +143,7 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 
 <section id="performance"><div class="w">
 <h2>Performance Q3</h2>
-<p class="sub">Сопоставимые публичные метрики каналов. Telegram уже собран в едином формате; для Video и Podcasts пока не подменяем отсутствующие данные приблизительными оценками.</p>
+<p class="sub">Сопоставимые публичные метрики каналов. Telegram и YouTube читаются из отдельных JSON-слоёв; Podcasts пока остаётся без performance-метрик.</p>
 
 <div class="tabs" id="perf-tabs" role="tablist">
 <button role="tab" data-perf="telegram" aria-selected="true">Telegram</button>
@@ -161,7 +161,9 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);fo
 </div>
 
 <div class="pane perf-pane" data-perf-pane="video" hidden>
+<p class="ft" id="perf-video-meta">Загрузка данных…</p>
 <div id="perf-video-content"><div class="c"><h3>Загрузка данных…</h3></div></div>
+<div class="note" id="perf-video-note">Загрузка данных…</div>
 </div>
 
 <div class="pane perf-pane" data-perf-pane="podcasts" hidden>
@@ -221,6 +223,7 @@ perfTabs.forEach(b=>b.onclick=()=>{
 
 const fmtK=n=>n==null?"—":n>=1000?(n/1000).toFixed(2).replace(".",",")+"K":String(n);
 const fmtPct=n=>n==null?"—":Number(n).toFixed(2).replace(".",",")+"%";
+const fmtInt=n=>n==null?"—":new Intl.NumberFormat("ru-RU",{maximumFractionDigits:0}).format(n);
 const loadJSON=async name=>{
   const r=await fetch("./data/"+name+".json",{cache:"no-store"});
   if(!r.ok)throw new Error(name+" "+r.status);
@@ -245,9 +248,22 @@ const loadPerformance=async()=>{
   }
   try{
     const video=await loadJSON("video");
-    renderEmptyPerformance("#perf-video-content",video,"Video");
+    const verified=(video.rows||[]).filter(r=>r.status==="ok");
+    const rows=[...verified].sort((a,b)=>(b.q3_views_median||-1)-(a.q3_views_median||-1));
+    const updated=video.updated_at?new Date(video.updated_at).toLocaleDateString("ru-RU"):"—";
+    h("#perf-video-meta",`${video.period?.label||"Q3 2026"} · YouTube Data API v3 · снимок просмотров и подписчиков: ${updated}`);
+    if(rows.length){
+      h("#perf-video-content",`<div class="tw"><table><thead><tr><th>Компания</th><th class="num">Видео Q3</th><th class="num">Подписчики</th><th class="num">Медиана просмотров</th><th class="num">Среднее</th><th class="num">Все просмотры Q3</th><th>Топ-видео</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.brand===ME?"me":""}"><td><b>${r.brand}</b><br><small>${r.channel_title||""}</small></td><td class="num">${fmtInt(r.q3_videos)}</td><td class="num">${fmtK(r.subscribers)}</td><td class="num"><b>${r.q3_views_median==null?"—":fmtK(r.q3_views_median)}</b></td><td class="num">${r.q3_views_average==null?"—":fmtK(r.q3_views_average)}</td><td class="num">${fmtK(r.q3_views_total)}</td><td class="wrap">${r.top_video?`<a href="${r.top_video.url}" target="_blank" rel="noopener">${r.top_video.title} ↗</a><br><small>${fmtK(r.top_video.views)} просмотров</small>`:"—"}</td></tr>`).join("")}</tbody></table></div>`);
+      const s=video.summary||{};
+      h("#perf-video-note",`Сейчас в API-слое закреплены ${s.channels_matched||rows.length} проверенных YouTube-каналов из 25 брендов; у ${s.channels_with_q3_video||0} из них были публикации в Q3. Остальные бренды не подменяются автоматическим поиском, пока канал не подтверждён. Число видео относится к 01.07–30.09; просмотры и подписчики — текущий снимок на ${updated}.`);
+    }else{
+      renderEmptyPerformance("#perf-video-content",video,"Video");
+      h("#perf-video-note",video.note||"");
+    }
   }catch(e){
+    h("#perf-video-meta","YouTube-данные временно недоступны");
     renderEmptyPerformance("#perf-video-content",{note:"Не удалось загрузить video.json."},"Video");
+    h("#perf-video-note","Проверьте JSON-слой данных.");
   }
   try{
     const podcasts=await loadJSON("podcasts");
