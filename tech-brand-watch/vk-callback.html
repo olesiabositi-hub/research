@@ -39,16 +39,16 @@ async function finish(){
   if(!verifier||!state) throw new Error("Не найден PKCE-сеанс. Начни авторизацию заново со страницы vk-auth.html");
   if(returnedState && returnedState!==state) throw new Error("State mismatch");
 
-  VKID.Config.init({
+  VKIDSDK.Config.init({
     app:APP_ID,
     redirectUrl:REDIRECT,
     state,
     codeVerifier:verifier,
     scope:"video",
-    mode:VKID.ConfigAuthMode.Redirect
+    mode:VKIDSDK.ConfigAuthMode.Redirect
   });
 
-  const tokens=await VKID.Auth.exchangeCode(code,deviceId,verifier);
+  const tokens=await VKIDSDK.Auth.exchangeCode(code,deviceId,verifier);
   const token=tokens.access_token;
   if(!token) throw new Error("VK не вернул access_token");
 
