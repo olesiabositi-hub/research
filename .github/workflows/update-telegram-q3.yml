@@ -37,4 +37,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add tech-brand-watch/data/telegram.json
           git commit -m "Update Telegram Q3 metrics"
+          git pull --rebase origin main
           git push
