@@ -3,20 +3,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>VK authorization · Tech Brand Watch</title>
+<title>VK authorization callback · Tech Brand Watch</title>
 <style>
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:64px auto;padding:0 20px;line-height:1.55;background:#f4f6f5;color:#15221e}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:760px;margin:64px auto;padding:0 20px;line-height:1.55;background:#f4f6f5;color:#15221e}
 .card{background:#fff;border:1px solid #d8e0dd;border-radius:14px;padding:24px}
-code{word-break:break-word}
-small{color:#667570}
+code{display:block;word-break:break-all;background:#eef2f0;padding:12px;border-radius:8px;margin:12px 0}
+button{font:inherit;border:0;border-radius:999px;padding:10px 18px;background:#1677ff;color:#fff;cursor:pointer}
+small{color:#667570}.err{color:#a22}
 </style>
+<script src="https://unpkg.com/@vkid/sdk@2.6.1/dist-sdk/umd/index.js"></script>
 </head>
 <body>
 <div class="card">
-<h1>VK authorization complete</h1>
-<p>Если VK вернул access token, он находится только в адресной строке после <code>#access_token=</code>.</p>
-<p>Не отправляйте токен в чат. Скопируйте только его значение и сохраните в GitHub Actions Secret с именем <b>VK_ACCESS_TOKEN</b>.</p>
-<p><small>Эта страница не читает и не отправляет содержимое адресной строки.</small></p>
+<h1>VK authorization</h1>
+<div id="out">Завершаю авторизацию…</div>
 </div>
+<script>
+const APP_ID=54811614;
+const REDIRECT="https://olesiabositi-hub.github.io/research/tech-brand-watch/vk-callback.html";
+const out=document.getElementById("out");
+const q=new URLSearchParams(location.search);
+const code=q.get("code");
+const deviceId=q.get("device_id");
+const returnedState=q.get("state");
+const error=q.get("error");
+const errorDescription=q.get("error_description");
+const verifier=sessionStorage.getItem("vk_code_verifier");
+const state=sessionStorage.getItem("vk_state");
+
+async function finish(){
+  if(error){
+    throw new Error(error+(errorDescription?": "+errorDescription:""));
+  }
+  if(!code||!deviceId) throw new Error("VK не вернул code/device_id");
+  if(!verifier||!state) throw new Error("Не найден PKCE-сеанс. Начни авторизацию заново со страницы vk-auth.html");
+  if(returnedState && returnedState!==state) throw new Error("State mismatch");
+
+  VKID.Config.init({
+    app:APP_ID,
+    redirectUrl:REDIRECT,
+    state,
+    codeVerifier:verifier,
+    scope:"video",
+    mode:VKID.ConfigAuthMode.Redirect
+  });
+
+  const tokens=await VKID.Auth.exchangeCode(code,deviceId,verifier);
+  const token=tokens.access_token;
+  if(!token) throw new Error("VK не вернул access_token");
+
+  sessionStorage.removeItem("vk_code_verifier");
+  sessionStorage.removeItem("vk_state");
+
+  out.innerHTML='<p><b>VK_ACCESS_TOKEN получен.</b> Не присылай его в чат.</p>'+
+    '<p>Скопируй его и добавь в GitHub Secret <b>VK_ACCESS_TOKEN</b>.</p>'+
+    '<code id="token"></code>'+
+    '<button id="copy">Copy token</button>'+
+    '<p><small>Токен показан только локально в этом браузере.</small></p>';
+  document.getElementById("token").textContent=token;
+  document.getElementById("copy").onclick=async()=>{
+    await navigator.clipboard.writeText(token);
+    document.getElementById("copy").textContent="Copied";
+  };
+}
+finish().catch(e=>{
+  out.innerHTML='<p class="err"><b>Ошибка:</b> '+String(e.message||e)+'</p>'+
+    '<p><a href="./vk-auth.html">Начать заново</a></p>';
+});
+</script>
 </body>
 </html>
