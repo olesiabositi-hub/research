@@ -1,110 +1,145 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "period": {
     "from": "2026-07-01T00:00:00Z",
     "to": "2026-09-30T23:59:59Z",
     "label": "Q3 2026"
   },
+  "note": "Only explicitly verified/anchored YouTube channels are collected. Unverified brands stay in the config but are not auto-matched to avoid false positives.",
   "brands": [
     {
       "brand": "Яндекс",
-      "query": "Яндекс для разработчиков"
+      "query": "Яндекс для разработчиков",
+      "enabled": false
     },
     {
       "brand": "Avito",
-      "query": "Avito Tech"
+      "query": "AvitoTech",
+      "username": "avitotech",
+      "enabled": true
     },
     {
       "brand": "Kaspersky",
-      "query": "Kaspersky Tech"
+      "query": "Kaspersky Tech",
+      "enabled": false
     },
     {
       "brand": "Positive Technologies",
-      "query": "Positive Technologies"
+      "query": "Positive Technologies",
+      "enabled": false
     },
     {
       "brand": "Т-Банк",
-      "query": "Т-Банк Tech"
+      "query": "Т-Банк Tech",
+      "enabled": false
     },
     {
       "brand": "MTS Tech",
-      "query": "MTS Tech"
+      "query": "MTS Tech",
+      "enabled": false
     },
     {
       "brand": "Ozon Tech",
-      "query": "Ozon Tech"
+      "query": "Ozon Tech",
+      "handle": "ozontech1998",
+      "enabled": true
     },
     {
       "brand": "YADRO",
-      "query": "YADRO"
+      "query": "YADRO",
+      "channel_id": "UCw-5Is3U1EO8A8deam9TKig",
+      "enabled": true
     },
     {
       "brand": "2ГИС Tech",
-      "query": "2GIS Tech"
+      "query": "2ГИС",
+      "username": "2GISvideo",
+      "enabled": true
     },
     {
       "brand": "Контур",
-      "query": "Контур разработка"
+      "query": "Технологии в Контуре",
+      "handle": "KonturTech",
+      "enabled": true
     },
     {
       "brand": "Cloud.ru",
-      "query": "Cloud.ru"
+      "query": "Cloud.ru",
+      "channel_id": "UCFYQnzpYxiLUGprz56EHXqg",
+      "enabled": true
     },
     {
       "brand": "Selectel",
-      "query": "Selectel"
+      "query": "Selectel",
+      "username": "selectel",
+      "enabled": true
     },
     {
       "brand": "VK",
-      "query": "VK Tech"
+      "query": "VK Tech",
+      "enabled": false
     },
     {
       "brand": "Альфа-Банк",
-      "query": "Альфа-Банк IT Tech"
+      "query": "Альфа-Банк Tech",
+      "enabled": false
     },
     {
       "brand": "hh.ru",
-      "query": "hh.ru разработка"
+      "query": "hh.ru",
+      "enabled": false
     },
     {
       "brand": "Lamoda Tech",
-      "query": "Lamoda Tech"
+      "query": "Lamoda Tech",
+      "enabled": false
     },
     {
       "brand": "Magnit Tech",
-      "query": "Magnit Tech"
+      "query": "Magnit Tech",
+      "enabled": false
     },
     {
       "brand": "SberTech",
-      "query": "SberTech"
+      "query": "SberTech",
+      "enabled": false
     },
     {
       "brand": "Точка Банк",
-      "query": "Точка Банк IT"
+      "query": "Точка Банк Tech",
+      "enabled": false
     },
     {
       "brand": "Dodo Engineering",
-      "query": "Dodo Engineering"
+      "query": "Dodo Engineering",
+      "enabled": false
     },
     {
       "brand": "ecom.tech",
-      "query": "ecom.tech"
+      "query": "ecom.tech",
+      "enabled": false
     },
     {
       "brand": "RWB",
-      "query": "RWB Tech"
+      "query": "WB Tech",
+      "handle": "wb_tech",
+      "enabled": true
     },
     {
       "brand": "X5 Tech",
-      "query": "X5 Tech"
+      "query": "X5 Tech",
+      "enabled": false
     },
     {
       "brand": "Домклик",
-      "query": "Домклик Tech"
+      "query": "DomClick Tech",
+      "enabled": false
     },
     {
       "brand": "Купер",
-      "query": "Купер Tech"
+      "query": "Купер.тех",
+      "channel_id": "UC8WjHJcS5ZhN2uV4de4o6Jg",
+      "enabled": true
     }
   ]
 }
