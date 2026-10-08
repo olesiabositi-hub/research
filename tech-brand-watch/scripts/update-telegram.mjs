@@ -159,7 +159,7 @@ async function collectChannel(item){
   const avgViews=mean(viewNums);
   const medianViews=median(viewNums);
   const avgReactions=mean(reactionNums);
-  const er=(subscribers&&avgViews!=null)?avgViews/subscribers*100:null;
+  const viewsSubscriberRatio=(subscribers&&avgViews!=null)?avgViews/subscribers*100:null;
   const top=[...posts].filter(p=>Number.isFinite(p.views)).sort((a,b)=>b.views-a.views)[0]||null;
 
   return {
@@ -175,7 +175,7 @@ async function collectChannel(item){
     views_available:viewNums.length,
     avg_views:avgViews,
     median_views:medianViews,
-    er,
+    views_subscriber_ratio_pct:viewsSubscriberRatio,
     avg_reactions:avgReactions,
     reactions_available:reactionNums.length,
     reactions_total:reactionNums.length?reactionNums.reduce((a,b)=>a+b,0):null,
@@ -209,7 +209,7 @@ const output={
   period:config.period,
   updated_at:new Date().toISOString(),
   source_label:"Telegram public web preview (t.me/s)",
-  note:"Бесплатный публичный сбор без TGStat/Telemetr API. Посты считаются за Q3 2026; subscribers, views и reactions — публичный снимок на дату updated_at и со временем меняются. ER здесь = средние просмотры Q3 / текущие подписчики, поэтому это ориентир, а не исторический ER на дату публикации.",
+  note:"Бесплатный публичный сбор без TGStat/Telemetr API. Количество постов фиксируется за Q3 2026; просмотры этих Q3-постов и число подписчиков — текущий публичный снимок на дату updated_at и со временем меняются. Views/subs = средние просмотры Q3-постов / текущее число подписчиков. Это не engagement rate и показатель может быть выше 100%.",
   summary:{
     configured:config.channels.length,
     collected:ok.length,
