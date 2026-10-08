@@ -1,0 +1,2215 @@
+{
+  "schema_version": 1,
+  "channel": "rutube",
+  "period": {
+    "from": "2026-07-01T00:00:00Z",
+    "to": "2026-09-30T23:59:59Z",
+    "label": "Q3 2026"
+  },
+  "updated_at": "2026-10-08T11:53:48.025Z",
+  "source_label": "RUTUBE public JSON endpoints",
+  "note": "Бесплатный публичный сбор без авторизации. Количество видео фиксируется за Q3 2026; просмотры этих Q3-видео — текущий публичный снимок RUTUBE и могут расти после окончания квартала. Для Magnit Tech используется отдельный tech-плейлист внутри общего корпоративного канала.",
+  "summary": {
+    "configured": 5,
+    "collected": 5,
+    "errors": 0,
+    "q3_videos_total": 231
+  },
+  "rows": [
+    {
+      "brand": "Avito",
+      "source_type": "channel",
+      "source_id": "30462632",
+      "source_title": "AvitoTech",
+      "source_url": "https://rutube.ru/channel/30462632/",
+      "scope_note": null,
+      "status": "ok",
+      "q3_videos": 70,
+      "views_available": 70,
+      "q3_views_total": 7289,
+      "q3_views_average": 104.12857142857143,
+      "q3_views_median": 107.5,
+      "top_video": {
+        "id": "ef013f589c8f5df88f34749ba6b4c09f",
+        "title": "Как обойти Security Gate? #avitotech",
+        "published_at": "2026-09-30T15:19:15.000Z",
+        "views": 324,
+        "url": "https://rutube.ru/video/ef013f589c8f5df88f34749ba6b4c09f/",
+        "duration": 56,
+        "origin_type": "rshorts"
+      },
+      "videos": [
+        {
+          "id": "ef013f589c8f5df88f34749ba6b4c09f",
+          "title": "Как обойти Security Gate? #avitotech",
+          "published_at": "2026-09-30T15:19:15.000Z",
+          "views": 324,
+          "url": "https://rutube.ru/video/ef013f589c8f5df88f34749ba6b4c09f/",
+          "duration": 56,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "bfbf049b01221af5c2c6bb7e299944c9",
+          "title": "6 столпов Digital Immune System",
+          "published_at": "2026-09-28T15:00:24.000Z",
+          "views": 175,
+          "url": "https://rutube.ru/video/bfbf049b01221af5c2c6bb7e299944c9/",
+          "duration": 69,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "e68d1943dc7c111f215f677b1124d8ab",
+          "title": "Как из одной ссылки собрать полный взлом сервера",
+          "published_at": "2026-09-25T14:22:06.000Z",
+          "views": 9,
+          "url": "https://rutube.ru/video/e68d1943dc7c111f215f677b1124d8ab/",
+          "duration": 2562,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "76b79a4bf4f3af092a33bcf4e43decbd",
+          "title": "Какие задачи решает Digital Immune System",
+          "published_at": "2026-09-24T15:01:11.000Z",
+          "views": 184,
+          "url": "https://rutube.ru/video/76b79a4bf4f3af092a33bcf4e43decbd/",
+          "duration": 55,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "936d36bfc66db45f67647b7052b6605b",
+          "title": "Инциденты и пользователи. О чем не стоит говорить?",
+          "published_at": "2026-09-24T15:00:20.000Z",
+          "views": 96,
+          "url": "https://rutube.ru/video/936d36bfc66db45f67647b7052b6605b/",
+          "duration": 46,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b35c1632eebbae5644934d2a9d724489",
+          "title": "Digital Immune System: мониторинга, SRE и автотестов уже недостаточно | В SREду на кухне | AvitoTech",
+          "published_at": "2026-09-24T04:32:06.000Z",
+          "views": 18,
+          "url": "https://rutube.ru/video/b35c1632eebbae5644934d2a9d724489/",
+          "duration": 3169,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "6e34b95bc19bca793e39c0432f88d91a",
+          "title": "Методологии в продуктах и их применение",
+          "published_at": "2026-09-21T15:01:10.000Z",
+          "views": 119,
+          "url": "https://rutube.ru/video/6e34b95bc19bca793e39c0432f88d91a/",
+          "duration": 38,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "46650e1539f8c4237f3b1a357b4b3fb9",
+          "title": "Что нужно для создания MCP? #avitotech",
+          "published_at": "2026-09-20T13:27:07.000Z",
+          "views": 103,
+          "url": "https://rutube.ru/video/46650e1539f8c4237f3b1a357b4b3fb9/",
+          "duration": 60,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b39f293a6557c742dc9f2da26a75e7f5",
+          "title": "Прочитать шум и захватить сервер: два хакерских трюка с HoneyBadger CTF",
+          "published_at": "2026-09-18T14:20:08.000Z",
+          "views": 16,
+          "url": "https://rutube.ru/video/b39f293a6557c742dc9f2da26a75e7f5/",
+          "duration": 3601,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "d00931d30cdd38eb2c17c50dee93fba3",
+          "title": "Как начать использовать SDD? #avitotech",
+          "published_at": "2026-09-16T13:22:07.000Z",
+          "views": 2,
+          "url": "https://rutube.ru/video/d00931d30cdd38eb2c17c50dee93fba3/",
+          "duration": 59,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "e5e227fc9648389de97f33efd8c863e7",
+          "title": "Контроль качества в AI-эпоху",
+          "published_at": "2026-09-16T09:53:14.000Z",
+          "views": 272,
+          "url": "https://rutube.ru/video/e5e227fc9648389de97f33efd8c863e7/",
+          "duration": 50,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "a3fa3e57845f6916098dbad144a29080",
+          "title": "Зачем инженеру продуктовое мышление? | Подкаст «Бэкенд расправил плечи»",
+          "published_at": "2026-09-15T10:01:16.000Z",
+          "views": 41,
+          "url": "https://rutube.ru/video/a3fa3e57845f6916098dbad144a29080/",
+          "duration": 2452,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "5606ab9e71a23d74213e3194559d949e",
+          "title": "Пирамида тестирования усложняется #avitotech",
+          "published_at": "2026-09-13T16:42:08.000Z",
+          "views": 127,
+          "url": "https://rutube.ru/video/5606ab9e71a23d74213e3194559d949e/",
+          "duration": 59,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "757217d390338c2191bf62f39b314581",
+          "title": "Самый быстрый инженер ВООБЩЕ не ускоряет разработку #avitotech",
+          "published_at": "2026-09-12T17:39:07.000Z",
+          "views": 6,
+          "url": "https://rutube.ru/video/757217d390338c2191bf62f39b314581/",
+          "duration": 52,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "7d1c41860090cc81f3b06c43ec434292",
+          "title": "AI-инструменты: скорость выросла, а пользы 0 #avitotech",
+          "published_at": "2026-09-11T14:36:07.000Z",
+          "views": 11,
+          "url": "https://rutube.ru/video/7d1c41860090cc81f3b06c43ec434292/",
+          "duration": 43,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "d950e9352a1023eb8f1fea236ece7eb4",
+          "title": "Довольна CPO",
+          "published_at": "2026-09-10T14:27:07.000Z",
+          "views": 6,
+          "url": "https://rutube.ru/video/d950e9352a1023eb8f1fea236ece7eb4/",
+          "duration": 31,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "1ab591c9cbb78145a80bb2bbba695e54",
+          "title": "Как заниматься волонтёрством на своей работе? #avitotech",
+          "published_at": "2026-09-07T14:14:06.000Z",
+          "views": 122,
+          "url": "https://rutube.ru/video/1ab591c9cbb78145a80bb2bbba695e54/",
+          "duration": 60,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "c14b804fd9bd4dc95f8892de5bf77699",
+          "title": "FinOps-команды не любят?",
+          "published_at": "2026-09-05T15:01:13.000Z",
+          "views": 213,
+          "url": "https://rutube.ru/video/c14b804fd9bd4dc95f8892de5bf77699/",
+          "duration": 40,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "1dc678c81a5f49616dbe8b34eb7ccd7d",
+          "title": "Что я делегировала AI как тестировщик #avitotech",
+          "published_at": "2026-09-04T13:14:07.000Z",
+          "views": 7,
+          "url": "https://rutube.ru/video/1dc678c81a5f49616dbe8b34eb7ccd7d/",
+          "duration": 49,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "db880eac055c9a6f96b1a6058d03d915",
+          "title": "От аварии до аварии: Incident, Problem и Risk Management | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-09-02T15:00:23.000Z",
+          "views": 35,
+          "url": "https://rutube.ru/video/db880eac055c9a6f96b1a6058d03d915/",
+          "duration": 3431,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "c77cb45c2f3074e84dd75ac98878e196",
+          "title": "Error budget в FinOps",
+          "published_at": "2026-09-01T15:00:21.000Z",
+          "views": 124,
+          "url": "https://rutube.ru/video/c77cb45c2f3074e84dd75ac98878e196/",
+          "duration": 49,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ea7fdcb4e33149976ec3c0b3e0844a84",
+          "title": "QA нужен только в бигтехе? #avitotech",
+          "published_at": "2026-08-31T15:30:12.000Z",
+          "views": 100,
+          "url": "https://rutube.ru/video/ea7fdcb4e33149976ec3c0b3e0844a84/",
+          "duration": 54,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "8c1b699c238494b34fd3d450de503573",
+          "title": "Что произошло, когда мы раздали доступ к AI-агентам 100 разработчикам? #avitotech",
+          "published_at": "2026-08-29T13:04:07.000Z",
+          "views": 107,
+          "url": "https://rutube.ru/video/8c1b699c238494b34fd3d450de503573/",
+          "duration": 59,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "709f96cc117ed9fb9f04e52ae6b6b834",
+          "title": "Релизить или нет? #avitotech",
+          "published_at": "2026-08-28T14:20:07.000Z",
+          "views": 319,
+          "url": "https://rutube.ru/video/709f96cc117ed9fb9f04e52ae6b6b834/",
+          "duration": 50,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "e1b0440308bcfa3dbae8f63d69370891",
+          "title": "Доволен CEO",
+          "published_at": "2026-08-27T14:37:08.000Z",
+          "views": 15,
+          "url": "https://rutube.ru/video/e1b0440308bcfa3dbae8f63d69370891/",
+          "duration": 28,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "e57a34d0d822c734ae4d37e50ec2bae0",
+          "title": "Как Авито развивает свой центр качества? #avitotech",
+          "published_at": "2026-08-25T14:31:09.000Z",
+          "views": 179,
+          "url": "https://rutube.ru/video/e57a34d0d822c734ae4d37e50ec2bae0/",
+          "duration": 47,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "40867c0013daf65d257a9360a845130a",
+          "title": "Дженерики в Go 1.27 #avitotech",
+          "published_at": "2026-08-24T19:59:36.000Z",
+          "views": 7,
+          "url": "https://rutube.ru/video/40867c0013daf65d257a9360a845130a/",
+          "duration": 17,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b7252e4e4b3fdf4341d772686ea5369a",
+          "title": "Что такое Showback в FinOps",
+          "published_at": "2026-08-23T15:01:12.000Z",
+          "views": 143,
+          "url": "https://rutube.ru/video/b7252e4e4b3fdf4341d772686ea5369a/",
+          "duration": 28,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "3ba310fc7dfab4d71cea88feb21c8bcc",
+          "title": "ML в бигтехе #avitotech",
+          "published_at": "2026-08-20T19:15:33.000Z",
+          "views": 130,
+          "url": "https://rutube.ru/video/3ba310fc7dfab4d71cea88feb21c8bcc/",
+          "duration": 45,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "438dbed511d4af86fc403a4d1990f78a",
+          "title": "Изучаем новинки Go 1.27 | avito.code",
+          "published_at": "2026-08-20T13:00:12.000Z",
+          "views": 108,
+          "url": "https://rutube.ru/video/438dbed511d4af86fc403a4d1990f78a/",
+          "duration": 1270,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "359f17533852479cc652f3d5f5e11511",
+          "title": "QA-эксперт Avito о том, почему вход в IT через тестирование больше не работает",
+          "published_at": "2026-08-19T11:58:48.000Z",
+          "views": 31,
+          "url": "https://rutube.ru/video/359f17533852479cc652f3d5f5e11511/",
+          "duration": 3201,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "bce6584bc9647751d357043c2fa4aa63",
+          "title": "Что такое FinOps?",
+          "published_at": "2026-08-17T15:01:15.000Z",
+          "views": 126,
+          "url": "https://rutube.ru/video/bce6584bc9647751d357043c2fa4aa63/",
+          "duration": 36,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "11307a7a3ecb62b76fbaa5aacc421895",
+          "title": "AI уже меняет опыт пользователя",
+          "published_at": "2026-08-17T14:06:44.000Z",
+          "views": 116,
+          "url": "https://rutube.ru/video/11307a7a3ecb62b76fbaa5aacc421895/",
+          "duration": 38,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "1d24330a75c11d628b5ffbfe29b2ee23",
+          "title": "Выпрямляем руки агентов: как сделать MCP удобными и действительно полезными — Павел Агалецкий",
+          "published_at": "2026-08-14T15:20:05.000Z",
+          "views": 76,
+          "url": "https://rutube.ru/video/1d24330a75c11d628b5ffbfe29b2ee23/",
+          "duration": 2441,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "1f0d54ad3089d4321dff6bd8b131a6f4",
+          "title": "Доволен CTO",
+          "published_at": "2026-08-13T19:09:13.000Z",
+          "views": 14,
+          "url": "https://rutube.ru/video/1f0d54ad3089d4321dff6bd8b131a6f4/",
+          "duration": 29,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "0d5f7f336afb76331d9cbfe370f1bc57",
+          "title": "Как снизить стоимость Gb за счет FinOps?",
+          "published_at": "2026-08-13T15:00:09.000Z",
+          "views": 207,
+          "url": "https://rutube.ru/video/0d5f7f336afb76331d9cbfe370f1bc57/",
+          "duration": 43,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "49946791d239b32ac18d45b2ba34db94",
+          "title": "FinOps в SRE: сколько стоит надёжность? | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-08-12T15:04:31.000Z",
+          "views": 35,
+          "url": "https://rutube.ru/video/49946791d239b32ac18d45b2ba34db94/",
+          "duration": 3311,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "a3eb83081f1e4b31bf4899b7371d2fb3",
+          "title": "Геймификация и Kubernetes",
+          "published_at": "2026-08-07T15:01:12.000Z",
+          "views": 81,
+          "url": "https://rutube.ru/video/a3eb83081f1e4b31bf4899b7371d2fb3/",
+          "duration": 35,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "93f34d62c741b435bc81660b92f843f8",
+          "title": "Как SwitchBack эксперименты помогают лучше понять аудиторию?  #avitotech",
+          "published_at": "2026-08-05T14:11:06.000Z",
+          "views": 104,
+          "url": "https://rutube.ru/video/93f34d62c741b435bc81660b92f843f8/",
+          "duration": 44,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "763dee746ae0da463ae0f2af80372bcc",
+          "title": "Атаки на GenAI-агентов: OWASP на практике — Николай Шуляев",
+          "published_at": "2026-08-04T19:46:06.000Z",
+          "views": 49,
+          "url": "https://rutube.ru/video/763dee746ae0da463ae0f2af80372bcc/",
+          "duration": 2057,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "66bec6bab378c6fb66968abb9abd3186",
+          "title": "A10_Shorts_6_1 (1)",
+          "published_at": "2026-08-03T19:29:45.000Z",
+          "views": 85,
+          "url": "https://rutube.ru/video/66bec6bab378c6fb66968abb9abd3186/",
+          "duration": 50,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "65396900932516f201c8aad94b42d84a",
+          "title": "3000 серверов — это предел Kubernetes",
+          "published_at": "2026-08-01T15:01:12.000Z",
+          "views": 108,
+          "url": "https://rutube.ru/video/65396900932516f201c8aad94b42d84a/",
+          "duration": 52,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "efd2bca8d3b59a18b48c266ab1a3e0ad",
+          "title": "Платформенный QA - проверяй самое важное #avitotech",
+          "published_at": "2026-07-31T16:55:14.000Z",
+          "views": 130,
+          "url": "https://rutube.ru/video/efd2bca8d3b59a18b48c266ab1a3e0ad/",
+          "duration": 39,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "fe4723c60b1767210c1c225f7089e0f4",
+          "title": "Разработка и тестирование MCP для внутренних агентных систем аналитики — Алексей Пахомов",
+          "published_at": "2026-07-29T21:24:46.000Z",
+          "views": 102,
+          "url": "https://rutube.ru/video/fe4723c60b1767210c1c225f7089e0f4/",
+          "duration": 2741,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "5503c1a817692cd3b11160ae41758e0f",
+          "title": "Что происходит, когда компания растет #avitotech",
+          "published_at": "2026-07-28T14:27:06.000Z",
+          "views": 90,
+          "url": "https://rutube.ru/video/5503c1a817692cd3b11160ae41758e0f/",
+          "duration": 28,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "003225fe32e0d03b59a891b634f5a446",
+          "title": "В детстве я думал, что буду разрабатывать игры #avitotech",
+          "published_at": "2026-07-27T14:26:06.000Z",
+          "views": 127,
+          "url": "https://rutube.ru/video/003225fe32e0d03b59a891b634f5a446/",
+          "duration": 52,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "1a9a3b3d9b42f215922451714b6021dc",
+          "title": "Kubernetes —  стандарт рынка?",
+          "published_at": "2026-07-25T15:01:07.000Z",
+          "views": 204,
+          "url": "https://rutube.ru/video/1a9a3b3d9b42f215922451714b6021dc/",
+          "duration": 29,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "6f6fefed89e579f66a538eaa97987335",
+          "title": "Продакт должен разбираться в AI #avitotech",
+          "published_at": "2026-07-24T12:08:07.000Z",
+          "views": 185,
+          "url": "https://rutube.ru/video/6f6fefed89e579f66a538eaa97987335/",
+          "duration": 30,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b0c605f6dcc8780d2689aef600e299b2",
+          "title": "Угадай товар с Авито по фото #avitotech",
+          "published_at": "2026-07-23T13:52:46.000Z",
+          "views": 120,
+          "url": "https://rutube.ru/video/b0c605f6dcc8780d2689aef600e299b2/",
+          "duration": 60,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "fc9aaed434afe69ba0605d21d49b797b",
+          "title": "Kubernetes 2035: кто будет управлять инфраструктурой? | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-07-22T15:01:18.000Z",
+          "views": 55,
+          "url": "https://rutube.ru/video/fc9aaed434afe69ba0605d21d49b797b/",
+          "duration": 4013,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "ab318929d3b3bfed9beb64f8f16001c6",
+          "title": "Крупный релиз оказался катастрофой",
+          "published_at": "2026-07-21T15:00:17.000Z",
+          "views": 124,
+          "url": "https://rutube.ru/video/ab318929d3b3bfed9beb64f8f16001c6/",
+          "duration": 72,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ec454d8adadb90f701fc4d3e7adad589",
+          "title": "Spec-Driven Development: теория, инструменты, практика — Александр Шаповалов",
+          "published_at": "2026-07-21T12:00:32.000Z",
+          "views": 181,
+          "url": "https://rutube.ru/video/ec454d8adadb90f701fc4d3e7adad589/",
+          "duration": 2611,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "68e1deaf166be4969a568c78e79a5d44",
+          "title": "Не нужно гнаться за новыми нейросетями #avitotech",
+          "published_at": "2026-07-20T12:48:06.000Z",
+          "views": 108,
+          "url": "https://rutube.ru/video/68e1deaf166be4969a568c78e79a5d44/",
+          "duration": 49,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "2ea55a6919460b992baa374a21cf0779",
+          "title": "Ты не влияешь на осуществление мечт #avitotech",
+          "published_at": "2026-07-18T12:26:06.000Z",
+          "views": 118,
+          "url": "https://rutube.ru/video/2ea55a6919460b992baa374a21cf0779/",
+          "duration": 53,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "f83b3e36d99777637a861d7ab09eca0d",
+          "title": "Как в Авито решают вопросы с деградацией",
+          "published_at": "2026-07-16T15:01:14.000Z",
+          "views": 117,
+          "url": "https://rutube.ru/video/f83b3e36d99777637a861d7ab09eca0d/",
+          "duration": 59,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "28d487b3506da891ef8a2f5c95477b33",
+          "title": "Когда сотрудник уходит: чек-лист для тех, кто остаётся | Подкаст «Свободный слот»",
+          "published_at": "2026-07-16T11:52:51.000Z",
+          "views": 26,
+          "url": "https://rutube.ru/video/28d487b3506da891ef8a2f5c95477b33/",
+          "duration": 3251,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "29b27d330309de2ddd0eae1a0c7a772a",
+          "title": "Ушёл из Яндекса в Авито. CTO Авито Товары про свою миссию в айти",
+          "published_at": "2026-07-15T16:29:06.000Z",
+          "views": 17,
+          "url": "https://rutube.ru/video/29b27d330309de2ddd0eae1a0c7a772a/",
+          "duration": 3414,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "db0ceba9c8b2e03d25280a808ddbde2a",
+          "title": "Work-life balance может быть разным #avitotech",
+          "published_at": "2026-07-13T18:32:25.000Z",
+          "views": 103,
+          "url": "https://rutube.ru/video/db0ceba9c8b2e03d25280a808ddbde2a/",
+          "duration": 54,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "2eb2cea51355786c69d9ec0d000a8386",
+          "title": "Деплой — это не релиз!?",
+          "published_at": "2026-07-10T15:01:11.000Z",
+          "views": 131,
+          "url": "https://rutube.ru/video/2eb2cea51355786c69d9ec0d000a8386/",
+          "duration": 40,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "a50ea44c8d0512ef34ca34dd516fd877",
+          "title": "System Design валит кандидатов на собеседованиях #avitotech",
+          "published_at": "2026-07-09T15:06:16.000Z",
+          "views": 132,
+          "url": "https://rutube.ru/video/a50ea44c8d0512ef34ca34dd516fd877/",
+          "duration": 41,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b83b4c4b0e8367b062ae00063fe211ac",
+          "title": "Медоеду не пофиг на 300 000 руб. CTF от Авито. #avitotech #ctf",
+          "published_at": "2026-07-09T10:58:07.000Z",
+          "views": 258,
+          "url": "https://rutube.ru/video/b83b4c4b0e8367b062ae00063fe211ac/",
+          "duration": 41,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "bd33c24324885708344409fafd78bad4",
+          "title": "Google ошибок не прощает",
+          "published_at": "2026-07-08T20:50:30.000Z",
+          "views": 116,
+          "url": "https://rutube.ru/video/bd33c24324885708344409fafd78bad4/",
+          "duration": 42,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "bb21f9b7992be1d3c204182a99706f80",
+          "title": "Из логотипа в линейку предметов для дома | Avito Design Team",
+          "published_at": "2026-07-08T17:30:08.000Z",
+          "views": 31,
+          "url": "https://rutube.ru/video/bb21f9b7992be1d3c204182a99706f80/",
+          "duration": 3832,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "18b53ab84bc8890a800f56f92fcd5f08",
+          "title": "Как развивалась виртулизация в Авито? #avitotech",
+          "published_at": "2026-07-08T16:47:39.000Z",
+          "views": 91,
+          "url": "https://rutube.ru/video/18b53ab84bc8890a800f56f92fcd5f08/",
+          "duration": 58,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "4c836c91705114ff2bcb27159f271b44",
+          "title": "Prod vs stage. Почему прод повторить невозможно?",
+          "published_at": "2026-07-07T15:00:15.000Z",
+          "views": 144,
+          "url": "https://rutube.ru/video/4c836c91705114ff2bcb27159f271b44/",
+          "duration": 34,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "d7892ff6013bb136f07d98136a1912b4",
+          "title": "System Design на собеседовании: ошибки, которые тебя топят",
+          "published_at": "2026-07-03T15:04:06.000Z",
+          "views": 136,
+          "url": "https://rutube.ru/video/d7892ff6013bb136f07d98136a1912b4/",
+          "duration": 1918,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "433767a7010ba8221e369c06d0b914ad",
+          "title": "Учимся отвечать на вопросы",
+          "published_at": "2026-07-03T15:01:08.000Z",
+          "views": 81,
+          "url": "https://rutube.ru/video/433767a7010ba8221e369c06d0b914ad/",
+          "duration": 48,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "45f406279ecd4bb2931187d99d2e72d6",
+          "title": "Мы узнали, о чем думают топы в IT прямо сейчас | Подкаст «Свободный слот»",
+          "published_at": "2026-07-02T18:55:06.000Z",
+          "views": 26,
+          "url": "https://rutube.ru/video/45f406279ecd4bb2931187d99d2e72d6/",
+          "duration": 4408,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "b5efa7b9a08b6e77c854016b6a4a6684",
+          "title": "Выше старшего: куда расти DS-инженеру в Авито",
+          "published_at": "2026-07-02T10:33:36.000Z",
+          "views": 126,
+          "url": "https://rutube.ru/video/b5efa7b9a08b6e77c854016b6a4a6684/",
+          "duration": 3580,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "728720948956b052d94c53ffe0c567b5",
+          "title": "Что такое релизы? И причем тут Feature Flags, Canary и Rollback? | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-07-01T15:01:12.000Z",
+          "views": 60,
+          "url": "https://rutube.ru/video/728720948956b052d94c53ffe0c567b5/",
+          "duration": 2625,
+          "origin_type": "rtb"
+        }
+      ]
+    },
+    {
+      "brand": "YADRO",
+      "source_type": "channel",
+      "source_id": "28815868",
+      "source_title": "Истовый Инженер",
+      "source_url": "https://rutube.ru/channel/28815868/",
+      "scope_note": null,
+      "status": "ok",
+      "q3_videos": 105,
+      "views_available": 105,
+      "q3_views_total": 10928,
+      "q3_views_average": 104.07619047619048,
+      "q3_views_median": 95,
+      "top_video": {
+        "id": "2e092453d78610b717704df22b37b89c",
+        "title": "Почему push-модель в Postgres — это ловушка?",
+        "published_at": "2026-09-18T09:06:02.000Z",
+        "views": 443,
+        "url": "https://rutube.ru/video/2e092453d78610b717704df22b37b89c/",
+        "duration": 42,
+        "origin_type": "rshorts"
+      },
+      "videos": [
+        {
+          "id": "7cc4b3b544512a78404e96383ef76f82",
+          "title": "Какие были предпосылки для изобретения радио?",
+          "published_at": "2026-09-30T18:47:43.000Z",
+          "views": 7,
+          "url": "https://rutube.ru/video/7cc4b3b544512a78404e96383ef76f82/",
+          "duration": 56,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "6706e97e65c2e8d3d0cceb8911778571",
+          "title": "От мусоровоза до российского процессора: путь программиста-самоучки из Могилева",
+          "published_at": "2026-09-29T16:13:35.000Z",
+          "views": 80,
+          "url": "https://rutube.ru/video/6706e97e65c2e8d3d0cceb8911778571/",
+          "duration": 2943,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "149e6309bfb5a9522ea2487ccde34174",
+          "title": "Бесплатные токены: отработка ТЗ на локальной модели",
+          "published_at": "2026-09-29T09:01:10.000Z",
+          "views": 9,
+          "url": "https://rutube.ru/video/149e6309bfb5a9522ea2487ccde34174/",
+          "duration": 52,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ac38b78d45ae8ffcdb4aee95fa9a5d17",
+          "title": "Что такое краевой искусственный интеллект",
+          "published_at": "2026-09-28T09:57:06.000Z",
+          "views": 7,
+          "url": "https://rutube.ru/video/ac38b78d45ae8ffcdb4aee95fa9a5d17/",
+          "duration": 58,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "d84d61a77f8121dc7d6a4a2d89f145f4",
+          "title": "Умножьте 18 на 28: конвейеризация на пальцах",
+          "published_at": "2026-09-27T11:55:09.000Z",
+          "views": 7,
+          "url": "https://rutube.ru/video/d84d61a77f8121dc7d6a4a2d89f145f4/",
+          "duration": 48,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "cb3c22bb6878f38f554ec3d920c9e564",
+          "title": "Когда нужна ПЛИС, а когда хватит микроконтроллера",
+          "published_at": "2026-09-26T11:51:07.000Z",
+          "views": 16,
+          "url": "https://rutube.ru/video/cb3c22bb6878f38f554ec3d920c9e564/",
+          "duration": 70,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "3e208e2af02bb9455a2287a260b0c043",
+          "title": "Лекция Сергея Жмылёва и Дениса Довженко о языке C и системном программировании",
+          "published_at": "2026-09-26T11:10:07.000Z",
+          "views": 110,
+          "url": "https://rutube.ru/video/3e208e2af02bb9455a2287a260b0c043/",
+          "duration": 3677,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "ebc087b588b41b494bb6241f94afb7f0",
+          "title": "Нейросеть-триггер прямо в ПЛИС",
+          "published_at": "2026-09-25T09:48:07.000Z",
+          "views": 140,
+          "url": "https://rutube.ru/video/ebc087b588b41b494bb6241f94afb7f0/",
+          "duration": 65,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "acf10b50d93c601f31f5359d4aa424ad",
+          "title": "Будущее связи: от интернета вещей к интернету ощущений",
+          "published_at": "2026-09-24T17:47:08.000Z",
+          "views": 120,
+          "url": "https://rutube.ru/video/acf10b50d93c601f31f5359d4aa424ad/",
+          "duration": 71,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "dff8371966aa256aefa24b16b22c6719",
+          "title": "Почему ваши навыки обнулятся через 7 лет?",
+          "published_at": "2026-09-23T18:01:20.000Z",
+          "views": 144,
+          "url": "https://rutube.ru/video/dff8371966aa256aefa24b16b22c6719/",
+          "duration": 33,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "318bd470f745e762662e7b21c0898cc3",
+          "title": "Как СМС случайно захватили мир",
+          "published_at": "2026-09-22T17:58:06.000Z",
+          "views": 159,
+          "url": "https://rutube.ru/video/318bd470f745e762662e7b21c0898cc3/",
+          "duration": 53,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "d6be2008a903dd4b84d696e3936ebd42",
+          "title": "Антенна — символ нашей цивилизации",
+          "published_at": "2026-09-21T18:17:08.000Z",
+          "views": 303,
+          "url": "https://rutube.ru/video/d6be2008a903dd4b84d696e3936ebd42/",
+          "duration": 49,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "06f3833814c8427dd94175a3fde2482a",
+          "title": "Промышленная асинхронность: опыт внедрения C++20 корутин в сервисы KvadraOS — Илья Клементьев, YADRO",
+          "published_at": "2026-09-21T10:42:33.000Z",
+          "views": 84,
+          "url": "https://rutube.ru/video/06f3833814c8427dd94175a3fde2482a/",
+          "duration": 1592,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "6e6962d9e6b801849d6e27875f2be965",
+          "title": "Корутины в продакшене: как перевести движущийся поезд на асфальт — Алексей Макареня, Kaspersky Lab",
+          "published_at": "2026-09-21T10:42:22.000Z",
+          "views": 65,
+          "url": "https://rutube.ru/video/6e6962d9e6b801849d6e27875f2be965/",
+          "duration": 2613,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "538794151ba7fd67189e0b430e6aa6fb",
+          "title": "Почему тёмная тема реально продлевает жизнь аккумулятора?",
+          "published_at": "2026-09-20T10:32:08.000Z",
+          "views": 21,
+          "url": "https://rutube.ru/video/538794151ba7fd67189e0b430e6aa6fb/",
+          "duration": 37,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b737df47ec1e01e4c081166d7fc8ba1c",
+          "title": "Как батарейка смартфона создала формат коротких видео?",
+          "published_at": "2026-09-19T10:28:08.000Z",
+          "views": 15,
+          "url": "https://rutube.ru/video/b737df47ec1e01e4c081166d7fc8ba1c/",
+          "duration": 73,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "41c4181cb82ddf36d4caf09d29641bd1",
+          "title": "Лекция Алексея Ганицева: как мобильная связь изменила нашу жизнь — от GSM до 6G",
+          "published_at": "2026-09-18T16:05:49.000Z",
+          "views": 39,
+          "url": "https://rutube.ru/video/41c4181cb82ddf36d4caf09d29641bd1/",
+          "duration": 3669,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "2e092453d78610b717704df22b37b89c",
+          "title": "Почему push-модель в Postgres — это ловушка?",
+          "published_at": "2026-09-18T09:06:02.000Z",
+          "views": 443,
+          "url": "https://rutube.ru/video/2e092453d78610b717704df22b37b89c/",
+          "duration": 42,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "6e66c5bcbd8fa06f9ad7eb23b73735bd",
+          "title": "Как избежать split-brain в задачах на Postgres",
+          "published_at": "2026-09-17T17:58:35.000Z",
+          "views": 6,
+          "url": "https://rutube.ru/video/6e66c5bcbd8fa06f9ad7eb23b73735bd/",
+          "duration": 41,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "810221c7f33df73e680b657b7f8a0056",
+          "title": "Почему нельзя делать мгновенный ретрай при ошибках",
+          "published_at": "2026-09-17T09:31:28.000Z",
+          "views": 9,
+          "url": "https://rutube.ru/video/810221c7f33df73e680b657b7f8a0056/",
+          "duration": 47,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "963a656804ec96473976f62c7baceab1",
+          "title": "Как ускорить работу с очередями в Postgres в 4 раза",
+          "published_at": "2026-09-16T09:19:29.000Z",
+          "views": 6,
+          "url": "https://rutube.ru/video/963a656804ec96473976f62c7baceab1/",
+          "duration": 63,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "c40bed15fa80f1477172030d5dc122aa",
+          "title": "Скрытые баги в старом коде",
+          "published_at": "2026-09-15T11:05:57.000Z",
+          "views": 8,
+          "url": "https://rutube.ru/video/c40bed15fa80f1477172030d5dc122aa/",
+          "duration": 42,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "eab99b69bd7fdba21ba5e9b44f12396c",
+          "title": "Кодогенерация: как ускорить разработку",
+          "published_at": "2026-09-14T18:21:06.000Z",
+          "views": 8,
+          "url": "https://rutube.ru/video/eab99b69bd7fdba21ba5e9b44f12396c/",
+          "duration": 51,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "9b08240dae241fc7aa8f630989649e2d",
+          "title": "Почему мы перешли с Python на Go: ускорение в 13 раз",
+          "published_at": "2026-09-14T10:40:59.000Z",
+          "views": 15,
+          "url": "https://rutube.ru/video/9b08240dae241fc7aa8f630989649e2d/",
+          "duration": 39,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "35ba599da1e9302661098d780efd85bb",
+          "title": "Как одна технология может создать целую индустрию?",
+          "published_at": "2026-09-13T10:25:07.000Z",
+          "views": 250,
+          "url": "https://rutube.ru/video/35ba599da1e9302661098d780efd85bb/",
+          "duration": 41,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "86019c834154bc8ec81ba5c63595a37b",
+          "title": "Можно ли управлять протезом так же естественно, как собственной рукой?",
+          "published_at": "2026-09-12T10:24:07.000Z",
+          "views": 6,
+          "url": "https://rutube.ru/video/86019c834154bc8ec81ba5c63595a37b/",
+          "duration": 40,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "8863dedc58ddde643fb0a649f7494503",
+          "title": "Может ли протез оказаться быстрее человеческой руки?",
+          "published_at": "2026-09-11T18:21:08.000Z",
+          "views": 6,
+          "url": "https://rutube.ru/video/8863dedc58ddde643fb0a649f7494503/",
+          "duration": 52,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "6d0d920a31e3b3f3307650930acb4239",
+          "title": "Запуск нейросетей на ПЛИС. Краевой ИИ. Академическая деятельность.",
+          "published_at": "2026-09-11T17:04:26.000Z",
+          "views": 199,
+          "url": "https://rutube.ru/video/6d0d920a31e3b3f3307650930acb4239/",
+          "duration": 7640,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "c6a1a5999e29f3d7b2b3f1696450ebd5",
+          "title": "Почему ИИ никогда не заменит инженера?",
+          "published_at": "2026-09-10T19:07:08.000Z",
+          "views": 10,
+          "url": "https://rutube.ru/video/c6a1a5999e29f3d7b2b3f1696450ebd5/",
+          "duration": 36,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ba258b7f5f8c0bb54d6be2c0afa7dd8f",
+          "title": "YADRO ✕ C++ Russia встреча С++ сообщества 2026 | Москва | 10.09.2026 |",
+          "published_at": "2026-09-10T18:39:42.000Z",
+          "views": 155,
+          "url": "https://rutube.ru/video/ba258b7f5f8c0bb54d6be2c0afa7dd8f/",
+          "duration": 10084,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "976626c8e26896a5e3ea3c6bf085f73d",
+          "title": "Как нейросети оживляют протезы",
+          "published_at": "2026-09-09T19:05:12.000Z",
+          "views": 220,
+          "url": "https://rutube.ru/video/976626c8e26896a5e3ea3c6bf085f73d/",
+          "duration": 43,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "3b5d12dda1b2cc069c39a06d40ad34d8",
+          "title": "Как спроектировать будущее на 200 лет вперёд?",
+          "published_at": "2026-09-08T19:01:08.000Z",
+          "views": 12,
+          "url": "https://rutube.ru/video/3b5d12dda1b2cc069c39a06d40ad34d8/",
+          "duration": 42,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "7085abc2c271ccd4dc5e8661b7b07337",
+          "title": "Протезы с Wi-Fi и оплатой: как люди становятся киборгами",
+          "published_at": "2026-09-07T18:57:06.000Z",
+          "views": 150,
+          "url": "https://rutube.ru/video/7085abc2c271ccd4dc5e8661b7b07337/",
+          "duration": 32,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "47c081a994c58fe435bf9f078fb36df6",
+          "title": "Почему робототехника? Выбор профессии и суровая реальность вуза",
+          "published_at": "2026-09-06T10:55:08.000Z",
+          "views": 154,
+          "url": "https://rutube.ru/video/47c081a994c58fe435bf9f078fb36df6/",
+          "duration": 39,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "c43a0e12b87bd11e49f818ea96bedc40",
+          "title": "Как создать протез, который чувствует каждый палец?",
+          "published_at": "2026-09-05T10:36:07.000Z",
+          "views": 163,
+          "url": "https://rutube.ru/video/c43a0e12b87bd11e49f818ea96bedc40/",
+          "duration": 60,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "4a814d8fa76c0faf60b88f9caec4cfc4",
+          "title": "Почему стыд за первый продукт — это хорошо?",
+          "published_at": "2026-09-04T18:15:16.000Z",
+          "views": 215,
+          "url": "https://rutube.ru/video/4a814d8fa76c0faf60b88f9caec4cfc4/",
+          "duration": 36,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "a781c872aedc44d793db4f22a2ec3bc3",
+          "title": "Как AI помогает в работе над QEMU",
+          "published_at": "2026-09-03T10:35:09.000Z",
+          "views": 101,
+          "url": "https://rutube.ru/video/a781c872aedc44d793db4f22a2ec3bc3/",
+          "duration": 47,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "bfdc190eac456bb01a8f76883ba11756",
+          "title": "Реверс-дебаг: как вернуться в прошлое во время отладки",
+          "published_at": "2026-09-02T08:21:09.000Z",
+          "views": 120,
+          "url": "https://rutube.ru/video/bfdc190eac456bb01a8f76883ba11756/",
+          "duration": 33,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "6e2ca4579b6145efc60dea06e243eea5",
+          "title": "Почему ошибку проще искать в QEMU, чем на ПЛИС",
+          "published_at": "2026-09-01T08:18:08.000Z",
+          "views": 138,
+          "url": "https://rutube.ru/video/6e2ca4579b6145efc60dea06e243eea5/",
+          "duration": 60,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "22dad97fe60a24e97bba80f751992925",
+          "title": "Разгоняем: кто из инженеров нужен, чтобы разработать чип?",
+          "published_at": "2026-08-31T15:46:05.000Z",
+          "views": 167,
+          "url": "https://rutube.ru/video/22dad97fe60a24e97bba80f751992925/",
+          "duration": 3339,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "fd482ffa85d2a7987990f2b9e7829b16",
+          "title": "Проблемы с многопоточностью в QEMU",
+          "published_at": "2026-08-31T08:15:09.000Z",
+          "views": 207,
+          "url": "https://rutube.ru/video/fd482ffa85d2a7987990f2b9e7829b16/",
+          "duration": 56,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "62780ec6a06f8fae89f9ceeb2200a99c",
+          "title": "Почему в QEMU не поймать баги с кешами",
+          "published_at": "2026-08-30T10:46:06.000Z",
+          "views": 12,
+          "url": "https://rutube.ru/video/62780ec6a06f8fae89f9ceeb2200a99c/",
+          "duration": 43,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "dd5b5d56260c934494a3776af77bbe7f",
+          "title": "Как инженеры-конструкторы проектируют СХД",
+          "published_at": "2026-08-29T12:33:43.000Z",
+          "views": 14,
+          "url": "https://rutube.ru/video/dd5b5d56260c934494a3776af77bbe7f/",
+          "duration": 57,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "7ab503047b047f6fc3c6d134fc057953",
+          "title": "Что такое банан-газ",
+          "published_at": "2026-08-29T10:41:08.000Z",
+          "views": 92,
+          "url": "https://rutube.ru/video/7ab503047b047f6fc3c6d134fc057953/",
+          "duration": 20,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "021d9533f5eb346b0ed9a237ac49bae3",
+          "title": "Лекция «АЭС глазами инженера: жизненный цикл атомной станции»",
+          "published_at": "2026-08-28T19:00:16.000Z",
+          "views": 0,
+          "url": "https://rutube.ru/video/021d9533f5eb346b0ed9a237ac49bae3/",
+          "duration": 0,
+          "origin_type": "rst"
+        },
+        {
+          "id": "9fb9bbbeaf7b598ca4a50522a4741f80",
+          "title": "Функциональные симуляторы: использование, точность, скорость. Симулятор QEMU. TCG engine",
+          "published_at": "2026-08-28T17:30:11.000Z",
+          "views": 209,
+          "url": "https://rutube.ru/video/9fb9bbbeaf7b598ca4a50522a4741f80/",
+          "duration": 7048,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "3a741bc1458182e34c78381274e7a24a",
+          "title": "Когда система не справляется с нагрузкой",
+          "published_at": "2026-08-25T19:38:17.000Z",
+          "views": 9,
+          "url": "https://rutube.ru/video/3a741bc1458182e34c78381274e7a24a/",
+          "duration": 48,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "af49afff93a94870e69e17841c23ecad",
+          "title": "Почему система «упала» под нагрузкой?",
+          "published_at": "2026-08-24T10:55:06.000Z",
+          "views": 9,
+          "url": "https://rutube.ru/video/af49afff93a94870e69e17841c23ecad/",
+          "duration": 36,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "03e7835f7d99d5f3dc915d0468fc0635",
+          "title": "Результаты эксперимента на свиньях: сердце бьётся!",
+          "published_at": "2026-08-23T10:30:14.000Z",
+          "views": 205,
+          "url": "https://rutube.ru/video/03e7835f7d99d5f3dc915d0468fc0635/",
+          "duration": 30,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "43c155aa22ecce57b5c0b6806fc06f80",
+          "title": "Главная опасность искусственного сердца",
+          "published_at": "2026-08-22T10:28:08.000Z",
+          "views": 337,
+          "url": "https://rutube.ru/video/43c155aa22ecce57b5c0b6806fc06f80/",
+          "duration": 44,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ea3f0ba1df6399e248287e724de01ad7",
+          "title": "От бионических протезов до межзвёздных полётов: путь инженера-робототехника.",
+          "published_at": "2026-08-22T10:20:11.000Z",
+          "views": 110,
+          "url": "https://rutube.ru/video/ea3f0ba1df6399e248287e724de01ad7/",
+          "duration": 4464,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "179924c6ccbdea0d8974e1b3d7f043d2",
+          "title": "Что такое аритмия простыми словами?",
+          "published_at": "2026-08-21T19:10:14.000Z",
+          "views": 158,
+          "url": "https://rutube.ru/video/179924c6ccbdea0d8974e1b3d7f043d2/",
+          "duration": 37,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "69b6c2349805388ffb5181069dfec169",
+          "title": "Почему кардиологи боятся за пациентов с искусственным сердцем?",
+          "published_at": "2026-08-20T20:21:39.000Z",
+          "views": 79,
+          "url": "https://rutube.ru/video/69b6c2349805388ffb5181069dfec169/",
+          "duration": 32,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "8200fe739de9e21660712a511bc2f933",
+          "title": "Почему нельзя просто подсадить стволовые клетки?",
+          "published_at": "2026-08-19T20:55:57.000Z",
+          "views": 82,
+          "url": "https://rutube.ru/video/8200fe739de9e21660712a511bc2f933/",
+          "duration": 39,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "d3074dc6f93474a3323e6c614ee366dc",
+          "title": "Трудный путь к первой пересадке сердца",
+          "published_at": "2026-08-18T18:33:46.000Z",
+          "views": 225,
+          "url": "https://rutube.ru/video/d3074dc6f93474a3323e6c614ee366dc/",
+          "duration": 53,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "901b79a4bbe98b35896fb83ccc42edb2",
+          "title": "От огромных аппаратов до устройства размером с рисовое зёрнышко",
+          "published_at": "2026-08-17T19:24:56.000Z",
+          "views": 86,
+          "url": "https://rutube.ru/video/901b79a4bbe98b35896fb83ccc42edb2/",
+          "duration": 38,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "5545dbcd5b231334bad278d2d2ac735d",
+          "title": "Как создавали первое искусственное сердце?",
+          "published_at": "2026-08-16T09:55:07.000Z",
+          "views": 171,
+          "url": "https://rutube.ru/video/5545dbcd5b231334bad278d2d2ac735d/",
+          "duration": 40,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "4ed110dac499e90d0661c019064aae7e",
+          "title": "Существует ли искусственное сердце на самом деле?",
+          "published_at": "2026-08-15T10:09:07.000Z",
+          "views": 229,
+          "url": "https://rutube.ru/video/4ed110dac499e90d0661c019064aae7e/",
+          "duration": 53,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "fc0a7f071a4c32113f308eb30aa4e392",
+          "title": "Как жить с искусственным сердцем?",
+          "published_at": "2026-08-14T18:35:34.000Z",
+          "views": 150,
+          "url": "https://rutube.ru/video/fc0a7f071a4c32113f308eb30aa4e392/",
+          "duration": 38,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b48c77584c36ab1f0e3f838aa25614f6",
+          "title": "Сердце как инженерная задача: искусственное сердце vs тканевая инженерия. Лекция Валерии Цвелой",
+          "published_at": "2026-08-14T17:26:53.000Z",
+          "views": 79,
+          "url": "https://rutube.ru/video/b48c77584c36ab1f0e3f838aa25614f6/",
+          "duration": 2162,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "d14db789ffbebf00261832f98f029565",
+          "title": "Кто такой инженер-верификатор и зачем он нужен?",
+          "published_at": "2026-08-07T19:29:43.000Z",
+          "views": 97,
+          "url": "https://rutube.ru/video/d14db789ffbebf00261832f98f029565/",
+          "duration": 47,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "f1a1f428e1f06978e167f1e80dcb1fed",
+          "title": "Что определяет выбор программы для сбора прошивок в реальной работе",
+          "published_at": "2026-08-06T19:21:07.000Z",
+          "views": 17,
+          "url": "https://rutube.ru/video/f1a1f428e1f06978e167f1e80dcb1fed/",
+          "duration": 64,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "eabe3a35c13f1a925cd22ddd200deacc",
+          "title": "Зачем нужен HDMI CEC",
+          "published_at": "2026-08-05T10:13:07.000Z",
+          "views": 96,
+          "url": "https://rutube.ru/video/eabe3a35c13f1a925cd22ddd200deacc/",
+          "duration": 53,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "96e6b132346597e9846b2b1602d07275",
+          "title": "Проблемы с исходниками китайских вендоров",
+          "published_at": "2026-08-04T10:18:06.000Z",
+          "views": 89,
+          "url": "https://rutube.ru/video/96e6b132346597e9846b2b1602d07275/",
+          "duration": 75,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "a225bf7917339be020aae6f8c8cca677",
+          "title": "Сходство AOSP и Linux",
+          "published_at": "2026-08-03T19:10:14.000Z",
+          "views": 8,
+          "url": "https://rutube.ru/video/a225bf7917339be020aae6f8c8cca677/",
+          "duration": 71,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ce365ca00ac7f6b94f316e9d6513d513",
+          "title": "Проблемы с обновлениями upstream-версий",
+          "published_at": "2026-08-02T08:45:06.000Z",
+          "views": 238,
+          "url": "https://rutube.ru/video/ce365ca00ac7f6b94f316e9d6513d513/",
+          "duration": 63,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "577212214f71e735a4544dada46578e1",
+          "title": "Как работает control plane в СХД",
+          "published_at": "2026-07-31T21:28:42.000Z",
+          "views": 97,
+          "url": "https://rutube.ru/video/577212214f71e735a4544dada46578e1/",
+          "duration": 59,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "fa5ca4a8934a91132f86486573e8ef88",
+          "title": "AOSP / Разработка прошивок / Russian Linux Kernel Community",
+          "published_at": "2026-07-31T16:49:49.000Z",
+          "views": 290,
+          "url": "https://rutube.ru/video/fa5ca4a8934a91132f86486573e8ef88/",
+          "duration": 8748,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "e06ea1e76a28e51ed837fc4c82b6c0e3",
+          "title": "Верификаторы «меж трех огней»",
+          "published_at": "2026-07-31T08:27:51.000Z",
+          "views": 194,
+          "url": "https://rutube.ru/video/e06ea1e76a28e51ed837fc4c82b6c0e3/",
+          "duration": 40,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "f43d9f07a14f9a6e11a4792fc2ced393",
+          "title": "Почему верификаторы — редкие и ценные специалисты в IT?",
+          "published_at": "2026-07-30T19:29:14.000Z",
+          "views": 113,
+          "url": "https://rutube.ru/video/f43d9f07a14f9a6e11a4792fc2ced393/",
+          "duration": 38,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "5b87ebffa78d395afd39054b17fa4d5d",
+          "title": "Построение пулов и очередей задач на базе Postgres - Владислад Сидорин, Postgres Professional",
+          "published_at": "2026-07-30T17:22:06.000Z",
+          "views": 35,
+          "url": "https://rutube.ru/video/5b87ebffa78d395afd39054b17fa4d5d/",
+          "duration": 2256,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "9559331ea33bd8822a27667100958a7e",
+          "title": "От Python к Go: не бойтесь переписывать готовые решения - Иван Локк, YADRO",
+          "published_at": "2026-07-30T17:21:48.000Z",
+          "views": 53,
+          "url": "https://rutube.ru/video/9559331ea33bd8822a27667100958a7e/",
+          "duration": 945,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "7da660f1607997ed0e7626cfdeb9bce4",
+          "title": "Почему верификатор — это не просто тестировщик?",
+          "published_at": "2026-07-29T19:03:06.000Z",
+          "views": 79,
+          "url": "https://rutube.ru/video/7da660f1607997ed0e7626cfdeb9bce4/",
+          "duration": 50,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "c99907d3b9ab7cb4712e158728db957e",
+          "title": "Совет, который может спасти ваш карьерный шанс",
+          "published_at": "2026-07-28T09:02:07.000Z",
+          "views": 110,
+          "url": "https://rutube.ru/video/c99907d3b9ab7cb4712e158728db957e/",
+          "duration": 32,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "7223aae0633c142623da927c1552f568",
+          "title": "После двух лет работы я не чувствовал себя сильным инженером",
+          "published_at": "2026-07-27T14:01:10.000Z",
+          "views": 95,
+          "url": "https://rutube.ru/video/7223aae0633c142623da927c1552f568/",
+          "duration": 29,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "691ebf03b0f7e03ec3cf9696923dd2c5",
+          "title": "Нужно ли работать по той специальности, которая написана в дипломе?",
+          "published_at": "2026-07-26T10:56:07.000Z",
+          "views": 119,
+          "url": "https://rutube.ru/video/691ebf03b0f7e03ec3cf9696923dd2c5/",
+          "duration": 55,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "1be1f1a4abc109d59960de116323ebb0",
+          "title": "Где получить образование верификатора?",
+          "published_at": "2026-07-25T10:51:06.000Z",
+          "views": 276,
+          "url": "https://rutube.ru/video/1be1f1a4abc109d59960de116323ebb0/",
+          "duration": 65,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "538ecc5fc92c472ca469db22ceb5dc1c",
+          "title": "Самое ценное в работе верификатора",
+          "published_at": "2026-07-24T12:51:07.000Z",
+          "views": 275,
+          "url": "https://rutube.ru/video/538ecc5fc92c472ca469db22ceb5dc1c/",
+          "duration": 50,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "a2dfbc6b8f497687b26e8b68d14b61e7",
+          "title": "Как попасть в профессию, которой почти не учат в вузах, — история инженера-верификатора",
+          "published_at": "2026-07-24T10:28:54.000Z",
+          "views": 130,
+          "url": "https://rutube.ru/video/a2dfbc6b8f497687b26e8b68d14b61e7/",
+          "duration": 4453,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "78f4dfe28a71adfddacaea46d142f344",
+          "title": "YADRO х Postgres Pro встреча Go-сообщества 2026 | Москва | 23.07.2026 |",
+          "published_at": "2026-07-23T18:58:06.000Z",
+          "views": 69,
+          "url": "https://rutube.ru/video/78f4dfe28a71adfddacaea46d142f344/",
+          "duration": 6084,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "6d93d9bb0f8071bf97639fa2083550aa",
+          "title": "С чего началась физика ускорителей?",
+          "published_at": "2026-07-23T17:17:09.000Z",
+          "views": 124,
+          "url": "https://rutube.ru/video/6d93d9bb0f8071bf97639fa2083550aa/",
+          "duration": 59,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "fc7415c4600f6954543f4f2d76081228",
+          "title": "Откуда берутся электроны?",
+          "published_at": "2026-07-22T17:15:10.000Z",
+          "views": 90,
+          "url": "https://rutube.ru/video/fc7415c4600f6954543f4f2d76081228/",
+          "duration": 47,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "e2b5393b37730032726db7553cfd9a1c",
+          "title": "Можно ли просканировать мумию?",
+          "published_at": "2026-07-21T17:15:07.000Z",
+          "views": 100,
+          "url": "https://rutube.ru/video/e2b5393b37730032726db7553cfd9a1c/",
+          "duration": 31,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "9b5e927aacbe7abd0eadb6b5b4a4d9c9",
+          "title": "Чёрные дыры, ЦЕРН и мифы об ускорителях",
+          "published_at": "2026-07-20T17:13:06.000Z",
+          "views": 161,
+          "url": "https://rutube.ru/video/9b5e927aacbe7abd0eadb6b5b4a4d9c9/",
+          "duration": 58,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "2eb97a513251124c2456c1d4af0aa2d4",
+          "title": "Почему пучок частиц не разваливается?",
+          "published_at": "2026-07-19T20:52:05.000Z",
+          "views": 98,
+          "url": "https://rutube.ru/video/2eb97a513251124c2456c1d4af0aa2d4/",
+          "duration": 33,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "021bbd6a89c2ddbbdb150676a522eafc",
+          "title": "Точность в 50 микрон — это вообще реально?",
+          "published_at": "2026-07-18T10:49:06.000Z",
+          "views": 25,
+          "url": "https://rutube.ru/video/021bbd6a89c2ddbbdb150676a522eafc/",
+          "duration": 35,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ea54a0ed1fe2ccd1c3eadf23d39877ae",
+          "title": "Зачем нам ЦЕРН, если есть СКИФ?",
+          "published_at": "2026-07-17T19:47:08.000Z",
+          "views": 96,
+          "url": "https://rutube.ru/video/ea54a0ed1fe2ccd1c3eadf23d39877ae/",
+          "duration": 49,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b4719580c8d23cf2302f203c0815df0a",
+          "title": "СКИФ в Новосибирске: что это и зачем нужен новый синхротрон. Лекция Дарьи Дороховой.",
+          "published_at": "2026-07-17T17:40:29.000Z",
+          "views": 257,
+          "url": "https://rutube.ru/video/b4719580c8d23cf2302f203c0815df0a/",
+          "duration": 2527,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "e5531f5603ad57c04440dac0b1d06389",
+          "title": "Почему страшно менять карьеру?",
+          "published_at": "2026-07-15T16:59:06.000Z",
+          "views": 74,
+          "url": "https://rutube.ru/video/e5531f5603ad57c04440dac0b1d06389/",
+          "duration": 64,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "76cc171aab7ce5eb28e5af17a4ca6f8e",
+          "title": "Как инженер создал первый армянский спутник",
+          "published_at": "2026-07-15T16:53:06.000Z",
+          "views": 90,
+          "url": "https://rutube.ru/video/76cc171aab7ce5eb28e5af17a4ca6f8e/",
+          "duration": 37,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b5b4cc9824ab3efa4d6897936c1984e0",
+          "title": "Как чип в мозге создаёт изображение?",
+          "published_at": "2026-07-14T17:13:06.000Z",
+          "views": 8,
+          "url": "https://rutube.ru/video/b5b4cc9824ab3efa4d6897936c1984e0/",
+          "duration": 35,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "a3f3cd9fd5350abcf50f176944c7a8fa",
+          "title": "Подход not invented here в автоматизации",
+          "published_at": "2026-07-14T07:26:24.000Z",
+          "views": 78,
+          "url": "https://rutube.ru/video/a3f3cd9fd5350abcf50f176944c7a8fa/",
+          "duration": 48,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "140273738506d0653998ace6768a5244",
+          "title": "Видит ли человек пиксели через имплант в мозге?",
+          "published_at": "2026-07-13T17:11:07.000Z",
+          "views": 10,
+          "url": "https://rutube.ru/video/140273738506d0653998ace6768a5244/",
+          "duration": 38,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "6cf3a3d9c746d865df7720a9552cce7c",
+          "title": "Радикальные подходы в open source",
+          "published_at": "2026-07-10T14:54:27.000Z",
+          "views": 15,
+          "url": "https://rutube.ru/video/6cf3a3d9c746d865df7720a9552cce7c/",
+          "duration": 29,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "4f6fd9724ac6ded4824a99cb6f36acf9",
+          "title": "Правильная помощь ИИ в open source-разработке",
+          "published_at": "2026-07-08T09:02:35.000Z",
+          "views": 152,
+          "url": "https://rutube.ru/video/4f6fd9724ac6ded4824a99cb6f36acf9/",
+          "duration": 80,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b38bcb0422b180fed5d70944c0139b45",
+          "title": "Правильная помощь ИИ в open source-разработке",
+          "published_at": "2026-07-07T11:34:32.000Z",
+          "views": 16,
+          "url": "https://rutube.ru/video/b38bcb0422b180fed5d70944c0139b45/",
+          "duration": 66,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "290f4a298a21165142a6d578f16e453a",
+          "title": "Типичные проблемы, выявляемые при верификации кеша",
+          "published_at": "2026-07-06T18:53:57.000Z",
+          "views": 148,
+          "url": "https://rutube.ru/video/290f4a298a21165142a6d578f16e453a/",
+          "duration": 51,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "676c477f7368c4bf79ce276f57c1e54a",
+          "title": "Почему врачи и инженеры говорят на разных языках",
+          "published_at": "2026-07-05T10:13:10.000Z",
+          "views": 15,
+          "url": "https://rutube.ru/video/676c477f7368c4bf79ce276f57c1e54a/",
+          "duration": 56,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "966c39b17cac9d17065222a336f453ef",
+          "title": "Технология, которая отключает тремор",
+          "published_at": "2026-07-04T10:12:06.000Z",
+          "views": 11,
+          "url": "https://rutube.ru/video/966c39b17cac9d17065222a336f453ef/",
+          "duration": 38,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "8d9d88ba9c74a538bc7f039eb02e940e",
+          "title": "Когерентность. Автоматизация. Искусственный интеллект для RTL и верификации",
+          "published_at": "2026-07-03T18:14:54.000Z",
+          "views": 197,
+          "url": "https://rutube.ru/video/8d9d88ba9c74a538bc7f039eb02e940e/",
+          "duration": 6870,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "89ff178541ad80c83e48e184c8782ab5",
+          "title": "Почему мы видим по-разному",
+          "published_at": "2026-07-03T17:54:40.000Z",
+          "views": 111,
+          "url": "https://rutube.ru/video/89ff178541ad80c83e48e184c8782ab5/",
+          "duration": 42,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ba2f730809acf88dd87e5d4b6a8b07c2",
+          "title": "Оптимизации в компиляторе «Эльбруса»",
+          "published_at": "2026-07-02T18:54:33.000Z",
+          "views": 7,
+          "url": "https://rutube.ru/video/ba2f730809acf88dd87e5d4b6a8b07c2/",
+          "duration": 73,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "6ab7927c09e35e667ab3a17419af4f5b",
+          "title": "Специфика компилятора «Эльбруса»",
+          "published_at": "2026-07-02T08:37:36.000Z",
+          "views": 107,
+          "url": "https://rutube.ru/video/6ab7927c09e35e667ab3a17419af4f5b/",
+          "duration": 44,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "2646b6c9ace95454bd5f3c5efaa2cd14",
+          "title": "Почему идея “помочь людям” не спасает стартап",
+          "published_at": "2026-07-01T19:00:24.000Z",
+          "views": 93,
+          "url": "https://rutube.ru/video/2646b6c9ace95454bd5f3c5efaa2cd14/",
+          "duration": 36,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "24fecb7e3fcc430cf7ee3100f8b8bfe3",
+          "title": "Советский и российский «Эльбрус»",
+          "published_at": "2026-07-01T11:37:31.000Z",
+          "views": 15,
+          "url": "https://rutube.ru/video/24fecb7e3fcc430cf7ee3100f8b8bfe3/",
+          "duration": 58,
+          "origin_type": "rshorts"
+        }
+      ]
+    },
+    {
+      "brand": "Selectel",
+      "source_type": "channel",
+      "source_id": "23466013",
+      "source_title": "Selectel",
+      "source_url": "https://rutube.ru/channel/23466013/",
+      "scope_note": null,
+      "status": "ok",
+      "q3_videos": 53,
+      "views_available": 53,
+      "q3_views_total": 7942,
+      "q3_views_average": 149.8490566037736,
+      "q3_views_median": 149,
+      "top_video": {
+        "id": "a3666382388204717e81c73227b386ef",
+        "title": "У кого в дата-центре самый острый нюх? 👃",
+        "published_at": "2026-09-30T16:20:54.000Z",
+        "views": 326,
+        "url": "https://rutube.ru/video/a3666382388204717e81c73227b386ef/",
+        "duration": 51,
+        "origin_type": "rshorts"
+      },
+      "videos": [
+        {
+          "id": "a3666382388204717e81c73227b386ef",
+          "title": "У кого в дата-центре самый острый нюх? 👃",
+          "published_at": "2026-09-30T16:20:54.000Z",
+          "views": 326,
+          "url": "https://rutube.ru/video/a3666382388204717e81c73227b386ef/",
+          "duration": 51,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "14dfe1b67def4d165b6c1b19e263b32d",
+          "title": "Серверный SSD — лишние расходы или вложение в надежность? 🤔",
+          "published_at": "2026-09-28T12:34:20.000Z",
+          "views": 160,
+          "url": "https://rutube.ru/video/14dfe1b67def4d165b6c1b19e263b32d/",
+          "duration": 65,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "05828c7badaa113b2d3e2db8f00c16f6",
+          "title": "Зеленый Selectel 2026",
+          "published_at": "2026-09-25T16:19:20.000Z",
+          "views": 4,
+          "url": "https://rutube.ru/video/05828c7badaa113b2d3e2db8f00c16f6/",
+          "duration": 94,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "3d95b4a27eba718725bffca2c12a954f",
+          "title": "Кто отвечает за утечку, если ее устроил ИИ-агент?",
+          "published_at": "2026-09-24T17:00:39.000Z",
+          "views": 156,
+          "url": "https://rutube.ru/video/3d95b4a27eba718725bffca2c12a954f/",
+          "duration": 60,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "813cb3f1439e05e1b545f93a2d8a427b",
+          "title": "Тихая серверная — повод для беспокойства 👀",
+          "published_at": "2026-09-23T14:36:16.000Z",
+          "views": 247,
+          "url": "https://rutube.ru/video/813cb3f1439e05e1b545f93a2d8a427b/",
+          "duration": 58,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "bb4c11972db3c1a07372f9d0640862c3",
+          "title": "Всего 4% ложных данных на входе — и модель ошибается в 10 раз чаще ⚠️",
+          "published_at": "2026-09-22T17:19:12.000Z",
+          "views": 208,
+          "url": "https://rutube.ru/video/bb4c11972db3c1a07372f9d0640862c3/",
+          "duration": 43,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "124c2e01c63eeaac172c55f4368de0fa",
+          "title": "Архитектура данных в эпоху ИИ: как избежать дорогих ошибок | Подкаст Selectel «Сегодня на ретро»",
+          "published_at": "2026-09-22T17:05:30.000Z",
+          "views": 34,
+          "url": "https://rutube.ru/video/124c2e01c63eeaac172c55f4368de0fa/",
+          "duration": 3319,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "a00acbf0ec8efba52fac3a7cb477396c",
+          "title": "Самый бесполезный бэкап — тот, который зашифровали вместе с продом.",
+          "published_at": "2026-09-21T14:00:57.000Z",
+          "views": 305,
+          "url": "https://rutube.ru/video/a00acbf0ec8efba52fac3a7cb477396c/",
+          "duration": 48,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ec571d90183aab797e0457a3489bb4dc",
+          "title": "Кажется, что DNS, OSI и HTTPS — база? Тогда вот три вопроса на разогрев 🤓",
+          "published_at": "2026-09-18T16:17:20.000Z",
+          "views": 6,
+          "url": "https://rutube.ru/video/ec571d90183aab797e0457a3489bb4dc/",
+          "duration": 72,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "09480592530f9fef0704c9337a7ee492",
+          "title": "А вы бы попались на удочку? 🎣",
+          "published_at": "2026-09-16T12:08:26.000Z",
+          "views": 254,
+          "url": "https://rutube.ru/video/09480592530f9fef0704c9337a7ee492/",
+          "duration": 81,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "0ac880928936a4fb483ba240f65d6e5d",
+          "title": "Чем больше инструкций у ИИ-агента, тем лучше он работает? Не всегда.",
+          "published_at": "2026-09-15T15:15:10.000Z",
+          "views": 270,
+          "url": "https://rutube.ru/video/0ac880928936a4fb483ba240f65d6e5d/",
+          "duration": 60,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "5deb8ffd80a9e8dc8bbf4284ed32f4ac",
+          "title": "Зачем ИИ-компании скупают книги и срезают с них корешки? 📚",
+          "published_at": "2026-09-15T10:38:35.000Z",
+          "views": 222,
+          "url": "https://rutube.ru/video/5deb8ffd80a9e8dc8bbf4284ed32f4ac/",
+          "duration": 55,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "d91a909c405ba488c32cbc7e46867762",
+          "title": "Кто не успел — тот доплатил 💸",
+          "published_at": "2026-09-11T13:08:20.000Z",
+          "views": 7,
+          "url": "https://rutube.ru/video/d91a909c405ba488c32cbc7e46867762/",
+          "duration": 19,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "6d603757dc33f25fd7242cd8be9c6f28",
+          "title": "Уверены, что хорошо знаете базовые термины машинного обучения?",
+          "published_at": "2026-09-10T13:40:26.000Z",
+          "views": 8,
+          "url": "https://rutube.ru/video/6d603757dc33f25fd7242cd8be9c6f28/",
+          "duration": 76,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "313563aa3e0ba501c44187763ce63734",
+          "title": "Как вентиляция целого офиса...",
+          "published_at": "2026-09-09T11:33:22.000Z",
+          "views": 243,
+          "url": "https://rutube.ru/video/313563aa3e0ba501c44187763ce63734/",
+          "duration": 47,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "053dcf95125de90746c79791992e1089",
+          "title": "60 миллиардов токенов в месяц. Это не рекорд, а обычный рабочий расход.",
+          "published_at": "2026-09-08T18:00:04.000Z",
+          "views": 197,
+          "url": "https://rutube.ru/video/053dcf95125de90746c79791992e1089/",
+          "duration": 66,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "de9c18eddbb24472e5271e977f1ae111",
+          "title": "Уважительная причина для опоздания: выбирал(-а) сервер на аукционе Selectel 🤩",
+          "published_at": "2026-09-07T16:45:09.000Z",
+          "views": 212,
+          "url": "https://rutube.ru/video/de9c18eddbb24472e5271e977f1ae111/",
+          "duration": 18,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "5106f861481b19370b416e9d22af2700",
+          "title": "Пока вы читаете этот пост, ваш смартфон может помогать атаке на чужой сервер.",
+          "published_at": "2026-09-04T14:10:50.000Z",
+          "views": 218,
+          "url": "https://rutube.ru/video/5106f861481b19370b416e9d22af2700/",
+          "duration": 42,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ffb89e7c13ef65bd9ad306eae00dcc2f",
+          "title": "✉️ У вас есть непрочитанное сообщение (1)",
+          "published_at": "2026-09-03T17:04:00.000Z",
+          "views": 172,
+          "url": "https://rutube.ru/video/ffb89e7c13ef65bd9ad306eae00dcc2f/",
+          "duration": 42,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "648e72bbe6332b4251d15e74b8f35fbc",
+          "title": "Открытые LLM или локальные ИИ-модели — как бизнесу внедрить нейросети?",
+          "published_at": "2026-09-03T13:07:41.000Z",
+          "views": 188,
+          "url": "https://rutube.ru/video/648e72bbe6332b4251d15e74b8f35fbc/",
+          "duration": 80,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "70ab77c9b319000f908e5b365f1317d7",
+          "title": "Объем памяти или количество ядер — на что смотреть при выборе ускорителя 👀",
+          "published_at": "2026-09-01T16:04:39.000Z",
+          "views": 81,
+          "url": "https://rutube.ru/video/70ab77c9b319000f908e5b365f1317d7/",
+          "duration": 68,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "5176f3b258838a0c68027f6a6f7eeecd",
+          "title": "Смотрите на ретро-железо и испытываете чувство ностальгии? Этот ролик для вас 👇",
+          "published_at": "2026-08-31T16:17:34.000Z",
+          "views": 86,
+          "url": "https://rutube.ru/video/5176f3b258838a0c68027f6a6f7eeecd/",
+          "duration": 53,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "560dc95610f1eb53d6f38e398d87eb76",
+          "title": "🎤 Сходим вместе?",
+          "published_at": "2026-08-28T13:26:08.000Z",
+          "views": 113,
+          "url": "https://rutube.ru/video/560dc95610f1eb53d6f38e398d87eb76/",
+          "duration": 78,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "c210ac6a4e90dae6dece30de767c842f",
+          "title": "Какую роль все-таки занимает LLM? 🤖",
+          "published_at": "2026-08-27T15:13:04.000Z",
+          "views": 217,
+          "url": "https://rutube.ru/video/c210ac6a4e90dae6dece30de767c842f/",
+          "duration": 16,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "65d81557729b9fdb7208476af4b30b51",
+          "title": "Почему сайт опять долго загружается?",
+          "published_at": "2026-08-26T14:30:27.000Z",
+          "views": 156,
+          "url": "https://rutube.ru/video/65d81557729b9fdb7208476af4b30b51/",
+          "duration": 73,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "61e17ab201ba86fd970cb56ed04572fe",
+          "title": "В этот миф вы могли поверить 👇",
+          "published_at": "2026-08-24T17:21:15.000Z",
+          "views": 112,
+          "url": "https://rutube.ru/video/61e17ab201ba86fd970cb56ed04572fe/",
+          "duration": 39,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "2b3aa0ee888b4dc88009b0b0532f9cfc",
+          "title": "Мы нашли подходящий сервер для экспериментов 🤩",
+          "published_at": "2026-08-21T14:32:00.000Z",
+          "views": 149,
+          "url": "https://rutube.ru/video/2b3aa0ee888b4dc88009b0b0532f9cfc/",
+          "duration": 63,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "a251bd5cbfeb50980150778d45955750",
+          "title": "ИИ-агент уже читает содержание письма, которое пользователь еще не открывал 👀",
+          "published_at": "2026-08-20T14:56:56.000Z",
+          "views": 186,
+          "url": "https://rutube.ru/video/a251bd5cbfeb50980150778d45955750/",
+          "duration": 45,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b6fde23fe429a90e1022bb943fa3f63c",
+          "title": "Кибербезопасность в эпоху ИИ: как меняются DDoS и другие атаки | Подкаст Selectel «Сегодня на ретро»",
+          "published_at": "2026-08-20T12:17:57.000Z",
+          "views": 26,
+          "url": "https://rutube.ru/video/b6fde23fe429a90e1022bb943fa3f63c/",
+          "duration": 3136,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "26579207c66093738dea4faf0469bef5",
+          "title": "Тот самый вопрос в три часа ночи: куда дует сервер?",
+          "published_at": "2026-08-19T15:47:51.000Z",
+          "views": 218,
+          "url": "https://rutube.ru/video/26579207c66093738dea4faf0469bef5/",
+          "duration": 66,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "b5184af87a138f6deca3051e32324c3e",
+          "title": "В заказе — 9 лишних порций чая 😱",
+          "published_at": "2026-08-18T15:38:30.000Z",
+          "views": 194,
+          "url": "https://rutube.ru/video/b5184af87a138f6deca3051e32324c3e/",
+          "duration": 71,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ba38ad5ee0cd432b49b6157802911732",
+          "title": "Открываем регистрацию на Selectel ТехноДень!",
+          "published_at": "2026-08-17T16:39:47.000Z",
+          "views": 159,
+          "url": "https://rutube.ru/video/ba38ad5ee0cd432b49b6157802911732/",
+          "duration": 17,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "eb02db29175dce83d6c8e7fbab889c7b",
+          "title": "Ваши домены в Selectel за рубль",
+          "published_at": "2026-08-14T16:01:15.000Z",
+          "views": 210,
+          "url": "https://rutube.ru/video/eb02db29175dce83d6c8e7fbab889c7b/",
+          "duration": 15,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "9f15971e947cc5beaaab61eed6798eb9",
+          "title": "Есть ли ARM в дата-центрах?",
+          "published_at": "2026-08-12T17:25:52.000Z",
+          "views": 187,
+          "url": "https://rutube.ru/video/9f15971e947cc5beaaab61eed6798eb9/",
+          "duration": 71,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "44ab6625e86b06eddbf5468cf3a9d344",
+          "title": "Топ-3 нейросети для генерации видео ⚡️",
+          "published_at": "2026-08-10T15:35:57.000Z",
+          "views": 110,
+          "url": "https://rutube.ru/video/44ab6625e86b06eddbf5468cf3a9d344/",
+          "duration": 52,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "d7f874dd0b2dedbe34a2e8ff24650565",
+          "title": "Мощные видеокарты — далеко не все, что нужно для работы ИИ 🤯",
+          "published_at": "2026-08-06T17:32:49.000Z",
+          "views": 105,
+          "url": "https://rutube.ru/video/d7f874dd0b2dedbe34a2e8ff24650565/",
+          "duration": 54,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "06cee0ce8379dfdaf0c81ddf92c824c4",
+          "title": "Нейросети можно запускать только на дорогом сервере с несколькими новейшими видеокартами. Или нет?",
+          "published_at": "2026-08-04T16:44:11.000Z",
+          "views": 91,
+          "url": "https://rutube.ru/video/06cee0ce8379dfdaf0c81ddf92c824c4/",
+          "duration": 63,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "a11e1331dc82d9b91bdda89809a53f6c",
+          "title": "🆎 Буквы разные читать в названии ML-моделей",
+          "published_at": "2026-07-31T13:40:08.000Z",
+          "views": 152,
+          "url": "https://rutube.ru/video/a11e1331dc82d9b91bdda89809a53f6c/",
+          "duration": 49,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ffeadf4e0fd83689486a2b64642c6b72",
+          "title": "Вот где хранятся ваши картинки 👇",
+          "published_at": "2026-07-30T18:12:27.000Z",
+          "views": 119,
+          "url": "https://rutube.ru/video/ffeadf4e0fd83689486a2b64642c6b72/",
+          "duration": 60,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "6a30aece6e4584b96f6531441b306eee",
+          "title": "Об этих лайфхаках для работы с серверами все молчат",
+          "published_at": "2026-07-29T16:30:23.000Z",
+          "views": 189,
+          "url": "https://rutube.ru/video/6a30aece6e4584b96f6531441b306eee/",
+          "duration": 58,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "ca45dfb90e07055a3076cb8229902029",
+          "title": "Кино не будет…",
+          "published_at": "2026-07-28T10:56:58.000Z",
+          "views": 117,
+          "url": "https://rutube.ru/video/ca45dfb90e07055a3076cb8229902029/",
+          "duration": 65,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "874a388544bb4b19a5a9e7cbd32a385f",
+          "title": "Устали писать заметки со встреч? ✍️",
+          "published_at": "2026-07-24T12:00:24.000Z",
+          "views": 175,
+          "url": "https://rutube.ru/video/874a388544bb4b19a5a9e7cbd32a385f/",
+          "duration": 53,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "321d575b0c8c11cbcc543b07f7b1c434",
+          "title": "Нейросеть опять отвечает дольше секунды 👿",
+          "published_at": "2026-07-23T15:07:47.000Z",
+          "views": 138,
+          "url": "https://rutube.ru/video/321d575b0c8c11cbcc543b07f7b1c434/",
+          "duration": 46,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "9bb31f3bd3974523c7b33d129813767a",
+          "title": "Не каждая ИИ-модель подойдет вашему бизнесу ❗",
+          "published_at": "2026-07-21T16:00:03.000Z",
+          "views": 142,
+          "url": "https://rutube.ru/video/9bb31f3bd3974523c7b33d129813767a/",
+          "duration": 48,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "7e4900bfc0393d7c8eb06679566f3b87",
+          "title": "Что общего у интернета и клубники? 🍓",
+          "published_at": "2026-07-17T10:45:31.000Z",
+          "views": 149,
+          "url": "https://rutube.ru/video/7e4900bfc0393d7c8eb06679566f3b87/",
+          "duration": 67,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "89cbf03e3cfcecc5701828eca739d7b0",
+          "title": "Защита от технических ошибок — резервирование 💯",
+          "published_at": "2026-07-16T15:54:30.000Z",
+          "views": 111,
+          "url": "https://rutube.ru/video/89cbf03e3cfcecc5701828eca739d7b0/",
+          "duration": 43,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "3b6d0b48aca3a426dff3b247e22143f9",
+          "title": "Сервер по цене квартиры 😱",
+          "published_at": "2026-07-15T15:11:08.000Z",
+          "views": 98,
+          "url": "https://rutube.ru/video/3b6d0b48aca3a426dff3b247e22143f9/",
+          "duration": 79,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "87910898ad2a81c478a8bdbf8f299baa",
+          "title": "Рабочий метод, чтобы превзойти учителя 👇",
+          "published_at": "2026-07-14T15:54:18.000Z",
+          "views": 97,
+          "url": "https://rutube.ru/video/87910898ad2a81c478a8bdbf8f299baa/",
+          "duration": 63,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "3e05f4f1afa264202b080608ab37719f",
+          "title": "Ваше лето выглядит так: 🌊🌴☀️",
+          "published_at": "2026-07-10T12:20:12.000Z",
+          "views": 103,
+          "url": "https://rutube.ru/video/3e05f4f1afa264202b080608ab37719f/",
+          "duration": 52,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "aa0ea798bbe89377723140efa984c42e",
+          "title": "Решили показать свои скелеты в шкафу 🗄️",
+          "published_at": "2026-07-09T18:04:57.000Z",
+          "views": 134,
+          "url": "https://rutube.ru/video/aa0ea798bbe89377723140efa984c42e/",
+          "duration": 86,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "da03bfbd1cf68d43eceebb00a1505837",
+          "title": "Кто сильнее — Go или Rust? 🏆",
+          "published_at": "2026-07-07T15:33:51.000Z",
+          "views": 134,
+          "url": "https://rutube.ru/video/da03bfbd1cf68d43eceebb00a1505837/",
+          "duration": 56,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "171e4b74fc8c0ea60cbd3de57270d37f",
+          "title": "Насколько хорошо вы разбираетесь в железе? 🤔",
+          "published_at": "2026-07-03T14:43:14.000Z",
+          "views": 126,
+          "url": "https://rutube.ru/video/171e4b74fc8c0ea60cbd3de57270d37f/",
+          "duration": 78,
+          "origin_type": "rshorts"
+        },
+        {
+          "id": "79122d35a0981f35aa0071864c20fd52",
+          "title": "До сих пор продолжаете верить в мифы про безопасность нейросетей? 😱",
+          "published_at": "2026-07-01T16:44:24.000Z",
+          "views": 121,
+          "url": "https://rutube.ru/video/79122d35a0981f35aa0071864c20fd52/",
+          "duration": 79,
+          "origin_type": "rshorts"
+        }
+      ]
+    },
+    {
+      "brand": "Magnit Tech",
+      "source_type": "playlist",
+      "source_id": "1247429",
+      "source_title": "MAGNIT TECH",
+      "source_url": "https://rutube.ru/plst/1247429/",
+      "scope_note": "Используется tech-плейлист внутри общего канала «Магнит», а не весь корпоративный канал.",
+      "status": "ok",
+      "q3_videos": 3,
+      "views_available": 3,
+      "q3_views_total": 627,
+      "q3_views_average": 209,
+      "q3_views_median": 234,
+      "top_video": {
+        "id": "9233167f12bc23f9eb53ed60fb467fb3",
+        "title": "Зачем «Магниту» кассы без кассиров? | По ту сторону №6: Игорь Чечулин & Эдуард Ирышков",
+        "published_at": "2026-08-18T14:35:04.000Z",
+        "views": 253,
+        "url": "https://rutube.ru/video/9233167f12bc23f9eb53ed60fb467fb3/",
+        "duration": 2958,
+        "origin_type": "rtb"
+      },
+      "videos": [
+        {
+          "id": "861185b52457ed26e9cee8af366498a6",
+          "title": "Кто преподаёт ИТ сегодня | По ту сторону №8: Ян Пиле & Илья Мещерин",
+          "published_at": "2026-09-16T16:43:04.000Z",
+          "views": 140,
+          "url": "https://rutube.ru/video/861185b52457ed26e9cee8af366498a6/",
+          "duration": 3060,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "ead6e9d080c130f5be8d01463cf95e89",
+          "title": "Как ML и AI изменили ритейл | По ту сторону №7: Максим Покусенко & Анатолий Карпов",
+          "published_at": "2026-09-01T12:25:11.000Z",
+          "views": 234,
+          "url": "https://rutube.ru/video/ead6e9d080c130f5be8d01463cf95e89/",
+          "duration": 3738,
+          "origin_type": "rtb"
+        },
+        {
+          "id": "9233167f12bc23f9eb53ed60fb467fb3",
+          "title": "Зачем «Магниту» кассы без кассиров? | По ту сторону №6: Игорь Чечулин & Эдуард Ирышков",
+          "published_at": "2026-08-18T14:35:04.000Z",
+          "views": 253,
+          "url": "https://rutube.ru/video/9233167f12bc23f9eb53ed60fb467fb3/",
+          "duration": 2958,
+          "origin_type": "rtb"
+        }
+      ]
+    },
+    {
+      "brand": "Контур",
+      "source_type": "channel",
+      "source_id": "16934147",
+      "source_title": "Технологии в Контуре",
+      "source_url": "https://rutube.ru/channel/16934147/",
+      "scope_note": null,
+      "status": "ok",
+      "q3_videos": 0,
+      "views_available": 0,
+      "q3_views_total": 0,
+      "q3_views_average": null,
+      "q3_views_median": null,
+      "top_video": null,
+      "videos": []
+    }
+  ]
+}
