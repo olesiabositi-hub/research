@@ -2,12 +2,6 @@ name: Update RUTUBE Q3 data
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "tech-brand-watch/config/rutube-sources.json"
-      - "tech-brand-watch/scripts/update-rutube.mjs"
-      - ".github/workflows/update-rutube-q3.yml"
 
 permissions:
   contents: write
