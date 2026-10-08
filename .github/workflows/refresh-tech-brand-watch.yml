@@ -1,0 +1,58 @@
+name: Refresh Tech Brand Watch data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/refresh-tech-brand-watch.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tech-brand-watch-data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Refresh YouTube
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node tech-brand-watch/scripts/update-youtube.mjs
+
+      - name: Refresh Habr
+        run: node tech-brand-watch/scripts/update-habr.mjs
+
+      - name: Refresh Telegram
+        run: node tech-brand-watch/scripts/update-telegram.mjs
+
+      - name: Validate JSON
+        run: |
+          node -e "for (const f of ['video','habr','telegram']) JSON.parse(require('fs').readFileSync('tech-brand-watch/data/'+f+'.json','utf8')); console.log('JSON OK')"
+
+      - name: Commit refreshed data
+        run: |
+          if [ -z "$(git status --porcelain -- tech-brand-watch/data/video.json tech-brand-watch/data/habr.json tech-brand-watch/data/telegram.json)" ]; then
+            echo "No data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tech-brand-watch/data/video.json tech-brand-watch/data/habr.json tech-brand-watch/data/telegram.json
+          git commit -m "Refresh Tech Brand Watch data"
+          git pull --rebase origin main
+          git push
