@@ -29,7 +29,7 @@ jobs:
 
       - name: Commit refreshed Habr data
         run: |
-          if git diff --quiet -- tech-brand-watch/data/habr.json; then
+          if [ -z "$(git status --porcelain -- tech-brand-watch/data/habr.json)" ]; then
             echo "No Habr data changes"
             exit 0
           fi
