@@ -15,8 +15,8 @@
     {
       "brand": "Avito",
       "query": "AvitoTech",
-      "username": "avitotech",
-      "enabled": true
+      "enabled": true,
+      "channel_id": "UCO2w0cpl1wxygHjQH6eEfEg"
     },
     {
       "brand": "Kaspersky",
@@ -47,8 +47,8 @@
     {
       "brand": "YADRO",
       "query": "YADRO",
-      "channel_id": "UCw-5Is3U1EO8A8deam9TKig",
-      "enabled": true
+      "enabled": true,
+      "handle": "ultimate_engineer"
     },
     {
       "brand": "2ГИС Tech",
@@ -71,8 +71,8 @@
     {
       "brand": "Selectel",
       "query": "Selectel",
-      "username": "selectel",
-      "enabled": true
+      "enabled": true,
+      "channel_id": "UCVU0Ml1l_Y90wmy5EjWTSng"
     },
     {
       "brand": "VK",
