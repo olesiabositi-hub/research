@@ -7,7 +7,7 @@
     "label": "Q3 2026",
     "days": 92
   },
-  "updated_at": "2026-10-08T11:20:15.988Z",
+  "updated_at": "2026-10-08T11:36:58.175Z",
   "source_label": "Habr public company article pages",
   "note": "Публичные метрики Habr. Количество статей относится к публикациям 01.07–30.09.2026. Просмотры — снимок на дату updated_at и могут расти после окончания квартала. Для SberTech используется общий блог Сбера и это отмечено shared_blog=true.",
   "summary": {
@@ -1633,7 +1633,7 @@
         },
         {
           "title": "Как мы сделали RAG, который почти не галлюцинирует",
-          "url": "https://habr.com/ru/companies/ru_mts/articles/1079316/",
+          "url": "https://habr.com/ru/companies/rwb/articles/1079316/",
           "published_at": "2026-09-10T09:01:11.000Z",
           "views": 8400,
           "views_label": "8.4K"
@@ -5111,8 +5111,8 @@
       "q3_articles": 10,
       "articles_per_week": 0.76,
       "views_available": 10,
-      "views_total": 63184,
-      "views_average": 6318.4,
+      "views_total": 63186,
+      "views_average": 6318.6,
       "views_median": 6750,
       "top_article": {
         "title": "Пять дней ожидания: опыт длинных временных окон Kafka stream",
@@ -5126,8 +5126,8 @@
           "title": "Менторство наоборот – чему джуны могут научить тимлида",
           "url": "https://habr.com/ru/companies/magnit/articles/1085320/",
           "published_at": "2026-09-27T23:12:11.000Z",
-          "views": 284,
-          "views_label": "284"
+          "views": 286,
+          "views_label": "286"
         },
         {
           "title": "Векторный поиск: деплой без GPU на Triton Inference Server",
@@ -5727,7 +5727,7 @@
         },
         {
           "title": "Как мы сделали RAG, который почти не галлюцинирует",
-          "url": "https://habr.com/ru/companies/ru_mts/articles/1079316/",
+          "url": "https://habr.com/ru/companies/rwb/articles/1079316/",
           "published_at": "2026-09-10T09:01:11.000Z",
           "views": 8400,
           "views_label": "8.4K"

@@ -6,7 +6,7 @@
     "to": "2026-09-30T23:59:59Z",
     "label": "Q3 2026"
   },
-  "updated_at": "2026-10-08T11:08:33.392Z",
+  "updated_at": "2026-10-08T11:35:53.980Z",
   "source_label": "YouTube Data API v3",
   "note": "Публичные данные YouTube. Число роликов относится к публикациям за Q3 2026; просмотры и подписчики — снимок на дату updated_at. В сбор включены только явно привязанные/проверенные каналы; остальные бренды помечены not_configured и не подменяются автоматическим поиском.",
   "summary": {
@@ -39,14 +39,14 @@
       "subscribers_hidden": false,
       "channel_total_videos": 1290,
       "q3_videos": 86,
-      "q3_views_total": 382177,
-      "q3_views_average": 4443.918604651163,
+      "q3_views_total": 382226,
+      "q3_views_average": 4444.488372093023,
       "q3_views_median": 2620,
       "top_video": {
         "id": "MKNg7gwnUX0",
         "title": "System Design на собеседовании: ошибки, которые тебя топят",
         "published_at": "2026-07-03T12:00:20Z",
-        "views": 60784,
+        "views": 60787,
         "likes": 1604,
         "comments": 278,
         "url": "https://www.youtube.com/watch?v=MKNg7gwnUX0"
@@ -56,7 +56,7 @@
           "id": "UP46wnb5oJo",
           "title": "Как обойти Security Gate? #avitotech",
           "published_at": "2026-09-30T12:17:04Z",
-          "views": 2018,
+          "views": 2021,
           "likes": 37,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=UP46wnb5oJo"
@@ -65,7 +65,7 @@
           "id": "RBChn_YTcWs",
           "title": "ИИ заменит аналитика?",
           "published_at": "2026-09-30T09:00:33Z",
-          "views": 8649,
+          "views": 8660,
           "likes": 84,
           "comments": 10,
           "url": "https://www.youtube.com/watch?v=RBChn_YTcWs"
@@ -83,7 +83,7 @@
           "id": "ulOiTqBfvCg",
           "title": "Как из одной ссылки собрать полный взлом сервера",
           "published_at": "2026-09-28T13:00:06Z",
-          "views": 1456,
+          "views": 1455,
           "likes": 17,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=ulOiTqBfvCg"
@@ -92,7 +92,7 @@
           "id": "uuZ4CAHG9PI",
           "title": "6 столпов Digital Immune System",
           "published_at": "2026-09-28T12:00:36Z",
-          "views": 1677,
+          "views": 1678,
           "likes": 27,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=uuZ4CAHG9PI"
@@ -155,7 +155,7 @@
           "id": "6P6YiEq_1YI",
           "title": "Растём через покараску кнопок #avitotech #подкаст #backend #work  #productivity",
           "published_at": "2026-09-22T08:00:08Z",
-          "views": 4554,
+          "views": 4561,
           "likes": 33,
           "comments": 6,
           "url": "https://www.youtube.com/watch?v=6P6YiEq_1YI"
@@ -182,7 +182,7 @@
           "id": "efkDYRBqo7w",
           "title": "Супермагия в метриках",
           "published_at": "2026-09-19T12:43:33Z",
-          "views": 5629,
+          "views": 5630,
           "likes": 27,
           "comments": 4,
           "url": "https://www.youtube.com/watch?v=efkDYRBqo7w"
@@ -191,7 +191,7 @@
           "id": "UX3aHHDptj8",
           "title": "Прочитать шум и захватить сервер: два хакерских трюка с HoneyBadger CTF",
           "published_at": "2026-09-18T12:15:06Z",
-          "views": 2035,
+          "views": 2036,
           "likes": 16,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=UX3aHHDptj8"
@@ -227,7 +227,7 @@
           "id": "8IcZfZjvJQQ",
           "title": "Зачем инженеру продуктовое мышление? | Подкаст «Бэкенд расправил плечи»",
           "published_at": "2026-09-15T07:00:23Z",
-          "views": 5511,
+          "views": 5513,
           "likes": 58,
           "comments": 12,
           "url": "https://www.youtube.com/watch?v=8IcZfZjvJQQ"
@@ -416,7 +416,7 @@
           "id": "mOQQVSnF2cM",
           "title": "Изучаем новинки Go 1.27 | avito.code",
           "published_at": "2026-08-20T10:00:38Z",
-          "views": 9552,
+          "views": 9551,
           "likes": 295,
           "comments": 28,
           "url": "https://www.youtube.com/watch?v=mOQQVSnF2cM"
@@ -452,7 +452,7 @@
           "id": "y4Vf9Y1iU5o",
           "title": "Выпрямляем руки агентов: как сделать MCP удобными и действительно полезными — Павел Агалецкий",
           "published_at": "2026-08-15T10:00:04Z",
-          "views": 1936,
+          "views": 1938,
           "likes": 59,
           "comments": 4,
           "url": "https://www.youtube.com/watch?v=y4Vf9Y1iU5o"
@@ -659,7 +659,7 @@
           "id": "EBPGiG9ddKQ",
           "title": "Spec-Driven Development: теория, инструменты, практика — Александр Шаповалов",
           "published_at": "2026-07-21T09:00:17Z",
-          "views": 23809,
+          "views": 23831,
           "likes": 494,
           "comments": 43,
           "url": "https://www.youtube.com/watch?v=EBPGiG9ddKQ"
@@ -704,7 +704,7 @@
           "id": "s3MEDuXtEa8",
           "title": "Когда сотрудник уходит: чек-лист для тех, кто остаётся | Подкаст «Свободный слот»",
           "published_at": "2026-07-16T09:00:26Z",
-          "views": 1804,
+          "views": 1803,
           "likes": 54,
           "comments": 4,
           "url": "https://www.youtube.com/watch?v=s3MEDuXtEa8"
@@ -794,7 +794,7 @@
           "id": "MKNg7gwnUX0",
           "title": "System Design на собеседовании: ошибки, которые тебя топят",
           "published_at": "2026-07-03T12:00:20Z",
-          "views": 60784,
+          "views": 60787,
           "likes": 1604,
           "comments": 278,
           "url": "https://www.youtube.com/watch?v=MKNg7gwnUX0"
@@ -812,7 +812,7 @@
           "id": "Y51N_H2fZS0",
           "title": "Мы узнали, о чем думают топы в IT прямо сейчас | Подкаст «Свободный слот»",
           "published_at": "2026-07-02T15:55:15Z",
-          "views": 1895,
+          "views": 1894,
           "likes": 41,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=Y51N_H2fZS0"
@@ -886,14 +886,14 @@
       "subscribers_hidden": false,
       "channel_total_videos": 573,
       "q3_videos": 104,
-      "q3_views_total": 157147,
-      "q3_views_average": 1511.0288461538462,
+      "q3_views_total": 157139,
+      "q3_views_average": 1510.951923076923,
       "q3_views_median": 1193,
       "top_video": {
         "id": "APVFepbSKs8",
         "title": "Лекция Сергея Жмылёва и Дениса Довженко о языке C и системном программировании",
         "published_at": "2026-09-26T08:00:06Z",
-        "views": 16605,
+        "views": 16604,
         "likes": null,
         "comments": 32,
         "url": "https://www.youtube.com/watch?v=APVFepbSKs8"
@@ -912,7 +912,7 @@
           "id": "qZnObL-dXt0",
           "title": "От мусоровоза до процессора: как предыдущий опыт помогает решать новые инженерные задачи",
           "published_at": "2026-09-30T08:00:10Z",
-          "views": 3851,
+          "views": 3849,
           "likes": null,
           "comments": 1,
           "url": "https://www.youtube.com/watch?v=qZnObL-dXt0"
@@ -921,7 +921,7 @@
           "id": "du7KYfXVly4",
           "title": "Бесплатные токены: отработка ТЗ на локальной модели",
           "published_at": "2026-09-29T05:30:25Z",
-          "views": 1463,
+          "views": 1458,
           "likes": null,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=du7KYfXVly4"
@@ -957,7 +957,7 @@
           "id": "APVFepbSKs8",
           "title": "Лекция Сергея Жмылёва и Дениса Довженко о языке C и системном программировании",
           "published_at": "2026-09-26T08:00:06Z",
-          "views": 16605,
+          "views": 16604,
           "likes": null,
           "comments": 32,
           "url": "https://www.youtube.com/watch?v=APVFepbSKs8"
@@ -975,7 +975,7 @@
           "id": "9ox72-BZ0Sg",
           "title": "Будущее связи: от интернета вещей к интернету ощущений",
           "published_at": "2026-09-24T15:56:04Z",
-          "views": 1242,
+          "views": 1243,
           "likes": null,
           "comments": 1,
           "url": "https://www.youtube.com/watch?v=9ox72-BZ0Sg"
@@ -1011,7 +1011,7 @@
           "id": "PMool366exw",
           "title": "Промышленная асинхронность: опыт внедрения C++20 корутин в сервисы KvadraOS — Илья Клементьев, YADRO",
           "published_at": "2026-09-21T07:17:07Z",
-          "views": 1047,
+          "views": 1048,
           "likes": null,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=PMool366exw"
@@ -1128,7 +1128,7 @@
           "id": "joi_n7F-_jg",
           "title": "Запуск нейросетей на ПЛИС. Краевой ИИ. Академическая деятельность.",
           "published_at": "2026-09-11T14:30:06Z",
-          "views": 6673,
+          "views": 6672,
           "likes": null,
           "comments": 18,
           "url": "https://www.youtube.com/watch?v=joi_n7F-_jg"
@@ -1614,7 +1614,7 @@
           "id": "wXNdBDwYGnU",
           "title": "Как попасть в профессию, которой почти не учат в вузах, — история инженера-верификатора",
           "published_at": "2026-07-24T14:00:06Z",
-          "views": 1206,
+          "views": 1205,
           "likes": null,
           "comments": 4,
           "url": "https://www.youtube.com/watch?v=wXNdBDwYGnU"
@@ -1851,8 +1851,8 @@
       "subscribers_hidden": false,
       "channel_total_videos": 579,
       "q3_videos": 53,
-      "q3_views_total": 256230,
-      "q3_views_average": 4834.528301886792,
+      "q3_views_total": 256232,
+      "q3_views_average": 4834.566037735849,
       "q3_views_median": 1538,
       "top_video": {
         "id": "-sKTjdBEYyA",
@@ -1994,7 +1994,7 @@
           "id": "UlB44oVcgRU",
           "title": "25 августа 2026 г.",
           "published_at": "2026-08-25T15:21:19Z",
-          "views": 716,
+          "views": 715,
           "likes": 21,
           "comments": 1,
           "url": "https://www.youtube.com/watch?v=UlB44oVcgRU"
@@ -2048,7 +2048,7 @@
           "id": "xuoVYvGuoE4",
           "title": "Он не только на экранах, но ещё и во всех навигаторах страны. Уже включали голос Сергея Бурунова?",
           "published_at": "2026-08-12T14:07:38Z",
-          "views": 30846,
+          "views": 30847,
           "likes": 96,
           "comments": 3,
           "url": "https://www.youtube.com/watch?v=xuoVYvGuoE4"
@@ -2093,7 +2093,7 @@
           "id": "3eqvmyCzECw",
           "title": "Откуда карты знают, сколько выходов и кафе в самом большом аэропорту страны? Смотрите в ролике 👀",
           "published_at": "2026-08-06T12:36:49Z",
-          "views": 2290,
+          "views": 2291,
           "likes": 39,
           "comments": 2,
           "url": "https://www.youtube.com/watch?v=3eqvmyCzECw"
@@ -2264,7 +2264,7 @@
           "id": "HE1hL5wWxp4",
           "title": "Как вам челлендж: от Московских ворот до Невского — без единой остановки? Повторили бы?",
           "published_at": "2026-07-10T14:30:57Z",
-          "views": 12968,
+          "views": 12969,
           "likes": 57,
           "comments": 2,
           "url": "https://www.youtube.com/watch?v=HE1hL5wWxp4"
@@ -2530,14 +2530,14 @@
       "subscribers_hidden": false,
       "channel_total_videos": 433,
       "q3_videos": 6,
-      "q3_views_total": 32762,
-      "q3_views_average": 5460.333333333333,
+      "q3_views_total": 32759,
+      "q3_views_average": 5459.833333333333,
       "q3_views_median": 773,
       "top_video": {
         "id": "OCDApumwfr0",
         "title": "Ulbi TV: ИИ и будущее разработки",
         "published_at": "2026-07-17T12:51:54Z",
-        "views": 26944,
+        "views": 26941,
         "likes": 778,
         "comments": 245,
         "url": "https://www.youtube.com/watch?v=OCDApumwfr0"
@@ -2592,7 +2592,7 @@
           "id": "OCDApumwfr0",
           "title": "Ulbi TV: ИИ и будущее разработки",
           "published_at": "2026-07-17T12:51:54Z",
-          "views": 26944,
+          "views": 26941,
           "likes": 778,
           "comments": 245,
           "url": "https://www.youtube.com/watch?v=OCDApumwfr0"
@@ -2613,8 +2613,8 @@
       "subscribers_hidden": false,
       "channel_total_videos": 852,
       "q3_videos": 67,
-      "q3_views_total": 670640,
-      "q3_views_average": 10009.55223880597,
+      "q3_views_total": 670930,
+      "q3_views_average": 10013.880597014926,
       "q3_views_median": 1556,
       "top_video": {
         "id": "W0-ObyrU1Rk",
@@ -2630,7 +2630,7 @@
           "id": "Cyia1cGLJ4A",
           "title": "Selectel ТехноДень — зал «Кинетика»",
           "published_at": "2026-09-30T17:36:58Z",
-          "views": 71,
+          "views": 99,
           "likes": 0,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=Cyia1cGLJ4A"
@@ -2639,8 +2639,8 @@
           "id": "BHSh8mVq76I",
           "title": "Selectel ТехноДень — зал «Физика»",
           "published_at": "2026-09-30T17:29:07Z",
-          "views": 108,
-          "likes": 0,
+          "views": 191,
+          "likes": 1,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=BHSh8mVq76I"
         },
@@ -2648,7 +2648,7 @@
           "id": "3qYq24Nbtb0",
           "title": "Selectel ТехноДень — зал «Атом»",
           "published_at": "2026-09-30T17:21:52Z",
-          "views": 78,
+          "views": 133,
           "likes": 0,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=3qYq24Nbtb0"
@@ -2657,7 +2657,7 @@
           "id": "ZKhYdF8ZnSM",
           "title": "Selectel ТехноДень — главный зал «Молекула»",
           "published_at": "2026-09-30T17:10:45Z",
-          "views": 554,
+          "views": 653,
           "likes": 9,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=ZKhYdF8ZnSM"
@@ -2675,7 +2675,7 @@
           "id": "upblgqVHEjQ",
           "title": "Серверный SSD — лишние расходы или вложение в надежность? 🤔",
           "published_at": "2026-09-28T09:37:58Z",
-          "views": 14264,
+          "views": 14266,
           "likes": 170,
           "comments": 16,
           "url": "https://www.youtube.com/watch?v=upblgqVHEjQ"
@@ -2684,7 +2684,7 @@
           "id": "UVCC_urcEh4",
           "title": "Зеленый Selectel 2026",
           "published_at": "2026-09-25T13:53:16Z",
-          "views": 314,
+          "views": 315,
           "likes": 7,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=UVCC_urcEh4"
@@ -2738,7 +2738,7 @@
           "id": "NX32oWXo7vw",
           "title": "Архитектура данных в эпоху ИИ: как избежать дорогих ошибок | Подкаст Selectel «Сегодня на ретро»",
           "published_at": "2026-09-22T13:51:14Z",
-          "views": 31231,
+          "views": 31252,
           "likes": 21,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=NX32oWXo7vw"
@@ -2855,7 +2855,7 @@
           "id": "R21UGxa_7tk",
           "title": "✉️ У вас есть непрочитанное сообщение (1)",
           "published_at": "2026-09-03T14:03:18Z",
-          "views": 7161,
+          "views": 7162,
           "likes": 89,
           "comments": 5,
           "url": "https://www.youtube.com/watch?v=R21UGxa_7tk"
