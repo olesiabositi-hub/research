@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "period": {
+    "from": "2026-07-01T00:00:00Z",
+    "to": "2026-09-30T23:59:59Z",
+    "label": "Q3 2026",
+    "days": 92
+  },
+  "source": "Habr public company article pages",
+  "brands": [
+    {
+      "brand": "Яндекс",
+      "slug": "yandex"
+    },
+    {
+      "brand": "Avito",
+      "slug": "avito"
+    },
+    {
+      "brand": "Kaspersky",
+      "slug": "kaspersky"
+    },
+    {
+      "brand": "Positive Technologies",
+      "slug": "pt"
+    },
+    {
+      "brand": "Т-Банк",
+      "slug": "tbank"
+    },
+    {
+      "brand": "MTS Tech",
+      "slug": "ru_mts",
+      "display_source": "МТС"
+    },
+    {
+      "brand": "Ozon Tech",
+      "slug": "ozontech"
+    },
+    {
+      "brand": "YADRO",
+      "slug": "yadro"
+    },
+    {
+      "brand": "2ГИС Tech",
+      "slug": "2gis",
+      "display_source": "2ГИС"
+    },
+    {
+      "brand": "Контур",
+      "slug": "skbkontur"
+    },
+    {
+      "brand": "Cloud.ru",
+      "slug": "cloud_ru"
+    },
+    {
+      "brand": "Selectel",
+      "slug": "selectel"
+    },
+    {
+      "brand": "VK",
+      "slug": "vktech",
+      "display_source": "VK Tech"
+    },
+    {
+      "brand": "Альфа-Банк",
+      "slug": "alfa"
+    },
+    {
+      "brand": "hh.ru",
+      "slug": "hh"
+    },
+    {
+      "brand": "Lamoda Tech",
+      "slug": "lamoda"
+    },
+    {
+      "brand": "Magnit Tech",
+      "slug": "magnit"
+    },
+    {
+      "brand": "SberTech",
+      "slug": "sberbank",
+      "display_source": "Сбер",
+      "shared_blog": true
+    },
+    {
+      "brand": "Точка Банк",
+      "slug": "tochka"
+    },
+    {
+      "brand": "Dodo Engineering",
+      "slug": "dododev"
+    },
+    {
+      "brand": "ecom.tech",
+      "slug": "ecom_tech"
+    },
+    {
+      "brand": "RWB",
+      "slug": "rwb"
+    },
+    {
+      "brand": "X5 Tech",
+      "slug": "x5tech"
+    },
+    {
+      "brand": "Домклик",
+      "slug": "domclick"
+    },
+    {
+      "brand": "Купер",
+      "slug": "kuper"
+    }
+  ]
+}
