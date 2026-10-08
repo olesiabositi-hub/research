@@ -115,6 +115,7 @@ async function collectBrand(item){
     slug:item.slug,
     display_source:item.display_source||item.brand,
     shared_blog:Boolean(item.shared_blog),
+    frequency_compare:Boolean(item.frequency_compare),
     status:"ok",
     pages_scanned,
     q3_articles:articles.length,
@@ -138,6 +139,7 @@ for(const item of config.brands){
       slug:item.slug,
       display_source:item.display_source||item.brand,
       shared_blog:Boolean(item.shared_blog),
+      frequency_compare:Boolean(item.frequency_compare),
       status:"error",
       error:String(error),
       q3_articles:null,
@@ -154,10 +156,10 @@ for(const item of config.brands){
 
 const allArticles=rows
   .filter(r=>r.status==="ok")
-  .flatMap(r=>r.articles.map(a=>({...a,brand:r.brand,display_source:r.display_source})));
+  .flatMap(r=>r.articles.map(a=>({...a,brand:r.brand,display_source:r.display_source,shared_blog:r.shared_blog})));
 
 const topArticles=[...allArticles]
-  .filter(a=>Number.isFinite(a.views))
+  .filter(a=>Number.isFinite(a.views) && !a.shared_blog)
   .sort((a,b)=>b.views-a.views)
   .slice(0,12);
 
@@ -173,7 +175,8 @@ const output={
     brands_ok:rows.filter(r=>r.status==="ok").length,
     errors:rows.filter(r=>r.status==="error").length,
     total_q3_articles:rows.filter(r=>r.status==="ok").reduce((a,r)=>a+r.q3_articles,0),
-    top_articles_count:topArticles.length
+    top_articles_count:topArticles.length,
+    frequency_compare_brands:rows.filter(r=>r.frequency_compare).length
   },
   rows,
   top_articles:topArticles
