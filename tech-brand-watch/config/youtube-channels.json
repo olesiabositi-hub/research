@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "period": {
+    "from": "2026-07-01T00:00:00Z",
+    "to": "2026-09-30T23:59:59Z",
+    "label": "Q3 2026"
+  },
+  "brands": [
+    {
+      "brand": "Яндекс",
+      "query": "Яндекс для разработчиков"
+    },
+    {
+      "brand": "Avito",
+      "query": "Avito Tech"
+    },
+    {
+      "brand": "Kaspersky",
+      "query": "Kaspersky Tech"
+    },
+    {
+      "brand": "Positive Technologies",
+      "query": "Positive Technologies"
+    },
+    {
+      "brand": "Т-Банк",
+      "query": "Т-Банк Tech"
+    },
+    {
+      "brand": "MTS Tech",
+      "query": "MTS Tech"
+    },
+    {
+      "brand": "Ozon Tech",
+      "query": "Ozon Tech"
+    },
+    {
+      "brand": "YADRO",
+      "query": "YADRO"
+    },
+    {
+      "brand": "2ГИС Tech",
+      "query": "2GIS Tech"
+    },
+    {
+      "brand": "Контур",
+      "query": "Контур разработка"
+    },
+    {
+      "brand": "Cloud.ru",
+      "query": "Cloud.ru"
+    },
+    {
+      "brand": "Selectel",
+      "query": "Selectel"
+    },
+    {
+      "brand": "VK",
+      "query": "VK Tech"
+    },
+    {
+      "brand": "Альфа-Банк",
+      "query": "Альфа-Банк IT Tech"
+    },
+    {
+      "brand": "hh.ru",
+      "query": "hh.ru разработка"
+    },
+    {
+      "brand": "Lamoda Tech",
+      "query": "Lamoda Tech"
+    },
+    {
+      "brand": "Magnit Tech",
+      "query": "Magnit Tech"
+    },
+    {
+      "brand": "SberTech",
+      "query": "SberTech"
+    },
+    {
+      "brand": "Точка Банк",
+      "query": "Точка Банк IT"
+    },
+    {
+      "brand": "Dodo Engineering",
+      "query": "Dodo Engineering"
+    },
+    {
+      "brand": "ecom.tech",
+      "query": "ecom.tech"
+    },
+    {
+      "brand": "RWB",
+      "query": "RWB Tech"
+    },
+    {
+      "brand": "X5 Tech",
+      "query": "X5 Tech"
+    },
+    {
+      "brand": "Домклик",
+      "query": "Домклик Tech"
+    },
+    {
+      "brand": "Купер",
+      "query": "Купер Tech"
+    }
+  ]
+}
