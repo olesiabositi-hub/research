@@ -141,11 +141,11 @@ for(const item of config.brands){
   try{
     const match=await findChannel(item);
     if(match.not_configured){
-      rows.push({brand:item.brand,status:"not_configured",query:item.query,match_method:match.match_method});
+      rows.push({brand:item.brand,status:"not_configured",query:item.query,scope_note:item.scope_note||null,match_method:match.match_method});
       continue;
     }
     if(!match.channel_id){
-      rows.push({brand:item.brand,status:"not_found",query:item.query,...match});
+      rows.push({brand:item.brand,status:"not_found",query:item.query,scope_note:item.scope_note||null,...match});
       continue;
     }
     const channel=await getChannel(match.channel_id);
@@ -175,6 +175,7 @@ for(const item of config.brands){
       brand:item.brand,
       status:"ok",
       query:item.query,
+      scope_note:item.scope_note||null,
       channel_id:channel.id,
       channel_title:channel.snippet?.title || match.channel_title || null,
       channel_url:"https://www.youtube.com/channel/"+channel.id,
