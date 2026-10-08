@@ -82,7 +82,7 @@ function parsePosts(html,handle){
     if(!Number.isFinite(id))continue;
     const viewsRaw=chunk.match(/tgme_widget_message_views[^>]*>\s*([^<]+)\s*</i)?.[1]??null;
     const reactionRaw=[...chunk.matchAll(/tgme_reaction_count[^>]*>\s*([^<]+)\s*</gi)].map(m=>parseMetric(m[1])).filter(Number.isFinite);
-    const reactions=reactionRaw.length?reactionRaw.reduce((a,b)=>a+b,0):0;
+    const reactions=reactionRaw.length?reactionRaw.reduce((a,b)=>a+b,0):null;
     const textRaw=
       chunk.match(/tgme_widget_message_text[^>]*>([\s\S]*?)<\/div>/i)?.[1] ??
       chunk.match(/tgme_widget_message_caption[^>]*>([\s\S]*?)<\/div>/i)?.[1] ??
@@ -177,7 +177,8 @@ async function collectChannel(item){
     median_views:medianViews,
     er,
     avg_reactions:avgReactions,
-    reactions_total:reactionNums.reduce((a,b)=>a+b,0),
+    reactions_available:reactionNums.length,
+    reactions_total:reactionNums.length?reactionNums.reduce((a,b)=>a+b,0):null,
     top_post:top,
     posts
   };
@@ -214,7 +215,8 @@ const output={
     collected:ok.length,
     disabled:rows.filter(r=>r.status==="disabled").length,
     errors:rows.filter(r=>r.status==="error").length,
-    q3_posts_total:ok.reduce((a,r)=>a+(r.q3_posts||0),0)
+    q3_posts_total:ok.reduce((a,r)=>a+(r.q3_posts||0),0),
+    channels_with_reactions:ok.filter(r=>(r.reactions_available||0)>0).length
   },
   rows
 };
