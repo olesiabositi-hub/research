@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "channel": "video",
+  "period": {
+    "from": "2026-07-01",
+    "to": "2026-09-30",
+    "label": "Q3 2026"
+  },
+  "status": "data_layer_ready",
+  "updated_at": null,
+  "source_label": null,
+  "note": "Структура данных готова. Performance-метрики видео пока не подключены; следующий этап — отдельное подключение источника данных.",
+  "rows": []
+}
