@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "channel": "telegram",
+  "period": {
+    "from": "2026-07-01",
+    "to": "2026-09-30",
+    "label": "Q3 2026"
+  },
+  "updated_at": "2026-10-01",
+  "source_label": "Public snapshot; competitors — Telemetr, Dev2GIS — last available Q3 snapshot",
+  "note": "Competitor rows use the comparable public snapshot available on 1 October. Dev2GIS is kept as the last available Q3 snapshot and is marked separately because the measurement date differs.",
+  "rows": [
+    {
+      "brand": "Ozon Tech",
+      "subscribers": 29840,
+      "avg_views": 4200,
+      "er": 14.07,
+      "snapshot": "1 окт",
+      "is_2gis": false,
+      "approximate": false
+    },
+    {
+      "brand": "Avito",
+      "subscribers": 25710,
+      "avg_views": 3370,
+      "er": 13.1,
+      "snapshot": "1 окт",
+      "is_2gis": false,
+      "approximate": false
+    },
+    {
+      "brand": "Яндекс",
+      "subscribers": 28530,
+      "avg_views": 2710,
+      "er": 9.48,
+      "snapshot": "1 окт",
+      "is_2gis": false,
+      "approximate": false
+    },
+    {
+      "brand": "RWB",
+      "subscribers": 15270,
+      "avg_views": 1960,
+      "er": 12.83,
+      "snapshot": "1 окт",
+      "is_2gis": false,
+      "approximate": false
+    },
+    {
+      "brand": "Lamoda Tech",
+      "subscribers": 11000,
+      "avg_views": 1430,
+      "er": 13,
+      "snapshot": "1 окт",
+      "is_2gis": false,
+      "approximate": false
+    },
+    {
+      "brand": "2ГИС Tech · Dev2GIS",
+      "subscribers": 3960,
+      "avg_views": 1430,
+      "er": 36.2,
+      "snapshot": "Q3*",
+      "is_2gis": true,
+      "approximate": true
+    },
+    {
+      "brand": "ecom.tech",
+      "subscribers": 7610,
+      "avg_views": 1390,
+      "er": 18.21,
+      "snapshot": "1 окт",
+      "is_2gis": false,
+      "approximate": false
+    },
+    {
+      "brand": "X5 Tech",
+      "subscribers": 10770,
+      "avg_views": 1360,
+      "er": 12.62,
+      "snapshot": "1 окт",
+      "is_2gis": false,
+      "approximate": false
+    },
+    {
+      "brand": "Контур",
+      "subscribers": 6710,
+      "avg_views": 1260,
+      "er": 18.78,
+      "snapshot": "1 окт",
+      "is_2gis": false,
+      "approximate": false
+    },
+    {
+      "brand": "Dodo Engineering",
+      "subscribers": 3880,
+      "avg_views": 980,
+      "er": 25.28,
+      "snapshot": "1 окт",
+      "is_2gis": false,
+      "approximate": false
+    }
+  ]
+}
