@@ -6,9 +6,9 @@
     "to": "2026-09-30",
     "label": "Q3 2026"
   },
-  "status": "data_layer_ready",
-  "updated_at": null,
-  "source_label": null,
-  "note": "Структура данных готова. Публичные performance-метрики подкастов пока не подключены; в Q3-срезе наличие podcast-серий остаётся в разделе «Контент в цифрах».",
+  "status": "not_comparable",
+  "updated_at": "2026-10-08",
+  "source_label": "Public podcast pages / Apple Podcasts / mave",
+  "note": "Публичные listen/play counts конкурентов не сопоставимы. Apple Podcasts показывает детальную аналитику владельцам шоу, а публичные страницы выпусков не дают play count. У mave публичные метрики существуют, но не включают прослушивания из Spotify, Яндекс Музыки и VK, поэтому использовать их для общего рейтинга брендов некорректно. В Performance не добавляем численные podcast-метрики.",
   "rows": []
 }
