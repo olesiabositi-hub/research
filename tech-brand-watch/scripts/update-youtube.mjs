@@ -50,30 +50,27 @@ const scoreCandidate = (query, title) => {
 };
 
 const findChannel = async item => {
-  if (item.channel_id) {
-    return {channel_id:item.channel_id, match_score:1, match_method:"configured"};
+  if (item.enabled === false) {
+    return { channel_id:null, match_score:null, match_method:"not_configured", not_configured:true };
   }
-  const data = await api("search",{
-    part:"snippet",
-    q:item.query,
-    type:"channel",
-    maxResults:5
-  });
-  const candidates = (data.items || []).map(x => ({
-    channel_id:x.id.channelId,
-    title:x.snippet.title,
-    description:x.snippet.description || "",
-    score:scoreCandidate(item.query,x.snippet.title)
-  })).sort((a,b)=>b.score-a.score);
-  const best = candidates[0];
-  if (!best) return {channel_id:null, match_score:0, match_method:"not_found", candidates:[]};
-  return {
-    channel_id:best.channel_id,
-    channel_title:best.title,
-    match_score:Number(best.score.toFixed(2)),
-    match_method:"search",
-    candidates:candidates.map(x=>({channel_id:x.channel_id,title:x.title,score:Number(x.score.toFixed(2))}))
-  };
+  if (item.channel_id) {
+    return { channel_id:item.channel_id, match_score:1, match_method:"configured" };
+  }
+  if (item.handle) {
+    const data = await api("channels",{ part:"snippet", forHandle:item.handle, maxResults:1 });
+    const ch = data.items?.[0];
+    return ch
+      ? { channel_id:ch.id, channel_title:ch.snippet?.title || null, match_score:1, match_method:"handle" }
+      : { channel_id:null, match_score:0, match_method:"handle_not_found" };
+  }
+  if (item.username) {
+    const data = await api("channels",{ part:"snippet", forUsername:item.username, maxResults:1 });
+    const ch = data.items?.[0];
+    return ch
+      ? { channel_id:ch.id, channel_title:ch.snippet?.title || null, match_score:1, match_method:"username" }
+      : { channel_id:null, match_score:0, match_method:"username_not_found" };
+  }
+  return { channel_id:null, match_score:null, match_method:"not_configured", not_configured:true };
 };
 
 const getChannel = async channelId => {
@@ -143,6 +140,10 @@ const rows=[];
 for(const item of config.brands){
   try{
     const match=await findChannel(item);
+    if(match.not_configured){
+      rows.push({brand:item.brand,status:"not_configured",query:item.query,match_method:match.match_method});
+      continue;
+    }
     if(!match.channel_id){
       rows.push({brand:item.brand,status:"not_found",query:item.query,...match});
       continue;
@@ -172,7 +173,7 @@ for(const item of config.brands){
     const hiddenSubscribers=channel.statistics?.hiddenSubscriberCount === true;
     rows.push({
       brand:item.brand,
-      status:match.match_score>=0.5 ? "ok" : "needs_review",
+      status:"ok",
       query:item.query,
       channel_id:channel.id,
       channel_title:channel.snippet?.title || match.channel_title || null,
@@ -203,11 +204,12 @@ const output={
   period:config.period,
   updated_at:new Date().toISOString(),
   source_label:"YouTube Data API v3",
-  note:"Публичные данные YouTube. Число роликов относится к публикациям за Q3 2026; просмотры и подписчики — снимок на дату updated_at. Каналы, которые не удалось уверенно сопоставить автоматически, помечены needs_review и не должны использоваться как подтверждённые без проверки.",
+  note:"Публичные данные YouTube. Число роликов относится к публикациям за Q3 2026; просмотры и подписчики — снимок на дату updated_at. В сбор включены только явно привязанные/проверенные каналы; остальные бренды помечены not_configured и не подменяются автоматическим поиском.",
   summary:{
     brands_total:rows.length,
     channels_matched:okRows.length,
     channels_with_q3_video:activeRows.length,
+    not_configured:rows.filter(r=>r.status==="not_configured").length,
     needs_review:rows.filter(r=>r.status==="needs_review").length,
     not_found:rows.filter(r=>r.status==="not_found").length,
     errors:rows.filter(r=>r.status==="error").length
