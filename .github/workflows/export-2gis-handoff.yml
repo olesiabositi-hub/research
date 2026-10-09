@@ -104,10 +104,10 @@ jobs:
 
           : > "$ROOT/MISSING_DOWNLOADS.txt"
 
-          download () {
+          download () { &
             out="$1"; url="$2"; referer="${3:-}"
             mkdir -p "$(dirname "$out")"
-            args=(-L --fail --silent --show-error --retry 2 --retry-delay 1 --connect-timeout 15 --max-time 60 -A "Mozilla/5.0")
+            args=(-L --fail --silent --show-error --retry 2 --retry-delay 1 --connect-timeout 10 --max-time 25 -A "Mozilla/5.0")
             if [ -n "$referer" ]; then args+=(-e "$referer"); fi
             if ! curl "${args[@]}" "$url" -o "$out"; then
               echo "$url" >> "$ROOT/MISSING_DOWNLOADS.txt"
@@ -115,40 +115,42 @@ jobs:
             fi
           }
 
-          download "$IMG/01-home/01-hero-map-information-1984-page086.webp" "https://djvu.online/jpg1/c/0/h/c0htS5DZQyLQb/086.webp" "https://djvu.online/file/c0htS5DZQyLQb"
-          download "$IMG/01-home/02-hero-dolmatovsky-zis1001.jpg" "https://www.designspb.ru/upload/medialibrary/a43/dolmatovskiy_1.jpg" "https://www.designspb.ru/"
-          download "$IMG/01-home/03-cover-tech-youth-1954.jpg" "https://fantlab.ru/images/editions/big/384832?r=1682442393" "https://fantlab.ru/"
-          download "$IMG/01-home/04-engineer-dreams-1956-page034.webp" "https://djvu.online/jpg1/v/c/z/vczZJckoOQdkp/034.webp" "https://djvu.online/file/vczZJckoOQdkp"
-          download "$IMG/01-home/05-future-city-real-cutout-01.jpg" "https://image6.thematicnews.com/uploads/images/00/00/41/2018/06/27/83ec6ba776.jpg" "https://back-in-ussr.com/2018/06/zhurnal-tehnikamolodezhi-ob-arhitekture-buduschego.html"
-          download "$IMG/01-home/06-future-city-real-cutout-02.jpg" "https://image7.thematicnews.com/uploads/images/00/00/41/2018/06/27/0e8a3b031a.jpg" "https://back-in-ussr.com/2018/06/zhurnal-tehnikamolodezhi-ob-arhitekture-buduschego.html"
+          download "$IMG/01-home/01-hero-map-information-1984-page086.webp" "https://djvu.online/jpg1/c/0/h/c0htS5DZQyLQb/086.webp" "https://djvu.online/file/c0htS5DZQyLQb" &
+          download "$IMG/01-home/02-hero-dolmatovsky-zis1001.jpg" "https://www.designspb.ru/upload/medialibrary/a43/dolmatovskiy_1.jpg" "https://www.designspb.ru/" &
+          download "$IMG/01-home/03-cover-tech-youth-1954.jpg" "https://fantlab.ru/images/editions/big/384832?r=1682442393" "https://fantlab.ru/" &
+          download "$IMG/01-home/04-engineer-dreams-1956-page034.webp" "https://djvu.online/jpg1/v/c/z/vczZJckoOQdkp/034.webp" "https://djvu.online/file/vczZJckoOQdkp" &
+          download "$IMG/01-home/05-future-city-real-cutout-01.jpg" "https://image6.thematicnews.com/uploads/images/00/00/41/2018/06/27/83ec6ba776.jpg" "https://back-in-ussr.com/2018/06/zhurnal-tehnikamolodezhi-ob-arhitekture-buduschego.html" &
+          download "$IMG/01-home/06-future-city-real-cutout-02.jpg" "https://image7.thematicnews.com/uploads/images/00/00/41/2018/06/27/0e8a3b031a.jpg" "https://back-in-ussr.com/2018/06/zhurnal-tehnikamolodezhi-ob-arhitekture-buduschego.html" &
 
-          download "$IMG/02-era-1/01-dolmatovsky-zis1001.jpg" "https://www.designspb.ru/upload/medialibrary/a43/dolmatovskiy_1.jpg" "https://www.designspb.ru/"
-          download "$IMG/02-era-1/02-tech-youth-1938-cover.jpg" "https://fantlab.ru/images/editions/big/222485?r=1529499949" "https://fantlab.ru/"
-          download "$IMG/02-era-1/03-tech-youth-1954-cover.jpg" "https://fantlab.ru/images/editions/big/384832?r=1682442393" "https://fantlab.ru/"
-          download "$IMG/02-era-1/04-moving-street-1956-page032.webp" "https://djvu.online/jpg1/v/c/z/vczZJckoOQdkp/032.webp" "https://djvu.online/file/vczZJckoOQdkp"
-          download "$IMG/02-era-1/05-engineer-dreams-1956-page034.webp" "https://djvu.online/jpg1/v/c/z/vczZJckoOQdkp/034.webp" "https://djvu.online/file/vczZJckoOQdkp"
-          download "$IMG/02-era-1/06-habr-positioning-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/67c/ed1/a57/67ced1a5785df5693ca11a5eb60df285.png" "https://habr.com/ru/companies/2gis/articles/1028348/"
-          download "$IMG/02-era-1/07-habr-green-wave-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/c74/971/33b/c7497133b5211ac8dc7ac776dae98af6.png" "https://habr.com/ru/companies/2gis/articles/1045896/"
+          download "$IMG/02-era-1/01-dolmatovsky-zis1001.jpg" "https://www.designspb.ru/upload/medialibrary/a43/dolmatovskiy_1.jpg" "https://www.designspb.ru/" &
+          download "$IMG/02-era-1/02-tech-youth-1938-cover.jpg" "https://fantlab.ru/images/editions/big/222485?r=1529499949" "https://fantlab.ru/" &
+          download "$IMG/02-era-1/03-tech-youth-1954-cover.jpg" "https://fantlab.ru/images/editions/big/384832?r=1682442393" "https://fantlab.ru/" &
+          download "$IMG/02-era-1/04-moving-street-1956-page032.webp" "https://djvu.online/jpg1/v/c/z/vczZJckoOQdkp/032.webp" "https://djvu.online/file/vczZJckoOQdkp" &
+          download "$IMG/02-era-1/05-engineer-dreams-1956-page034.webp" "https://djvu.online/jpg1/v/c/z/vczZJckoOQdkp/034.webp" "https://djvu.online/file/vczZJckoOQdkp" &
+          download "$IMG/02-era-1/06-habr-positioning-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/67c/ed1/a57/67ced1a5785df5693ca11a5eb60df285.png" "https://habr.com/ru/companies/2gis/articles/1028348/" &
+          download "$IMG/02-era-1/07-habr-green-wave-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/c74/971/33b/c7497133b5211ac8dc7ac776dae98af6.png" "https://habr.com/ru/companies/2gis/articles/1045896/" &
 
-          download "$IMG/03-era-2/01-evm-1972-photo-01.jpg" "https://habrastorage.org/getpro/habr/upload_files/549/a3b/946/549a3b946bec2522bcf64610c5c68c24.jpg" "https://habr.com/"
-          download "$IMG/03-era-2/02-evm-1972-photo-02.jpg" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/238/010/9f6/2380109f64f7859572e7fa5922e03546.jpg" "https://habr.com/"
-          download "$IMG/03-era-2/03-bird-navigator-1975.jpg" "https://www.nkj.ru/upload/iblock/5a1/h5shrr1n0us811is84c2g4obtnkowx5a.jpg" "https://www.nkj.ru/"
-          download "$IMG/03-era-2/04-robot-navigator-1980-page090.webp" "https://djvu.online/jpg1/z/K/w/zKwC09TdR1376/090.webp" "https://djvu.online/file/zKwC09TdR1376"
-          download "$IMG/03-era-2/05-robot-navigator-1980-page093.webp" "https://djvu.online/jpg1/z/K/w/zKwC09TdR1376/093.webp" "https://djvu.online/file/zKwC09TdR1376"
-          download "$IMG/03-era-2/06-habr-light-routes-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9e8/802/e90/9e8802e90906e23a105bb0183c779412.png" "https://habr.com/ru/companies/2gis/articles/1015140/"
-          download "$IMG/03-era-2/07-habr-indoor-ar-navigation-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/474/5be/d2f/4745bed2f19faec75ba1a73cb33dd737.png" "https://habr.com/ru/companies/2gis/articles/951526/"
+          download "$IMG/03-era-2/01-evm-1972-photo-01.jpg" "https://habrastorage.org/getpro/habr/upload_files/549/a3b/946/549a3b946bec2522bcf64610c5c68c24.jpg" "https://habr.com/" &
+          download "$IMG/03-era-2/02-evm-1972-photo-02.jpg" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/238/010/9f6/2380109f64f7859572e7fa5922e03546.jpg" "https://habr.com/" &
+          download "$IMG/03-era-2/03-bird-navigator-1975.jpg" "https://www.nkj.ru/upload/iblock/5a1/h5shrr1n0us811is84c2g4obtnkowx5a.jpg" "https://www.nkj.ru/" &
+          download "$IMG/03-era-2/04-robot-navigator-1980-page090.webp" "https://djvu.online/jpg1/z/K/w/zKwC09TdR1376/090.webp" "https://djvu.online/file/zKwC09TdR1376" &
+          download "$IMG/03-era-2/05-robot-navigator-1980-page093.webp" "https://djvu.online/jpg1/z/K/w/zKwC09TdR1376/093.webp" "https://djvu.online/file/zKwC09TdR1376" &
+          download "$IMG/03-era-2/06-habr-light-routes-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9e8/802/e90/9e8802e90906e23a105bb0183c779412.png" "https://habr.com/ru/companies/2gis/articles/1015140/" &
+          download "$IMG/03-era-2/07-habr-indoor-ar-navigation-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/474/5be/d2f/4745bed2f19faec75ba1a73cb33dd737.png" "https://habr.com/ru/companies/2gis/articles/951526/" &
 
-          download "$IMG/04-era-3/01-map-information-1984-page084.webp" "https://djvu.online/jpg1/c/0/h/c0htS5DZQyLQb/084.webp" "https://djvu.online/file/c0htS5DZQyLQb"
-          download "$IMG/04-era-3/02-map-information-1984-page086.webp" "https://djvu.online/jpg1/c/0/h/c0htS5DZQyLQb/086.webp" "https://djvu.online/file/c0htS5DZQyLQb"
-          download "$IMG/04-era-3/03-habr-ai-search-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/953/c02/9ee/953c029eefe0b10e0f94ba8edc17ab2c.png" "https://habr.com/ru/companies/2gis/articles/951008/"
-          download "$IMG/04-era-3/04-habr-geoanalytics-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/006/2d6/ce2/0062d6ce2eaf4c57d0d7bba0e9c82f77.png" "https://habr.com/ru/companies/2gis/articles/990082/"
-          download "$IMG/04-era-3/05-habr-ai-assistant-dashboard-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/b75/bdc/070/b75bdc0705b918cd7921e95d69fa27d2.png" "https://habr.com/ru/companies/2gis/articles/1037974/"
+          download "$IMG/04-era-3/01-map-information-1984-page084.webp" "https://djvu.online/jpg1/c/0/h/c0htS5DZQyLQb/084.webp" "https://djvu.online/file/c0htS5DZQyLQb" &
+          download "$IMG/04-era-3/02-map-information-1984-page086.webp" "https://djvu.online/jpg1/c/0/h/c0htS5DZQyLQb/086.webp" "https://djvu.online/file/c0htS5DZQyLQb" &
+          download "$IMG/04-era-3/03-habr-ai-search-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/953/c02/9ee/953c029eefe0b10e0f94ba8edc17ab2c.png" "https://habr.com/ru/companies/2gis/articles/951008/" &
+          download "$IMG/04-era-3/04-habr-geoanalytics-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/006/2d6/ce2/0062d6ce2eaf4c57d0d7bba0e9c82f77.png" "https://habr.com/ru/companies/2gis/articles/990082/" &
+          download "$IMG/04-era-3/05-habr-ai-assistant-dashboard-2gis.png" "https://habrastorage.org/r/w1560/getpro/habr/upload_files/b75/bdc/070/b75bdc0705b918cd7921e95d69fa27d2.png" "https://habr.com/ru/companies/2gis/articles/1037974/" &
 
-          download "$IMG/05-people-and-covers/01-tech-youth-1956-cover.jpg" "https://fantlab.ru/images/editions/big/54064" "https://fantlab.ru/edition54064"
-          download "$IMG/05-people-and-covers/02-georgiy-babat-portrait.jpg" "https://archivsf.narod.ru/1911/georgiy_babat/georgiy_babat_.jpg" "https://archivsf.narod.ru/"
-          download "$IMG/05-people-and-covers/03-vladimir-tarasenko-portrait.jpg" "https://upload.wikimedia.org/wikipedia/ru/thumb/d/db/Tarasenko_VP.jpg/248px-Tarasenko_VP.jpg" "https://ru.wikipedia.org/"
-          download "$IMG/05-people-and-covers/04-science-life-1980-cover.webp" "https://djvu.online/jpg1/z/K/w/zKwC09TdR1376/001.webp" "https://djvu.online/file/zKwC09TdR1376"
-          download "$IMG/05-people-and-covers/05-science-life-1984-cover.webp" "https://djvu.online/jpg1/c/0/h/c0htS5DZQyLQb/001.webp" "https://djvu.online/file/c0htS5DZQyLQb"
+          download "$IMG/05-people-and-covers/01-tech-youth-1956-cover.jpg" "https://fantlab.ru/images/editions/big/54064" "https://fantlab.ru/edition54064" &
+          download "$IMG/05-people-and-covers/02-georgiy-babat-portrait.jpg" "https://archivsf.narod.ru/1911/georgiy_babat/georgiy_babat_.jpg" "https://archivsf.narod.ru/" &
+          download "$IMG/05-people-and-covers/03-vladimir-tarasenko-portrait.jpg" "https://upload.wikimedia.org/wikipedia/ru/thumb/d/db/Tarasenko_VP.jpg/248px-Tarasenko_VP.jpg" "https://ru.wikipedia.org/" &
+          download "$IMG/05-people-and-covers/04-science-life-1980-cover.webp" "https://djvu.online/jpg1/z/K/w/zKwC09TdR1376/001.webp" "https://djvu.online/file/zKwC09TdR1376" &
+          download "$IMG/05-people-and-covers/05-science-life-1984-cover.webp" "https://djvu.online/jpg1/c/0/h/c0htS5DZQyLQb/001.webp" "https://djvu.online/file/c0htS5DZQyLQb" &
+
+          wait || true
 
           cat > "$ROOT/IMAGE_MANIFEST.csv" <<'EOF'
           filename,section_or_usage,source_image_url,source_or_article
