@@ -104,7 +104,7 @@ jobs:
 
           : > "$ROOT/MISSING_DOWNLOADS.txt"
 
-          download () { &
+          download () {
             out="$1"; url="$2"; referer="${3:-}"
             mkdir -p "$(dirname "$out")"
             args=(-L --fail --silent --show-error --retry 2 --retry-delay 1 --connect-timeout 10 --max-time 25 -A "Mozilla/5.0")
