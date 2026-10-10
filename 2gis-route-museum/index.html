@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0B130F">
+<link rel="icon" href="assets/img/2gis-logo.png">
+<title>Маршрут строится 88 лет</title>
+<meta name="description" content="Музей одной инженерной задачи: как довести человека из точки А в точку Б. От ЭВМ 1972 года до навигации сегодня.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"SB Sans Text";src:url(assets/fonts/SBSansText-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"SB Sans Text";src:url(assets/fonts/SBSansText-Medium.woff) format("woff");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"SB Sans Text";src:url(assets/fonts/SBSansText-SemiBold.woff) format("woff");font-weight:600;font-style:normal;font-display:swap}
+/* Layout: тёмная «ночная карта» с живым поиском маршрута, затем бумажный музей; через все залы идёт сквозная линия-маршрут, остановки окрашены по смыслу (путь, положение, данные) */
+:root{
+  --paper:#EEF1EB; --paper-2:#E2E8DE; --card:#F8FAF6; --ink:#131C16; --ink-2:#4B5950; --rule:#C4CEC2; --band:#DCEBD5;
+  --green:#19AA1E; --green-ink:#0B6A1C; --blue:#0073FA; --blue-ink:#0058C4; --yellow:#FFB81C; --yellow-ink:#8A5A00; --lime:#82D714;
+  --night:#0B130F; --night-2:#121D17; --night-line:#22322A; --night-text:#E8F0E8; --night-muted:#90A396;
+  --scan-bg:#FFFFFF;
+  --sans:"SB Sans Text",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"PT Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --gutter:clamp(16px,4vw,40px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0F1612; --paper-2:#16201A; --card:#1A251F; --ink:#E3EBE3; --ink-2:#9BA99F; --rule:#2B3830; --band:#14241A;
+  --green-ink:#4FCF59; --blue-ink:#5CA4FF; --yellow-ink:#FFC94D; --scan-bg:#E9ECE6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F1612; --paper-2:#16201A; --card:#1A251F; --ink:#E3EBE3; --ink-2:#9BA99F; --rule:#2B3830; --band:#14241A;
+  --green-ink:#4FCF59; --blue-ink:#5CA4FF; --yellow-ink:#FFC94D; --scan-bg:#E9ECE6; color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4,h5{margin:0;font-weight:600;letter-spacing:-.03em;text-wrap:balance;line-height:1.08}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--gutter)}
+.muted{color:var(--ink-2)}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- top bar ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--night) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--night-text);border-bottom:1px solid var(--night-line)}
+.bar .wrap{display:flex;align-items:center;gap:24px;height:58px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px;letter-spacing:-.01em;text-decoration:none}
+.brand img{width:30px;height:30px}
+.brand span{color:var(--night-muted);font-weight:400;font-size:14px;letter-spacing:0}
+.bar nav{display:flex;gap:4px;margin-left:auto}
+.bar nav a{font-size:14px;text-decoration:none;color:var(--night-muted);padding:7px 10px;border-radius:999px}
+.bar nav a:hover{color:var(--night-text);background:var(--night-line)}
+.bar .tg{font-size:14px;text-decoration:none;color:var(--night-text);border:1px solid var(--night-line);padding:7px 12px;border-radius:999px}
+@media (max-width:900px){.bar nav{display:none}.bar .tg{margin-left:auto}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--night);color:var(--night-text);overflow:hidden;isolation:isolate}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;cursor:crosshair}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(90deg,var(--night) 0%,rgba(11,19,15,.86) 32%,rgba(11,19,15,.15) 62%,rgba(11,19,15,0) 100%),linear-gradient(0deg,var(--night) 0%,rgba(11,19,15,0) 22%)}
+.hero-in{position:relative;min-height:clamp(600px,86vh,820px);display:grid;grid-template-rows:1fr auto;padding-block:clamp(40px,7vh,84px) 0;pointer-events:none}
+.hero-in a,.hero-in button{pointer-events:auto}
+.hero-copy{max-width:600px;align-self:center}
+.status{display:inline-flex;align-items:center;gap:12px;background:rgba(25,170,30,.14);border:1px solid rgba(25,170,30,.45);color:#BFF0C1;padding:8px 14px 8px 10px;border-radius:999px;font-size:14px;font-weight:500}
+.status i{width:18px;height:18px;border-radius:50%;border:2.5px solid rgba(130,215,20,.3);border-top-color:var(--lime);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font-size:clamp(54px,8.6vw,124px);line-height:.9;letter-spacing:-.05em;margin-top:22px}
+.hero h1 .yrs{display:block;color:var(--lime)}
+.hero .lede{font-size:clamp(17px,1.5vw,20px);line-height:1.5;color:#C9D6CC;margin-top:24px;max-width:46ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:14px 22px;font-weight:500;font-size:16px;text-decoration:none;border:0;transition:transform .15s ease,background .15s ease}
+.btn:active{transform:translateY(1px)}
+.btn-go{background:var(--green);color:#fff}
+.btn-go:hover{background:#15921A}
+.btn-ghost{background:rgba(255,255,255,.07);color:var(--night-text);border:1px solid rgba(255,255,255,.18)}
+.btn-ghost:hover{background:rgba(255,255,255,.13)}
+.hud{position:absolute;right:var(--gutter);top:clamp(24px,5vh,48px);display:grid;gap:2px;justify-items:end;font:400 12.5px/1.45 var(--mono);color:var(--night-muted);text-align:right;pointer-events:none}
+.hud b{color:var(--night-text);font-weight:400}
+.hud .k{color:var(--yellow)}
+.hint{position:absolute;right:var(--gutter);bottom:150px;font-size:13px;color:var(--night-muted);pointer-events:none;display:flex;gap:8px;align-items:center}
+.hint::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(25,170,30,.25)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--night-muted);margin-top:26px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:16px;height:3px;border-radius:2px;display:inline-block}
+
+/* hall index inside hero */
+.halls{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--night-line);margin-top:48px}
+.halls a{display:block;padding:18px 18px 22px;text-decoration:none;border-right:1px solid var(--night-line);transition:background .15s}
+.halls a:first-child{padding-left:0}
+.halls a:last-child{border-right:0}
+.halls a:hover{background:rgba(255,255,255,.04)}
+.halls .y{font:400 12px/1 var(--mono);color:var(--night-muted)}
+.halls .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:0}
+.halls h3{font-size:clamp(17px,1.6vw,21px);margin-top:10px;letter-spacing:-.02em}
+.halls p{font-size:13px;color:var(--night-muted);margin-top:6px;line-height:1.4}
+@media (max-width:900px){
+  .hero::after{background:linear-gradient(0deg,var(--night) 30%,rgba(11,19,15,.55) 70%,rgba(11,19,15,.2) 100%)}
+  .hero-in{min-height:auto;padding-top:220px}
+  .hud{top:16px;font-size:11px}
+  .hint{bottom:auto;top:110px}
+  .halls{grid-template-columns:1fr 1fr}
+  .halls a,.halls a:first-child{padding:14px 12px 16px 0;border-right:0;border-top:1px solid var(--night-line)}
+  .halls a:last-child{grid-column:1/-1}
+}
+
+/* ---------- tour rail ---------- */
+.tour{position:relative}
+.hall{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr);gap:0}
+.rail{position:relative}
+.rail::before{content:"";position:absolute;left:30px;top:0;bottom:0;width:4px;background:var(--c,var(--green));border-radius:2px}
+.stop{position:sticky;top:84px;margin-top:84px;margin-left:12px;width:40px;height:40px;border-radius:50%;background:var(--paper);border:4px solid var(--c,var(--green));display:grid;place-items:center;font-weight:600;font-size:15px;z-index:1}
+.hall-body{padding-block:80px 88px;min-width:0}
+.hall + .hall .hall-body{border-top:1px solid var(--rule)}
+@media (max-width:700px){
+  .hall{grid-template-columns:28px minmax(0,1fr)}
+  .rail::before{left:6px;width:3px}
+  .stop{margin-left:-6px;width:28px;height:28px;font-size:12px;border-width:3px;top:70px}
+  .hall-body{padding-block:56px 64px;padding-left:8px}
+}
+
+.hh{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:end;margin-bottom:44px}
+.kicker{display:flex;align-items:center;gap:10px;font-weight:500;font-size:15px;color:var(--ink-2);margin-bottom:14px}
+.kicker b{color:var(--ink);font-weight:600}
+.kicker i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.hh h2{font-size:clamp(46px,7vw,96px);line-height:.92;letter-spacing:-.045em}
+.hh p{font-size:clamp(17px,1.4vw,19px);color:var(--ink-2);max-width:52ch}
+@media (max-width:800px){.hh{grid-template-columns:1fr;align-items:start;gap:18px}}
+
+/* museum label */
+.label{font-size:13.5px;line-height:1.45;color:var(--ink-2);border-top:2px solid var(--ink);padding-top:10px;margin-top:14px}
+.label b{color:var(--ink);font-weight:600}
+.label a{color:var(--ink-2);text-underline-offset:3px}
+.scan{background:var(--scan-bg);padding:10px;box-shadow:0 1px 0 var(--rule),0 18px 36px -24px rgba(10,30,15,.5)}
+.scan img{width:100%;height:auto}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink);background:transparent;border-radius:999px;padding:9px 15px;font-weight:500;font-size:14px;line-height:1.2;transition:background .15s,color .15s}
+.chip:hover{background:var(--ink);color:var(--paper)}
+.chip.go{background:var(--green);border-color:var(--green);color:#fff}
+.chip.go:hover{background:#15921A}
+.chip.blue{background:var(--blue);border-color:var(--blue);color:#fff}
+.chip.blue:hover{background:#005FD0}
+.chip:disabled{opacity:.4;cursor:default;background:transparent;color:var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- hall 1: EVM ---------- */
+.evm{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:20px;align-items:stretch}
+.evm-map{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px;display:flex;flex-direction:column;min-width:0}
+.evm-map svg{width:100%;height:auto;display:block;touch-action:manipulation}
+.evm-stats{display:flex;gap:28px;flex-wrap:wrap;padding:6px 4px 14px}
+.evm-stats div{min-width:0}
+.evm-stats small{display:block;font-size:13px;color:var(--ink-2)}
+.evm-stats b{font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.tip{min-height:22px;font-size:14px;color:var(--ink-2);padding:0 4px 10px}
+.node{cursor:pointer}
+.node circle{transition:fill .15s,stroke .15s}
+.node:hover circle.c,.node:focus-visible circle.c{stroke:var(--green);stroke-width:4}
+.node.done circle.c{fill:var(--ink)}
+.node.done text{fill:var(--paper)}
+.node:focus{outline:none}
+
+.printout{position:relative;background-color:var(--card);background-image:repeating-linear-gradient(180deg,var(--band) 0 48px,transparent 48px 96px);background-position:0 18px;border:1px solid var(--rule);border-radius:3px;padding:18px 46px;font:400 13px/24px var(--mono);text-transform:uppercase;letter-spacing:.02em;color:var(--ink);min-height:540px;max-height:640px;overflow:auto;white-space:pre-wrap;word-break:break-word}
+.printout::before,.printout::after{content:"";position:absolute;top:0;bottom:0;width:30px;background:radial-gradient(circle at 15px 12px,var(--paper) 5px,transparent 5.6px) 0 0/30px 24px repeat-y}
+.printout::before{left:0;border-right:1px dashed var(--rule)}
+.printout::after{right:0;border-left:1px dashed var(--rule)}
+.printout .hl{background:var(--green);color:#fff;padding:0 4px}
+.printout .y{background:var(--yellow);color:#1b1300;padding:0 4px}
+.printout .cur::after{content:"█";animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (max-width:900px){.evm{grid-template-columns:minmax(0,1fr)}.printout{min-height:320px;max-height:420px}}
+
+.pull{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;margin-top:56px;align-items:start}
+.pull blockquote{margin:0;font-size:clamp(22px,2.4vw,30px);line-height:1.28;font-weight:500;letter-spacing:-.02em}
+.pull cite{display:block;font-style:normal;font-size:14px;color:var(--ink-2);margin-top:12px;letter-spacing:0;font-weight:400}
+.pull p{color:var(--ink-2);font-size:16px}
+.pull .fig{display:flex;gap:16px;align-items:flex-start;margin-top:18px}
+.pull .fig img{width:200px;flex:none;border-radius:2px}
+@media (max-width:800px){.pull{grid-template-columns:1fr}.pull .fig{flex-direction:column}.pull .fig img{width:100%}}
+
+.cmp-wrap{overflow-x:auto;margin-top:56px}
+table.cmp{width:100%;min-width:620px;border-collapse:collapse;font-size:15px}
+.cmp th,.cmp td{text-align:left;vertical-align:top;padding:14px 18px 14px 0;border-top:1px solid var(--rule)}
+.cmp thead th{border-top:2px solid var(--ink);font-weight:500;color:var(--ink-2);font-size:13.5px}
+.cmp tbody th{font-weight:600;width:15%}
+.cmp td:last-child{color:var(--ink)}
+.cmp .tagc{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;background:var(--green)}
+
+/* today ledger */
+.today{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px;margin-top:64px;border-top:2px solid var(--ink);padding-top:18px}
+.today > h4{font-size:16px;letter-spacing:-.01em}
+.today > h4 span{display:block;font-weight:400;color:var(--ink-2);margin-top:4px;font-size:14px;letter-spacing:0}
+.items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.item{min-width:0}
+.item img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;border:1px solid var(--rule);border-radius:6px;margin-bottom:14px;background:var(--scan-bg)}
+.item .meta{font-size:13px;color:var(--ink-2)}
+.item h5{font-size:19px;letter-spacing:-.015em;line-height:1.25;margin:6px 0 8px}
+.item p{font-size:15px;color:var(--ink-2)}
+.item .stack{font:400 12.5px/1.5 var(--mono);color:var(--ink-2);margin-top:10px}
+.item a.read{display:inline-flex;margin-top:12px;font-weight:500;font-size:14.5px;color:var(--green-ink);text-underline-offset:4px}
+@media (max-width:800px){.today{grid-template-columns:1fr;gap:16px}.items{grid-template-columns:1fr}}
+
+/* ---------- hall 2: correlation ---------- */
+.where{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(24px,4vw,48px);align-items:start}
+.corr{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px}
+.corr-grid{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:16px}
+.corr canvas{width:100%;height:auto;display:block;border-radius:4px;image-rendering:pixelated}
+.corr .cam small{display:block;font-size:12.5px;color:var(--ink-2);margin-top:8px;line-height:1.35}
+.corr .ctrl{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.corr label{font-size:13px;color:var(--ink-2);display:flex;justify-content:space-between;margin-top:6px}
+.corr input[type=range]{width:100%;accent-color:var(--blue)}
+.corr-out{font-size:14px;color:var(--ink-2);margin-top:14px;min-height:44px}
+.corr-out b{color:var(--ink);font-weight:600}
+.where blockquote{margin:28px 0 0;font-size:clamp(19px,1.9vw,23px);line-height:1.38;font-weight:500;letter-spacing:-.01em}
+.where blockquote cite{display:block;font-style:normal;font-weight:400;font-size:14px;color:var(--ink-2);margin-top:10px;letter-spacing:0}
+.pre{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+.pre div{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--ink-2);line-height:1.45}
+.pre img{width:58px;flex:none;border:1px solid var(--rule)}
+.pre b{color:var(--ink);font-weight:600;display:block}
+@media (max-width:900px){.where{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.corr-grid{grid-template-columns:1fr}.corr .cam{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:start}.corr .cam small{margin-top:0}.pre{grid-template-columns:1fr}}
+
+/* ---------- hall 3: data ---------- */
+.data{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(24px,4vw,48px);align-items:start}
+.code{background:var(--night);color:#D9E6DA;border-radius:10px;padding:22px 24px;font:400 14px/1.65 var(--mono);overflow-x:auto;margin:0;white-space:pre}
+.code .c{color:#7E9586}.code .s{color:#9BE07A}.code .k{color:var(--yellow)}.code .f{color:#7DB8FF}
+.code-note{font-size:14px;color:var(--ink-2);margin-top:12px;max-width:62ch}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:28px;border-top:2px solid var(--ink)}
+.facts div{padding:14px 16px 4px 0}
+.facts div+div{padding-left:16px;border-left:1px solid var(--rule)}
+.facts b{display:block;font-size:clamp(28px,3vw,38px);font-weight:600;letter-spacing:-.035em;line-height:1.05}
+.facts span{font-size:13.5px;color:var(--ink-2);display:block;margin-top:6px;line-height:1.4}
+@media (max-width:900px){.data{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.facts{grid-template-columns:1fr}.facts div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}
+
+/* ---------- hall 4: predictions ---------- */
+.preds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.pred{border-top:3px solid var(--ink);padding-top:16px;display:flex;flex-direction:column;min-width:0}
+.pred .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.pred .yr{font-size:clamp(40px,4vw,54px);font-weight:600;letter-spacing:-.05em;line-height:.95}
+.pred img{width:62px;border:1px solid var(--rule)}
+.pred .claim{font-size:17px;font-weight:500;line-height:1.35;margin-top:14px;letter-spacing:-.01em}
+.pred .src{font-size:13px;color:var(--ink-2);margin-top:8px}
+.pred .row{margin-top:16px;gap:6px}
+.pred .chip{padding:7px 12px;font-size:13.5px}
+.pred .chip.picked{background:var(--ink);color:var(--paper)}
+.pred .chip.right{background:var(--green);border-color:var(--green);color:#fff}
+.verdict{margin-top:14px;font-size:14.5px;line-height:1.45;background:var(--paper-2);border-radius:6px;padding:12px 14px}
+.verdict b{font-weight:600}
+.score{margin-top:28px;font-size:15px;color:var(--ink-2);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.score b{color:var(--ink);font-size:22px;font-weight:600;letter-spacing:-.02em}
+@media (max-width:1000px){.preds{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.preds{grid-template-columns:1fr}}
+
+/* ---------- letter 2056 ---------- */
+.letter{background:var(--night);color:var(--night-text);border-radius:18px;padding:clamp(24px,5vw,64px);position:relative;overflow:hidden;isolation:isolate}
+.letter::before{content:"";position:absolute;inset:-40% -10% auto auto;width:70%;aspect-ratio:1;z-index:-1;background:radial-gradient(closest-side,rgba(25,170,30,.32),transparent 70%)}
+.letter::after{content:"";position:absolute;inset:auto auto -45% -15%;width:60%;aspect-ratio:1;z-index:-1;background:radial-gradient(closest-side,rgba(0,115,250,.22),transparent 70%)}
+.l-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}
+.letter h2{font-size:clamp(48px,6.6vw,92px);line-height:.92;letter-spacing:-.05em}
+.letter h2 span{color:var(--lime)}
+.letter .lede{color:#C3D0C6;font-size:18px;margin-top:22px;max-width:48ch}
+.babat{display:flex;gap:14px;align-items:center;margin-top:24px;font-size:13.5px;color:var(--night-muted);line-height:1.45}
+.babat img{width:58px;border-radius:3px;filter:grayscale(1)}
+.quiz{background:var(--card);color:var(--ink);border-radius:12px;padding:clamp(20px,3vw,30px);margin-top:30px}
+.qtop{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--ink-2)}
+.qtop button{background:none;border:0;color:var(--ink-2);padding:4px 0;font-size:13.5px;text-decoration:underline;text-underline-offset:3px}
+.qtop button:disabled{visibility:hidden}
+.bars{display:flex;gap:4px;margin:12px 0 22px}
+.bars i{flex:1;height:4px;border-radius:2px;background:var(--rule);transition:background .2s}
+.bars i.on{background:var(--green)}
+.quiz h3{font-size:clamp(24px,2.4vw,30px);letter-spacing:-.025em}
+.opts{display:grid;gap:10px;margin-top:18px}
+.opt{display:block;width:100%;text-align:left;background:transparent;border:1.5px solid var(--rule);border-radius:10px;padding:14px 16px;font-weight:500;font-size:16px;line-height:1.35;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--ink)}
+.opt.sel{border-color:var(--green);background:color-mix(in srgb,var(--green) 12%,transparent)}
+.privacy{font-size:12.5px;color:var(--ink-2);margin-top:16px}
+.paper{background:#F6F4EC;color:#16130E;padding:clamp(20px,3vw,32px);border-radius:3px;box-shadow:0 40px 80px -36px rgba(0,0,0,.8);transform:rotate(-1deg)}
+.paper .mast{display:flex;justify-content:space-between;gap:12px;border-bottom:3px solid #16130E;padding-bottom:8px;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.paper h3{font-size:clamp(30px,3.4vw,44px);line-height:1;letter-spacing:-.035em;margin-top:18px}
+.paper .deck{font-size:16px;font-weight:500;margin-top:10px;color:#3A352B}
+.paper .by{font-size:12px;color:#6A6355;margin-top:8px}
+.paper .cols{columns:2;column-gap:22px;font-size:13.5px;line-height:1.5;margin-top:16px;column-rule:1px solid #D8D2C2}
+.paper .cols p+p{margin-top:8px}
+.paper.ghost{opacity:.5;filter:blur(.3px)}
+@media (max-width:520px){.paper .cols{columns:1}}
+.res-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.res-actions .chip{border-color:rgba(255,255,255,.4);color:var(--night-text)}
+.res-actions .chip:hover{background:var(--night-text);color:var(--night)}
+.res-note{font-size:13px;color:var(--night-muted);margin-top:10px;min-height:20px}
+.exit{display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,1fr));gap:24px;margin-top:clamp(40px,6vw,64px);border-top:1px solid var(--night-line);padding-top:26px}
+.exit h4{font-size:20px;letter-spacing:-.02em}
+.exit p{font-size:14px;color:var(--night-muted);margin-top:8px;max-width:36ch}
+.exit a{text-decoration:none;display:block;border-top:2px solid var(--c);padding-top:12px}
+.exit a b{display:block;font-size:17px;font-weight:500}
+.exit a span{display:block;font-size:13.5px;color:var(--night-muted);margin-top:4px}
+.exit a:hover b{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:900px){.l-grid{grid-template-columns:minmax(0,1fr)}.exit{grid-template-columns:1fr 1fr}.exit > div{grid-column:1/-1}}
+@media (max-width:520px){.exit{grid-template-columns:1fr}}
+
+/* footer */
+footer{border-top:1px solid var(--rule);margin-top:24px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:40px;padding-block:44px 56px;font-size:13.5px;color:var(--ink-2)}
+footer b{color:var(--ink);font-weight:600}
+footer ul{margin:8px 0 0;padding:0;list-style:none;columns:2;column-gap:28px}
+footer li{margin-bottom:6px;break-inside:avoid}
+footer a{color:var(--ink-2);text-underline-offset:3px}
+@media (max-width:800px){footer .wrap{grid-template-columns:1fr}footer ul{columns:1}}
+
+@media (prefers-reduced-motion:reduce){.status i,.printout .cur::after{animation:none}}
+</style>
+</head>
+<body>
+
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/img/2gis-logo.png" alt="2ГИС" width="30" height="30">2ГИС <span>Инженерный музей</span></a>
+    <nav aria-label="Залы">
+      <a href="#hall-1">Путь</a><a href="#hall-2">Где я</a><a href="#hall-3">Что вокруг</a><a href="#hall-4">Прогнозы</a><a href="#letter">2056</a>
+    </nav>
+    <a class="tg" href="https://t.me/rnd2GIS" target="_blank" rel="noopener">Telegram</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="h1">
+  <canvas id="city" aria-hidden="true"></canvas>
+  <div class="hud num" aria-hidden="true">
+    <span>алгоритм <b>A*</b></span>
+    <span>узлов в графе <b id="hud-n">0</b></span>
+    <span>просмотрено <b class="k" id="hud-v">0</b></span>
+    <span>расчёт <b id="hud-t">0</b> мс</span>
+    <span>маршрут <b id="hud-d">0</b> км</span>
+  </div>
+  <div class="hint" aria-hidden="true">Нажмите на карту, чтобы поставить точку Б</div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <div class="status"><i aria-hidden="true"></i>Строим маршрут: 1938 → 2056</div>
+      <h1 id="h1">Маршрут строится <span class="yrs">88&nbsp;лет</span></h1>
+      <p class="lede">Сначала его рисовали в журналах, потом считали на ЭВМ, теперь строят за миллисекунды. Это музей одной инженерной задачи: как довести человека из точки А в точку Б. Со статьями 1938–1984 годов и рассказами инженеров, которые решают её сейчас.</p>
+      <div class="ctas">
+        <a class="btn btn-go" href="#hall-1">Поехали</a>
+        <a class="btn btn-ghost" href="#letter">Сразу в 2056 год</a>
+      </div>
+      <div class="legend" aria-hidden="true">
+        <span><i style="background:var(--yellow)"></i>просмотренные улицы</span>
+        <span><i style="background:var(--green)"></i>маршрут</span>
+        <span><i style="background:var(--blue)"></i>точки А и Б</span>
+      </div>
+    </div>
+    <nav class="halls" aria-label="Залы музея">
+      <a href="#hall-1"><span class="y"><span class="dot" style="background:var(--green)"></span>1972 → 2026</span><h3>Как посчитать путь?</h3><p>Обгоните ЭВМ на маршруте по Москве</p></a>
+      <a href="#hall-2"><span class="y"><span class="dot" style="background:var(--blue)"></span>1954 → 2026</span><h3>Где я?</h3><p>От робота-штурмана к фото вместо GPS</p></a>
+      <a href="#hall-3"><span class="y"><span class="dot" style="background:var(--yellow)"></span>1984 → 2026</span><h3>Что вокруг?</h3><p>Карта как модель данных</p></a>
+      <a href="#hall-4"><span class="y"><span class="dot" style="background:var(--lime)"></span>1938 → 1980</span><h3>Каким будет город?</h3><p>Проверьте прогнозы прошлого</p></a>
+      <a href="#letter"><span class="y"><span class="dot" style="background:#fff"></span>2056</span><h3>Письмо в будущее</h3><p>Семь вопросов и ваша статья</p></a>
+    </nav>
+  </div>
+</section>
+
+<div class="wrap tour">
+
+<!-- ================= HALL 1 ================= -->
+<section class="hall" id="hall-1" style="--c:var(--green)" aria-labelledby="h-hall1">
+  <div class="rail"><div class="stop">1</div></div>
+  <div class="hall-body">
+    <div class="hh">
+      <div><div class="kicker"><i></i><b>Зал 1</b> 1972 → 2026</div><h2 id="h-hall1">Как посчитать путь?</h2></div>
+      <p>В 1972 году «Наука и жизнь» дала Вычислительному центру Главмосавтотранса задачу: обойти 12 букинистических магазинов и вернуться в редакцию. ЭВМ получила 33&nbsp;км. Автор статьи считал вручную около часа и получил 35,6&nbsp;км. Попробуйте сами.</p>
+    </div>
+
+    <div class="evm">
+      <div class="evm-map">
+        <div class="evm-stats num">
+          <div><small>Ваш маршрут, по прямой</small><b id="u-km">0 км</b></div>
+          <div><small>Магазинов</small><b id="u-cnt">0 из 12</b></div>
+        </div>
+        <svg id="evm-svg" viewBox="0 0 600 520" role="group" aria-label="Схема Москвы с 12 магазинами. Нажимайте на магазины по порядку обхода."></svg>
+        <div class="tip" id="evm-tip" aria-live="polite">Начните от редакции (А) и нажимайте на магазины в том порядке, в котором обошли бы их сами.</div>
+        <div class="row">
+          <button class="chip" id="b-undo" type="button">Шаг назад</button>
+          <button class="chip" id="b-reset" type="button">Заново</button>
+          <button class="chip go" id="b-evm" type="button">Запустить ЭВМ 1972</button>
+          <button class="chip" id="b-exact" type="button">Точное решение</button>
+        </div>
+      </div>
+      <div class="printout" id="printout" aria-live="polite" tabindex="0" aria-label="Распечатка вычислительного центра"></div>
+    </div>
+    <p class="muted" style="font-size:13px;margin-top:12px;max-width:80ch">Магазины расставлены по адресам 1972 года приблизительно, центр схемы увеличен. Мы считаем расстояния по прямой, а ЭВМ считала по улицам, поэтому наши километры меньше журнальных.</p>
+
+    <div class="pull">
+      <div>
+        <blockquote>«Задача, решенная ЭВМ за считанные секунды, потребовала от автора часа работы».<cite>О. Налбандян, «ЭВМ шагает по Москве». «Наука и жизнь», №7, 1972</cite></blockquote>
+      </div>
+      <div>
+        <p>Перебор работает только на маленьких задачах. Уже для 10 такси и 10 заказов вариантов 3&nbsp;628&nbsp;800, пишет автор. Поэтому в ВЦ использовали алгоритм, который заранее отбрасывает заведомо невыгодные варианты. Транспортную карту Москвы для него смоделировали математики И.&nbsp;Г.&nbsp;Медведевская и Т.&nbsp;М.&nbsp;Великанова.</p>
+        <div class="fig"><img src="assets/img/evm-1972.webp" alt="Машинный зал вычислительного центра, 1970-е" width="800" height="597" loading="lazy"><div class="label" style="margin-top:0"><b>Машинный зал вычислительного центра.</b> Фото эпохи, иллюстрация. <a href="https://www.nkj.ru/archive/articles/57011/" target="_blank" rel="noopener">Статья 1972 года в архиве журнала</a></div></div>
+      </div>
+    </div>
+
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th></th><th>1972, ВЦ Главмосавтотранса</th><th>2026, маршрутизация 2ГИС</th></tr></thead>
+        <tbody>
+          <tr><th>Граф</th><td>Транспортная карта Москвы, смоделированная математиками ВЦ</td><td>Направленный дорожный граф, каждое направление движения отдельное ребро</td></tr>
+          <tr><th>Вес ребра</th><td>Расстояние и порожний пробег машин</td><td>Время проезда, которое оценивают по статистике и ML-моделям</td></tr>
+          <tr><th>Поиск</th><td>Алгоритм ВЦ, отсекающий невыгодные варианты</td><td>Дейкстра и A*, иерархия шорткатов, двусторонний поиск</td></tr>
+          <tr><th>Лучший путь</th><td>Самый короткий</td><td>Самый быстрый, а теперь и самый спокойный: штрафы за левые повороты, кольца и нерегулируемые перекрёстки</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="today">
+      <h4>Как это решают сейчас<span>Инженеры 2ГИС на Хабре</span></h4>
+      <div class="items">
+        <article class="item">
+          <img src="assets/img/habr-light-routes.webp" alt="Иллюстрация из статьи о лёгких маршрутах" loading="lazy" width="1000" height="906">
+          <div class="meta">Март 2026 · Константин Чирихин</div>
+          <h5>«Лёгкие маршруты» в 2ГИС: рассказываем про алгоритмы и новую систему штрафов</h5>
+          <p>Лёгкий маршрут строится из оптимального: к весам рёбер добавляются штрафы за сложные манёвры. Чтобы поиск оставался быстрым, граф дополнен иерархией шорткатов, где одно ребро верхнего уровня покрывает несколько километров.</p>
+          <div class="stack">A* · двусторонний поиск · шорткаты · аддитивные штрафы</div>
+          <a class="read" href="https://habr.com/ru/companies/2gis/articles/1015140/" target="_blank" rel="noopener">Читать на Хабре</a>
+        </article>
+        <article class="item">
+          <div class="meta">2026 · Даня Сопов, команда Транспорт</div>
+          <h5>Красный подождёт. Как мы запускали «зелёную волну» в навигаторе 2ГИС</h5>
+          <p>Навигатор учитывает всю цепочку светофоров на маршруте и подсказывает скорость, при которой их можно проехать без остановок. Главная задача дизайна: показать диапазон скорости так, чтобы не отвлечь водителя.</p>
+          <a class="read" href="https://habr.com/ru/companies/2gis/articles/1045896/" target="_blank" rel="noopener">Читать на Хабре</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HALL 2 ================= -->
+<section class="hall" id="hall-2" style="--c:var(--blue)" aria-labelledby="h-hall2">
+  <div class="rail"><div class="stop">2</div></div>
+  <div class="hall-body">
+    <div class="hh">
+      <div><div class="kicker"><i></i><b>Зал 2</b> 1954 → 2026</div><h2 id="h-hall2">Где я?</h2></div>
+      <p>Чтобы проложить путь, нужна точка А. Спутниковой навигации ещё нет, а инженеры уже учат машину понимать, где она: сравнивать то, что она видит, с картой в памяти.</p>
+    </div>
+    <div class="where">
+      <div>
+        <div class="scan"><img src="assets/img/nij-1980-p87.webp" alt="Страница статьи «Робот-штурман» со схемой корреляционно-экстремальной навигации" width="704" height="1100" loading="lazy"></div>
+        <div class="label"><b>В. Тарасенко, А. Кориков. «Робот-штурман».</b> «Наука и жизнь», №7, 1980, с. 84–90. Схема корреляционно-экстремальной системы ориентирования. <a href="https://djvu.online/file/zKwC09TdR1376" target="_blank" rel="noopener">Номер в архиве</a></div>
+      </div>
+      <div>
+        <p style="font-size:17px;max-width:60ch">Робот хранит карту маршрута. В пути он строит изображение местности и сравнивает его с картой. Сдвиг и поворот, при которых совпадение максимально, показывают, где он и насколько отклонился. В 1980 году сравнение делала оптика: экран, плёнка с картой и линза. Здесь то же самое делает ваш браузер.</p>
+        <div class="corr" style="margin-top:22px">
+          <div class="corr-grid">
+            <canvas id="corr-map" width="480" height="320" aria-label="Карта в памяти робота с тепловой картой совпадений"></canvas>
+            <div class="cam">
+              <canvas id="corr-cam" width="150" height="150" aria-label="Кадр с камеры"></canvas>
+              <small>Кадр «с камеры». Робот не знает, откуда он.</small>
+            </div>
+          </div>
+          <label for="noise"><span>Помехи в кадре</span><span id="noise-v" class="num">20%</span></label>
+          <input type="range" id="noise" min="0" max="45" value="20" step="1">
+          <div class="row" style="margin-top:12px">
+            <button class="chip blue" id="c-run" type="button">Найти себя на карте</button>
+            <button class="chip" id="c-new" type="button">Новый кадр</button>
+          </div>
+          <div class="corr-out" id="corr-out" aria-live="polite">Нажмите «Найти себя на карте»: браузер сравнит кадр со всеми положениями на карте.</div>
+        </div>
+        <blockquote>«…робот ничем не отличается от человека — штурмана, который для определения своих координат сравнивает с картой изображение местности».<cite>«Робот-штурман», 1980</cite></blockquote>
+        <div class="pre">
+          <div><img src="assets/img/tm-1954-cover.webp" alt="" width="200" height="275" loading="lazy"><span><b>1954. Ф. Честнов, «Радиоволны-путеводители»</b>Радиолокационная картина местности совмещается с навигационной картой. «Техника — молодёжи», №12, с. 14–16.</span></div>
+          <div><img src="assets/img/nij-1975-cover.webp" alt="" width="200" height="308" loading="lazy"><span><b>1975. Г. Николаев, «Загадки пернатого штурмана»</b>Как ориентируются птицы. На эту статью ссылаются авторы «Робота-штурмана». «Наука и жизнь», №9.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="today">
+      <h4>Как это решают сейчас<span>Инженеры 2ГИС на Хабре</span></h4>
+      <div class="items">
+        <article class="item">
+          <img src="assets/img/habr-ar-indoor.webp" alt="Иллюстрация из статьи об AR-навигации внутри зданий" loading="lazy" width="1000" height="582">
+          <div class="meta">Октябрь 2025 · Дмитрий Чудаков, Андрей Кузнецов</div>
+          <h5>Компьютерное зрение + ARKit = AR-навигация внутри зданий</h5>
+          <p>Внутри торгового центра GPS ненадёжен. По одной фотографии телефон определяет координаты, направление взгляда и этаж. Для каждого ТЦ снимают около 10&nbsp;000 кадров, в каждом около 3&nbsp;000 ключевых точек. Локализация занимает около 100&nbsp;мс.</p>
+          <div class="stack">SIFT · DINOv2 + AnyLoc · SuperPoint + SuperGlue · PnP в RANSAC · ARKit</div>
+          <a class="read" href="https://habr.com/ru/companies/2gis/articles/951526/" target="_blank" rel="noopener">Читать на Хабре</a>
+        </article>
+        <article class="item">
+          <div class="meta">2026 · Блог 2ГИС</div>
+          <h5>Как 2ГИС адаптируется к проблемам с позиционированием</h5>
+          <p>На одном тестовом маршруте по Москве системная геолокация сначала вела пользователя правильно, а потом «увезла» его в Шереметьево. Теперь каждый источник координат оценивается по поведению во времени, и приложение выбирает тот, которому можно верить. Когда сигнала нет, помогает режим «Шаг за шагом».</p>
+          <div class="stack">GPS · ГЛОНАСС · Galileo · BeiDou · Wi‑Fi · сотовые сети · собственные источники</div>
+          <a class="read" href="https://habr.com/ru/companies/2gis/articles/1028348/" target="_blank" rel="noopener">Читать на Хабре</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HALL 3 ================= -->
+<section class="hall" id="hall-3" style="--c:var(--yellow)" aria-labelledby="h-hall3">
+  <div class="rail"><div class="stop">3</div></div>
+  <div class="hall-body">
+    <div class="hh">
+      <div><div class="kicker"><i></i><b>Зал 3</b> 1984 → 2026</div><h2 id="h-hall3">Что вокруг?</h2></div>
+      <p>К 1980-м карту начинают понимать как модель местности. По ней можно находить закономерности, которых не видно напрямую. Сегодня у этой модели можно просто спросить.</p>
+    </div>
+    <div class="data">
+      <div>
+        <div class="scan"><img src="assets/img/nij-1984-p78.webp" alt="Первая страница статьи «Информация, которую даёт карта»" width="704" height="1100" loading="lazy"></div>
+        <div class="label"><b>А. Берлянт. «Информация, которую даёт карта».</b> «Наука и жизнь», №6, 1984, с. 78–82. Картограф рассказывает, как карта становится инструментом исследования. <a href="https://djvu.online/file/c0htS5DZQyLQb" target="_blank" rel="noopener">Номер в архиве</a></div>
+      </div>
+      <div>
+<pre class="code" aria-label="Пример: запрос пользователя и вызов инструмента"><span class="c">// запрос пользователя</span>
+<span class="s">"Покажи кафе в районе Арбат, Москва</span>
+<span class="s"> с рейтингом выше 3"</span>
+
+<span class="c">// что вызывает ассистент 2ГИС Про</span>
+<span class="f">create_layer</span>({
+  <span class="k">territory</span>: <span class="s">"Арбат"</span>,
+  <span class="k">category</span>:  <span class="s">"кафе"</span>,
+  <span class="k">filters</span>:   <span class="s">"rating:[3 TO *]"</span>
+})</pre>
+        <p class="code-note">Пример из статьи «Как превратить запрос в дашборд: ИИ-ассистент для геоаналитики в 2ГИС Про», упрощён. Языковая модель переводит запрос в действия продукта по схеме ReAct, а данные берёт из API. <a href="https://habr.com/ru/companies/2gis/articles/1037974/" target="_blank" rel="noopener" style="color:var(--green-ink)">Читать на Хабре</a></p>
+        <div class="facts num">
+          <div><b>~500 RPS</b><span>выдерживает векторный поиск на pgvector, в 5 раз больше плановой нагрузки</span></div>
+          <div><b>&lt;300 мс</b><span>укладывается даже запасной, более полный поиск по HNSW</span></div>
+          <div><b>×10</b><span>ускорил раскладку виджетов в 2ГИС Про пространственный индекс R-Bush</span></div>
+        </div>
+        <div class="items" style="margin-top:32px">
+          <article class="item">
+            <div class="meta">Сентябрь 2025 · Вера Романцова, Егор Осинкин, Никита Шварц</div>
+            <h5>ИИ-поиск в 2ГИС: как учим нейросети понимать настроение, фото и смыслы</h5>
+            <p>Поиск по атмосфере места, по похожему фото и по свободному запросу. Эмбеддинги, LLM-разметка с перекрёстной проверкой, векторный индекс.</p>
+            <a class="read" href="https://habr.com/ru/companies/2gis/articles/951008/" target="_blank" rel="noopener">Читать на Хабре</a>
+          </article>
+          <article class="item">
+            <div class="meta">Февраль 2026 · Андрей, frontend 2ГИС Про</div>
+            <h5>React Grid Layout в деле: эволюция геоаналитики в 2ГИС Про</h5>
+            <p>Карта, графики и таблицы стали виджетами рабочего пространства, которое пользователь собирает сам.</p>
+            <a class="read" href="https://habr.com/ru/companies/2gis/articles/990082/" target="_blank" rel="noopener">Читать на Хабре</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HALL 4 ================= -->
+<section class="hall" id="hall-4" style="--c:var(--lime)" aria-labelledby="h-hall4">
+  <div class="rail"><div class="stop">4</div></div>
+  <div class="hall-body">
+    <div class="hh">
+      <div><div class="kicker"><i></i><b>Зал 4</b> 1938 → 1980</div><h2 id="h-hall4">Каким будет город?</h2></div>
+      <p>Инженеры прошлого не только решали задачи, но и делали прогнозы. Теперь их можно проверить. Как думаете, что сбылось?</p>
+    </div>
+    <div class="preds" id="preds"></div>
+    <div class="score" aria-live="polite"><span>Совпало с историей:</span><b id="score" class="num">0 из 4</b><span id="score-note"></span></div>
+    <p class="muted" style="font-size:13px;margin-top:14px">Формулировки прогнозов — наш короткий пересказ статей. Оригиналы есть в списке источников внизу страницы.</p>
+  </div>
+</section>
+
+<!-- ================= LETTER 2056 ================= -->
+<section class="hall" id="letter" style="--c:var(--green)" aria-labelledby="h-letter">
+  <div class="rail"><div class="stop" style="background:var(--green);color:#fff;font-size:12px">56</div></div>
+  <div class="hall-body">
+    <div class="letter">
+      <div class="l-grid">
+        <div>
+          <h2 id="h-letter">Письмо в&nbsp;<span>2056</span></h2>
+          <p class="lede">В 1956 году доктор технических наук Георгий Бабат опубликовал в «Технике — молодёжи» «Мечты инженера»: отрывки из статей, будто бы опубликованных в 2056 году. До 2056-го осталось 30 лет. Ответьте на семь вопросов, и мы соберём вашу статью из будущего.</p>
+          <div class="babat"><img src="assets/img/babat.webp" alt="Георгий Бабат" width="160" height="222" loading="lazy"><span>Г. И. Бабат. «Мечты инженера (отрывки из статей, опубликованных в 2056 году)». «Техника — молодёжи», №6, 1956, с. 30–32</span></div>
+          <div class="quiz" id="quiz" aria-live="polite"></div>
+        </div>
+        <div>
+          <div class="paper ghost" id="paper"></div>
+          <div class="res-actions" id="res-actions" hidden>
+            <button class="chip" id="r-save" type="button">Сохранить картинкой</button>
+            <button class="chip" id="r-copy" type="button">Скопировать текст</button>
+            <button class="chip" id="r-again" type="button">Пройти заново</button>
+          </div>
+          <div class="res-note" id="res-note" aria-live="polite"></div>
+        </div>
+      </div>
+      <div class="exit">
+        <div><h4>Эти вопросы пока открыты</h4><p>Над ними работают инженеры многих команд, в том числе в 2ГИС: в маршрутизации, позиционировании, поиске и геоаналитике.</p></div>
+        <a href="https://job.2gis.ru/vacancies?direction=development&amp;direction=testing&amp;direction=product_management&amp;direction=analytics&amp;direction=design&amp;direction=information_security&amp;direction=infrastructure_administration&amp;direction=team_management&amp;direction=data_science_ai&amp;direction=project_management" target="_blank" rel="noopener" style="--c:var(--green)"><b>Вакансии 2ГИС</b><span>Разработка, данные и ИИ, инфраструктура, продукт</span></a>
+        <a href="https://t.me/rnd2GIS" target="_blank" rel="noopener" style="--c:var(--blue)"><b>Telegram @rnd2GIS</b><span>Инженерный канал 2ГИС</span></a>
+        <a href="https://habr.com/ru/companies/2gis/articles/" target="_blank" rel="noopener" style="--c:var(--yellow)"><b>Блог 2ГИС на Хабре</b><span>Как это устроено изнутри</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>2ГИС</b> · Инженерный музей<br>Сайт не собирает данные. Ответы в тестах остаются в вашем браузере и исчезают, когда вы закрываете страницу.</div>
+    <div><b>Источники</b>
+      <ul>
+        <li>Ю. Долматовский. «Автосфера ЗИС-1001». <a href="https://ru.djvu.online/file/jCxy9WnwPsCP5" target="_blank" rel="noopener">«Техника — молодёжи», №10, 1938</a></li>
+        <li>Ф. Честнов. «Радиоволны-путеводители». <a href="https://ru.djvu.online/file/6hj8a2fTYObGC" target="_blank" rel="noopener">«Техника — молодёжи», №12, 1954</a></li>
+        <li>С. Вольберг. «Движущаяся улица»; Г. Бабат. «Мечты инженера». <a href="https://djvu.online/file/vczZJckoOQdkp" target="_blank" rel="noopener">«Техника — молодёжи», №6, 1956</a></li>
+        <li>О. Налбандян. «ЭВМ шагает по Москве». <a href="https://www.nkj.ru/archive/articles/57011/" target="_blank" rel="noopener">«Наука и жизнь», №7, 1972</a></li>
+        <li>Г. Николаев. «Загадки пернатого штурмана». <a href="https://djvu.online/file/lz0mfLRWpWh5L" target="_blank" rel="noopener">«Наука и жизнь», №9, 1975</a></li>
+        <li>В. Тарасенко, А. Кориков. «Робот-штурман». <a href="https://djvu.online/file/zKwC09TdR1376" target="_blank" rel="noopener">«Наука и жизнь», №7, 1980</a></li>
+        <li>В. Глушков. «Город завтрашнего дня». <a href="https://ru.djvu.online/file/bearrIgsdBmrE" target="_blank" rel="noopener">«Техника — молодёжи», №5, 1980</a></li>
+        <li>А. Берлянт. «Информация, которую даёт карта». <a href="https://djvu.online/file/c0htS5DZQyLQb" target="_blank" rel="noopener">«Наука и жизнь», №6, 1984</a></li>
+        <li><a href="https://habr.com/ru/companies/2gis/articles/" target="_blank" rel="noopener">Блог 2ГИС на Хабре</a>, статьи 2025–2026 годов</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+(()=>{
+'use strict';
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = s => document.querySelector(s);
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt = (x,d=1) => x.toLocaleString('ru-RU',{minimumFractionDigits:d,maximumFractionDigits:d});
+const intf = x => x.toLocaleString('ru-RU');
+function rng(seed){let s=seed>>>0||1;return()=>{s^=s<<13;s>>>=0;s^=s>>17;s^=s<<5;s>>>=0;return s/4294967296}}
+
+/* =========================================================
+   HERO: radial-ring city graph + animated A*
+   ========================================================= */
+try{(function hero(){
+  const cv=$('#city'), ctx=cv.getContext('2d');
+  const hud={n:$('#hud-n'),v:$('#hud-v'),t:$('#hud-t'),d:$('#hud-d')};
+  let W=0,H=0,DPR=1,nodes=[],adj=[],edges=[],cx=0,cy=0,R=0,river=[];
+  const KM=36; // city diameter in km for HUD
+  function build(){
+    const r=rng(1972); nodes=[]; adj=[]; edges=[];
+    const isMobile=W<900;
+    cx=isMobile?W*.5:W*.66; cy=isMobile?H*.30:H*.47; R=Math.max(W,H)*(isMobile?.62:.56);
+    const add=(x,y)=>{nodes.push({x,y});adj.push([]);return nodes.length-1};
+    const link=(a,b,maj=0)=>{if(a===b)return;if(adj[a].some(e=>e.to===b))return;const d=Math.hypot(nodes[a].x-nodes[b].x,nodes[a].y-nodes[b].y);const w=maj?d*.8:d;adj[a].push({to:b,w});adj[b].push({to:a,w});edges.push([a,b,d,maj])};
+    const rings=[.06,.12,.2,.31,.46,.66,.9];
+    const nRad=18, radAng=[];
+    for(let i=0;i<nRad;i++) radAng.push(i/nRad*Math.PI*2+(r()-.5)*.18);
+    // ring nodes at radial intersections plus intermediates
+    const ringIdx=[];
+    rings.forEach((rr,ri)=>{
+      const pts=[]; const extra=1+Math.floor(ri*1.2);
+      for(let i=0;i<nRad;i++){
+        const a0=radAng[i], a1=radAng[(i+1)%nRad]+(i===nRad-1?Math.PI*2:0);
+        for(let k=0;k<=extra;k++){
+          if(k===extra) continue;
+          const a=a0+(a1-a0)*k/extra; const rj=rr*R*(1+(r()-.5)*.05);
+          pts.push({id:add(cx+Math.cos(a)*rj,cy+Math.sin(a)*rj*.86),rad:k===0?i:-1});
+        }
+      }
+      for(let i=0;i<pts.length;i++) link(pts[i].id,pts[(i+1)%pts.length].id,ri===1||ri===3||ri===6?2:1);
+      ringIdx.push(pts);
+    });
+    // radials
+    for(let i=0;i<nRad;i++){
+      let prev=-1;
+      ringIdx.forEach(pts=>{const p=pts.find(q=>q.rad===i); if(p){ if(prev>=0) link(prev,p.id,1); prev=p.id; }});
+    }
+    // local streets: jittered points between rings linked to nearest
+    const loc=[];
+    for(let i=0;i<620;i++){
+      const a=r()*Math.PI*2, rr=(.07+Math.pow(r(),.8)*.86)*R;
+      loc.push(add(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr*.86));
+    }
+    // grid hashing for knn
+    const cell=R*.06, grid=new Map();
+    const key=(x,y)=>Math.floor(x/cell)+','+Math.floor(y/cell);
+    nodes.forEach((n,i)=>{const k=key(n.x,n.y);(grid.get(k)||grid.set(k,[]).get(k)).push(i)});
+    loc.forEach(i=>{
+      const n=nodes[i], gx=Math.floor(n.x/cell), gy=Math.floor(n.y/cell), cand=[];
+      for(let dx=-2;dx<=2;dx++)for(let dy=-2;dy<=2;dy++){const g=grid.get((gx+dx)+','+(gy+dy)); if(g) g.forEach(j=>{if(j!==i)cand.push([j,Math.hypot(nodes[j].x-n.x,nodes[j].y-n.y)])})}
+      cand.sort((a,b)=>a[1]-b[1]);
+      cand.slice(0,3).forEach(([j,d])=>{ if(d<cell*2.2) link(i,j) });
+    });
+    // river: sinuous curve through center
+    river=[]; for(let t=-1.2;t<=1.2;t+=.02){ const x=cx+t*R*1.1; const y=cy+Math.sin(t*3.1+.6)*R*.13+t*R*.12; river.push([x,y]); }
+    hud.n.textContent=intf(nodes.length);
+  }
+  function resize(){
+    const b=cv.getBoundingClientRect(); DPR=Math.min(2,devicePixelRatio||1);
+    W=b.width; H=b.height; cv.width=W*DPR; cv.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+    build(); A=W<900?pickNear(W*.25,200):pickNear(cx-R*.12,cy+R*.02); newTarget();
+  }
+  // A* with recorded expansion
+  function astar(s,t){
+    const N=nodes.length, g=new Float64Array(N).fill(Infinity), came=new Int32Array(N).fill(-1), closed=new Uint8Array(N);
+    const h=i=>Math.hypot(nodes[i].x-nodes[t].x,nodes[i].y-nodes[t].y);
+    const heap=[]; const push=(f,i)=>{heap.push([f,i]);let k=heap.length-1;while(k>0){const p=(k-1)>>1;if(heap[p][0]<=heap[k][0])break;[heap[p],heap[k]]=[heap[k],heap[p]];k=p}};
+    const pop=()=>{const top=heap[0],last=heap.pop();if(heap.length){heap[0]=last;let k=0;for(;;){const l=2*k+1,r=l+1;let m=k;if(l<heap.length&&heap[l][0]<heap[m][0])m=l;if(r<heap.length&&heap[r][0]<heap[m][0])m=r;if(m===k)break;[heap[m],heap[k]]=[heap[k],heap[m]];k=m}}return top};
+    g[s]=0; push(h(s),s); const order=[];
+    while(heap.length){const [,u]=pop(); if(closed[u])continue; closed[u]=1; if(came[u]>=0) order.push([came[u],u]); if(u===t)break;
+      for(const e of adj[u]){const ng=g[u]+e.w; if(ng<g[e.to]){g[e.to]=ng;came[e.to]=u;push(ng+h(e.to),e.to)}}}
+    const path=[]; let c=t; while(c>=0){path.push(c);c=came[c]} path.reverse();
+    return {order,path,len:g[t]};
+  }
+  const okPos=n=> W<900 ? (n.x>24&&n.x<W-24&&n.y>150&&n.y<250) : (n.x>W*.5&&n.x<W-70&&n.y>H*.3&&n.y<H-180);
+  function pickNear(x,y){let b=0,bd=Infinity;nodes.forEach((n,i)=>{const d=(n.x-x)**2+(n.y-y)**2;if(d<bd){bd=d;b=i}});return b}
+  let retry=0,A=0,B=0,run=null,phase='search',shown=0,pathT=0,hold=0,fade=1;
+  function newTarget(bIdx){
+    if(bIdx==null){ // random far target within visible area
+      const r=Math.random; let tries=0;
+      do{ const a=r()*Math.PI*2, rr=(.25+r()*.5)*R; bIdx=pickNear(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr*.86); tries++ }
+      while(tries<60 && (Math.hypot(nodes[bIdx].x-nodes[A].x,nodes[bIdx].y-nodes[A].y)<R*.35 || !okPos(nodes[bIdx])));
+    }
+    if(bIdx===A){ bIdx=adj[A].length?adj[A][0].to:(A+1)%nodes.length }
+    B=bIdx;
+    const t0=performance.now(); run=astar(A,B); const dt=performance.now()-t0;
+    if(!isFinite(run.len)||run.path.length<2){ if(!arguments.length&&++retry<20){ return newTarget() } }
+    retry=0;
+    hud.v.textContent=intf(run.order.length); hud.t.textContent=fmt(dt,1);
+    hud.d.textContent=fmt(run.len/(2*R*.9)*KM,1);
+    phase='search'; shown=RM?run.order.length:0; pathT=RM?1:0; hold=0; fade=1;
+  }
+  function pin(x,y,col){
+    ctx.save(); ctx.translate(x,y);
+    ctx.fillStyle='rgba(0,0,0,.35)'; ctx.beginPath(); ctx.ellipse(0,2,7,2.5,0,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(0,0); ctx.bezierCurveTo(-3,-7,-11,-12,-11,-21); ctx.arc(0,-21,11,Math.PI,0); ctx.bezierCurveTo(11,-12,3,-7,0,0);
+    ctx.fillStyle=col; ctx.fill(); ctx.lineWidth=2.5; ctx.strokeStyle='#fff'; ctx.stroke();
+    ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(0,-21,4,0,Math.PI*2); ctx.fill(); ctx.restore();
+  }
+  function frame(){ try{ paint() }catch(e){ if(!frame.warned){console.error(e);frame.warned=1} } if(!RM) requestAnimationFrame(frame) }
+  function paint(){
+    ctx.clearRect(0,0,W,H);
+    // river
+    ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.strokeStyle='rgba(0,115,250,.22)'; ctx.lineWidth=R*.035; ctx.beginPath(); river.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y)); ctx.stroke();
+    // base streets
+    const layer=(m,col,lw)=>{ctx.strokeStyle=col;ctx.lineWidth=lw;ctx.beginPath();for(const [a,b,,mj] of edges){if(mj!==m)continue;ctx.moveTo(nodes[a].x,nodes[a].y);ctx.lineTo(nodes[b].x,nodes[b].y)}ctx.stroke()};
+    layer(0,'#24392D',1); layer(1,'#33503F',1.6); layer(2,'rgba(130,215,20,.28)',2.2);
+    ctx.fillStyle='#3E5E4B'; for(let i=0;i<nodes.length;i+=3){const n=nodes[i];ctx.fillRect(n.x-.8,n.y-.8,1.6,1.6)}
+    if(run){
+      // explored
+      const step=Math.max(4,Math.ceil(run.order.length/90));
+      if(phase==='search'){ shown=Math.min(run.order.length,shown+step); if(shown>=run.order.length) phase='path'; }
+      ctx.globalAlpha=fade;
+      ctx.strokeStyle='rgba(255,184,28,.7)'; ctx.lineWidth=1.6; ctx.beginPath();
+      for(let i=0;i<shown;i++){const [a,b]=run.order[i];ctx.moveTo(nodes[a].x,nodes[a].y);ctx.lineTo(nodes[b].x,nodes[b].y)} ctx.stroke();
+      if(phase==='search'){ // frontier glow
+        ctx.fillStyle='#FFD36B';
+        for(let i=Math.max(0,shown-step*3);i<shown;i++){const n=nodes[run.order[i][1]];ctx.fillRect(n.x-1.5,n.y-1.5,3,3)}
+      }
+      if(phase!=='search'){
+        pathT=Math.min(1,pathT+(RM?1:.035));
+        const p=run.path, upto=Math.min(p.length-1,Math.max(0,Math.floor((p.length-1)*pathT)));
+        ctx.strokeStyle='rgba(130,215,20,.25)'; ctx.lineWidth=12; ctx.beginPath();
+        for(let i=0;i<=upto;i++){const n=nodes[p[i]];i?ctx.lineTo(n.x,n.y):ctx.moveTo(n.x,n.y)} ctx.stroke();
+        ctx.strokeStyle='#19AA1E'; ctx.lineWidth=5; ctx.stroke();
+        if(pathT>=1 && phase==='path'){phase='hold'}
+        if(phase==='hold'){ hold++; if(hold>150 && !RM){ phase='fade' } }
+        if(phase==='fade'){ fade-=.03; if(fade<=0){ A=B; newTarget(); } }
+      }
+      ctx.globalAlpha=1;
+      pin(nodes[A].x,nodes[A].y,'#0073FA');
+      pin(nodes[B].x,nodes[B].y,'#19AA1E');
+    }
+  }
+  cv.addEventListener('click',e=>{
+    const b=cv.getBoundingClientRect(); const x=e.clientX-b.left, y=e.clientY-b.top;
+    if(phase==='fade'||phase==='hold') A=B;
+    newTarget(pickNear(x,y)); if(RM) frame();
+  });
+  let to; addEventListener('resize',()=>{clearTimeout(to);to=setTimeout(()=>{resize(); if(RM) frame()},150)});
+  resize(); frame();
+})();}catch(err){console.error('section failed',err)}
+
+/* =========================================================
+   HALL 1: EVM 1972 — the bookshop route
+   ========================================================= */
+try{(function evm(){
+  const S=[
+    {n:'Редакция «Науки и жизни»',a:'ул. Кирова, 24',lat:55.7652,lon:37.6366,s:'Редакция'},
+    {n:'«Книги»',a:'ул. Кирова, 13',lat:55.7617,lon:37.6328,s:'Книги'},
+    {n:'«Старая книга»',a:'Сретенка, 9',lat:55.7684,lon:37.6307,s:'Старая книга'},
+    {n:'Магазин № 34',a:'Пушечная, 4',lat:55.7616,lon:37.6232,s:'Магазин №34'},
+    {n:'«Букинист»',a:'Столешников пер., 14',lat:55.7623,lon:37.6114,s:'Букинист'},
+    {n:'«Иностранная книга»',a:'ул. Качалова, 16',lat:55.7580,lon:37.5975,s:'Иностр. книга'},
+    {n:'Магазин № 36',a:'Арбат, 31',lat:55.7497,lon:37.5905,s:'Магазин №36'},
+    {n:'Магазин № 35',a:'Арбат, 36',lat:55.7488,lon:37.5893,s:'Магазин №35'},
+    {n:'Магазин № 121',a:'Ленинский пр-т, 69',lat:55.6840,lon:37.5480,s:'Магазин №121'},
+    {n:'Магазин № 61',a:'ул. Димитрова, 18',lat:55.7375,lon:37.6132,s:'Магазин №61'},
+    {n:'«Книжная находка»',a:'пр-т Маркса, у памятника Ивану Фёдорову',lat:55.7588,lon:37.6236,s:'Книжн. находка'},
+    {n:'«Антиквар»',a:'пр-т Маркса, 1',lat:55.7598,lon:37.6262,s:'Антиквар'},
+    {n:'Магазин № 54',a:'ул. Чернышевского, 50',lat:55.7595,lon:37.6500,s:'Магазин №54'},
+  ];
+  const N=S.length;
+  const hav=(a,b)=>{const R=6371,toR=Math.PI/180;const dLat=(b.lat-a.lat)*toR,dLon=(b.lon-a.lon)*toR;const x=Math.sin(dLat/2)**2+Math.cos(a.lat*toR)*Math.cos(b.lat*toR)*Math.sin(dLon/2)**2;return 2*R*Math.asin(Math.sqrt(x))};
+  const D=S.map(a=>S.map(b=>hav(a,b)));
+  // fisheye projection around the Kremlin
+  const C={lat:55.7520,lon:37.6175}, kx=111.32*Math.cos(C.lat*Math.PI/180), ky=110.57;
+  const proj=(lat,lon)=>{const dx=(lon-C.lon)*kx, dy=(lat-C.lat)*ky; const r=Math.hypot(dx,dy)||1e-9; const rr=Math.pow(r,.38); return [dx/r*rr, -dy/r*rr]};
+  const P=S.map(s=>proj(s.lat,s.lon));
+  const xs=P.map(p=>p[0]), ys=P.map(p=>p[1]);
+  const pad=30, vw=600, vh=520;
+  const minx=Math.min(...xs),maxx=Math.max(...xs),miny=Math.min(...ys),maxy=Math.max(...ys);
+  const sc=Math.min((vw-2*pad)/(maxx-minx),(vh-2*pad)/(maxy-miny));
+  const ox=(vw-(maxx-minx)*sc)/2-minx*sc, oy=(vh-(maxy-miny)*sc)/2-miny*sc;
+  const XY=P.map(([x,y])=>[x*sc+ox,y*sc+oy]);
+  for(let it=0;it<60;it++) for(let i=0;i<XY.length;i++) for(let j=i+1;j<XY.length;j++){const dx=XY[j][0]-XY[i][0], dy=XY[j][1]-XY[i][1], d=Math.hypot(dx,dy)||1; if(d<30){const m=(30-d)/2, ux=dx/d, uy=dy/d; XY[i][0]-=ux*m; XY[i][1]-=uy*m; XY[j][0]+=ux*m; XY[j][1]+=uy*m}}
+  const ringR=km=>Math.pow(km,.38)*sc; const [kxp,kyp]=[ox,oy];
+  const svg=$('#evm-svg'), NS='http://www.w3.org/2000/svg';
+  const el=(t,a,p=svg)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+  // context: Boulevard ring ~1.4 km, Garden ring ~2.3 km, Kremlin
+  el('circle',{cx:kxp,cy:kyp,r:ringR(1.4),fill:'none',stroke:'var(--rule)','stroke-width':1.5,'stroke-dasharray':'2 5'});
+  el('circle',{cx:kxp,cy:kyp,r:ringR(2.3),fill:'none',stroke:'var(--rule)','stroke-width':2});
+  el('circle',{cx:kxp,cy:kyp,r:ringR(7),fill:'none',stroke:'var(--rule)','stroke-width':1,'stroke-dasharray':'1 6'});
+  const lbl=(x,y,t,anchor='start')=>{const e=el('text',{x,y,'font-size':11,fill:'var(--ink-2)','text-anchor':anchor,'font-family':'var(--sans)'});e.textContent=t;return e};
+  lbl(kxp+ringR(2.3)*.72+4,kyp+ringR(2.3)*.72+12,'Садовое кольцо');
+  el('rect',{x:kxp-5,y:kyp-5,width:10,height:10,fill:'var(--ink-2)',transform:`rotate(45 ${kxp} ${kyp})`});
+  lbl(kxp+10,kyp+4,'Кремль');
+  const gEvm=el('g',{}), gOpt=el('g',{}), gUser=el('g',{});
+  const userPath=el('polyline',{fill:'none',stroke:'var(--ink)','stroke-width':3,'stroke-dasharray':'7 6','stroke-linejoin':'round','stroke-linecap':'round'},gUser);
+  const gNodes=el('g',{});
+  const tip=$('#evm-tip');
+  let route=[0], done=false;
+  const nodeEls=S.map((s,i)=>{
+    const g=el('g',{class:'node',tabindex:i?0:-1,role:'button','aria-label':`${i?i+'. ':''}${s.n}, ${s.a}`},gNodes);
+    const [x,y]=XY[i];
+    el('circle',{cx:x,cy:y,r:16,fill:'transparent'},g);
+    el('circle',{class:'c',cx:x,cy:y,r:i?13:16,fill:i?'var(--card)':'var(--blue)',stroke:i?'var(--ink)':'#fff','stroke-width':i?2.5:3},g);
+    const t=el('text',{x,y:y+4,'font-size':i?12:14,'font-weight':600,'text-anchor':'middle',fill:i?'var(--ink)':'#fff','font-family':'var(--sans)','pointer-events':'none'},g); t.textContent=i?i:'А';
+    const side=x>vw*.62?'end':'start'; const lx=side==='end'?x-16:x+16;
+    if(i===8||i===6) lbl(lx,y-12,s.s,side).setAttribute('pointer-events','none');
+    g.addEventListener('mouseenter',()=>{if(!done) tip.textContent=`${i?i+'. ':''}${s.n}, ${s.a}`});
+    g.addEventListener('click',()=>pick(i));
+    g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(i)}});
+    return g;
+  });
+  const len=r=>{let s=0;for(let i=1;i<r.length;i++)s+=D[r[i-1]][r[i]];return s};
+  const ukm=$('#u-km'), ucnt=$('#u-cnt');
+  function draw(){
+    userPath.setAttribute('points',route.map(i=>XY[i].join(',')).join(' '));
+    nodeEls.forEach((g,i)=>g.classList.toggle('done',i>0&&route.includes(i)));
+    ukm.textContent=fmt(len(route))+' км'; ucnt.textContent=`${Math.min(12,new Set(route).size-1)} из 12`;
+  }
+  function pick(i){
+    if(done||i===0||route.includes(i)) return;
+    route.push(i);
+    if(route.length===N){ route.push(0); done=true; finishUser(); }
+    draw();
+  }
+  $('#b-undo').onclick=()=>{ if(done){ route.pop(); done=false } if(route.length>1) route.pop(); draw(); };
+  $('#b-reset').onclick=()=>{ route=[0]; done=false; gEvm.replaceChildren(); gOpt.replaceChildren(); draw(); tip.textContent='Начните от редакции (А) и нажимайте на магазины по порядку.'; };
+
+  // printout
+  const pr=$('#printout'); let q=Promise.resolve();
+  const line=(t,cls)=>{const d=document.createElement('div'); if(cls){const s=document.createElement('span');s.className=cls;s.textContent=t;d.appendChild(s)} else d.textContent=t; return d};
+  function print(lines,delay=RM?0:70){
+    q=q.then(()=>new Promise(res=>{
+      let i=0; const tick=()=>{ pr.querySelectorAll('.cur').forEach(c=>c.classList.remove('cur'));
+        if(i>=lines.length){res();return}
+        const [t,c]=Array.isArray(lines[i])?lines[i]:[lines[i]]; const d=line(t,c); d.classList.add('cur'); pr.appendChild(d); pr.scrollTop=pr.scrollHeight; i++;
+        delay?setTimeout(tick,delay):tick(); };
+      tick();
+    }));
+    return q;
+  }
+  const pad2=n=>String(n).padStart(2,'0');
+  const padR=(s,n)=>(s+' '.repeat(n)).slice(0,n);
+  print(['ВЦ Главмосавтотранса    1972','Задача: маршрут по 12 букинистам','Старт и финиш: редакция, ул. Кирова','Вариантов обхода: 479 001 600','—','Ожидаю маршрут оператора']);
+
+  function finishUser(){
+    tip.textContent='Готово. Теперь запустите ЭВМ 1972 года и точное решение.';
+    print(['—',['Маршрут оператора принят','hl'],...route.slice(1,-1).map((i,k)=>`${pad2(k+1)} ${padR(S[i].s,15)} ${fmt(D[route[k]][i])}`),`Итого по прямой: ${fmt(len(route))} км`]);
+  }
+  const evmRoute=[0,1,2,3,4,5,6,7,8,9,10,11,12,0];
+  function drawRoute(g,r,color,w,dash){
+    g.replaceChildren();
+    const p=el('polyline',{points:r.map(i=>XY[i].join(',')).join(' '),fill:'none',stroke:color,'stroke-width':w,'stroke-linejoin':'round','stroke-linecap':'round','stroke-dasharray':dash||''},g);
+    if(!RM){const L=p.getTotalLength(); if(!dash){p.style.strokeDasharray=L; p.style.strokeDashoffset=L; p.getBoundingClientRect(); p.style.transition='stroke-dashoffset 1.6s ease'; p.style.strokeDashoffset=0;}}
+  }
+  $('#b-evm').onclick=()=>{
+    drawRoute(gEvm,evmRoute,'var(--green)',6);
+    print(['—',['Запуск: маршрут ЭВМ 1972 года','hl'],...evmRoute.slice(1,-1).map((i,k)=>`${pad2(k+1)} ${padR(S[i].s,15)} ${fmt(D[evmRoute[k]][i])}`),
+      `По прямой: ${fmt(len(evmRoute))} км`,['По улицам, данные статьи: 33,0 км','y'],'Человек вручную: 35,6 км, ~1 час', done?`Ваш маршрут по прямой: ${fmt(len(route))} км`:'Ваш маршрут ещё не закончен']);
+  };
+  $('#b-exact').onclick=()=>{
+    const n=N-1, FULL=(1<<n)-1, dp=new Float64Array((1<<n)*n).fill(Infinity), par=new Int8Array((1<<n)*n).fill(-1);
+    const t0=performance.now();
+    for(let j=0;j<n;j++) dp[(1<<j)*n+j]=D[0][j+1];
+    for(let m=1;m<=FULL;m++) for(let j=0;j<n;j++){ const v=dp[m*n+j]; if(v===Infinity||!(m&(1<<j))) continue;
+      for(let k=0;k<n;k++){ if(m&(1<<k)) continue; const nm=m|(1<<k), nv=v+D[j+1][k+1]; if(nv<dp[nm*n+k]){dp[nm*n+k]=nv; par[nm*n+k]=j} } }
+    let best=Infinity, bj=-1; for(let j=0;j<n;j++){const v=dp[FULL*n+j]+D[j+1][0]; if(v<best){best=v;bj=j}}
+    const order=[]; let m=FULL, j=bj; while(j>=0){ order.push(j+1); const pj=par[m*n+j]; m&=~(1<<j); j=pj; }
+    order.reverse(); const r=[0,...order,0];
+    const dt=performance.now()-t0;
+    drawRoute(gOpt,r,'var(--blue)',3,'2 7');
+    const diffEvm=(len(evmRoute)/best-1)*100;
+    print(['—',['Точное решение: Held–Karp','hl'],`Состояний: ${intf((1<<n)*n)}`,`Время в вашем браузере: ${fmt(dt,1)} мс`,
+      ...r.slice(1,-1).map((i,k)=>`${pad2(k+1)} ${S[i].s}`),
+      ['Оптимум по прямой: '+fmt(best)+' км','y'],
+      `ЭВМ 1972 по прямой длиннее на ${fmt(diffEvm)}%`,'(ЭВМ считала по улицам,','поэтому порядок может отличаться)',
+      done?`Ваш маршрут длиннее оптимума на ${fmt((len(route)/best-1)*100)}%`:'Закончите свой маршрут для сравнения']);
+  };
+  draw();
+})();}catch(err){console.error('section failed',err)}
+
+/* =========================================================
+   HALL 2: correlation-extremal localisation
+   ========================================================= */
+try{(function corr(){
+  const mc=$('#corr-map'), cc=$('#corr-cam'), mx=mc.getContext('2d'), cx=cc.getContext('2d');
+  const W=96, H=64, P=18; let map, patch, tx, ty, busy=false;
+  const out=$('#corr-out'), noise=$('#noise'), nv=$('#noise-v');
+  function genMap(){
+    const r=rng(1980); const f=new Float32Array(W*H);
+    for(let b=0;b<26;b++){ const bx=r()*W, by=r()*H, rx=2+r()*7, ry=2+r()*6, a=r()*Math.PI;
+      for(let y=0;y<H;y++)for(let x=0;x<W;x++){const dx=x-bx,dy=y-by;const u=(dx*Math.cos(a)+dy*Math.sin(a))/rx, v=(-dx*Math.sin(a)+dy*Math.cos(a))/ry; f[y*W+x]+=Math.exp(-(u*u+v*v))}}
+    map=new Uint8Array(W*H); for(let i=0;i<W*H;i++) map[i]=f[i]>.55?1:0;
+    // roads
+    const road=(x0,y0,x1,y1)=>{const n=Math.max(Math.abs(x1-x0),Math.abs(y1-y0));for(let t=0;t<=n;t++){const x=Math.round(x0+(x1-x0)*t/n),y=Math.round(y0+(y1-y0)*t/n);if(x>=0&&y>=0&&x<W&&y<H)map[y*W+x]=2}};
+    road(0,20,W-1,34); road(30,0,44,H-1); road(70,0,58,H-1); road(0,55,W-1,46);
+  }
+  function newFrame(){
+    tx=Math.floor(Math.random()*(W-P)); ty=Math.floor(Math.random()*(H-P));
+    const p=+noise.value/100; patch=new Uint8Array(P*P);
+    for(let y=0;y<P;y++)for(let x=0;x<P;x++){ let v=map[(ty+y)*W+tx+x]; if(Math.random()<p) v=v?0:(Math.random()<.6?1:2); patch[y*P+x]=v }
+    drawMap(); drawCam(); out.innerHTML='Новый кадр получен. Нажмите «Найти себя на карте».';
+  }
+  const colors=()=>({bg:css('--card'),ink:css('--ink'),road:css('--yellow'),rule:css('--rule'),blue:css('--blue')});
+  function drawCells(ctx,data,w,h,s){const c=colors();ctx.fillStyle=c.bg;ctx.fillRect(0,0,w*s,h*s);
+    for(let y=0;y<h;y++)for(let x=0;x<w;x++){const v=data[y*w+x]; if(!v)continue; ctx.fillStyle=v===1?c.ink:c.road; ctx.fillRect(x*s,y*s,s,s)}}
+  function drawMap(heat,upto,peak){
+    const s=mc.width/W; drawCells(mx,map,W,H,s); const c=colors();
+    mx.strokeStyle=c.rule; mx.globalAlpha=.5; mx.lineWidth=1; mx.beginPath();
+    for(let x=0;x<=W;x+=8){mx.moveTo(x*s,0);mx.lineTo(x*s,H*s)} for(let y=0;y<=H;y+=8){mx.moveTo(0,y*s);mx.lineTo(W*s,y*s)} mx.stroke(); mx.globalAlpha=1;
+    if(heat){ const cw=W-P+1;
+      for(let i=0;i<upto;i++){ const v=heat[i]; if(v<=0) continue; const x=i%cw, y=(i/cw)|0; mx.fillStyle=`rgba(0,115,250,${Math.pow(v,4)*.75})`; mx.fillRect((x+P/2)*s,(y+P/2)*s,s,s) } }
+    if(peak){ mx.lineWidth=3; mx.strokeStyle=c.blue; mx.strokeRect(peak[0]*s,peak[1]*s,P*s,P*s);
+      mx.setLineDash([4,4]); mx.strokeStyle=css('--green'); mx.lineWidth=2; mx.strokeRect(tx*s+1,ty*s+1,P*s-2,P*s-2); mx.setLineDash([]); }
+  }
+  function drawCam(){ drawCells(cx,patch,P,P,cc.width/P) }
+  function run(){
+    if(busy) return; busy=true;
+    const cw=W-P+1, ch=H-P+1, heat=new Float32Array(cw*ch);
+    const t0=performance.now(); let n=P*P, pm=0; for(let i=0;i<n;i++) pm+=patch[i]; pm/=n; let pv=0; for(let i=0;i<n;i++) pv+=(patch[i]-pm)**2;
+    let best=-2,bx=0,by=0;
+    for(let y=0;y<ch;y++)for(let x=0;x<cw;x++){ let wm=0; for(let j=0;j<P;j++)for(let i=0;i<P;i++) wm+=map[(y+j)*W+x+i]; wm/=n;
+      let num=0,wv=0; for(let j=0;j<P;j++)for(let i=0;i<P;i++){const a=map[(y+j)*W+x+i]-wm; num+=a*(patch[j*P+i]-pm); wv+=a*a}
+      const v=wv&&pv?num/Math.sqrt(wv*pv):0; heat[y*cw+x]=v; if(v>best){best=v;bx=x;by=y} }
+    const dt=performance.now()-t0; const err=Math.max(Math.abs(bx-tx),Math.abs(by-ty));
+    const fin=()=>{ drawMap(heat,heat.length,[bx,by]); busy=false;
+      out.innerHTML=`Перебрано <b>${intf(cw*ch)}</b> положений за <b>${fmt(dt,1)} мс</b>. Пик совпадения ${fmt(best,2)}. `+(err===0?'<b>Робот нашёл себя точно.</b>':err<=2?`<b>Ошибка ${err} кл.</b> Помехи сбили пик совсем чуть-чуть.`:`<b>Ошибка ${err} кл.</b> Помехи победили: так бывает и у настоящих систем. Уменьшите помехи или возьмите новый кадр.`)+' Синяя рамка — где робот считает себя, зелёная пунктирная — где он на самом деле.'; };
+    if(RM){fin();return}
+    let k=0; const stepN=Math.ceil(heat.length/40); const anim=()=>{k=Math.min(heat.length,k+stepN); drawMap(heat,k); if(k<heat.length) requestAnimationFrame(anim); else fin()}; anim();
+  }
+  noise.oninput=()=>{nv.textContent=noise.value+'%'}; noise.onchange=newFrame;
+  $('#c-run').onclick=run; $('#c-new').onclick=newFrame;
+  genMap(); newFrame(); out.innerHTML='Нажмите «Найти себя на карте»: браузер сравнит кадр со всеми положениями на карте.';
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{drawMap();drawCam()});
+})();}catch(err){console.error('section failed',err)}
+
+/* =========================================================
+   HALL 4: predictions
+   ========================================================= */
+try{(function preds(){
+  const opts=['Сбылось','Частично','Нет'];
+  const D=[
+    {y:'1938',img:'tm-1938-cover',claim:'Автомобиль будущего, в котором часть управления берёт на себя автоматика',src:'Ю. Долматовский, «Автосфера ЗИС-1001». «Техника — молодёжи», №10, 1938',ans:1,v:'Автоматика уже держит полосу, тормозит и паркуется сама. Полностью беспилотные машины пока ездят в отдельных городах и тестовых зонах.'},
+    {y:'1954',img:'tm-1954-cover',claim:'Радиолокационная картина местности совмещается с навигационной картой',src:'Ф. Честнов, «Радиоволны-путеводители». «Техника — молодёжи», №12, 1954',ans:0,v:'Только без радара. Изображение местности поверх схемы стало обычным слоем карты, а сравнение снимка с картой помогает найти себя даже внутри зданий.'},
+    {y:'1956',img:'tm-1956-cover',claim:'Тротуары-конвейеры везут пешеходов по городу',src:'С. Вольберг, «Движущаяся улица». «Техника — молодёжи», №6, 1956',ans:1,v:'Движущиеся дорожки есть в аэропортах и на пересадках метро. Городской улицей они так и не стали.'},
+    {y:'1980',img:null,claim:'Вычислительные сети станут частью городской жизни и работы',src:'В. Глушков, «Город завтрашнего дня». «Техника — молодёжи», №5, 1980',ans:0,v:'Город связан сетями настолько, что данные светофоров приходят прямо в навигатор и помогают проехать «зелёной волной».'},
+  ];
+  const root=$('#preds'); let score=0, answered=0;
+  D.forEach((d,idx)=>{
+    const c=document.createElement('article'); c.className='pred';
+    c.innerHTML=`<div class="top"><div class="yr num">${d.y}</div>${d.img?`<img src="assets/img/${d.img}.webp" alt="Обложка журнала" width="200" height="280" loading="lazy">`:''}</div>
+      <p class="claim">${d.claim}</p><p class="src">${d.src}</p>
+      <div class="row" role="group" aria-label="Ваш ответ">${opts.map((o,i)=>`<button class="chip" type="button" data-i="${i}">${o}</button>`).join('')}</div>`;
+    const btns=[...c.querySelectorAll('button')];
+    btns.forEach(b=>b.onclick=()=>{
+      const i=+b.dataset.i; btns.forEach(x=>x.disabled=true);
+      btns[d.ans].classList.add('right'); btns[d.ans].disabled=false; btns[d.ans].style.cursor='default';
+      if(i!==d.ans){ b.classList.add('picked'); b.disabled=false; b.style.cursor='default' }
+      if(i===d.ans) score++; answered++;
+      const v=document.createElement('div'); v.className='verdict'; v.innerHTML=`<b>${opts[d.ans]}.</b> ${d.v}`; c.appendChild(v);
+      $('#score').textContent=`${score} из ${D.length}`;
+      if(answered===D.length) $('#score-note').textContent= score>=3?'Чутьё на технологии у вас отличное. Осталось проверить своё в 2056 году.':'Предсказывать трудно. Попробуйте сделать это лучше, чем инженеры прошлого.';
+    });
+    root.appendChild(c);
+  });
+})();}catch(err){console.error('section failed',err)}
+
+/* =========================================================
+   LETTER 2056: quiz + generated magazine page
+   ========================================================= */
+try{(function letter(){
+  const Q=[
+    {q:'Как в 2056 году навигатор узнаёт, где вы?',o:[
+      ['По спутникам, как сейчас, только точнее','Спутники никуда не делись. Их стало больше, а приёмники научились отбрасывать отражённый от стен сигнал, и в центре города ошибка сократилась до сантиметров.'],
+      ['Город сам подсказывает: маяки, датчики, камеры','Координату теперь сообщает сам город: маяки в фонарях, датчики в асфальте, метки на остановках. Спутник нужен разве что в лесу.'],
+      ['По тому, что видит камера, как человек','Устройство определяет место так же, как человек: смотрит вокруг и сравнивает увиденное с картой. Идея «Робота-штурмана» 1980 года стала стандартом.']]},
+    {q:'Кто прокладывает маршрут?',o:[
+      ['Ваш навигатор, как и сейчас','Маршрут по-прежнему строит личный навигатор, только он помнит ваши привычки лучше вас.'],
+      ['Город распределяет все потоки сразу','Маршруты больше не строятся по одному. Город распределяет потоки целиком, и ваш путь стал частью общего расписания.'],
+      ['Никто: транспорт сам везёт, куда сказали','Вы называете место, а транспорт сам решает, как туда доехать. Слово «маршрут» осталось у диспетчеров и инженеров.']],
+      h:['Навигатор остался личным помощником','Город прокладывает маршруты сам','Маршрут перестал быть заботой человека']},
+    {q:'Какой маршрут считается лучшим?',o:[
+      ['Самый быстрый','Главным критерием осталась скорость. Секунды экономят на всём: на светофорах, перестроениях, поиске парковки.'],
+      ['Самый спокойный','Лучшим считается не самый быстрый путь, а самый спокойный: без лишних перестроений, левых поворотов и нервов.'],
+      ['Тот, который вы выбрали бы сами, если бы знали всё','Маршрут подбирается под человека: учитывает, торопитесь ли вы, с кем едете и что любите видеть по дороге.']],
+      d:['Скорость по-прежнему решает','Спокойствие стало важнее секунд','У каждого теперь свой лучший путь']},
+    {q:'Как вы спрашиваете карту?',o:[
+      ['Словами, как человека','С картой говорят обычными словами. Запрос «тихое место поработать до вечера рядом с домом» давно никого не удивляет.'],
+      ['Никак: карта предлагает раньше, чем спросили','Карта предлагает раньше, чем спросили: зонт перед дождём, другой выход из метро перед толпой.'],
+      ['По категориям, как сейчас','Кнопки «Кафе» и «Аптеки» пережили все революции. Людям по-прежнему нравится выбирать самим.']]},
+    {q:'Что вы видите, когда едете?',o:[
+      ['Карту на экране','Карта на экране осталась: людям нужно видеть город целиком, а не только следующий поворот.'],
+      ['Стрелки прямо поверх улицы','Стрелки рисуются прямо поверх улицы. Экран телефона нужен редко.'],
+      ['Ничего: подсказывают голос и звук','Экранов стало меньше. Дорогу подсказывают голос, звук и лёгкая вибрация.']]},
+    {q:'Какая задача у инженеров 2056 года самая трудная?',o:[
+      ['Можно ли верить данным','Главный вопрос инженеров 2056 года: можно ли верить данным, если их присылают миллионы устройств.'],
+      ['Как помогать, почти ничего не зная о человеке','Главный вопрос инженеров 2056 года: как помогать человеку, почти ничего о нём не зная.'],
+      ['Как уместить всё это в маленькое устройство','Главный вопрос инженеров 2056 года: как уместить всё это в устройство, которое неделю живёт без зарядки.']]},
+    {q:'Что стало с бумажной картой?',o:[
+      ['Лежит в музее','Бумажные карты лежат в музее рядом с журналами 1950-х.'],
+      ['Осталась у туристов','Бумажная карта осталась у туристов: она не разряжается.'],
+      ['Вернулась как запасной план','Бумажная карта вернулась в бардачки как запасной план на случай сбоя.']]},
+  ];
+  const quiz=$('#quiz'), paper=$('#paper'), acts=$('#res-actions'), note=$('#res-note');
+  let step=0, ans=[];
+  function render(){
+    if(step>=Q.length){ result(); return }
+    const q=Q[step];
+    quiz.innerHTML=`<div class="qtop"><span>Вопрос ${step+1} из ${Q.length}</span><button type="button" id="q-back" ${step?'':'disabled'}>Назад</button></div>
+      <div class="bars" aria-hidden="true">${Q.map((_,i)=>`<i class="${i<=step?'on':''}"></i>`).join('')}</div>
+      <h3>${q.q}</h3><div class="opts">${q.o.map((o,i)=>`<button class="opt${ans[step]===i?' sel':''}" type="button" data-i="${i}">${o[0]}</button>`).join('')}</div>
+      <p class="privacy">Ответы никуда не отправляются.</p>`;
+    quiz.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{ ans[step]=+b.dataset.i; b.classList.add('sel'); setTimeout(()=>{step++;render()},RM?0:220) });
+    const back=$('#q-back'); if(back) back.onclick=()=>{step=Math.max(0,step-1);render()};
+  }
+  function article(){
+    const s=i=>Q[i].o[ans[i]][1];
+    return {head:Q[1].h[ans[1]], deck:Q[2].d[ans[2]],
+      paras:[`${s(0)} ${s(1)}`,`${s(2)} ${s(3)} ${s(4)}`,`${s(5)} ${s(6)}`,'Тридцать лет назад, в 2026 году, это казалось фантастикой. Впрочем, в 1956-м так же думали о машине, которая сама прокладывает маршрут.']};
+  }
+  function paperHTML(a){
+    return `<div class="mast"><span>Из статей, опубликованных в 2056 году</span><span>№ 1</span></div>
+      <h3>${a.head}</h3><p class="deck">${a.deck}</p><p class="by">Инженер, 2026 год. По мотивам «Мечты инженера» Г. Бабата, 1956</p>
+      <div class="cols">${a.paras.map(p=>`<p>${p}</p>`).join('')}</div>`;
+  }
+  function result(){
+    const a=article(); paper.classList.remove('ghost'); paper.innerHTML=paperHTML(a); acts.hidden=false;
+    quiz.innerHTML=`<div class="qtop"><span>Готово</span><button type="button" id="q-back">Изменить ответы</button></div>
+      <div class="bars" aria-hidden="true">${Q.map(()=>'<i class="on"></i>').join('')}</div>
+      <h3>Ваша статья из 2056 года готова</h3><p style="margin-top:12px;color:var(--ink-2)">Сохраните её и вернитесь через тридцать лет проверить. Инженеры из 1956-го уже ждут.</p>`;
+    $('#q-back').onclick=()=>{step=Q.length-1;render()};
+    if(innerWidth<900) paper.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});
+  }
+  // placeholder page before answers
+  paper.innerHTML=paperHTML({head:'Здесь появится ваша статья',deck:'Ответьте на семь вопросов слева',paras:['Георгий Бабат в 1956 году описал термоядерную ТЭЦ и другие технологии «из 2056 года». Ваша статья будет о том, как люди будут находить дорогу.','Каждый ответ добавит в неё абзац.']});
+  $('#r-again').onclick=()=>{step=0;ans=[];paper.classList.add('ghost');acts.hidden=true;note.textContent='';
+    paper.innerHTML=paperHTML({head:'Здесь появится ваша статья',deck:'Ответьте на семь вопросов слева',paras:['Каждый ответ добавит в неё абзац.']}); render()};
+  $('#r-copy').onclick=async()=>{const a=article(); const t=`${a.head}\n${a.deck}\n\n${a.paras.join('\n\n')}\n\nИз статей, опубликованных в 2056 году`;
+    try{await navigator.clipboard.writeText(t); note.textContent='Текст скопирован.'}catch(e){ const r=document.createRange(); r.selectNodeContents(paper); const sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); note.textContent='Текст выделен, скопируйте его сочетанием клавиш.'}};
+  $('#r-save').onclick=()=>{
+    const a=article(), c=document.createElement('canvas'), w=1080, h=1350; c.width=w; c.height=h; const x=c.getContext('2d');
+    x.fillStyle='#0B130F'; x.fillRect(0,0,w,h);
+    x.save(); x.translate(w/2,h/2); x.rotate(-.012); x.fillStyle='#F6F4EC'; x.fillRect(-460,-560,920,1080); x.restore();
+    const L=110; let y=150;
+    x.fillStyle='#16130E'; x.font='600 22px "SB Sans Text", sans-serif'; x.fillText('ИЗ СТАТЕЙ, ОПУБЛИКОВАННЫХ В 2056 ГОДУ',L,y); x.textAlign='right'; x.fillText('№ 1',w-L,y); x.textAlign='left';
+    y+=20; x.fillRect(L,y,w-2*L,5); y+=80;
+    const wrap=(t,font,lh,maxW,col)=>{x.font=font; x.fillStyle=col; const words=t.split(' '); let ln=''; for(const wd of words){const tt=ln?ln+' '+wd:wd; if(x.measureText(tt).width>maxW&&ln){x.fillText(ln,L,y);y+=lh;ln=wd}else ln=tt} if(ln){x.fillText(ln,L,y);y+=lh}};
+    wrap(a.head,'600 74px "SB Sans Text", sans-serif',78,w-2*L,'#16130E'); y+=8;
+    wrap(a.deck,'500 34px "SB Sans Text", sans-serif',42,w-2*L,'#3A352B'); y+=6;
+    wrap('Инженер, 2026 год. По мотивам «Мечты инженера» Г. Бабата, 1956','400 22px "SB Sans Text", sans-serif',30,w-2*L,'#6A6355'); y+=20;
+    a.paras.forEach(p=>{wrap(p,'400 27px "SB Sans Text", sans-serif',38,w-2*L,'#16130E'); y+=14});
+    x.fillStyle='#19AA1E'; x.font='500 22px "SB Sans Text", sans-serif'; x.fillText('Маршрут строится 88 лет · 2ГИС',L,h-120);
+    c.toBlob(b=>{ if(!b){note.textContent='Не удалось собрать картинку.';return} const u=URL.createObjectURL(b); const l=document.createElement('a'); l.href=u; l.download='pismo-2056.png'; document.body.appendChild(l); l.click(); l.remove(); setTimeout(()=>URL.revokeObjectURL(u),4000); note.textContent='Картинка сохранена в загрузки.'; },'image/png');
+  };
+  render();
+})();}catch(err){console.error('section failed',err)}
+
+/* for the curious */
+try{
+  console.log('%cВЦ 2ГИС%c\n\nЗАДАЧА: ДОВЕСТИ ЧЕЛОВЕКА ИЗ А В Б\nСТАТУС: РЕШАЕТСЯ С 1938 ГОДА\nОТКРЫТЫХ ВОПРОСОВ: МНОГО\n\nЕсли вы читаете консоль, вам может понравиться и это:\nhttps://job.2gis.ru/vacancies?direction=development\nhttps://t.me/rnd2GIS',
+    'font:600 20px monospace;color:#19AA1E','font:13px monospace;color:inherit');
+}catch(e){}
+})();
+</script>
+
+</body>
+</html>
