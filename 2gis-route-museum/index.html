@@ -81,8 +81,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 .hud{position:absolute;right:var(--gutter);top:clamp(24px,5vh,48px);display:grid;gap:2px;justify-items:end;font:400 12.5px/1.45 var(--mono);color:var(--night-muted);text-align:right;pointer-events:none}
 .hud b{color:var(--night-text);font-weight:400}
 .hud .k{color:var(--yellow)}
-.hint{position:absolute;right:var(--gutter);bottom:150px;font-size:13px;color:var(--night-muted);pointer-events:none;display:flex;gap:8px;align-items:center}
-.hint::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(25,170,30,.25)}
 .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--night-muted);margin-top:26px}
 .legend span{display:inline-flex;align-items:center;gap:7px}
 .legend i{width:16px;height:3px;border-radius:2px;display:inline-block}
@@ -101,7 +99,6 @@ button{font:inherit;color:inherit;cursor:pointer}
   .hero::after{background:linear-gradient(0deg,var(--night) 30%,rgba(11,19,15,.55) 70%,rgba(11,19,15,.2) 100%)}
   .hero-in{min-height:auto;padding-top:220px}
   .hud{top:16px;font-size:11px}
-  .hint{bottom:auto;top:110px}
   .halls{grid-template-columns:1fr 1fr}
   .halls a,.halls a:first-child{padding:14px 12px 16px 0;border-right:0;border-top:1px solid var(--night-line)}
   .halls a:last-child{grid-column:1/-1}
@@ -311,6 +308,69 @@ footer a{color:var(--ink-2);text-underline-offset:3px}
 @media (max-width:800px){footer .wrap{grid-template-columns:1fr}footer ul{columns:1}}
 
 @media (prefers-reduced-motion:reduce){.status i,.printout .cur::after{animation:none}}
+/* sandbox + hud */
+.hud table{border-collapse:collapse;margin:6px 0 2px}
+.hud td{padding:1px 0 1px 14px;text-align:right;color:var(--night-muted)}
+.hud td:first-child{text-align:left;padding-left:0}
+.hud tr.on td{color:var(--night-text)}
+.hud tr.on td.v{color:var(--yellow)}
+.hud .mut{font-size:11px;opacity:.75}
+.hud-m{display:none}
+.sandbox{position:absolute;right:var(--gutter);top:calc(clamp(24px,5vh,48px) + 150px);z-index:2;display:grid;gap:8px;justify-items:end;max-width:calc(100% - 2*var(--gutter))}
+.seg{display:inline-flex;flex-wrap:wrap;background:rgba(11,19,15,.8);border:1px solid var(--night-line);border-radius:999px;padding:3px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.seg button{background:none;border:0;color:var(--night-muted);padding:7px 13px;border-radius:999px;font-size:13.5px;font-weight:500;white-space:nowrap;transition:background .15s,color .15s}
+.seg button:hover{color:var(--night-text)}
+.seg button[aria-pressed="true"]{background:var(--night-text);color:var(--night)}
+.seg [data-mode="close"][aria-pressed="true"],.seg [data-mode="jam"][aria-pressed="true"]{background:#F0503C;color:#fff}
+.sb-foot{display:flex;gap:14px;align-items:center;font-size:13px;color:var(--night-muted);flex-wrap:wrap;justify-content:flex-end}
+.sb-foot button{background:none;border:0;color:var(--night-text);text-decoration:underline;text-underline-offset:3px;font-size:13px;padding:0}
+#sb-hint::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:8px;box-shadow:0 0 0 3px rgba(25,170,30,.25)}
+@media (max-width:900px){
+  .hud{display:none}
+  .hud-m{display:block;position:absolute;top:12px;left:var(--gutter);right:var(--gutter);font:400 11.5px/1.4 var(--mono);color:var(--night-muted);pointer-events:none}
+  .sandbox{top:36px;bottom:auto;left:var(--gutter);right:var(--gutter);justify-items:start}
+  .seg button{padding:6px 10px;font-size:12.5px}
+  .sb-foot{justify-content:flex-start}
+  .hero-in{padding-top:330px}
+}
+/* trip progress */
+.trip{display:flex;gap:12px;font:400 12px/1 var(--mono);color:var(--night-muted);margin-left:8px;white-space:nowrap}
+#trip-where{color:var(--night-text)}
+.trip-line{position:absolute;left:0;right:0;bottom:-1px;height:3px;pointer-events:none}
+.trip-line i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--green) 45%,var(--lime));position:relative}
+.trip-line i:not(.go)::after{opacity:0}
+.trip-line i::after{content:"";position:absolute;right:-5px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px rgba(130,215,20,.3)}
+.bar nav a.on{color:var(--night-text);background:var(--night-line)}
+@media (max-width:1100px){#trip-where{display:none}}
+@media (max-width:900px){.trip{margin-left:auto}.bar .tg{margin-left:10px}}
+@media (max-width:520px){.brand span{display:none}}
+/* achievements */
+.ach-pill{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:inline-flex;gap:10px;align-items:center;background:var(--night);color:var(--night-text);border:1px solid var(--night-line);border-radius:999px;padding:10px 16px 10px 12px;font-weight:500;font-size:14px;box-shadow:0 12px 30px -12px rgba(0,0,0,.55)}
+.ach-pill b{color:var(--lime);font-weight:600}
+.ach-pill.all{border-color:var(--lime)}
+.ach-ico{width:18px;height:18px;border-radius:50%;border:2px solid var(--lime);display:grid;place-items:center}
+.ach-ico::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime)}
+.ach-pill.bump{animation:bump .6s ease}
+@keyframes bump{35%{transform:scale(1.12)}}
+.ach-panel{position:fixed;right:16px;bottom:calc(72px + env(safe-area-inset-bottom,0px));z-index:30;width:min(390px,calc(100vw - 32px));max-height:min(70vh,580px);overflow:auto;background:var(--card);color:var(--ink);border:1px solid var(--rule);border-radius:14px;padding:18px 18px 12px;box-shadow:0 30px 60px -24px rgba(0,0,0,.45)}
+.ach-panel h4{font-size:18px}
+.ach-panel p{font-size:13px;color:var(--ink-2);margin-top:4px}
+.ach-panel ul{list-style:none;margin:14px 0 6px;padding:0}
+.ach-panel li{display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:10px;align-items:start;padding:10px 0;border-top:1px solid var(--rule);font-size:13.5px;line-height:1.4;color:var(--ink-2)}
+.ach-panel li b{display:block;color:var(--ink);font-weight:600;font-size:14.5px}
+.ach-panel li i{width:18px;height:18px;border-radius:50%;border:2px dashed var(--rule);margin-top:2px;display:block}
+.ach-panel li.got i{border:0;background:var(--green);position:relative}
+.ach-panel li.got i::after,.toast i::after{content:"";position:absolute;left:50%;top:45%;width:5px;height:9px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:translate(-50%,-50%) rotate(45deg)}
+.ach-panel li:not(.got) b{color:var(--ink-2)}
+.ach-panel li em{font-style:normal;font-size:12px;color:var(--green-ink)}
+#ach-reset{background:none;border:0;color:var(--ink-2);font-size:12.5px;text-decoration:underline;text-underline-offset:3px;padding:6px 0}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,160%);z-index:40;display:flex;gap:12px;align-items:center;background:var(--night);color:var(--night-text);border:1px solid rgba(130,215,20,.55);border-radius:14px;padding:12px 20px 12px 14px;box-shadow:0 20px 40px -16px rgba(0,0,0,.6);transition:transform .4s cubic-bezier(.2,.9,.3,1.15);pointer-events:none;max-width:calc(100vw - 32px);font-weight:600;font-size:15px}
+.toast.show{transform:translate(-50%,0)}
+.toast i{width:28px;height:28px;border-radius:50%;background:var(--green);flex:none;position:relative}
+.toast small{display:block;color:var(--night-muted);font-size:12px;font-weight:400}
+@media (max-width:700px){.toast{bottom:calc(76px + env(safe-area-inset-bottom,0px))}}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}.ach-pill.bump{animation:none}}
+
 </style>
 </head>
 <body>
@@ -322,8 +382,10 @@ footer a{color:var(--ink-2);text-underline-offset:3px}
     <nav aria-label="Залы">
       <a href="#hall-1">Путь</a><a href="#hall-2">Где я</a><a href="#hall-3">Что вокруг</a><a href="#hall-4">Прогнозы</a><a href="#letter">2056</a>
     </nav>
+    <div class="trip num" aria-hidden="true"><span id="trip-where">Старт</span><span id="trip-km">0,0 из 33 км</span></div>
     <a class="tg" href="https://t.me/rnd2GIS" target="_blank" rel="noopener">Telegram</a>
   </div>
+  <div class="trip-line" aria-hidden="true"><i id="trip-fill"></i></div>
 </header>
 
 <main id="top">
@@ -331,13 +393,21 @@ footer a{color:var(--ink-2);text-underline-offset:3px}
 <section class="hero" aria-labelledby="h1">
   <canvas id="city" aria-hidden="true"></canvas>
   <div class="hud num" aria-hidden="true">
-    <span>алгоритм <b>A*</b></span>
-    <span>узлов в графе <b id="hud-n">0</b></span>
-    <span>просмотрено <b class="k" id="hud-v">0</b></span>
-    <span>расчёт <b id="hud-t">0</b> мс</span>
-    <span>маршрут <b id="hud-d">0</b> км</span>
+    <span>граф <b id="hud-n">0</b> узлов</span>
+    <table><tbody>
+      <tr id="r-astar" class="on"><td>A*</td><td class="v">0</td><td class="t">0</td></tr>
+      <tr id="r-dijkstra"><td>Дейкстра</td><td class="v">0</td><td class="t">0</td></tr>
+      <tr id="r-bidir"><td>Двусторонний</td><td class="v">0</td><td class="t">0</td></tr>
+    </tbody></table>
+    <span class="mut">просмотрено узлов · мс</span>
+    <span>маршрут <b id="hud-d">0</b></span>
   </div>
-  <div class="hint" aria-hidden="true">Нажмите на карту, чтобы поставить точку Б</div>
+  <div class="hud-m num" id="hud-line" aria-hidden="true"></div>
+  <div class="sandbox" id="sandbox" role="toolbar" aria-label="Песочница маршрутов">
+    <div class="seg" aria-label="Что делает нажатие"><button type="button" data-mode="route" aria-pressed="true">Точка Б</button><button type="button" data-mode="close" aria-pressed="false">Перекрыть улицу</button><button type="button" data-mode="jam" aria-pressed="false">Пробка</button></div>
+    <div class="seg" aria-label="Алгоритм"><button type="button" data-alg="astar" aria-pressed="true">A*</button><button type="button" data-alg="dijkstra" aria-pressed="false">Дейкстра</button><button type="button" data-alg="bidir" aria-pressed="false">Двусторонний</button></div>
+    <div class="sb-foot"><span id="sb-hint">Нажмите на карту, чтобы поставить точку Б</span><button type="button" id="sb-reset">Сбросить город</button></div>
+  </div>
   <div class="wrap hero-in">
     <div class="hero-copy">
       <div class="status"><i aria-hidden="true"></i>Строим маршрут: 1938 → 2056</div>
@@ -349,8 +419,9 @@ footer a{color:var(--ink-2);text-underline-offset:3px}
       </div>
       <div class="legend" aria-hidden="true">
         <span><i style="background:var(--yellow)"></i>просмотренные улицы</span>
+        <span><i style="background:#78B4FF"></i>встречный поиск</span>
         <span><i style="background:var(--green)"></i>маршрут</span>
-        <span><i style="background:var(--blue)"></i>точки А и Б</span>
+        <span><i style="background:#F0503C"></i>пробки и перекрытия</span>
       </div>
     </div>
     <nav class="halls" aria-label="Залы музея">
@@ -615,6 +686,15 @@ footer a{color:var(--ink-2);text-underline-offset:3px}
   </div>
 </footer>
 
+<button class="ach-pill" id="ach-pill" type="button" aria-expanded="false" aria-controls="ach-panel"><span class="ach-ico" aria-hidden="true"></span>Достижения <b id="ach-count" class="num">0/8</b></button>
+<div class="ach-panel" id="ach-panel" hidden>
+  <h4>Достижения</h4>
+  <p>Открываются, пока вы гуляете по залам. Хранятся только в этом браузере.</p>
+  <ul id="ach-list"></ul>
+  <button type="button" id="ach-reset">Сбросить прогресс</button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
 (()=>{
 'use strict';
@@ -628,95 +708,171 @@ function rng(seed){let s=seed>>>0||1;return()=>{s^=s<<13;s>>>=0;s^=s>>17;s^=s<<5
 /* =========================================================
    HERO: radial-ring city graph + animated A*
    ========================================================= */
+/* =========================================================
+   ACHIEVEMENTS (stored only in this browser)
+   ========================================================= */
+const ACH=(function(){
+  const LIST=[
+    {id:'route', t:'Точка Б', d:'Постройте свой маршрут на ночной карте'},
+    {id:'close', t:'Дорожные работы', d:'Перекройте улицу и посмотрите, как алгоритм ищет объезд'},
+    {id:'jam',   t:'Час пик', d:'Нарисуйте пробку на карте'},
+    {id:'algos', t:'Три алгоритма', d:'Сравните A*, Дейкстру и двусторонний поиск'},
+    {id:'beat',  t:'Обогнал ЭВМ', d:'Проложите маршрут по 12 магазинам короче, чем ЭВМ в 1972 году'},
+    {id:'robot', t:'Глазами робота', d:'Найдите себя на карте без ошибки при помехах от 35%'},
+    {id:'seer',  t:'Провидец', d:'Угадайте все четыре прогноза в зале 4'},
+    {id:'letter',t:'Письмо в 2056', d:'Соберите свою статью из будущего'},
+  ];
+  const KEY='museum88-ach';
+  let got=new Set();
+  try{ got=new Set(JSON.parse(localStorage.getItem(KEY)||'[]')) }catch(e){}
+  const save=()=>{ try{ localStorage.setItem(KEY,JSON.stringify([...got])) }catch(e){} };
+  const pill=$('#ach-pill'), panel=$('#ach-panel'), list=$('#ach-list'), count=$('#ach-count'), toast=$('#toast');
+  function render(){
+    count.textContent=`${got.size}/${LIST.length}`;
+    pill.classList.toggle('all',got.size===LIST.length);
+    list.innerHTML=LIST.map(a=>`<li class="${got.has(a.id)?'got':''}"><i aria-hidden="true"></i><span><b>${a.t}</b>${a.d}</span><em>${got.has(a.id)?'открыто':''}</em></li>`).join('');
+  }
+  let tt;
+  function unlock(id){
+    if(got.has(id)) return; const a=LIST.find(x=>x.id===id); if(!a) return;
+    got.add(id); save(); render();
+    toast.innerHTML=`<i aria-hidden="true"></i><span><small>Достижение ${got.size} из ${LIST.length}</small>${a.t}</span>`;
+    toast.classList.add('show'); pill.classList.remove('bump'); void pill.offsetWidth; pill.classList.add('bump');
+    clearTimeout(tt); tt=setTimeout(()=>toast.classList.remove('show'),3600);
+    if(got.size===LIST.length) setTimeout(()=>{ toast.innerHTML=`<i aria-hidden="true"></i><span><small>Все ${LIST.length} из ${LIST.length}</small>Маршрут пройден целиком</span>`; toast.classList.add('show'); clearTimeout(tt); tt=setTimeout(()=>toast.classList.remove('show'),4200) },3800);
+  }
+  pill.addEventListener('click',()=>{ const open=panel.hidden; panel.hidden=!open; pill.setAttribute('aria-expanded',open) });
+  document.addEventListener('click',e=>{ if(!panel.hidden && !panel.contains(e.target) && !pill.contains(e.target)){ panel.hidden=true; pill.setAttribute('aria-expanded','false') } });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !panel.hidden){ panel.hidden=true; pill.setAttribute('aria-expanded','false'); pill.focus() } });
+  $('#ach-reset').addEventListener('click',()=>{ got.clear(); save(); render() });
+  render();
+  return {unlock};
+})();
+
+/* =========================================================
+   TRIP PROGRESS (scroll odometer)
+   ========================================================= */
+try{(function trip(){
+  const fill=$('#trip-fill'), km=$('#trip-km'), where=$('#trip-where');
+  const halls=[['top','Старт'],['hall-1','Зал 1 · Путь'],['hall-2','Зал 2 · Где я'],['hall-3','Зал 3 · Что вокруг'],['hall-4','Зал 4 · Прогнозы'],['letter','Финал · 2056']].map(([id,n])=>[document.getElementById(id),n,id]);
+  const links=[...document.querySelectorAll('.bar nav a')];
+  let raf=0;
+  function upd(){
+    raf=0; const max=document.documentElement.scrollHeight-innerHeight; const p=max>0?Math.min(1,Math.max(0,scrollY/max)):0;
+    fill.style.width=(p*100).toFixed(2)+'%'; fill.classList.toggle('go',p>.003); km.textContent=`${fmt(p*33,1)} из 33 км`;
+    let cur=halls[0]; for(const h of halls){ if(h[0] && h[0].getBoundingClientRect().top<innerHeight*.4) cur=h }
+    where.textContent=cur[1];
+    links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur[2]));
+  }
+  addEventListener('scroll',()=>{ if(!raf) raf=requestAnimationFrame(upd) },{passive:true});
+  addEventListener('resize',upd); upd();
+})();}catch(err){console.error('section failed',err)}
+
 try{(function hero(){
   const cv=$('#city'), ctx=cv.getContext('2d');
-  const hud={n:$('#hud-n'),v:$('#hud-v'),t:$('#hud-t'),d:$('#hud-d')};
+  const hudN=$('#hud-n'), hudD=$('#hud-d'), hudLine=$('#hud-line');
+  const rows={astar:$('#r-astar'),dijkstra:$('#r-dijkstra'),bidir:$('#r-bidir')};
+  const hintEl=$('#sb-hint');
+  const NAMES={astar:'A*',dijkstra:'Дейкстра',bidir:'Двусторонний'};
+  const HINTS={route:'Нажмите на карту, чтобы поставить точку Б',close:'Нажмите на улицу, чтобы перекрыть её',jam:'Проведите по улицам, чтобы создать пробку'};
   let W=0,H=0,DPR=1,nodes=[],adj=[],edges=[],cx=0,cy=0,R=0,river=[];
-  const KM=36; // city diameter in km for HUD
+  const KM=36;
+  let alg='astar', mode='route', auto=true, idle=null;
+  const usedAlgs=new Set(['astar']);
+
+  /* ---------- city graph ---------- */
   function build(){
     const r=rng(1972); nodes=[]; adj=[]; edges=[];
-    const isMobile=W<900;
-    cx=isMobile?W*.5:W*.66; cy=isMobile?H*.30:H*.47; R=Math.max(W,H)*(isMobile?.62:.56);
+    const mob=W<900;
+    cx=mob?W*.5:W*.66; cy=mob?H*.22:H*.47; R=Math.max(W,H)*(mob?.62:.56);
     const add=(x,y)=>{nodes.push({x,y});adj.push([]);return nodes.length-1};
-    const link=(a,b,maj=0)=>{if(a===b)return;if(adj[a].some(e=>e.to===b))return;const d=Math.hypot(nodes[a].x-nodes[b].x,nodes[a].y-nodes[b].y);const w=maj?d*.8:d;adj[a].push({to:b,w});adj[b].push({to:a,w});edges.push([a,b,d,maj])};
-    const rings=[.06,.12,.2,.31,.46,.66,.9];
-    const nRad=18, radAng=[];
+    const link=(a,b,maj=0)=>{if(a===b||adj[a].some(o=>o.to===b))return;const d=Math.hypot(nodes[a].x-nodes[b].x,nodes[a].y-nodes[b].y);const e={a,b,d,maj,closed:false,jam:0};edges.push(e);adj[a].push({to:b,e});adj[b].push({to:a,e})};
+    const rings=[.06,.12,.2,.31,.46,.66,.9], nRad=18, radAng=[];
     for(let i=0;i<nRad;i++) radAng.push(i/nRad*Math.PI*2+(r()-.5)*.18);
-    // ring nodes at radial intersections plus intermediates
     const ringIdx=[];
     rings.forEach((rr,ri)=>{
-      const pts=[]; const extra=1+Math.floor(ri*1.2);
+      const pts=[], extra=1+Math.floor(ri*1.2);
       for(let i=0;i<nRad;i++){
         const a0=radAng[i], a1=radAng[(i+1)%nRad]+(i===nRad-1?Math.PI*2:0);
-        for(let k=0;k<=extra;k++){
-          if(k===extra) continue;
-          const a=a0+(a1-a0)*k/extra; const rj=rr*R*(1+(r()-.5)*.05);
-          pts.push({id:add(cx+Math.cos(a)*rj,cy+Math.sin(a)*rj*.86),rad:k===0?i:-1});
-        }
+        for(let k=0;k<extra;k++){ const a=a0+(a1-a0)*k/extra, rj=rr*R*(1+(r()-.5)*.05);
+          pts.push({id:add(cx+Math.cos(a)*rj,cy+Math.sin(a)*rj*.86),rad:k===0?i:-1}); }
       }
       for(let i=0;i<pts.length;i++) link(pts[i].id,pts[(i+1)%pts.length].id,ri===1||ri===3||ri===6?2:1);
       ringIdx.push(pts);
     });
-    // radials
-    for(let i=0;i<nRad;i++){
-      let prev=-1;
-      ringIdx.forEach(pts=>{const p=pts.find(q=>q.rad===i); if(p){ if(prev>=0) link(prev,p.id,1); prev=p.id; }});
-    }
-    // local streets: jittered points between rings linked to nearest
+    for(let i=0;i<nRad;i++){ let prev=-1; ringIdx.forEach(pts=>{const p=pts.find(q=>q.rad===i); if(p){ if(prev>=0) link(prev,p.id,1); prev=p.id }}) }
     const loc=[];
-    for(let i=0;i<620;i++){
-      const a=r()*Math.PI*2, rr=(.07+Math.pow(r(),.8)*.86)*R;
-      loc.push(add(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr*.86));
-    }
-    // grid hashing for knn
-    const cell=R*.06, grid=new Map();
-    const key=(x,y)=>Math.floor(x/cell)+','+Math.floor(y/cell);
+    for(let i=0;i<620;i++){ const a=r()*Math.PI*2, rr=(.07+Math.pow(r(),.8)*.86)*R; loc.push(add(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr*.86)) }
+    const cell=R*.06, grid=new Map(), key=(x,y)=>Math.floor(x/cell)+','+Math.floor(y/cell);
     nodes.forEach((n,i)=>{const k=key(n.x,n.y);(grid.get(k)||grid.set(k,[]).get(k)).push(i)});
-    loc.forEach(i=>{
-      const n=nodes[i], gx=Math.floor(n.x/cell), gy=Math.floor(n.y/cell), cand=[];
+    loc.forEach(i=>{ const n=nodes[i], gx=Math.floor(n.x/cell), gy=Math.floor(n.y/cell), cand=[];
       for(let dx=-2;dx<=2;dx++)for(let dy=-2;dy<=2;dy++){const g=grid.get((gx+dx)+','+(gy+dy)); if(g) g.forEach(j=>{if(j!==i)cand.push([j,Math.hypot(nodes[j].x-n.x,nodes[j].y-n.y)])})}
-      cand.sort((a,b)=>a[1]-b[1]);
-      cand.slice(0,3).forEach(([j,d])=>{ if(d<cell*2.2) link(i,j) });
-    });
-    // river: sinuous curve through center
-    river=[]; for(let t=-1.2;t<=1.2;t+=.02){ const x=cx+t*R*1.1; const y=cy+Math.sin(t*3.1+.6)*R*.13+t*R*.12; river.push([x,y]); }
-    hud.n.textContent=intf(nodes.length);
+      cand.sort((a,b)=>a[1]-b[1]); cand.slice(0,3).forEach(([j,d])=>{ if(d<cell*2.2) link(i,j) }); });
+    river=[]; for(let t=-1.2;t<=1.2;t+=.02){ river.push([cx+t*R*1.1, cy+Math.sin(t*3.1+.6)*R*.13+t*R*.12]) }
+    hudN.textContent=intf(nodes.length);
   }
-  function resize(){
-    const b=cv.getBoundingClientRect(); DPR=Math.min(2,devicePixelRatio||1);
-    W=b.width; H=b.height; cv.width=W*DPR; cv.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
-    build(); A=W<900?pickNear(W*.25,200):pickNear(cx-R*.12,cy+R*.02); newTarget();
-  }
-  // A* with recorded expansion
-  function astar(s,t){
+  const weight=e=>e.closed?Infinity:e.d*(e.maj?.8:1)*(1+e.jam*4);
+
+  /* ---------- search algorithms ---------- */
+  function Heap(){const h=[];return{get size(){return h.length},peek(){return h[0][0]},
+    push(f,i){h.push([f,i]);let k=h.length-1;while(k>0){const p=(k-1)>>1;if(h[p][0]<=h[k][0])break;[h[p],h[k]]=[h[k],h[p]];k=p}},
+    pop(){const top=h[0],last=h.pop();if(h.length){h[0]=last;let k=0;for(;;){const l=2*k+1,r=l+1;let m=k;if(l<h.length&&h[l][0]<h[m][0])m=l;if(r<h.length&&h[r][0]<h[m][0])m=r;if(m===k)break;[h[m],h[k]]=[h[k],h[m]];k=m}}return top}}}
+  function uni(s,t,useH){
     const N=nodes.length, g=new Float64Array(N).fill(Infinity), came=new Int32Array(N).fill(-1), closed=new Uint8Array(N);
-    const h=i=>Math.hypot(nodes[i].x-nodes[t].x,nodes[i].y-nodes[t].y);
-    const heap=[]; const push=(f,i)=>{heap.push([f,i]);let k=heap.length-1;while(k>0){const p=(k-1)>>1;if(heap[p][0]<=heap[k][0])break;[heap[p],heap[k]]=[heap[k],heap[p]];k=p}};
-    const pop=()=>{const top=heap[0],last=heap.pop();if(heap.length){heap[0]=last;let k=0;for(;;){const l=2*k+1,r=l+1;let m=k;if(l<heap.length&&heap[l][0]<heap[m][0])m=l;if(r<heap.length&&heap[r][0]<heap[m][0])m=r;if(m===k)break;[heap[m],heap[k]]=[heap[k],heap[m]];k=m}}return top};
-    g[s]=0; push(h(s),s); const order=[];
-    while(heap.length){const [,u]=pop(); if(closed[u])continue; closed[u]=1; if(came[u]>=0) order.push([came[u],u]); if(u===t)break;
-      for(const e of adj[u]){const ng=g[u]+e.w; if(ng<g[e.to]){g[e.to]=ng;came[e.to]=u;push(ng+h(e.to),e.to)}}}
-    const path=[]; let c=t; while(c>=0){path.push(c);c=came[c]} path.reverse();
+    const h=useH?(i=>Math.hypot(nodes[i].x-nodes[t].x,nodes[i].y-nodes[t].y)*.8):(()=>0);
+    const q=Heap(); g[s]=0; q.push(h(s),s); const order=[];
+    while(q.size){ const [,u]=q.pop(); if(closed[u])continue; closed[u]=1; if(came[u]>=0) order.push([came[u],u,0]); if(u===t)break;
+      for(const {to,e} of adj[u]){ const w=weight(e); if(w===Infinity)continue; const ng=g[u]+w; if(ng<g[to]){g[to]=ng;came[to]=u;q.push(ng+h(to),to)} } }
+    const path=[]; if(g[t]<Infinity){ let c=t; while(c>=0){path.push(c);c=came[c]} path.reverse() }
     return {order,path,len:g[t]};
   }
-  const okPos=n=> W<900 ? (n.x>24&&n.x<W-24&&n.y>150&&n.y<250) : (n.x>W*.5&&n.x<W-70&&n.y>H*.3&&n.y<H-180);
-  function pickNear(x,y){let b=0,bd=Infinity;nodes.forEach((n,i)=>{const d=(n.x-x)**2+(n.y-y)**2;if(d<bd){bd=d;b=i}});return b}
-  let retry=0,A=0,B=0,run=null,phase='search',shown=0,pathT=0,hold=0,fade=1;
-  function newTarget(bIdx){
-    if(bIdx==null){ // random far target within visible area
-      const r=Math.random; let tries=0;
-      do{ const a=r()*Math.PI*2, rr=(.25+r()*.5)*R; bIdx=pickNear(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr*.86); tries++ }
-      while(tries<60 && (Math.hypot(nodes[bIdx].x-nodes[A].x,nodes[bIdx].y-nodes[A].y)<R*.35 || !okPos(nodes[bIdx])));
+  function bidir(s,t){
+    const N=nodes.length, G=[new Float64Array(N).fill(Infinity),new Float64Array(N).fill(Infinity)], C=[new Int32Array(N).fill(-1),new Int32Array(N).fill(-1)], X=[new Uint8Array(N),new Uint8Array(N)], Q=[Heap(),Heap()];
+    G[0][s]=0; G[1][t]=0; Q[0].push(0,s); Q[1].push(0,t); let mu=Infinity, mF=-1, mB=-1; const order=[];
+    if(s===t) return {order,path:[s],len:0};
+    while(Q[0].size&&Q[1].size){
+      if(Q[0].peek()+Q[1].peek()>=mu) break;
+      const side=Q[0].peek()<=Q[1].peek()?0:1, o=1-side;
+      const [,u]=Q[side].pop(); if(X[side][u]) continue; X[side][u]=1; if(C[side][u]>=0) order.push([C[side][u],u,side]);
+      for(const {to,e} of adj[u]){ const w=weight(e); if(w===Infinity)continue; const ng=G[side][u]+w;
+        if(ng<G[side][to]){G[side][to]=ng;C[side][to]=u;Q[side].push(ng,to)}
+        if(G[o][to]<Infinity){ const cand=G[side][u]+w+G[o][to]; if(cand<mu){mu=cand; if(side===0){mF=u;mB=to}else{mF=to;mB=u}} } }
     }
-    if(bIdx===A){ bIdx=adj[A].length?adj[A][0].to:(A+1)%nodes.length }
-    B=bIdx;
-    const t0=performance.now(); run=astar(A,B); const dt=performance.now()-t0;
-    if(!isFinite(run.len)||run.path.length<2){ if(!arguments.length&&++retry<20){ return newTarget() } }
-    retry=0;
-    hud.v.textContent=intf(run.order.length); hud.t.textContent=fmt(dt,1);
-    hud.d.textContent=fmt(run.len/(2*R*.9)*KM,1);
+    const path=[]; if(mu<Infinity){ let c=mF; const f=[]; while(c>=0){f.push(c);c=C[0][c]} f.reverse(); let b=mB; const bk=[]; while(b>=0){bk.push(b);b=C[1][b]} path.push(...f,...bk) }
+    return {order,path,len:mu};
+  }
+  const RUN={astar:(s,t)=>uni(s,t,true),dijkstra:(s,t)=>uni(s,t,false),bidir};
+
+  /* ---------- state ---------- */
+  let A=0,B=0,run=null,phase='search',shown=0,pathT=0,hold=0,fade=1;
+  const okPos=n=> W<900 ? (n.x>24&&n.x<W-24&&n.y>175&&n.y<290) : (n.x>W*.5&&n.x<W-70&&n.y>Math.min(H*.42,400)&&n.y<H-200);
+  function pickNear(x,y,filter){let b=-1,bd=Infinity;nodes.forEach((n,i)=>{if(filter&&!filter(i))return;const d=(n.x-x)**2+(n.y-y)**2;if(d<bd){bd=d;b=i}});return b<0?0:b}
+  function compute(){
+    const res={};
+    for(const k of ['astar','dijkstra','bidir']){ const t0=performance.now(); const r=RUN[k](A,B); res[k]={r,ms:performance.now()-t0} }
+    for(const k in res){ const row=rows[k]; if(!row) continue; row.classList.toggle('on',k===alg);
+      row.querySelector('.v').textContent=intf(res[k].r.order.length); row.querySelector('.t').textContent=fmt(res[k].ms,1); }
+    run=res[alg].r;
+    const ok=run.path.length>1&&isFinite(run.len);
+    hudD.textContent=ok?fmt(run.len/(2*R*.9)*KM,1)+' км':'маршрута нет';
+    if(hudLine) hudLine.textContent=`${NAMES[alg]} · ${intf(run.order.length)} узлов · ${fmt(res[alg].ms,1)} мс`;
     phase='search'; shown=RM?run.order.length:0; pathT=RM?1:0; hold=0; fade=1;
   }
+  function newTarget(){
+    let b=A, tries=0;
+    do{ const a=Math.random()*Math.PI*2, rr=(.25+Math.random()*.5)*R; b=pickNear(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr*.86); tries++ }
+    while(tries<80 && (b===A || Math.hypot(nodes[b].x-nodes[A].x,nodes[b].y-nodes[A].y)<R*.3 || !okPos(nodes[b])));
+    if(b===A) b=adj[A].length?adj[A][0].to:(A+1)%nodes.length;
+    B=b; compute();
+    if(!(run.path.length>1)&&tries<200){ /* unreachable in a closed-off city: try once more */ }
+  }
+  function resize(){
+    const bb=cv.getBoundingClientRect(); DPR=Math.min(2,devicePixelRatio||1);
+    W=bb.width; H=bb.height; cv.width=W*DPR; cv.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+    build(); A=W<900?pickNear(W*.25,230):pickNear(cx-R*.12,cy+R*.02); newTarget();
+  }
+
+  /* ---------- drawing ---------- */
   function pin(x,y,col){
     ctx.save(); ctx.translate(x,y);
     ctx.fillStyle='rgba(0,0,0,.35)'; ctx.beginPath(); ctx.ellipse(0,2,7,2.5,0,0,Math.PI*2); ctx.fill();
@@ -724,50 +880,73 @@ try{(function hero(){
     ctx.fillStyle=col; ctx.fill(); ctx.lineWidth=2.5; ctx.strokeStyle='#fff'; ctx.stroke();
     ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(0,-21,4,0,Math.PI*2); ctx.fill(); ctx.restore();
   }
-  function frame(){ try{ paint() }catch(e){ if(!frame.warned){console.error(e);frame.warned=1} } if(!RM) requestAnimationFrame(frame) }
+  const seg=(e)=>{ctx.moveTo(nodes[e.a].x,nodes[e.a].y);ctx.lineTo(nodes[e.b].x,nodes[e.b].y)};
   function paint(){
-    ctx.clearRect(0,0,W,H);
-    // river
-    ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.clearRect(0,0,W,H); ctx.lineCap='round'; ctx.lineJoin='round';
     ctx.strokeStyle='rgba(0,115,250,.22)'; ctx.lineWidth=R*.035; ctx.beginPath(); river.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y)); ctx.stroke();
-    // base streets
-    const layer=(m,col,lw)=>{ctx.strokeStyle=col;ctx.lineWidth=lw;ctx.beginPath();for(const [a,b,,mj] of edges){if(mj!==m)continue;ctx.moveTo(nodes[a].x,nodes[a].y);ctx.lineTo(nodes[b].x,nodes[b].y)}ctx.stroke()};
+    const layer=(m,col,lw)=>{ctx.strokeStyle=col;ctx.lineWidth=lw;ctx.beginPath();for(const e of edges) if(e.maj===m) seg(e);ctx.stroke()};
     layer(0,'#24392D',1); layer(1,'#33503F',1.6); layer(2,'rgba(130,215,20,.28)',2.2);
     ctx.fillStyle='#3E5E4B'; for(let i=0;i<nodes.length;i+=3){const n=nodes[i];ctx.fillRect(n.x-.8,n.y-.8,1.6,1.6)}
+    // jams and closures
+    ctx.strokeStyle='rgba(240,80,60,.75)'; ctx.lineWidth=4; ctx.beginPath(); for(const e of edges) if(e.jam&&!e.closed) seg(e); ctx.stroke();
+    ctx.strokeStyle='#F0503C'; ctx.lineWidth=2.5; ctx.setLineDash([4,4]); ctx.beginPath(); for(const e of edges) if(e.closed) seg(e); ctx.stroke(); ctx.setLineDash([]);
+    for(const e of edges) if(e.closed){ const mx=(nodes[e.a].x+nodes[e.b].x)/2, my=(nodes[e.a].y+nodes[e.b].y)/2; ctx.fillStyle='#F0503C'; ctx.beginPath(); ctx.arc(mx,my,6,0,Math.PI*2); ctx.fill(); ctx.strokeStyle='#fff'; ctx.lineWidth=1.8; ctx.beginPath(); ctx.moveTo(mx-2.6,my-2.6); ctx.lineTo(mx+2.6,my+2.6); ctx.moveTo(mx+2.6,my-2.6); ctx.lineTo(mx-2.6,my+2.6); ctx.stroke() }
     if(run){
-      // explored
       const step=Math.max(4,Math.ceil(run.order.length/90));
-      if(phase==='search'){ shown=Math.min(run.order.length,shown+step); if(shown>=run.order.length) phase='path'; }
+      if(phase==='search'){ shown=Math.min(run.order.length,shown+step); if(shown>=run.order.length) phase='path' }
       ctx.globalAlpha=fade;
-      ctx.strokeStyle='rgba(255,184,28,.7)'; ctx.lineWidth=1.6; ctx.beginPath();
-      for(let i=0;i<shown;i++){const [a,b]=run.order[i];ctx.moveTo(nodes[a].x,nodes[a].y);ctx.lineTo(nodes[b].x,nodes[b].y)} ctx.stroke();
-      if(phase==='search'){ // frontier glow
-        ctx.fillStyle='#FFD36B';
-        for(let i=Math.max(0,shown-step*3);i<shown;i++){const n=nodes[run.order[i][1]];ctx.fillRect(n.x-1.5,n.y-1.5,3,3)}
+      for(const side of [0,1]){
+        ctx.strokeStyle=side?'rgba(120,180,255,.7)':'rgba(255,184,28,.7)'; ctx.lineWidth=1.6; ctx.beginPath();
+        for(let i=0;i<shown;i++){const o=run.order[i]; if(o[2]!==side)continue; ctx.moveTo(nodes[o[0]].x,nodes[o[0]].y); ctx.lineTo(nodes[o[1]].x,nodes[o[1]].y)} ctx.stroke();
       }
-      if(phase!=='search'){
+      if(phase==='search'){ ctx.fillStyle='#FFD36B'; for(let i=Math.max(0,shown-step*3);i<shown;i++){const n=nodes[run.order[i][1]];ctx.fillRect(n.x-1.5,n.y-1.5,3,3)} }
+      if(phase!=='search' && run.path.length>1){
         pathT=Math.min(1,pathT+(RM?1:.035));
-        const p=run.path, upto=Math.min(p.length-1,Math.max(0,Math.floor((p.length-1)*pathT)));
+        const p=run.path, upto=Math.min(p.length-1,Math.max(1,Math.floor((p.length-1)*pathT)));
         ctx.strokeStyle='rgba(130,215,20,.25)'; ctx.lineWidth=12; ctx.beginPath();
         for(let i=0;i<=upto;i++){const n=nodes[p[i]];i?ctx.lineTo(n.x,n.y):ctx.moveTo(n.x,n.y)} ctx.stroke();
         ctx.strokeStyle='#19AA1E'; ctx.lineWidth=5; ctx.stroke();
-        if(pathT>=1 && phase==='path'){phase='hold'}
-        if(phase==='hold'){ hold++; if(hold>150 && !RM){ phase='fade' } }
-        if(phase==='fade'){ fade-=.03; if(fade<=0){ A=B; newTarget(); } }
-      }
+      } else if(phase!=='search'){ pathT=1 }
+      if(phase==='path' && pathT>=1) phase='hold';
+      if(phase==='hold'){ hold++; if(auto && hold>150 && !RM) phase='fade' }
+      if(phase==='fade'){ fade-=.03; if(fade<=0){ A=B; newTarget() } }
       ctx.globalAlpha=1;
-      pin(nodes[A].x,nodes[A].y,'#0073FA');
-      pin(nodes[B].x,nodes[B].y,'#19AA1E');
+      pin(nodes[A].x,nodes[A].y,'#0073FA'); pin(nodes[B].x,nodes[B].y,'#19AA1E');
     }
   }
-  cv.addEventListener('click',e=>{
-    const b=cv.getBoundingClientRect(); const x=e.clientX-b.left, y=e.clientY-b.top;
-    if(phase==='fade'||phase==='hold') A=B;
-    newTarget(pickNear(x,y)); if(RM) frame();
+  function frame(){ try{ paint() }catch(e){ if(!frame.w){console.error(e);frame.w=1} } if(!RM) requestAnimationFrame(frame) }
+
+  /* ---------- interaction ---------- */
+  function touch(){ auto=false; clearTimeout(idle); idle=setTimeout(()=>{auto=true; if(phase==='hold') hold=0},30000) }
+  function nearestEdge(x,y,maxD){
+    let best=null,bd=maxD*maxD;
+    for(const e of edges){ const a=nodes[e.a], b=nodes[e.b]; const vx=b.x-a.x, vy=b.y-a.y, L=vx*vx+vy*vy||1; let t=((x-a.x)*vx+(y-a.y)*vy)/L; t=Math.max(0,Math.min(1,t)); const dx=a.x+vx*t-x, dy=a.y+vy*t-y, d=dx*dx+dy*dy; if(d<bd){bd=d;best=e} }
+    return best;
+  }
+  let painting=false, painted=false;
+  const pos=e=>{const b=cv.getBoundingClientRect();return [e.clientX-b.left,e.clientY-b.top]};
+  function brush(x,y){ for(const e of edges){ const mx=(nodes[e.a].x+nodes[e.b].x)/2, my=(nodes[e.a].y+nodes[e.b].y)/2; if((mx-x)**2+(my-y)**2<34*34 && !e.jam){e.jam=1;painted=true} } if(RM) paint() }
+  cv.addEventListener('pointerdown',e=>{
+    const [x,y]=pos(e); touch();
+    if(mode==='route'){ if(phase==='fade'){A=B} const b=pickNear(x,y,i=>i!==A); B=b; compute(); ACH.unlock('route'); if(RM) paint() }
+    else if(mode==='close'){ const ed=nearestEdge(x,y,16); if(ed){ ed.closed=!ed.closed; compute(); ACH.unlock('close'); if(RM) paint() } }
+    else if(mode==='jam'){ painting=true; painted=false; try{cv.setPointerCapture(e.pointerId)}catch(_){}; brush(x,y) }
   });
-  let to; addEventListener('resize',()=>{clearTimeout(to);to=setTimeout(()=>{resize(); if(RM) frame()},150)});
+  cv.addEventListener('pointermove',e=>{ if(painting){ const [x,y]=pos(e); brush(x,y) } });
+  const endPaint=()=>{ if(!painting) return; painting=false; if(painted){ compute(); ACH.unlock('jam'); if(RM) paint() } };
+  cv.addEventListener('pointerup',endPaint); cv.addEventListener('pointercancel',endPaint);
+  cv.style.touchAction='pan-y';
+  document.querySelectorAll('#sandbox [data-mode]').forEach(b=>b.addEventListener('click',()=>{
+    mode=b.dataset.mode; document.querySelectorAll('#sandbox [data-mode]').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    hintEl.textContent=HINTS[mode]; cv.style.touchAction=mode==='jam'?'none':'pan-y'; touch(); }));
+  document.querySelectorAll('#sandbox [data-alg]').forEach(b=>b.addEventListener('click',()=>{
+    alg=b.dataset.alg; usedAlgs.add(alg); document.querySelectorAll('#sandbox [data-alg]').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    touch(); compute(); if(usedAlgs.size===3) ACH.unlock('algos'); if(RM) paint(); }));
+  $('#sb-reset').addEventListener('click',()=>{ edges.forEach(e=>{e.closed=false;e.jam=0}); touch(); compute(); if(RM) paint() });
+  let to; addEventListener('resize',()=>{ if(Math.abs(cv.getBoundingClientRect().width-W)<2) return; clearTimeout(to); to=setTimeout(()=>{resize(); if(RM) paint()},150) });
   resize(); frame();
 })();}catch(err){console.error('section failed',err)}
+
 
 /* =========================================================
    HALL 1: EVM 1972 — the bookshop route
@@ -865,7 +1044,9 @@ try{(function evm(){
   print(['ВЦ Главмосавтотранса    1972','Задача: маршрут по 12 букинистам','Старт и финиш: редакция, ул. Кирова','Вариантов обхода: 479 001 600','—','Ожидаю маршрут оператора']);
 
   function finishUser(){
-    tip.textContent='Готово. Теперь запустите ЭВМ 1972 года и точное решение.';
+    const beat=len(route)<len(evmRoute)-1e-9;
+    tip.textContent=beat?'Ваш маршрут короче маршрута ЭВМ 1972 года. Проверьте, насколько он близок к оптимуму.':'Готово. Теперь запустите ЭВМ 1972 года и точное решение.';
+    if(beat) ACH.unlock('beat');
     print(['—',['Маршрут оператора принят','hl'],...route.slice(1,-1).map((i,k)=>`${pad2(k+1)} ${padR(S[i].s,15)} ${fmt(D[route[k]][i])}`),`Итого по прямой: ${fmt(len(route))} км`]);
   }
   const evmRoute=[0,1,2,3,4,5,6,7,8,9,10,11,12,0];
@@ -945,7 +1126,7 @@ try{(function corr(){
       const v=wv&&pv?num/Math.sqrt(wv*pv):0; heat[y*cw+x]=v; if(v>best){best=v;bx=x;by=y} }
     const dt=performance.now()-t0; const err=Math.max(Math.abs(bx-tx),Math.abs(by-ty));
     const fin=()=>{ drawMap(heat,heat.length,[bx,by]); busy=false;
-      out.innerHTML=`Перебрано <b>${intf(cw*ch)}</b> положений за <b>${fmt(dt,1)} мс</b>. Пик совпадения ${fmt(best,2)}. `+(err===0?'<b>Робот нашёл себя точно.</b>':err<=2?`<b>Ошибка ${err} кл.</b> Помехи сбили пик совсем чуть-чуть.`:`<b>Ошибка ${err} кл.</b> Помехи победили: так бывает и у настоящих систем. Уменьшите помехи или возьмите новый кадр.`)+' Синяя рамка — где робот считает себя, зелёная пунктирная — где он на самом деле.'; };
+      out.innerHTML=`Перебрано <b>${intf(cw*ch)}</b> положений за <b>${fmt(dt,1)} мс</b>. Пик совпадения ${fmt(best,2)}. `+(err===0?'<b>Робот нашёл себя точно.</b>':err<=2?`<b>Ошибка ${err} кл.</b> Помехи сбили пик совсем чуть-чуть.`:`<b>Ошибка ${err} кл.</b> Помехи победили: так бывает и у настоящих систем. Уменьшите помехи или возьмите новый кадр.`)+' Синяя рамка — где робот считает себя, зелёная пунктирная — где он на самом деле.'; if(err===0 && +noise.value>=35) ACH.unlock('robot'); };
     if(RM){fin();return}
     let k=0; const stepN=Math.ceil(heat.length/40); const anim=()=>{k=Math.min(heat.length,k+stepN); drawMap(heat,k); if(k<heat.length) requestAnimationFrame(anim); else fin()}; anim();
   }
@@ -980,6 +1161,7 @@ try{(function preds(){
       if(i===d.ans) score++; answered++;
       const v=document.createElement('div'); v.className='verdict'; v.innerHTML=`<b>${opts[d.ans]}.</b> ${d.v}`; c.appendChild(v);
       $('#score').textContent=`${score} из ${D.length}`;
+      if(answered===D.length && score===D.length) ACH.unlock('seer');
       if(answered===D.length) $('#score-note').textContent= score>=3?'Чутьё на технологии у вас отличное. Осталось проверить своё в 2056 году.':'Предсказывать трудно. Попробуйте сделать это лучше, чем инженеры прошлого.';
     });
     root.appendChild(c);
@@ -1045,7 +1227,7 @@ try{(function letter(){
       <div class="cols">${a.paras.map(p=>`<p>${p}</p>`).join('')}</div>`;
   }
   function result(){
-    const a=article(); paper.classList.remove('ghost'); paper.innerHTML=paperHTML(a); acts.hidden=false;
+    const a=article(); paper.classList.remove('ghost'); paper.innerHTML=paperHTML(a); acts.hidden=false; ACH.unlock('letter');
     quiz.innerHTML=`<div class="qtop"><span>Готово</span><button type="button" id="q-back">Изменить ответы</button></div>
       <div class="bars" aria-hidden="true">${Q.map(()=>'<i class="on"></i>').join('')}</div>
       <h3>Ваша статья из 2056 года готова</h3><p style="margin-top:12px;color:var(--ink-2)">Сохраните её и вернитесь через тридцать лет проверить. Инженеры из 1956-го уже ждут.</p>`;
