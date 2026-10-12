@@ -6,7 +6,7 @@
     "to": "2026-09-30T23:59:59Z",
     "label": "Q3 2026"
   },
-  "updated_at": "2026-10-12T11:01:37.706Z",
+  "updated_at": "2026-10-12T11:07:54.006Z",
   "source_label": "Telegram public web preview (t.me/s)",
   "note": "Бесплатный публичный сбор без TGStat/Telemetr API. Количество постов фиксируется за Q3 2026; просмотры этих Q3-постов и число подписчиков — текущий публичный снимок на дату updated_at и со временем меняются. Views/subs = средние просмотры Q3-постов / текущее число подписчиков. Это не engagement rate и показатель может быть выше 100%.",
   "summary": {
@@ -1885,9 +1885,9 @@
       "subscribers": 11000,
       "q3_posts": 55,
       "views_available": 50,
-      "avg_views": 2693.4,
+      "avg_views": 2693.6,
       "median_views": 2560,
-      "views_subscriber_ratio_pct": 24.485454545454548,
+      "views_subscriber_ratio_pct": 24.487272727272728,
       "avg_reactions": null,
       "reactions_available": 0,
       "reactions_total": null,
@@ -1975,7 +1975,7 @@
         {
           "id": 2087,
           "published_at": "2026-09-09T08:58:57.000Z",
-          "views": 2220,
+          "views": 2230,
           "reactions": null,
           "text": "Плохо, если всё сломалось. Отлично, если вы QA Сегодня с профессиональным праздником поздравляем всех тестировщиков и QA-инженеров! Благодарим за ваше внимание к деталям, желаем находить баги раньше пользователей и получать воспроизводимые кейсы с первого раза. А по возможности б",
           "url": "https://t.me/latech/2087"
@@ -3190,9 +3190,9 @@
       "subscribers": 3910,
       "q3_posts": 50,
       "views_available": 50,
-      "avg_views": 1556.2,
+      "avg_views": 1556.4,
       "median_views": 1455,
-      "views_subscriber_ratio_pct": 39.80051150895141,
+      "views_subscriber_ratio_pct": 39.80562659846548,
       "avg_reactions": null,
       "reactions_available": 0,
       "reactions_total": null,
@@ -3280,7 +3280,7 @@
         {
           "id": 1931,
           "published_at": "2026-09-15T09:01:01.000Z",
-          "views": 1820,
+          "views": 1830,
           "reactions": null,
           "text": "",
           "url": "https://t.me/dododev/1931"

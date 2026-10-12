@@ -6,7 +6,7 @@
     "to": "2026-09-30T23:59:59Z",
     "label": "Q3 2026"
   },
-  "updated_at": "2026-10-12T11:00:30.752Z",
+  "updated_at": "2026-10-12T11:06:58.581Z",
   "source_label": "YouTube Data API v3",
   "note": "Публичные данные YouTube. Число роликов относится к публикациям за Q3 2026; просмотры и подписчики — снимок на дату updated_at. В сбор включены только явно привязанные/проверенные каналы; остальные бренды помечены not_configured и не подменяются автоматическим поиском.",
   "summary": {
@@ -41,14 +41,14 @@
       "subscribers_hidden": false,
       "channel_total_videos": 1297,
       "q3_videos": 86,
-      "q3_views_total": 385356,
-      "q3_views_average": 4480.883720930233,
+      "q3_views_total": 385376,
+      "q3_views_average": 4481.116279069767,
       "q3_views_median": 2620,
       "top_video": {
         "id": "MKNg7gwnUX0",
         "title": "System Design на собеседовании: ошибки, которые тебя топят",
         "published_at": "2026-07-03T12:00:20Z",
-        "views": 61457,
+        "views": 61455,
         "likes": 1615,
         "comments": 279,
         "url": "https://www.youtube.com/watch?v=MKNg7gwnUX0"
@@ -67,7 +67,7 @@
           "id": "RBChn_YTcWs",
           "title": "ИИ заменит аналитика?",
           "published_at": "2026-09-30T09:00:33Z",
-          "views": 8964,
+          "views": 8959,
           "likes": 84,
           "comments": 10,
           "url": "https://www.youtube.com/watch?v=RBChn_YTcWs"
@@ -148,7 +148,7 @@
           "id": "rT3ua0w_CCw",
           "title": "Digital Immune System: мониторинга, SRE и автотестов уже недостаточно | В SREду на кухне | AvitoTech",
           "published_at": "2026-09-23T12:00:08Z",
-          "views": 1978,
+          "views": 1979,
           "likes": 12,
           "comments": 2,
           "url": "https://www.youtube.com/watch?v=rT3ua0w_CCw"
@@ -184,7 +184,7 @@
           "id": "efkDYRBqo7w",
           "title": "Супермагия в метриках",
           "published_at": "2026-09-19T12:43:33Z",
-          "views": 5733,
+          "views": 5732,
           "likes": 27,
           "comments": 4,
           "url": "https://www.youtube.com/watch?v=efkDYRBqo7w"
@@ -202,7 +202,7 @@
           "id": "0GL9XHEbICM",
           "title": "Маленький, но продуктовый инженер #avitotech #подкаст #backend #work  #productivity",
           "published_at": "2026-09-17T13:47:48Z",
-          "views": 7366,
+          "views": 7361,
           "likes": 49,
           "comments": 15,
           "url": "https://www.youtube.com/watch?v=0GL9XHEbICM"
@@ -661,7 +661,7 @@
           "id": "EBPGiG9ddKQ",
           "title": "Spec-Driven Development: теория, инструменты, практика — Александр Шаповалов",
           "published_at": "2026-07-21T09:00:17Z",
-          "views": 24445,
+          "views": 24471,
           "likes": 500,
           "comments": 43,
           "url": "https://www.youtube.com/watch?v=EBPGiG9ddKQ"
@@ -706,7 +706,7 @@
           "id": "s3MEDuXtEa8",
           "title": "Когда сотрудник уходит: чек-лист для тех, кто остаётся | Подкаст «Свободный слот»",
           "published_at": "2026-07-16T09:00:26Z",
-          "views": 1819,
+          "views": 1822,
           "likes": 55,
           "comments": 4,
           "url": "https://www.youtube.com/watch?v=s3MEDuXtEa8"
@@ -715,7 +715,7 @@
           "id": "vezEx9rJG6o",
           "title": "Ушёл из Яндекса в Авито. СТО Авито Товары про свою миссию в айти.",
           "published_at": "2026-07-15T13:15:07Z",
-          "views": 1071,
+          "views": 1072,
           "likes": 21,
           "comments": 2,
           "url": "https://www.youtube.com/watch?v=vezEx9rJG6o"
@@ -796,7 +796,7 @@
           "id": "MKNg7gwnUX0",
           "title": "System Design на собеседовании: ошибки, которые тебя топят",
           "published_at": "2026-07-03T12:00:20Z",
-          "views": 61457,
+          "views": 61455,
           "likes": 1615,
           "comments": 279,
           "url": "https://www.youtube.com/watch?v=MKNg7gwnUX0"
@@ -814,7 +814,7 @@
           "id": "Y51N_H2fZS0",
           "title": "Мы узнали, о чем думают топы в IT прямо сейчас | Подкаст «Свободный слот»",
           "published_at": "2026-07-02T15:55:15Z",
-          "views": 1899,
+          "views": 1900,
           "likes": 41,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=Y51N_H2fZS0"
@@ -823,7 +823,7 @@
           "id": "R23FjSp8Z-A",
           "title": "Что такое релизы? И причем тут Feature Flags, Canary и Rollback? | «В SREду на кухне» | AvitoTech",
           "published_at": "2026-07-01T12:00:06Z",
-          "views": 1616,
+          "views": 1617,
           "likes": 40,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=R23FjSp8Z-A"
@@ -894,8 +894,8 @@
       "subscribers_hidden": false,
       "channel_total_videos": 574,
       "q3_videos": 103,
-      "q3_views_total": 158235,
-      "q3_views_average": 1536.2621359223301,
+      "q3_views_total": 158234,
+      "q3_views_average": 1536.2524271844661,
       "q3_views_median": 1202,
       "top_video": {
         "id": "APVFepbSKs8",
@@ -920,7 +920,7 @@
           "id": "qZnObL-dXt0",
           "title": "От мусоровоза до процессора: как предыдущий опыт помогает решать новые инженерные задачи",
           "published_at": "2026-09-30T08:00:10Z",
-          "views": 4053,
+          "views": 4051,
           "likes": null,
           "comments": 1,
           "url": "https://www.youtube.com/watch?v=qZnObL-dXt0"
@@ -1019,7 +1019,7 @@
           "id": "PMool366exw",
           "title": "Промышленная асинхронность: опыт внедрения C++20 корутин в сервисы KvadraOS — Илья Клементьев, YADRO",
           "published_at": "2026-09-21T07:17:07Z",
-          "views": 1108,
+          "views": 1107,
           "likes": null,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=PMool366exw"
@@ -1082,7 +1082,7 @@
           "id": "m2Z663jnaOY",
           "title": "Как избежать split-brain в задачах на Postgres",
           "published_at": "2026-09-16T07:15:03Z",
-          "views": 441,
+          "views": 442,
           "likes": null,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=m2Z663jnaOY"
@@ -1136,7 +1136,7 @@
           "id": "joi_n7F-_jg",
           "title": "Запуск нейросетей на ПЛИС. Краевой ИИ. Академическая деятельность.",
           "published_at": "2026-09-11T14:30:06Z",
-          "views": 6735,
+          "views": 6734,
           "likes": null,
           "comments": 18,
           "url": "https://www.youtube.com/watch?v=joi_n7F-_jg"
@@ -1685,7 +1685,7 @@
           "id": "jQt9gSgXnOU",
           "title": "СКИФ в Новосибирске: что это и зачем нужен новый синхротрон. Лекция Дарьи Дороховой.",
           "published_at": "2026-07-17T14:22:01Z",
-          "views": 1197,
+          "views": 1199,
           "likes": null,
           "comments": 16,
           "url": "https://www.youtube.com/watch?v=jQt9gSgXnOU"
@@ -2532,9 +2532,9 @@
       "subscribers_hidden": false,
       "channel_total_videos": 435,
       "q3_videos": 6,
-      "q3_views_total": 33192,
-      "q3_views_average": 5532,
-      "q3_views_median": 814,
+      "q3_views_total": 33193,
+      "q3_views_average": 5532.166666666667,
+      "q3_views_median": 814.5,
       "top_video": {
         "id": "OCDApumwfr0",
         "title": "Ulbi TV: ИИ и будущее разработки",
@@ -2549,7 +2549,7 @@
           "id": "dkO6sZlKYFU",
           "title": "Евгений Кокуйкин: как ИИ пытается сбежать",
           "published_at": "2026-09-25T10:33:38Z",
-          "views": 668,
+          "views": 669,
           "likes": 7,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=dkO6sZlKYFU"
@@ -2616,8 +2616,8 @@
       "subscribers_hidden": false,
       "channel_total_videos": 857,
       "q3_videos": 63,
-      "q3_views_total": 689860,
-      "q3_views_average": 10950.15873015873,
+      "q3_views_total": 689856,
+      "q3_views_average": 10950.095238095239,
       "q3_views_median": 1700,
       "top_video": {
         "id": "W0-ObyrU1Rk",
@@ -2642,7 +2642,7 @@
           "id": "upblgqVHEjQ",
           "title": "Серверный SSD — лишние расходы или вложение в надежность? 🤔",
           "published_at": "2026-09-28T09:37:58Z",
-          "views": 14812,
+          "views": 14819,
           "likes": 171,
           "comments": 16,
           "url": "https://www.youtube.com/watch?v=upblgqVHEjQ"
@@ -2651,7 +2651,7 @@
           "id": "UVCC_urcEh4",
           "title": "Зеленый Selectel 2026",
           "published_at": "2026-09-25T13:53:16Z",
-          "views": 334,
+          "views": 333,
           "likes": 7,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=UVCC_urcEh4"
@@ -2669,7 +2669,7 @@
           "id": "eGZ3kHoE6-k",
           "title": "Скидки до 80% на выделенные серверы",
           "published_at": "2026-09-25T10:16:51Z",
-          "views": 27929,
+          "views": 27928,
           "likes": 3,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=eGZ3kHoE6-k"
@@ -2813,7 +2813,7 @@
           "id": "-752ZoasCNo",
           "title": "Пока вы читаете этот пост, ваш смартфон может помогать атаке на чужой сервер.",
           "published_at": "2026-09-04T11:12:59Z",
-          "views": 1306,
+          "views": 1303,
           "likes": 13,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=-752ZoasCNo"
@@ -2822,7 +2822,7 @@
           "id": "R21UGxa_7tk",
           "title": "✉️ У вас есть непрочитанное сообщение (1)",
           "published_at": "2026-09-03T14:03:18Z",
-          "views": 7366,
+          "views": 7363,
           "likes": 90,
           "comments": 5,
           "url": "https://www.youtube.com/watch?v=R21UGxa_7tk"
@@ -2831,7 +2831,7 @@
           "id": "ICLGtt_jqG0",
           "title": "Открытые LLM или локальные ИИ-модели — как бизнесу внедрить нейросети?",
           "published_at": "2026-09-03T10:07:28Z",
-          "views": 23363,
+          "views": 23362,
           "likes": 147,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=ICLGtt_jqG0"
@@ -2903,7 +2903,7 @@
           "id": "oKDW7NoMwHY",
           "title": "Мы нашли подходящий сервер для экспериментов 🤩",
           "published_at": "2026-08-21T11:14:35Z",
-          "views": 30431,
+          "views": 30430,
           "likes": 181,
           "comments": 0,
           "url": "https://www.youtube.com/watch?v=oKDW7NoMwHY"
@@ -2975,7 +2975,7 @@
           "id": "4PMuhOBkImI",
           "title": "Серверы заказывали? Мы доставили.",
           "published_at": "2026-08-07T14:25:57Z",
-          "views": 2458,
+          "views": 2457,
           "likes": 28,
           "comments": 2,
           "url": "https://www.youtube.com/watch?v=4PMuhOBkImI"
