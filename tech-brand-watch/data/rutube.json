@@ -6,7 +6,7 @@
     "to": "2026-09-30T23:59:59Z",
     "label": "Q3 2026"
   },
-  "updated_at": "2026-10-12T06:10:49.483Z",
+  "updated_at": "2026-10-12T10:58:47.986Z",
   "source_label": "RUTUBE public JSON endpoints",
   "note": "Бесплатный публичный сбор без авторизации. Количество видео фиксируется за Q3 2026; просмотры этих Q3-видео — текущий публичный снимок RUTUBE и могут расти после окончания квартала. Для Magnit Tech используется отдельный tech-плейлист внутри общего корпоративного канала.",
   "summary": {
@@ -26,8 +26,8 @@
       "status": "ok",
       "q3_videos": 70,
       "views_available": 70,
-      "q3_views_total": 7319,
-      "q3_views_average": 104.55714285714286,
+      "q3_views_total": 7321,
+      "q3_views_average": 104.58571428571429,
       "q3_views_median": 107.5,
       "top_video": {
         "id": "ef013f589c8f5df88f34749ba6b4c09f",
@@ -214,7 +214,7 @@
           "id": "db880eac055c9a6f96b1a6058d03d915",
           "title": "От аварии до аварии: Incident, Problem и Risk Management | «В SREду на кухне» | AvitoTech",
           "published_at": "2026-09-02T15:00:23.000Z",
-          "views": 36,
+          "views": 38,
           "url": "https://rutube.ru/video/db880eac055c9a6f96b1a6058d03d915/",
           "duration": 3431,
           "origin_type": "rtb"
@@ -681,8 +681,8 @@
       "status": "ok",
       "q3_videos": 104,
       "views_available": 104,
-      "q3_views_total": 10998,
-      "q3_views_average": 105.75,
+      "q3_views_total": 11003,
+      "q3_views_average": 105.79807692307692,
       "q3_views_median": 95.5,
       "top_video": {
         "id": "2e092453d78610b717704df22b37b89c",
@@ -707,7 +707,7 @@
           "id": "6706e97e65c2e8d3d0cceb8911778571",
           "title": "От мусоровоза до российского процессора: путь программиста-самоучки из Могилева",
           "published_at": "2026-09-29T16:13:35.000Z",
-          "views": 86,
+          "views": 87,
           "url": "https://rutube.ru/video/6706e97e65c2e8d3d0cceb8911778571/",
           "duration": 2943,
           "origin_type": "rtb"
@@ -815,7 +815,7 @@
           "id": "6e6962d9e6b801849d6e27875f2be965",
           "title": "Корутины в продакшене: как перевести движущийся поезд на асфальт — Алексей Макареня, Kaspersky Lab",
           "published_at": "2026-09-21T10:42:22.000Z",
-          "views": 70,
+          "views": 71,
           "url": "https://rutube.ru/video/6e6962d9e6b801849d6e27875f2be965/",
           "duration": 2613,
           "origin_type": "rtb"
@@ -1391,7 +1391,7 @@
           "id": "a2dfbc6b8f497687b26e8b68d14b61e7",
           "title": "Как попасть в профессию, которой почти не учат в вузах, — история инженера-верификатора",
           "published_at": "2026-07-24T10:28:54.000Z",
-          "views": 132,
+          "views": 133,
           "url": "https://rutube.ru/video/a2dfbc6b8f497687b26e8b68d14b61e7/",
           "duration": 4453,
           "origin_type": "rtb"
@@ -1580,7 +1580,7 @@
           "id": "8d9d88ba9c74a538bc7f039eb02e940e",
           "title": "Когерентность. Автоматизация. Искусственный интеллект для RTL и верификации",
           "published_at": "2026-07-03T18:14:54.000Z",
-          "views": 200,
+          "views": 202,
           "url": "https://rutube.ru/video/8d9d88ba9c74a538bc7f039eb02e940e/",
           "duration": 6870,
           "origin_type": "rtb"

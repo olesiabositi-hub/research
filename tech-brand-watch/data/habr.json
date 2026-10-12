@@ -7,7 +7,7 @@
     "label": "Q3 2026",
     "days": 92
   },
-  "updated_at": "2026-10-12T06:10:17.049Z",
+  "updated_at": "2026-10-12T10:58:15.050Z",
   "source_label": "Habr public company article pages",
   "note": "Публичные метрики Habr. Количество статей относится к публикациям 01.07–30.09.2026. Просмотры — снимок на дату updated_at и могут расти после окончания квартала. Для SberTech используется общий блог Сбера и это отмечено shared_blog=true.",
   "summary": {
@@ -30,8 +30,8 @@
       "q3_articles": 43,
       "articles_per_week": 3.27,
       "views_available": 43,
-      "views_total": 884800,
-      "views_average": 20576.74418604651,
+      "views_total": 886800,
+      "views_average": 20623.25581395349,
       "views_median": 12000,
       "top_article": {
         "title": "Не трогая веса модели: как мы построили исследовательского агента Алисы AI и в разы сократили потребление GPU",
@@ -66,8 +66,8 @@
           "title": "Открываем AliceAI-Foundation-80B-A3B-Base — новую языковую модель Яндекса, обученную с нуля",
           "url": "https://habr.com/ru/companies/yandex/articles/1083300/",
           "published_at": "2026-09-21T06:45:43.000Z",
-          "views": 70000,
-          "views_label": "70K"
+          "views": 71000,
+          "views_label": "71K"
         },
         {
           "title": "История приставки 3DO Interactive Multiplayer: большие планы и короткая жизнь",
@@ -150,8 +150,8 @@
           "title": "Рыбно‑пузырьковая энтропия в KMS",
           "url": "https://habr.com/ru/companies/yandex_cloud_and_infra/articles/1072736/",
           "published_at": "2026-08-28T07:02:36.000Z",
-          "views": 26000,
-          "views_label": "26K"
+          "views": 27000,
+          "views_label": "27K"
         },
         {
           "title": "Снапшот-тесты доступности: как сэкономить ресурс QA-отдела и спасти ревьюеров от гадания на кофейной гуще",
@@ -1120,8 +1120,8 @@
       "q3_articles": 33,
       "articles_per_week": 2.51,
       "views_available": 33,
-      "views_total": 328900,
-      "views_average": 9966.666666666666,
+      "views_total": 329100,
+      "views_average": 9972.727272727272,
       "views_median": 8100,
       "top_article": {
         "title": "Java Digest #38: Valhalla в master, ежемесячные патчи Oracle и AI-скиллы в IDEA",
@@ -1135,8 +1135,8 @@
           "title": "Scikit-rank — open-source-библиотека для нейросетевого ранжирования",
           "url": "https://habr.com/ru/companies/tbank/articles/1088224/",
           "published_at": "2026-09-30T07:01:00.000Z",
-          "views": 5400,
-          "views_label": "5.4K"
+          "views": 5500,
+          "views_label": "5.5K"
         },
         {
           "title": "Как BI‑команда краснодарского ИТ‑хаба мигрировала HR‑отчетность и собрала GuideBook",
@@ -1275,8 +1275,8 @@
           "title": "Реализация контроллеров с использованием SDK Kubebuilder",
           "url": "https://habr.com/ru/companies/tbank/articles/1069112/",
           "published_at": "2026-08-11T12:30:38.000Z",
-          "views": 7500,
-          "views_label": "7.5K"
+          "views": 7600,
+          "views_label": "7.6K"
         },
         {
           "title": "Java Digest #38: Valhalla в master, ежемесячные патчи Oracle и AI-скиллы в IDEA",
@@ -1375,8 +1375,8 @@
       "q3_articles": 168,
       "articles_per_week": 12.78,
       "views_available": 168,
-      "views_total": 1898200,
-      "views_average": 11298.809523809523,
+      "views_total": 1899400,
+      "views_average": 11305.952380952382,
       "views_median": 9200,
       "top_article": {
         "title": "Темная сторона эпохи перемен: как Геральт из Ривии сломал канон сказок",
@@ -1488,8 +1488,8 @@
           "title": "Ученые заменили кору мозга мышей человеческими клетками: что из этого получилось",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1085242/",
           "published_at": "2026-09-22T14:49:55.000Z",
-          "views": 8200,
-          "views_label": "8.2K"
+          "views": 8300,
+          "views_label": "8.3K"
         },
         {
           "title": "Почему нельзя просто загрузить историю с фитнес-браслета в LLM и попросить оценить здоровье",
@@ -1600,8 +1600,8 @@
           "title": "Легендарный HP iPAQ hx4700: что там внутри?",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1081348/",
           "published_at": "2026-09-13T10:09:04.000Z",
-          "views": 15000,
-          "views_label": "15K"
+          "views": 16000,
+          "views_label": "16K"
         },
         {
           "title": "Земля как единый организм, электрификация огромной страны и выход в космос: чем мы обязаны Владимиру Вернадскому",
@@ -1719,8 +1719,8 @@
           "title": "Quest 3, PICO 4 Ultra, Vision Pro и Galaxy XR: четыре 3D-гарнитуры для разных задач",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1078164/",
           "published_at": "2026-09-03T12:55:02.000Z",
-          "views": 9500,
-          "views_label": "9.5K"
+          "views": 9600,
+          "views_label": "9.6K"
         },
         {
           "title": "ИИ‑агент спешит на помощь: как мы автоматизировали более 70% рутины аналитика и увеличили эффективность команды",
@@ -2575,8 +2575,8 @@
       "q3_articles": 12,
       "articles_per_week": 0.91,
       "views_available": 12,
-      "views_total": 112000,
-      "views_average": 9333.333333333334,
+      "views_total": 112100,
+      "views_average": 9341.666666666666,
       "views_median": 8900,
       "top_article": {
         "title": "От полной выгрузки к S3 и PostgreSQL: как мы доставляем гигабайты данных в память подов",
@@ -2590,8 +2590,8 @@
           "title": "OLAP OVER HTTP: как отдавать большие аналитические данные через API и не положить сервис",
           "url": "https://habr.com/ru/companies/ozontech/articles/1084762/",
           "published_at": "2026-09-28T09:00:24.000Z",
-          "views": 7600,
-          "views_label": "7.6K"
+          "views": 7700,
+          "views_label": "7.7K"
         },
         {
           "title": "«Я думал, вы уже начали» — почему задачи зависают между «готово» и «взял»",
@@ -5104,8 +5104,8 @@
       "q3_articles": 10,
       "articles_per_week": 0.76,
       "views_available": 10,
-      "views_total": 63521,
-      "views_average": 6352.1,
+      "views_total": 63624,
+      "views_average": 6362.4,
       "views_median": 6800,
       "top_article": {
         "title": "Пять дней ожидания: опыт длинных временных окон Kafka stream",
@@ -5119,8 +5119,8 @@
           "title": "Менторство наоборот – чему джуны могут научить тимлида",
           "url": "https://habr.com/ru/companies/magnit/articles/1085320/",
           "published_at": "2026-09-27T23:12:11.000Z",
-          "views": 321,
-          "views_label": "321"
+          "views": 324,
+          "views_label": "324"
         },
         {
           "title": "Векторный поиск: деплой без GPU на Triton Inference Server",
@@ -5168,8 +5168,8 @@
           "title": "CI/CD для данных и моделей на Airflow: как мы деплоим прогноз спроса в «Магните»",
           "url": "https://habr.com/ru/companies/magnit/articles/1061444/",
           "published_at": "2026-07-21T14:50:38.000Z",
-          "views": 4800,
-          "views_label": "4.8K"
+          "views": 4900,
+          "views_label": "4.9K"
         },
         {
           "title": "Как решаются оптимизационные задачи в масштабе. Декомпозиция и инженерия",
@@ -5693,8 +5693,8 @@
       "q3_articles": 10,
       "articles_per_week": 0.76,
       "views_available": 10,
-      "views_total": 76400,
-      "views_average": 7640,
+      "views_total": 76500,
+      "views_average": 7650,
       "views_median": 8050,
       "top_article": {
         "title": "Как разделить фронтенд на модули и связать их между собой: на примере маркетплейса",
@@ -5708,8 +5708,8 @@
           "title": "Архитектура управления доступом в базы данных через Trino в масштабах всей компании",
           "url": "https://habr.com/ru/companies/rwb/articles/1085216/",
           "published_at": "2026-09-29T16:07:01.000Z",
-          "views": 8900,
-          "views_label": "8.9K"
+          "views": 9000,
+          "views_label": "9K"
         },
         {
           "title": "Как разделить фронтенд на модули и связать их между собой: на примере маркетплейса",
