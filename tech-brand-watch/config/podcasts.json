@@ -17,7 +17,10 @@
       "show_title": "В SREду на кухне",
       "title_pattern": "SREду на кухне",
       "itunes_search": "В SREду на кухне",
-      "artist_hints": ["avito", "авито"],
+      "artist_hints": [
+        "avito",
+        "авито"
+      ],
       "status": "confirmed",
       "evidence": "https://t.me/avitotech/3469"
     },
@@ -26,7 +29,10 @@
       "show_title": "Бэкенд расправил плечи",
       "title_pattern": "расправил плечи",
       "itunes_search": "Бэкенд расправил плечи",
-      "artist_hints": ["avito", "авито"],
+      "artist_hints": [
+        "avito",
+        "авито"
+      ],
       "status": "confirmed",
       "evidence": "https://t.me/avitotech/3455"
     },
@@ -35,7 +41,10 @@
       "show_title": "Свободный слот",
       "title_pattern": "Свободн(ый|ого) слот",
       "itunes_search": "Свободный слот Авито",
-      "artist_hints": ["avito", "авито"],
+      "artist_hints": [
+        "avito",
+        "авито"
+      ],
       "status": "confirmed",
       "evidence": "https://t.me/avitotech/3414"
     },
@@ -44,7 +53,10 @@
       "show_title": "Не воспроизводится",
       "title_pattern": "Не воспроизводится",
       "itunes_search": "Не воспроизводится Авито",
-      "artist_hints": ["avito", "авито"],
+      "artist_hints": [
+        "avito",
+        "авито"
+      ],
       "status": "confirmed",
       "evidence": "https://t.me/avitotech/3459"
     },
@@ -53,7 +65,10 @@
       "show_title": "AviTalk",
       "title_pattern": "avitalk",
       "itunes_search": "AviTalk",
-      "artist_hints": ["avito", "авито"],
+      "artist_hints": [
+        "avito",
+        "авито"
+      ],
       "status": "confirmed",
       "evidence": "https://t.me/avitotech/3415"
     },
@@ -62,7 +77,10 @@
       "show_title": "Что в пакете",
       "title_pattern": "Что в пакете",
       "itunes_search": "Что в пакете Ozon",
-      "artist_hints": ["ozon", "озон"],
+      "artist_hints": [
+        "ozon",
+        "озон"
+      ],
       "status": "confirmed",
       "evidence": "https://t.me/ozon_tech/2193"
     },
@@ -71,7 +89,10 @@
       "show_title": "Битовые маски",
       "title_pattern": "Битовые маски",
       "itunes_search": "Битовые маски",
-      "artist_hints": ["yadro", "ядро"],
+      "artist_hints": [
+        "yadro",
+        "ядро"
+      ],
       "deezer_id": "1000062205",
       "status": "confirmed",
       "evidence": "https://www.deezer.com/ru/show/1000062205"
@@ -81,7 +102,10 @@
       "show_title": "Сегодня на ретро",
       "title_pattern": "Сегодня на ретро",
       "itunes_search": "Сегодня на ретро Selectel",
-      "artist_hints": ["selectel", "селектел"],
+      "artist_hints": [
+        "selectel",
+        "селектел"
+      ],
       "status": "confirmed",
       "evidence": "https://www.youtube.com/watch?v=NX32oWXo7vw"
     },
@@ -90,7 +114,11 @@
       "show_title": "Tech Talks",
       "title_pattern": "Tech ?Talk ?s",
       "itunes_search": "Tech Talks RWB",
-      "artist_hints": ["rwb", "wildberries", "вайлдберриз"],
+      "artist_hints": [
+        "rwb",
+        "wildberries",
+        "вайлдберриз"
+      ],
       "status": "confirmed",
       "evidence": "https://t.me/tech_rwb/1021",
       "scope_note": "Новый подкаст: первый выпуск 01.07.2026. В качественной матрице Q3 не учтён."
@@ -100,7 +128,10 @@
       "show_title": "Рецепт Додо",
       "title_pattern": "Рецепт Додо",
       "itunes_search": "Рецепт Додо",
-      "artist_hints": ["dodo", "додо"],
+      "artist_hints": [
+        "dodo",
+        "додо"
+      ],
       "status": "confirmed",
       "evidence": "https://t.me/dododev/1849",
       "scope_note": "Корпоративный подкаст Dodo о бизнесе и людях, не только о разработке. В качественной матрице Q3 не учтён."
@@ -110,35 +141,222 @@
       "show_title": "",
       "title_pattern": "подкаст",
       "itunes_search": "Magnit Tech",
-      "artist_hints": ["magnit", "магнит"],
+      "artist_hints": [
+        "magnit",
+        "магнит"
+      ],
       "status": "needs_review",
       "evidence": null,
       "scope_note": "Подкаст подтверждён в матрице, название шоу не найдено. Укажите show_title и feed_url, чтобы включить сбор."
     },
     {
       "brand": "Контур",
-      "show_title": "",
-      "title_pattern": "подкаст",
-      "itunes_search": "Контур подкаст",
-      "artist_hints": ["контур", "kontur"],
-      "status": "needs_review",
-      "evidence": null,
-      "scope_note": "Подкаст подтверждён в матрице, название шоу не найдено. Укажите show_title и feed_url, чтобы включить сбор."
+      "show_title": "Сдобный подкаст",
+      "title_pattern": "Сдобн",
+      "itunes_search": "Сдобный подкаст",
+      "artist_hints": [
+        "контур",
+        "kontur"
+      ],
+      "status": "confirmed",
+      "evidence": "https://podcasts.apple.com/ru/podcast/id1842846645",
+      "scope_note": "Подкаст UX-команды Контура. Подтверждён вручную 12.10.2026.",
+      "apple_id": "1842846645",
+      "feed_url": "https://cloud.mave.digital/66506"
     }
   ],
   "topics": [
-    { "id": "ai", "label": "ИИ и ML", "keywords": ["ии", "ai", "ml", "llm", "нейросет", "агент", "gpt", "машинн", "вайб-кодинг", "vibe", "искусственн"] },
-    { "id": "infra", "label": "Инфраструктура и SRE", "keywords": ["sre", "инфраструкт", "kubernetes", "k8s", "devops", "инцидент", "надёжност", "надежност", "мониторинг", "релиз", "облак", "finops", "observability"] },
-    { "id": "backend", "label": "Бэкенд и архитектура", "keywords": ["бэкенд", "backend", "архитектур", "микросервис", "высоконагруж", "highload", "go", "golang", "java", "api"] },
-    { "id": "qa", "label": "QA и тестирование", "keywords": ["qa", "тестиров", "тест-лид", "автотест", "баг"] },
-    { "id": "security", "label": "Информационная безопасность", "keywords": ["безопасност", "иб", "security", "ddos", "атак", "уязвим", "хакер", "пентест"] },
-    { "id": "data", "label": "Данные и аналитика", "keywords": ["данн", "data", "аналитик", "петабайт", "dwh", "хранилищ", "bi"] },
-    { "id": "systems", "label": "Системное и embedded", "keywords": ["системн", "embedded", "ядро", "linux", "компилятор", "процессор", "железо", "risc"] },
-    { "id": "career", "label": "Карьера и рост", "keywords": ["карьер", "резюме", "собеседован", "рост", "навык", "вкатит", "джун", "junior", "стажир", "грейд", "увольн", "оффер", "найм"] },
-    { "id": "leadership", "label": "Менеджмент и лидерство", "keywords": ["тимлид", "руководител", "менеджмент", "лидер", "tl", "команд", "топ-менедж", "директор", "управлен"] },
-    { "id": "product", "label": "Продукт и бизнес", "keywords": ["продукт", "бизнес", "p&l", "метрик", "рынок", "стратег", "ритейл", "клиент"] },
-    { "id": "culture", "label": "Культура и люди", "keywords": ["культур", "выгоран", "счасть", "люд", "истори", "ценност", "сообществ", "hr"] },
-    { "id": "opensource", "label": "Open Source", "keywords": ["open source", "opensource", "опенсорс", "форк", "fork"] },
-    { "id": "mobile_front", "label": "Мобильная и фронтенд-разработка", "keywords": ["ios", "android", "мобильн", "фронтенд", "frontend", "react", "flutter", "kotlin", "swift"] }
+    {
+      "id": "ai",
+      "label": "ИИ и ML",
+      "keywords": [
+        "ии",
+        "ai",
+        "ml",
+        "llm",
+        "нейросет",
+        "агент",
+        "gpt",
+        "машинн",
+        "вайб-кодинг",
+        "vibe",
+        "искусственн"
+      ]
+    },
+    {
+      "id": "infra",
+      "label": "Инфраструктура и SRE",
+      "keywords": [
+        "sre",
+        "инфраструкт",
+        "kubernetes",
+        "k8s",
+        "devops",
+        "инцидент",
+        "надёжност",
+        "надежност",
+        "мониторинг",
+        "релиз",
+        "облак",
+        "finops",
+        "observability"
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Бэкенд и архитектура",
+      "keywords": [
+        "бэкенд",
+        "backend",
+        "архитектур",
+        "микросервис",
+        "высоконагруж",
+        "highload",
+        "go",
+        "golang",
+        "java",
+        "api"
+      ]
+    },
+    {
+      "id": "qa",
+      "label": "QA и тестирование",
+      "keywords": [
+        "qa",
+        "тестиров",
+        "тест-лид",
+        "автотест",
+        "баг"
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Информационная безопасность",
+      "keywords": [
+        "безопасност",
+        "иб",
+        "security",
+        "ddos",
+        "атак",
+        "уязвим",
+        "хакер",
+        "пентест"
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Данные и аналитика",
+      "keywords": [
+        "данн",
+        "data",
+        "аналитик",
+        "петабайт",
+        "dwh",
+        "хранилищ",
+        "bi"
+      ]
+    },
+    {
+      "id": "systems",
+      "label": "Системное и embedded",
+      "keywords": [
+        "системн",
+        "embedded",
+        "ядро",
+        "linux",
+        "компилятор",
+        "процессор",
+        "железо",
+        "risc"
+      ]
+    },
+    {
+      "id": "career",
+      "label": "Карьера и рост",
+      "keywords": [
+        "карьер",
+        "резюме",
+        "собеседован",
+        "рост",
+        "навык",
+        "вкатит",
+        "джун",
+        "junior",
+        "стажир",
+        "грейд",
+        "увольн",
+        "оффер",
+        "найм"
+      ]
+    },
+    {
+      "id": "leadership",
+      "label": "Менеджмент и лидерство",
+      "keywords": [
+        "тимлид",
+        "руководител",
+        "менеджмент",
+        "лидер",
+        "tl",
+        "команд",
+        "топ-менедж",
+        "директор",
+        "управлен"
+      ]
+    },
+    {
+      "id": "product",
+      "label": "Продукт и бизнес",
+      "keywords": [
+        "продукт",
+        "бизнес",
+        "p&l",
+        "метрик",
+        "рынок",
+        "стратег",
+        "ритейл",
+        "клиент"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Культура и люди",
+      "keywords": [
+        "культур",
+        "выгоран",
+        "счасть",
+        "люд",
+        "истори",
+        "ценност",
+        "сообществ",
+        "hr"
+      ]
+    },
+    {
+      "id": "opensource",
+      "label": "Open Source",
+      "keywords": [
+        "open source",
+        "opensource",
+        "опенсорс",
+        "форк",
+        "fork"
+      ]
+    },
+    {
+      "id": "mobile_front",
+      "label": "Мобильная и фронтенд-разработка",
+      "keywords": [
+        "ios",
+        "android",
+        "мобильн",
+        "фронтенд",
+        "frontend",
+        "react",
+        "flutter",
+        "kotlin",
+        "swift"
+      ]
+    }
   ]
 }
