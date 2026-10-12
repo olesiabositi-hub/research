@@ -7,16 +7,16 @@
     "label": "Q3 2026"
   },
   "status": "presence_topics",
-  "updated_at": "2026-10-12T10:58:51.688Z",
+  "updated_at": "2026-10-12T11:01:48.500Z",
   "source_label": "Public podcast RSS (iTunes/Deezer), YouTube & RUTUBE video versions, Telegram announcements",
   "note": "Прослушивания конкурентов публично несопоставимы и не собираются. Показаны выпуски Q3, частота, длительность и темы; просмотры — только видеоверсий выпусков на YouTube/RUTUBE (снимок на дату updated_at); охват анонсов — просмотры постов в Telegram. Темы определяются по словарю ключевых слов в названиях и описаниях — это ориентир, а не ручная разметка.",
   "summary": {
     "shows_configured": 12,
     "shows_confirmed": 10,
     "shows_with_feed": 5,
-    "shows_active_q3": 9,
-    "brands_active_q3": 5,
-    "q3_episodes_total": 14,
+    "shows_active_q3": 10,
+    "brands_active_q3": 6,
+    "q3_episodes_total": 16,
     "needs_review": 2,
     "errors": 0
   },
@@ -73,6 +73,11 @@
           "count": 2
         },
         {
+          "brand": "Selectel",
+          "show": "Сегодня на ретро",
+          "count": 2
+        },
+        {
           "brand": "Avito",
           "show": "AviTalk",
           "count": 1
@@ -88,7 +93,7 @@
           "count": 1
         }
       ],
-      "episodes": 7
+      "episodes": 9
     },
     {
       "id": "infra",
@@ -184,6 +189,40 @@
       "episodes": 3
     },
     {
+      "id": "backend",
+      "label": "Бэкенд и архитектура",
+      "shows": [
+        {
+          "brand": "Avito",
+          "show": "Бэкенд расправил плечи",
+          "count": 1
+        },
+        {
+          "brand": "Selectel",
+          "show": "Сегодня на ретро",
+          "count": 1
+        }
+      ],
+      "episodes": 2
+    },
+    {
+      "id": "security",
+      "label": "Информационная безопасность",
+      "shows": [
+        {
+          "brand": "Ozon Tech",
+          "show": "Что в пакете",
+          "count": 1
+        },
+        {
+          "brand": "Selectel",
+          "show": "Сегодня на ретро",
+          "count": 1
+        }
+      ],
+      "episodes": 2
+    },
+    {
       "id": "culture",
       "label": "Культура и люди",
       "shows": [
@@ -201,24 +240,12 @@
       "episodes": 2
     },
     {
-      "id": "backend",
-      "label": "Бэкенд и архитектура",
+      "id": "data",
+      "label": "Данные и аналитика",
       "shows": [
         {
-          "brand": "Avito",
-          "show": "Бэкенд расправил плечи",
-          "count": 1
-        }
-      ],
-      "episodes": 1
-    },
-    {
-      "id": "security",
-      "label": "Информационная безопасность",
-      "shows": [
-        {
-          "brand": "Ozon Tech",
-          "show": "Что в пакете",
+          "brand": "Selectel",
+          "show": "Сегодня на ретро",
           "count": 1
         }
       ],
@@ -247,12 +274,6 @@
         }
       ],
       "episodes": 1
-    },
-    {
-      "id": "data",
-      "label": "Данные и аналитика",
-      "shows": [],
-      "episodes": 0
     },
     {
       "id": "mobile_front",
@@ -321,8 +342,8 @@
       "video": {
         "youtube": {
           "q3_videos": 5,
-          "median_views": 1617,
-          "total_views": 8399,
+          "median_views": 1616,
+          "total_views": 8397,
           "top": {
             "title": "От аварии до аварии: Incident, Problem и Risk Management | «В SREду на кухне» | AvitoTech",
             "url": "https://www.youtube.com/watch?v=tfdWJcOp30E",
@@ -384,7 +405,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=rT3ua0w_CCw",
-            "views": 1979
+            "views": 1978
           }
         },
         {
@@ -454,7 +475,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=R23FjSp8Z-A",
-            "views": 1617
+            "views": 1616
           }
         }
       ],
@@ -595,12 +616,12 @@
       "video": {
         "youtube": {
           "q3_videos": 2,
-          "median_views": 1861,
-          "total_views": 3722,
+          "median_views": 1859,
+          "total_views": 3718,
           "top": {
             "title": "Мы узнали, о чем думают топы в IT прямо сейчас | Подкаст «Свободный слот»",
             "url": "https://www.youtube.com/watch?v=Y51N_H2fZS0",
-            "views": 1900,
+            "views": 1899,
             "published_at": "2026-07-02T15:55:15Z"
           }
         },
@@ -644,7 +665,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=s3MEDuXtEa8",
-            "views": 1822
+            "views": 1819
           }
         },
         {
@@ -657,7 +678,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=Y51N_H2fZS0",
-            "views": 1900
+            "views": 1899
           }
         }
       ],
@@ -921,7 +942,7 @@
     {
       "brand": "Selectel",
       "show": "Сегодня на ретро",
-      "status": "no_q3_episodes",
+      "status": "feed_behind_video",
       "scope_note": null,
       "evidence": "https://www.youtube.com/watch?v=NX32oWXo7vw",
       "feed": {
@@ -935,14 +956,35 @@
         "link": "https://selectel.mave.digital"
       },
       "error": null,
-      "episodes_source": "rss",
+      "episodes_source": "youtube",
       "episodes_total": 10,
       "first_episode_at": "2023-11-29T09:50:00.000Z",
       "last_episode_at": "2024-02-07T02:00:00.000Z",
-      "q3_episodes": 0,
+      "q3_episodes": 2,
       "avg_duration_min": null,
-      "median_gap_days": null,
-      "topics": [],
+      "median_gap_days": 33.2,
+      "topics": [
+        {
+          "id": "ai",
+          "label": "ИИ и ML",
+          "count": 2
+        },
+        {
+          "id": "backend",
+          "label": "Бэкенд и архитектура",
+          "count": 1
+        },
+        {
+          "id": "data",
+          "label": "Данные и аналитика",
+          "count": 1
+        },
+        {
+          "id": "security",
+          "label": "Информационная безопасность",
+          "count": 1
+        }
+      ],
       "video": {
         "youtube": {
           "q3_videos": 2,
@@ -968,7 +1010,41 @@
         }
       },
       "telegram": null,
-      "episodes": [],
+      "episodes": [
+        {
+          "title": "Архитектура данных в эпоху ИИ: как избежать дорогих ошибок | Подкаст Selectel «Сегодня на ретро»",
+          "published_at": "2026-09-22T13:51:14Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=NX32oWXo7vw",
+          "description": "",
+          "topics": [
+            "ai",
+            "backend",
+            "data"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=NX32oWXo7vw",
+            "views": 50059
+          }
+        },
+        {
+          "title": "Кибербезопасность в эпоху ИИ: как меняются DDoS и другие атаки | Подкаст Selectel «Сегодня на ретро»",
+          "published_at": "2026-08-20T08:28:05Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=J1-j6aq4FJY",
+          "description": "",
+          "topics": [
+            "ai",
+            "security"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=J1-j6aq4FJY",
+            "views": 52125
+          }
+        }
+      ],
       "match_candidates": []
     },
     {
