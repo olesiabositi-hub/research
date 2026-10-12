@@ -4,450 +4,740 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tech Brand Watch / Q3 2026: что делают tech-бренды</title>
-<meta name="description" content="Единый кейс для команды продвижения бренда 2ГИС: активность 25 российских tech-компаний в Q3 2026 — контент, события, образование, площадки и результаты.">
+<meta name="description" content="Мониторинг 25 российских tech-брендов в Q3 2026: где находится 2ГИС Tech, что стало нормой рынка, performance-метрики Habr, Telegram, YouTube, RUTUBE и подкастов.">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="./assets/2gis-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f2f5f4;--sf:#fff;--ink:#10201c;--mute:#5a6b66;--line:#d8e0dd;--acc:#0b8f38;--hl:#e3f5e8;--bar:#9fb3ad;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1614;--sf:#152220;--ink:#e8f0ed;--mute:#9bb0aa;--line:#263633;--acc:#3fd06d;--hl:#173a26;--bar:#4c625c}}
-:root[data-theme="dark"]{--bg:#0e1614;--sf:#152220;--ink:#e8f0ed;--mute:#9bb0aa;--line:#263633;--acc:#3fd06d;--hl:#173a26;--bar:#4c625c}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px);scroll-behavior:smooth}
+:root{
+  --bg:#0B0F14;--sf:#131921;--sf2:#1A222C;--line:#222B35;--line2:#2A3440;--row:#1C242E;
+  --ink:#EEF2F5;--ink2:#C3CBD3;--mute:#A3ADB8;--dim:#7D8794;
+  --blue:#0573F9;--blue-ink:#7DB7FF;--blue-ink2:#B3D5FF;--blue-bg:rgba(5,115,249,.15);
+  --green:#19A71F;--lime:#82D714;--lime-ink:#B9EE78;--green-bg:rgba(25,167,31,.16);
+  --yellow:#FFB81C;--yellow-ink:#FFD27A;--yellow-bg:rgba(255,184,28,.14);
+  --bar:#5A6573;--mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-a{color:inherit}
-.w{max-width:1080px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-nav .w{display:flex;gap:6px;align-items:center;height:52px;overflow-x:auto}
-nav b{margin-right:auto;white-space:nowrap}
-nav a{text-decoration:none;padding:6px 12px;border-radius:99px;font-size:14px;color:var(--mute);white-space:nowrap}
-nav a:hover,nav a:focus-visible{background:var(--hl);color:var(--ink);outline:none}
-.hero{padding:56px 0 40px}
-.hero .w{display:block;max-width:900px}
-.badge{display:inline-block;border:1px solid var(--acc);color:var(--acc);border-radius:99px;padding:2px 12px;font-size:13px;margin-bottom:16px}
-h1{font-size:clamp(38px,6.4vw,72px);line-height:1.02;font-weight:900;letter-spacing:-.03em;margin:0 0 20px}
-.lead{color:var(--mute);max-width:52ch;margin:0 0 24px}
-.stats{display:flex;flex-wrap:wrap;gap:8px 28px}
-.stats div{font-size:13px;color:var(--mute)}
-.stats b{display:block;font-size:26px;color:var(--ink);line-height:1.1}
-section{padding:48px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;line-height:1.12;margin:0 0 8px}
-.sub{color:var(--mute);margin:0 0 28px;max-width:62ch}
-.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
-.c{background:var(--sf);border:1px solid var(--line);border-radius:10px;padding:18px}
-.c .n{font-size:34px;font-weight:900;color:var(--acc);line-height:1}
-.c h3{margin:8px 0 4px;font-size:17px}
-.c p{margin:0;color:var(--mute);font-size:14px}
-.note{background:var(--hl);border-radius:10px;padding:14px 18px;margin:20px 0;font-size:14px}
-.tw{overflow-x:auto;background:var(--sf);border:1px solid var(--line);border-radius:10px;margin:14px 0}
-table{border-collapse:collapse;width:100%;font-size:14px}
-th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
-td.wrap{white-space:normal;min-width:220px}
-th{font-weight:500;color:var(--mute);font-size:13px}
-th.s{cursor:pointer}th.s:hover{color:var(--ink)}
-tr:last-child td{border-bottom:0}
-tr.me td{background:var(--hl);font-weight:700}
-td.num,th.num{text-align:right}
-.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
-button,select{font:inherit;color:var(--ink);background:var(--sf);border:1px solid var(--line);border-radius:99px;padding:7px 16px;cursor:pointer}
-button[aria-selected="true"],button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-button:focus-visible,select:focus-visible,th.s:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.pane[hidden]{display:none}
-.bar{display:grid;grid-template-columns:130px 1fr 60px;gap:12px;align-items:center;margin:7px 0;font-size:14px}
-.bar span{display:block;height:20px;border-radius:4px;background:var(--bar)}
-.bar.me span{background:var(--acc)}
-.bar.me{font-weight:700}
-.bar em{font-style:normal;text-align:right;color:var(--mute)}
-.pl{margin:0;padding:0;list-style:none}
-.pl li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
-.pl li.me{background:var(--hl);padding-left:10px;padding-right:10px;border-radius:6px}
-.pl small{color:var(--mute)}
-.pl b{grid-row:1/3;grid-column:2;align-self:center}
-.ft{font-size:13px;color:var(--mute)}
-.sc{display:inline-block;min-width:36px;text-align:center;font-weight:700}
-.dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--bar)}
-.dot.o{background:transparent;border:1px solid var(--line)}
-.fl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
-.case{background:var(--sf);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
-.case small{color:var(--mute)}
-.case h3{margin:2px 0 4px;font-size:16px}
-.case.me{border-color:var(--acc)}
-footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
-@media (max-width:760px){.bar{grid-template-columns:100px 1fr 44px}}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue-ink)}a:hover{color:var(--blue-ink2)}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--blue-ink);outline-offset:2px}
+.w{max-width:1240px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+.stripe{display:flex;height:4px}.stripe i{display:block}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(11,15,20,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .w{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.mark{width:28px;height:28px;border-radius:7px;background:var(--green);display:grid;place-items:center}
+.brand b{font-size:16px;letter-spacing:-.01em}
+.chip-q{font:500 12px var(--mono);padding:4px 8px;border-radius:6px;background:var(--sf2);color:var(--yellow);border:1px solid var(--line2)}
+header nav{display:flex;flex-wrap:wrap;gap:2px;flex:1 1 auto}
+header nav a{padding:8px 10px;border-radius:8px;font-size:14px;color:var(--mute);text-decoration:none}
+header nav a:hover{background:var(--sf2);color:var(--ink)}
+.hdr-r{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fresh{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--mute)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--lime);display:inline-block}
+.btn{min-height:40px;padding:0 14px;border-radius:8px;border:0;background:var(--blue);color:#fff;font:600 14px "Golos Text",sans-serif;cursor:pointer}
+.back{font-size:13px;color:var(--dim);text-decoration:none}
+@media(max-width:1100px){header .fresh{display:none}}
+@media(max-width:760px){header nav{display:none}.chip-q{display:none}header .w{flex-wrap:nowrap;justify-content:space-between}.btn{min-height:36px;padding:0 12px;font-size:13px}}
+/* typography */
+.eyebrow{font:400 13px var(--mono);color:var(--mute);margin-bottom:18px;letter-spacing:.02em}
+h1{margin:0;font-size:clamp(32px,4.6vw,56px);line-height:1.06;letter-spacing:-.025em;font-weight:700;max-width:1000px}
+h2{margin:0;font-size:28px;letter-spacing:-.015em;line-height:1.2}
+h3{margin:0;font-size:18px}
+.lead{margin:20px 0 0;font-size:19px;line-height:1.5;color:var(--ink2);max-width:780px}
+.sub{margin:8px 0 24px;font-size:15px;color:var(--mute);max-width:820px}
+.src{font-size:13px;color:var(--dim)}
+.src a{white-space:nowrap}
+.srcs{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
+.srcs .lbl{color:var(--dim)}
+section{padding:40px 0;border-top:1px solid var(--line)}
+#summary{border-top:0;padding-top:56px}
+.sec-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:20px}
+.sec-h .sub{margin-bottom:0}
+/* cards */
+.card{background:var(--sf);border:1px solid var(--line);border-radius:16px;padding:24px}
+.grid{display:grid;gap:16px}
+.g-kpi{grid-template-columns:repeat(auto-fit,minmax(270px,1fr));margin-top:36px}
+.g-3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g-4{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.g-tiles{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.span2{grid-column:span 2;min-width:0}
+@media(max-width:640px){.span2{grid-column:auto}}
+.kpi{display:flex;flex-direction:column;gap:8px}
+.kpi .lbl{font-size:14px;color:var(--mute)}
+.kpi .big{font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.kpi .txt{font-size:14px;color:var(--ink2);line-height:1.45}
+.kpi .auto{margin-top:auto;font-size:12px;color:var(--lime)}
+/* coverage scale */
+.scale{position:relative;height:118px;margin-top:16px}
+.scale .track{position:absolute;left:0;right:0;top:58px;height:8px;border-radius:4px;background:var(--line)}
+.scale .fill{position:absolute;left:0;top:58px;height:8px;border-radius:4px;background:var(--blue)}
+.scale .avg{position:absolute;top:48px;width:2px;height:28px;background:var(--mute)}
+.scale .lab{position:absolute;white-space:nowrap;font-size:13px;color:var(--mute)}
+.scale .val{position:absolute;top:0;white-space:nowrap;font-size:14px;color:var(--ink2)}
+.scale .val b{font-size:30px}
+.scale .logo{position:absolute;top:48px;width:28px;height:28px;margin-left:-14px;border-radius:7px;box-shadow:0 0 0 3px var(--sf)}
+.scale-note{display:none;margin:0 0 12px;font-size:13px;color:var(--mute);line-height:1.5}
+@media(max-width:640px){.scale .dsk,.scale .vl{display:none}.scale-note{display:block;margin-top:14px}.scale{height:100px}}
+.scale .lead-dot{position:absolute;top:52px;width:20px;height:20px;margin-left:-10px;border-radius:50%;background:var(--ink);border:4px solid var(--sf)}
+/* directions */
+.dirs{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:8px}
+.dir{padding:12px;border-radius:10px;font-size:14px;font-weight:500}
+.dir span{font-weight:400;color:var(--mute)}
+.dir.on{background:var(--green-bg);border:1px solid rgba(130,215,20,.35);color:var(--lime-ink)}
+.dir.off{border:1px dashed rgba(255,184,28,.55);color:var(--yellow-ink)}
+.dir.off.hot{background:var(--yellow-bg);border-color:var(--yellow);font-weight:600}
+/* takeaways */
+.tk{display:flex;flex-direction:column;gap:14px;padding:28px}
+.tk .no{font:500 13px var(--mono)}
+.tk .t{font-size:22px;font-weight:700;line-height:1.25}
+.tk .d{font-size:15px;line-height:1.5;color:var(--ink2)}
+.tk .srcs{margin-top:auto}
+.tk.hl{background:var(--yellow);border-color:var(--yellow);color:#14110A}
+.tk.hl .d,.tk.hl a,.tk.hl .lbl{color:#14110A}
+/* tabs & chips */
+.seg{display:inline-flex;padding:4px;border-radius:12px;background:var(--sf2);gap:4px;flex-wrap:wrap}
+.seg button{min-height:44px;padding:0 18px;border:0;border-radius:9px;background:transparent;color:var(--ink2);font:500 15px "Golos Text",sans-serif;cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--blue);color:#fff;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button,.chips select{min-height:44px;padding:0 14px;border-radius:10px;border:1px solid var(--line2);background:transparent;color:var(--ink2);font:500 14px "Golos Text",sans-serif;cursor:pointer}
+.chips select{background:var(--sf)}
+.chips button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.tabs2{display:flex;gap:4px;flex-wrap:wrap}
+.tabs2 button{min-height:40px;padding:0 14px;border-radius:8px;border:1px solid var(--line2);background:transparent;color:var(--ink2);font:500 14px "Golos Text",sans-serif;cursor:pointer}
+.tabs2 button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg);font-weight:600}
+/* role cards */
+.role{display:flex;flex-direction:column;gap:16px}
+.role .hd{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.role .hd b{font-size:18px;font-weight:600}
+.prio{font-size:12px;padding:4px 8px;border-radius:6px;background:var(--sf2);color:var(--ink2);white-space:nowrap}
+.k{font:500 11px var(--mono);letter-spacing:.06em}
+.k.f{color:var(--lime)}.k.h{color:var(--yellow)}.k.m{color:var(--mute)}
+.role .box{display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.45}
+.role .hyp{padding:14px;border-radius:10px;background:var(--sf2)}
+.role .chk{font-size:14px;color:var(--ink2)}
+.role .srcs{margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+/* market bars */
+.mrow{display:grid;grid-template-columns:minmax(140px,210px) minmax(0,1fr) 56px 150px;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--row)}
+.mrow.hd{font:400 12px var(--mono);color:var(--dim);border-bottom-color:var(--line)}
+.mrow .nm{font-size:15px;font-weight:500}
+.mbar{position:relative;height:10px;border-radius:5px;background:var(--line)}
+.mbar i{display:block;height:10px;border-radius:5px}
+.mbar::after{content:"";position:absolute;left:50%;top:-5px;width:2px;height:20px;background:var(--dim)}
+.st-on{font-size:13px;font-weight:600;color:var(--lime)}
+.st-off{font-size:13px;font-weight:600;color:var(--yellow)}
+@media(max-width:640px){.mrow{grid-template-columns:1fr 44px;gap:6px 12px}.mrow .mbar{grid-column:1/-1;grid-row:2}.mrow .stt{grid-column:1/-1}.mrow.hd{display:none}}
+/* tiles */
+.tile{background:var(--sf);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.tile.ghost{background:transparent;border-style:dashed;border-color:#2F3A46}
+.tile b{font-size:14px}
+.tile .n{font-size:30px;font-weight:700;letter-spacing:-.02em}
+.tile .s{font-size:13px;color:var(--ink2)}
+.tile .a{font-size:12px}
+.tile a{font-size:13px;margin-top:4px}
+/* tables */
+.tbl{background:var(--sf);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:20px}
+.tbl-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.tbl-f{padding:14px 20px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font:500 12px var(--mono);color:var(--dim);padding:12px 10px;white-space:nowrap;letter-spacing:.02em}
+td{padding:12px 10px;border-top:1px solid var(--row);vertical-align:top}
+th:first-child,td:first-child{padding-left:20px}th:last-child,td:last-child{padding-right:20px}
+td.n,th.n{text-align:right;font-family:var(--mono);white-space:nowrap}
+td.w{min-width:240px}
+.pod td.w{min-width:190px;max-width:250px}.pod td:nth-child(4){min-width:200px}
+tr.me td{background:var(--blue-bg)}
+tr.me td.nm{color:var(--blue-ink);font-weight:600}
+.nmw{display:inline-flex;align-items:center;gap:8px}
+.lg{width:18px;height:18px;border-radius:4px;flex:none}
+.hb{display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.hb .t{width:140px;height:8px;border-radius:4px;background:var(--line);flex:none}
+.hb .t i{display:block;height:8px;border-radius:4px;background:var(--bar)}
+tr.me .hb .t i{background:var(--blue)}
+small{color:var(--mute)}
+.badge{display:inline-block;white-space:nowrap;font-size:12px;padding:3px 8px;border-radius:6px;background:var(--sf2);color:var(--ink2);margin:0 4px 4px 0}
+.pl{margin:0;padding:0;list-style:none;counter-reset:t}
+.pl li{counter-increment:t;display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:baseline;padding:12px 20px;border-top:1px solid var(--row)}
+.pl li::before{content:counter(t);font:500 13px var(--mono);color:var(--dim)}
+.pl li.me{background:var(--blue-bg)}
+/* projects */
+.proj{display:flex;flex-direction:column;gap:6px;border-top-width:3px}
+.proj .n{font-size:44px;font-weight:700;letter-spacing:-.02em}
+.proj b{font-size:15px}
+.proj .s{font-size:14px;color:var(--ink2)}
+/* matrix */
+.mx{min-width:900px;padding:8px 20px 16px}
+.mx-r{display:grid;grid-template-columns:190px repeat(8,minmax(0,1fr)) 56px;gap:5px;align-items:center;padding:3px 0}
+.mx-r.hd{padding:12px 0;align-items:end;font-size:12px;color:var(--mute)}
+.mx-r.hd button{all:unset;cursor:pointer;font-size:12px;color:var(--mute)}
+.mx-r.hd button:hover,.mx-r.hd button[aria-pressed="true"]{color:var(--ink)}
+.mx-r .nm{font-size:14px;color:var(--ink2)}
+.mx-r .tt{text-align:right;font-family:var(--mono);color:var(--ink2)}
+.cell{height:24px;border-radius:5px;background:var(--row);border:0;padding:0}
+.cell.on{background:var(--green);cursor:pointer}
+.cell.on:hover{outline:2px solid var(--lime-ink)}
+.mx-r.me{padding:8px;margin:0 -8px 8px;border-radius:10px;background:var(--blue-bg);border:1px solid rgba(5,115,249,.5)}
+.mx-r.me .nm{color:var(--blue-ink2);font-weight:700}
+.mx-r.me .cell.on{background:var(--blue)}
+.mx-r.me .cell:not(.on){background:transparent;border:1px dashed var(--yellow)}
+.mx-r.me .tt{color:var(--blue-ink2);font-weight:600}
+.mx-r.ft{margin-top:8px;padding-top:10px;border-top:1px solid var(--line);font:12px var(--mono);color:var(--mute)}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+/* cases */
+.case{display:flex;flex-direction:column;gap:8px;padding:18px;border-radius:14px;background:var(--sf);border:1px solid var(--line)}
+.case .m{font:12px var(--mono);color:var(--mute)}
+.case b{font-size:15px;font-weight:600;line-height:1.35}
+.case .me{align-self:flex-start;font-size:12px;padding:3px 8px;border-radius:6px;background:rgba(5,115,249,.2);color:var(--blue-ink2)}
+.case a{margin-top:auto;padding-top:8px;font-size:13px;word-break:break-all}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:16px}
+/* misc */
+.legend-trust{display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.45;color:var(--ink2)}
+.pipe{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:13px}
+.pipe span{padding:6px 10px;border-radius:8px;background:var(--sf2)}
+.pipe em{color:var(--bar);font-style:normal}
+.pipe span.end{background:var(--green);color:#fff;font-weight:600}
+.srclist{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px 32px;font-size:14px;line-height:1.5}
+.srclist ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;color:var(--ink2)}
+.srclist .k{margin-bottom:10px;display:block;font-size:12px}
+details{margin-top:20px;background:var(--sf);border:1px solid var(--line);border-radius:16px}
+details summary{cursor:pointer;padding:16px 20px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::after{content:"+";color:var(--mute);font-weight:400}
+details[open] summary::after{content:"–"}
+details .scroll{border-top:1px solid var(--line)}
+footer{padding:32px 0 64px;border-top:1px solid var(--line);font-size:13px;line-height:1.55;color:var(--dim)}
+footer p{max-width:900px;margin:0 0 10px}
+.empty{padding:20px;color:var(--mute);font-size:14px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media print{
+  :root{--bg:#fff;--sf:#fff;--sf2:#f3f4f6;--line:#d9dde3;--row:#e8ebef;--ink:#111;--ink2:#333;--mute:#555;--dim:#666;--blue-ink:#0550c8;--blue-ink2:#0550c8;--lime-ink:#1a6e1f;--lime:#1a6e1f;--yellow-ink:#8a5a00}
+  header,.stripe,.btn,.seg,.chips,.tabs2{display:none!important}
+  section{break-inside:avoid-page}
+  .tk.hl{background:#fff4d6}
+}
 </style>
 </head>
 <body>
-<nav><div class="w"><a href="../" style="margin-left:-12px">← Все исследования</a><b style="margin-left:8px">Tech Brand Watch</b><a href="#position">Где мы</a><a href="#roles">По ролям</a><a href="#trends">Тренды</a><a href="#snapshot">Рынок</a><a href="#content">Контент</a><a href="#performance">Performance</a><a href="#matrix">Карта</a><a href="#data">Кейсы</a></div></nav>
+<div class="stripe" aria-hidden="true"><i style="flex:3;background:#FFB81C"></i><i style="flex:4;background:#19A71F"></i><i style="flex:2;background:#0573F9"></i><i style="flex:3;background:#82D714"></i></div>
 
-<header class="hero"><div class="w">
-<div>
-<span class="badge">Итоговый срез Q3 · 1 июля — 30 сентября 2026</span>
-<h1>Что делают tech-бренды и как выглядит рынок</h1>
-<p class="lead">Финальный квартальный срез для команды продвижения бренда 2ГИС: что делали 25 российских tech-брендов в Q3 2026, где находится 2ГИС Tech и что из данных полезно редактору и ивент-менеджеру.</p>
-<div class="stats"><div><b>25</b>tech-брендов</div><div><b>8</b>направлений</div><div><b>94</b>подтверждения в матрице</div><div><b>01.10</b>матрица зафиксирована</div></div>
-</div>
-</div></header>
+<header>
+  <div class="w">
+    <a class="brand" href="#summary">
+      <span class="mark"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 12 L6 7 L9 10 L14 3" fill="none" stroke="#0B0F14" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <b>Tech Brand Watch</b>
+      <span class="chip-q">Q3 2026</span>
+    </a>
+    <nav aria-label="Разделы">
+      <a href="#summary">Итог</a><a href="#actions">Что делать</a><a href="#market">Рынок</a><a href="#performance">Performance</a><a href="#matrix">Карта</a><a href="#evidence">Кейсы</a><a href="#sources">Источники</a>
+    </nav>
+    <div class="hdr-r">
+      <span class="fresh"><span class="dot"></span><span id="fresh">загрузка…</span></span>
+      <button class="btn" type="button" onclick="window.print()">Скачать PDF</button>
+    </div>
+  </div>
+</header>
 
-<section id="position"><div class="w">
-<h2>Где 2ГИС Tech на рынке</h2>
-<p class="sub">Финальный Q3-срез: 25 tech-брендов × 8 направлений.</p>
-<div class="g">
-<div class="c"><div class="n">4/8</div><h3>2ГИС Tech: четыре направления</h3><p>Среднее по выборке — 3,76 из 8. Яндекс, Avito, Kaspersky и Positive Technologies имеют по 6 из 8.</p></div>
-<div class="c"><div class="n">4</div><h3>Направления без подтверждения</h3><p>Сообщество, инженеры-эксперты, образование и исследования. При этом образование есть у 16/25 брендов, исследования — у 6/25.</p></div>
-<div class="c"><div class="n" id="habr-position-rate">—</div><h3>Статьи на Habr в неделю</h3><p id="habr-position-copy">Загрузка Habr-данных…</p></div>
-<div class="c"><div class="n" id="tg-position-subs">—</div><h3>Публичный @dev2gis</h3><p id="tg-position-copy">Загрузка Telegram-данных…</p></div>
-</div></div></section>
+<main class="w">
 
-<section id="roles"><div class="w">
-<h2>Что взять в работу</h2>
-<p class="sub">Выберите роль. В каждой карточке сначала факты из данных, потом гипотеза: её нужно проверить, а не считать готовым решением.</p>
-<div class="tabs" id="rt"></div><div class="g" id="rp"></div>
-</div></section>
+<section id="summary">
+  <a class="back" href="https://olesiabositi-hub.github.io/research/">← Все исследования</a>
+  <div class="eyebrow" style="margin-top:14px">ИТОГ КВАРТАЛА · 1 июля — 30 сентября 2026 · 25 брендов × 8 направлений</div>
+  <h1 id="hero-h"></h1>
+  <p class="lead" id="hero-lead"></p>
+  <p class="src" style="margin-top:10px">Источник: <a href="#matrix">матрица 25 × 8, Q3 2026</a></p>
 
-<section id="trends"><div class="w">
-<h2>Тренды квартала</h2>
-<div class="g" id="tr"></div>
-<div class="note"><b>Как читать данные:</b> качественная матрица и кейсы зафиксированы после закрытия Q3. Habr, YouTube и доступные Telegram-метрики обновляются автоматически; для VK Video, RuTube и подкастов без сопоставимой публичной аналитики цифры не моделируем.</div>
-</div></section>
+  <div class="grid g-kpi">
+    <div class="card span2">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
+        <span style="font-size:14px;color:var(--mute)">Ширина присутствия, направлений из 8</span>
+        <span class="mono" style="font-size:12px;color:var(--dim)">● зафиксировано 01.10</span>
+      </div>
+      <div class="scale" id="scale" role="img"></div>
+      <p class="scale-note" id="scale-note"></p>
+      <a class="src" href="#matrix">Источник: матрица 25 × 8</a>
+    </div>
+    <div class="card kpi" id="kpi-habr"><span class="lbl">Статей на Habr в неделю</span><span class="txt">Загрузка…</span></div>
+    <div class="card kpi" id="kpi-tg"><span class="lbl">@dev2gis · просмотры / подписчики</span><span class="txt">Загрузка…</span></div>
+  </div>
 
-<section id="snapshot"><div class="w">
-<h2>Рынок: что стало нормой</h2>
-<p class="sub">Только то, что меняет планирование. Без длинной методологии и без «рейтинга работодателей».</p>
-<div class="g" id="six"></div>
-<div class="note"><b>Объект сравнения — tech-бренд.</b> «2ГИС Tech» — внешние инженерные и tech-коммуникации 2ГИС, а не компания целиком. Q3 закрыт: в срез входят публичные активности с 1 июля по 30 сентября; публикации 1 октября и позже не учитываются.</div>
-<div class="tw"><table><thead><tr><th>Направление</th><th class="num">У tech-брендов</th><th>2ГИС Tech</th></tr></thead><tbody id="snap"></tbody></table></div>
-</div></section>
+  <div class="card" style="margin-top:16px;padding:20px 24px">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+      <span style="font-size:14px;color:var(--mute)">Направления 2ГИС Tech · сколько брендов из 25 их ведут</span>
+      <span style="font-size:13px;color:var(--mute)"><span style="color:var(--lime)">●</span> подтверждено &nbsp; <span style="color:var(--yellow)">○</span> не подтверждено</span>
+    </div>
+    <div class="dirs" id="dirs"></div>
+  </div>
+</section>
 
-<section id="content"><div class="w">
-<h2>Контент в цифрах</h2>
-<p class="sub">Где публикуют, как часто, что получает больше просмотров и какие форматы подтверждены. Если аудит неполный, показываем «≥».</p>
-<div class="tabs" role="tablist" id="tabs"></div>
-<div class="pane" data-p="0"><div class="tw"><table><thead><tr><th>Площадка</th><th>Подтверждено</th><th>Кто именно</th></tr></thead><tbody>
-<tr><td><b>Habr</b></td><td>24/25</td><td class="wrap">Отдельный блог у всех, кроме SberTech (материалы выходят в общем блоге Сбера)</td></tr>
-<tr><td><b>Telegram</b></td><td>24/25</td><td class="wrap">Performance-метрики сейчас автоматически собираются по 9 проверенным публичным каналам через t.me; ecom.tech переехал за invite-link и не подменяется старым публичным каналом</td></tr>
-<tr><td><b>YouTube</b></td><td>≥9/25</td><td class="wrap">Проверены AvitoTech, Ozon Tech, YADRO / «Истовый Инженер», 2ГИС, Контур, Cloud.ru, Selectel, WB Tech и Купер.тех. Для 2ГИС используется основной канал компании, а не отдельный канал 2ГИС Tech</td></tr>
-<tr><td><b>VK Video</b></td><td>≥6/25</td><td class="wrap">2ГИС Tech, Avito, Ozon Tech, Selectel, Контур, Купер</td></tr>
-<tr><td><b>RuTube</b></td><td>≥5/25</td><td class="wrap">Avito, YADRO, Selectel, Magnit Tech, Контур</td></tr>
-<tr><td><b>Dzen</b></td><td>≥1/25</td><td class="wrap">AvitoTech; данных для сравнения мало</td></tr>
-<tr><td><b>Подкасты</b></td><td>≥6/25</td><td class="wrap">Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур</td></tr>
-</tbody></table></div><p class="ft">≥ значит «минимум подтверждено», а не «остальные точно не используют».</p></div>
-<div class="pane" data-p="1" hidden>
-<p class="sub" id="habr-meta">Загрузка Habr-данных…</p>
-<div id="habr"><div class="c"><h3>Загрузка данных…</h3></div></div>
-<div class="note" id="habr-note">Загрузка данных…</div>
-</div>
-<div class="pane" data-p="2" hidden>
-<p class="sub" id="habr-top-meta">Загрузка Habr-данных…</p>
-<ol class="pl" id="top"></ol>
-</div>
-<div class="pane" data-p="3" hidden><div class="tw"><table><thead><tr><th>Формат</th><th>Подтверждено</th><th>Компании</th></tr></thead><tbody>
-<tr><td><b>Статьи на Habr</b></td><td>24/25</td><td class="wrap">Практически стандарт; различаются частота, тема и результат</td></tr>
-<tr><td><b>Своя podcast-серия</b></td><td>≥6/25</td><td class="wrap">Avito, Ozon Tech, YADRO, Selectel, Magnit Tech, Контур. Гостевые выпуски не считаем</td></tr>
-<tr><td><b>Нестандартный проект</b></td><td>8/25</td><td class="wrap">2ГИС Tech, Avito, Kaspersky, MTS Tech, Ozon Tech, YADRO, Magnit Tech, Альфа-Банк</td></tr>
-<tr><td><b>Видео в RuTube</b></td><td>≥5/25</td><td class="wrap">Avito, YADRO, Selectel, Magnit Tech, Контур. Просмотры часто десятки–сотни</td></tr>
-</tbody></table></div><p class="ft">Темы убраны намеренно: пока нет единой разметки корпуса, «AI встречается часто» выглядит точнее, чем есть.</p></div>
-</div></section>
+<section aria-labelledby="t3">
+  <h2 id="t3" style="margin-bottom:24px">Три вывода для 2ГИС Tech</h2>
+  <div class="grid g-3" id="takeaways"></div>
+</section>
 
-<section id="performance"><div class="w">
-<h2>Performance Q3</h2>
-<p class="sub">Активность фиксируется строго за Q3: количество постов и видео — только 01.07–30.09. Просмотры и подписчики — последний публичный снимок и поэтому могут меняться после окончания квартала. Автоматически обновляются Telegram, YouTube, Habr и RUTUBE.</p>
-<div class="note"><b>Активность Q3 ≠ текущий снимок.</b> В таблицах не смешиваем эти понятия: период публикаций закрыт 30 сентября, а публичные счётчики Habr / YouTube / Telegram обновляются еженедельно.</div>
+<section id="actions" aria-labelledby="act">
+  <div class="sec-h">
+    <div><h2 id="act">Что взять в работу</h2><p class="sub">Сигнал рынка → гипотеза → как проверить. Под каждой карточкой — источники. Это гипотезы, а не готовые решения.</p></div>
+    <div class="seg" role="tablist" aria-label="Роль" id="role-tabs"></div>
+  </div>
+  <div class="grid g-4" id="role-cards"></div>
+</section>
 
-<div class="tabs" id="perf-tabs" role="tablist">
-<button role="tab" data-perf="telegram" aria-selected="true">Telegram</button>
-<button role="tab" data-perf="video" aria-selected="false">Video</button>
-<button role="tab" data-perf="podcasts" aria-selected="false">Podcasts</button>
-</div>
+<section id="market" aria-labelledby="mk">
+  <h2 id="mk">Рынок: гигиена или ниша?</h2>
+  <p class="sub" id="market-sub"></p>
+  <div class="card" style="padding:8px 24px" id="market-rows"></div>
+  <p class="src" style="margin-top:12px"><b style="color:var(--ink2)">Объект сравнения — tech-бренд.</b> «2ГИС Tech» — внешние инженерные и tech-коммуникации 2ГИС, а не компания целиком. Источник: <a href="#matrix">матрица 25 × 8</a></p>
+</section>
 
-<div class="pane perf-pane" data-perf-pane="telegram">
-<p class="ft" id="perf-telegram-meta">Загрузка данных…</p>
-<div class="tw"><table>
-<thead><tr><th>#</th><th>Компания</th><th class="num">Подписчики</th><th class="num">Посты Q3</th><th class="num">Медиана просмотров</th><th class="num">Среднее</th><th class="num">Views / subs*</th><th class="num">Реакции / пост</th><th>Топ-пост</th></tr></thead>
-<tbody id="perf-telegram-body"></tbody>
-</table></div>
-<div class="note" id="perf-telegram-note">Загрузка данных…</div>
-</div>
+<section id="performance" aria-labelledby="pf">
+  <h2 id="pf">Performance Q3</h2>
+  <p class="sub">Публикации — строго 01.07–30.09. Просмотры и подписчики — последний публичный снимок, обновляется каждый понедельник. Активность Q3 и текущий снимок не смешиваем.</p>
+  <div class="grid g-tiles" id="tiles"></div>
 
-<div class="pane perf-pane" data-perf-pane="video" hidden>
-<h3>YouTube</h3>
-<p class="ft" id="perf-video-meta">Загрузка данных…</p>
-<div id="perf-video-content"><div class="c"><h3>Загрузка данных…</h3></div></div>
-<div class="note" id="perf-video-note">Загрузка данных…</div>
+  <div class="tbl">
+    <div class="tbl-h">
+      <div class="tabs2" role="tablist" aria-label="Площадка" id="perf-tabs"></div>
+      <span class="src" id="perf-meta"></span>
+    </div>
+    <div id="perf-body"><div class="empty">Загрузка данных…</div></div>
+    <div class="tbl-f" id="perf-foot"></div>
+  </div>
 
-<h3 style="margin-top:28px">RUTUBE</h3>
-<p class="ft" id="perf-rutube-meta">Загрузка данных…</p>
-<div id="perf-rutube-content"><div class="c"><h3>Загрузка данных…</h3></div></div>
-<div class="note" id="perf-rutube-note">Загрузка данных…</div>
+  <details>
+    <summary>Присутствие на площадках и форматы</summary>
+    <div class="scroll"><table>
+      <thead><tr><th>Площадка / формат</th><th>Подтверждено</th><th>Кто именно</th></tr></thead>
+      <tbody>
+        <tr><td><b>Habr</b></td><td class="mono">24/25</td><td class="w">Отдельный блог у всех, кроме SberTech (материалы выходят в общем блоге Сбера)</td></tr>
+        <tr><td><b>Telegram</b></td><td class="mono">24/25</td><td class="w">Performance-метрики собираются по проверенным публичным каналам через t.me; ecom.tech переехал за invite-link и не подменяется старым публичным каналом</td></tr>
+        <tr><td><b>YouTube</b></td><td class="mono">≥9/25</td><td class="w">AvitoTech, Ozon Tech, YADRO / «Истовый Инженер», 2ГИС, Контур, Cloud.ru, Selectel, WB Tech и Купер.тех. Для 2ГИС — основной канал компании, а не отдельный канал 2ГИС Tech</td></tr>
+        <tr><td><b>VK Video</b></td><td class="mono">≥6/25</td><td class="w">2ГИС Tech, Avito, Ozon Tech, Selectel, Контур, Купер. Цифр нет: официальный API отдаёт просмотры только с токеном</td></tr>
+        <tr><td><b>RUTUBE</b></td><td class="mono">≥5/25</td><td class="w">Avito, YADRO, Selectel, Magnit Tech (tech-плейлист), Контур</td></tr>
+        <tr><td><b>Dzen</b></td><td class="mono">≥1/25</td><td class="w">AvitoTech; данных для сравнения мало</td></tr>
+        <tr><td><b>Нестандартный проект</b></td><td class="mono">8/25</td><td class="w">2ГИС Tech, Avito, Kaspersky, MTS Tech, Ozon Tech, YADRO, Magnit Tech, Альфа-Банк</td></tr>
+      </tbody>
+    </table></div>
+    <p class="src" style="padding:12px 20px;margin:0;border-top:1px solid var(--line)">≥ значит «минимум подтверждено», а не «остальные точно не используют». Подкасты — во вкладке Podcasts выше, обновляются автоматически.</p>
+  </details>
 
-<div class="note"><b>VK Video:</b> цифры не добавлены. Официальный API возвращает просмотры только с access token, а публичная web-страница нестабильно доступна из GitHub Actions. Пока не считаем это надёжным бесплатным источником.</div>
-</div>
+  <h3 style="margin:32px 0 14px">Большие проекты квартала</h3>
+  <div class="grid g-3">
+    <div class="card proj" style="border-top-color:var(--blue)"><span class="n" style="color:var(--blue-ink)">343K+</span><b>Ozon Tech · E-CODE 2026</b><span class="s">просмотров трансляций · 4 000+ гостей · 59 выступлений</span><a class="src" href="https://habr.com/ru/companies/ozontech/news/1065444/" target="_blank" rel="noopener">Источник: Habr Ozon Tech ↗</a></div>
+    <div class="card proj" style="border-top-color:var(--green)"><span class="n" style="color:var(--lime)">1 657</span><b>Kaspersky · Kaspersky{CTF}</b><span class="s">команд из 98 стран</span><a class="src" href="https://lp.kaspersky.com/ctf/" target="_blank" rel="noopener">Источник: lp.kaspersky.com ↗</a></div>
+    <div class="card proj" style="border-top-color:var(--yellow)"><span class="n" style="color:var(--yellow)">800+</span><b>Positive Technologies · Hack Camp</b><span class="s">заявок · 81 участник из 20 стран</span><a class="src" href="https://positechglobal.com/en/about/news/positive-hack-camp-2026-two-weeks-of-intensive-practice-for-young-security-researchers-from-20-countries/" target="_blank" rel="noopener">Источник: positechglobal.com ↗</a></div>
+  </div>
+</section>
 
-<div class="pane perf-pane" data-perf-pane="podcasts" hidden>
-<div id="perf-podcasts-content"><div class="c"><h3>Загрузка данных…</h3></div></div>
-</div>
+<section id="matrix" aria-labelledby="mx">
+  <div class="sec-h">
+    <div><h2 id="mx">Карта рынка · 25 × 8</h2><p class="sub">Одно направление — максимум один балл. 2ГИС Tech закреплён сверху. Нажмите на заголовок, чтобы отсортировать, или на ячейку — чтобы открыть кейсы.</p></div>
+    <div class="legend"><span><i style="background:var(--green)"></i>подтверждено</span><span><i style="background:var(--row);border:1px solid var(--line2)"></i>не найдено</span></div>
+  </div>
+  <div class="card scroll" style="padding:0"><div class="mx" id="mx-grid"></div></div>
+  <p class="src" style="margin-top:12px">Источник: аудит публичных первоисточников 01.07–30.09.2026, зафиксирован 01.10. Доказательства — в разделе <a href="#evidence">«Кейсы»</a>.</p>
+</section>
 
-<h3>Большие проекты Q3 — метрики не смешиваем</h3>
-<div class="g">
-<div class="c"><div class="n">343K+</div><h3>Ozon Tech · E-CODE 2026</h3><p>просмотров трансляций; 4 000+ гостей офлайн; 59 выступлений</p></div>
-<div class="c"><div class="n">1 657</div><h3>Kaspersky · Kaspersky{CTF}</h3><p>команд из 98 стран</p></div>
-<div class="c"><div class="n">800+</div><h3>Positive Technologies · Hack Camp</h3><p>заявок; 81 участник из 20 стран</p></div>
-</div>
-</div></section>
+<section id="evidence" aria-labelledby="ev">
+  <div class="sec-h">
+    <div><h2 id="ev">Кейсы и источники</h2><p class="sub">Каждый кейс заканчивается ссылкой на первоисточник.</p></div>
+    <span class="mono src" id="case-count"></span>
+  </div>
+  <div class="chips" role="group" aria-label="Фильтр кейсов" id="case-filters"></div>
+  <div class="cases" id="cases"></div>
+</section>
 
-<section id="matrix"><div class="w">
-<h2>Карта рынка</h2>
-<p class="sub">Направление даёт максимум 1 балл, количество кейсов внутри него итог не увеличивает. Среднее по 25 компаниям — <b id="avg"></b> из 8. Нажмите на заголовок, чтобы сортировать.</p>
-<div class="tw"><table id="mt"></table></div>
-</div></section>
+<section aria-labelledby="mt">
+  <h2 id="mt" style="margin-bottom:20px">Как читать данные</h2>
+  <div class="grid g-3">
+    <div class="card legend-trust">
+      <div><b style="color:var(--ink)">● Зафиксировано</b> — матрица и кейсы Q3, срез на 01.10.</div>
+      <div><b style="color:var(--lime)">● Авто</b> — Habr, Telegram, YouTube, RUTUBE и подкасты: снимок каждый понедельник.</div>
+      <div><b style="color:var(--yellow)">◐ В тесте</b> — VK Video: цифры появятся после проверки источника.</div>
+      <div><b style="color:var(--mute)">○ Без рейтинга</b> — прослушивания подкастов: нет сопоставимой публичной метрики.</div>
+    </div>
+    <div class="card">
+      <h3 style="font-size:16px;margin-bottom:14px">Еженедельное обновление</h3>
+      <div class="pipe"><span>YouTube</span><em>→</em><span>Habr</span><em>→</em><span>Telegram</span><em>→</em><span>RUTUBE</span><em>→</em><span>Подкасты</span><em>→</em><span>проверка JSON</span><em>→</em><span class="end">сайт</span></div>
+      <p style="margin:16px 0 0;font-size:14px;color:var(--ink2)" id="pipe-dates"></p>
+      <p class="srcs" style="margin-top:10px"><a href="https://github.com/olesiabositi-hub/research/tree/main/tech-brand-watch/scripts" target="_blank" rel="noopener">Скрипты сбора ↗</a><a href="https://github.com/olesiabositi-hub/research/actions/workflows/refresh-tech-brand-watch.yml" target="_blank" rel="noopener">История запусков ↗</a></p>
+    </div>
+  </div>
+</section>
 
-<section id="data"><div class="w">
-<h2>Кейсы и источники</h2>
-<p class="sub">Ключевые проверяемые активности Q3, включая изменения финальной недели. Матрица выше отражает полный аудит 25 брендов по 8 направлениям.</p>
-<div class="fl"><select id="fc" aria-label="Компания"></select><select id="fd" aria-label="Направление"></select></div>
-<div id="cases"></div>
-</div></section>
+<section id="sources" aria-labelledby="src">
+  <h2 id="src" style="margin-bottom:20px">Источники</h2>
+  <div class="srclist">
+    <div><span class="k" style="color:var(--yellow)">ДАННЫЕ</span><ol>
+      <li><a href="#matrix">Матрица 25 × 8</a> и <a href="#evidence">кейсы Q3</a></li>
+      <li><a href="./data/habr.json" target="_blank" rel="noopener">habr.json</a> — блоги 25 брендов</li>
+      <li><a href="./data/telegram.json" target="_blank" rel="noopener">telegram.json</a> — проверенные каналы</li>
+      <li><a href="./data/video.json" target="_blank" rel="noopener">video.json</a> — YouTube Data API v3</li>
+      <li><a href="./data/rutube.json" target="_blank" rel="noopener">rutube.json</a> — RUTUBE</li>
+      <li><a href="./data/podcasts.json" target="_blank" rel="noopener">podcasts.json</a> — RSS, видео и анонсы подкастов</li>
+    </ol></div>
+    <div><span class="k" style="color:var(--blue-ink)">КАНАЛЫ 2ГИС</span><ol start="7">
+      <li><a href="https://habr.com/ru/companies/2gis/articles/" target="_blank" rel="noopener">Блог 2ГИС на Habr</a></li>
+      <li><a href="https://t.me/s/dev2gis" target="_blank" rel="noopener">Telegram @dev2gis</a></li>
+      <li><a href="https://www.youtube.com/channel/UCLNua2HHbyRfJqWA4JCSCrQ" target="_blank" rel="noopener">YouTube 2ГИС</a> — общий канал компании</li>
+      <li><a href="https://github.com/2gis/deck2gisLayer" target="_blank" rel="noopener">GitHub: deck2gisLayer</a></li>
+      <li><a href="https://habr.com/ru/companies/2gis/news/1053946/" target="_blank" rel="noopener">Go Go Hopping Meetup</a></li>
+      <li><a href="https://habr.com/ru/companies/2gis/news/1081414/" target="_blank" rel="noopener">Pause/Break</a></li>
+    </ol></div>
+    <div><span class="k" style="color:var(--lime)">СОБЫТИЯ И ИССЛЕДОВАНИЯ</span><ol start="13">
+      <li><a href="https://habr.com/ru/companies/ozontech/news/1065444/" target="_blank" rel="noopener">E-CODE 2026, Ozon Tech</a></li>
+      <li><a href="https://lp.kaspersky.com/ctf/" target="_blank" rel="noopener">Kaspersky{CTF} 2026</a></li>
+      <li><a href="https://positechglobal.com/en/about/news/positive-hack-camp-2026-two-weeks-of-intensive-practice-for-young-security-researchers-from-20-countries/" target="_blank" rel="noopener">Positive Hack Camp 2026</a></li>
+      <li><a href="https://e-cup-ozon.ru/" target="_blank" rel="noopener">E-CUP 2026</a></li>
+      <li><a href="https://me-en.kaspersky.com/about/press-releases/kaspersky-uncovers-over-250000-potential-security-issues-in-github-actions-workflows" target="_blank" rel="noopener">Kaspersky: GitHub Actions</a></li>
+      <li><a href="https://devcrowd.ru/pm26/" target="_blank" rel="noopener">Контур × DevCrowd</a></li>
+      <li><a href="https://habr.com/ru/companies/vktech/posts/1085782/" target="_blank" rel="noopener">VK WorkSpace × Hi-Tech Mail</a></li>
+      <li><a href="https://t.me/Yandex4Developers/1774" target="_blank" rel="noopener">Back to Back, Яндекс</a></li>
+      <li><a href="https://habr.com/ru/companies/yadro/articles/1059750/" target="_blank" rel="noopener">YADRO × Postgres Professional</a></li>
+      <li><a href="https://t.me/ozon_tech/2194" target="_blank" rel="noopener">Робозон, Ozon Tech</a></li>
+    </ol><p class="src" style="margin:10px 0 0">Остальные первоисточники — в разделе <a href="#evidence">«Кейсы»</a>.</p></div>
+  </div>
+</section>
+
+</main>
 
 <footer><div class="w">
-<p><b>Методология.</b> Период качественного аудита: 01.07–30.09.2026; матрица и перечень Q3-кейсов зафиксированы 01.10.2026. Каждое из 8 направлений даёт компании максимум 1 балл, независимо от числа кейсов внутри. В событиях считаем собственные или совместно организованные branded tech-форматы; одно выступление сотрудника на внешней конференции само по себе балл не даёт. Обычные вакансии, простое спонсорство, продуктовый PR и старый GitHub без активности в Q3 балл не дают. Если доказательства слабые, ставим «–». «Не нашли» не означает «не делает».</p>
-<p>Динамические метрики — просмотры Q3-статей, Q3-видео и Q3-постов, а также текущее число подписчиков — обновляются автоматически раз в неделю. При этом набор публикаций остаётся ограничен датами 01.07–30.09: октябрьские публикации в Q3 не добавляются. Tech Brand Watch — личное независимое исследование Олеси Боциевой. Это не официальное исследование 2ГИС и не рейтинг работодателей; оно не оценивает зарплаты, культуру, eNPS или эффективность найма.</p>
+  <p><b>Методология.</b> Период качественного аудита: 01.07–30.09.2026; матрица и перечень Q3-кейсов зафиксированы 01.10.2026. Каждое из 8 направлений даёт компании максимум 1 балл, независимо от числа кейсов внутри. В событиях считаем собственные или совместно организованные branded tech-форматы; одно выступление сотрудника на внешней конференции само по себе балл не даёт. Обычные вакансии, простое спонсорство, продуктовый PR и старый GitHub без активности в Q3 балл не дают. Если доказательства слабые, ставим «–». «Не нашли» не означает «не делает».</p>
+  <p>Динамические метрики — просмотры Q3-статей, Q3-видео и Q3-постов, текущее число подписчиков, выпуски подкастов — обновляются автоматически раз в неделю. Набор публикаций при этом ограничен датами 01.07–30.09: октябрьские публикации в Q3 не добавляются.</p>
+  <p>Tech Brand Watch — личное независимое исследование Олеси Боциевой. Это не официальное исследование 2ГИС и не рейтинг работодателей; оно не оценивает зарплаты, культуру, eNPS или эффективность найма.</p>
 </div></footer>
 
 <script>
+"use strict";
+// ---------- зафиксированный качественный срез Q3 (01.10.2026) ----------
 const D=["Технический контент","События","Сообщество","Инженеры-эксперты","Образование","Исследования","Open Source","Нестандартные форматы"];
+const DS=["Контент","События","Комьюнити","Эксперты","Образов.","Исслед.","OSS","Нестанд."];
+const DN=["Тех. контент","События","Сообщества","Инженеры-эксперты","Образование","Исследования","Open Source","Нестандартные"];
 const M=[["Яндекс","11101110"],["Avito","11011011"],["Kaspersky","11001111"],["Positive Technologies","11111100"],["Т-Банк","11011010"],["MTS Tech","11101001"],["Ozon Tech","11001011"],["YADRO","11011001"],["2ГИС Tech","11000011"],["Контур","11000110"],["Cloud.ru","11001010"],["Selectel","11001010"],["VK","11001110"],["Альфа-Банк","11001101"],["hh.ru","10001010"],["Lamoda Tech","11000010"],["Magnit Tech","10001001"],["SberTech","11000010"],["Точка Банк","10000010"],["Dodo Engineering","11000000"],["ecom.tech","10001000"],["RWB","11000000"],["X5 Tech","10001000"],["Домклик","10000000"],["Купер","10000000"]].map(([n,f])=>({n,f:[...f].map(Number),t:[...f].reduce((a,b)=>a+ +b,0)}));
-const ME="2ГИС Tech",$=s=>document.querySelector(s),h=(s,html)=>{$(s).innerHTML=html};
-const cnt=i=>M.filter(m=>m.f[i]).length;
-// six findings
-const six=[[25,"Tech-контент — базовый формат","Технический контент подтверждён у всех 25 брендов выборки."],[18,"События — массовый формат","Собственные или совместные tech-события подтверждены у 18 из 25."],[16,"Образование есть у 16 из 25","У 2ГИС Tech в финальном Q3-срезе не подтверждено."],[14,"Open Source распространён","Активный Open Source подтверждён у 14 из 25."],[8,"Нестандартные проекты","Подтверждены у 8 из 25: от рейва и night-форматов до арт-объекта и techno-show."],[3,"Сообщества пока редки","Постоянные сообщества у 3 из 25, регулярные инженеры-эксперты — у 4 из 25."]];
-h("#six",six.map(s=>`<div class="c"><div class="n">${s[0]}<span style="font-size:16px;color:var(--mute)">/25</span></div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join(""));
-const me=M.find(m=>m.n==ME);
-h("#snap",D.map((d,i)=>[d,cnt(i),me.f[i]]).sort((a,b)=>b[1]-a[1]).map(r=>`<tr><td>${r[0]}</td><td class="num"><b>${r[1]}/25</b></td><td>${r[2]?"Да":"<span style='color:var(--mute)'>Не подтверждено</span>"}</td></tr>`).join(""));
-// tabs
-["Площадки","Частота на Habr","ТОП статей","Форматы"].forEach((t,i)=>{const b=document.createElement("button");b.textContent=t;b.setAttribute("role","tab");b.setAttribute("aria-selected",i==0);b.onclick=()=>{document.querySelectorAll("#tabs button").forEach((x,j)=>x.setAttribute("aria-selected",j==i));document.querySelectorAll(".pane").forEach(p=>p.hidden=+p.dataset.p!=i)};$("#tabs").append(b)});
-// performance data layer
-const perfTabs=[...document.querySelectorAll("#perf-tabs button")];
-const perfPanes=[...document.querySelectorAll("[data-perf-pane]")];
-perfTabs.forEach(b=>b.onclick=()=>{
-  const key=b.dataset.perf;
-  perfTabs.forEach(x=>x.setAttribute("aria-selected",x===b));
-  perfPanes.forEach(p=>p.hidden=p.dataset.perfPane!==key);
-});
+const ME="2ГИС Tech";
+const LOGO="./assets/2gis-logo.png";
+const GH="https://github.com/olesiabositi-hub/research/blob/main/tech-brand-watch/data/";
+const C=[
+["2ГИС Tech","Технический контент","29.07","Полевые проезды в QA: как мы ищем аномалии геопозиции","https://habr.com/ru/companies/2gis/articles/1056942/"],
+["2ГИС Tech","Технический контент","26.08","Помогите, FLAKY","https://habr.com/ru/companies/2gis/articles/1074116/"],
+["2ГИС Tech","События","16.07","Go Go Hopping Meetup — митап для Go-разработчиков, Нижний Новгород","https://habr.com/ru/companies/2gis/news/1053946/"],
+["2ГИС Tech","Нестандартные форматы","11.09","Pause/Break — интерактивный арт-объект ко Дню программиста","https://habr.com/ru/companies/2gis/news/1081414/"],
+["2ГИС Tech","Open Source","Q3","deck2gisLayer — слой deck.gl для карт 2ГИС","https://github.com/2gis/deck2gisLayer"],
+["Яндекс","Open Source","11.09","Alice AI Search Pretrain open-source release","https://yandex.ru/company/news/11-09-2026-01"],
+["Яндекс","События","01.08","Back to Back — новая бэкенд-конференция","https://t.me/Yandex4Developers/1774"],
+["Яндекс","События","05.09","deep tech night — онлайн-конференция о технологических вызовах","https://t.me/Yandex4Developers/1822"],
+["Яндекс","Сообщество","16.09","Young&&Yandex: регистрация на Yandex Cup 2026","https://t.me/Yandex4Developers/1823"],
+["Яндекс","Исследования","06.07","Проект из ШАДа в Spotlight статей ICML 2026","https://habr.com/ru/companies/yandex/articles/1055232/"],
+["Avito","Нестандартные форматы","17.07","AVITO.TECHNO — ночной рейв для IT-аудитории","https://habr.com/ru/companies/avito/news/1054976/"],
+["Avito","События","26.09","Avito.Tech.Conf 2026","https://habr.com/ru/companies/avito/news/1074754/"],
+["Avito","Инженеры-эксперты","24.08","AviTalk — новый выпуск с QA-экспертом","https://t.me/avitotech/3415"],
+["Ozon Tech","События","12.09","E-CODE 2026","https://habr.com/ru/companies/ozontech/news/1065444/"],
+["Ozon Tech","Образование","07.08","E-CUP 2026 Students","https://e-cup-ozon.ru/"],
+["Ozon Tech","Open Source","03.08","Testo — open-source фреймворк тестирования на Go","https://habr.com/ru/companies/ozontech/articles/1062036/"],
+["Ozon Tech","Нестандартные форматы","06.07","Робозон — инженерный хакатон на 15 млн ₽","https://t.me/ozon_tech/2194"],
+["Kaspersky","Нестандартные форматы","29.08","Kaspersky{CTF} 2026","https://lp.kaspersky.com/ctf/"],
+["Kaspersky","Исследования","07.07","GitHub Actions workflow security review","https://me-en.kaspersky.com/about/press-releases/kaspersky-uncovers-over-250000-potential-security-issues-in-github-actions-workflows"],
+["Positive Technologies","Образование","25.07","Positive Hack Camp 2026","https://positechglobal.com/en/about/news/positive-hack-camp-2026-two-weeks-of-intensive-practice-for-young-security-researchers-from-20-countries/"],
+["Positive Technologies","Исследования","13.07","CloudAtlas: новая волна кибератак","https://habr.com/ru/companies/pt/articles/1057682/"],
+["Positive Technologies","Инженеры-эксперты","28.09","Сентябрьский «В тренде VM»","https://habr.com/ru/companies/pt/articles/1086646/"],
+["Т-Банк","События","29.08","JVM Day 2026","https://meetup.tbank.ru/conference/jvm-day/"],
+["Т-Банк","Инженеры-эксперты","07.09","Java Digest #39","https://habr.com/ru/companies/tbank/articles/1079464/"],
+["Т-Банк","Инженеры-эксперты","02.09","Scala Digest. Выпуск 44","https://habr.com/ru/companies/tbank/articles/1077624/"],
+["MTS Tech","События","24.08","Фестиваль True Tech Friends","https://habr.com/ru/companies/ru_mts/articles/1073872/"],
+["Magnit Tech","Нестандартные форматы","18.09","MAGNIT TECH NIGHT","https://bezpredela.magnit.tech/"],
+["YADRO","Нестандартные форматы","24.07","10 лет блогу YADRO — инженерный суперквиз","https://habr.com/ru/companies/yadro/articles/1061802/"],
+["YADRO","События","23.07","Летняя встреча Go-сообщества — совместно с Postgres Professional","https://habr.com/ru/companies/yadro/articles/1059750/"],
+["YADRO","Инженеры-эксперты","Q3","Подкаст «Битовые маски»","https://www.deezer.com/ru/show/1000062205"],
+["Контур","Исследования","03.07","Исследование продакт-менеджеров 2026 с DevCrowd","https://devcrowd.ru/pm26/"],
+["VK","Исследования","23.09","VK WorkSpace × Hi-Tech Mail: два исследования об ИИ и цифровой работе","https://habr.com/ru/companies/vktech/posts/1085782/"],
+["Альфа-Банк","События","30.09","АЛЬФА ВААА{АИ}ЙЙЙБ МИТАП","https://habr.com/ru/companies/alfa/news/1076724/"],
+["Альфа-Банк","Нестандартные форматы","30.09","Techno-show + финал AI-хакатона + live music","https://habr.com/ru/companies/alfa/news/1076724/"],
+["hh.ru","Образование","30.07","Школа программистов hh.ru","https://habr.com/ru/companies/hh/articles/1064004/"],
+["ecom.tech","Образование","20.08","BACamp — школа бизнес-анализа","https://habr.com/ru/companies/ecom_tech/articles/1071682/"]
+];
 
-const fmtK=n=>n==null?"—":n>=1000?(n/1000).toFixed(2).replace(".",",")+"K":String(n);
-const fmtPct=n=>n==null?"—":Number(n).toFixed(2).replace(".",",")+"%";
-const fmtInt=n=>n==null?"—":new Intl.NumberFormat("ru-RU",{maximumFractionDigits:0}).format(n);
-const loadJSON=async name=>{
-  const r=await fetch("./data/"+name+".json",{cache:"no-store"});
-  if(!r.ok)throw new Error(name+" "+r.status);
-  return r.json();
-};
-const renderEmptyPerformance=(selector,data,label)=>{
-  h(selector,`<div class="c"><h3>${label}</h3><p>${data.note||"Сопоставимые публичные метрики пока не подключены."}</p></div>`);
-};
-// podcasts: выпуски, темы, видеоверсии и анонсы. Тексты приходят из чужих RSS — всегда экранируем.
+// ---------- helpers ----------
+const $=s=>document.querySelector(s);
+const h=(s,html)=>{const el=$(s);if(el)el.innerHTML=html};
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const safeUrl=u=>/^https?:\/\//i.test(u||"")?esc(u):"";
-const lnk=(u,t)=>safeUrl(u)?`<a href="${safeUrl(u)}" target="_blank" rel="noopener">${esc(t)} ↗</a>`:esc(t);
+const safeUrl=u=>/^https?:\/\//i.test(u||"")||/^\.\//.test(u||"")||/^#/.test(u||"")?esc(u):"";
+const ext=(u,t)=>safeUrl(u)?`<a href="${safeUrl(u)}" target="_blank" rel="noopener">${esc(t)} ↗</a>`:esc(t);
+const nf=new Intl.NumberFormat("ru-RU",{maximumFractionDigits:0});
+const fmtInt=n=>n==null||!Number.isFinite(+n)?"—":nf.format(n);
+const fmtDec=(n,d=1)=>n==null?"—":Number(n).toLocaleString("ru-RU",{minimumFractionDigits:d,maximumFractionDigits:d});
+const fmtK=n=>n==null?"—":n>=1000?(n/1000).toLocaleString("ru-RU",{maximumFractionDigits:n>=100000?0:1})+"K":fmtInt(n);
+const median=a=>{a=a.filter(Number.isFinite).sort((x,y)=>x-y);if(!a.length)return null;const m=a.length>>1;return a.length%2?a[m]:(a[m-1]+a[m])/2};
+const fmtDate=s=>s?new Date(s).toLocaleDateString("ru-RU"):"—";
+const srcs=list=>`<div class="srcs"><span class="lbl">Источники:</span>${list.map(([t,u])=>ext(u,t)).join("")}</div>`;
+const isMe=b=>String(b||"").startsWith("2ГИС");
+const nameCell=(b,extra="")=>isMe(b)?`<span class="nmw"><img class="lg" src="${LOGO}" alt="">${esc(b)}</span>${extra}`:`${esc(b)}${extra}`;
+const loadJSON=async n=>{const r=await fetch("./data/"+n+".json",{cache:"no-store"});if(!r.ok)throw new Error(n+" "+r.status);return r.json()};
+
+// ---------- матрица: производные ----------
+const me=M.find(m=>m.n===ME);
+const cnt=i=>M.filter(m=>m.f[i]).length;
+const avg=M.reduce((a,m)=>a+m.t,0)/M.length;
+const maxT=Math.max(...M.map(m=>m.t));
+const leaders=M.filter(m=>m.t===maxT).map(m=>m.n);
+const shortName=n=>n==="Positive Technologies"?"PT":n;
+const gaps=D.map((d,i)=>({i,n:cnt(i)})).filter(x=>!me.f[x.i]).sort((a,b)=>b.n-a.n);
+const topGap=gaps[0];
+const plural=(n,a,b,c)=>{const m10=n%10,m100=n%100;return m10===1&&m100!==11?a:m10>=2&&m10<=4&&(m100<10||m100>=20)?b:c};
+
+function renderHero(){
+  const diffLead=maxT-me.t;
+  const vsAvg=me.t>avg+0.15?"чуть выше рынка":me.t<avg-0.15?"ниже рынка":"на уровне рынка";
+  h("#hero-h",`2ГИС Tech работает в <span style="color:var(--lime)">${me.t} из 8</span> направлений — ${vsAvg}${diffLead>0?`, но на ${diffLead===2?"два":diffLead} меньше лидеров`:", на уровне лидеров"}`);
+  const strong=D.map((d,i)=>me.f[i]?DN[i].toLowerCase():null).filter(Boolean);
+  h("#hero-lead",`Сильные стороны — ${esc(strong.join(", ").replace(/, ([^,]*)$/," и $1"))}. Главный разрыв — ${esc(D[topGap.i].toLowerCase())}: его ведут <b style="color:var(--yellow)">${topGap.n} из 25</b> брендов, у нас оно не подтверждено.`);
+  const pct=v=>(v/8*100).toFixed(2)+"%";
+  const sc=$("#scale");
+  sc.setAttribute("aria-label",`2ГИС Tech: ${me.t} из 8, среднее по рынку ${fmtDec(avg,2)}, лидеры: ${maxT} из 8`);
+  sc.innerHTML=`<div class="track"></div><div class="fill" style="width:${pct(me.t)}"></div>
+    <div class="avg" style="left:${pct(avg)}"></div><div class="lab dsk" style="left:${pct(avg)};top:84px;transform:translateX(-60%)">рынок ${fmtDec(avg,2)}</div>
+    <img class="logo" src="${LOGO}" alt="" style="left:${pct(me.t)}"><div class="val" style="left:${pct(me.t)};transform:translateX(-20%)"><b style="color:var(--blue-ink)">${me.t}</b><span class="vl"> 2ГИС Tech</span></div>
+    <div class="lead-dot" style="left:${pct(maxT)}"></div><div class="val" style="left:${pct(maxT)};transform:translateX(-30%)"><b>${maxT}</b><span class="vl"> лидеры</span></div>
+    <div class="lab dsk" style="left:${pct(maxT)};top:84px;transform:translateX(-45%)">${esc(leaders.map(shortName).join(" · "))}</div>
+    <div class="lab mono" style="left:0;top:84px;font-size:12px">0</div><div class="lab mono" style="right:0;top:84px;font-size:12px">8</div>`;
+  h("#scale-note",`<b style="color:var(--blue-ink)">${me.t}</b> — 2ГИС Tech · ${fmtDec(avg,2)} — среднее по рынку · <b>${maxT}</b> — лидеры: ${esc(leaders.map(shortName).join(", "))}`);
+  const order=D.map((d,i)=>({i,n:cnt(i),on:!!me.f[i]})).sort((a,b)=>(b.on-a.on)||(b.n-a.n));
+  h("#dirs",order.map(x=>`<div class="dir ${x.on?"on":"off"}${!x.on&&x.i===topGap.i?" hot":""}">${x.on?"●":"○"} ${esc(DN[x.i])} <span>${x.n}</span></div>`).join(""));
+}
+
+function renderMarket(){
+  const rows=D.map((d,i)=>({i,n:cnt(i),on:!!me.f[i]})).sort((a,b)=>b.n-a.n);
+  const norm=rows.filter(r=>r.n>12);
+  const missing=norm.filter(r=>!r.on).map(r=>DN[r.i].toLowerCase());
+  h("#market-sub",`Сколько брендов из 25 ведут направление. Правее отметки 50% — норма рынка: ${norm.length} ${plural(norm.length,"направление","направления","направлений")}${missing.length?`, из них у нас нет только: ${esc(missing.join(", "))}`:", и все они у нас есть"}.`);
+  h("#market-rows",`<div class="mrow hd"><span>НАПРАВЛЕНИЕ</span><span>ДОЛЯ РЫНКА · 50%</span><span>ИЗ 25</span><span class="stt">2ГИС TECH</span></div>`+
+    rows.map(r=>`<div class="mrow"><span class="nm">${esc(DN[r.i])}</span><div class="mbar"><i style="width:${r.n/25*100}%;background:${r.on?"var(--green)":"var(--yellow)"}"></i></div><span class="mono">${r.n}</span><span class="stt ${r.on?"st-on":"st-off"}">${r.on?"● есть":r.n>12?"○ пробел":"○ свободная ниша"}</span></div>`).join(""));
+}
+
+// ---------- матрица ----------
+let mxSort=-1;
+function renderMatrix(){
+  const others=M.filter(m=>m.n!==ME).sort((a,b)=>mxSort<0?b.t-a.t:(b.f[mxSort]-a.f[mxSort])||(b.t-a.t));
+  const cells=m=>m.f.map((v,i)=>v?`<button class="cell on" type="button" data-co="${esc(m.n)}" data-di="${i}" aria-label="${esc(m.n)}: ${esc(D[i])} — открыть кейсы"></button>`:`<span class="cell" aria-label="${esc(m.n)}: ${esc(D[i])} — не найдено"></span>`).join("");
+  h("#mx-grid",`<div class="mx-r hd"><span></span>${DS.map((d,i)=>`<button type="button" data-sort="${i}" aria-pressed="${mxSort===i}" title="${esc(D[i])}">${esc(d)}</button>`).join("")}<button type="button" data-sort="-1" aria-pressed="${mxSort<0}" style="text-align:right">Итог</button></div>
+    <div class="mx-r me"><span class="nm nmw"><img class="lg" src="${LOGO}" alt="" style="width:20px;height:20px">${esc(me.n)}</span>${cells(me)}<span class="tt">${me.t}/8</span></div>
+    ${others.map(m=>`<div class="mx-r"><span class="nm">${esc(m.n)}</span>${cells(m)}<span class="tt">${m.t}/8</span></div>`).join("")}
+    <div class="mx-r ft"><span style="font-family:'Golos Text',sans-serif;font-size:13px">Брендов из 25</span>${D.map((d,i)=>`<span>${cnt(i)}</span>`).join("")}<span class="tt">${fmtDec(avg,2)}</span></div>`);
+  document.querySelectorAll("#mx-grid [data-sort]").forEach(b=>b.onclick=()=>{mxSort=+b.dataset.sort;renderMatrix()});
+  document.querySelectorAll("#mx-grid .cell.on").forEach(b=>b.onclick=()=>{caseState={company:b.dataset.co,dir:D[+b.dataset.di]};renderCases();$("#evidence").scrollIntoView({behavior:"smooth"})});
+}
+
+// ---------- кейсы ----------
+let caseState={company:"",dir:""};
+const companies=[...new Set(C.map(c=>c[0]))];
+function renderCases(){
+  const dirs=["","Технический контент","События","Сообщество","Инженеры-эксперты","Образование","Исследования","Open Source","Нестандартные форматы"];
+  const lab=d=>d===""?"Все":d==="Технический контент"?"Контент":d==="Нестандартные форматы"?"Нестандартные":d==="Инженеры-эксперты"?"Эксперты":d;
+  h("#case-filters",`<button type="button" data-me aria-pressed="${caseState.company===ME}">Только 2ГИС Tech</button>
+    <label class="sr" for="case-co">Компания</label><select id="case-co"><option value="">Все компании</option>${companies.map(c=>`<option ${c===caseState.company?"selected":""}>${esc(c)}</option>`).join("")}</select>
+    ${dirs.map(d=>`<button type="button" data-dir="${esc(d)}" aria-pressed="${caseState.dir===d}">${esc(lab(d))}</button>`).join("")}`);
+  $("#case-filters [data-me]").onclick=()=>{caseState.company=caseState.company===ME?"":ME;renderCases()};
+  $("#case-co").onchange=e=>{caseState.company=e.target.value;renderCases()};
+  document.querySelectorAll("#case-filters [data-dir]").forEach(b=>b.onclick=()=>{caseState.dir=b.dataset.dir;renderCases()});
+  const list=C.filter(c=>(!caseState.company||c[0]===caseState.company)&&(!caseState.dir||c[1]===caseState.dir));
+  h("#case-count",`${list.length} из ${C.length} кейсов`);
+  h("#cases",list.length?list.map(c=>`<article class="case"><span class="m">${esc(c[0])} · ${esc(c[1])} · ${esc(c[2])}</span><b>${esc(c[3])}</b>${c[0]===ME?`<span class="me">2ГИС Tech</span>`:""}<a href="${safeUrl(c[4])}" target="_blank" rel="noopener">${esc(c[4].replace(/^https?:\/\//,"").replace(/\/$/,""))} ↗</a></article>`).join(""):`<div class="empty">В зафиксированном перечне кейсов нет примера для этой ячейки — направление подтверждено полным аудитом. Сбросьте фильтр.</div>`);
+}
+
+// ---------- роли ----------
+let role="editor";
+let ctx={};
+function roleCards(){
+  const hb=ctx.habr,tg=ctx.tg;
+  const habrFact=hb?`${fmtInt(hb.me.q3_articles)} ${plural(hb.me.q3_articles,"статья","статьи","статей")} за Q3 (${fmtDec(hb.me.articles_per_week)} в неделю) при медиане группы ${fmtDec(hb.medApw,2)}. Медиана просмотров — ${fmtInt(hb.me.views_median)} против ${fmtInt(hb.medViews)}.`:"Данные Habr загружаются…";
+  const tgFact=tg?`@dev2gis: ${fmtInt(tg.me.views_subscriber_ratio_pct)}% просмотров к подписчикам — ${tg.rank===1?"максимум":`${tg.rank}-е место`} среди ${tg.rows.length} каналов (медиана ${fmtInt(tg.medRatio)}%). ${fmtInt(tg.me.subscribers)} подписчиков и ${fmtInt(tg.me.q3_posts)} ${plural(tg.me.q3_posts,"пост","поста","постов")} за Q3.`:"Данные Telegram загружаются…";
+  const L="#matrix";
+  return {
+    editor:[
+      {a:"Образование",p:"Высокий",f:`${cnt(4)} из 25 брендов ведут образование: летние школы, курсы, студенческие чемпионаты. У 2ГИС Tech не подтверждено.`,h:"Начать с малого: практикум в вузе или открытый курс по нашему стеку.",m:"Заявки и доля завершивших пилот.",s:[["Матрица",L],["E-CUP","https://e-cup-ozon.ru/"],["Школа hh.ru","https://habr.com/ru/companies/hh/articles/1064004/"],["Hack Camp","https://positechglobal.com/en/about/news/positive-hack-camp-2026-two-weeks-of-intensive-practice-for-young-security-researchers-from-20-countries/"]]},
+      {a:"Habr: ритм",p:"Высокий",f:habrFact,h:"Качество материалов уже близко к рынку — растить частоту, не теряя его.",m:"Медиана просмотров не ниже медианы группы при росте числа статей.",s:[["Блог 2ГИС","https://habr.com/ru/companies/2gis/articles/"],["habr.json",GH+"habr.json"]]},
+      {a:"Telegram",p:"Высокий",f:tgFact,h:"Аудитория вовлечена, но мала: кросс-постинг с Habr и событий даст рост.",m:"Прирост подписчиков при сохранении views/subs выше медианы рынка.",s:[["t.me/dev2gis","https://t.me/s/dev2gis"],["telegram.json",GH+"telegram.json"]]},
+      {a:"Исследования",p:"Средний",f:`Только ${cnt(5)} из 25 брендов публикуют исследования — свободная ниша.`,h:"Исследование на данных, которые есть только у 2ГИС.",m:"Упоминания и цитирования за 30 дней после выхода.",s:[["Kaspersky","https://me-en.kaspersky.com/about/press-releases/kaspersky-uncovers-over-250000-potential-security-issues-in-github-actions-workflows"],["PT CloudAtlas","https://habr.com/ru/companies/pt/articles/1057682/"],["Яндекс ICML","https://habr.com/ru/companies/yandex/articles/1055232/"],["Контур","https://devcrowd.ru/pm26/"],["VK","https://habr.com/ru/companies/vktech/posts/1085782/"]]},
+      {a:"Инженеры-эксперты",p:"Средний",f:`Регулярные экспертные серии у ${cnt(3)} из 25: AviTalk, «Битовые маски» YADRO, Java/Scala Digest Т-Банка, «В тренде VM» Positive Technologies.`,h:"Серия с постоянными лицами показывает людей за логотипом.",m:"Выпуски по графику и рост аудитории серии от выпуска к выпуску.",s:[["AviTalk","https://t.me/avitotech/3415"],["Битовые маски","https://www.deezer.com/ru/show/1000062205"],["Java Digest","https://habr.com/ru/companies/tbank/articles/1079464/"],["В тренде VM","https://habr.com/ru/companies/pt/articles/1086646/"]]}
+    ],
+    event:[
+      {a:"Трансляции",p:"Высокий",f:"E-CODE: 4 000+ гостей офлайн и 343K+ просмотров трансляций — примерно в 85 раз больше (это не уникальные зрители).",h:"Трансляция и нарезки дадут основной охват нашего митапа.",m:"Онлайн-просмотры на одного офлайн-гостя.",s:[["E-CODE","https://habr.com/ru/companies/ozontech/news/1065444/"]]},
+      {a:"Соревнования",p:"Высокий",f:"Kaspersky{CTF} — 1 657 команд из 98 стран; Positive Hack Camp — 800+ заявок; Робозон Ozon Tech — хакатон на 15 млн ₽.",h:"Соревнование как самостоятельный контентный продукт.",m:"Заявки, команды и контент по итогам.",s:[["CTF","https://lp.kaspersky.com/ctf/"],["Робозон","https://t.me/ozon_tech/2194"],["Hack Camp","https://positechglobal.com/en/about/news/positive-hack-camp-2026-two-weeks-of-intensive-practice-for-young-security-researchers-from-20-countries/"]]},
+      {a:"Нестандартные форматы",p:"Средний",f:`${cnt(7)} из 25: AVITO.TECHNO, MAGNIT TECH NIGHT, техно-шоу Альфа-Банка. В этом ряду — наш Pause/Break.`,h:"Превратить Pause/Break в регулярную серию.",m:"Охват и упоминания второго выпуска против первого.",s:[["Pause/Break","https://habr.com/ru/companies/2gis/news/1081414/"],["AVITO.TECHNO","https://habr.com/ru/companies/avito/news/1054976/"],["MAGNIT","https://bezpredela.magnit.tech/"]]},
+      {a:"Совместные события",p:"Средний",f:"Компании выступают друг у друга: YADRO провела Go-встречу с Postgres Professional, у Яндекса появилась бэкенд-конференция Back to Back.",h:"Партнёрский митап даёт чужую аудиторию и спикеров без большого бюджета.",m:"Доля новых участников в регистрациях.",s:[["YADRO × Postgres Pro","https://habr.com/ru/companies/yadro/articles/1059750/"],["Back to Back","https://t.me/Yandex4Developers/1774"]]},
+      {a:"Митапы",p:"Низкий",f:`События проводят ${cnt(1)} из 25 брендов — сам факт митапа уже не выделяет.`,h:"Отличать будут формат, дистрибуция и повторяемость серии.",m:"Регистрации и доходимость против прошлых митапов.",s:[["Матрица",L],["Go Go Hopping","https://habr.com/ru/companies/2gis/news/1053946/"],["Альфа-митап","https://habr.com/ru/companies/alfa/news/1076724/"]]}
+    ]
+  };
+}
+function renderRoles(){
+  const tabs=[["editor","Редактор"],["event","Ивент-менеджер"]];
+  h("#role-tabs",tabs.map(([id,l])=>`<button type="button" role="tab" aria-selected="${role===id}" data-role="${id}">${l}</button>`).join(""));
+  document.querySelectorAll("#role-tabs button").forEach(b=>b.onclick=()=>{role=b.dataset.role;renderRoles()});
+  h("#role-cards",roleCards()[role].map(c=>`<article class="card role">
+    <div class="hd"><b>${esc(c.a)}</b><span class="prio">${esc(c.p)}</span></div>
+    <div class="box"><span class="k f">ФАКТ</span><span>${esc(c.f)}</span></div>
+    <div class="box hyp"><span class="k h">ГИПОТЕЗА</span><span>${esc(c.h)}</span></div>
+    <div class="box chk"><span class="k m">КАК ПРОВЕРИТЬ</span><span>${esc(c.m)}</span></div>
+    ${srcs(c.s)}</article>`).join(""));
+}
+
+// ---------- выводы ----------
+function renderTakeaways(){
+  const hb=ctx.habr,tg=ctx.tg;
+  let t2="Habr",d2="Данные Habr загружаются…";
+  if(hb){
+    const freqRatio=hb.medApw>0?hb.medApw/Math.max(hb.me.articles_per_week,0.01):null;
+    const viewsPct=hb.medViews?Math.round(hb.me.views_median/hb.medViews*100):null;
+    const lowFreq=hb.me.articles_per_week<hb.medApw*0.6, goodViews=viewsPct!=null&&viewsPct>=85;
+    t2=lowFreq&&goodViews?"Качество есть, частоты нет":lowFreq?"Публикуемся редко, и просмотры ниже рынка":goodViews?"Частота и просмотры на уровне рынка":"Частота на уровне рынка, просмотры ниже";
+    d2=`Медиана просмотров — ${viewsPct??"—"}% от медианы группы из ${hb.rows.length} блогов${lowFreq&&freqRatio?` при частоте в ${fmtDec(freqRatio,1)} раза ниже`:""}: ${fmtInt(hb.me.q3_articles)} ${plural(hb.me.q3_articles,"статья","статьи","статей")} против медианных ${fmtInt(hb.medArticles)}.`;
+  }
+  let t3="Telegram",d3="Данные Telegram загружаются…";
+  if(tg){
+    const top=tg.rank===1, small=tg.me.subscribers<tg.medSubs;
+    t3=top&&small?"Самая вовлечённая аудитория — и самая маленькая":top?"Самая вовлечённая аудитория среди каналов":small?"Аудитория канала меньше рынка":"Канал на уровне рынка";
+    d3=`${fmtInt(tg.me.views_subscriber_ratio_pct)}% просмотров к подписчикам против ${fmtInt(tg.medRatio)}% у рынка. ${fmtInt(tg.me.subscribers)} подписчиков и ${fmtInt(tg.me.q3_posts)} ${plural(tg.me.q3_posts,"пост","поста","постов")} за Q3.`;
+  }
+  h("#takeaways",`
+    <article class="card tk hl"><span class="no">01 · ПРОБЕЛ</span><span class="t">${esc(D[topGap.i])} — норма рынка: ${topGap.n} из 25 брендов. У нас не подтверждено</span><span class="d">Летние школы, курсы, студенческие чемпионаты. Это гигиена, а не ниша.</span>${srcs([["Матрица","#matrix"],["E-CUP","https://e-cup-ozon.ru/"]])}</article>
+    <article class="card tk"><span class="no" style="color:var(--blue-ink)">02 · HABR</span><span class="t">${esc(t2)}</span><span class="d">${esc(d2)}</span>${srcs([["Блог 2ГИС","https://habr.com/ru/companies/2gis/articles/"],["habr.json",GH+"habr.json"]])}</article>
+    <article class="card tk"><span class="no" style="color:var(--lime)">03 · TELEGRAM</span><span class="t">${esc(t3)}</span><span class="d">${esc(d3)}</span>${srcs([["@dev2gis","https://t.me/s/dev2gis"],["telegram.json",GH+"telegram.json"]])}</article>`);
+}
+
+// ---------- KPI ----------
+function renderKpis(){
+  const hb=ctx.habr,tg=ctx.tg;
+  if(hb){
+    h("#kpi-habr",`<span class="lbl">Статей на Habr в неделю</span><span class="big" style="color:${hb.me.articles_per_week<hb.medApw?"var(--yellow)":"var(--lime)"}">${fmtDec(hb.me.articles_per_week)}</span>
+      <span class="txt">${fmtInt(hb.me.q3_articles)} ${plural(hb.me.q3_articles,"статья","статьи","статей")} за Q3. Медиана группы из ${hb.rows.length} блогов — ${fmtDec(hb.medApw,2)}. Медиана просмотров ${fmtInt(hb.me.views_median)} против ${fmtInt(hb.medViews)} у группы.</span>
+      <span class="auto">● авто · ${fmtDate(ctx.habrUpdated)}</span>${srcs([["Блог 2ГИС","https://habr.com/ru/companies/2gis/articles/"],["habr.json",GH+"habr.json"]])}`);
+  }else h("#kpi-habr",`<span class="lbl">Статей на Habr в неделю</span><span class="txt">Данные Habr временно недоступны.</span>`);
+  if(tg){
+    h("#kpi-tg",`<span class="lbl">@dev2gis · просмотры / подписчики</span><span class="big" style="color:var(--lime)">${fmtInt(tg.me.views_subscriber_ratio_pct)}%</span>
+      <span class="txt">${tg.rank===1?"Лучший показатель":`${tg.rank}-е место`} среди ${tg.rows.length} каналов (медиана — ${fmtInt(tg.medRatio)}%). ${tg.me.subscribers<tg.medSubs?"Но аудитория маленькая: ":""}${fmtInt(tg.me.subscribers)} подписчиков, ${fmtInt(tg.me.q3_posts)} ${plural(tg.me.q3_posts,"пост","поста","постов")} за Q3.</span>
+      <span class="auto">● авто · ${fmtDate(ctx.tgUpdated)}</span>${srcs([["t.me/dev2gis","https://t.me/s/dev2gis"],["telegram.json",GH+"telegram.json"]])}`);
+  }else h("#kpi-tg",`<span class="lbl">@dev2gis · просмотры / подписчики</span><span class="txt">Данные Telegram временно недоступны.</span>`);
+}
+
+// ---------- Performance ----------
+const data={};
+let perfTab="telegram";
+const PERF=[["telegram","Telegram"],["habr","Habr"],["youtube","YouTube"],["rutube","RUTUBE"],["podcasts","Podcasts"]];
+function bar(v,max){return `<div class="hb"><span class="t"><i style="width:${max?Math.max(2,Math.round(v/max*100)):0}%"></i></span><span>${fmtK(v)}</span></div>`}
+function renderTiles(){
+  const hb=data.habr,tg=data.telegram,yt=data.video,rt=data.rutube,pc=data.podcasts;
+  const t=(name,n,s,a,file,ghost)=>`<div class="tile${ghost?" ghost":""}"><b>${name}</b><span class="n"${ghost?' style="color:var(--mute)"':""}>${n}</span><span class="s">${s}</span><span class="a" style="color:${a[1]}">${a[0]}</span>${file?`<a href="./data/${file}" target="_blank" rel="noopener">${file} ↗</a>`:""}</div>`;
+  const auto=["● авто","var(--lime)"];
+  h("#tiles",[
+    t("Habr",hb?fmtInt(hb.summary?.total_q3_articles):"—",hb?`статей Q3 · ${fmtInt(hb.summary?.brands_ok)} блогов`:"нет данных",auto,"habr.json"),
+    t("Telegram",tg?fmtInt(tg.summary?.q3_posts_total):"—",tg?`постов Q3 · ${fmtInt(tg.summary?.collected)} каналов`:"нет данных",auto,"telegram.json"),
+    t("YouTube",yt?`${fmtInt(yt.summary?.channels_with_q3_video)} / ${fmtInt(yt.summary?.channels_matched)}`:"—","каналов публиковали в Q3",["● авто · Data API v3","var(--lime)"],"video.json"),
+    t("RUTUBE",rt?fmtInt(rt.summary?.q3_videos_total):"—",rt?`видео Q3 · ${fmtInt(rt.summary?.collected)} источников`:"нет данных",auto,"rutube.json"),
+    t("Подкасты",pc?.summary?fmtInt(pc.summary.shows_active_q3):"—",pc?.summary?`активных шоу · ${fmtInt(pc.summary.q3_episodes_total)} выпусков Q3`:"нет данных",["● авто · без прослушиваний","var(--lime)"],"podcasts.json"),
+    t("VK Video","≥6","брендов присутствуют",["◐ API в тесте","var(--yellow)"],"",true)
+  ].join(""));
+}
+function renderPerf(){
+  h("#perf-tabs",PERF.map(([id,l])=>`<button type="button" role="tab" aria-selected="${perfTab===id}" data-t="${id}">${l}</button>`).join(""));
+  document.querySelectorAll("#perf-tabs button").forEach(b=>b.onclick=()=>{perfTab=b.dataset.t;renderPerf()});
+  ({telegram:perfTelegram,habr:perfHabr,youtube:perfYouTube,rutube:perfRutube,podcasts:perfPodcasts})[perfTab]();
+}
+const unavailable=(file)=>{h("#perf-body",`<div class="empty">Данные временно недоступны.</div>`);h("#perf-meta","");h("#perf-foot",`<a href="./data/${file}" target="_blank" rel="noopener">${file} ↗</a>`)};
+function perfTelegram(){
+  const d=data.telegram;if(!d)return unavailable("telegram.json");
+  const rows=(d.rows||[]).filter(r=>r.status==="ok").sort((a,b)=>(b.median_views||0)-(a.median_views||0));
+  const max=Math.max(...rows.map(r=>r.median_views||0));
+  h("#perf-meta",`Сортировка: медиана просмотров ↓ · снимок ${fmtDate(d.updated_at)}`);
+  h("#perf-body",`<div class="scroll"><table style="min-width:880px"><thead><tr><th>#</th><th>Канал</th><th class="n">Подписчики</th><th class="n">Посты Q3</th><th class="n">Медиана просмотров</th><th class="n">Views / subs</th><th class="n">Топ-пост</th></tr></thead><tbody>
+    ${rows.map((r,i)=>`<tr class="${isMe(r.brand)?"me":""}"><td class="mono" style="color:var(--dim)">${i+1}</td><td class="nm">${nameCell(r.brand.replace(" · @dev2gis",""),` <small>@${esc(r.handle)}</small>`)}</td><td class="n">${fmtInt(r.subscribers)}</td><td class="n">${fmtInt(r.q3_posts)}</td><td class="n">${bar(r.median_views,max)}</td><td class="n"${isMe(r.brand)?' style="color:var(--lime);font-weight:600"':""}>${fmtInt(r.views_subscriber_ratio_pct)}%</td><td class="n">${r.top_post?ext(r.top_post.url,"пост"):"—"}</td></tr>`).join("")}
+  </tbody></table></div>`);
+  h("#perf-foot",`Views / subs — средние просмотры поста к числу подписчиков. Каналы подтверждены вручную. Источник: публичные страницы t.me/s · <a href="./data/telegram.json" target="_blank" rel="noopener">telegram.json ↗</a>`);
+}
+function perfHabr(){
+  const d=data.habr;if(!d)return unavailable("habr.json");
+  const rows=(d.rows||[]).filter(r=>r.status==="ok"&&r.frequency_compare).sort((a,b)=>(b.q3_articles||0)-(a.q3_articles||0));
+  const max=Math.max(...rows.map(r=>r.views_median||0));
+  const top=(d.top_articles||[]).slice(0,12);
+  h("#perf-meta",`Сопоставимая группа из ${rows.length} блогов · снимок ${fmtDate(d.updated_at)}`);
+  h("#perf-body",`<div class="scroll"><table style="min-width:820px"><thead><tr><th>Блог</th><th class="n">Статей Q3</th><th class="n">В неделю</th><th class="n">Медиана просмотров</th><th class="n">Среднее</th><th>Лучший материал</th></tr></thead><tbody>
+    ${rows.map(r=>`<tr class="${isMe(r.brand)?"me":""}"><td class="nm">${nameCell(r.brand)}</td><td class="n">${fmtInt(r.q3_articles)}</td><td class="n">${fmtDec(r.articles_per_week,2)}</td><td class="n">${r.views_median?bar(r.views_median,max):"—"}</td><td class="n">${fmtK(r.views_average)}</td><td class="w">${r.top_article?ext(r.top_article.url,r.top_article.title)+`<br><small>${fmtK(r.top_article.views)} просмотров</small>`:"—"}</td></tr>`).join("")}
+  </tbody></table></div>
+  <div style="padding:16px 20px 4px;border-top:1px solid var(--line)"><b>Топ-12 статей Q3 по просмотрам</b> <small>· все ${fmtInt(d.summary?.brands_ok)} блогов</small></div>
+  <ol class="pl">${top.map(a=>`<li class="${isMe(a.brand)?"me":""}"><span>${ext(a.url,a.title)}<br><small>${esc(a.display_source||a.brand)} · ${fmtDate(a.published_at)}</small></span><span class="mono">${fmtK(a.views)}</span></li>`).join("")}</ol>`);
+  h("#perf-foot",`Количество статей — публикации 01.07–30.09; просмотры — текущий снимок. Частота ≠ результат: смотрите на медиану. <a href="./data/habr.json" target="_blank" rel="noopener">habr.json ↗</a>`);
+}
+function videoTable(d,file,label){
+  const rows=(d.rows||[]).filter(r=>r.status==="ok").sort((a,b)=>(b.q3_views_median??-1)-(a.q3_views_median??-1));
+  const max=Math.max(...rows.map(r=>r.q3_views_median||0));
+  h("#perf-meta",`${label} · сортировка: медиана просмотров ↓ · снимок ${fmtDate(d.updated_at)}`);
+  h("#perf-body",`<div class="scroll"><table style="min-width:880px"><thead><tr><th>Компания</th><th class="n">Видео Q3</th><th class="n">Медиана просмотров</th><th class="n">Среднее</th><th class="n">Все просмотры Q3</th><th>Топ-видео</th></tr></thead><tbody>
+    ${rows.map(r=>`<tr class="${isMe(r.brand)?"me":""}"><td class="nm w">${nameCell(r.brand)}<br><small>${esc(r.channel_title||r.source_title||"")}${r.subscribers?` · ${fmtK(r.subscribers)} подписчиков`:""}</small>${r.scope_note?`<br><small>${esc(r.scope_note)}</small>`:""}</td><td class="n">${fmtInt(r.q3_videos)}</td><td class="n">${r.q3_views_median!=null?bar(r.q3_views_median,max):"—"}</td><td class="n">${fmtK(r.q3_views_average)}</td><td class="n">${fmtK(r.q3_views_total)}</td><td class="w">${r.top_video?ext(r.top_video.url,r.top_video.title)+`<br><small>${fmtK(r.top_video.views)} просмотров</small>`:"—"}</td></tr>`).join("")}
+  </tbody></table></div>`);
+  h("#perf-foot",`Просмотры — текущий счётчик роликов, опубликованных в Q3, а не просмотры, набранные внутри квартала. <a href="./data/${file}" target="_blank" rel="noopener">${file} ↗</a>`);
+}
+function perfYouTube(){data.video?videoTable(data.video,"video.json","YouTube Data API v3"):unavailable("video.json")}
+function perfRutube(){data.rutube?videoTable(data.rutube,"rutube.json","RUTUBE"):unavailable("rutube.json")}
 const PSRC={rss:"RSS",deezer:"Deezer",youtube:"по видео YouTube",rutube:"по видео RUTUBE"};
 const PSTAT={no_q3_episodes:"в Q3 выпусков нет",announcements_only:"видно только по анонсам",feed_not_found:"фид не найден",error:"источник недоступен"};
-const renderPodcasts=p=>{
-  const updated=p.updated_at?new Date(p.updated_at).toLocaleDateString("ru-RU"):"—";
-  const rows=(p.rows||[]).filter(r=>r.status!=="needs_review")
-    .sort((a,b)=>(b.q3_episodes||0)-(a.q3_episodes||0)||((b.telegram?.announcements_q3)||0)-((a.telegram?.announcements_q3)||0));
+function perfPodcasts(){
+  const p=data.podcasts;if(!p||!(p.rows||[]).length||p.schema_version<2)return unavailable("podcasts.json");
+  const rows=(p.rows||[]).filter(r=>r.status!=="needs_review").sort((a,b)=>(b.q3_episodes||0)-(a.q3_episodes||0)||((b.telegram?.announcements_q3)||0)-((a.telegram?.announcements_q3)||0));
   const review=(p.rows||[]).filter(r=>r.status==="needs_review");
   const s=p.summary||{};
-  const vid=r=>{
-    const y=r.video?.youtube,t=r.video?.rutube;
-    if(!y&&!t)return "—";
-    return [y?`YouTube: <b>${fmtK(y.median_views)}</b>`:"",t?`RUTUBE: ${fmtK(t.median_views)}`:""].filter(Boolean).join("<br>");
-  };
-  const last=r=>{const e=(r.episodes||[])[0];return e?`${lnk(e.url,e.title)}<br><small>${new Date(e.published_at).toLocaleDateString("ru-RU")}</small>`:(r.status in PSTAT?`<small>${PSTAT[r.status]}</small>`:"—")};
-  const showLink=r=>lnk(r.feed?.apple_url||r.feed?.link||r.feed?.url||r.evidence,r.show||"—");
-  const topics=r=>(r.topics||[]).slice(0,3).map(t=>`<span class="badge" style="margin:0 4px 4px 0">${esc(t.label)}</span>`).join("")||"—";
-  const free=(p.topics||[]).filter(t=>!t.shows.length);
-  const busy=(p.topics||[]).filter(t=>t.shows.length);
-  h("#perf-podcasts-content",`
-  <p class="sub" style="margin-bottom:14px">${esc(p.period?.label||"Q3 2026")} · ${s.shows_active_q3||0} активных шоу у ${s.brands_active_q3||0} брендов · ${fmtInt(s.q3_episodes_total||0)} выпусков Q3 · снимок ${updated}</p>
-  <div class="tw"><table><thead><tr>
-    <th>Компания · подкаст</th><th class="num">Выпусков Q3</th><th class="num">Частота</th><th class="num">Длительность</th>
-    <th>Темы</th><th class="num">Просмотры видеоверсии, медиана</th><th class="num">Анонсы в Telegram</th><th>Последний выпуск</th>
-  </tr></thead><tbody>${rows.map(r=>`<tr class="${r.brand===ME?"me":""}">
-    <td class="wrap"><b>${esc(r.brand)}</b><br>${showLink(r)}${r.episodes_source?`<br><small>источник: ${esc(PSRC[r.episodes_source]||r.episodes_source)}</small>`:""}${r.scope_note?`<br><small>${esc(r.scope_note)}</small>`:""}</td>
-    <td class="num">${r.q3_episodes?fmtInt(r.q3_episodes):"—"}</td>
-    <td class="num">${r.median_gap_days!=null?`раз в ${fmtInt(r.median_gap_days)} дн.`:"—"}</td>
-    <td class="num">${r.avg_duration_min!=null?`${fmtInt(r.avg_duration_min)} мин`:"—"}</td>
-    <td class="wrap">${topics(r)}</td>
-    <td class="num">${vid(r)}</td>
-    <td class="num">${r.telegram?`${fmtInt(r.telegram.announcements_q3)} · медиана ${fmtK(r.telegram.median_views)}`:"—"}</td>
-    <td class="wrap">${last(r)}</td>
-  </tr>`).join("")}</tbody></table></div>
-  <h3 style="margin:28px 0 8px">Карта тем подкастов</h3>
-  <p class="sub" style="margin-bottom:14px">Какие темы уже заняты конкурентами, а какие свободны. Полезно при планировании своего подкаста.</p>
-  <div class="g">${busy.map(t=>`<div class="c"><h3>${esc(t.label)}</h3><p>${t.shows.map(x=>`${esc(x.brand)} · ${esc(x.show)} (${x.count})`).join("<br>")}</p></div>`).join("")}
-  ${free.length?`<div class="c" style="border-style:dashed"><h3>Свободно в Q3</h3><p>${free.map(t=>esc(t.label)).join(", ")}</p></div>`:""}</div>
-  ${review.length?`<div class="note"><b>Нужна проверка:</b> ${review.map(r=>esc(r.brand)).join(", ")} — подкаст подтверждён в матрице, но точное шоу ещё не привязано${review.some(r=>(r.match_candidates||[]).length)?". Кандидаты из Apple Podcasts — в podcasts.json":""}.</div>`:""}
-  <div class="note"><b>Почему нет прослушиваний.</b> ${esc(p.note||"")} <a href="./data/podcasts.json" target="_blank" rel="noopener">podcasts.json ↗</a></div>`);
-};
-const loadHabr=async()=>{
-  try{
-    const habr=await loadJSON("habr");
-    const updated=habr.updated_at?new Date(habr.updated_at).toLocaleDateString("ru-RU"):"—";
-    const core=(habr.rows||[])
-      .filter(r=>r.status==="ok" && r.frequency_compare)
-      .sort((a,b)=>(b.q3_articles||0)-(a.q3_articles||0));
-    const meH=core.find(r=>r.brand===ME);
+  const vid=r=>{const y=r.video?.youtube,t=r.video?.rutube;if(!y&&!t)return "—";return [y?`YouTube: <b>${fmtK(y.median_views)}</b>`:"",t?`RUTUBE: ${fmtK(t.median_views)}`:""].filter(Boolean).join("<br>")};
+  const last=r=>{const e=(r.episodes||[])[0];return e?`${ext(e.url,e.title)}<br><small>${fmtDate(e.published_at)}</small>`:(r.status in PSTAT?`<small>${PSTAT[r.status]}</small>`:"—")};
+  const free=(p.topics||[]).filter(t=>!t.shows.length), busy=(p.topics||[]).filter(t=>t.shows.length);
+  h("#perf-meta",`${fmtInt(s.shows_active_q3)} активных шоу у ${fmtInt(s.brands_active_q3)} брендов · ${fmtInt(s.q3_episodes_total)} выпусков Q3 · снимок ${fmtDate(p.updated_at)}`);
+  h("#perf-body",`<div class="scroll"><table class="pod" style="min-width:980px"><thead><tr><th>Компания · подкаст</th><th class="n">Выпусков Q3</th><th class="n">Частота · длит.</th><th>Темы</th><th class="n">Видеоверсия, медиана</th><th class="n">Анонсы в Telegram</th><th>Последний выпуск</th></tr></thead><tbody>
+    ${rows.map(r=>`<tr class="${isMe(r.brand)?"me":""}"><td class="w"><b>${esc(r.brand)}</b><br>${ext(r.feed?.apple_url||r.feed?.link||r.feed?.url||r.evidence,r.show||"—")}${r.episodes_source?`<br><small>источник: ${esc(PSRC[r.episodes_source]||r.episodes_source)}</small>`:""}${r.scope_note?`<br><small>${esc(r.scope_note)}</small>`:""}</td>
+      <td class="n">${r.q3_episodes?fmtInt(r.q3_episodes):"—"}</td><td class="n">${r.median_gap_days!=null?`раз в ${fmtInt(r.median_gap_days)} дн.`:"—"}<br><small>${r.avg_duration_min!=null?`${fmtInt(r.avg_duration_min)} мин`:""}</small></td>
+      <td>${(r.topics||[]).slice(0,3).map(t=>`<span class="badge">${esc(t.label)}</span>`).join("")||"—"}</td><td class="n">${vid(r)}</td>
+      <td class="n">${r.telegram?`${fmtInt(r.telegram.announcements_q3)} · медиана ${fmtK(r.telegram.median_views)}`:"—"}</td><td class="w">${last(r)}</td></tr>`).join("")}
+  </tbody></table></div>
+  <div style="padding:20px;border-top:1px solid var(--line)"><b>Карта тем подкастов</b><p class="sub" style="margin:4px 0 14px">Какие темы уже заняты конкурентами, а какие свободны — для планирования своего подкаста.</p>
+    <div class="grid g-3" style="gap:12px">${busy.map(t=>`<div class="tile"><b>${esc(t.label)}</b><span class="s">${t.shows.map(x=>`${esc(x.brand)} · ${esc(x.show)} (${x.count})`).join("<br>")}</span></div>`).join("")}
+    ${free.length?`<div class="tile ghost"><b style="color:var(--yellow)">Свободно в Q3</b><span class="s">${free.map(t=>esc(t.label)).join(", ")}</span></div>`:""}</div>
+    ${review.length?`<p class="src" style="margin:14px 0 0"><b style="color:var(--yellow)">Нужна проверка:</b> ${review.map(r=>esc(r.brand)).join(", ")} — подкаст есть в матрице, но шоу ещё не привязано.</p>`:""}</div>`);
+  h("#perf-foot",`<b style="color:var(--ink2)">Почему нет прослушиваний.</b> ${esc(p.note||"")} <a href="./data/podcasts.json" target="_blank" rel="noopener">podcasts.json ↗</a>`);
+}
 
-    h("#habr-meta",`${habr.period?.label||"Q3 2026"} · 01.07–30.09 · сопоставимый набор из ${core.length} блогов · просмотры: снимок ${updated}`);
+// ---------- свежесть и обновление ----------
+function renderFresh(){
+  const dates=["habr","telegram","video","rutube","podcasts"].map(k=>data[k]?.updated_at).filter(Boolean).map(s=>new Date(s)).filter(d=>!isNaN(d));
+  const last=dates.length?new Date(Math.max(...dates)):null;
+  const now=new Date(),next=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate(),6,0));
+  do{next.setUTCDate(next.getUTCDate()+1)}while(next.getUTCDay()!==1);
+  h("#fresh",last?`Данные: ${last.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit"})}`:"нет данных");
+  h("#pipe-dates",`Последний запуск: ${last?last.toLocaleString("ru-RU",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}):"—"} · следующий: пн, ${next.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit"})}`);
+}
 
-    h("#habr",`<div class="tw"><table><thead><tr>
-      <th>Компания</th>
-      <th class="num">Статей Q3</th>
-      <th class="num">В неделю</th>
-      <th class="num">Медиана просмотров</th>
-      <th class="num">Среднее</th>
-      <th>Лучший материал Q3</th>
-    </tr></thead><tbody>${core.map(r=>`<tr class="${r.brand===ME?"me":""}">
-      <td><b>${r.brand}</b></td>
-      <td class="num">${fmtInt(r.q3_articles)}</td>
-      <td class="num">${Number(r.articles_per_week||0).toFixed(2).replace(".",",")}</td>
-      <td class="num"><b>${r.views_median==null?"—":fmtK(r.views_median)}</b></td>
-      <td class="num">${r.views_average==null?"—":fmtK(r.views_average)}</td>
-      <td class="wrap">${r.top_article?`<a href="${r.top_article.url}" target="_blank" rel="noopener">${r.top_article.title} ↗</a><br><small>${fmtK(r.top_article.views)} просмотров</small>`:"—"}</td>
-    </tr>`).join("")}</tbody></table></div>`);
-
-    const leaders=core.filter(r=>r.brand!==ME).slice(0,4);
-    h("#habr-note",`Частоту сравниваем на тех же 9 блогах, что и в исходной версии исследования, чтобы не менять методологию. Полный JSON при этом собирается по всем 25 брендам. Общие корпоративные блоги МТС и Сбера помечены отдельно и не входят в этот frequency benchmark. ${meH?`2ГИС Tech: ${meH.q3_articles} статьи, ${Number(meH.articles_per_week).toFixed(2).replace(".",",")} в неделю, медиана просмотров ${fmtK(meH.views_median)}.`:""} ${leaders.length?`Лидеры по частоте в сопоставимом наборе: ${leaders.map(r=>r.brand+" — "+Number(r.articles_per_week).toFixed(2).replace(".",",")+"/нед").join("; ")}.`:""}`);
-
-    if(meH){
-      h("#habr-position-rate",Number(meH.articles_per_week).toFixed(2).replace(".",","));
-      h("#habr-position-copy",`${meH.q3_articles} статьи за Q3; медиана просмотров — ${fmtK(meH.views_median)}. Частота и просмотры теперь считаются автоматически из публичных страниц Habr.`);
-    }
-
-    const tops=habr.top_articles||[];
-    h("#habr-top-meta",`Автоматический Top-${tops.length} по публичным просмотрам статей Q3 · снимок ${updated}. Общие блоги МТС/Сбера из топа исключены, чтобы не смешивать разные scope.`);
-    h("#top",tops.map(r=>`<li class="${r.brand===ME?"me":""}"><span><a href="${r.url}" target="_blank" rel="noopener">${r.title} ↗</a><br><small>${r.brand} · ${new Date(r.published_at).toLocaleDateString("ru-RU")}</small></span><b>${fmtK(r.views)}</b></li>`).join(""));
-  }catch(e){
-    h("#habr-meta","Habr-данные временно недоступны");
-    h("#habr",`<div class="c"><h3>Не удалось загрузить habr.json</h3><p>Остальные разделы лендинга продолжают работать.</p></div>`);
-    h("#habr-note","Слой Habr сохранён отдельно и может быть перезапущен вручную.");
-    h("#habr-top-meta","Habr-данные временно недоступны");
-    h("#top","");
+// ---------- запуск ----------
+renderHero();renderMarket();renderMatrix();renderCases();renderRoles();renderTakeaways();
+(async()=>{
+  const names=["habr","telegram","video","rutube","podcasts"];
+  const res=await Promise.allSettled(names.map(loadJSON));
+  res.forEach((r,i)=>{if(r.status==="fulfilled")data[names[i]]=r.value});
+  if(data.habr){
+    const rows=(data.habr.rows||[]).filter(r=>r.status==="ok"&&r.frequency_compare);
+    const meH=rows.find(r=>isMe(r.brand));
+    if(meH)ctx.habr={me:meH,rows,medApw:median(rows.map(r=>r.articles_per_week)),medViews:median(rows.map(r=>r.views_median)),medArticles:median(rows.map(r=>r.q3_articles))};
+    ctx.habrUpdated=data.habr.updated_at;
   }
-};
-const loadPerformance=async()=>{
-  try{
-    const tg=await loadJSON("telegram");
-    const updated=tg.updated_at?new Date(tg.updated_at).toLocaleDateString("ru-RU"):"—";
-    const rows=(tg.rows||[]).filter(r=>r.status==="ok").sort((a,b)=>(b.median_views||-1)-(a.median_views||-1));
-    h("#perf-telegram-meta",`${tg.period?.label||"Q3 2026"} · ${tg.source_label||"публичные данные"} · снимок: ${updated}`);
-    h("#perf-telegram-body",rows.map((r,i)=>`<tr class="${r.brand.startsWith("2ГИС")?"me":""}">
-      <td>${i+1}</td>
-      <td><b>${r.brand}</b><br><small>@${r.handle}${r.channel_title?" · "+r.channel_title:""}</small></td>
-      <td class="num">${fmtK(r.subscribers)}</td>
-      <td class="num">${fmtInt(r.q3_posts)}</td>
-      <td class="num"><b>${r.median_views==null?"—":fmtK(r.median_views)}</b></td>
-      <td class="num">${r.avg_views==null?"—":fmtK(r.avg_views)}</td>
-      <td class="num">${fmtPct(r.views_subscriber_ratio_pct)}</td>
-      <td class="num">${r.avg_reactions==null?"—":Number(r.avg_reactions).toFixed(1).replace(".",",")}</td>
-      <td class="wrap">${r.top_post?`<a href="${r.top_post.url}" target="_blank" rel="noopener">Открыть ↗</a><br><small>${fmtK(r.top_post.views)} просмотров</small>`:"—"}</td>
-    </tr>`).join(""));
-    const disabled=(tg.rows||[]).filter(r=>r.status==="disabled");
-    const s=tg.summary||{};
-    h("#perf-telegram-note",`${tg.note||""} Сейчас собрано ${s.collected||rows.length} публичных каналов и ${fmtInt(s.q3_posts_total||0)} постов Q3. ${s.channels_with_reactions?"Реакции доступны для "+s.channels_with_reactions+" каналов.":"Telegram не отдал реакции в стабильном HTML-формате, поэтому вместо ложных нулей показываем «—»."} ${disabled.length?disabled.map(r=>r.brand+": "+(r.status_note||"источник недоступен")).join(" "):""}`);
-    const meTg=rows.find(r=>r.brand.startsWith("2ГИС"));
-    if(meTg){
-      h("#tg-position-subs",fmtK(meTg.subscribers));
-      h("#tg-position-copy",`@${meTg.handle} сейчас называется «${meTg.channel_title||meTg.expected_title||"канал"}». За Q3 найдено ${meTg.q3_posts} постов; медиана просмотров — ${fmtK(meTg.median_views)}. ${meTg.scope_note||""}`);
-    }
-  }catch(e){
-    h("#perf-telegram-meta","Данные временно недоступны");
-    h("#perf-telegram-body",`<tr><td colspan="9" class="wrap">Не удалось загрузить Telegram-данные.</td></tr>`);
-    h("#perf-telegram-note","Статический слой данных сохранён в репозитории; попробуйте обновить страницу.");
+  if(data.telegram){
+    const rows=(data.telegram.rows||[]).filter(r=>r.status==="ok");
+    const meT=rows.find(r=>isMe(r.brand));
+    if(meT){const sorted=[...rows].sort((a,b)=>(b.views_subscriber_ratio_pct||0)-(a.views_subscriber_ratio_pct||0));
+      ctx.tg={me:meT,rows,rank:sorted.indexOf(meT)+1,medRatio:median(rows.map(r=>r.views_subscriber_ratio_pct)),medSubs:median(rows.map(r=>r.subscribers))}}
+    ctx.tgUpdated=data.telegram.updated_at;
   }
-  try{
-    const video=await loadJSON("video");
-    const verified=(video.rows||[]).filter(r=>r.status==="ok");
-    const rows=[...verified].sort((a,b)=>(b.q3_views_median||-1)-(a.q3_views_median||-1));
-    const updated=video.updated_at?new Date(video.updated_at).toLocaleDateString("ru-RU"):"—";
-    h("#perf-video-meta",`${video.period?.label||"Q3 2026"} · YouTube Data API v3 · снимок просмотров и подписчиков: ${updated}`);
-    if(rows.length){
-      h("#perf-video-content",`<div class="tw"><table><thead><tr><th>Компания</th><th class="num">Видео Q3</th><th class="num">Подписчики</th><th class="num">Медиана просмотров</th><th class="num">Среднее</th><th class="num">Все просмотры Q3</th><th>Топ-видео</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.brand===ME?"me":""}"><td><b>${r.brand}</b><br><small>${r.channel_title||""}</small>${r.scope_note?`<br><small>${r.scope_note}</small>`:""}</td><td class="num">${fmtInt(r.q3_videos)}</td><td class="num">${fmtK(r.subscribers)}</td><td class="num"><b>${r.q3_views_median==null?"—":fmtK(r.q3_views_median)}</b></td><td class="num">${r.q3_views_average==null?"—":fmtK(r.q3_views_average)}</td><td class="num">${fmtK(r.q3_views_total)}</td><td class="wrap">${r.top_video?`<a href="${r.top_video.url}" target="_blank" rel="noopener">${r.top_video.title} ↗</a><br><small>${fmtK(r.top_video.views)} просмотров</small>`:"—"}</td></tr>`).join("")}</tbody></table></div>`);
-      const s=video.summary||{};
-      h("#perf-video-note",`Сейчас в API-слое закреплены ${s.channels_matched||rows.length} проверенных YouTube-каналов из 25 брендов; у ${s.channels_with_q3_video||0} из них были публикации в Q3. Остальные бренды не подменяются автоматическим поиском, пока канал не подтверждён. Число видео относится к 01.07–30.09; просмотры и подписчики — текущий снимок на ${updated}.`);
-    }else{
-      renderEmptyPerformance("#perf-video-content",video,"Video");
-      h("#perf-video-note",video.note||"");
-    }
-  }catch(e){
-    h("#perf-video-meta","YouTube-данные временно недоступны");
-    renderEmptyPerformance("#perf-video-content",{note:"Не удалось загрузить video.json."},"Video");
-    h("#perf-video-note","Проверьте JSON-слой данных.");
-  }
-  try{
-    const rutube=await loadJSON("rutube");
-    const rows=(rutube.rows||[]).filter(r=>r.status==="ok").sort((a,b)=>(b.q3_views_median||-1)-(a.q3_views_median||-1));
-    const updated=rutube.updated_at?new Date(rutube.updated_at).toLocaleDateString("ru-RU"):"—";
-    h("#perf-rutube-meta",`${rutube.period?.label||"Q3 2026"} · RUTUBE public data · снимок просмотров: ${updated}`);
-    if(rows.length){
-      h("#perf-rutube-content",`<div class="tw"><table><thead><tr>
-        <th>Компания</th>
-        <th class="num">Видео Q3</th>
-        <th class="num">Медиана просмотров</th>
-        <th class="num">Среднее</th>
-        <th class="num">Все просмотры Q3</th>
-        <th>Топ-видео</th>
-      </tr></thead><tbody>${rows.map(r=>`<tr class="${r.brand===ME?"me":""}">
-        <td><b>${r.brand}</b><br><small>${r.source_title||""}</small>${r.scope_note?`<br><small>${r.scope_note}</small>`:""}</td>
-        <td class="num">${fmtInt(r.q3_videos)}</td>
-        <td class="num"><b>${r.q3_views_median==null?"—":fmtK(r.q3_views_median)}</b></td>
-        <td class="num">${r.q3_views_average==null?"—":fmtK(r.q3_views_average)}</td>
-        <td class="num">${fmtK(r.q3_views_total)}</td>
-        <td class="wrap">${r.top_video?`<a href="${r.top_video.url}" target="_blank" rel="noopener">${r.top_video.title} ↗</a><br><small>${fmtK(r.top_video.views)} просмотров</small>`:"—"}</td>
-      </tr>`).join("")}</tbody></table></div>`);
-      const s=rutube.summary||{};
-      h("#perf-rutube-note",`${rutube.note||""} Проверено ${s.collected||rows.length} источников; всего найдено ${fmtInt(s.q3_videos_total||0)} видео Q3.`);
-    }else{
-      renderEmptyPerformance("#perf-rutube-content",rutube,"RUTUBE");
-      h("#perf-rutube-note",rutube.note||"");
-    }
-  }catch(e){
-    h("#perf-rutube-meta","RUTUBE-данные временно недоступны");
-    renderEmptyPerformance("#perf-rutube-content",{note:"Не удалось загрузить rutube.json."},"RUTUBE");
-    h("#perf-rutube-note","Публичный слой RUTUBE временно недоступен.");
-  }
-
-  try{
-    const podcasts=await loadJSON("podcasts");
-    if(podcasts.schema_version>=2 && (podcasts.rows||[]).length) renderPodcasts(podcasts);
-    else renderEmptyPerformance("#perf-podcasts-content",podcasts,"Podcasts");
-  }catch(e){
-    renderEmptyPerformance("#perf-podcasts-content",{note:"Не удалось загрузить podcasts.json."},"Podcasts");
-  }
-};
-loadPerformance();
-loadHabr();
-// matrix
-$("#avg").textContent=(M.reduce((a,m)=>a+m.t,0)/M.length).toFixed(2).replace(".",",");
-let sk=-1,sd=-1;const rm=()=>{const rows=[...M].sort((a,b)=>sk<0?sd*(a.t-b.t)||0:sd*(a.f[sk]-b.f[sk])||b.t-a.t);
-h("#mt",`<thead><tr><th class="s" tabindex="0" data-k="-1">Компания</th>${D.map((d,i)=>`<th class="s" tabindex="0" data-k="${i}">${d}</th>`).join("")}<th class="s num" tabindex="0" data-k="-1">Итого</th></tr></thead><tbody>${rows.map(m=>`<tr class="${m.n==ME?"me":""}"><td>${m.n}</td>${m.f.map(v=>`<td><span class="dot ${v?"":"o"}" title="${v?"Есть":"Нет"}"></span></td>`).join("")}<td class="num"><span class="sc">${m.t}/8</span></td></tr>`).join("")}</tbody>`);
-document.querySelectorAll("#mt th.s").forEach(t=>{const f=()=>{const k=+t.dataset.k;if(k==sk)sd=-sd;else{sk=k;sd=-1}rm()};t.onclick=f;t.onkeydown=e=>{if(e.key=="Enter")f()}})};sd=-1;rm();
-// cases
-const C=[["2ГИС Tech","Технический контент","2026-07-29","Полевые проезды в QA: как мы ищем аномалии геопозиции","https://habr.com/ru/companies/2gis/articles/1056942/"],["2ГИС Tech","Технический контент","2026-08-26","Помогите, FLAKY","https://habr.com/ru/companies/2gis/articles/1074116/"],["2ГИС Tech","События","2026-07-16","Go Go Hopping Meetup","https://habr.com/ru/companies/2gis/news/"],["2ГИС Tech","Нестандартные форматы","2026-09-11","Pause/Break — интерактивный арт-объект ко Дню программиста","https://habr.com/ru/companies/2gis/news/1081414/"],["2ГИС Tech","Open Source","Q3 2026","deck2gisLayer","https://github.com/2gis/riverboat"],["Яндекс","Open Source","2026-09-11","Alice AI Search Pretrain open-source release","https://yandex.ru/company/news/11-09-2026-01"],["Avito","Нестандартные форматы","2026-07-17","AVITO.TECHNO — ночной рейв для IT-аудитории","https://habr.com/ru/companies/avito/news/1054976/"],["Ozon Tech","События","2026-09-12","E-CODE 2026","https://habr.com/ru/companies/ozontech/news/1065444/"],["Ozon Tech","Образование","2026-08-07","E-CUP 2026 Students","https://e-cup-ozon.ru/"],["Kaspersky","Нестандартные форматы","2026-08-29","Kaspersky{CTF} 2026","https://lp.kaspersky.com/ctf/"],["Kaspersky","Исследования","2026-07-07","GitHub Actions workflow security review","https://me-en.kaspersky.com/about/press-releases/kaspersky-uncovers-over-250000-potential-security-issues-in-github-actions-workflows"],["Positive Technologies","Образование","2026-07-25","Positive Hack Camp 2026","https://positechglobal.com/en/about/news/positive-hack-camp-2026-two-weeks-of-intensive-practice-for-young-security-researchers-from-20-countries/"],["Т-Банк","События","2026-08-29","JVM Day 2026","https://meetup.tbank.ru/conference/jvm-day/"],["Magnit Tech","Нестандартные форматы","2026-09-18","MAGNIT TECH NIGHT","https://bezpredela.magnit.tech/"],["YADRO","Нестандартные форматы","2026-07-24","10 лет блогу YADRO — инженерный суперквиз","https://habr.com/ru/companies/yadro/articles/1061802/"],["Контур","Исследования","2026-07-03","Исследование продакт-менеджеров 2026 с DevCrowd","https://devcrowd.ru/pm26/"],
-["Avito","События","2026-09-26","Avito.Tech.Conf 2026","https://habr.com/ru/companies/avito/news/1074754/"],
-["Ozon Tech","Open Source","2026-08-03","Testo — open-source фреймворк тестирования на Go","https://habr.com/ru/companies/ozontech/articles/1062036/"],
-["VK","Исследования","2026-09-23","VK WorkSpace × Hi-Tech Mail: два исследования об ИИ и цифровой работе","https://habr.com/ru/companies/vktech/posts/1085782/"],
-["Альфа-Банк","События","2026-09-30","АЛЬФА ВААА{АИ}ЙЙЙБ МИТАП","https://habr.com/ru/companies/alfa/news/1076724/"],
-["Альфа-Банк","Нестандартные форматы","2026-09-30","Techno-show + финал AI-хакатона + live music","https://habr.com/ru/companies/alfa/news/1076724/"]];
-const opt=(a,l)=>`<option value="">${l}</option>`+a.map(x=>`<option>${x}</option>`).join("");
-h("#fc",opt([...new Set(C.map(c=>c[0]))],"Все компании"));h("#fd",opt(D,"Все направления"));
-const rc=()=>{const a=$("#fc").value,b=$("#fd").value;const r=C.filter(c=>(!a||c[0]==a)&&(!b||c[1]==b));h("#cases",r.length?r.map(c=>`<div class="case ${c[0]==ME?"me":""}"><small>${c[1]} · ${c[2]} · ${c[0]}</small><h3>${c[3]}</h3><a href="${c[4]}" target="_blank" rel="noopener">Источник ↗</a></div>`).join(""):"<p class='sub'>Ничего не найдено. Сбросьте один из фильтров.</p>")};
-$("#fc").onchange=$("#fd").onchange=rc;rc();
-// roles
-const R={"Редактор":[["Habr: мы в хвосте по частоте","У 2ГИС Tech 4 статьи за Q3. Частота, медиана/среднее просмотров и лидеры теперь считаются автоматически в разделе «Контент в цифрах».","Проверить, растут ли просмотры на материал при более регулярной частоте публикаций."],["Что читают","Top Habr теперь пересчитывается автоматически по публичным просмотрам статей Q3. Для 2ГИС Tech лучший материал квартала — «Полевые проезды в QA».","Сравнивать не только тему, но и формат, возраст публикации и медиану просмотров блога."],["Telegram","Performance Q3 теперь считает посты, медиану и средние просмотры напрямую по публичным страницам Telegram для проверенных каналов. Это один и тот же метод для всех доступных источников.","Использовать медиану просмотров как более устойчивую метрику и расширять список только после проверки точного публичного канала."],["Видео и подкасты","YouTube и RUTUBE теперь сравниваются в Performance Q3 по проверенным источникам: количество видео за квартал, медиана/среднее просмотров, суммарные просмотры и top video. VK Video без токена не даёт стабильного источника, а podcast plays публично несопоставимы.","Для решений опираться на YouTube и RUTUBE; VK Video и подкасты держать как presence/activity, пока не появится сопоставимый источник."],["Образование — главный пробел","16/25: летние школы (Яндекс, X5, Т-Банк, YADRO), курсы (Selectel, Cloud.ru), школы hh.ru, Академия Авито, студенческий E-CUP у Ozon Tech. У 2ГИС Tech не подтверждено.","Начать с малого: практикум в вузе или открытый курс по нашему стеку."],["Сообщество","Постоянное сообщество у 3/25: Young&&Yandex, True Tech Community (MTS Tech), Security Expert Community (Positive Technologies).","Ниша свободна, но нужны ресурсы на модерацию."],["Инженеры как эксперты","4/25: AviTalk (Avito), «Битовые маски» (YADRO, 29 выпусков), Java/Scala Digest (Т-Банк), «В тренде VM» (Positive Technologies).","Серия с постоянными лицами показывает людей за логотипом."],["Исследования","6/25: Яндекс (ICML), Kaspersky (GitHub Actions), Positive Technologies (CloudAtlas), Контур (DevCrowd), Альфа-Банк и VK (VK WorkSpace × Hi-Tech Mail).","Проверить формат исследования на данных, которые есть только у 2ГИС."],["Наши сильные стороны","Open Source (14/25) и нестандартные форматы (8/25) у нас подтверждены.","Показывать их в найме как отличие."]],
-"Ивент-менеджер":[["Митап уже не выделяет","События проводят 18/25. У нас есть Go Go Hopping Meetup и арт-объект Pause/Break ко Дню программиста.","Отличать бренд будут формат и масштаб, а не сам факт митапа."],["Масштаб лидеров","E-CODE (Ozon Tech): 4 000+ гостей офлайн, 59 выступлений и 343K+ просмотров трансляций. Kaspersky{CTF}: 1 657 команд из 98 стран. Positive Hack Camp: 800+ заявок, 81 участник из 20 стран.","Трансляция даёт основной охват: просмотров в ≈85 раз больше, чем гостей офлайн (это не уникальные зрители)."],["Запоминающиеся форматы","Ночные и гибридные форматы: AVITO.TECHNO, MAGNIT TECH NIGHT, Deep Tech Night (Яндекс), АЛЬФА ВААА{АИ}ЙЙЙБ МИТАП. Соревнования: Робозон, E-CUP, CTF, True Tech Champ.","Pause/Break стоит в этом ряду; можно превратить его в регулярную серию."],["Совместные события","На Back to Back (Яндекс, три города) выступал докладчик Positive Technologies. Data Meetup VK Tech прошёл с кейсами Авито и RWB, YADRO собрал встречу с Postgres Pro и VK.","Партнёрский митап даёт чужую аудиторию и спикеров без большого бюджета."],["Финиш квартала","26 сентября прошёл Avito.Tech.Conf, а 30 сентября — АЛЬФА ВААА{АИ}ЙЙЙБ МИТАП с финалом AI-хакатона, техно-шоу и live music. Даже последняя неделя Q3 добавила новые заметные форматы.","При планировании Q4 сравнивать не только количество событий, но и формат, дистрибуцию и повторяемость серии."]]};
-const RN=Object.keys(R),dr=t=>h("#rp",R[t].map(r=>`<div class="c"><h3>${r[0]}</h3><p>${r[1]}</p><p style="margin-top:8px;color:var(--ink)"><b style="color:var(--acc)">Гипотеза:</b> ${r[2]}</p></div>`).join(""));
-RN.forEach((t,i)=>{const b=document.createElement("button");b.textContent=t;b.setAttribute("aria-selected",i==0);b.onclick=()=>{document.querySelectorAll("#rt button").forEach(x=>x.setAttribute("aria-selected",x==b));dr(t)};$("#rt").append(b)});dr(RN[0]);
-const TR=[["Нестандартные форматы — 8/25","AVITO.TECHNO, MAGNIT TECH NIGHT, Deep Tech Night, квиз YADRO, арт-объект 2ГИС Tech и финальный сентябрьский AI/techno-show Альфа-Банка."],["Соревнования как контент","Робозон и E-CUP (Ozon Tech), Kaspersky{CTF}, True Tech Champ: вокруг соревнования строится отдельный контентный и событийный слой."],["Компании выступают друг у друга","Back to Back, Data Meetup VK, встреча YADRO × Postgres Pro, AVITO.TECHNO: cross-company формат стал заметной частью квартала."],["Частота ≠ результат","Habr теперь показывает рядом частоту, медиану и среднее просмотров: высокий объём публикаций сам по себе не означает высокий результат на материал."],["Трансляция масштабирует событие","E-CODE: 4 000+ гостей офлайн и 343K+ просмотров трансляций; метрики не равны уникальной аудитории, но показывают разницу масштаба дистрибуции."],["Q3 закрыт — это срез, не динамика","Мы видим структуру рынка за квартал, но без сопоставимого Q2 нельзя утверждать, что конкретный формат растёт или падает."]];
-h("#tr",TR.map(t=>`<div class="c"><h3>${t[0]}</h3><p>${t[1]}</p></div>`).join(""));
+  renderKpis();renderTakeaways();renderRoles();renderTiles();renderPerf();renderFresh();
+})();
 </script>
 </body>
 </html>
