@@ -243,6 +243,50 @@ const loadJSON=async name=>{
 const renderEmptyPerformance=(selector,data,label)=>{
   h(selector,`<div class="c"><h3>${label}</h3><p>${data.note||"Сопоставимые публичные метрики пока не подключены."}</p></div>`);
 };
+// podcasts: выпуски, темы, видеоверсии и анонсы. Тексты приходят из чужих RSS — всегда экранируем.
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl=u=>/^https?:\/\//i.test(u||"")?esc(u):"";
+const lnk=(u,t)=>safeUrl(u)?`<a href="${safeUrl(u)}" target="_blank" rel="noopener">${esc(t)} ↗</a>`:esc(t);
+const PSRC={rss:"RSS",deezer:"Deezer",youtube:"по видео YouTube",rutube:"по видео RUTUBE"};
+const PSTAT={no_q3_episodes:"в Q3 выпусков нет",announcements_only:"видно только по анонсам",feed_not_found:"фид не найден",error:"источник недоступен"};
+const renderPodcasts=p=>{
+  const updated=p.updated_at?new Date(p.updated_at).toLocaleDateString("ru-RU"):"—";
+  const rows=(p.rows||[]).filter(r=>r.status!=="needs_review")
+    .sort((a,b)=>(b.q3_episodes||0)-(a.q3_episodes||0)||((b.telegram?.announcements_q3)||0)-((a.telegram?.announcements_q3)||0));
+  const review=(p.rows||[]).filter(r=>r.status==="needs_review");
+  const s=p.summary||{};
+  const vid=r=>{
+    const y=r.video?.youtube,t=r.video?.rutube;
+    if(!y&&!t)return "—";
+    return [y?`YouTube: <b>${fmtK(y.median_views)}</b>`:"",t?`RUTUBE: ${fmtK(t.median_views)}`:""].filter(Boolean).join("<br>");
+  };
+  const last=r=>{const e=(r.episodes||[])[0];return e?`${lnk(e.url,e.title)}<br><small>${new Date(e.published_at).toLocaleDateString("ru-RU")}</small>`:(r.status in PSTAT?`<small>${PSTAT[r.status]}</small>`:"—")};
+  const showLink=r=>lnk(r.feed?.apple_url||r.feed?.link||r.feed?.url||r.evidence,r.show||"—");
+  const topics=r=>(r.topics||[]).slice(0,3).map(t=>`<span class="badge" style="margin:0 4px 4px 0">${esc(t.label)}</span>`).join("")||"—";
+  const free=(p.topics||[]).filter(t=>!t.shows.length);
+  const busy=(p.topics||[]).filter(t=>t.shows.length);
+  h("#perf-podcasts-content",`
+  <p class="sub" style="margin-bottom:14px">${esc(p.period?.label||"Q3 2026")} · ${s.shows_active_q3||0} активных шоу у ${s.brands_active_q3||0} брендов · ${fmtInt(s.q3_episodes_total||0)} выпусков Q3 · снимок ${updated}</p>
+  <div class="tw"><table><thead><tr>
+    <th>Компания · подкаст</th><th class="num">Выпусков Q3</th><th class="num">Частота</th><th class="num">Длительность</th>
+    <th>Темы</th><th class="num">Просмотры видеоверсии, медиана</th><th class="num">Анонсы в Telegram</th><th>Последний выпуск</th>
+  </tr></thead><tbody>${rows.map(r=>`<tr class="${r.brand===ME?"me":""}">
+    <td class="wrap"><b>${esc(r.brand)}</b><br>${showLink(r)}${r.episodes_source?`<br><small>источник: ${esc(PSRC[r.episodes_source]||r.episodes_source)}</small>`:""}${r.scope_note?`<br><small>${esc(r.scope_note)}</small>`:""}</td>
+    <td class="num">${r.q3_episodes?fmtInt(r.q3_episodes):"—"}</td>
+    <td class="num">${r.median_gap_days!=null?`раз в ${fmtInt(r.median_gap_days)} дн.`:"—"}</td>
+    <td class="num">${r.avg_duration_min!=null?`${fmtInt(r.avg_duration_min)} мин`:"—"}</td>
+    <td class="wrap">${topics(r)}</td>
+    <td class="num">${vid(r)}</td>
+    <td class="num">${r.telegram?`${fmtInt(r.telegram.announcements_q3)} · медиана ${fmtK(r.telegram.median_views)}`:"—"}</td>
+    <td class="wrap">${last(r)}</td>
+  </tr>`).join("")}</tbody></table></div>
+  <h3 style="margin:28px 0 8px">Карта тем подкастов</h3>
+  <p class="sub" style="margin-bottom:14px">Какие темы уже заняты конкурентами, а какие свободны. Полезно при планировании своего подкаста.</p>
+  <div class="g">${busy.map(t=>`<div class="c"><h3>${esc(t.label)}</h3><p>${t.shows.map(x=>`${esc(x.brand)} · ${esc(x.show)} (${x.count})`).join("<br>")}</p></div>`).join("")}
+  ${free.length?`<div class="c" style="border-style:dashed"><h3>Свободно в Q3</h3><p>${free.map(t=>esc(t.label)).join(", ")}</p></div>`:""}</div>
+  ${review.length?`<div class="note"><b>Нужна проверка:</b> ${review.map(r=>esc(r.brand)).join(", ")} — подкаст подтверждён в матрице, но точное шоу ещё не привязано${review.some(r=>(r.match_candidates||[]).length)?". Кандидаты из Apple Podcasts — в podcasts.json":""}.</div>`:""}
+  <div class="note"><b>Почему нет прослушиваний.</b> ${esc(p.note||"")} <a href="./data/podcasts.json" target="_blank" rel="noopener">podcasts.json ↗</a></div>`);
+};
 const loadHabr=async()=>{
   try{
     const habr=await loadJSON("habr");
@@ -373,7 +417,8 @@ const loadPerformance=async()=>{
 
   try{
     const podcasts=await loadJSON("podcasts");
-    renderEmptyPerformance("#perf-podcasts-content",podcasts,"Podcasts");
+    if(podcasts.schema_version>=2 && (podcasts.rows||[]).length) renderPodcasts(podcasts);
+    else renderEmptyPerformance("#perf-podcasts-content",podcasts,"Podcasts");
   }catch(e){
     renderEmptyPerformance("#perf-podcasts-content",{note:"Не удалось загрузить podcasts.json."},"Podcasts");
   }

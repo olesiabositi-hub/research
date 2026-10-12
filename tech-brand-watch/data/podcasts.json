@@ -1,14 +1,1063 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "channel": "podcasts",
   "period": {
-    "from": "2026-07-01",
-    "to": "2026-09-30",
+    "from": "2026-07-01T00:00:00Z",
+    "to": "2026-09-30T23:59:59Z",
     "label": "Q3 2026"
   },
-  "status": "not_comparable",
-  "updated_at": "2026-10-08",
-  "source_label": "Public podcast pages / Apple Podcasts / mave",
-  "note": "Публичные listen/play counts конкурентов не сопоставимы. Apple Podcasts показывает детальную аналитику владельцам шоу, а публичные страницы выпусков не дают play count. У mave публичные метрики существуют, но не включают прослушивания из Spotify, Яндекс Музыки и VK, поэтому использовать их для общего рейтинга брендов некорректно. В Performance не добавляем численные podcast-метрики.",
-  "rows": []
+  "status": "presence_topics",
+  "updated_at": "2026-10-12T10:51:55.326Z",
+  "source_label": "Public podcast RSS (iTunes/Deezer), YouTube & RUTUBE video versions, Telegram announcements",
+  "note": "Прослушивания конкурентов публично несопоставимы и не собираются. Показаны выпуски Q3, частота, длительность и темы; просмотры — только видеоверсий выпусков на YouTube/RUTUBE (снимок на дату updated_at); охват анонсов — просмотры постов в Telegram. Темы определяются по словарю ключевых слов в названиях и описаниях — это ориентир, а не ручная разметка.",
+  "summary": {
+    "shows_configured": 12,
+    "shows_confirmed": 10,
+    "shows_with_feed": 0,
+    "shows_active_q3": 9,
+    "brands_active_q3": 5,
+    "q3_episodes_total": 11,
+    "needs_review": 2,
+    "errors": 1
+  },
+  "topics": [
+    {
+      "id": "infra",
+      "label": "Инфраструктура и SRE",
+      "shows": [
+        {
+          "brand": "Avito",
+          "show": "В SREду на кухне",
+          "count": 5
+        },
+        {
+          "brand": "Ozon Tech",
+          "show": "Что в пакете",
+          "count": 1
+        },
+        {
+          "brand": "RWB",
+          "show": "Tech Talks",
+          "count": 1
+        }
+      ],
+      "episodes": 7
+    },
+    {
+      "id": "ai",
+      "label": "ИИ и ML",
+      "shows": [
+        {
+          "brand": "Selectel",
+          "show": "Сегодня на ретро",
+          "count": 2
+        },
+        {
+          "brand": "Avito",
+          "show": "Бэкенд расправил плечи",
+          "count": 1
+        },
+        {
+          "brand": "Avito",
+          "show": "AviTalk",
+          "count": 1
+        },
+        {
+          "brand": "Ozon Tech",
+          "show": "Что в пакете",
+          "count": 1
+        },
+        {
+          "brand": "RWB",
+          "show": "Tech Talks",
+          "count": 1
+        }
+      ],
+      "episodes": 6
+    },
+    {
+      "id": "leadership",
+      "label": "Менеджмент и лидерство",
+      "shows": [
+        {
+          "brand": "Avito",
+          "show": "Свободный слот",
+          "count": 2
+        },
+        {
+          "brand": "Avito",
+          "show": "В SREду на кухне",
+          "count": 1
+        },
+        {
+          "brand": "Ozon Tech",
+          "show": "Что в пакете",
+          "count": 1
+        },
+        {
+          "brand": "RWB",
+          "show": "Tech Talks",
+          "count": 1
+        }
+      ],
+      "episodes": 5
+    },
+    {
+      "id": "qa",
+      "label": "QA и тестирование",
+      "shows": [
+        {
+          "brand": "Avito",
+          "show": "В SREду на кухне",
+          "count": 1
+        },
+        {
+          "brand": "Avito",
+          "show": "Не воспроизводится",
+          "count": 1
+        },
+        {
+          "brand": "Avito",
+          "show": "AviTalk",
+          "count": 1
+        }
+      ],
+      "episodes": 3
+    },
+    {
+      "id": "backend",
+      "label": "Бэкенд и архитектура",
+      "shows": [
+        {
+          "brand": "Avito",
+          "show": "Бэкенд расправил плечи",
+          "count": 1
+        },
+        {
+          "brand": "Selectel",
+          "show": "Сегодня на ретро",
+          "count": 1
+        }
+      ],
+      "episodes": 2
+    },
+    {
+      "id": "security",
+      "label": "Информационная безопасность",
+      "shows": [
+        {
+          "brand": "Ozon Tech",
+          "show": "Что в пакете",
+          "count": 1
+        },
+        {
+          "brand": "Selectel",
+          "show": "Сегодня на ретро",
+          "count": 1
+        }
+      ],
+      "episodes": 2
+    },
+    {
+      "id": "career",
+      "label": "Карьера и рост",
+      "shows": [
+        {
+          "brand": "Avito",
+          "show": "Бэкенд расправил плечи",
+          "count": 1
+        },
+        {
+          "brand": "Avito",
+          "show": "AviTalk",
+          "count": 1
+        }
+      ],
+      "episodes": 2
+    },
+    {
+      "id": "culture",
+      "label": "Культура и люди",
+      "shows": [
+        {
+          "brand": "Avito",
+          "show": "Бэкенд расправил плечи",
+          "count": 1
+        },
+        {
+          "brand": "Ozon Tech",
+          "show": "Что в пакете",
+          "count": 1
+        }
+      ],
+      "episodes": 2
+    },
+    {
+      "id": "data",
+      "label": "Данные и аналитика",
+      "shows": [
+        {
+          "brand": "Selectel",
+          "show": "Сегодня на ретро",
+          "count": 1
+        }
+      ],
+      "episodes": 1
+    },
+    {
+      "id": "product",
+      "label": "Продукт и бизнес",
+      "shows": [
+        {
+          "brand": "Avito",
+          "show": "Бэкенд расправил плечи",
+          "count": 1
+        }
+      ],
+      "episodes": 1
+    },
+    {
+      "id": "opensource",
+      "label": "Open Source",
+      "shows": [
+        {
+          "brand": "RWB",
+          "show": "Tech Talks",
+          "count": 1
+        }
+      ],
+      "episodes": 1
+    },
+    {
+      "id": "systems",
+      "label": "Системное и embedded",
+      "shows": [],
+      "episodes": 0
+    },
+    {
+      "id": "mobile_front",
+      "label": "Мобильная и фронтенд-разработка",
+      "shows": [],
+      "episodes": 0
+    }
+  ],
+  "rows": [
+    {
+      "brand": "Avito",
+      "show": "В SREду на кухне",
+      "status": "video_only",
+      "scope_note": null,
+      "evidence": "https://t.me/avitotech/3469",
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": "youtube",
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": "2026-09-23T12:00:08Z",
+      "q3_episodes": 5,
+      "avg_duration_min": null,
+      "median_gap_days": 21,
+      "topics": [
+        {
+          "id": "infra",
+          "label": "Инфраструктура и SRE",
+          "count": 5
+        },
+        {
+          "id": "qa",
+          "label": "QA и тестирование",
+          "count": 1
+        },
+        {
+          "id": "leadership",
+          "label": "Менеджмент и лидерство",
+          "count": 1
+        }
+      ],
+      "video": {
+        "youtube": {
+          "q3_videos": 5,
+          "median_views": 1614,
+          "total_views": 8390,
+          "top": {
+            "title": "От аварии до аварии: Incident, Problem и Risk Management | «В SREду на кухне» | AvitoTech",
+            "url": "https://www.youtube.com/watch?v=tfdWJcOp30E",
+            "views": 2725,
+            "published_at": "2026-09-02T12:00:09Z"
+          }
+        },
+        "rutube": {
+          "q3_videos": 5,
+          "median_views": 36,
+          "total_views": 206,
+          "top": {
+            "title": "Что такое релизы? И причем тут Feature Flags, Canary и Rollback? | «В SREду на кухне» | AvitoTech",
+            "url": "https://rutube.ru/video/728720948956b052d94c53ffe0c567b5/",
+            "views": 60,
+            "published_at": "2026-07-01T15:01:12.000Z"
+          }
+        }
+      },
+      "telegram": {
+        "handle": "avitotech",
+        "announcements_q3": 4,
+        "median_views": 6370,
+        "posts": [
+          {
+            "url": "https://t.me/avitotech/3469",
+            "views": 4390,
+            "published_at": "2026-09-23T16:02:22.000Z"
+          },
+          {
+            "url": "https://t.me/avitotech/3431",
+            "views": 6000,
+            "published_at": "2026-09-02T16:31:23.000Z"
+          },
+          {
+            "url": "https://t.me/avitotech/3406",
+            "views": 6980,
+            "published_at": "2026-08-12T16:13:01.000Z"
+          },
+          {
+            "url": "https://t.me/avitotech/3371",
+            "views": 6740,
+            "published_at": "2026-07-08T08:50:58.000Z"
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "title": "Digital Immune System: мониторинга, SRE и автотестов уже недостаточно | В SREду на кухне | AvitoTech",
+          "published_at": "2026-09-23T12:00:08Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=rT3ua0w_CCw",
+          "description": "",
+          "topics": [
+            "infra",
+            "qa"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=rT3ua0w_CCw",
+            "views": 1977
+          }
+        },
+        {
+          "title": "От аварии до аварии: Incident, Problem и Risk Management | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-09-02T12:00:09Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=tfdWJcOp30E",
+          "description": "",
+          "topics": [
+            "infra",
+            "leadership"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=tfdWJcOp30E",
+            "views": 2725
+          }
+        },
+        {
+          "title": "FinOps в SRE: сколько стоит надёжность? | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-08-12T12:34:45Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=dqmGI58UUR8",
+          "description": "",
+          "topics": [
+            "infra"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=dqmGI58UUR8",
+            "views": 653
+          }
+        },
+        {
+          "title": "Kubernetes 2035: кто будет управлять инфраструктурой? | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-07-22T12:00:36Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=BhZ2ilR38_s",
+          "description": "",
+          "topics": [
+            "infra"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=BhZ2ilR38_s",
+            "views": 1421
+          }
+        },
+        {
+          "title": "Что такое релизы? И причем тут Feature Flags, Canary и Rollback? | «В SREду на кухне» | AvitoTech",
+          "published_at": "2026-07-01T12:00:06Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=R23FjSp8Z-A",
+          "description": "",
+          "topics": [
+            "infra"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=R23FjSp8Z-A",
+            "views": 1614
+          }
+        }
+      ],
+      "match_candidates": []
+    },
+    {
+      "brand": "Avito",
+      "show": "Бэкенд расправил плечи",
+      "status": "video_only",
+      "scope_note": null,
+      "evidence": "https://t.me/avitotech/3455",
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": "youtube",
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": "2026-09-15T07:00:23Z",
+      "q3_episodes": 1,
+      "avg_duration_min": null,
+      "median_gap_days": null,
+      "topics": [
+        {
+          "id": "backend",
+          "label": "Бэкенд и архитектура",
+          "count": 1
+        },
+        {
+          "id": "product",
+          "label": "Продукт и бизнес",
+          "count": 1
+        },
+        {
+          "id": "ai",
+          "label": "ИИ и ML",
+          "count": 1
+        },
+        {
+          "id": "career",
+          "label": "Карьера и рост",
+          "count": 1
+        },
+        {
+          "id": "culture",
+          "label": "Культура и люди",
+          "count": 1
+        }
+      ],
+      "video": {
+        "youtube": {
+          "q3_videos": 1,
+          "median_views": 5559,
+          "total_views": 5559,
+          "top": {
+            "title": "Зачем инженеру продуктовое мышление? | Подкаст «Бэкенд расправил плечи»",
+            "url": "https://www.youtube.com/watch?v=8IcZfZjvJQQ",
+            "views": 5559,
+            "published_at": "2026-09-15T07:00:23Z"
+          }
+        },
+        "rutube": {
+          "q3_videos": 1,
+          "median_views": 41,
+          "total_views": 41,
+          "top": {
+            "title": "Зачем инженеру продуктовое мышление? | Подкаст «Бэкенд расправил плечи»",
+            "url": "https://rutube.ru/video/a3fa3e57845f6916098dbad144a29080/",
+            "views": 41,
+            "published_at": "2026-09-15T10:01:16.000Z"
+          }
+        }
+      },
+      "telegram": {
+        "handle": "avitotech",
+        "announcements_q3": 1,
+        "median_views": 5690,
+        "posts": [
+          {
+            "url": "https://t.me/avitotech/3455",
+            "views": 5690,
+            "published_at": "2026-09-15T16:01:17.000Z"
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "title": "Зачем инженеру продуктовое мышление? | Подкаст «Бэкенд расправил плечи»",
+          "published_at": "2026-09-15T07:00:23Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=8IcZfZjvJQQ",
+          "description": "",
+          "topics": [
+            "backend",
+            "product",
+            "ai",
+            "career",
+            "culture"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=8IcZfZjvJQQ",
+            "views": 5559
+          }
+        }
+      ],
+      "match_candidates": []
+    },
+    {
+      "brand": "Avito",
+      "show": "Свободный слот",
+      "status": "video_only",
+      "scope_note": null,
+      "evidence": "https://t.me/avitotech/3414",
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": "youtube",
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": "2026-07-16T09:00:26Z",
+      "q3_episodes": 2,
+      "avg_duration_min": null,
+      "median_gap_days": 13.7,
+      "topics": [
+        {
+          "id": "leadership",
+          "label": "Менеджмент и лидерство",
+          "count": 2
+        }
+      ],
+      "video": {
+        "youtube": {
+          "q3_videos": 2,
+          "median_views": 1859,
+          "total_views": 3718,
+          "top": {
+            "title": "Мы узнали, о чем думают топы в IT прямо сейчас | Подкаст «Свободный слот»",
+            "url": "https://www.youtube.com/watch?v=Y51N_H2fZS0",
+            "views": 1899,
+            "published_at": "2026-07-02T15:55:15Z"
+          }
+        },
+        "rutube": {
+          "q3_videos": 2,
+          "median_views": 26,
+          "total_views": 52,
+          "top": {
+            "title": "Когда сотрудник уходит: чек-лист для тех, кто остаётся | Подкаст «Свободный слот»",
+            "url": "https://rutube.ru/video/28d487b3506da891ef8a2f5c95477b33/",
+            "views": 26,
+            "published_at": "2026-07-16T11:52:51.000Z"
+          }
+        }
+      },
+      "telegram": {
+        "handle": "avitotech",
+        "announcements_q3": 2,
+        "median_views": 6850,
+        "posts": [
+          {
+            "url": "https://t.me/avitotech/3414",
+            "views": 6420,
+            "published_at": "2026-08-21T13:12:19.000Z"
+          },
+          {
+            "url": "https://t.me/avitotech/3388",
+            "views": 7280,
+            "published_at": "2026-07-20T15:05:42.000Z"
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "title": "Когда сотрудник уходит: чек-лист для тех, кто остаётся | Подкаст «Свободный слот»",
+          "published_at": "2026-07-16T09:00:26Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=s3MEDuXtEa8",
+          "description": "",
+          "topics": [],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=s3MEDuXtEa8",
+            "views": 1819
+          }
+        },
+        {
+          "title": "Мы узнали, о чем думают топы в IT прямо сейчас | Подкаст «Свободный слот»",
+          "published_at": "2026-07-02T15:55:15Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=Y51N_H2fZS0",
+          "description": "",
+          "topics": [],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=Y51N_H2fZS0",
+            "views": 1899
+          }
+        }
+      ],
+      "match_candidates": []
+    },
+    {
+      "brand": "Avito",
+      "show": "Не воспроизводится",
+      "status": "announcements_only",
+      "scope_note": null,
+      "evidence": "https://t.me/avitotech/3459",
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": null,
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": null,
+      "q3_episodes": 0,
+      "avg_duration_min": null,
+      "median_gap_days": null,
+      "topics": [
+        {
+          "id": "qa",
+          "label": "QA и тестирование",
+          "count": 1
+        }
+      ],
+      "video": {
+        "youtube": null,
+        "rutube": null
+      },
+      "telegram": {
+        "handle": "avitotech",
+        "announcements_q3": 1,
+        "median_views": 5580,
+        "posts": [
+          {
+            "url": "https://t.me/avitotech/3459",
+            "views": 5580,
+            "published_at": "2026-09-18T13:01:15.000Z"
+          }
+        ]
+      },
+      "episodes": [],
+      "match_candidates": []
+    },
+    {
+      "brand": "Avito",
+      "show": "AviTalk",
+      "status": "announcements_only",
+      "scope_note": null,
+      "evidence": "https://t.me/avitotech/3415",
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": null,
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": null,
+      "q3_episodes": 0,
+      "avg_duration_min": null,
+      "median_gap_days": null,
+      "topics": [
+        {
+          "id": "ai",
+          "label": "ИИ и ML",
+          "count": 1
+        },
+        {
+          "id": "qa",
+          "label": "QA и тестирование",
+          "count": 1
+        },
+        {
+          "id": "career",
+          "label": "Карьера и рост",
+          "count": 1
+        }
+      ],
+      "video": {
+        "youtube": null,
+        "rutube": null
+      },
+      "telegram": {
+        "handle": "avitotech",
+        "announcements_q3": 2,
+        "median_views": 6185,
+        "posts": [
+          {
+            "url": "https://t.me/avitotech/3415",
+            "views": 5920,
+            "published_at": "2026-08-24T12:01:06.000Z"
+          },
+          {
+            "url": "https://t.me/avitotech/3395",
+            "views": 6450,
+            "published_at": "2026-07-28T14:31:56.000Z"
+          }
+        ]
+      },
+      "episodes": [],
+      "match_candidates": []
+    },
+    {
+      "brand": "Ozon Tech",
+      "show": "Что в пакете",
+      "status": "announcements_only",
+      "scope_note": null,
+      "evidence": "https://t.me/ozon_tech/2193",
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": null,
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": null,
+      "q3_episodes": 0,
+      "avg_duration_min": null,
+      "median_gap_days": null,
+      "topics": [
+        {
+          "id": "ai",
+          "label": "ИИ и ML",
+          "count": 1
+        },
+        {
+          "id": "infra",
+          "label": "Инфраструктура и SRE",
+          "count": 1
+        },
+        {
+          "id": "security",
+          "label": "Информационная безопасность",
+          "count": 1
+        },
+        {
+          "id": "leadership",
+          "label": "Менеджмент и лидерство",
+          "count": 1
+        },
+        {
+          "id": "culture",
+          "label": "Культура и люди",
+          "count": 1
+        }
+      ],
+      "video": {
+        "youtube": null,
+        "rutube": null
+      },
+      "telegram": {
+        "handle": "ozon_tech",
+        "announcements_q3": 1,
+        "median_views": 10300,
+        "posts": [
+          {
+            "url": "https://t.me/ozon_tech/2193",
+            "views": 10300,
+            "published_at": "2026-07-03T11:27:04.000Z"
+          }
+        ]
+      },
+      "episodes": [],
+      "match_candidates": []
+    },
+    {
+      "brand": "YADRO",
+      "show": "Битовые маски",
+      "status": "error",
+      "scope_note": null,
+      "evidence": "https://www.deezer.com/ru/show/1000062205",
+      "feed": null,
+      "error": "fetch failed",
+      "episodes_source": null,
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": null,
+      "q3_episodes": 0,
+      "avg_duration_min": null,
+      "median_gap_days": null,
+      "topics": [],
+      "video": {
+        "youtube": null,
+        "rutube": null
+      },
+      "telegram": null,
+      "episodes": [],
+      "match_candidates": []
+    },
+    {
+      "brand": "Selectel",
+      "show": "Сегодня на ретро",
+      "status": "video_only",
+      "scope_note": null,
+      "evidence": "https://www.youtube.com/watch?v=NX32oWXo7vw",
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": "youtube",
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": "2026-09-22T13:51:14Z",
+      "q3_episodes": 2,
+      "avg_duration_min": null,
+      "median_gap_days": 33.2,
+      "topics": [
+        {
+          "id": "ai",
+          "label": "ИИ и ML",
+          "count": 2
+        },
+        {
+          "id": "backend",
+          "label": "Бэкенд и архитектура",
+          "count": 1
+        },
+        {
+          "id": "data",
+          "label": "Данные и аналитика",
+          "count": 1
+        },
+        {
+          "id": "security",
+          "label": "Информационная безопасность",
+          "count": 1
+        }
+      ],
+      "video": {
+        "youtube": {
+          "q3_videos": 2,
+          "median_views": 51091.5,
+          "total_views": 102183,
+          "top": {
+            "title": "Кибербезопасность в эпоху ИИ: как меняются DDoS и другие атаки | Подкаст Selectel «Сегодня на ретро»",
+            "url": "https://www.youtube.com/watch?v=J1-j6aq4FJY",
+            "views": 52125,
+            "published_at": "2026-08-20T08:28:05Z"
+          }
+        },
+        "rutube": {
+          "q3_videos": 2,
+          "median_views": 30,
+          "total_views": 60,
+          "top": {
+            "title": "Архитектура данных в эпоху ИИ: как избежать дорогих ошибок | Подкаст Selectel «Сегодня на ретро»",
+            "url": "https://rutube.ru/video/124c2e01c63eeaac172c55f4368de0fa/",
+            "views": 34,
+            "published_at": "2026-09-22T17:05:30.000Z"
+          }
+        }
+      },
+      "telegram": null,
+      "episodes": [
+        {
+          "title": "Архитектура данных в эпоху ИИ: как избежать дорогих ошибок | Подкаст Selectel «Сегодня на ретро»",
+          "published_at": "2026-09-22T13:51:14Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=NX32oWXo7vw",
+          "description": "",
+          "topics": [
+            "ai",
+            "backend",
+            "data"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=NX32oWXo7vw",
+            "views": 50058
+          }
+        },
+        {
+          "title": "Кибербезопасность в эпоху ИИ: как меняются DDoS и другие атаки | Подкаст Selectel «Сегодня на ретро»",
+          "published_at": "2026-08-20T08:28:05Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=J1-j6aq4FJY",
+          "description": "",
+          "topics": [
+            "ai",
+            "security"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=J1-j6aq4FJY",
+            "views": 52125
+          }
+        }
+      ],
+      "match_candidates": []
+    },
+    {
+      "brand": "RWB",
+      "show": "Tech Talks",
+      "status": "video_only",
+      "scope_note": "Новый подкаст: первый выпуск 01.07.2026. В качественной матрице Q3 не учтён.",
+      "evidence": "https://t.me/tech_rwb/1021",
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": "youtube",
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": "2026-07-01T11:41:05Z",
+      "q3_episodes": 1,
+      "avg_duration_min": null,
+      "median_gap_days": null,
+      "topics": [
+        {
+          "id": "ai",
+          "label": "ИИ и ML",
+          "count": 1
+        },
+        {
+          "id": "opensource",
+          "label": "Open Source",
+          "count": 1
+        },
+        {
+          "id": "infra",
+          "label": "Инфраструктура и SRE",
+          "count": 1
+        },
+        {
+          "id": "leadership",
+          "label": "Менеджмент и лидерство",
+          "count": 1
+        }
+      ],
+      "video": {
+        "youtube": {
+          "q3_videos": 1,
+          "median_views": 337,
+          "total_views": 337,
+          "top": {
+            "title": "Open Source, AI и Fork'и: первый выпуск подкаста Tech Talks",
+            "url": "https://www.youtube.com/watch?v=6RJV_ysu2eY",
+            "views": 337,
+            "published_at": "2026-07-01T11:41:05Z"
+          }
+        },
+        "rutube": null
+      },
+      "telegram": {
+        "handle": "tech_rwb",
+        "announcements_q3": 3,
+        "median_views": 5420,
+        "posts": [
+          {
+            "url": "https://t.me/tech_rwb/1063",
+            "views": 8350,
+            "published_at": "2026-09-09T10:55:21.000Z"
+          },
+          {
+            "url": "https://t.me/tech_rwb/1038",
+            "views": 5420,
+            "published_at": "2026-07-16T08:05:34.000Z"
+          },
+          {
+            "url": "https://t.me/tech_rwb/1021",
+            "views": 4980,
+            "published_at": "2026-07-01T14:16:39.000Z"
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "title": "Open Source, AI и Fork'и: первый выпуск подкаста Tech Talks",
+          "published_at": "2026-07-01T11:41:05Z",
+          "duration_min": null,
+          "url": "https://www.youtube.com/watch?v=6RJV_ysu2eY",
+          "description": "",
+          "topics": [
+            "ai",
+            "opensource",
+            "infra",
+            "leadership"
+          ],
+          "video": {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=6RJV_ysu2eY",
+            "views": 337
+          }
+        }
+      ],
+      "match_candidates": []
+    },
+    {
+      "brand": "Dodo Engineering",
+      "show": "Рецепт Додо",
+      "status": "announcements_only",
+      "scope_note": "Корпоративный подкаст Dodo о бизнесе и людях, не только о разработке. В качественной матрице Q3 не учтён.",
+      "evidence": "https://t.me/dododev/1849",
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": null,
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": null,
+      "q3_episodes": 0,
+      "avg_duration_min": null,
+      "median_gap_days": null,
+      "topics": [],
+      "video": {
+        "youtube": null,
+        "rutube": null
+      },
+      "telegram": {
+        "handle": "dododev",
+        "announcements_q3": 1,
+        "median_views": 1440,
+        "posts": [
+          {
+            "url": "https://t.me/dododev/1849",
+            "views": 1440,
+            "published_at": "2026-07-06T10:02:28.000Z"
+          }
+        ]
+      },
+      "episodes": [],
+      "match_candidates": []
+    },
+    {
+      "brand": "Magnit Tech",
+      "show": null,
+      "status": "needs_review",
+      "scope_note": "Подкаст подтверждён в матрице, название шоу не найдено. Укажите show_title и feed_url, чтобы включить сбор.",
+      "evidence": null,
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": null,
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": null,
+      "q3_episodes": 0,
+      "avg_duration_min": null,
+      "median_gap_days": null,
+      "topics": [],
+      "video": {
+        "youtube": null,
+        "rutube": null
+      },
+      "telegram": null,
+      "episodes": [],
+      "match_candidates": []
+    },
+    {
+      "brand": "Контур",
+      "show": null,
+      "status": "needs_review",
+      "scope_note": "Подкаст подтверждён в матрице, название шоу не найдено. Укажите show_title и feed_url, чтобы включить сбор.",
+      "evidence": null,
+      "feed": null,
+      "error": "iTunes search: fetch failed",
+      "episodes_source": null,
+      "episodes_total": null,
+      "first_episode_at": null,
+      "last_episode_at": null,
+      "q3_episodes": 0,
+      "avg_duration_min": null,
+      "median_gap_days": null,
+      "topics": [],
+      "video": {
+        "youtube": null,
+        "rutube": null
+      },
+      "telegram": null,
+      "episodes": [],
+      "match_candidates": []
+    }
+  ]
 }
