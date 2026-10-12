@@ -38,19 +38,23 @@ jobs:
       - name: Refresh RUTUBE
         run: node tech-brand-watch/scripts/update-rutube.mjs
 
+      - name: Refresh Podcasts
+        # после YouTube, RUTUBE и Telegram: скрипт берёт из них видеоверсии выпусков и анонсы
+        run: node tech-brand-watch/scripts/update-podcasts.mjs
+
       - name: Validate JSON
         run: |
-          node -e "for (const f of ['video','habr','telegram','rutube']) JSON.parse(require('fs').readFileSync('tech-brand-watch/data/'+f+'.json','utf8')); console.log('JSON OK')"
+          node -e "for (const f of ['video','habr','telegram','rutube','podcasts']) JSON.parse(require('fs').readFileSync('tech-brand-watch/data/'+f+'.json','utf8')); console.log('JSON OK')"
 
       - name: Commit refreshed data
         run: |
-          if [ -z "$(git status --porcelain -- tech-brand-watch/data/video.json tech-brand-watch/data/habr.json tech-brand-watch/data/telegram.json tech-brand-watch/data/rutube.json)" ]; then
+          if [ -z "$(git status --porcelain -- tech-brand-watch/data/video.json tech-brand-watch/data/habr.json tech-brand-watch/data/telegram.json tech-brand-watch/data/rutube.json tech-brand-watch/data/podcasts.json)" ]; then
             echo "No data changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tech-brand-watch/data/video.json tech-brand-watch/data/habr.json tech-brand-watch/data/telegram.json tech-brand-watch/data/rutube.json
+          git add tech-brand-watch/data/video.json tech-brand-watch/data/habr.json tech-brand-watch/data/telegram.json tech-brand-watch/data/rutube.json tech-brand-watch/data/podcasts.json
           git commit -m "Refresh Tech Brand Watch data"
           git pull --rebase origin main
           git push
