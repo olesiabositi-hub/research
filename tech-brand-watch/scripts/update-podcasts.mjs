@@ -272,8 +272,11 @@ for (const show of config.shows) {
   // Если фида нет, список выпусков Q3 строим по видеоверсиям (YouTube, затем RUTUBE).
   let episodes;
   let episodesSource;
-  if (q3Items.length || res.parsed) {
-    episodesSource = res.feed?.source || "rss";
+  // Фид бывает позади видео (аудиоверсию выкладывают позже или не выкладывают).
+  // Если в фиде нет выпусков Q3, а видеоверсии есть — берём выпуски по видео.
+  const useVideo = !q3Items.length && (ytQ3.length || rtQ3.length);
+  if (!useVideo) {
+    episodesSource = q3Items.length ? (res.feed?.source || "rss") : null;
     episodes = q3Items.map(i => ({
       title: i.title,
       published_at: i.published_at,
@@ -315,7 +318,8 @@ for (const show of config.shows) {
 
   let status;
   if (reviewOnly) status = "needs_review";
-  else if (res.feed && episodes.length) status = "ok";
+  else if (res.feed && episodes.length && !useVideo) status = "ok";
+  else if (res.feed && episodes.length) status = "feed_behind_video";
   else if (res.feed) status = "no_q3_episodes";
   else if (episodes.length) status = "video_only";
   else if (tgQ3.length) status = "announcements_only";
@@ -356,7 +360,7 @@ for (const show of config.shows) {
       posts: tgQ3.map(p => ({ url: p.url, views: p.views ?? null, published_at: p.published_at }))
     } : null,
     episodes,
-    match_candidates: status === "ok" || status === "no_q3_episodes" ? [] : res.candidates
+    match_candidates: res.feed ? [] : res.candidates
   });
   console.log(`${show.brand} · ${show.show_title || "—"}: ${status}; Q3 выпусков ${episodes.length}${res.error ? ` (${res.error})` : ""}`);
 }
