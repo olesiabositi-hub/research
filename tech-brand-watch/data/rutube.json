@@ -6,7 +6,7 @@
     "to": "2026-09-30T23:59:59Z",
     "label": "Q3 2026"
   },
-  "updated_at": "2026-10-19T06:23:54.648Z",
+  "updated_at": "2026-10-26T11:54:47.502Z",
   "source_label": "RUTUBE public JSON endpoints",
   "note": "Бесплатный публичный сбор без авторизации. Количество видео фиксируется за Q3 2026; просмотры этих Q3-видео — текущий публичный снимок RUTUBE и могут расти после окончания квартала. Для Magnit Tech используется отдельный tech-плейлист внутри общего корпоративного канала.",
   "summary": {
@@ -26,14 +26,14 @@
       "status": "ok",
       "q3_videos": 70,
       "views_available": 70,
-      "q3_views_total": 7363,
-      "q3_views_average": 105.18571428571428,
+      "q3_views_total": 7425,
+      "q3_views_average": 106.07142857142857,
       "q3_views_median": 108,
       "top_video": {
         "id": "ef013f589c8f5df88f34749ba6b4c09f",
         "title": "Как обойти Security Gate? #avitotech",
         "published_at": "2026-09-30T15:19:15.000Z",
-        "views": 325,
+        "views": 326,
         "url": "https://rutube.ru/video/ef013f589c8f5df88f34749ba6b4c09f/",
         "duration": 56,
         "origin_type": "rshorts"
@@ -43,7 +43,7 @@
           "id": "ef013f589c8f5df88f34749ba6b4c09f",
           "title": "Как обойти Security Gate? #avitotech",
           "published_at": "2026-09-30T15:19:15.000Z",
-          "views": 325,
+          "views": 326,
           "url": "https://rutube.ru/video/ef013f589c8f5df88f34749ba6b4c09f/",
           "duration": 56,
           "origin_type": "rshorts"
@@ -52,7 +52,7 @@
           "id": "bfbf049b01221af5c2c6bb7e299944c9",
           "title": "6 столпов Digital Immune System",
           "published_at": "2026-09-28T15:00:24.000Z",
-          "views": 176,
+          "views": 177,
           "url": "https://rutube.ru/video/bfbf049b01221af5c2c6bb7e299944c9/",
           "duration": 69,
           "origin_type": "rshorts"
@@ -70,7 +70,7 @@
           "id": "76b79a4bf4f3af092a33bcf4e43decbd",
           "title": "Какие задачи решает Digital Immune System",
           "published_at": "2026-09-24T15:01:11.000Z",
-          "views": 187,
+          "views": 188,
           "url": "https://rutube.ru/video/76b79a4bf4f3af092a33bcf4e43decbd/",
           "duration": 55,
           "origin_type": "rshorts"
@@ -79,7 +79,7 @@
           "id": "936d36bfc66db45f67647b7052b6605b",
           "title": "Инциденты и пользователи. О чем не стоит говорить?",
           "published_at": "2026-09-24T15:00:20.000Z",
-          "views": 97,
+          "views": 98,
           "url": "https://rutube.ru/video/936d36bfc66db45f67647b7052b6605b/",
           "duration": 46,
           "origin_type": "rshorts"
@@ -97,7 +97,7 @@
           "id": "6e34b95bc19bca793e39c0432f88d91a",
           "title": "Методологии в продуктах и их применение",
           "published_at": "2026-09-21T15:01:10.000Z",
-          "views": 120,
+          "views": 121,
           "url": "https://rutube.ru/video/6e34b95bc19bca793e39c0432f88d91a/",
           "duration": 38,
           "origin_type": "rshorts"
@@ -106,7 +106,7 @@
           "id": "46650e1539f8c4237f3b1a357b4b3fb9",
           "title": "Что нужно для создания MCP? #avitotech",
           "published_at": "2026-09-20T13:27:07.000Z",
-          "views": 104,
+          "views": 105,
           "url": "https://rutube.ru/video/46650e1539f8c4237f3b1a357b4b3fb9/",
           "duration": 60,
           "origin_type": "rshorts"
@@ -124,7 +124,7 @@
           "id": "d00931d30cdd38eb2c17c50dee93fba3",
           "title": "Как начать использовать SDD? #avitotech",
           "published_at": "2026-09-16T13:22:07.000Z",
-          "views": 3,
+          "views": 4,
           "url": "https://rutube.ru/video/d00931d30cdd38eb2c17c50dee93fba3/",
           "duration": 59,
           "origin_type": "rshorts"
@@ -133,7 +133,7 @@
           "id": "e5e227fc9648389de97f33efd8c863e7",
           "title": "Контроль качества в AI-эпоху",
           "published_at": "2026-09-16T09:53:14.000Z",
-          "views": 273,
+          "views": 274,
           "url": "https://rutube.ru/video/e5e227fc9648389de97f33efd8c863e7/",
           "duration": 50,
           "origin_type": "rshorts"
@@ -151,7 +151,7 @@
           "id": "5606ab9e71a23d74213e3194559d949e",
           "title": "Пирамида тестирования усложняется #avitotech",
           "published_at": "2026-09-13T16:42:08.000Z",
-          "views": 128,
+          "views": 129,
           "url": "https://rutube.ru/video/5606ab9e71a23d74213e3194559d949e/",
           "duration": 59,
           "origin_type": "rshorts"
@@ -160,7 +160,7 @@
           "id": "757217d390338c2191bf62f39b314581",
           "title": "Самый быстрый инженер ВООБЩЕ не ускоряет разработку #avitotech",
           "published_at": "2026-09-12T17:39:07.000Z",
-          "views": 6,
+          "views": 7,
           "url": "https://rutube.ru/video/757217d390338c2191bf62f39b314581/",
           "duration": 52,
           "origin_type": "rshorts"
@@ -340,7 +340,7 @@
           "id": "1d24330a75c11d628b5ffbfe29b2ee23",
           "title": "Выпрямляем руки агентов: как сделать MCP удобными и действительно полезными — Павел Агалецкий",
           "published_at": "2026-08-14T15:20:05.000Z",
-          "views": 78,
+          "views": 87,
           "url": "https://rutube.ru/video/1d24330a75c11d628b5ffbfe29b2ee23/",
           "duration": 2441,
           "origin_type": "rtb"
@@ -367,7 +367,7 @@
           "id": "49946791d239b32ac18d45b2ba34db94",
           "title": "FinOps в SRE: сколько стоит надёжность? | «В SREду на кухне» | AvitoTech",
           "published_at": "2026-08-12T15:04:31.000Z",
-          "views": 39,
+          "views": 41,
           "url": "https://rutube.ru/video/49946791d239b32ac18d45b2ba34db94/",
           "duration": 3311,
           "origin_type": "rtb"
@@ -394,7 +394,7 @@
           "id": "763dee746ae0da463ae0f2af80372bcc",
           "title": "Атаки на GenAI-агентов: OWASP на практике — Николай Шуляев",
           "published_at": "2026-08-04T19:46:06.000Z",
-          "views": 49,
+          "views": 51,
           "url": "https://rutube.ru/video/763dee746ae0da463ae0f2af80372bcc/",
           "duration": 2057,
           "origin_type": "rtb"
@@ -430,7 +430,7 @@
           "id": "fe4723c60b1767210c1c225f7089e0f4",
           "title": "Разработка и тестирование MCP для внутренних агентных систем аналитики — Алексей Пахомов",
           "published_at": "2026-07-29T21:24:46.000Z",
-          "views": 106,
+          "views": 108,
           "url": "https://rutube.ru/video/fe4723c60b1767210c1c225f7089e0f4/",
           "duration": 2741,
           "origin_type": "rtb"
@@ -502,7 +502,7 @@
           "id": "ec454d8adadb90f701fc4d3e7adad589",
           "title": "Spec-Driven Development: теория, инструменты, практика — Александр Шаповалов",
           "published_at": "2026-07-21T12:00:32.000Z",
-          "views": 193,
+          "views": 196,
           "url": "https://rutube.ru/video/ec454d8adadb90f701fc4d3e7adad589/",
           "duration": 2611,
           "origin_type": "rtb"
@@ -628,7 +628,7 @@
           "id": "d7892ff6013bb136f07d98136a1912b4",
           "title": "System Design на собеседовании: ошибки, которые тебя топят",
           "published_at": "2026-07-03T15:04:06.000Z",
-          "views": 144,
+          "views": 146,
           "url": "https://rutube.ru/video/d7892ff6013bb136f07d98136a1912b4/",
           "duration": 1918,
           "origin_type": "rtb"
@@ -655,7 +655,7 @@
           "id": "b5efa7b9a08b6e77c854016b6a4a6684",
           "title": "Выше старшего: куда расти DS-инженеру в Авито",
           "published_at": "2026-07-02T10:33:36.000Z",
-          "views": 127,
+          "views": 159,
           "url": "https://rutube.ru/video/b5efa7b9a08b6e77c854016b6a4a6684/",
           "duration": 3580,
           "origin_type": "rtb"
@@ -681,14 +681,14 @@
       "status": "ok",
       "q3_videos": 104,
       "views_available": 104,
-      "q3_views_total": 11148,
-      "q3_views_average": 107.1923076923077,
-      "q3_views_median": 96.5,
+      "q3_views_total": 11274,
+      "q3_views_average": 108.40384615384616,
+      "q3_views_median": 97,
       "top_video": {
         "id": "2e092453d78610b717704df22b37b89c",
         "title": "Почему push-модель в Postgres — это ловушка?",
         "published_at": "2026-09-18T09:06:02.000Z",
-        "views": 443,
+        "views": 444,
         "url": "https://rutube.ru/video/2e092453d78610b717704df22b37b89c/",
         "duration": 42,
         "origin_type": "rshorts"
@@ -698,7 +698,7 @@
           "id": "7cc4b3b544512a78404e96383ef76f82",
           "title": "Какие были предпосылки для изобретения радио?",
           "published_at": "2026-09-30T18:47:43.000Z",
-          "views": 9,
+          "views": 10,
           "url": "https://rutube.ru/video/7cc4b3b544512a78404e96383ef76f82/",
           "duration": 56,
           "origin_type": "rshorts"
@@ -707,7 +707,7 @@
           "id": "6706e97e65c2e8d3d0cceb8911778571",
           "title": "От мусоровоза до российского процессора: путь программиста-самоучки из Могилева",
           "published_at": "2026-09-29T16:13:35.000Z",
-          "views": 104,
+          "views": 122,
           "url": "https://rutube.ru/video/6706e97e65c2e8d3d0cceb8911778571/",
           "duration": 2943,
           "origin_type": "rtb"
@@ -716,7 +716,7 @@
           "id": "149e6309bfb5a9522ea2487ccde34174",
           "title": "Бесплатные токены: отработка ТЗ на локальной модели",
           "published_at": "2026-09-29T09:01:10.000Z",
-          "views": 12,
+          "views": 14,
           "url": "https://rutube.ru/video/149e6309bfb5a9522ea2487ccde34174/",
           "duration": 52,
           "origin_type": "rshorts"
@@ -725,7 +725,7 @@
           "id": "ac38b78d45ae8ffcdb4aee95fa9a5d17",
           "title": "Что такое краевой искусственный интеллект",
           "published_at": "2026-09-28T09:57:06.000Z",
-          "views": 9,
+          "views": 14,
           "url": "https://rutube.ru/video/ac38b78d45ae8ffcdb4aee95fa9a5d17/",
           "duration": 58,
           "origin_type": "rshorts"
@@ -734,7 +734,7 @@
           "id": "d84d61a77f8121dc7d6a4a2d89f145f4",
           "title": "Умножьте 18 на 28: конвейеризация на пальцах",
           "published_at": "2026-09-27T11:55:09.000Z",
-          "views": 9,
+          "views": 11,
           "url": "https://rutube.ru/video/d84d61a77f8121dc7d6a4a2d89f145f4/",
           "duration": 48,
           "origin_type": "rshorts"
@@ -743,7 +743,7 @@
           "id": "cb3c22bb6878f38f554ec3d920c9e564",
           "title": "Когда нужна ПЛИС, а когда хватит микроконтроллера",
           "published_at": "2026-09-26T11:51:07.000Z",
-          "views": 19,
+          "views": 22,
           "url": "https://rutube.ru/video/cb3c22bb6878f38f554ec3d920c9e564/",
           "duration": 70,
           "origin_type": "rshorts"
@@ -752,7 +752,7 @@
           "id": "3e208e2af02bb9455a2287a260b0c043",
           "title": "Лекция Сергея Жмылёва и Дениса Довженко о языке C и системном программировании",
           "published_at": "2026-09-26T11:10:07.000Z",
-          "views": 135,
+          "views": 153,
           "url": "https://rutube.ru/video/3e208e2af02bb9455a2287a260b0c043/",
           "duration": 3677,
           "origin_type": "rtb"
@@ -761,7 +761,7 @@
           "id": "ebc087b588b41b494bb6241f94afb7f0",
           "title": "Нейросеть-триггер прямо в ПЛИС",
           "published_at": "2026-09-25T09:48:07.000Z",
-          "views": 140,
+          "views": 141,
           "url": "https://rutube.ru/video/ebc087b588b41b494bb6241f94afb7f0/",
           "duration": 65,
           "origin_type": "rshorts"
@@ -806,7 +806,7 @@
           "id": "06f3833814c8427dd94175a3fde2482a",
           "title": "Промышленная асинхронность: опыт внедрения C++20 корутин в сервисы KvadraOS — Илья Клементьев, YADRO",
           "published_at": "2026-09-21T10:42:33.000Z",
-          "views": 110,
+          "views": 120,
           "url": "https://rutube.ru/video/06f3833814c8427dd94175a3fde2482a/",
           "duration": 1592,
           "origin_type": "rtb"
@@ -815,7 +815,7 @@
           "id": "6e6962d9e6b801849d6e27875f2be965",
           "title": "Корутины в продакшене: как перевести движущийся поезд на асфальт — Алексей Макареня, Kaspersky Lab",
           "published_at": "2026-09-21T10:42:22.000Z",
-          "views": 81,
+          "views": 85,
           "url": "https://rutube.ru/video/6e6962d9e6b801849d6e27875f2be965/",
           "duration": 2613,
           "origin_type": "rtb"
@@ -842,7 +842,7 @@
           "id": "41c4181cb82ddf36d4caf09d29641bd1",
           "title": "Лекция Алексея Ганицева: как мобильная связь изменила нашу жизнь — от GSM до 6G",
           "published_at": "2026-09-18T16:05:49.000Z",
-          "views": 51,
+          "views": 59,
           "url": "https://rutube.ru/video/41c4181cb82ddf36d4caf09d29641bd1/",
           "duration": 3669,
           "origin_type": "rtb"
@@ -851,7 +851,7 @@
           "id": "2e092453d78610b717704df22b37b89c",
           "title": "Почему push-модель в Postgres — это ловушка?",
           "published_at": "2026-09-18T09:06:02.000Z",
-          "views": 443,
+          "views": 444,
           "url": "https://rutube.ru/video/2e092453d78610b717704df22b37b89c/",
           "duration": 42,
           "origin_type": "rshorts"
@@ -941,7 +941,7 @@
           "id": "6d0d920a31e3b3f3307650930acb4239",
           "title": "Запуск нейросетей на ПЛИС. Краевой ИИ. Академическая деятельность.",
           "published_at": "2026-09-11T17:04:26.000Z",
-          "views": 221,
+          "views": 230,
           "url": "https://rutube.ru/video/6d0d920a31e3b3f3307650930acb4239/",
           "duration": 7640,
           "origin_type": "rtb"
@@ -959,7 +959,7 @@
           "id": "ba258b7f5f8c0bb54d6be2c0afa7dd8f",
           "title": "YADRO ✕ C++ Russia встреча С++ сообщества 2026 | Москва | 10.09.2026 |",
           "published_at": "2026-09-10T18:39:42.000Z",
-          "views": 159,
+          "views": 167,
           "url": "https://rutube.ru/video/ba258b7f5f8c0bb54d6be2c0afa7dd8f/",
           "duration": 10084,
           "origin_type": "rtb"
@@ -1022,7 +1022,7 @@
           "id": "a781c872aedc44d793db4f22a2ec3bc3",
           "title": "Как AI помогает в работе над QEMU",
           "published_at": "2026-09-03T10:35:09.000Z",
-          "views": 103,
+          "views": 104,
           "url": "https://rutube.ru/video/a781c872aedc44d793db4f22a2ec3bc3/",
           "duration": 47,
           "origin_type": "rshorts"
@@ -1049,7 +1049,7 @@
           "id": "22dad97fe60a24e97bba80f751992925",
           "title": "Разгоняем: кто из инженеров нужен, чтобы разработать чип?",
           "published_at": "2026-08-31T15:46:05.000Z",
-          "views": 173,
+          "views": 177,
           "url": "https://rutube.ru/video/22dad97fe60a24e97bba80f751992925/",
           "duration": 3339,
           "origin_type": "rtb"
@@ -1094,7 +1094,7 @@
           "id": "9fb9bbbeaf7b598ca4a50522a4741f80",
           "title": "Функциональные симуляторы: использование, точность, скорость. Симулятор QEMU. TCG engine",
           "published_at": "2026-08-28T17:30:11.000Z",
-          "views": 224,
+          "views": 231,
           "url": "https://rutube.ru/video/9fb9bbbeaf7b598ca4a50522a4741f80/",
           "duration": 7048,
           "origin_type": "rtb"
@@ -1139,7 +1139,7 @@
           "id": "ea3f0ba1df6399e248287e724de01ad7",
           "title": "От бионических протезов до межзвёздных полётов: путь инженера-робототехника.",
           "published_at": "2026-08-22T10:20:11.000Z",
-          "views": 121,
+          "views": 126,
           "url": "https://rutube.ru/video/ea3f0ba1df6399e248287e724de01ad7/",
           "duration": 4464,
           "origin_type": "rtb"
@@ -1148,7 +1148,7 @@
           "id": "179924c6ccbdea0d8974e1b3d7f043d2",
           "title": "Что такое аритмия простыми словами?",
           "published_at": "2026-08-21T19:10:14.000Z",
-          "views": 158,
+          "views": 159,
           "url": "https://rutube.ru/video/179924c6ccbdea0d8974e1b3d7f043d2/",
           "duration": 37,
           "origin_type": "rshorts"
@@ -1184,7 +1184,7 @@
           "id": "901b79a4bbe98b35896fb83ccc42edb2",
           "title": "От огромных аппаратов до устройства размером с рисовое зёрнышко",
           "published_at": "2026-08-17T19:24:56.000Z",
-          "views": 86,
+          "views": 87,
           "url": "https://rutube.ru/video/901b79a4bbe98b35896fb83ccc42edb2/",
           "duration": 38,
           "origin_type": "rshorts"
@@ -1220,7 +1220,7 @@
           "id": "b48c77584c36ab1f0e3f838aa25614f6",
           "title": "Сердце как инженерная задача: искусственное сердце vs тканевая инженерия. Лекция Валерии Цвелой",
           "published_at": "2026-08-14T17:26:53.000Z",
-          "views": 81,
+          "views": 84,
           "url": "https://rutube.ru/video/b48c77584c36ab1f0e3f838aa25614f6/",
           "duration": 2162,
           "origin_type": "rtb"
@@ -1238,7 +1238,7 @@
           "id": "f1a1f428e1f06978e167f1e80dcb1fed",
           "title": "Что определяет выбор программы для сбора прошивок в реальной работе",
           "published_at": "2026-08-06T19:21:07.000Z",
-          "views": 17,
+          "views": 18,
           "url": "https://rutube.ru/video/f1a1f428e1f06978e167f1e80dcb1fed/",
           "duration": 64,
           "origin_type": "rshorts"
@@ -1247,7 +1247,7 @@
           "id": "eabe3a35c13f1a925cd22ddd200deacc",
           "title": "Зачем нужен HDMI CEC",
           "published_at": "2026-08-05T10:13:07.000Z",
-          "views": 96,
+          "views": 97,
           "url": "https://rutube.ru/video/eabe3a35c13f1a925cd22ddd200deacc/",
           "duration": 53,
           "origin_type": "rshorts"
@@ -1319,7 +1319,7 @@
           "id": "5b87ebffa78d395afd39054b17fa4d5d",
           "title": "Построение пулов и очередей задач на базе Postgres - Владислад Сидорин, Postgres Professional",
           "published_at": "2026-07-30T17:22:06.000Z",
-          "views": 36,
+          "views": 37,
           "url": "https://rutube.ru/video/5b87ebffa78d395afd39054b17fa4d5d/",
           "duration": 2256,
           "origin_type": "rtb"
@@ -1391,7 +1391,7 @@
           "id": "a2dfbc6b8f497687b26e8b68d14b61e7",
           "title": "Как попасть в профессию, которой почти не учат в вузах, — история инженера-верификатора",
           "published_at": "2026-07-24T10:28:54.000Z",
-          "views": 138,
+          "views": 140,
           "url": "https://rutube.ru/video/a2dfbc6b8f497687b26e8b68d14b61e7/",
           "duration": 4453,
           "origin_type": "rtb"
@@ -1436,7 +1436,7 @@
           "id": "9b5e927aacbe7abd0eadb6b5b4a4d9c9",
           "title": "Чёрные дыры, ЦЕРН и мифы об ускорителях",
           "published_at": "2026-07-20T17:13:06.000Z",
-          "views": 162,
+          "views": 163,
           "url": "https://rutube.ru/video/9b5e927aacbe7abd0eadb6b5b4a4d9c9/",
           "duration": 58,
           "origin_type": "rshorts"
@@ -1472,7 +1472,7 @@
           "id": "b4719580c8d23cf2302f203c0815df0a",
           "title": "СКИФ в Новосибирске: что это и зачем нужен новый синхротрон. Лекция Дарьи Дороховой.",
           "published_at": "2026-07-17T17:40:29.000Z",
-          "views": 261,
+          "views": 267,
           "url": "https://rutube.ru/video/b4719580c8d23cf2302f203c0815df0a/",
           "duration": 2527,
           "origin_type": "rtb"
@@ -1580,7 +1580,7 @@
           "id": "8d9d88ba9c74a538bc7f039eb02e940e",
           "title": "Когерентность. Автоматизация. Искусственный интеллект для RTL и верификации",
           "published_at": "2026-07-03T18:14:54.000Z",
-          "views": 204,
+          "views": 205,
           "url": "https://rutube.ru/video/8d9d88ba9c74a538bc7f039eb02e940e/",
           "duration": 6870,
           "origin_type": "rtb"
@@ -1625,7 +1625,7 @@
           "id": "24fecb7e3fcc430cf7ee3100f8b8bfe3",
           "title": "Советский и российский «Эльбрус»",
           "published_at": "2026-07-01T11:37:31.000Z",
-          "views": 15,
+          "views": 16,
           "url": "https://rutube.ru/video/24fecb7e3fcc430cf7ee3100f8b8bfe3/",
           "duration": 58,
           "origin_type": "rshorts"
@@ -1642,14 +1642,14 @@
       "status": "ok",
       "q3_videos": 53,
       "views_available": 53,
-      "q3_views_total": 7961,
-      "q3_views_average": 150.20754716981133,
+      "q3_views_total": 7975,
+      "q3_views_average": 150.47169811320754,
       "q3_views_median": 150,
       "top_video": {
         "id": "a3666382388204717e81c73227b386ef",
         "title": "У кого в дата-центре самый острый нюх? 👃",
         "published_at": "2026-09-30T16:20:54.000Z",
-        "views": 326,
+        "views": 329,
         "url": "https://rutube.ru/video/a3666382388204717e81c73227b386ef/",
         "duration": 51,
         "origin_type": "rshorts"
@@ -1659,7 +1659,7 @@
           "id": "a3666382388204717e81c73227b386ef",
           "title": "У кого в дата-центре самый острый нюх? 👃",
           "published_at": "2026-09-30T16:20:54.000Z",
-          "views": 326,
+          "views": 329,
           "url": "https://rutube.ru/video/a3666382388204717e81c73227b386ef/",
           "duration": 51,
           "origin_type": "rshorts"
@@ -1695,7 +1695,7 @@
           "id": "813cb3f1439e05e1b545f93a2d8a427b",
           "title": "Тихая серверная — повод для беспокойства 👀",
           "published_at": "2026-09-23T14:36:16.000Z",
-          "views": 250,
+          "views": 251,
           "url": "https://rutube.ru/video/813cb3f1439e05e1b545f93a2d8a427b/",
           "duration": 58,
           "origin_type": "rshorts"
@@ -1713,7 +1713,7 @@
           "id": "124c2e01c63eeaac172c55f4368de0fa",
           "title": "Архитектура данных в эпоху ИИ: как избежать дорогих ошибок | Подкаст Selectel «Сегодня на ретро»",
           "published_at": "2026-09-22T17:05:30.000Z",
-          "views": 37,
+          "views": 40,
           "url": "https://rutube.ru/video/124c2e01c63eeaac172c55f4368de0fa/",
           "duration": 3319,
           "origin_type": "rtb"
@@ -1731,7 +1731,7 @@
           "id": "ec571d90183aab797e0457a3489bb4dc",
           "title": "Кажется, что DNS, OSI и HTTPS — база? Тогда вот три вопроса на разогрев 🤓",
           "published_at": "2026-09-18T16:17:20.000Z",
-          "views": 8,
+          "views": 9,
           "url": "https://rutube.ru/video/ec571d90183aab797e0457a3489bb4dc/",
           "duration": 72,
           "origin_type": "rshorts"
@@ -1740,7 +1740,7 @@
           "id": "09480592530f9fef0704c9337a7ee492",
           "title": "А вы бы попались на удочку? 🎣",
           "published_at": "2026-09-16T12:08:26.000Z",
-          "views": 255,
+          "views": 256,
           "url": "https://rutube.ru/video/09480592530f9fef0704c9337a7ee492/",
           "duration": 81,
           "origin_type": "rshorts"
@@ -1749,7 +1749,7 @@
           "id": "0ac880928936a4fb483ba240f65d6e5d",
           "title": "Чем больше инструкций у ИИ-агента, тем лучше он работает? Не всегда.",
           "published_at": "2026-09-15T15:15:10.000Z",
-          "views": 271,
+          "views": 272,
           "url": "https://rutube.ru/video/0ac880928936a4fb483ba240f65d6e5d/",
           "duration": 60,
           "origin_type": "rshorts"
@@ -1767,7 +1767,7 @@
           "id": "d91a909c405ba488c32cbc7e46867762",
           "title": "Кто не успел — тот доплатил 💸",
           "published_at": "2026-09-11T13:08:20.000Z",
-          "views": 8,
+          "views": 9,
           "url": "https://rutube.ru/video/d91a909c405ba488c32cbc7e46867762/",
           "duration": 19,
           "origin_type": "rtb"
@@ -1830,7 +1830,7 @@
           "id": "648e72bbe6332b4251d15e74b8f35fbc",
           "title": "Открытые LLM или локальные ИИ-модели — как бизнесу внедрить нейросети?",
           "published_at": "2026-09-03T13:07:41.000Z",
-          "views": 188,
+          "views": 189,
           "url": "https://rutube.ru/video/648e72bbe6332b4251d15e74b8f35fbc/",
           "duration": 80,
           "origin_type": "rshorts"
@@ -1911,7 +1911,7 @@
           "id": "b6fde23fe429a90e1022bb943fa3f63c",
           "title": "Кибербезопасность в эпоху ИИ: как меняются DDoS и другие атаки | Подкаст Selectel «Сегодня на ретро»",
           "published_at": "2026-08-20T12:17:57.000Z",
-          "views": 26,
+          "views": 27,
           "url": "https://rutube.ru/video/b6fde23fe429a90e1022bb943fa3f63c/",
           "duration": 3136,
           "origin_type": "rtb"
@@ -2118,7 +2118,7 @@
           "id": "171e4b74fc8c0ea60cbd3de57270d37f",
           "title": "Насколько хорошо вы разбираетесь в железе? 🤔",
           "published_at": "2026-07-03T14:43:14.000Z",
-          "views": 126,
+          "views": 127,
           "url": "https://rutube.ru/video/171e4b74fc8c0ea60cbd3de57270d37f/",
           "duration": 78,
           "origin_type": "rshorts"
@@ -2144,14 +2144,14 @@
       "status": "ok",
       "q3_videos": 3,
       "views_available": 3,
-      "q3_views_total": 650,
-      "q3_views_average": 216.66666666666666,
-      "q3_views_median": 246,
+      "q3_views_total": 677,
+      "q3_views_average": 225.66666666666666,
+      "q3_views_median": 251,
       "top_video": {
         "id": "9233167f12bc23f9eb53ed60fb467fb3",
         "title": "Зачем «Магниту» кассы без кассиров? | По ту сторону №6: Игорь Чечулин & Эдуард Ирышков",
         "published_at": "2026-08-18T14:35:04.000Z",
-        "views": 258,
+        "views": 264,
         "url": "https://rutube.ru/video/9233167f12bc23f9eb53ed60fb467fb3/",
         "duration": 2958,
         "origin_type": "rtb"
@@ -2161,7 +2161,7 @@
           "id": "861185b52457ed26e9cee8af366498a6",
           "title": "Кто преподаёт ИТ сегодня | По ту сторону №8: Ян Пиле & Илья Мещерин",
           "published_at": "2026-09-16T16:43:04.000Z",
-          "views": 146,
+          "views": 162,
           "url": "https://rutube.ru/video/861185b52457ed26e9cee8af366498a6/",
           "duration": 3060,
           "origin_type": "rtb"
@@ -2170,7 +2170,7 @@
           "id": "ead6e9d080c130f5be8d01463cf95e89",
           "title": "Как ML и AI изменили ритейл | По ту сторону №7: Максим Покусенко & Анатолий Карпов",
           "published_at": "2026-09-01T12:25:11.000Z",
-          "views": 246,
+          "views": 251,
           "url": "https://rutube.ru/video/ead6e9d080c130f5be8d01463cf95e89/",
           "duration": 3738,
           "origin_type": "rtb"
@@ -2179,7 +2179,7 @@
           "id": "9233167f12bc23f9eb53ed60fb467fb3",
           "title": "Зачем «Магниту» кассы без кассиров? | По ту сторону №6: Игорь Чечулин & Эдуард Ирышков",
           "published_at": "2026-08-18T14:35:04.000Z",
-          "views": 258,
+          "views": 264,
           "url": "https://rutube.ru/video/9233167f12bc23f9eb53ed60fb467fb3/",
           "duration": 2958,
           "origin_type": "rtb"
