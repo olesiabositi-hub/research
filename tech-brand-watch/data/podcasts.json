@@ -7,7 +7,7 @@
     "label": "Q3 2026"
   },
   "status": "presence_topics",
-  "updated_at": "2026-10-26T11:54:51.831Z",
+  "updated_at": "2026-11-02T14:16:40.227Z",
   "source_label": "Public podcast RSS (iTunes/Deezer), YouTube & RUTUBE video versions, Telegram announcements",
   "note": "Прослушивания конкурентов публично несопоставимы и не собираются. Показаны выпуски Q3, частота, длительность и темы; просмотры — только видеоверсий выпусков на YouTube/RUTUBE (снимок на дату updated_at); охват анонсов — просмотры постов в Telegram. Темы определяются по словарю ключевых слов в названиях и описаниях — это ориентир, а не ручная разметка.",
   "summary": {
@@ -347,19 +347,19 @@
       "video": {
         "youtube": {
           "q3_videos": 5,
-          "median_views": 1639,
-          "total_views": 8566,
+          "median_views": 1642,
+          "total_views": 8603,
           "top": {
             "title": "От аварии до аварии: Incident, Problem и Risk Management | «В SREду на кухне» | AvitoTech",
             "url": "https://www.youtube.com/watch?v=tfdWJcOp30E",
-            "views": 2744,
+            "views": 2749,
             "published_at": "2026-09-02T12:00:09Z"
           }
         },
         "rutube": {
           "q3_videos": 5,
-          "median_views": 41,
-          "total_views": 220,
+          "median_views": 42,
+          "total_views": 221,
           "top": {
             "title": "Что такое релизы? И причем тут Feature Flags, Canary и Rollback? | «В SREду на кухне» | AvitoTech",
             "url": "https://rutube.ru/video/728720948956b052d94c53ffe0c567b5/",
@@ -371,26 +371,26 @@
       "telegram": {
         "handle": "avitotech",
         "announcements_q3": 4,
-        "median_views": 6445,
+        "median_views": 6470,
         "posts": [
           {
             "url": "https://t.me/avitotech/3469",
-            "views": 4710,
+            "views": 4790,
             "published_at": "2026-09-23T16:02:22.000Z"
           },
           {
             "url": "https://t.me/avitotech/3431",
-            "views": 6140,
+            "views": 6180,
             "published_at": "2026-09-02T16:31:23.000Z"
           },
           {
             "url": "https://t.me/avitotech/3406",
-            "views": 7060,
+            "views": 7100,
             "published_at": "2026-08-12T16:13:01.000Z"
           },
           {
             "url": "https://t.me/avitotech/3371",
-            "views": 6750,
+            "views": 6760,
             "published_at": "2026-07-08T08:50:58.000Z"
           }
         ]
@@ -410,7 +410,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=rT3ua0w_CCw",
-            "views": 2055
+            "views": 2065
           }
         },
         {
@@ -428,7 +428,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=tfdWJcOp30E",
-            "views": 2744
+            "views": 2749
           }
         },
         {
@@ -445,7 +445,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=dqmGI58UUR8",
-            "views": 664
+            "views": 669
           }
         },
         {
@@ -463,7 +463,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=BhZ2ilR38_s",
-            "views": 1464
+            "views": 1478
           }
         },
         {
@@ -480,7 +480,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=R23FjSp8Z-A",
-            "views": 1639
+            "views": 1642
           }
         }
       ],
@@ -504,9 +504,9 @@
       },
       "error": null,
       "episodes_source": "rss",
-      "episodes_total": 2,
+      "episodes_total": 3,
       "first_episode_at": "2026-09-15T03:00:00.000Z",
-      "last_episode_at": "2026-10-06T03:00:00.000Z",
+      "last_episode_at": "2026-10-27T03:00:00.000Z",
       "q3_episodes": 1,
       "avg_duration_min": 40.9,
       "median_gap_days": null,
@@ -540,23 +540,23 @@
       "video": {
         "youtube": {
           "q3_videos": 1,
-          "median_views": 5676,
-          "total_views": 5676,
+          "median_views": 5760,
+          "total_views": 5760,
           "top": {
             "title": "Зачем инженеру продуктовое мышление? | Подкаст «Бэкенд расправил плечи»",
             "url": "https://www.youtube.com/watch?v=8IcZfZjvJQQ",
-            "views": 5676,
+            "views": 5760,
             "published_at": "2026-09-15T07:00:23Z"
           }
         },
         "rutube": {
           "q3_videos": 1,
-          "median_views": 42,
-          "total_views": 42,
+          "median_views": 45,
+          "total_views": 45,
           "top": {
             "title": "Зачем инженеру продуктовое мышление? | Подкаст «Бэкенд расправил плечи»",
             "url": "https://rutube.ru/video/a3fa3e57845f6916098dbad144a29080/",
-            "views": 42,
+            "views": 45,
             "published_at": "2026-09-15T10:01:16.000Z"
           }
         }
@@ -564,11 +564,11 @@
       "telegram": {
         "handle": "avitotech",
         "announcements_q3": 1,
-        "median_views": 5890,
+        "median_views": 5960,
         "posts": [
           {
             "url": "https://t.me/avitotech/3455",
-            "views": 5890,
+            "views": 5960,
             "published_at": "2026-09-15T16:01:17.000Z"
           }
         ]
@@ -590,7 +590,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=8IcZfZjvJQQ",
-            "views": 5676
+            "views": 5760
           }
         }
       ],
@@ -621,12 +621,12 @@
       "video": {
         "youtube": {
           "q3_videos": 2,
-          "median_views": 1951,
-          "total_views": 3902,
+          "median_views": 1982,
+          "total_views": 3964,
           "top": {
             "title": "Когда сотрудник уходит: чек-лист для тех, кто остаётся | Подкаст «Свободный слот»",
             "url": "https://www.youtube.com/watch?v=s3MEDuXtEa8",
-            "views": 1964,
+            "views": 2008,
             "published_at": "2026-07-16T09:00:26Z"
           }
         },
@@ -645,16 +645,16 @@
       "telegram": {
         "handle": "avitotech",
         "announcements_q3": 2,
-        "median_views": 6920,
+        "median_views": 6945,
         "posts": [
           {
             "url": "https://t.me/avitotech/3414",
-            "views": 6510,
+            "views": 6540,
             "published_at": "2026-08-21T13:12:19.000Z"
           },
           {
             "url": "https://t.me/avitotech/3388",
-            "views": 7330,
+            "views": 7350,
             "published_at": "2026-07-20T15:05:42.000Z"
           }
         ]
@@ -670,7 +670,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=s3MEDuXtEa8",
-            "views": 1964
+            "views": 2008
           }
         },
         {
@@ -683,7 +683,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=Y51N_H2fZS0",
-            "views": 1938
+            "views": 1956
           }
         }
       ],
@@ -718,11 +718,11 @@
       "telegram": {
         "handle": "avitotech",
         "announcements_q3": 1,
-        "median_views": 5860,
+        "median_views": 5950,
         "posts": [
           {
             "url": "https://t.me/avitotech/3459",
-            "views": 5860,
+            "views": 5950,
             "published_at": "2026-09-18T13:01:15.000Z"
           }
         ]
@@ -769,16 +769,16 @@
       "telegram": {
         "handle": "avitotech",
         "announcements_q3": 2,
-        "median_views": 6255,
+        "median_views": 6280,
         "posts": [
           {
             "url": "https://t.me/avitotech/3415",
-            "views": 6010,
+            "views": 6040,
             "published_at": "2026-08-24T12:01:06.000Z"
           },
           {
             "url": "https://t.me/avitotech/3395",
-            "views": 6500,
+            "views": 6520,
             "published_at": "2026-07-28T14:31:56.000Z"
           }
         ]
@@ -875,9 +875,9 @@
       },
       "error": null,
       "episodes_source": "deezer",
-      "episodes_total": 32,
+      "episodes_total": 33,
       "first_episode_at": "2023-07-03T11:57:13.000Z",
-      "last_episode_at": "2026-09-11T06:05:18.000Z",
+      "last_episode_at": "2026-10-30T09:51:35.000Z",
       "q3_episodes": 4,
       "avg_duration_min": 126.3,
       "median_gap_days": 27.7,
@@ -993,23 +993,23 @@
       "video": {
         "youtube": {
           "q3_videos": 2,
-          "median_views": 51670,
-          "total_views": 103340,
+          "median_views": 51686,
+          "total_views": 103372,
           "top": {
             "title": "Кибербезопасность в эпоху ИИ: как меняются DDoS и другие атаки | Подкаст Selectel «Сегодня на ретро»",
             "url": "https://www.youtube.com/watch?v=J1-j6aq4FJY",
-            "views": 52153,
+            "views": 52161,
             "published_at": "2026-08-20T08:28:05Z"
           }
         },
         "rutube": {
           "q3_videos": 2,
-          "median_views": 33.5,
-          "total_views": 67,
+          "median_views": 35,
+          "total_views": 70,
           "top": {
             "title": "Архитектура данных в эпоху ИИ: как избежать дорогих ошибок | Подкаст Selectel «Сегодня на ретро»",
             "url": "https://rutube.ru/video/124c2e01c63eeaac172c55f4368de0fa/",
-            "views": 40,
+            "views": 43,
             "published_at": "2026-09-22T17:05:30.000Z"
           }
         }
@@ -1030,7 +1030,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=NX32oWXo7vw",
-            "views": 51187
+            "views": 51211
           }
         },
         {
@@ -1046,7 +1046,7 @@
           "video": {
             "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=J1-j6aq4FJY",
-            "views": 52153
+            "views": 52161
           }
         }
       ],
@@ -1106,21 +1106,21 @@
       "telegram": {
         "handle": "tech_rwb",
         "announcements_q3": 3,
-        "median_views": 5460,
+        "median_views": 5470,
         "posts": [
           {
             "url": "https://t.me/tech_rwb/1063",
-            "views": 8570,
+            "views": 8680,
             "published_at": "2026-09-09T10:55:21.000Z"
           },
           {
             "url": "https://t.me/tech_rwb/1038",
-            "views": 5460,
+            "views": 5470,
             "published_at": "2026-07-16T08:05:34.000Z"
           },
           {
             "url": "https://t.me/tech_rwb/1021",
-            "views": 5010,
+            "views": 5020,
             "published_at": "2026-07-01T14:16:39.000Z"
           }
         ]
@@ -1188,8 +1188,8 @@
           "author": "Jason Cavness",
           "feed_url": "https://rss.libsyn.com/shows/102923/destinations/547576.xml",
           "apple_url": "https://podcasts.apple.com/ru/podcast/the-jason-cavness-experience/id1289104534?uo=4",
-          "episodes_listed": 522,
-          "last_release": "2026-10-20T12:00:00Z"
+          "episodes_listed": 523,
+          "last_release": "2026-10-27T12:00:00Z"
         },
         {
           "apple_id": 650045209,
@@ -1197,8 +1197,8 @@
           "author": "Joe Saul-Sehy and Josh ‘OG’ Bannerman, CFP",
           "feed_url": "https://rss.art19.com/stacking-benjamins",
           "apple_url": "https://podcasts.apple.com/ru/podcast/the-stacking-benjamins-show/id650045209?uo=4",
-          "episodes_listed": 1546,
-          "last_release": "2026-10-26T07:01:00Z"
+          "episodes_listed": 1549,
+          "last_release": "2026-11-02T08:01:00Z"
         },
         {
           "apple_id": 1832816678,
@@ -1206,8 +1206,8 @@
           "author": "Exotic Car Hacks",
           "feed_url": "https://feed.podbean.com/revonomics/feed.xml",
           "apple_url": "https://podcasts.apple.com/ru/podcast/revonomics-an-exotic-car-hacks-podcast/id1832816678?uo=4",
-          "episodes_listed": 63,
-          "last_release": "2026-10-21T13:30:00Z"
+          "episodes_listed": 64,
+          "last_release": "2026-10-28T19:02:00Z"
         },
         {
           "apple_id": 1752182550,
@@ -1215,8 +1215,8 @@
           "author": "Cumulus Media Detroit",
           "feed_url": "https://feeds.simplecast.com/5SjgS3os",
           "apple_url": "https://podcasts.apple.com/ru/podcast/the-veteran-blueprint/id1752182550?uo=4",
-          "episodes_listed": 112,
-          "last_release": "2026-10-25T10:00:00Z"
+          "episodes_listed": 113,
+          "last_release": "2026-11-01T11:00:00Z"
         },
         {
           "apple_id": 288175736,
@@ -1225,7 +1225,7 @@
           "feed_url": "https://rss.amperwave.net/v2/feed/audacy/ec4a6dde695b7f4ecb3cef488a7a8c67",
           "apple_url": "https://podcasts.apple.com/ru/podcast/sarah-and-vinnie-full-show/id288175736?uo=4",
           "episodes_listed": 553,
-          "last_release": "2026-10-23T17:44:00Z"
+          "last_release": "2026-10-30T17:49:00Z"
         },
         {
           "apple_id": 994593909,
@@ -1234,7 +1234,7 @@
           "feed_url": "https://rss.amperwave.net/v2/feed/audacy/a051d0ef755e1f73d1aef53c5aa8a17c",
           "apple_url": "https://podcasts.apple.com/ru/podcast/total-information-am/id994593909?uo=4",
           "episodes_listed": 536,
-          "last_release": "2026-10-23T17:02:00Z"
+          "last_release": "2026-11-02T13:12:00Z"
         }
       ]
     },
@@ -1286,11 +1286,11 @@
       "telegram": {
         "handle": "dododev",
         "announcements_q3": 1,
-        "median_views": 1440,
+        "median_views": 1450,
         "posts": [
           {
             "url": "https://t.me/dododev/1849",
-            "views": 1440,
+            "views": 1450,
             "published_at": "2026-07-06T10:02:28.000Z"
           }
         ]
@@ -1350,7 +1350,7 @@
           "author": "AdTechGod, The AdTech God",
           "feed_url": "https://feeds.megaphone.fm/EAATE5455623661",
           "apple_url": "https://podcasts.apple.com/ru/podcast/adtechgod-pod/id1705070045?uo=4",
-          "episodes_listed": 214,
+          "episodes_listed": 215,
           "last_release": "2026-10-20T04:00:00Z"
         },
         {
@@ -1360,7 +1360,7 @@
           "feed_url": "https://audioboom.com/channels/4976875.rss",
           "apple_url": "https://podcasts.apple.com/ru/podcast/the-madtech-podcast/id1439578854?uo=4",
           "episodes_listed": 500,
-          "last_release": "2026-10-26T07:00:00Z"
+          "last_release": "2026-10-30T07:00:00Z"
         },
         {
           "apple_id": 1804599575,
@@ -1386,8 +1386,8 @@
           "author": "AdTechGod and Jeremy Bloom",
           "feed_url": "https://feeds.megaphone.fm/EAATE3202127214",
           "apple_url": "https://podcasts.apple.com/ru/podcast/the-advertising-forum-by-marketecture/id1739843681?uo=4",
-          "episodes_listed": 90,
-          "last_release": "2026-10-15T04:00:00Z"
+          "episodes_listed": 92,
+          "last_release": "2026-10-29T19:43:00Z"
         },
         {
           "apple_id": 1739883442,
