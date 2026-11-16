@@ -7,14 +7,14 @@
     "label": "Q3 2026",
     "days": 92
   },
-  "updated_at": "2026-11-09T14:44:10.330Z",
+  "updated_at": "2026-11-16T14:20:53.879Z",
   "source_label": "Habr public company article pages",
   "note": "Публичные метрики Habr. Количество статей относится к публикациям 01.07–30.09.2026. Просмотры — снимок на дату updated_at и могут расти после окончания квартала. Для SberTech используется общий блог Сбера и это отмечено shared_blog=true.",
   "summary": {
     "brands_total": 25,
     "brands_ok": 25,
     "errors": 0,
-    "total_q3_articles": 983,
+    "total_q3_articles": 1069,
     "top_articles_count": 12,
     "frequency_compare_brands": 9
   },
@@ -30,23 +30,23 @@
       "q3_articles": 56,
       "articles_per_week": 4.26,
       "views_available": 56,
-      "views_total": 995700,
-      "views_average": 17780.35714285714,
+      "views_total": 998800,
+      "views_average": 17835.714285714286,
       "views_median": 12000,
       "top_article": {
         "title": "Не трогая веса модели: как мы построили исследовательского агента Алисы AI и в разы сократили потребление GPU",
         "url": "https://habr.com/ru/companies/yandex/articles/1079290/",
         "published_at": "2026-09-14T08:01:22.000Z",
-        "views": 95000,
-        "views_label": "95K"
+        "views": 96000,
+        "views_label": "96K"
       },
       "articles": [
         {
           "title": "Как мы защищаем номера телефонов с помощью Oblivious Pseudorandom Function",
           "url": "https://habr.com/ru/companies/yandex/articles/1075740/",
           "published_at": "2026-09-30T11:57:07.000Z",
-          "views": 10000,
-          "views_label": "10K"
+          "views": 11000,
+          "views_label": "11K"
         },
         {
           "title": "RuntimeNodes: как мы, ML‑щики, стали писать рантайм",
@@ -73,8 +73,8 @@
           "title": "Открываем AliceAI-Foundation-80B-A3B-Base — новую языковую модель Яндекса, обученную с нуля",
           "url": "https://habr.com/ru/companies/yandex/articles/1083300/",
           "published_at": "2026-09-21T06:45:43.000Z",
-          "views": 74000,
-          "views_label": "74K"
+          "views": 75000,
+          "views_label": "75K"
         },
         {
           "title": "История приставки 3DO Interactive Multiplayer: большие планы и короткая жизнь",
@@ -87,15 +87,15 @@
           "title": "Алиса AI теперь сама выбирает LLM под задачу: что стоит между моделью и хорошим ответом",
           "url": "https://habr.com/ru/companies/yandex/articles/1082200/",
           "published_at": "2026-09-15T07:00:02.000Z",
-          "views": 6300,
-          "views_label": "6.3K"
+          "views": 6400,
+          "views_label": "6.4K"
         },
         {
           "title": "Не трогая веса модели: как мы построили исследовательского агента Алисы AI и в разы сократили потребление GPU",
           "url": "https://habr.com/ru/companies/yandex/articles/1079290/",
           "published_at": "2026-09-14T08:01:22.000Z",
-          "views": 95000,
-          "views_label": "95K"
+          "views": 96000,
+          "views_label": "96K"
         },
         {
           "title": "Яндекс открыл новый набор в программу амбассадоров U‑Team",
@@ -260,7 +260,7 @@
         },
         {
           "title": "Go SDK для YDB: уменьшаем количество запросов к СУБД для интерактивных транзакций",
-          "url": "https://habr.com/ru/companies/ydb/articles/1070138/",
+          "url": "https://habr.com/ru/companies/yandex/articles/1070138/",
           "published_at": "2026-08-13T13:23:34.000Z",
           "views": 17000,
           "views_label": "17K"
@@ -442,13 +442,13 @@
       "shared_blog": false,
       "frequency_compare": true,
       "status": "ok",
-      "pages_scanned": 4,
-      "q3_articles": 46,
-      "articles_per_week": 3.5,
-      "views_available": 46,
-      "views_total": 463600,
-      "views_average": 10078.260869565218,
-      "views_median": 9200,
+      "pages_scanned": 5,
+      "q3_articles": 59,
+      "articles_per_week": 4.49,
+      "views_available": 59,
+      "views_total": 549500,
+      "views_average": 9313.559322033898,
+      "views_median": 8200,
       "top_article": {
         "title": "От «когда-нибудь» к работающему прототипу: как LLM дала идее шанс",
         "url": "https://habr.com/ru/companies/avito/articles/1078084/",
@@ -472,6 +472,13 @@
           "views_label": "8.5K"
         },
         {
+          "title": "Реально ли в 2026 году вкатиться в айти через QA? На что вообще смотрят рекрутёры, когда нанимают тестировщиков в...",
+          "url": "https://habr.com/ru/companies/avito/articles/1088164/",
+          "published_at": "2026-09-29T13:09:14.000Z",
+          "views": 5600,
+          "views_label": "5.6K"
+        },
+        {
           "title": "Trisigma выходит на рынки Армении, Грузии, Казахстана и Узбекистана",
           "url": "https://habr.com/ru/companies/avito/articles/1086662/",
           "published_at": "2026-09-25T11:28:39.000Z",
@@ -486,11 +493,18 @@
           "views_label": "11K"
         },
         {
+          "title": "Почему мониторинг, SRE и автотесты перестали работать по отдельности? Digital Immune System (DIS) или Цифровой...",
+          "url": "https://habr.com/ru/companies/avito/articles/1086202/",
+          "published_at": "2026-09-24T12:37:04.000Z",
+          "views": 3400,
+          "views_label": "3.4K"
+        },
+        {
           "title": "Как мы мигрировали с MongoDB на Cassandra за квартал: опыт использования АI-агентов",
           "url": "https://habr.com/ru/companies/avito/articles/1082358/",
           "published_at": "2026-09-22T15:50:07.000Z",
-          "views": 8800,
-          "views_label": "8.8K"
+          "views": 8900,
+          "views_label": "8.9K"
         },
         {
           "title": "Статьи по Go, которые стоит почитать",
@@ -545,8 +559,8 @@
           "title": "С чего началась ваша карьера разработчика?",
           "url": "https://habr.com/ru/companies/avito/articles/1081268/",
           "published_at": "2026-09-11T10:51:54.000Z",
-          "views": 7000,
-          "views_label": "7K"
+          "views": 7100,
+          "views_label": "7.1K"
         },
         {
           "title": "Бесплатные курсы для фронтенд‑ и бэкенд‑разработчиков на сайте AvitoTech",
@@ -575,6 +589,27 @@
           "published_at": "2026-09-04T14:29:12.000Z",
           "views": 19000,
           "views_label": "19K"
+        },
+        {
+          "title": "Проводим исследование soft skill-ов инженеров и тимлидов в эпоху AI Мы уже выпускали выпуск soft skills для SRE где...",
+          "url": "https://habr.com/ru/companies/avito/articles/1078152/",
+          "published_at": "2026-09-03T12:18:21.000Z",
+          "views": 6400,
+          "views_label": "6.4K"
+        },
+        {
+          "title": "Incident Management: почему компании живут от аварии до аварии Давайте признаем, системы без аварий не существует....",
+          "url": "https://habr.com/ru/companies/avito/articles/1077828/",
+          "published_at": "2026-09-02T17:32:39.000Z",
+          "views": 7900,
+          "views_label": "7.9K"
+        },
+        {
+          "title": "1 из 10 разработчиков ничего не делает на работе. Разбираемся с исследователем из Стэнфорда В этом выпуске AviCast —...",
+          "url": "https://habr.com/ru/companies/avito/articles/1077280/",
+          "published_at": "2026-09-01T14:31:22.000Z",
+          "views": 6800,
+          "views_label": "6.8K"
         },
         {
           "title": "Локальная LLM миграция Vertica2Trino. Как довести до рабочего состояния, если модель не тянет",
@@ -633,6 +668,13 @@
           "views_label": "14K"
         },
         {
+          "title": "QA-эксперт Авито о том, почему вход в IT через тестирование больше не работает Всем привет! Гостья нового выпуска...",
+          "url": "https://habr.com/ru/companies/avito/articles/1072146/",
+          "published_at": "2026-08-19T13:13:18.000Z",
+          "views": 6700,
+          "views_label": "6.7K"
+        },
+        {
           "title": "От LLM-портала до фабрики внутренних агентов: как в Авито строят корпоративного ассистента «Виталик»",
           "url": "https://habr.com/ru/companies/avito/articles/1071126/",
           "published_at": "2026-08-18T06:03:32.000Z",
@@ -659,6 +701,13 @@
           "published_at": "2026-08-14T14:20:21.000Z",
           "views": 11000,
           "views_label": "11K"
+        },
+        {
+          "title": "FinOps глазами SRE: сколько стоит надёжность Инженеры умеют считать latency, error rate и uptime. Но когда разговор...",
+          "url": "https://habr.com/ru/companies/avito/articles/1069766/",
+          "published_at": "2026-08-12T14:26:08.000Z",
+          "views": 7800,
+          "views_label": "7.8K"
         },
         {
           "title": "От ручных правил к модели: как автоматизировать субсидии, если нельзя просаживать метрики в A/B",
@@ -703,6 +752,13 @@
           "views_label": "7.3K"
         },
         {
+          "title": "System Design на собеседовании: как не утонуть в требованиях, нагрузках и архитектуре System Design — одна из самых...",
+          "url": "https://habr.com/ru/companies/avito/articles/1064636/",
+          "published_at": "2026-07-29T17:32:52.000Z",
+          "views": 9100,
+          "views_label": "9.1K"
+        },
+        {
           "title": "Всё по полочкам или как мы создавали единую метрику для сотен моделей антифрода",
           "url": "https://habr.com/ru/companies/avito/articles/1064332/",
           "published_at": "2026-07-29T13:17:14.000Z",
@@ -717,6 +773,13 @@
           "views_label": "12K"
         },
         {
+          "title": "Kubernetes к 2035 году: стандарт, невидимая инфраструктура или история? Kubernetes уже выиграл войну оркестраторов. Но...",
+          "url": "https://habr.com/ru/companies/avito/articles/1062212/",
+          "published_at": "2026-07-23T10:19:20.000Z",
+          "views": 5900,
+          "views_label": "5.9K"
+        },
+        {
           "title": "Чемпионат среди uplift-моделей: групповой этап, плей-офф и неожиданный лидер",
           "url": "https://habr.com/ru/companies/avito/articles/1061032/",
           "published_at": "2026-07-22T14:30:12.000Z",
@@ -724,11 +787,25 @@
           "views_label": "18K"
         },
         {
+          "title": "Оффбординг: процесс, о котором все молчат — и зря Онбординг обсуждают на каждой конференции. Оффбординг — делают...",
+          "url": "https://habr.com/ru/companies/avito/articles/1060960/",
+          "published_at": "2026-07-20T12:50:48.000Z",
+          "views": 6100,
+          "views_label": "6.1K"
+        },
+        {
           "title": "Агентская разработка: как обеспечить качество",
           "url": "https://habr.com/ru/companies/avito/articles/1060190/",
           "published_at": "2026-07-17T12:23:11.000Z",
           "views": 11000,
           "views_label": "11K"
+        },
+        {
+          "title": "AviTalk: как за три месяца объединить два продукта и не сломать команду Новый выпуск AviTalk — разговор с CTO...",
+          "url": "https://habr.com/ru/companies/avito/articles/1059816/",
+          "published_at": "2026-07-16T10:41:36.000Z",
+          "views": 5900,
+          "views_label": "5.9K"
         },
         {
           "title": "HoneyBadger CTF от AvitoTech: 18–19 июля, 30 часов, две лиги",
@@ -766,6 +843,13 @@
           "views_label": "8.4K"
         },
         {
+          "title": "C-level в кулуарах: о миссии, ошибках и AI — семь топов говорят честно Что происходит, когда IT-руководители высшего...",
+          "url": "https://habr.com/ru/companies/avito/articles/1055394/",
+          "published_at": "2026-07-03T15:29:30.000Z",
+          "views": 7500,
+          "views_label": "7.5K"
+        },
+        {
           "title": "Узкое место решает всё: как теория ограничений помогает улучшать сложные системы",
           "url": "https://habr.com/ru/companies/avito/articles/1055388/",
           "published_at": "2026-07-03T15:18:33.000Z",
@@ -778,6 +862,13 @@
           "published_at": "2026-07-02T16:32:15.000Z",
           "views": 8900,
           "views_label": "8.9K"
+        },
+        {
+          "title": "Релиз ≠ деплой: почему прод падает именно после обновлений Большинство крупных инцидентов происходят сразу после...",
+          "url": "https://habr.com/ru/companies/avito/articles/1054560/",
+          "published_at": "2026-07-01T18:22:51.000Z",
+          "views": 6600,
+          "views_label": "6.6K"
         }
       ]
     },
@@ -953,12 +1044,12 @@
       "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 5,
-      "q3_articles": 61,
-      "articles_per_week": 4.64,
-      "views_available": 61,
-      "views_total": 752600,
-      "views_average": 12337.704918032787,
-      "views_median": 9200,
+      "q3_articles": 63,
+      "articles_per_week": 4.79,
+      "views_available": 63,
+      "views_total": 763900,
+      "views_average": 12125.396825396825,
+      "views_median": 9100,
       "top_article": {
         "title": "::%16777216 — странный артефакт в логах RDP: история одного расследования",
         "url": "https://habr.com/ru/companies/pt/articles/1068878/",
@@ -978,8 +1069,8 @@
           "title": "Как мы научили OVN зеркалировать трафик виртуальных машин в облаке",
           "url": "https://habr.com/ru/companies/pt/articles/1088040/",
           "published_at": "2026-09-29T10:53:30.000Z",
-          "views": 8900,
-          "views_label": "8.9K"
+          "views": 9000,
+          "views_label": "9K"
         },
         {
           "title": "Сентябрьский «В тренде VM»: уязвимости TeamCity, TrueConf, SharePoint, Windows и Zimbra Collaboration",
@@ -1038,6 +1129,13 @@
           "views_label": "7.9K"
         },
         {
+          "title": "Операция Chewbacca В ряде образцов злоумышленники использовали артефакт, созвучный с Чубаккой В конце июня команда...",
+          "url": "https://habr.com/ru/companies/pt/articles/1083062/",
+          "published_at": "2026-09-17T15:04:15.000Z",
+          "views": 5300,
+          "views_label": "5.3K"
+        },
+        {
           "title": "Ваш сервер Zimbra под угрозой",
           "url": "https://habr.com/ru/companies/pt/articles/1082654/",
           "published_at": "2026-09-16T14:18:46.000Z",
@@ -1083,8 +1181,15 @@
           "title": "DENOmination Group: Deno в цепочках атак на российские организации",
           "url": "https://habr.com/ru/companies/pt/articles/1079682/",
           "published_at": "2026-09-09T08:02:01.000Z",
-          "views": 7300,
-          "views_label": "7.3K"
+          "views": 7400,
+          "views_label": "7.4K"
+        },
+        {
+          "title": "We will croc you 👻 Хакерская группировка PhantomCore продолжает активно использовать ошибки в конфигурации 1С для атак...",
+          "url": "https://habr.com/ru/companies/pt/articles/1079944/",
+          "published_at": "2026-09-08T14:04:30.000Z",
+          "views": 5500,
+          "views_label": "5.5K"
         },
         {
           "title": "Positive Technologies: доля компаний с активностью вредоносного ПО в России и СНГ выросла в полтора раза",
@@ -1111,8 +1216,8 @@
           "title": "Новое ИИ-решение Positive Technologies помогло найти критическую уязвимость в проекте Microsoft для работы с LLM",
           "url": "https://habr.com/ru/companies/pt/articles/1077618/",
           "published_at": "2026-09-02T09:49:33.000Z",
-          "views": 6100,
-          "views_label": "6.1K"
+          "views": 6200,
+          "views_label": "6.2K"
         },
         {
           "title": "Не конкурируй с ИИ — управляй им. Как специалисту по ИБ остаться востребованным в эпоху ИИ-агентов",
@@ -1321,8 +1426,8 @@
           "title": "В PT ISIM появилась технология безагентного сбора событий безопасности в технологическом сегменте",
           "url": "https://habr.com/ru/companies/pt/articles/1059228/",
           "published_at": "2026-07-15T09:36:20.000Z",
-          "views": 5400,
-          "views_label": "5.4K"
+          "views": 5500,
+          "views_label": "5.5K"
         },
         {
           "title": "Июльский «В тренде VM»: уязвимость в Microsoft Exchange Server",
@@ -1356,8 +1461,8 @@
           "title": "Под капотом у MOLOT’а: обзор ML-модели для обнаружения вредоносного кода",
           "url": "https://habr.com/ru/companies/pt/articles/1052206/",
           "published_at": "2026-07-08T08:55:52.000Z",
-          "views": 9800,
-          "views_label": "9.8K"
+          "views": 9900,
+          "views_label": "9.9K"
         },
         {
           "title": "Рынки монетизации уязвимостей",
@@ -1407,9 +1512,9 @@
       "q3_articles": 33,
       "articles_per_week": 2.51,
       "views_available": 33,
-      "views_total": 334600,
-      "views_average": 10139.39393939394,
-      "views_median": 8300,
+      "views_total": 336800,
+      "views_average": 10206.060606060606,
+      "views_median": 8400,
       "top_article": {
         "title": "Java Digest #38: Valhalla в master, ежемесячные патчи Oracle и AI-скиллы в IDEA",
         "url": "https://habr.com/ru/companies/tbank/articles/1067830/",
@@ -1422,29 +1527,29 @@
           "title": "Scikit-rank — open-source-библиотека для нейросетевого ранжирования",
           "url": "https://habr.com/ru/companies/tbank/articles/1088224/",
           "published_at": "2026-09-30T07:01:00.000Z",
-          "views": 5700,
-          "views_label": "5.7K"
+          "views": 5800,
+          "views_label": "5.8K"
         },
         {
           "title": "Как BI‑команда краснодарского ИТ‑хаба мигрировала HR‑отчетность и собрала GuideBook",
           "url": "https://habr.com/ru/companies/tbank/articles/1087640/",
           "published_at": "2026-09-28T13:35:14.000Z",
-          "views": 6900,
-          "views_label": "6.9K"
+          "views": 7000,
+          "views_label": "7K"
         },
         {
           "title": "ИИ-агенты в инвестициях: собираем Telegram-ассистента и торгового робота на MCP Т-Инвестиций",
           "url": "https://habr.com/ru/companies/tbank/articles/1086714/",
           "published_at": "2026-09-26T09:00:55.000Z",
-          "views": 8800,
-          "views_label": "8.8K"
+          "views": 9000,
+          "views_label": "9K"
         },
         {
           "title": "Почему ни одна Python-библиотека для конфигурации не закрывает все задачи",
           "url": "https://habr.com/ru/companies/tbank/articles/1085020/",
           "published_at": "2026-09-24T08:08:38.000Z",
-          "views": 7300,
-          "views_label": "7.3K"
+          "views": 7400,
+          "views_label": "7.4K"
         },
         {
           "title": "Автоматизация Data Quality: как мы изменили подход к нашим инструментам",
@@ -1464,8 +1569,8 @@
           "title": "Как разрабатывать фронтенд без готового бэкенда: инструменты перехвата трафика, мокирования и принцип их работы",
           "url": "https://habr.com/ru/companies/tbank/articles/1082854/",
           "published_at": "2026-09-16T12:33:52.000Z",
-          "views": 8600,
-          "views_label": "8.6K"
+          "views": 8700,
+          "views_label": "8.7K"
         },
         {
           "title": "AI‑агент вместо ручного регресса: архитектура, метрики, инсайты",
@@ -1499,8 +1604,8 @@
           "title": "Как мы внедрили Knip в Angular-проект: от настройки до CI/CD",
           "url": "https://habr.com/ru/companies/tbank/articles/1078438/",
           "published_at": "2026-09-04T15:07:10.000Z",
-          "views": 9900,
-          "views_label": "9.9K"
+          "views": 10000,
+          "views_label": "10K"
         },
         {
           "title": "Scala Digest. Выпуск 44",
@@ -1520,8 +1625,8 @@
           "title": "Как мы победили OOMKill и сэкономили треть ресурсов: настройка JVM в Kubernetes",
           "url": "https://habr.com/ru/companies/tbank/articles/1075668/",
           "published_at": "2026-08-28T11:00:41.000Z",
-          "views": 7900,
-          "views_label": "7.9K"
+          "views": 8000,
+          "views_label": "8K"
         },
         {
           "title": "Как мы за год снизили зависимость от наставников и ускорили адаптацию аналитиков",
@@ -1576,8 +1681,8 @@
           "title": "Платформенный шаблон.NET‑сервиса: с нуля до прода за два дня",
           "url": "https://habr.com/ru/companies/tbank/articles/1063534/",
           "published_at": "2026-08-04T11:00:58.000Z",
-          "views": 8300,
-          "views_label": "8.3K"
+          "views": 8400,
+          "views_label": "8.4K"
         },
         {
           "title": "Scala Digest. Выпуск 43",
@@ -1590,8 +1695,8 @@
           "title": "Разбор утечки памяти в StackExchange.Utils: как 4 КБ конфигурации съели 2 ГБ RAM",
           "url": "https://habr.com/ru/companies/tbank/articles/1059160/",
           "published_at": "2026-07-27T08:30:54.000Z",
-          "views": 7500,
-          "views_label": "7.5K"
+          "views": 7600,
+          "views_label": "7.6K"
         },
         {
           "title": "Особенности SRE в мобильном банкинге: подходы, вызовы и специфика",
@@ -1611,15 +1716,15 @@
           "title": "Perseus: фреймворк для универсальной персонализации на основе гетерогенных событий",
           "url": "https://habr.com/ru/companies/tbank/articles/1061236/",
           "published_at": "2026-07-21T08:31:01.000Z",
-          "views": 9500,
-          "views_label": "9.5K"
+          "views": 9600,
+          "views_label": "9.6K"
         },
         {
           "title": "T-Search: как мы обучали агента многошаговому поиску",
           "url": "https://habr.com/ru/companies/tbank/articles/1060262/",
           "published_at": "2026-07-17T14:41:45.000Z",
-          "views": 12000,
-          "views_label": "12K"
+          "views": 13000,
+          "views_label": "13K"
         },
         {
           "title": "Как мы внедрили модель зрелости QA в 200 командах: от оценки до автоматизации",
@@ -1632,8 +1737,8 @@
           "title": "Система растет там, где можно ошибаться. История из минского ИТ-хаба",
           "url": "https://habr.com/ru/companies/tbank/articles/1056946/",
           "published_at": "2026-07-09T09:36:24.000Z",
-          "views": 7300,
-          "views_label": "7.3K"
+          "views": 7400,
+          "views_label": "7.4K"
         },
         {
           "title": "Java Digest #37: что нового в JDK 27, Spring Boot 4.1 и Hibernate 8.0",
@@ -1658,12 +1763,12 @@
       "shared_blog": true,
       "frequency_compare": false,
       "status": "ok",
-      "pages_scanned": 13,
-      "q3_articles": 170,
-      "articles_per_week": 12.93,
-      "views_available": 170,
-      "views_total": 1928500,
-      "views_average": 11344.117647058823,
+      "pages_scanned": 14,
+      "q3_articles": 177,
+      "articles_per_week": 13.47,
+      "views_available": 177,
+      "views_total": 1964400,
+      "views_average": 11098.305084745763,
       "views_median": 9300,
       "top_article": {
         "title": "Темная сторона эпохи перемен: как Геральт из Ривии сломал канон сказок",
@@ -1689,7 +1794,7 @@
         },
         {
           "title": "От 3000 сессий в месяц до 100 в секунду: как LLM заменила ручную оценку ботов поддержки",
-          "url": "https://habr.com/ru/companies/mts_ai/articles/1087852/",
+          "url": "https://habr.com/ru/companies/ru_mts/articles/1087852/",
           "published_at": "2026-09-29T13:01:20.000Z",
           "views": 8100,
           "views_label": "8.1K"
@@ -1698,8 +1803,8 @@
           "title": "Дрозофила в Doom: как научный прорыв превратился в игрушку для программистов",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1087628/",
           "published_at": "2026-09-29T08:17:27.000Z",
-          "views": 9100,
-          "views_label": "9.1K"
+          "views": 9200,
+          "views_label": "9.2K"
         },
         {
           "title": "Сжатый интернет с несжатым кешем: что Cloudflare нашла у себя на дисках",
@@ -1728,6 +1833,13 @@
           "published_at": "2026-09-26T09:12:56.000Z",
           "views": 9000,
           "views_label": "9K"
+        },
+        {
+          "title": "Присоединяйтесь к выступлению эксперта по ИИ из MTC Web Services на открытии сезона Rust-сообщества 🤖 Привет! В...",
+          "url": "https://habr.com/ru/companies/ru_mts/articles/1086722/",
+          "published_at": "2026-09-25T12:40:02.000Z",
+          "views": 4100,
+          "views_label": "4.1K"
         },
         {
           "title": "Обзор MWS AI Agents Platform: платформы для создания ИИ-агентов",
@@ -1922,8 +2034,8 @@
           "title": "Экономика личности: от рабства до ИИ",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1075510/",
           "published_at": "2026-09-10T07:10:00.000Z",
-          "views": 7300,
-          "views_label": "7.3K"
+          "views": 7400,
+          "views_label": "7.4K"
         },
         {
           "title": "Рынок IT-вакансий сломался и ничего не понятно? А ведь за изучение таких процессов в 2010 году дали Нобелевскую премию",
@@ -1971,8 +2083,8 @@
           "title": "Моды, которые превращают ванильный Fallout 4 в современную игру. Финал",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1078500/",
           "published_at": "2026-09-06T09:00:49.000Z",
-          "views": 9200,
-          "views_label": "9.2K"
+          "views": 9300,
+          "views_label": "9.3K"
         },
         {
           "title": "Дождь — это микромолния: ученые выяснили, как капли пробивают защиту автомобилей",
@@ -2006,8 +2118,8 @@
           "title": "Quest 3, PICO 4 Ultra, Vision Pro и Galaxy XR: четыре 3D-гарнитуры для разных задач",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1078164/",
           "published_at": "2026-09-03T12:55:02.000Z",
-          "views": 9700,
-          "views_label": "9.7K"
+          "views": 9800,
+          "views_label": "9.8K"
         },
         {
           "title": "ИИ‑агент спешит на помощь: как мы автоматизировали более 70% рутины аналитика и увеличили эффективность команды",
@@ -2108,6 +2220,13 @@
           "views_label": "9.9K"
         },
         {
+          "title": "Присоединяйтесь к встрече для ИТ-руководителей — поговорим про изменения, стратегию, выгорание и управление в эпоху ИИ...",
+          "url": "https://habr.com/ru/companies/ru_mts/articles/1074746/",
+          "published_at": "2026-08-26T10:56:01.000Z",
+          "views": 3300,
+          "views_label": "3.3K"
+        },
+        {
           "title": "Построение агентов на A2A с изолированным исполнением на Go: запускаем ИИ-разработчика в облаке, сохраняя контроль",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1074154/",
           "published_at": "2026-08-26T07:42:03.000Z",
@@ -2125,8 +2244,8 @@
           "title": "Цели, сценарии, роли. Системность в управлении бизнесом",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1074096/",
           "published_at": "2026-08-25T09:00:41.000Z",
-          "views": 6400,
-          "views_label": "6.4K"
+          "views": 6500,
+          "views_label": "6.5K"
         },
         {
           "title": "«Он 10 из 10, но… »: обсудили грабли внедрения ИИ-агентов на фестивале True Tech Friends",
@@ -2153,8 +2272,8 @@
           "title": "Моды, которые превращают ванильный Fallout 4 в современную игру: оружие, одежда и кое-что еще. Часть 3",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1073080/",
           "published_at": "2026-08-22T09:00:23.000Z",
-          "views": 7700,
-          "views_label": "7.7K"
+          "views": 7800,
+          "views_label": "7.8K"
         },
         {
           "title": "Как нейросеть придумала белки, которых нет в природе, и обошла эволюцию",
@@ -2195,8 +2314,8 @@
           "title": "Литература превращается в диккенсовский Кокстаун? Разбираемся, как ИИ-фабрики поглощают рынок книг",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1071214/",
           "published_at": "2026-08-19T07:11:57.000Z",
-          "views": 6700,
-          "views_label": "6.7K"
+          "views": 6800,
+          "views_label": "6.8K"
         },
         {
           "title": "Кто будет учить джунов, если нейросети забрали всю рутину",
@@ -2218,6 +2337,13 @@
           "published_at": "2026-08-17T12:34:57.000Z",
           "views": 10000,
           "views_label": "10K"
+        },
+        {
+          "title": "МТС True Tech Champ 2026: выбирай свой трек и получи до 10 250 000 ₽ за победу 🔥 Регистрация на четвертый сезон True...",
+          "url": "https://habr.com/ru/companies/ru_mts/articles/1070582/",
+          "published_at": "2026-08-17T08:37:39.000Z",
+          "views": 5200,
+          "views_label": "5.2K"
         },
         {
           "title": "ИИ пишет код, а разработчику остается архитектура: итоги шестого митапа MWS",
@@ -2246,6 +2372,13 @@
           "published_at": "2026-08-15T08:11:29.000Z",
           "views": 18000,
           "views_label": "18K"
+        },
+        {
+          "title": "Приглашаем на МТС True Tech Friends — фестивальное ИТ-событие для всех, кто следит за трендами ИИ и любит активности 🦾 ...",
+          "url": "https://habr.com/ru/companies/ru_mts/articles/1070600/",
+          "published_at": "2026-08-15T08:10:29.000Z",
+          "views": 5700,
+          "views_label": "5.7K"
         },
         {
           "title": "Как агентский ИИ перестраивает клиентский опыт",
@@ -2335,8 +2468,8 @@
           "title": "Грядет агентная экономика: как она работает и что будет делать человек",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1067904/",
           "published_at": "2026-08-07T11:22:34.000Z",
-          "views": 9000,
-          "views_label": "9K"
+          "views": 9100,
+          "views_label": "9.1K"
         },
         {
           "title": "Почему 5G в России нельзя просто «включить»: частоты, базовые станции и цена перехода",
@@ -2405,8 +2538,8 @@
           "title": "Как мы подвели Кира Булычёва и почему его книги — об украденном детстве и о том, как его сохранить другим",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1064860/",
           "published_at": "2026-08-02T09:00:38.000Z",
-          "views": 40000,
-          "views_label": "40K"
+          "views": 41000,
+          "views_label": "41K"
         },
         {
           "title": "От Dune II до Dune: Awakening: как менялась легендарная серия игр по «Дюне»",
@@ -2423,11 +2556,18 @@
           "views_label": "12K"
         },
         {
+          "title": "Новый проект True Tech: менторские сессии с экспертами MWS! Запускаем серию открытых менторских сессий с экспертами...",
+          "url": "https://habr.com/ru/companies/ru_mts/articles/1065270/",
+          "published_at": "2026-07-31T09:39:11.000Z",
+          "views": 4000,
+          "views_label": "4K"
+        },
+        {
           "title": "Следующая ИТ‑революция уже на пороге: как Physical AI меняет наше представление о роботах",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1063960/",
           "published_at": "2026-07-31T08:49:23.000Z",
-          "views": 9900,
-          "views_label": "9.9K"
+          "views": 10000,
+          "views_label": "10K"
         },
         {
           "title": "Модульная автономная DIY‑гидропоника на 3D‑принтере. Часть 2",
@@ -2435,6 +2575,13 @@
           "published_at": "2026-07-30T13:17:36.000Z",
           "views": 21000,
           "views_label": "21K"
+        },
+        {
+          "title": "Подключайся к онлайн-митапу MWS — эксперты поделятся опытом организации стабильных Go-сервисов ⚙️ MTC Web Services...",
+          "url": "https://habr.com/ru/companies/ru_mts/articles/1064868/",
+          "published_at": "2026-07-30T10:15:20.000Z",
+          "views": 5300,
+          "views_label": "5.3K"
         },
         {
           "title": "Как мы спроектировали систему виброакустического мониторинга автомобиля на основе волоконно-оптических датчиков",
@@ -2517,8 +2664,8 @@
           "title": "Урбан ML: рекомендации, LLM, антифрод и агенты",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1062622/",
           "published_at": "2026-07-24T10:06:32.000Z",
-          "views": 6700,
-          "views_label": "6.7K"
+          "views": 6900,
+          "views_label": "6.9K"
         },
         {
           "title": "Как переводить смешанный русский-казахский и не сойти с ума",
@@ -2647,6 +2794,13 @@
           "views_label": "12K"
         },
         {
+          "title": "Участвуй в МТС True Tech Champ 2026 — всероссийском чемпионате по программированию с призовым фондом 10 250 000...",
+          "url": "https://habr.com/ru/companies/ru_mts/articles/1059552/",
+          "published_at": "2026-07-15T15:11:27.000Z",
+          "views": 6100,
+          "views_label": "6.1K"
+        },
+        {
           "title": "Наём без испытательного срока: как AI-агенты получили должности и влияют на рынок труда",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1059292/",
           "published_at": "2026-07-15T13:08:33.000Z",
@@ -2664,8 +2818,8 @@
           "title": "Java в эпоху ИИ. К чему пришли на пятом MTC Web Services Meetup для разработчиков",
           "url": "https://habr.com/ru/companies/ru_mts/articles/1059050/",
           "published_at": "2026-07-14T13:19:40.000Z",
-          "views": 9200,
-          "views_label": "9.2K"
+          "views": 9300,
+          "views_label": "9.3K"
         },
         {
           "title": "Роботизация тяжелой строительной техники: от экспериментов к реальности",
@@ -2873,12 +3027,12 @@
       "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 2,
-      "q3_articles": 15,
-      "articles_per_week": 1.14,
-      "views_available": 15,
-      "views_total": 140000,
-      "views_average": 9333.333333333334,
-      "views_median": 9800,
+      "q3_articles": 18,
+      "articles_per_week": 1.37,
+      "views_available": 18,
+      "views_total": 157800,
+      "views_average": 8766.666666666666,
+      "views_median": 9300,
       "top_article": {
         "title": "От полной выгрузки к S3 и PostgreSQL: как мы доставляем гигабайты данных в память подов",
         "url": "https://habr.com/ru/companies/ozontech/articles/1052132/",
@@ -2916,18 +3070,32 @@
           "views_label": "9.4K"
         },
         {
+          "title": "Модульный фреймворк для гибкого тестирования на Go — Testo Если у вас десятки тысяч тестов, сложные сценарии, а тестам...",
+          "url": "https://habr.com/ru/companies/ozontech/articles/1083852/",
+          "published_at": "2026-09-18T11:30:10.000Z",
+          "views": 4000,
+          "views_label": "4K"
+        },
+        {
           "title": "E-CODE 2026: регистрация закрывается",
           "url": "https://habr.com/ru/companies/ozontech/articles/1078466/",
           "published_at": "2026-09-04T09:30:57.000Z",
-          "views": 5500,
-          "views_label": "5.5K"
+          "views": 5600,
+          "views_label": "5.6K"
         },
         {
           "title": "Масштабирование от 100 до 100 000+ автотестов: архитектура и инструменты",
           "url": "https://habr.com/ru/companies/ozontech/articles/1072880/",
           "published_at": "2026-08-26T08:00:05.000Z",
-          "views": 7800,
-          "views_label": "7.8K"
+          "views": 7900,
+          "views_label": "7.9K"
+        },
+        {
+          "title": "Бот с заданиями по кибербезопасности и розыгрыш мерча Каждый год у нас в Ozon Tech проходит турнир Capture The Flag. И...",
+          "url": "https://habr.com/ru/companies/ozontech/articles/1074230/",
+          "published_at": "2026-08-25T10:00:47.000Z",
+          "views": 4300,
+          "views_label": "4.3K"
         },
         {
           "title": "Где заканчиваются отчёты и начинается безопасность: аудит ИБ без «бумажной пыли»",
@@ -2954,8 +3122,8 @@
           "title": "E‑CODE 2026: главное событие ко Дню программиста",
           "url": "https://habr.com/ru/companies/ozontech/articles/1065444/",
           "published_at": "2026-08-05T10:00:38.000Z",
-          "views": 6600,
-          "views_label": "6.6K"
+          "views": 6700,
+          "views_label": "6.7K"
         },
         {
           "title": "Выпекаем тесты на Go с Testo: делимся нашим open-source-фреймворком",
@@ -2986,6 +3154,13 @@
           "views_label": "10K"
         },
         {
+          "title": "Заряжаемся перед Робозоном: решаем задачу и погружаемся в атмосферу хакатона от Ozon Tech «Подумаешь, коробка», —...",
+          "url": "https://habr.com/ru/companies/ozontech/articles/1056106/",
+          "published_at": "2026-07-07T09:34:21.000Z",
+          "views": 9200,
+          "views_label": "9.2K"
+        },
+        {
           "title": "От полной выгрузки к S3 и PostgreSQL: как мы доставляем гигабайты данных в память подов",
           "url": "https://habr.com/ru/companies/ozontech/articles/1052132/",
           "published_at": "2026-07-06T12:00:02.000Z",
@@ -3002,11 +3177,11 @@
       "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 4,
-      "q3_articles": 42,
-      "articles_per_week": 3.2,
-      "views_available": 42,
-      "views_total": 620000,
-      "views_average": 14761.904761904761,
+      "q3_articles": 48,
+      "articles_per_week": 3.65,
+      "views_available": 48,
+      "views_total": 653300,
+      "views_average": 13610.416666666666,
       "views_median": 12000,
       "top_article": {
         "title": "Простая конструкция, но высокая вычислительная мощность: в чем особенность разработки базовых станций",
@@ -3022,6 +3197,13 @@
           "published_at": "2026-09-30T11:28:47.000Z",
           "views": 8700,
           "views_label": "8.7K"
+        },
+        {
+          "title": "Зачем системному программисту знать больше, чем С C придумали в 1972 году, а системные программисты по-прежнему пишут...",
+          "url": "https://habr.com/ru/companies/yadro/articles/1088190/",
+          "published_at": "2026-09-29T14:02:48.000Z",
+          "views": 5500,
+          "views_label": "5.5K"
         },
         {
           "title": "«Железо» под давлением: как протестировать тысячи плат для базовых станций",
@@ -3052,6 +3234,20 @@
           "views_label": "10K"
         },
         {
+          "title": "Теорию про микросхемы читать можно бесконечно. А вот попробовать сделать самому получается не всегда. Школа синтеза...",
+          "url": "https://habr.com/ru/companies/yadro/articles/1084564/",
+          "published_at": "2026-09-21T08:27:45.000Z",
+          "views": 4600,
+          "views_label": "4.6K"
+        },
+        {
+          "title": "Запуск нейросетей на ПЛИС и краевой ИИ — в краевых «Битовых масках». Ой, крайних. Не последних В 32 выпуске...",
+          "url": "https://habr.com/ru/companies/yadro/articles/1083952/",
+          "published_at": "2026-09-19T08:15:16.000Z",
+          "views": 5800,
+          "views_label": "5.8K"
+        },
+        {
           "title": "Как мигрировать GitLab под рабочей нагрузкой из одного в десять Docker‑контейнеров",
           "url": "https://habr.com/ru/companies/yadro/articles/1083362/",
           "published_at": "2026-09-18T07:43:29.000Z",
@@ -3071,6 +3267,13 @@
           "published_at": "2026-09-15T12:58:38.000Z",
           "views": 11000,
           "views_label": "11K"
+        },
+        {
+          "title": "RTL-, DFT- и firmware-разработчик по очереди проектируют чип для игровой приставки. Получается... инженерный разгон ...",
+          "url": "https://habr.com/ru/companies/yadro/articles/1081280/",
+          "published_at": "2026-09-11T11:08:37.000Z",
+          "views": 5100,
+          "views_label": "5.1K"
         },
         {
           "title": "Как QEMU исполняет чужой код: изучаем Tiny Code Generator изнутри",
@@ -3276,6 +3479,13 @@
           "views_label": "33K"
         },
         {
+          "title": "Какие проблемы у верификаторов и поможет ли с ними AI — расскажут в новом выпуске «Битовых масок» Гостем 29...",
+          "url": "https://habr.com/ru/companies/yadro/articles/1058660/",
+          "published_at": "2026-07-13T13:24:25.000Z",
+          "views": 6900,
+          "views_label": "6.9K"
+        },
+        {
           "title": "Ускоряем обработку изображений в OpenCV на RISC-V: алгоритмическая, низкоуровневая и компиляторная оптимизация",
           "url": "https://habr.com/ru/companies/yadro/articles/1056332/",
           "published_at": "2026-07-10T08:43:51.000Z",
@@ -3295,6 +3505,13 @@
           "published_at": "2026-07-08T08:27:06.000Z",
           "views": 14000,
           "views_label": "14K"
+        },
+        {
+          "title": "Что интересного в архитектуре и компиляторе «Эльбруса» — узнаем в новом выпуске «Битовых масок» Вы наверняка слышали...",
+          "url": "https://habr.com/ru/companies/yadro/articles/1056590/",
+          "published_at": "2026-07-07T12:44:29.000Z",
+          "views": 5400,
+          "views_label": "5.4K"
         },
         {
           "title": "Хочешь сделать хорошо — сделай сам: как у нас появилась собственная система работы со стендами",
@@ -3320,26 +3537,26 @@
       "frequency_compare": true,
       "status": "ok",
       "pages_scanned": 1,
-      "q3_articles": 7,
-      "articles_per_week": 0.53,
-      "views_available": 7,
-      "views_total": 67200,
-      "views_average": 9600,
-      "views_median": 8200,
+      "q3_articles": 9,
+      "articles_per_week": 0.68,
+      "views_available": 9,
+      "views_total": 77000,
+      "views_average": 8555.555555555555,
+      "views_median": 7400,
       "top_article": {
         "title": "2ГИС внедрил сенсорную навигацию",
         "url": "https://habr.com/ru/companies/2gis/articles/1059428/",
         "published_at": "2026-07-29T06:22:01.000Z",
-        "views": 17000,
-        "views_label": "17K"
+        "views": 18000,
+        "views_label": "18K"
       },
       "articles": [
         {
           "title": "2ГИС выпустил MCP‑сервер для бизнеса",
           "url": "https://habr.com/ru/companies/2gis/articles/1086058/",
           "published_at": "2026-09-24T09:10:25.000Z",
-          "views": 5900,
-          "views_label": "5.9K"
+          "views": 6000,
+          "views_label": "6K"
         },
         {
           "title": "Эволюция рендеринга в Zenith Engine: многопоточная загрузка GPU-ресурсов",
@@ -3347,6 +3564,13 @@
           "published_at": "2026-09-16T08:36:14.000Z",
           "views": 8200,
           "views_label": "8.2K"
+        },
+        {
+          "title": "На связи QA‑сообщество 2ГИС. И это снова дайджест релизов. ➡️ Python Документация Python официально...",
+          "url": "https://habr.com/ru/companies/2gis/articles/1082518/",
+          "published_at": "2026-09-15T12:07:24.000Z",
+          "views": 4200,
+          "views_label": "4.2K"
         },
         {
           "title": "В Москве появился памятник кнопке «Пауза», пропавшей с ноутбуков",
@@ -3359,15 +3583,22 @@
           "title": "Помогите, FLAKY",
           "url": "https://habr.com/ru/companies/2gis/articles/1074116/",
           "published_at": "2026-08-26T10:28:03.000Z",
-          "views": 7000,
-          "views_label": "7K"
+          "views": 7100,
+          "views_label": "7.1K"
+        },
+        {
+          "title": "Привет! На связи снова QA-сообщество 2ГИС. Подготовили новый дайджест свежих релизов. ➡️ Playwright 1.62 Появилась...",
+          "url": "https://habr.com/ru/companies/2gis/articles/1069276/",
+          "published_at": "2026-08-11T12:12:16.000Z",
+          "views": 4400,
+          "views_label": "4.4K"
         },
         {
           "title": "2ГИС внедрил сенсорную навигацию",
           "url": "https://habr.com/ru/companies/2gis/articles/1059428/",
           "published_at": "2026-07-29T06:22:01.000Z",
-          "views": 17000,
-          "views_label": "17K"
+          "views": 18000,
+          "views_label": "18K"
         },
         {
           "title": "Полевые проезды в QA: как мы ищем аномалии геопозиции в городе",
@@ -3396,8 +3627,8 @@
       "q3_articles": 19,
       "articles_per_week": 1.45,
       "views_available": 19,
-      "views_total": 196000,
-      "views_average": 10315.78947368421,
+      "views_total": 196500,
+      "views_average": 10342.105263157895,
       "views_median": 7100,
       "top_article": {
         "title": "Разработка через «ИИ» отбирает у программистов состояние потока?",
@@ -3411,15 +3642,15 @@
           "title": "О пользе ограничений в MSSQL",
           "url": "https://habr.com/ru/companies/skbkontur/articles/1082258/",
           "published_at": "2026-09-30T09:37:22.000Z",
-          "views": 7400,
-          "views_label": "7.4K"
+          "views": 7500,
+          "views_label": "7.5K"
         },
         {
           "title": "Как системному аналитику работать с запросами, в которых ничего не понятно",
           "url": "https://habr.com/ru/companies/skbkontur/articles/1086690/",
           "published_at": "2026-09-29T10:44:48.000Z",
-          "views": 6500,
-          "views_label": "6.5K"
+          "views": 6600,
+          "views_label": "6.6K"
         },
         {
           "title": "Куда смотреть, или как устроены онлайн-встречи глухих пользователей",
@@ -3460,8 +3691,8 @@
           "title": "Как измерять применимость результатов работы на примере Бюро разработки в Контуре",
           "url": "https://habr.com/ru/companies/skbkontur/articles/1075632/",
           "published_at": "2026-08-28T08:31:03.000Z",
-          "views": 5600,
-          "views_label": "5.6K"
+          "views": 5700,
+          "views_label": "5.7K"
         },
         {
           "title": "Проблема N+1 запроса: виноват не ORM, а ваш код",
@@ -3495,8 +3726,8 @@
           "title": "Как внедрить требования к безопасной разработке кода: опыт Staffcop",
           "url": "https://habr.com/ru/companies/skbkontur/articles/1069664/",
           "published_at": "2026-08-13T08:36:19.000Z",
-          "views": 6800,
-          "views_label": "6.8K"
+          "views": 6900,
+          "views_label": "6.9K"
         },
         {
           "title": "Как мы организовали тест-сессию в продукте: пилот формата",
@@ -3523,8 +3754,8 @@
           "title": "Возможно, я дурак… Как делать эффективные продукты в ситуации, когда никто ничего не понимает",
           "url": "https://habr.com/ru/companies/skbkontur/articles/1057474/",
           "published_at": "2026-07-10T07:45:20.000Z",
-          "views": 8300,
-          "views_label": "8.3K"
+          "views": 8400,
+          "views_label": "8.4K"
         },
         {
           "title": "From Wizard to Warlock: магия в D&D как метафора эпохи LLM",
@@ -3549,13 +3780,13 @@
       "shared_blog": false,
       "frequency_compare": false,
       "status": "ok",
-      "pages_scanned": 4,
-      "q3_articles": 51,
-      "articles_per_week": 3.88,
-      "views_available": 51,
-      "views_total": 550600,
-      "views_average": 10796.078431372549,
-      "views_median": 8500,
+      "pages_scanned": 6,
+      "q3_articles": 80,
+      "articles_per_week": 6.09,
+      "views_available": 80,
+      "views_total": 695200,
+      "views_average": 8690,
+      "views_median": 7350,
       "top_article": {
         "title": "Я DevOps-инженер. Моя работа — чтобы вы обо мне не вспоминали",
         "url": "https://habr.com/ru/companies/cloud_ru/articles/1070590/",
@@ -3568,8 +3799,15 @@
           "title": "Reasoning-версию GigaChat 3.5 теперь можно подключить в Evolution Foundation Models",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1088712/",
           "published_at": "2026-09-30T15:30:44.000Z",
-          "views": 7300,
-          "views_label": "7.3K"
+          "views": 7400,
+          "views_label": "7.4K"
+        },
+        {
+          "title": "Как защитить чувствительные данные при работе с LLM и почему закрытого контура недостаточно? Расскажем на GoCloud Tech...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1087412/",
+          "published_at": "2026-09-28T11:44:18.000Z",
+          "views": 4800,
+          "views_label": "4.8K"
         },
         {
           "title": "AI-native организация начинается с неопределенности: что меняется в структуре, ролях и управлении",
@@ -3582,8 +3820,29 @@
           "title": "pgvector, Qdrant или Milvus: как выбрать базу для RAG и не усложнить архитектуру",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1086530/",
           "published_at": "2026-09-25T12:01:12.000Z",
-          "views": 7300,
-          "views_label": "7.3K"
+          "views": 7400,
+          "views_label": "7.4K"
+        },
+        {
+          "title": "Как построить РБПО без боли для AppSec и разработчиков? Расскажем на GoCloud Tech 2026 РБПО хотят выстроить все, но на...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1086572/",
+          "published_at": "2026-09-25T09:18:58.000Z",
+          "views": 4200,
+          "views_label": "4.2K"
+        },
+        {
+          "title": "А что если откажет ЦОД? Вы просили — мы повторяем На вебинаре раccкажем, как застраховаться от потери данных даже в...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1086106/",
+          "published_at": "2026-09-24T10:27:13.000Z",
+          "views": 3400,
+          "views_label": "3.4K"
+        },
+        {
+          "title": "Как снизить стоимость хранения данных с помощью комбинаторики и линейной алгебры? Узнаете на GoCloud Tech 2026 При...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1085204/",
+          "published_at": "2026-09-22T12:45:00.000Z",
+          "views": 4800,
+          "views_label": "4.8K"
         },
         {
           "title": "Управляем VMware Cloud Director через MCP‑сервер: от API к текстовым командам",
@@ -3600,11 +3859,25 @@
           "views_label": "7.2K"
         },
         {
+          "title": "Как пройти путь от полного запрета ИИ до AI Native, где код пишут сотни агентов? Расскажем на GoCloud Tech 2026 ...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1083786/",
+          "published_at": "2026-09-18T10:14:41.000Z",
+          "views": 3800,
+          "views_label": "3.8K"
+        },
+        {
           "title": "Через тернии к Солнцу: удаленка, которую мы потеряли. Подключаемся к графическому столу Sun Solaris и запускаем интранет",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1083058/",
           "published_at": "2026-09-17T07:26:39.000Z",
           "views": 13000,
           "views_label": "13K"
+        },
+        {
+          "title": "5 причин посетить GoCloud Tech 2026 очно, помимо докладов Осталось меньше месяца до ежегодной конференции GoCloud...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1082944/",
+          "published_at": "2026-09-16T13:33:42.000Z",
+          "views": 5200,
+          "views_label": "5.2K"
         },
         {
           "title": "День прошел, число сменилось, ничего не изменилось. Что делать с молчанием на ретро",
@@ -3614,11 +3887,25 @@
           "views_label": "7.5K"
         },
         {
+          "title": "Дайджест: новости за август 2026 Рассказываем, какие изменения произошли на платформах Cloud.ru в августе и чем это...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1082440/",
+          "published_at": "2026-09-15T12:10:28.000Z",
+          "views": 4500,
+          "views_label": "4.5K"
+        },
+        {
           "title": "Как 17B активных бьют 70B плотных: анатомия Mixture-of-Experts (MoE)",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1069008/",
           "published_at": "2026-09-12T07:09:18.000Z",
           "views": 7800,
           "views_label": "7.8K"
+        },
+        {
+          "title": "Программа конференции GoCloud Tech 2026 уже на сайте Зарегистрировались на конференцию для тех, кто двигает прогресс в...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1081244/",
+          "published_at": "2026-09-11T10:19:10.000Z",
+          "views": 4600,
+          "views_label": "4.6K"
         },
         {
           "title": "Shadow AI в CI/CD: почему ИИ-агенты становятся угрозой",
@@ -3628,11 +3915,32 @@
           "views_label": "7.9K"
         },
         {
+          "title": "QA-дайджест за июль-август 2026 Пока вы наслаждались последними деньками лета, мы скроллили аналитические отчеты и...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1080920/",
+          "published_at": "2026-09-10T13:36:04.000Z",
+          "views": 3900,
+          "views_label": "3.9K"
+        },
+        {
           "title": "OpenClaw 2.0 появился случайно, и мы осознанно выводим его в маркетплейс отдельным образом",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1080432/",
           "published_at": "2026-09-10T08:52:11.000Z",
           "views": 5100,
           "views_label": "5.1K"
+        },
+        {
+          "title": "Как «Страна Девелопмент» перевела всю ИТ‑инфраструктуру в облако и ускорила проектирование 🏭Что за компания «Страна...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1080468/",
+          "published_at": "2026-09-09T15:30:17.000Z",
+          "views": 5400,
+          "views_label": "5.4K"
+        },
+        {
+          "title": "Безопасная разработка от кода до прода — новый бесплатный курс Cloud.ru Кто-то считает безопасность головной болью...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1079962/",
+          "published_at": "2026-09-08T14:32:15.000Z",
+          "views": 5900,
+          "views_label": "5.9K"
         },
         {
           "title": "От хаоса к системе: насколько реально построить AI-first команду за полгода",
@@ -3649,6 +3957,13 @@
           "views_label": "6.6K"
         },
         {
+          "title": "Как частное облако помогло Okko выдержать наплыв зрителей в периоды крупных чемпионатов 🏭 Что за компания Okko — один...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1071394/",
+          "published_at": "2026-09-03T12:00:13.000Z",
+          "views": 4600,
+          "views_label": "4.6K"
+        },
+        {
           "title": "Как общаться с ИИ и не потерять данные?",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1077298/",
           "published_at": "2026-09-03T08:16:53.000Z",
@@ -3656,11 +3971,25 @@
           "views_label": "8.3K"
         },
         {
+          "title": "Подборка вебинаров на сентябрь В сентябре покажем, как за пять дней построить Data Lakehouse, защитить данные при...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1077092/",
+          "published_at": "2026-09-01T10:29:40.000Z",
+          "views": 4500,
+          "views_label": "4.5K"
+        },
+        {
           "title": "Бесплатные курсы от облачных провайдеров: что выбрать для карьеры в 2026 году",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1076738/",
           "published_at": "2026-09-01T07:04:21.000Z",
           "views": 6500,
           "views_label": "6.5K"
+        },
+        {
+          "title": "Обсудили модели, агентов и наступившее будущее с автором Telegram-канала Dealer․AI В очередной выпуск подкаста в...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1075430/",
+          "published_at": "2026-08-31T13:40:46.000Z",
+          "views": 4600,
+          "views_label": "4.6K"
         },
         {
           "title": "H-Neurons: 0.1% нейронов, из-за которых LLM врут",
@@ -3689,6 +4018,13 @@
           "published_at": "2026-08-27T08:34:08.000Z",
           "views": 20000,
           "views_label": "20K"
+        },
+        {
+          "title": "Как Юнитрек за 2 недели подготовила ИИ-платформу к федеральному запуску и масштабировала ее до 100 000 участников 🏭...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1071388/",
+          "published_at": "2026-08-26T13:20:32.000Z",
+          "views": 4100,
+          "views_label": "4.1K"
         },
         {
           "title": "Как научить любую команду решать рабочие задачи с ИИ",
@@ -3726,6 +4062,13 @@
           "views_label": "8.9K"
         },
         {
+          "title": "3 неочевидных open source инструмента для разработки в облаке Собрали инструменты, о которых не так часто...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1072908/",
+          "published_at": "2026-08-21T09:52:29.000Z",
+          "views": 4000,
+          "views_label": "4K"
+        },
+        {
           "title": "Я DevOps-инженер. Моя работа — чтобы вы обо мне не вспоминали",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1070590/",
           "published_at": "2026-08-19T08:12:02.000Z",
@@ -3738,6 +4081,20 @@
           "published_at": "2026-08-18T06:44:09.000Z",
           "views": 6200,
           "views_label": "6.2K"
+        },
+        {
+          "title": "Как HiveTrace ускорила запуск AI Firewall для корпоративных приложений с генеративным ИИ 🏭 Что за компания HiveTrace...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1070200/",
+          "published_at": "2026-08-17T13:16:00.000Z",
+          "views": 5500,
+          "views_label": "5.5K"
+        },
+        {
+          "title": "Дайджест: новости за июль 2026 Рассказываем, что произошло в июле и объясняем, чем это может быть полезно. ...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1070212/",
+          "published_at": "2026-08-14T13:30:18.000Z",
+          "views": 5400,
+          "views_label": "5.4K"
         },
         {
           "title": "Как не сломать LLM, пока защищаешь данные: под капотом Guardrails Filter",
@@ -3754,11 +4111,18 @@
           "views_label": "8.2K"
         },
         {
+          "title": "Подборка вебинаров на август В августе разберем, как быть во всеоружии на случай отказа ЦОД, выбрать инфраструктуру...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1069194/",
+          "published_at": "2026-08-11T14:04:45.000Z",
+          "views": 5900,
+          "views_label": "5.9K"
+        },
+        {
           "title": "Как я автоматизировал сборку образов с Ansible и Packer и попал в community.ansible",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1068806/",
           "published_at": "2026-08-11T09:01:23.000Z",
-          "views": 7200,
-          "views_label": "7.2K"
+          "views": 7300,
+          "views_label": "7.3K"
         },
         {
           "title": "Как не растерять девятки в SLA от облачного сервиса до вашего прикладного ПО",
@@ -3773,6 +4137,13 @@
           "published_at": "2026-08-08T10:23:25.000Z",
           "views": 8000,
           "views_label": "8K"
+        },
+        {
+          "title": "Все, что нужно знать DevOps-инженеру: сводка за лето 2026 Мы почитали за вас все release notes, статус-страницы,...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1067848/",
+          "published_at": "2026-08-07T09:29:05.000Z",
+          "views": 4800,
+          "views_label": "4.8K"
         },
         {
           "title": "Агентов не должны писать разработчики. И вот почему",
@@ -3796,6 +4167,13 @@
           "views_label": "6.4K"
         },
         {
+          "title": "«Не верьте продавцам страха»: поговорили про ИИ и разработку с Тимуром UlbiTV Недавно в гости на подкаст к нашему...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1065934/",
+          "published_at": "2026-08-03T09:18:13.000Z",
+          "views": 5900,
+          "views_label": "5.9K"
+        },
+        {
           "title": "Почему ИИ-агент без памяти — это дорогой калькулятор. Строим персистентную память",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1065290/",
           "published_at": "2026-07-31T14:13:51.000Z",
@@ -3803,11 +4181,25 @@
           "views_label": "11K"
         },
         {
+          "title": "Открыли доступ к курсам по ML-системам от основ до продакшна. И да: это бесплатно Кто-то смотрит на ML как на способ...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1064804/",
+          "published_at": "2026-07-30T08:38:10.000Z",
+          "views": 4300,
+          "views_label": "4.3K"
+        },
+        {
           "title": "Вы даже не поймете, что он сломан: почему панель мониторинга зеленая, а агент врет третий день подряд",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1063380/",
           "published_at": "2026-07-29T08:35:31.000Z",
           "views": 7800,
           "views_label": "7.8K"
+        },
+        {
+          "title": "Как Купер перенес 100% инфраструктуры в облако, снизил количество инцидентов и сократил время на их устранение 🏭 Что...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1064096/",
+          "published_at": "2026-07-28T15:22:02.000Z",
+          "views": 7100,
+          "views_label": "7.1K"
         },
         {
           "title": "Как QA я все равно пишу документацию, но с ИИ трачу на нее часы, а не дни",
@@ -3820,8 +4212,8 @@
           "title": "Что общего у советских НИИ, суперкомпьютеров и гиперскейлеров",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1062750/",
           "published_at": "2026-07-25T07:16:44.000Z",
-          "views": 8700,
-          "views_label": "8.7K"
+          "views": 8800,
+          "views_label": "8.8K"
         },
         {
           "title": "Что сломается в вашем сервисе завтра, если сегодня вы запустите контейнеры без проверки образов",
@@ -3829,6 +4221,13 @@
           "published_at": "2026-07-24T13:31:34.000Z",
           "views": 11000,
           "views_label": "11K"
+        },
+        {
+          "title": "Еще не поздно стать спикером на GoCloud Tech 2026 🎤 Хардкорная конференция для тех, кто...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1062644/",
+          "published_at": "2026-07-24T10:38:55.000Z",
+          "views": 4100,
+          "views_label": "4.1K"
         },
         {
           "title": "Флагманская модель Сбера GigaChat 3.5 Ultra теперь доступна в Evolution Foundation Models",
@@ -3859,6 +4258,13 @@
           "views_label": "10K"
         },
         {
+          "title": "Дайджест: новости за июнь 2026 Рассказываем, что произошло в июне и объясняем, зачем это может пригодиться. ...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1060288/",
+          "published_at": "2026-07-17T14:17:44.000Z",
+          "views": 5800,
+          "views_label": "5.8K"
+        },
+        {
           "title": "Лучшие практики по Kubernetes. Жаль, я не знала о них раньше",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1060100/",
           "published_at": "2026-07-17T11:02:06.000Z",
@@ -3878,6 +4284,13 @@
           "published_at": "2026-07-16T07:19:45.000Z",
           "views": 18000,
           "views_label": "18K"
+        },
+        {
+          "title": "5–10 минут на масштабирование: как Agentic Lab строит ИИ‑продукты без собственной GPU‑инфраструктуры 🏢 Что за...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1059100/",
+          "published_at": "2026-07-15T13:12:47.000Z",
+          "views": 5600,
+          "views_label": "5.6K"
         },
         {
           "title": "Думаете, что знаете все про LLM? Тогда мы идем к вам",
@@ -3901,6 +4314,13 @@
           "views_label": "6K"
         },
         {
+          "title": "Подборка вебинаров на июль Вы просили — мы сделали. Повторяем вебинары про работу с данными в облаке: от...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1057452/",
+          "published_at": "2026-07-09T11:05:39.000Z",
+          "views": 5300,
+          "views_label": "5.3K"
+        },
+        {
           "title": "Дизайнеры не должны договариваться о том, как оформлять макеты. Как мы сформировали дизайн-стандарт",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1056642/",
           "published_at": "2026-07-08T11:18:00.000Z",
@@ -3915,11 +4335,25 @@
           "views_label": "19K"
         },
         {
+          "title": "Совпадает ли ваш идеальный работодатель с реальностью? Вы листаете вакансии. На что обращаете внимание в первую...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1056204/",
+          "published_at": "2026-07-06T16:50:29.000Z",
+          "views": 7800,
+          "views_label": "7.8K"
+        },
+        {
           "title": "Кем вы будете работать через три года, если ваш главный конкурент — ИИ-агент",
           "url": "https://habr.com/ru/companies/cloud_ru/articles/1054304/",
           "published_at": "2026-07-01T15:30:48.000Z",
           "views": 11000,
           "views_label": "11K"
+        },
+        {
+          "title": "Как Форк ИТ обучил ИИ‑систему контроля качества горной добычи 🏭 Что за компания Форк ИТ — российская команда...",
+          "url": "https://habr.com/ru/companies/cloud_ru/articles/1054288/",
+          "published_at": "2026-07-01T09:05:45.000Z",
+          "views": 4400,
+          "views_label": "4.4K"
         }
       ]
     },
@@ -3931,12 +4365,12 @@
       "frequency_compare": false,
       "status": "ok",
       "pages_scanned": 20,
-      "q3_articles": 271,
-      "articles_per_week": 20.62,
-      "views_available": 271,
-      "views_total": 3597100,
-      "views_average": 13273.431734317342,
-      "views_median": 10000,
+      "q3_articles": 249,
+      "articles_per_week": 18.95,
+      "views_available": 249,
+      "views_total": 3303300,
+      "views_average": 13266.265060240963,
+      "views_median": 9700,
       "top_article": {
         "title": "Как ИИ-агент атаковал инфраструктуру Hugging Face: что стало известно после Black Hat",
         "url": "https://habr.com/ru/companies/selectel/articles/1074126/",
@@ -4026,8 +4460,8 @@
           "title": "От чата c LLM к полноценному AI-агенту: пошаговая настройка OpenCode",
           "url": "https://habr.com/ru/companies/selectel/articles/1087524/",
           "published_at": "2026-09-29T08:00:41.000Z",
-          "views": 19000,
-          "views_label": "19K"
+          "views": 20000,
+          "views_label": "20K"
         },
         {
           "title": "HomeBody управляет гуманоидом Unitree G1 через GPT-6 Astra",
@@ -4103,8 +4537,8 @@
           "title": "Qualcomm представила процессоры Snapdragon 8 Elite Gen 6 и Extreme Gen 6 с частотой 5 ГГц",
           "url": "https://habr.com/ru/companies/selectel/articles/1086010/",
           "published_at": "2026-09-24T09:00:51.000Z",
-          "views": 5000,
-          "views_label": "5K"
+          "views": 5100,
+          "views_label": "5.1K"
         },
         {
           "title": "Автоматизируем разбор резюме с помощью LLM, Python и Dedicated Inference",
@@ -4124,8 +4558,8 @@
           "title": "Вышел Sublime Text 4213: поддержка Python 3.14, обновленная подсветка C# и кастомные иконки файлов",
           "url": "https://habr.com/ru/companies/selectel/articles/1085202/",
           "published_at": "2026-09-23T09:00:05.000Z",
-          "views": 5900,
-          "views_label": "5.9K"
+          "views": 6000,
+          "views_label": "6K"
         },
         {
           "title": "Почему для разбора инцидентов мы выбрали RAG, а не файнтюнинг",
@@ -4243,8 +4677,8 @@
           "title": "Google выкатила Gemini 3.8 Live и версию с рассуждениями",
           "url": "https://habr.com/ru/companies/selectel/articles/1082998/",
           "published_at": "2026-09-16T13:40:43.000Z",
-          "views": 7600,
-          "views_label": "7.6K"
+          "views": 7700,
+          "views_label": "7.7K"
         },
         {
           "title": "Я думал, что устаю от работы. А виновата комната",
@@ -4264,8 +4698,8 @@
           "title": "CircuitPython Turbo получил поддержку предварительной компиляции и режима Viper",
           "url": "https://habr.com/ru/companies/selectel/articles/1082680/",
           "published_at": "2026-09-16T11:00:31.000Z",
-          "views": 5400,
-          "views_label": "5.4K"
+          "views": 5500,
+          "views_label": "5.5K"
         },
         {
           "title": "NVIDIA RTX PRO 5500 Blackwell: RTX 5090 и щепотку VRAM, пожалуйста",
@@ -4355,8 +4789,8 @@
           "title": "В Neovim добавили vim.async для модернизации асинхронной архитектуры",
           "url": "https://habr.com/ru/companies/selectel/articles/1080932/",
           "published_at": "2026-09-11T12:55:52.000Z",
-          "views": 7300,
-          "views_label": "7.3K"
+          "views": 7400,
+          "views_label": "7.4K"
         },
         {
           "title": "CPython добавил поддержку RISC-V в качестве платформы уровня Tier 3",
@@ -4385,6 +4819,13 @@
           "published_at": "2026-09-10T10:00:22.000Z",
           "views": 6800,
           "views_label": "6.8K"
+        },
+        {
+          "title": "Подключайтесь к вебинару о том, как внедрить ИИ-агентов в бизнес В 12:00 (мск) мы начинаем вебинар. Вместе с...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1080682/",
+          "published_at": "2026-09-10T08:08:05.000Z",
+          "views": 3600,
+          "views_label": "3.6K"
         },
         {
           "title": "Расширили каталог ИИ-моделей и добавили aish в открытый репозиторий: обновления продуктов Selectel в августе",
@@ -4565,8 +5006,8 @@
           "title": "На что способен бесплатный Devin: тест на реальном проекте",
           "url": "https://habr.com/ru/companies/selectel/articles/1076610/",
           "published_at": "2026-09-01T08:00:26.000Z",
-          "views": 12000,
-          "views_label": "12K"
+          "views": 13000,
+          "views_label": "13K"
         },
         {
           "title": "Linux 7.2: ускоренная работа с файлами, USB4STREAM и окончательный отказ от i486",
@@ -4649,8 +5090,8 @@
           "title": "Cerebras CS-4, CS-5 и CS-6: вычислительные стойки нового поколения",
           "url": "https://habr.com/ru/companies/selectel/articles/1075138/",
           "published_at": "2026-08-27T11:00:01.000Z",
-          "views": 6000,
-          "views_label": "6K"
+          "views": 6100,
+          "views_label": "6.1K"
         },
         {
           "title": "Разработка на Авроре под Аврору: разворачиваем Coder в облаке и пишем плагин для VS Code",
@@ -4670,8 +5111,8 @@
           "title": "Fairphone представила новый модульный смартфон Gen 6+",
           "url": "https://habr.com/ru/companies/selectel/articles/1074062/",
           "published_at": "2026-08-26T10:01:15.000Z",
-          "views": 6400,
-          "views_label": "6.4K"
+          "views": 6500,
+          "views_label": "6.5K"
         },
         {
           "title": "Три уязвимости в роутерах TP-Link Archer: root-команды через родительский контроль и VPN",
@@ -4996,6 +5437,13 @@
           "views_label": "13K"
         },
         {
+          "title": "Задача о стабильной очереди задач И это не тавтология... Проверьте свое знание синтаксиса, критическое мышление и...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1068650/",
+          "published_at": "2026-08-10T09:31:00.000Z",
+          "views": 5200,
+          "views_label": "5.2K"
+        },
+        {
           "title": "Будет ли self-hosted LLM производительнее, чем модель во внешнем контуре: сравниваем GLM, Claude и GPT",
           "url": "https://habr.com/ru/companies/selectel/articles/1067608/",
           "published_at": "2026-08-10T08:00:19.000Z",
@@ -5073,6 +5521,13 @@
           "views_label": "11K"
         },
         {
+          "title": "Как реализовать семантический поиск для RAG-архитектуры в PostgreSQL без усложнения инфраструктуры? Ситуация: вы...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1067064/",
+          "published_at": "2026-08-05T12:57:51.000Z",
+          "views": 4700,
+          "views_label": "4.7K"
+        },
+        {
           "title": "Ubuntu Touch 24.04-2.0: что в свежем релизе мобильной Linux-системы",
           "url": "https://habr.com/ru/companies/selectel/articles/1065892/",
           "published_at": "2026-08-05T12:01:48.000Z",
@@ -5146,8 +5601,8 @@
           "title": "Буст задержек DDR5: MSI заявляет, что High‑Efficiency Mode нивелирует разницу с EXPO ULL",
           "url": "https://habr.com/ru/companies/selectel/articles/1065440/",
           "published_at": "2026-08-01T09:00:03.000Z",
-          "views": 8800,
-          "views_label": "8.8K"
+          "views": 8900,
+          "views_label": "8.9K"
         },
         {
           "title": "5 странных гаджетов 2026 года: смартфоны с E‑Ink, Linux‑раскладушка, наладонник и кое‑что еще",
@@ -5171,11 +5626,25 @@
           "views_label": "10K"
         },
         {
+          "title": "Как разрешить пользователю реплики удаленно подключаться к Master-серверу PostgreSQL? Вы настраиваете отказоустойчивый...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1064752/",
+          "published_at": "2026-07-30T09:30:19.000Z",
+          "views": 4300,
+          "views_label": "4.3K"
+        },
+        {
           "title": "Новые SSD Kioxia NX1 получили поддержку жидкостного охлаждения и PCIe 5.0",
           "url": "https://habr.com/ru/companies/selectel/articles/1064558/",
           "published_at": "2026-07-30T09:01:16.000Z",
           "views": 6300,
           "views_label": "6.3K"
+        },
+        {
+          "title": "Selectel добавил фиксированный публичный IP для облачного роутера",
+          "url": "https://habr.com/ru/companies/selectel/articles/1064058/",
+          "published_at": "2026-07-30T08:00:10.000Z",
+          "views": 5300,
+          "views_label": "5.3K"
         },
         {
           "title": "Бенчмарки врут? Бизнес мигрирует на открытые веса, а FDA и ФЗ заставляют уходить на свой инференс: ML-дайджест",
@@ -5185,11 +5654,11 @@
           "views_label": "16K"
         },
         {
-          "title": "Selectel добавил фиксированный публичный IP для облачного роутера",
-          "url": "https://habr.com/ru/companies/selectel/articles/1064058/",
+          "title": "Через час расскажем, как настроить аварийное восстановление с возможностью георезерва Сегодня в 12:00 мск вместе...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1064372/",
           "published_at": "2026-07-30T08:00:10.000Z",
-          "views": 5300,
-          "views_label": "5.3K"
+          "views": 4400,
+          "views_label": "4.4K"
         },
         {
           "title": "Что такое LiteLLM и для чего его едят",
@@ -5246,6 +5715,13 @@
           "published_at": "2026-07-28T08:00:37.000Z",
           "views": 14000,
           "views_label": "14K"
+        },
+        {
+          "title": "Задача о вирусе и 1 000 серверах Представим, что в вычислительном кластере из 1 000 серверов одна машина заражена...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1063592/",
+          "published_at": "2026-07-27T14:10:23.000Z",
+          "views": 7400,
+          "views_label": "7.4K"
         },
         {
           "title": "Как IBM изобрела половину современного IT, но почти каждый раз на этом зарабатывал кто-то другой",
@@ -5332,6 +5808,13 @@
           "views_label": "6.9K"
         },
         {
+          "title": "Как связать контейнеры Nginx и PHP в Docker Compose, чтобы Nginx мог проксировать запросы? Допустим, вы пытаетесь...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1062162/",
+          "published_at": "2026-07-23T09:15:02.000Z",
+          "views": 5700,
+          "views_label": "5.7K"
+        },
+        {
           "title": "AMD Helios: 72 ускорителя Instinct MI455X в единой стойке против NVL72",
           "url": "https://habr.com/ru/companies/selectel/articles/1061732/",
           "published_at": "2026-07-23T08:31:01.000Z",
@@ -5398,8 +5881,8 @@
           "title": "Где купить токены? Запускаем ИИ‑роутер с 300+ LLM",
           "url": "https://habr.com/ru/companies/selectel/articles/1061432/",
           "published_at": "2026-07-21T13:40:24.000Z",
-          "views": 8400,
-          "views_label": "8.4K"
+          "views": 8500,
+          "views_label": "8.5K"
         },
         {
           "title": "Краткая история футбольных симуляторов",
@@ -5437,6 +5920,13 @@
           "views_label": "11K"
         },
         {
+          "title": "Как управлять окружениями — venv / pip vs pipenv vs poetry? Привет, Хабр! Продолжаем нашу рубрику с быстрыми ответами...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1060884/",
+          "published_at": "2026-07-20T10:54:01.000Z",
+          "views": 5300,
+          "views_label": "5.3K"
+        },
+        {
           "title": "История создания самодельной видеокарты на 8 192 ядра RISC-V из тысяч дешевых микроконтроллеров",
           "url": "https://habr.com/ru/companies/selectel/articles/1059256/",
           "published_at": "2026-07-20T08:00:31.000Z",
@@ -5465,6 +5955,13 @@
           "views_label": "16K"
         },
         {
+          "title": "Как настроить TLS в клиенте Python при HTTPS-запросах? Бывает так, что после обновления OpenSSL часть HTTPS-вызовов к...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1058620/",
+          "published_at": "2026-07-17T10:00:21.000Z",
+          "views": 6600,
+          "views_label": "6.6K"
+        },
+        {
           "title": "Возвращение легенды из 90-х: Beavis Ultrasound — полностью открытый клон звуковой карты Gravis UltraSound PnP",
           "url": "https://habr.com/ru/companies/selectel/articles/1060138/",
           "published_at": "2026-07-17T09:18:10.000Z",
@@ -5479,6 +5976,13 @@
           "views_label": "16K"
         },
         {
+          "title": "Задача о 17 серверах и сетевом архитекторе Привет, Хабр! Принесли задачу — попробуйте ее решить и сверить ответ с...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1059764/",
+          "published_at": "2026-07-16T10:00:43.000Z",
+          "views": 4800,
+          "views_label": "4.8K"
+        },
+        {
           "title": "Экс-директор OpenAI отдала в паблик модель на 975B",
           "url": "https://habr.com/ru/companies/selectel/articles/1059716/",
           "published_at": "2026-07-16T09:00:38.000Z",
@@ -5489,8 +5993,8 @@
           "title": "Как установить OpenJarvis: разворачиваем локального ИИ-агента",
           "url": "https://habr.com/ru/companies/selectel/articles/1058572/",
           "published_at": "2026-07-16T08:01:33.000Z",
-          "views": 15000,
-          "views_label": "15K"
+          "views": 16000,
+          "views_label": "16K"
         },
         {
           "title": "X11 не сдается, выходят новые X‑серверы на Assembler, Rust и Zig",
@@ -5526,6 +6030,13 @@
           "published_at": "2026-07-14T07:30:29.000Z",
           "views": 5400,
           "views_label": "5.4K"
+        },
+        {
+          "title": "Что делать, если Python-сервер падает из-за утечки памяти? Привет, Хабр! Это наша экспериментальная рубрика, в которой...",
+          "url": "https://habr.com/ru/companies/selectel/articles/1058446/",
+          "published_at": "2026-07-13T09:30:55.000Z",
+          "views": 5100,
+          "views_label": "5.1K"
         },
         {
           "title": "Почему ИИ-компании делают ставку на ядерные микрореакторы и что уже работает",
@@ -5610,237 +6121,6 @@
           "published_at": "2026-07-09T11:00:59.000Z",
           "views": 6100,
           "views_label": "6.1K"
-        },
-        {
-          "title": "Новая архитектура памяти Intel XBM",
-          "url": "https://habr.com/ru/companies/selectel/articles/1057366/",
-          "published_at": "2026-07-09T09:34:19.000Z",
-          "views": 5700,
-          "views_label": "5.7K"
-        },
-        {
-          "title": "Разработчики Linux начали удалять поддержку устаревших ARM-процессоров",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056836/",
-          "published_at": "2026-07-09T09:00:48.000Z",
-          "views": 4300,
-          "views_label": "4.3K"
-        },
-        {
-          "title": "Управление ключами SSH — вызовы и эволюция подходов",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056850/",
-          "published_at": "2026-07-09T08:00:06.000Z",
-          "views": 17000,
-          "views_label": "17K"
-        },
-        {
-          "title": "Q-Day наступит раньше, потому что Microsoft, Google и Cloudflare сдвигают дедлайн перехода на постквантовую криптографию",
-          "url": "https://habr.com/ru/companies/selectel/articles/1057216/",
-          "published_at": "2026-07-09T06:01:07.000Z",
-          "views": 6700,
-          "views_label": "6.7K"
-        },
-        {
-          "title": "Mageia 10: 15 лет спустя форк Mandriva продолжает развиваться. Что нового?",
-          "url": "https://habr.com/ru/companies/selectel/articles/1055158/",
-          "published_at": "2026-07-08T13:01:03.000Z",
-          "views": 14000,
-          "views_label": "14K"
-        },
-        {
-          "title": "Состоялся минорный релиз серверной операционной системы SELECTOS 1.4",
-          "url": "https://habr.com/ru/companies/selectel/articles/1055362/",
-          "published_at": "2026-07-08T13:00:02.000Z",
-          "views": 7500,
-          "views_label": "7.5K"
-        },
-        {
-          "title": "ИИ снова закрывается: почему нейросети оказались на грани блокировок",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056916/",
-          "published_at": "2026-07-08T11:00:23.000Z",
-          "views": 17000,
-          "views_label": "17K"
-        },
-        {
-          "title": "Selectel и ИТМО запускают совместную компанию для развития ИИ-сервисов",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056534/",
-          "published_at": "2026-07-08T10:01:17.000Z",
-          "views": 6700,
-          "views_label": "6.7K"
-        },
-        {
-          "title": "Selectel подтвердил соответствие новым стандартам ФСТЭК №117",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056862/",
-          "published_at": "2026-07-08T08:36:11.000Z",
-          "views": 5300,
-          "views_label": "5.3K"
-        },
-        {
-          "title": "Запускаем маленькую языковую модель на Symbian^3",
-          "url": "https://habr.com/ru/companies/selectel/articles/1051354/",
-          "published_at": "2026-07-08T08:01:06.000Z",
-          "views": 21000,
-          "views_label": "21K"
-        },
-        {
-          "title": "NVIDIA опровергла слухи о задержке Rubin Ultra и Kyber до 2028 года",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056604/",
-          "published_at": "2026-07-07T13:58:58.000Z",
-          "views": 8300,
-          "views_label": "8.3K"
-        },
-        {
-          "title": "Первая полностью автономная атака AI-агента: что произошло и как защититься",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056520/",
-          "published_at": "2026-07-07T12:00:17.000Z",
-          "views": 17000,
-          "views_label": "17K"
-        },
-        {
-          "title": "Срок поддержки Ubuntu 25.10 истекает на этой неделе",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056416/",
-          "published_at": "2026-07-07T11:00:12.000Z",
-          "views": 5700,
-          "views_label": "5.7K"
-        },
-        {
-          "title": "Selectel открыл бесплатный курс «Искусственный интеллект для бизнеса»",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056436/",
-          "published_at": "2026-07-07T10:00:08.000Z",
-          "views": 5200,
-          "views_label": "5.2K"
-        },
-        {
-          "title": "Синхронизация объектов в S3‑хранилище с помощью MinIO CLI",
-          "url": "https://habr.com/ru/companies/selectel/articles/1056218/",
-          "published_at": "2026-07-07T08:00:58.000Z",
-          "views": 11000,
-          "views_label": "11K"
-        },
-        {
-          "title": "Попробуйте решить кроссворд и выиграть мерч Selectel. Заключительная рубрика",
-          "url": "https://habr.com/ru/companies/selectel/articles/1048940/",
-          "published_at": "2026-07-06T08:55:26.000Z",
-          "views": 16000,
-          "views_label": "16K"
-        },
-        {
-          "title": "6 pro-фишек FluxCD. Выжимаем все соки из GitOps",
-          "url": "https://habr.com/ru/companies/selectel/articles/1055720/",
-          "published_at": "2026-07-06T08:00:20.000Z",
-          "views": 16000,
-          "views_label": "16K"
-        },
-        {
-          "title": "ИИ добрался до раритетов: цены на память DDR2 взлетели на 60% за три месяца",
-          "url": "https://habr.com/ru/companies/selectel/articles/1053882/",
-          "published_at": "2026-07-05T09:00:26.000Z",
-          "views": 16000,
-          "views_label": "16K"
-        },
-        {
-          "title": "5 новых одноплатников лета 2026 года: x86, Snapdragon и сменные процессоры",
-          "url": "https://habr.com/ru/companies/selectel/articles/1054928/",
-          "published_at": "2026-07-04T08:30:42.000Z",
-          "views": 17000,
-          "views_label": "17K"
-        },
-        {
-          "title": "CalyxOS возвращается после года тишины: защита ключей через HSM и жизнь в условиях закрытости Google",
-          "url": "https://habr.com/ru/companies/selectel/articles/1055330/",
-          "published_at": "2026-07-04T06:01:28.000Z",
-          "views": 7200,
-          "views_label": "7.2K"
-        },
-        {
-          "title": "kpt как WYSIWYG для Kubernetes или почему «конфигурация как данные» лучше шаблонов",
-          "url": "https://habr.com/ru/companies/selectel/articles/1055314/",
-          "published_at": "2026-07-03T14:32:37.000Z",
-          "views": 7300,
-          "views_label": "7.3K"
-        },
-        {
-          "title": "Для выделенных серверов Selectel стал доступен IPMI-мониторинг",
-          "url": "https://habr.com/ru/companies/selectel/articles/1055174/",
-          "published_at": "2026-07-03T12:04:13.000Z",
-          "views": 7600,
-          "views_label": "7.6K"
-        },
-        {
-          "title": "Agent Driven SDLC: как меняется разработка в эпоху ИИ",
-          "url": "https://habr.com/ru/companies/selectel/articles/1054740/",
-          "published_at": "2026-07-03T09:27:57.000Z",
-          "views": 11000,
-          "views_label": "11K"
-        },
-        {
-          "title": "Selectel запускает ИТ-кроссворд",
-          "url": "https://habr.com/ru/companies/selectel/articles/1055156/",
-          "published_at": "2026-07-03T08:52:17.000Z",
-          "views": 5300,
-          "views_label": "5.3K"
-        },
-        {
-          "title": "Почему мощных видеокарт недостаточно для ИИ",
-          "url": "https://habr.com/ru/companies/selectel/articles/1054968/",
-          "published_at": "2026-07-03T08:00:48.000Z",
-          "views": 12000,
-          "views_label": "12K"
-        },
-        {
-          "title": "Ускорение на 14%: в Linux 7.3 устранят «бутылочное горлышко» для PCIe Gen5 NVMe-накопителей",
-          "url": "https://habr.com/ru/companies/selectel/articles/1054958/",
-          "published_at": "2026-07-02T15:31:13.000Z",
-          "views": 11000,
-          "views_label": "11K"
-        },
-        {
-          "title": "Cursor IDE получил две критические RCE-уязвимости. Почему это важный сигнал для безопасности ИИ-агентов",
-          "url": "https://habr.com/ru/companies/selectel/articles/1054874/",
-          "published_at": "2026-07-02T12:03:01.000Z",
-          "views": 8500,
-          "views_label": "8.5K"
-        },
-        {
-          "title": "Может ли нейросеть заболеть деменцией — и зачем это нейробиологам",
-          "url": "https://habr.com/ru/companies/selectel/articles/1053630/",
-          "published_at": "2026-07-02T12:00:17.000Z",
-          "views": 16000,
-          "views_label": "16K"
-        },
-        {
-          "title": "Состоялся релиз SELECTOS 2.0 Hele",
-          "url": "https://habr.com/ru/companies/selectel/articles/1048646/",
-          "published_at": "2026-07-02T08:49:12.000Z",
-          "views": 5800,
-          "views_label": "5.8K"
-        },
-        {
-          "title": "ИИ не захватит мир, но даст вредные советы: обзор кейсов внедрения",
-          "url": "https://habr.com/ru/companies/selectel/articles/1052420/",
-          "published_at": "2026-07-02T08:00:58.000Z",
-          "views": 13000,
-          "views_label": "13K"
-        },
-        {
-          "title": "Claude Science — новый ИИ-инструмент для ученых",
-          "url": "https://habr.com/ru/companies/selectel/articles/1054494/",
-          "published_at": "2026-07-01T14:13:41.000Z",
-          "views": 9700,
-          "views_label": "9.7K"
-        },
-        {
-          "title": "Китайская ИИ-модель GLM-5.2 приблизилась к Claude Mythos в поиске уязвимостей. Что это меняет для ИБ",
-          "url": "https://habr.com/ru/companies/selectel/articles/1054448/",
-          "published_at": "2026-07-01T13:39:31.000Z",
-          "views": 11000,
-          "views_label": "11K"
-        },
-        {
-          "title": "Не только красные и синие — новые серверные процессоры от Qualcomm и Hygon",
-          "url": "https://habr.com/ru/companies/selectel/articles/1053960/",
-          "published_at": "2026-07-01T08:11:27.000Z",
-          "views": 12000,
-          "views_label": "12K"
         }
       ]
     },
@@ -5851,13 +6131,13 @@
       "shared_blog": false,
       "frequency_compare": true,
       "status": "ok",
-      "pages_scanned": 4,
-      "q3_articles": 45,
-      "articles_per_week": 3.42,
-      "views_available": 45,
-      "views_total": 357800,
-      "views_average": 7951.111111111111,
-      "views_median": 7600,
+      "pages_scanned": 7,
+      "q3_articles": 90,
+      "articles_per_week": 6.85,
+      "views_available": 90,
+      "views_total": 526300,
+      "views_average": 5847.777777777777,
+      "views_median": 5150,
       "top_article": {
         "title": "ClickHouse: сценарии, сильные стороны, лучшие практики работы в 2026 году",
         "url": "https://habr.com/ru/companies/vktech/articles/1061284/",
@@ -5866,6 +6146,20 @@
         "views_label": "18K"
       },
       "articles": [
+        {
+          "title": "VK WorkSpace обновил тарифы: ИИ-ассистент, звонки до 500 участников и оплата помесячно С 28 сентября в облачной версии...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1088106/",
+          "published_at": "2026-09-29T11:55:03.000Z",
+          "views": 3600,
+          "views_label": "3.6K"
+        },
+        {
+          "title": "22 октября в Москве соберутся инженеры, архитекторы и DevOps-специалисты, которые работают с Kubernetes и...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1088042/",
+          "published_at": "2026-09-29T10:54:28.000Z",
+          "views": 3400,
+          "views_label": "3.4K"
+        },
         {
           "title": "Федеративное обучение без единой инфраструктуры: Docker, Kubernetes и Slurm в одной федерации",
           "url": "https://habr.com/ru/companies/vktech/articles/1087398/",
@@ -5877,8 +6171,22 @@
           "title": "Налог на координацию: почему ИИ ускоряет сотрудников, но почти не влияет на прибыль компании",
           "url": "https://habr.com/ru/companies/vktech/articles/1086302/",
           "published_at": "2026-09-25T07:50:31.000Z",
-          "views": 5700,
-          "views_label": "5.7K"
+          "views": 5800,
+          "views_label": "5.8K"
+        },
+        {
+          "title": "❓Как использовать на 50% меньше дисковой емкости без снижения надежности При тройной репликации каждый объект хранится...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1086274/",
+          "published_at": "2026-09-24T13:54:47.000Z",
+          "views": 3600,
+          "views_label": "3.6K"
+        },
+        {
+          "title": "Программа рекомендаций VK WorkSpace: 10% за каждого, кто подключится В июне 2026 года команда VK WorkSpace запустила...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1086262/",
+          "published_at": "2026-09-24T13:37:57.000Z",
+          "views": 3400,
+          "views_label": "3.4K"
         },
         {
           "title": "VK Data Platform под капотом: как устроена платформа для Data Lakehouse",
@@ -5888,11 +6196,53 @@
           "views_label": "6.6K"
         },
         {
+          "title": "Конференция VK Business Analytics 8 и 9 октября С 8 по 9 октября приглашаем вас на конференцию VK Business Analytics...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1086024/",
+          "published_at": "2026-09-24T08:34:41.000Z",
+          "views": 2300,
+          "views_label": "2.3K"
+        },
+        {
+          "title": "Альфа-Банк и VK Tech договорились о развитии цифровых решений для бизнеса Альфа-Банк и VK Tech заключили соглашение...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1086020/",
+          "published_at": "2026-09-24T08:26:05.000Z",
+          "views": 2600,
+          "views_label": "2.6K"
+        },
+        {
           "title": "Аварийное восстановление в Kubernetes: три воспроизводимых сценария сбоя",
           "url": "https://habr.com/ru/companies/vktech/articles/1085948/",
           "published_at": "2026-09-24T07:48:18.000Z",
           "views": 5300,
           "views_label": "5.3K"
+        },
+        {
+          "title": "Исследование VK WorkSpace и Hi-Tech Mail: бизнесу от ИИ нужны практические сценарии, сотрудникам — помощь с рутиной На...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1085782/",
+          "published_at": "2026-09-23T14:00:38.000Z",
+          "views": 3500,
+          "views_label": "3.5K"
+        },
+        {
+          "title": "VK Tech перевела Видеоконференции VK WorkSpace на новую технологическую платформу В основе платформы — технологии,...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1085774/",
+          "published_at": "2026-09-23T13:53:26.000Z",
+          "views": 3500,
+          "views_label": "3.5K"
+        },
+        {
+          "title": "VK Tech представил обновление коммуникационной платформы VK WorkSpace Интегрированные в платформу ИИ-сценарии позволят...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1085770/",
+          "published_at": "2026-09-23T13:50:24.000Z",
+          "views": 3200,
+          "views_label": "3.2K"
+        },
+        {
+          "title": "VK Tech расширяет возможности VK WorkSpace для совместной работы VK Tech представила новые возможности цифровой...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1085754/",
+          "published_at": "2026-09-23T13:46:36.000Z",
+          "views": 2800,
+          "views_label": "2.8K"
         },
         {
           "title": "Триаж уязвимостей в AI-платформе: почему календарный SLA сломался и что ставить вместо него",
@@ -5902,11 +6252,18 @@
           "views_label": "7K"
         },
         {
+          "title": "В Managed Containers второго поколения PV можно перенести из сервисного проекта в пользовательский. После этого диск...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1085428/",
+          "published_at": "2026-09-23T03:42:33.000Z",
+          "views": 4500,
+          "views_label": "4.5K"
+        },
+        {
           "title": "Неудаляемый бэкап: три режима Object Lock и цена неверного выбора",
           "url": "https://habr.com/ru/companies/vktech/articles/1078614/",
           "published_at": "2026-09-22T13:52:48.000Z",
-          "views": 7900,
-          "views_label": "7.9K"
+          "views": 8000,
+          "views_label": "8K"
         },
         {
           "title": "Как устроено автоматическое охлаждение данных в in-memory HTAP СУБД: разбор механизма на примере Tarantool Column Store",
@@ -5914,6 +6271,13 @@
           "published_at": "2026-09-21T10:32:52.000Z",
           "views": 11000,
           "views_label": "11K"
+        },
+        {
+          "title": "Во втором поколении Managed Kubernetes меняется граница ответственности между пользователем и платформой. Системный...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1083874/",
+          "published_at": "2026-09-18T11:54:19.000Z",
+          "views": 3500,
+          "views_label": "3.5K"
         },
         {
           "title": "Федерация корпоративного мессенджера: как связать независимые On-Premise-контуры и сохранить контроль над данными",
@@ -5930,6 +6294,13 @@
           "views_label": "7.1K"
         },
         {
+          "title": "⚡️ Высокая загрузка CPU сама по себе — еще не сигнал для Cluster Autoscaler. Автоскейлер реагирует на ситуацию, когда...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1083662/",
+          "published_at": "2026-09-18T07:01:25.000Z",
+          "views": 2900,
+          "views_label": "2.9K"
+        },
+        {
           "title": "Ваша платформа Kubernetes готова к контейнерам. Готова ли она к ИИ?",
           "url": "https://habr.com/ru/companies/vktech/articles/1083400/",
           "published_at": "2026-09-17T12:22:32.000Z",
@@ -5944,11 +6315,32 @@
           "views_label": "5.4K"
         },
         {
+          "title": "Как современный S3 защищает, сжимает и реплицирует данные Simple Storage Service долго использовали довольно...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1083060/",
+          "published_at": "2026-09-16T14:54:17.000Z",
+          "views": 4500,
+          "views_label": "4.5K"
+        },
+        {
+          "title": "На платформе VK HR Tek появился модуль «Аналитика». Он собирает данные о кадровых процессах и выводит их на...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1082442/",
+          "published_at": "2026-09-15T10:23:36.000Z",
+          "views": 3100,
+          "views_label": "3.1K"
+        },
+        {
           "title": "Повесть о двух автоскейлерах Flink",
           "url": "https://habr.com/ru/companies/vktech/articles/1082310/",
           "published_at": "2026-09-15T07:35:28.000Z",
           "views": 5200,
           "views_label": "5.2K"
+        },
+        {
+          "title": "GPU в Kubernetes становятся гибче Обычный device plugin работает с GPU как со счетчиком целых устройств: под...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1082102/",
+          "published_at": "2026-09-14T13:49:23.000Z",
+          "views": 4400,
+          "views_label": "4.4K"
         },
         {
           "title": "Tarantool против Qdrant и pgvector: честный эксперимент на 1,18 млн векторов",
@@ -5958,11 +6350,32 @@
           "views_label": "12K"
         },
         {
+          "title": "В IoT-системах часть данных нужна для быстрой локальной реакции, а часть — для долгосрочного хранения и аналитики....",
+          "url": "https://habr.com/ru/companies/vktech/articles/1081378/",
+          "published_at": "2026-09-11T13:58:57.000Z",
+          "views": 3700,
+          "views_label": "3.7K"
+        },
+        {
           "title": "Kubernetes без границ: Managed Kubernetes как вычислительный центр для ИИ",
           "url": "https://habr.com/ru/companies/vktech/articles/1080770/",
           "published_at": "2026-09-11T07:02:38.000Z",
           "views": 8500,
           "views_label": "8.5K"
+        },
+        {
+          "title": "VK WorkSpace Conf 2026: о чем расскажут на главной технологической конференции осени 23 сентября в Москве...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1080950/",
+          "published_at": "2026-09-10T14:34:31.000Z",
+          "views": 3400,
+          "views_label": "3.4K"
+        },
+        {
+          "title": "9 ключевых обновлений Managed Kubernetes VK Cloud за II квартал 2026 года Что уже можно использовать в кластерах и для...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1080810/",
+          "published_at": "2026-09-10T10:58:47.000Z",
+          "views": 2900,
+          "views_label": "2.9K"
         },
         {
           "title": "AI-агент в проде: песочница, RBAC и egress-контур вместо надежды на промпт",
@@ -5972,11 +6385,25 @@
           "views_label": "6.4K"
         },
         {
+          "title": "💻 От просмотра сообщений до управления кластером: пять UI для Kafka Kafka можно управлять через консоль. Но если...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1080262/",
+          "published_at": "2026-09-09T11:04:35.000Z",
+          "views": 2800,
+          "views_label": "2.8K"
+        },
+        {
           "title": "Prometheus и VictoriaMetrics: почему одни и те же метрики могут занимать в 139 раз больше места",
           "url": "https://habr.com/ru/companies/vktech/articles/1068798/",
           "published_at": "2026-09-09T07:01:35.000Z",
           "views": 6900,
           "views_label": "6.9K"
+        },
+        {
+          "title": "🤔 Аналитический кластер не всегда выгодно масштабировать целиком Когда объем данных растет — нужно больше дисков. Если...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1079928/",
+          "published_at": "2026-09-08T13:27:24.000Z",
+          "views": 3900,
+          "views_label": "3.9K"
         },
         {
           "title": "Bucket Access Policy: когда авторизацию возвращают в хранилище, а прокси выключают",
@@ -5986,6 +6413,34 @@
           "views_label": "8.4K"
         },
         {
+          "title": "Когда компания перерастает файловые серверы, дорог обычно две: публичное облако или собственная инфраструктура. Для...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1078422/",
+          "published_at": "2026-09-04T07:59:51.000Z",
+          "views": 2900,
+          "views_label": "2.9K"
+        },
+        {
+          "title": "🏆 В рейтинг российских платформ виртуализации CNewsMarket мы попали впервые и сразу заняли третье место! Эксперты...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1078094/",
+          "published_at": "2026-09-03T10:52:03.000Z",
+          "views": 3900,
+          "views_label": "3.9K"
+        },
+        {
+          "title": "Tarantool DataBase 3.2.0: как экономнее хранить холодные данные Когда объем данных растет, хранить их целиком в...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1077710/",
+          "published_at": "2026-09-02T12:24:08.000Z",
+          "views": 4700,
+          "views_label": "4.7K"
+        },
+        {
+          "title": "В Managed Kubernetes доступна новая версия Kubernetes 1.35. Обновление приносит актуальные исправления безопасности и...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1077154/",
+          "published_at": "2026-09-01T11:04:10.000Z",
+          "views": 3800,
+          "views_label": "3.8K"
+        },
+        {
           "title": "Кто на самом деле управляет вашей Cloud Native-платформой: архитектура из нескольких плоскостей",
           "url": "https://habr.com/ru/companies/vktech/articles/1077072/",
           "published_at": "2026-09-01T08:34:08.000Z",
@@ -5993,11 +6448,32 @@
           "views_label": "6.3K"
         },
         {
+          "title": "🔀 Как перенести S3-хранилище, не останавливая работу бизнеса При миграции многотерабайтного или петабайтного хранилища...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1075774/",
+          "published_at": "2026-08-28T10:44:29.000Z",
+          "views": 3200,
+          "views_label": "3.2K"
+        },
+        {
+          "title": "Tarantool открыл форк OpenLogReplicator для Oracle ASM на Linux и Solaris SPARC64 Команда Tarantool CDC опубликовала...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1075208/",
+          "published_at": "2026-08-27T09:56:22.000Z",
+          "views": 2900,
+          "views_label": "2.9K"
+        },
+        {
           "title": "Как мы делали многоуровневую память для корпоративных AI-агентов в VK AI Space",
           "url": "https://habr.com/ru/companies/vktech/articles/1074798/",
           "published_at": "2026-08-27T07:01:43.000Z",
           "views": 10000,
           "views_label": "10K"
+        },
+        {
+          "title": "VK Cloud выпустила VK Registry 26.2.0. В новой версии появился модуль управления безопасностью артефактов (Security...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1074864/",
+          "published_at": "2026-08-26T14:05:04.000Z",
+          "views": 3000,
+          "views_label": "3K"
         },
         {
           "title": "Как вывести YAML для Kubernetes в формате KYAML и зачем это может понадобиться",
@@ -6014,6 +6490,13 @@
           "views_label": "11K"
         },
         {
+          "title": "В дайджесте VK WorkSpace — ИБ-интеграции, обновления Почты, Календаря и Доски в серверной и облачной версиях. ...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1074256/",
+          "published_at": "2026-08-25T10:14:03.000Z",
+          "views": 3300,
+          "views_label": "3.3K"
+        },
+        {
           "title": "Локальный ИИ-агент в своём контуре: Ollama плюс OpenClaw на серверном GPU",
           "url": "https://habr.com/ru/companies/vktech/articles/1068686/",
           "published_at": "2026-08-21T08:24:54.000Z",
@@ -6021,11 +6504,32 @@
           "views_label": "12K"
         },
         {
+          "title": "🤖ИИ-агенты в VK AI Space научились следовать корпоративным регламентам Добавили в платформу VK AI Space хуки —...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1072590/",
+          "published_at": "2026-08-20T13:18:09.000Z",
+          "views": 4500,
+          "views_label": "4.5K"
+        },
+        {
+          "title": "Всем привет! Рассказываем о новых функциях VK HR Tek — модульной платформы с готовыми кадровыми сервисами. В этом...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1072538/",
+          "published_at": "2026-08-20T12:08:45.000Z",
+          "views": 3500,
+          "views_label": "3.5K"
+        },
+        {
           "title": "Pods как Workers, а не агенты: переосмысление единицы развёртывания для ИИ-агентов в Kubernetes",
           "url": "https://habr.com/ru/companies/vktech/articles/1071336/",
           "published_at": "2026-08-20T08:01:40.000Z",
-          "views": 6300,
-          "views_label": "6.3K"
+          "views": 6400,
+          "views_label": "6.4K"
+        },
+        {
+          "title": "👌 Подключить дополнительные инструменты к VK Data Platform стало проще. Теперь вы можете добавить к уже настроенному...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1072200/",
+          "published_at": "2026-08-19T14:53:46.000Z",
+          "views": 5100,
+          "views_label": "5.1K"
         },
         {
           "title": "Теневой ИИ в CI/CD: моделирование угроз на пути от ноутбука разработчика до Kubernetes",
@@ -6035,6 +6539,13 @@
           "views_label": "6.3K"
         },
         {
+          "title": "Как мигрировать с MinIO на S3-совместимое хранилище без остановки продакшена: разбор на вебинаре VK Tech MinIO...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1071248/",
+          "published_at": "2026-08-17T11:38:59.000Z",
+          "views": 3300,
+          "views_label": "3.3K"
+        },
+        {
           "title": "Обзор технологий S3-хранилища: как изменился подход к хранению данных и обеспечению их безопасности",
           "url": "https://habr.com/ru/companies/vktech/articles/1071120/",
           "published_at": "2026-08-17T10:48:30.000Z",
@@ -6042,11 +6553,32 @@
           "views_label": "11K"
         },
         {
+          "title": "Как одна строчка кода стала ядром высоконагруженных систем В 2008 году мы создали внутреннюю базу данных Mail. ru для...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1070626/",
+          "published_at": "2026-08-14T14:34:51.000Z",
+          "views": 4400,
+          "views_label": "4.4K"
+        },
+        {
           "title": "Экономика платформ и облачные технологии для AI: Kuber Conf от АОТ пройдёт 22 октября",
           "url": "https://habr.com/ru/companies/vktech/articles/1069646/",
           "published_at": "2026-08-14T08:03:35.000Z",
-          "views": 6700,
-          "views_label": "6.7K"
+          "views": 6800,
+          "views_label": "6.8K"
+        },
+        {
+          "title": "📣 27 августа в Москве проведем Cloud Sessions — технический митап про облака, платформы и инфраструктуру. В программе...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1070226/",
+          "published_at": "2026-08-13T14:55:11.000Z",
+          "views": 4400,
+          "views_label": "4.4K"
+        },
+        {
+          "title": "Высоконагруженным приложениям, Kubernetes-кластерам и GPU-задачам часто нужны выделенные ресурсы и предсказуемая...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1069748/",
+          "published_at": "2026-08-12T14:02:15.000Z",
+          "views": 4300,
+          "views_label": "4.3K"
         },
         {
           "title": "Обзор релиз-команды Kubernetes v1.37: что устареет, сломается и перейдёт в GA",
@@ -6056,6 +6588,13 @@
           "views_label": "7.7K"
         },
         {
+          "title": "VK WorkSpace Conf 2026: узнайте, как сделать работу команд в цифровой среде удобнее Рассказываем, что будет...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1069256/",
+          "published_at": "2026-08-11T11:41:54.000Z",
+          "views": 3300,
+          "views_label": "3.3K"
+        },
+        {
           "title": "Как восстановить KRaft‑кворум после потери большинства контроллеров",
           "url": "https://habr.com/ru/companies/vktech/articles/1064848/",
           "published_at": "2026-08-11T09:16:09.000Z",
@@ -6063,8 +6602,29 @@
           "views_label": "7.6K"
         },
         {
+          "title": "📣 Приглашаем на наш первый Data Meetup с кейсами крупных компаний! 18 августа эксперты VK Tech, Авито и RWB разберут...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1068816/",
+          "published_at": "2026-08-10T13:25:39.000Z",
+          "views": 5000,
+          "views_label": "5K"
+        },
+        {
+          "title": "Когда Kubeflow не хватит для диагностики 🧠 Когда notebook зависает или задача обучения завершается с ошибкой,...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1068010/",
+          "published_at": "2026-08-07T13:52:24.000Z",
+          "views": 5100,
+          "views_label": "5.1K"
+        },
+        {
+          "title": "Что такое гибридное облако и зачем оно бизнесу? Полный переход в публичное облако подходит не всем. Есть 152-ФЗ и...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1067490/",
+          "published_at": "2026-08-06T11:27:51.000Z",
+          "views": 4400,
+          "views_label": "4.4K"
+        },
+        {
           "title": "Переполнение диска в БД: обзор сценариев и механизмов защиты",
-          "url": "https://habr.com/ru/companies/vktech/articles/1066922/",
+          "url": "https://habr.com/ru/companies/vk/articles/1066922/",
           "published_at": "2026-08-06T08:01:47.000Z",
           "views": 7700,
           "views_label": "7.7K"
@@ -6077,11 +6637,25 @@
           "views_label": "8.5K"
         },
         {
+          "title": "От пилота к прибыли: как ИИ перестает быть экспериментом ИИ в бизнесе часто выглядит эффектно на старте, но далеко не...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1066626/",
+          "published_at": "2026-08-04T15:23:40.000Z",
+          "views": 4400,
+          "views_label": "4.4K"
+        },
+        {
           "title": "Как деградирует продовый LLM-инференс: KV-cache, OOM и хвост p99",
           "url": "https://habr.com/ru/companies/vktech/articles/1064026/",
           "published_at": "2026-08-04T10:19:49.000Z",
           "views": 11000,
           "views_label": "11K"
+        },
+        {
+          "title": "📋 Как проверить данные, на которых основаны ответы и действия ИИ? Чем сильнее результаты работы модели влияют на...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1066198/",
+          "published_at": "2026-08-03T15:44:48.000Z",
+          "views": 5400,
+          "views_label": "5.4K"
         },
         {
           "title": "Под с GPU не лечится рестартом: устраиваем отказ устройства в кубере и чиним без вечного Pending",
@@ -6126,11 +6700,32 @@
           "views_label": "18K"
         },
         {
+          "title": "В Доске VK WorkSpace появились новые функции, с которыми еще удобнее визуализировать идеи, обсуждать процессы...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1060912/",
+          "published_at": "2026-07-20T11:36:15.000Z",
+          "views": 3700,
+          "views_label": "3.7K"
+        },
+        {
           "title": "Защита CI/CD в open source-проекте, часть 3: учётные данные, верификация и что дальше",
           "url": "https://habr.com/ru/companies/vktech/articles/1060782/",
           "published_at": "2026-07-20T08:49:13.000Z",
           "views": 8300,
           "views_label": "8.3K"
+        },
+        {
+          "title": "Всем привет! Делимся обновлениями VK HR Tek — модульной платформы с готовыми кадровыми сервисами (КЭДО, график...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1060296/",
+          "published_at": "2026-07-17T14:27:30.000Z",
+          "views": 5100,
+          "views_label": "5.1K"
+        },
+        {
+          "title": "Exchange 2016/2019 остался без обновлений безопасности: как перейти на почту VK Workspace До 92% вредоносного ПО...",
+          "url": "https://habr.com/ru/companies/vktech/articles/1057760/",
+          "published_at": "2026-07-10T08:22:11.000Z",
+          "views": 3000,
+          "views_label": "3K"
         },
         {
           "title": "Защита CI/CD для open source-проекта: запираем зависимости",
@@ -6190,13 +6785,13 @@
       "shared_blog": false,
       "frequency_compare": false,
       "status": "ok",
-      "pages_scanned": 2,
-      "q3_articles": 28,
-      "articles_per_week": 2.13,
-      "views_available": 28,
-      "views_total": 351000,
-      "views_average": 12535.714285714286,
-      "views_median": 8250,
+      "pages_scanned": 3,
+      "q3_articles": 29,
+      "articles_per_week": 2.21,
+      "views_available": 29,
+      "views_total": 355800,
+      "views_average": 12268.965517241379,
+      "views_median": 8100,
       "top_article": {
         "title": "Мой опыт с Hermes Agent: ненависть, любовь, ненависть, любовь",
         "url": "https://habr.com/ru/companies/alfa/articles/1072770/",
@@ -6209,8 +6804,8 @@
           "title": "От прогноза потока клиентов к оптимальному штату сотрудников",
           "url": "https://habr.com/ru/companies/alfa/articles/1085676/",
           "published_at": "2026-09-30T07:04:26.000Z",
-          "views": 5400,
-          "views_label": "5.4K"
+          "views": 5500,
+          "views_label": "5.5K"
         },
         {
           "title": "Шторм никогда не закончится — это нормальное состояние для большого продукта",
@@ -6265,15 +6860,22 @@
           "title": "Когда всё соответствует требованиям, но защищенности больше не становится: про ловушки формального контроля в ИБ",
           "url": "https://habr.com/ru/companies/alfa/articles/1080326/",
           "published_at": "2026-09-10T09:59:16.000Z",
-          "views": 7700,
-          "views_label": "7.7K"
+          "views": 7800,
+          "views_label": "7.8K"
         },
         {
           "title": "AI в PDLC: как перестроить производственный процесс в большом финтехе",
           "url": "https://habr.com/ru/companies/alfa/articles/1075836/",
           "published_at": "2026-09-01T11:51:51.000Z",
-          "views": 9000,
-          "views_label": "9K"
+          "views": 9100,
+          "views_label": "9.1K"
+        },
+        {
+          "title": "Зовём AI/ML-специалистов, разработчиков, дизайнеров и всех, кому интересно, как сегодня меняется разработка с помощью...",
+          "url": "https://habr.com/ru/companies/alfa/articles/1076726/",
+          "published_at": "2026-08-31T12:17:49.000Z",
+          "views": 4200,
+          "views_label": "4.2K"
         },
         {
           "title": "АЛЬФА ВААА{АИ}ЙЙЙБ МИТАП",
@@ -6300,8 +6902,8 @@
           "title": "AI Product Insight: как Альфа‑Банк сократил Discovery в 3 раза (и стремится к ускорению в 10 раз)",
           "url": "https://habr.com/ru/companies/alfa/articles/1073638/",
           "published_at": "2026-08-24T08:03:16.000Z",
-          "views": 5400,
-          "views_label": "5.4K"
+          "views": 5500,
+          "views_label": "5.5K"
         },
         {
           "title": "Мой опыт с Hermes Agent: ненависть, любовь, ненависть, любовь",
@@ -6328,8 +6930,8 @@
           "title": "Первый проект в карьере, где мы 5 месяцев не писали бизнес‑требования, а изучали, как работают лотереи",
           "url": "https://habr.com/ru/companies/alfa/articles/1069320/",
           "published_at": "2026-08-12T12:59:04.000Z",
-          "views": 9500,
-          "views_label": "9.5K"
+          "views": 9600,
+          "views_label": "9.6K"
         },
         {
           "title": "Собрать базу знаний для ИПР системных аналитиков не сложнее, чем кажется",
@@ -6349,8 +6951,8 @@
           "title": "Что остаётся аналитику, если AI крепчает?",
           "url": "https://habr.com/ru/companies/alfa/articles/1064530/",
           "published_at": "2026-07-31T06:49:31.000Z",
-          "views": 8500,
-          "views_label": "8.5K"
+          "views": 8600,
+          "views_label": "8.6K"
         },
         {
           "title": "ИИ в ИБ: где он реально работает, а где — просто модный ярлык",
@@ -6414,8 +7016,8 @@
       "q3_articles": 8,
       "articles_per_week": 0.61,
       "views_available": 8,
-      "views_total": 58800,
-      "views_average": 7350,
+      "views_total": 59000,
+      "views_average": 7375,
       "views_median": 7100,
       "top_article": {
         "title": "Свой проект, команда и код‑ревью: как Школа программистов hh.ru знакомит студентов с культурой реальной разработки",
@@ -6436,8 +7038,8 @@
           "title": "Пересекающиеся эксперименты: как мы навели порядок в A/B-тестах",
           "url": "https://habr.com/ru/companies/hh/articles/1084724/",
           "published_at": "2026-09-22T07:30:45.000Z",
-          "views": 5200,
-          "views_label": "5.2K"
+          "views": 5300,
+          "views_label": "5.3K"
         },
         {
           "title": "Приглашаем на продуктовый RecSys-митап от hh.ru",
@@ -6464,8 +7066,8 @@
           "title": "Инференс LLM: от KV-кэша до продакшен-деплоя",
           "url": "https://habr.com/ru/companies/hh/articles/1062318/",
           "published_at": "2026-07-27T05:30:45.000Z",
-          "views": 9300,
-          "views_label": "9.3K"
+          "views": 9400,
+          "views_label": "9.4K"
         },
         {
           "title": "Лучшие токены — те, которые вы не потратили: анатомия экономного LLM-бота",
@@ -6494,9 +7096,9 @@
       "q3_articles": 3,
       "articles_per_week": 0.23,
       "views_available": 3,
-      "views_total": 17200,
-      "views_average": 5733.333333333333,
-      "views_median": 5200,
+      "views_total": 17300,
+      "views_average": 5766.666666666667,
+      "views_median": 5300,
       "top_article": {
         "title": "Как превратить LLM‑разметку в универсальный Spark‑пайплайн",
         "url": "https://habr.com/ru/companies/lamoda/articles/1071680/",
@@ -6509,8 +7111,8 @@
           "title": "Как ML меняет фешен-тех: материалы Data Science митапа от Lamoda Tech",
           "url": "https://habr.com/ru/companies/lamoda/articles/1078116/",
           "published_at": "2026-09-10T09:52:20.000Z",
-          "views": 5200,
-          "views_label": "5.2K"
+          "views": 5300,
+          "views_label": "5.3K"
         },
         {
           "title": "Как превратить LLM‑разметку в универсальный Spark‑пайплайн",
@@ -6539,9 +7141,9 @@
       "q3_articles": 12,
       "articles_per_week": 0.91,
       "views_available": 12,
-      "views_total": 76108,
-      "views_average": 6342.333333333333,
-      "views_median": 6300,
+      "views_total": 76341,
+      "views_average": 6361.75,
+      "views_median": 6350,
       "top_article": {
         "title": "Пять дней ожидания: опыт длинных временных окон Kafka stream",
         "url": "https://habr.com/ru/companies/magnit/articles/1052086/",
@@ -6554,8 +7156,8 @@
           "title": "Менторство наоборот – чему джуны могут научить тимлида",
           "url": "https://habr.com/ru/companies/magnit/articles/1085320/",
           "published_at": "2026-09-27T23:12:11.000Z",
-          "views": 608,
-          "views_label": "608"
+          "views": 641,
+          "views_label": "641"
         },
         {
           "title": "Векторный поиск: деплой без GPU на Triton Inference Server",
@@ -6575,8 +7177,8 @@
           "title": "Проблема переполнения Store: настройка самоочистки RocksDB в Kafka Streams",
           "url": "https://habr.com/ru/companies/magnit/articles/1061512/",
           "published_at": "2026-09-10T12:43:54.000Z",
-          "views": 6700,
-          "views_label": "6.7K"
+          "views": 6800,
+          "views_label": "6.8K"
         },
         {
           "title": "Закрытый вечер MAGNIT TECH для тех, кто двигает ML/AI вперед",
@@ -6617,8 +7219,8 @@
           "title": "Как решаются оптимизационные задачи в масштабе. Декомпозиция и инженерия",
           "url": "https://habr.com/ru/companies/magnit/articles/1058638/",
           "published_at": "2026-07-14T08:07:34.000Z",
-          "views": 8200,
-          "views_label": "8.2K"
+          "views": 8300,
+          "views_label": "8.3K"
         },
         {
           "title": "От legacy до промышленной платформы: инженерная эволюция OSA в «Магнит»",
@@ -6647,8 +7249,8 @@
       "q3_articles": 48,
       "articles_per_week": 3.65,
       "views_available": 48,
-      "views_total": 544300,
-      "views_average": 11339.583333333334,
+      "views_total": 544700,
+      "views_average": 11347.916666666666,
       "views_median": 8750,
       "top_article": {
         "title": "Провожу тест‑драйв GigaChat Audio в рабочих условиях",
@@ -6711,8 +7313,8 @@
           "title": "Сторонние MCP: троянский конь для ИИ-агента",
           "url": "https://habr.com/ru/companies/sberbank/articles/1083934/",
           "published_at": "2026-09-22T14:59:58.000Z",
-          "views": 8300,
-          "views_label": "8.3K"
+          "views": 8400,
+          "views_label": "8.4K"
         },
         {
           "title": "Выживут ли QA? Кто будет отвечать за качество?",
@@ -6781,8 +7383,8 @@
           "title": "Интервью с Вячеславом Васильевым: о генеративном интеллекте, написании статей и будущем ИИ",
           "url": "https://habr.com/ru/companies/sberbank/articles/1079288/",
           "published_at": "2026-09-07T11:01:27.000Z",
-          "views": 8600,
-          "views_label": "8.6K"
+          "views": 8700,
+          "views_label": "8.7K"
         },
         {
           "title": "Обновления GigaIDE за август 2026",
@@ -6795,8 +7397,8 @@
           "title": "Подготовка датасета для офлайн-оценки рекомендательных моделей: что проверить перед запуском экспериментов",
           "url": "https://habr.com/ru/companies/sberbank/articles/1076666/",
           "published_at": "2026-09-04T09:41:27.000Z",
-          "views": 6700,
-          "views_label": "6.7K"
+          "views": 6800,
+          "views_label": "6.8K"
         },
         {
           "title": "Оптимизация расчётов в простой нейронной сети",
@@ -6886,8 +7488,8 @@
           "title": "Мы научили ИИ решать реальные бизнес-задачи клиентов через MCP-сервер Сбера: пример Ouroboros",
           "url": "https://habr.com/ru/companies/sberbank/articles/1069612/",
           "published_at": "2026-08-12T09:46:00.000Z",
-          "views": 9200,
-          "views_label": "9.2K"
+          "views": 9300,
+          "views_label": "9.3K"
         },
         {
           "title": "Монолит больше не приговор: строим быстрые и гибкие микрофронтенды на ES-модулях",
@@ -7118,8 +7720,8 @@
       "q3_articles": 3,
       "articles_per_week": 0.23,
       "views_available": 3,
-      "views_total": 23800,
-      "views_average": 7933.333333333333,
+      "views_total": 23900,
+      "views_average": 7966.666666666667,
       "views_median": 8000,
       "top_article": {
         "title": "Антифрод в e-commerce: почему банковские подходы не работают в маркетплейсах и доставке",
@@ -7140,8 +7742,8 @@
           "title": "BACamp: как мы запустили школу бизнес‑анализа и что из этого вышло",
           "url": "https://habr.com/ru/companies/ecom_tech/articles/1071682/",
           "published_at": "2026-08-20T11:48:14.000Z",
-          "views": 7400,
-          "views_label": "7.4K"
+          "views": 7500,
+          "views_label": "7.5K"
         },
         {
           "title": "Антифрод в e-commerce: почему банковские подходы не работают в маркетплейсах и доставке",
@@ -7159,12 +7761,12 @@
       "shared_blog": false,
       "frequency_compare": false,
       "status": "ok",
-      "pages_scanned": 1,
+      "pages_scanned": 2,
       "q3_articles": 11,
       "articles_per_week": 0.84,
       "views_available": 11,
-      "views_total": 85500,
-      "views_average": 7772.727272727273,
+      "views_total": 85800,
+      "views_average": 7800,
       "views_median": 8000,
       "top_article": {
         "title": "Как разделить фронтенд на модули и связать их между собой: на примере маркетплейса",
@@ -7178,8 +7780,8 @@
           "title": "Архитектура управления доступом в базы данных через Trino в масштабах всей компании",
           "url": "https://habr.com/ru/companies/rwb/articles/1085216/",
           "published_at": "2026-09-29T16:07:01.000Z",
-          "views": 9100,
-          "views_label": "9.1K"
+          "views": 9200,
+          "views_label": "9.2K"
         },
         {
           "title": "Как разделить фронтенд на модули и связать их между собой: на примере маркетплейса",
@@ -7227,8 +7829,8 @@
           "title": "DML против PSM: как оценивать нерандомизированные эксперименты быстрее и надёжнее?",
           "url": "https://habr.com/ru/companies/rwb/articles/1070206/",
           "published_at": "2026-08-24T09:00:33.000Z",
-          "views": 6900,
-          "views_label": "6.9K"
+          "views": 7000,
+          "views_label": "7K"
         },
         {
           "title": "Как мы внедрили AIOps для контроля GPU‑утилизации и повысили её на 60%",
@@ -7241,8 +7843,8 @@
           "title": "Учим небольшую LLM с нуля: гибридное внимание, XSA, доменные бленды и загадки роста онлайн-бенчмарков",
           "url": "https://habr.com/ru/companies/rwb/articles/1069148/",
           "published_at": "2026-08-17T09:30:44.000Z",
-          "views": 8700,
-          "views_label": "8.7K"
+          "views": 8800,
+          "views_label": "8.8K"
         },
         {
           "title": "Векторный поиск в модерации контента. Как поместить 200+ моделей в один ансамбль?",
@@ -7264,9 +7866,9 @@
       "q3_articles": 7,
       "articles_per_week": 0.53,
       "views_available": 7,
-      "views_total": 60500,
-      "views_average": 8642.857142857143,
-      "views_median": 8700,
+      "views_total": 60700,
+      "views_average": 8671.42857142857,
+      "views_median": 8800,
       "top_article": {
         "title": "Почему фронтенд съедает больше времени, чем бэкенд",
         "url": "https://habr.com/ru/companies/X5Tech/articles/1054646/",
@@ -7286,8 +7888,8 @@
           "title": "ИИ заберёт тексты и код. Но это никогда не было главной работой человека. Часть 2",
           "url": "https://habr.com/ru/companies/X5Tech/articles/1063490/",
           "published_at": "2026-09-16T12:08:19.000Z",
-          "views": 8700,
-          "views_label": "8.7K"
+          "views": 8800,
+          "views_label": "8.8K"
         },
         {
           "title": "ИИ заберёт тексты и код. Но это никогда не было главной работой человека. Часть 1",
@@ -7314,8 +7916,8 @@
           "title": "DS MCP: как дать AI-агенту знание о вашей дизайн-системе",
           "url": "https://habr.com/ru/companies/X5Tech/articles/1051322/",
           "published_at": "2026-07-08T09:00:12.000Z",
-          "views": 8300,
-          "views_label": "8.3K"
+          "views": 8400,
+          "views_label": "8.4K"
         },
         {
           "title": "От 0 до 10 миллионов ИИ-проверок в месяц: как мы продуктивизировали CV в Пятёрочке за 8 месяцев",
@@ -7539,8 +8141,8 @@
       "title": "Не трогая веса модели: как мы построили исследовательского агента Алисы AI и в разы сократили потребление GPU",
       "url": "https://habr.com/ru/companies/yandex/articles/1079290/",
       "published_at": "2026-09-14T08:01:22.000Z",
-      "views": 95000,
-      "views_label": "95K",
+      "views": 96000,
+      "views_label": "96K",
       "brand": "Яндекс",
       "display_source": "Яндекс",
       "shared_blog": false
